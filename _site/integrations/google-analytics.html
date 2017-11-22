@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+
+        <title>DDManager documentation : Google Analytics</title>
+        <meta name="description" content="">
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/syntax.css">
+        <link rel="stylesheet" href="/css/main.css">
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="row">
+                <div id="header" class="col-sm-12">
+                    <h4><a class="brand" href="/">DDManager documentation</a>
+    <small></small>
+</h4>
+
+                </div>
+            </div>
+            <div class="row">
+                
+                
+                    <div id="navigation" class="col-sm-2">
+                        <ul class="nav nav-list">
+    
+
+    
+        
+        
+        
+        
+            
+                <li class="nav-header">Аналитику</li>
+            
+            <li data-order="2"><a href="/for-analyst/events">События</a></li>
+        
+            
+            <li data-order="2"><a href="/for-analyst/integrations">Интеграции</a></li>
+        
+            
+            <li data-order="4"><a href="/for-analyst/variables">Переменные</a></li>
+        
+            
+            <li data-order="1"><a href="/for-analyst/index">Обзор</a></li>
+        
+    
+        
+        
+        
+        
+            
+                <li class="nav-header">Разработчику</li>
+            
+            <li data-order="1"><a href="/for-developer/index">Обзор</a></li>
+        
+    
+        
+        
+        
+        
+            
+                <li class="nav-header">Список интеграций</li>
+            
+            <li data-order="1"><a href="/integrations/google-analytics">Google Analytics</a></li>
+        
+    
+<!-- List additional links. It is recommended to add a divider
+    e.g. <li class="divider"></li> first to break up the content. -->
+</ul>
+
+                    </div>
+
+                    <div id="content" class="col-sm-10">
+                        <div class="page-header">
+    <h2>Google Analytics
+        
+    </h2>
+</div>
+
+<p>Digital Data Manager позволяет с легкостью отправлять данные о поведении ваших пользователей в <a href="https://analytics.google.com/">Google Analytics</a>. После полной интеграции digitalData с вашим сайтом, можно перейти к настройке интеграции в панели Digital Data Manager.</p>
+
+<blockquote>
+  <p>Навигация по странице <br />
+<a href="#0">Введение</a> <br />
+<a href="#1">Идентификатор отслеживания</a> <br />
+<a href="#2">Модуль Enhanced Ecommerce</a> <br />
+<a href="#3">Модуль Double Click</a> <br />
+<a href="#4">User Id</a> <br />
+<a href="#5">Улучшенная атрибуция ссылок</a> <br />
+<a href="#6">Анонимизация IP</a> <br />
+<a href="#7">QueryString</a> <br />
+<a href="#8">Валюта</a> <br />
+<a href="#9">Частота сэмплирования</a> <br />
+<a href="#10">Домен сайта</a> <br />
+<a href="#11">Пользовательские метрики</a> <br />
+<a href="#12">Пользовательские параметры</a> <br />
+<a href="#13">Группы контента</a> <br />
+<a href="#14">Кастомные поля</a> <br />
+<a href="#15">Название трекера</a> <br /></p>
+</blockquote>
+
+<h4 id="Введение"><a name="0"></a>Введение</h4>
+<p>С помощью Digital Data Manager можно полностью интегрировать Google Analytics с вашим сайтом: события, расширенная электронная торговля, кастомные метрики и параметры, группы котента и много другое. <br />
+<a href="https://support.google.com/analytics#topic=3544906">Справка Google по Google Analytics</a> <br /><br />
+Чтобы настроить интеграцию с Google Analytics:</p>
+<ol>
+  <li>авторизуйтесь на сайте <a href="ddmanager.ru">ddmanager.ru</a> и перейдите к <a href="https://admin.ddmanager.ru/">панеле управления интеграциями</a></li>
+  <li>Нажмите на блок с логотипом Google Analytics
+<img src="/img/integrations.ga.listing.png" alt="" /></li>
+  <li>В открывшейся панели - настройте Google Analytics.
+<img src="/img/integrations.ga.settings.png" alt="" />
+<br />
+Подробнее о настройках вы можете прочитать ниже.</li>
+</ol>
+
+<h4 id="Идентификатор-отслеживания"><a name="1"></a>Идентификатор отслеживания</h4>
+<p>Чтобы настроить отслеживание сайта необходимо создать ресурс в аккаунте Google Analytics. При создании ресурса Google Analytics сгенерирует уникальный идентификатор отслеживания. Как его найти - смотрите на скриншоте ниже. 
+<img src="/img/integrations.ga.id.png" alt="" />
+Скопируйте идентификатор отслеживания и вставьте его в интерфейсе Digital Data Manager в соотвествующее поле.
+<img src="/img/integrations.ga.settings.id.png" alt="" />
+<br />
+<a href="https://support.google.com/analytics/answer/7372977?hl=ru">Справка Google по Идентификатору отслеживания</a></p>
+<h4 id="Модуль-enhanced-ecommerce"><a name="2"></a>Модуль Enhanced Ecommerce</h4>
+<p>Google Analytics позволяет отслеживать взаимодействие пользователей с вашими товарами: просмотры товаров в каталогах, клики на товары, детальный просмотр карточек товаров, добавления в корзину, покупки и другое. Интеграция с DDM позволяет подключить или отключить модуль расширенной электронной торговли в 1 клик. <br />
+<a href="https://support.google.com/analytics/answer/6166254?hl=ru">Справка Google по Enhanced Ecommerce</a></p>
+<h4 id="Модуль-double-click"><a name="3"></a>Модуль Double Click</h4>
+<p>Не знаю что делает эта настройка</p>
+<h4 id="user-id"><a name="4"></a>User Id</h4>
+<p>Если Digital Data Manager правильно интегрирован в ваш сайт, то значит на каждой странице у вас передан идентификатор посетителя из вашей CRM или ERP в переменную digitalData.user.id. Google Analytics позволяет склеивать сеансы вашего пользователя, произведенные с разных браузеров или устройств, в одну историю благодаря модулю “USER-ID”. Включить или отключить отправку USER-ID в Google Analytics можно в 1 клик. <br /><a href="https://support.google.com/analytics/answer/3123662?hl=ru">Справка Google по USER-ID</a></p>
+<h4 id="Улучшенная-атрибуция-ссылок"><a name="5"></a>Улучшенная атрибуция ссылок</h4>
+<p>Не знаю что это такое</p>
+<h4 id="Анонимизация-ip"><a name="6"></a>Анонимизация IP</h4>
+<p>Google Analytics позволяет владельцам сайтов скрывать IP-адреса своих посетителей при обработки данных. Включить или отключить функцию анонимизации IP можно в 1 клик.<br />
+<a href="https://support.google.com/analytics/answer/2763052?hl=ru">Справка Google по Анонимизации IP</a></p>
+<h4 id="querystring"><a name="7"></a>QueryString</h4>
+<p>Не знаю что это такое</p>
+<h4 id="Валюта"><a name="8"></a>Валюта</h4>
+<p>В Google Analytics есть набор параметров модуля расшиернной электронной торговли, которые представляют собой денежные значения в различной валюте, например: доход от товаров, доход от транзакции, стоимость доставки и т.д. Список поддерживаемых валют описан в справке Google. Важно! Если указанная в настройках интеграции Digital Data Manager валюта отличается от глобальной валюты представления (указанной в настройках Google Analytics), Google Analytics произведет конвертацию по курсу обмена за предыдущий день.
+<a href="https://support.google.com/analytics/answer/6205902?hl=ru">Справка Google по Валюте</a></p>
+<h4 id="Частота-сэмплирования-данных-о-скорости-загрузки-сайта"><a name="9"></a>Частота сэмплирования данных о скорости загрузки сайта</h4>
+<p>Google позволяет указать процент пользователей, данные которых будут отправляться для отслеживания скорости загрузки сайтов. Значение по умолчанию - 1.
+<a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/field-reference#siteSpeedSampleRate">Справка Google по Сэмплированию данных о скорости загрузки сайта</a></p>
+<h4 id="Домен-сайта"><a name="10"></a>Домен сайта</h4>
+
+<p><a href="https://support.google.com/analytics/answer/1034342?hl=ru">Справка Google по Кросс-доменному отслеживанию</a></p>
+<h4 id="Специальные-показатели"><a name="11"></a>Специальные показатели</h4>
+<p>В Google Analytics есть возможность передавать специальные показатели (метрики). Показатель - это количественное значение (Целое число, дробное число, время). Например: количество сеансов, сумма заказа, глубина просмотра и т.д. Метрики можно передавать на разном уровне:</p>
+<ul>
+  <li>на уровне хита (любое взаимодействие пользователя с сайтом, информация о котором уходит на сервера Google Analytics)</li>
+  <li>на уровне продукта (все взаимодействия пользователя с товаром).
+Для того, чтобы настроить передачу специального показателя:</li>
+</ul>
+
+<ol>
+  <li>Создайте специальный показатель в интерфейсе Google Analytics. Запомните номер созданного показателя
+ <img src="/img/integrations.ga.metric.2.png" alt="" /></li>
+  <li>Перейдите к панеле настройки интеграции Digital Data Manager, поле “Пользовательские метрики”.
+ <img src="/img/integrations.ga.metric.1.png" alt="" /></li>
+  <li>В выпадающем списке выберите номер метрики, который вы только что создали в Google Analytics (например metric1).
+ <img src="/img/integrations.ga.metric.3.png" alt="" /></li>
+  <li>Укажите источник данных:
+    <ul>
+      <li><strong>DigitalData</strong>. Любая числовая переменная, которая содержится в объекте digitalData, может быть передана в Google Analytics на уровнях хита. Например: вместе с загрузкой страницы можно передать в Google Analytics на уровне хита количество товаров, которое прямо сейчас у пользователя лежит в корзине.</li>
+      <li><strong>Event</strong>. В Google Analytics вместе с событием можно передать дополнительную информацию, например: если вам не хватает полей Event Category, Event Action, Event Label, Value.</li>
+      <li><strong>Product</strong>. Google Analytics позволяет принимать специальные показатели на уровне продукта. Таким образом, вместе со всеми событиями, которые происходят с товарами на вашем сайте (например: просмотр карточки товара, добавления товара в корзину, покупка товара) вы можете передавать дополнительные показатели. Например, можно передать количество товарных единиц, доступное на складе в момент просмотра пользователем карточки товаров.</li>
+    </ul>
+  </li>
+  <li>Сохраните и опубликуйте изменения.</li>
+</ol>
+
+<p><a href="https://support.google.com/analytics/answer/2709829?hl=ru#set_up_custom_metrics">Справка Google по Специальным показателям</a></p>
+<h4 id="Пользовательские-параметры"><a name="12"></a>Пользовательские параметры</h4>
+<p>В Google Analytics есть возможность передавать специальные Параметры (dimensions). Параметры - это атрибуты данных. Все метрики (числовые данные) рассчитываются в срезах параметров. Примеры параметров: Источник трафика, URL страницы, Регион и т.д. Параметры можно передавать на разном уровне:</p>
+<ul>
+  <li>на уровне хита (информация не аггрегируется)</li>
+  <li>на уровне сеанса (информация аггрегируется в срезе каждого сеанса каждого пользователя)</li>
+  <li>на уровне пользователя (информация аггрегируется в срезе всех сеансов каждого пользователя)</li>
+  <li>на уровне продукта (информация аггрегируется в срезе продуктов).
+    <blockquote>
+      <p>Короткое пояснение, для понимания разницы уровней: Например вы хотите передать в GA хобби вашего пользователя в тот момент когда пользователь сохраняет информацию о себе на вашем сайте. Вы отправляете событие и вместе с событием передает специальный параметр (название хобби вашего пользователя). Если вы настроили параметр на уровне хита, то информация о хобби пользователя будет доступна только в отчетах по событиям. Если вы настроили параметр на уровне сеанса, то информация о хобби будет доступна в большинстве отчетов, но только в рамках одного дня и одного сеанса. Если вы настроили параметр на уровне пользователя, то информация о хобби будет доступна в большинстве отчетов и за любой диапазон дат после события.<br /></p>
+    </blockquote>
+  </li>
+</ul>
+
+<p>Настройка специальных параметров идентична <a href="#11">настройке специальных показателей</a>.</p>
+
+<p><a href="https://support.google.com/analytics/answer/2709829?hl=ru#set_up_custom_dimensions">Справка Google по Специальным параметрам</a></p>
+<h4 id="Группы-контента"><a name="13"></a>Группы контента</h4>
+<p>В Google Analytics существует возможность просматривать отчеты не только в срезах определенных адресов страниц, но и групп страниц. Эти группы вы можете задавать сами.</p>
+
+<p><a href="https://support.google.com/analytics/answer/2853546?hl=ru">Справка Google по Группам контента</a></p>
+<h4 id="Кастомные-поля"><a name="14"></a>Кастомные поля</h4>
+<p>Иногда бывает нужно отправить в Google Analytics специальные поля….</p>
+<h4 id="Название-трекера"><a name="15"></a>Название трекера</h4>
+<p><a href="https://support.google.com/analytics/answer/2709829?hl=ru#set_up_custom_metrics">Справка Google по Названию трекера</a></p>
+
+
+                    </div>
+                
+            </div>
+
+            <div class="row">
+                <div id="footer" class="col-sm-12">
+                    Documentation for <a href="">DDManager documentation</a>
+
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function orderNav() {
+                var list,
+                    section,
+                    header,
+                    sections = [],
+                    lists = {},
+                    headers = {};
+                var navUl = document.querySelectorAll('#navigation ul')[0],
+                    navLis = document.querySelectorAll('#navigation ul li');
+                if (!navUl) return;
+                for (var i = 0; i < navLis.length; i++) {
+                    var order, li = navLis[i];
+                    if (li.classList.contains('nav-header')) {
+                        section = li.textContent || li.innerText;
+                        sections.push(section);
+                        headers[section] = li;
+                        continue;
+                    }
+                    if (!lists[section]) {
+                        lists[section] = [];
+                    }
+                    order = parseFloat(li.getAttribute('data-order'))
+                    lists[section].push([order, li]);
+                }
+                for (var i = 0; i < sections.length; i++) {
+                    section = sections[i];
+                    list = lists[section].sort(function(a, b) {
+                        return a[0] - b[0];
+                    });
+                    if (header = headers[section]) {
+                        navUl.appendChild(header);
+                    }
+                    for (var j = 0; j < list.length; j++) {
+                        navUl.appendChild(list[j][1]);
+                    }
+                }
+            }
+            if (document.querySelectorAll) orderNav();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,9 @@
+<ul class="drop-menu">
+    {% for doc in site.docs %}
+        {% if doc.section == include.section %}
+            <li>
+            {{doc.title}}
+            </li>
+        {% endif %}
+    {% endfor %}
+</ul>

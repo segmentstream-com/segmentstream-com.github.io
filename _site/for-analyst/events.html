@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+
+        <title>DDManager documentation : События</title>
+        <meta name="description" content="">
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/syntax.css">
+        <link rel="stylesheet" href="/css/main.css">
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="row">
+                <div id="header" class="col-sm-12">
+                    <h4><a class="brand" href="/">DDManager documentation</a>
+    <small></small>
+</h4>
+
+                </div>
+            </div>
+            <div class="row">
+                
+                
+                    <div id="navigation" class="col-sm-2">
+                        <ul class="nav nav-list">
+    
+
+    
+        
+        
+        
+        
+            
+                <li class="nav-header">Аналитику</li>
+            
+            <li data-order="2"><a href="/for-analyst/events">События</a></li>
+        
+            
+            <li data-order="2"><a href="/for-analyst/integrations">Интеграции</a></li>
+        
+            
+            <li data-order="4"><a href="/for-analyst/variables">Переменные</a></li>
+        
+            
+            <li data-order="1"><a href="/for-analyst/index">Обзор</a></li>
+        
+    
+        
+        
+        
+        
+            
+                <li class="nav-header">Разработчику</li>
+            
+            <li data-order="1"><a href="/for-developer/index">Обзор</a></li>
+        
+    
+        
+        
+        
+        
+            
+                <li class="nav-header">Список интеграций</li>
+            
+            <li data-order="1"><a href="/integrations/google-analytics">Google Analytics</a></li>
+        
+    
+<!-- List additional links. It is recommended to add a divider
+    e.g. <li class="divider"></li> first to break up the content. -->
+</ul>
+
+                    </div>
+
+                    <div id="content" class="col-sm-10">
+                        <div class="page-header">
+    <h2>События
+        
+    </h2>
+</div>
+
+<p>Событие - одно из наиболее важных составляющих digitalData. Любая информация отправляется в системы аналитики и другие маркетинговые системы только в виде событий. Ниже будут описаны способы создания и управления событиями в интерфейсе Digital Data Manager.</p>
+
+<blockquote>
+  <p>Навигация по странице <br />
+<a href="#0">Введение</a> <br />
+<a href="#1">Создание события</a> <br />
+<a href="#3">Вспомогательные функции</a> <br />
+<a href="#4">Как называть события</a> <br /></p>
+</blockquote>
+
+<h4 id="Введение"><a name="0"></a>Введение</h4>
+<p>Любое событие - это набор информации, который поступает в массив данных digitalData.events. Информация в массиве должна быть представлена в виде javaScript объекта.
+Например: Digital Data Manager зарегистрирует событие с именем “Event Happened” в момент, когда будет выполнен следующий код:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">digitalData</span><span class="p">.</span><span class="nx">events</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
+  <span class="na">name</span><span class="p">:</span> <span class="s1">'Event Happened'</span><span class="p">,</span>
+  <span class="na">value</span><span class="p">:</span> <span class="mi">3000</span>
+<span class="p">});</span>      
+</code></pre>
+</div>
+<p>Теперь Digital Data Manager может отправить информацию о событии “Event Happened” вместе со значением 3000 в любую систему, например в Google Analytics или Yandex Metrika.</p>
+
+<h4 id="Создание-события"><a name="1"></a>Создание события</h4>
+
+<p>В Digital Data Manager есть 3 базисных триггера:</p>
+<ul>
+  <li>Событие</li>
+  <li>Клик</li>
+  <li>Показ
+    <blockquote>
+      <p>В Digital Data Manager есть 1 встроенное событие - Viewed Page. Это событие наступает в тот момент, когда полностью загружает библиотека ddmanager.
+<img src="/img/events.1.png" alt="" /></p>
+    </blockquote>
+  </li>
+</ul>
+
+<p>На основе этих триггеров и данных из digitalData можно создавать новые события события.</p>
+
+<h5 id="Пример-1-Событие-viewed-product-detail">Пример 1: Событие Viewed Product Detail</h5>
+<p>Большинству маркетинговых систем требуется информация о просмотрах карточек товаров вашего интернет-магазина. Чтобы отправить в интеграцию информацию о просмотренном товаре, вам нужно настроить событие Viewed Product Detail. Это событие наступает в момент загрузки пользователем карточки товара или на языке digitalData: Наступило событие Viewed Page при условии, что digitalData.page.type === ‘product’ (тип страницы, на которой находится пользователь: товар).</p>
+
+<p><img src="/img/events.2.png" alt="" /></p>
+<h4 id="javascript">JavaScript</h4>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">digitalData</span><span class="p">(</span><span class="s1">'page.type'</span><span class="p">)</span> <span class="o">===</span> <span class="s1">'product'</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="na">category</span><span class="p">:</span> <span class="s1">'Ecommerce'</span><span class="p">,</span>
+    <span class="na">name</span><span class="p">:</span> <span class="s1">'Viewed Product Detail'</span>
+  <span class="p">};</span>
+<span class="p">}</span>  
+</code></pre>
+</div>
+<p>Конструкция this.digitalData(‘page.type’) <a href="#3">описана ниже</a>.</p>
+
+<h5 id="Пример-2-Событие-clicked-campaign">Пример 2: Событие Clicked Campaign</h5>
+<p>Для отслеживания CTR и других показателей эффективности внутренних кампаний, необходимо отлеживать клики по баннерам. Это событие наступает в момент клика пользователем по баннеру или на языке digitalData: Сработал триггер Click по элементу страницы, содержащему CSS class=”ddl_campaign_link”.</p>
+<blockquote>
+  <p>Важно! Если при настройке кампании вы выбрали в качестве триггера - “Клик”, в поле “Функция, которая обращает объект события” вы можете обратиться к переменной “element”. Element - это объект DOM, CSS селектор которого вы указали.</p>
+</blockquote>
+
+<p><img src="/img/events.3.png" alt="" /></p>
+<h4 id="javascript-1">JavaScript</h4>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">campaignId</span> <span class="o">=</span> <span class="nx">element</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s1">'data-campaign-id'</span><span class="p">);</span>
+<span class="k">return</span> <span class="p">{</span>
+  <span class="na">name</span><span class="p">:</span> <span class="s1">'Clicked Campaign'</span><span class="p">,</span>
+  <span class="na">category</span><span class="p">:</span> <span class="s1">'Promo'</span><span class="p">,</span>
+  <span class="na">campaign</span><span class="p">:</span> <span class="nx">campaignId</span>
+<span class="p">};</span>  
+</code></pre>
+</div>
+
+<h5 id="Пример-3-Событие-viewed-campaign">Пример 3: Событие Viewed Campaign</h5>
+<p>В связке с кликами по баннерам, необходимо отслеживать и показы баннеров. Встроенный триггер “Показ” срабатывает только тогда, когда в поле видимости браузера посетителя сайта попало 75% отслеживаемого элемента страницы. CSS селектор отслеживаниемого элемента указывается в соответствующем после настройки события.</p>
+<blockquote>
+  <p>Важно! Если при настройке кампании вы выбрали в качестве триггера - “Показ”, в поле “Функция, которая обращает объект события” вы можете обратиться к переменной “elements”. Elements - это массив объектов DOM, CSS селектор которых вы указали.</p>
+</blockquote>
+
+<p><img src="/img/events.4.png" alt="" /></p>
+<h4 id="javascript-2">JavaScript</h4>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">viewedCampaigns</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">elements</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">campaignId</span> <span class="o">=</span> <span class="nx">elements</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s1">'data-campaign-id'</span><span class="p">);</span>
+  <span class="nx">viewedCampaigns</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">campaignId</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">return</span> <span class="p">{</span>
+	<span class="na">name</span><span class="p">:</span> <span class="s1">'Viewed Campaign'</span><span class="p">,</span>
+  <span class="na">category</span><span class="p">:</span> <span class="s1">'Promo'</span><span class="p">,</span>
+  <span class="na">campaigns</span><span class="p">:</span> <span class="nx">viewedCampaigns</span>
+<span class="p">};</span>
+</code></pre>
+</div>
+
+<h4 id="Вспомогательные-функции"><a name="3"></a>Вспомогательные функции</h4>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="k">this</span><span class="p">.</span><span class="nx">queryParam</span><span class="p">(</span><span class="s1">'q'</span><span class="p">)</span> <span class="c1">// получить значение параметр URL</span>
+<span class="k">this</span><span class="p">.</span><span class="nx">cookie</span><span class="p">(</span><span class="s1">'_ga'</span><span class="p">)</span> <span class="c1">// получить значение куки по ее имени</span>
+<span class="k">this</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="s1">'transaction.lineItems'</span><span class="p">)</span> <span class="c1">// Безопасно получить любое свойство любого объекта</span>
+<span class="k">this</span><span class="p">.</span><span class="nx">digitalData</span><span class="p">(</span><span class="s1">'transaction.lineItems'</span><span class="p">)</span> <span class="c1">// Безопасно получить любое свойство объекта digitalData </span>
+<span class="k">this</span><span class="p">.</span><span class="nx">global</span><span class="p">(</span><span class="s1">'settings.mobile_app'</span><span class="p">)</span> <span class="c1">// Безопасно получить любое свойство объекта window</span>
+<span class="k">this</span><span class="p">.</span><span class="nx">domQuery</span><span class="p">(</span><span class="s1">'#logo'</span><span class="p">)</span> <span class="c1">// получить массив элементов по CSS-селектору</span>
+<span class="k">this</span><span class="p">.</span><span class="nx">dataLayer</span><span class="p">(</span><span class="s1">'ecommerce.purchase'</span><span class="p">)</span> <span class="c1">// Безопасно получить переменную из GTM datalayer</span>
+<span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">fetch</span><span class="p">(</span><span class="s1">'/ajax?cart'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
+<span class="p">});</span> <span class="c1">// забрать данные с удаленного сервера асинхронно</span>
+<span class="k">return</span> <span class="nx">timeout</span><span class="p">(</span><span class="mi">1500</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="na">name</span><span class="p">:</span> <span class="s1">'Event With Timeout'</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">});</span> <span class="c1">// Задержка перед тем как обработчик вернет результат</span>
+</code></pre>
+</div>
+
+<h4 id="Как-называть-события"><a name="4"></a>Как называть события</h4>
+<p>Стандартные интеграции в Digital Data Manager работают со <a href="#">списком зарезервированных событий</a>, например: Viewed Product Detail, Viewed Cart, Viewed Checkout Step, Completed Transacion и т.д. 
+Мы настоятельно рекомендуем придерживать описанных ниже правил при создании новых событий:</p>
+<ol>
+  <li>Проверьте список зарезервированных событий. Если вы не нашли подходящего события - переходите к пункту 2.</li>
+  <li>Название событие всегда пишется строчными буквами на английском языке, при этом каждое слово отделено пробелом и начинается с прописной буквы.</li>
+  <li>Название события содержит в себе действие в прошедшем времени.</li>
+</ol>
+
+
+                    </div>
+                
+            </div>
+
+            <div class="row">
+                <div id="footer" class="col-sm-12">
+                    Documentation for <a href="">DDManager documentation</a>
+
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function orderNav() {
+                var list,
+                    section,
+                    header,
+                    sections = [],
+                    lists = {},
+                    headers = {};
+                var navUl = document.querySelectorAll('#navigation ul')[0],
+                    navLis = document.querySelectorAll('#navigation ul li');
+                if (!navUl) return;
+                for (var i = 0; i < navLis.length; i++) {
+                    var order, li = navLis[i];
+                    if (li.classList.contains('nav-header')) {
+                        section = li.textContent || li.innerText;
+                        sections.push(section);
+                        headers[section] = li;
+                        continue;
+                    }
+                    if (!lists[section]) {
+                        lists[section] = [];
+                    }
+                    order = parseFloat(li.getAttribute('data-order'))
+                    lists[section].push([order, li]);
+                }
+                for (var i = 0; i < sections.length; i++) {
+                    section = sections[i];
+                    list = lists[section].sort(function(a, b) {
+                        return a[0] - b[0];
+                    });
+                    if (header = headers[section]) {
+                        navUl.appendChild(header);
+                    }
+                    for (var j = 0; j < list.length; j++) {
+                        navUl.appendChild(list[j][1]);
+                    }
+                }
+            }
+            if (document.querySelectorAll) orderNav();
+        </script>
+    </body>
+</html>

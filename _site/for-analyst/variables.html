@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+
+        <title>DDManager documentation : Переменные</title>
+        <meta name="description" content="">
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/syntax.css">
+        <link rel="stylesheet" href="/css/main.css">
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="row">
+                <div id="header" class="col-sm-12">
+                    <h4><a class="brand" href="/">DDManager documentation</a>
+    <small></small>
+</h4>
+
+                </div>
+            </div>
+            <div class="row">
+                
+                
+                    <div id="navigation" class="col-sm-2">
+                        <ul class="nav nav-list">
+    
+
+    
+        
+        
+        
+        
+            
+                <li class="nav-header">Аналитику</li>
+            
+            <li data-order="2"><a href="/for-analyst/events">События</a></li>
+        
+            
+            <li data-order="2"><a href="/for-analyst/integrations">Интеграции</a></li>
+        
+            
+            <li data-order="4"><a href="/for-analyst/variables">Переменные</a></li>
+        
+            
+            <li data-order="1"><a href="/for-analyst/index">Обзор</a></li>
+        
+    
+        
+        
+        
+        
+            
+                <li class="nav-header">Разработчику</li>
+            
+            <li data-order="1"><a href="/for-developer/index">Обзор</a></li>
+        
+    
+        
+        
+        
+        
+            
+                <li class="nav-header">Список интеграций</li>
+            
+            <li data-order="1"><a href="/integrations/google-analytics">Google Analytics</a></li>
+        
+    
+<!-- List additional links. It is recommended to add a divider
+    e.g. <li class="divider"></li> first to break up the content. -->
+</ul>
+
+                    </div>
+
+                    <div id="content" class="col-sm-10">
+                        <div class="page-header">
+    <h2>Переменные
+        
+    </h2>
+</div>
+
+<p>Digital Data Manager позволяет отправлять данные из слоя данных digitalData в любые интеграции, например данные о сегменте вашего пользователя в <a href="http://www.criteo.com/">Criteo</a>. Иногда бывает необходимо создать новые данные на основе сочетания тех данных, которые уже есть в digitalData. Это можно сделать с помощью модуля Переменные в админ-панеле Digital Data Manager.</p>
+
+<blockquote>
+  <p>Навигация по странице <br />
+<a href="#0">Введение</a> <br />
+<a href="#1">Создание новой переменной</a> <br />
+<a href="2">Сохранение переменной</a> <br />
+<a href="#3">Вспомогательные функции</a> <br /></p>
+</blockquote>
+
+<h4 id="Введение"><a name="0"></a>Введение</h4>
+
+
+                    </div>
+                
+            </div>
+
+            <div class="row">
+                <div id="footer" class="col-sm-12">
+                    Documentation for <a href="">DDManager documentation</a>
+
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function orderNav() {
+                var list,
+                    section,
+                    header,
+                    sections = [],
+                    lists = {},
+                    headers = {};
+                var navUl = document.querySelectorAll('#navigation ul')[0],
+                    navLis = document.querySelectorAll('#navigation ul li');
+                if (!navUl) return;
+                for (var i = 0; i < navLis.length; i++) {
+                    var order, li = navLis[i];
+                    if (li.classList.contains('nav-header')) {
+                        section = li.textContent || li.innerText;
+                        sections.push(section);
+                        headers[section] = li;
+                        continue;
+                    }
+                    if (!lists[section]) {
+                        lists[section] = [];
+                    }
+                    order = parseFloat(li.getAttribute('data-order'))
+                    lists[section].push([order, li]);
+                }
+                for (var i = 0; i < sections.length; i++) {
+                    section = sections[i];
+                    list = lists[section].sort(function(a, b) {
+                        return a[0] - b[0];
+                    });
+                    if (header = headers[section]) {
+                        navUl.appendChild(header);
+                    }
+                    for (var j = 0; j < list.length; j++) {
+                        navUl.appendChild(list[j][1]);
+                    }
+                }
+            }
+            if (document.querySelectorAll) orderNav();
+        </script>
+    </body>
+</html>
