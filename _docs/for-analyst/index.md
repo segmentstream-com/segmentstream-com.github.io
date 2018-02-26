@@ -1,40 +1,40 @@
 ---
 layout: page
 section: analyst
-title: "Обзор"
+title: "Overview"
 date: 2017-06-05 12:00:00
 order: 0
 ---
 
-Панель DigitalDataManager позволяет управлять потоками данных между сайтом и сторонними системами в случае, если [стандарт представления данных `digitalData` установлен на сайте](/for-developer/). Контроль над потоком осуществляется с помощью пяти сущностей: Интеграции, Приоритеты, События, Переменные, Скрипты. Соответственно, интерфейс системы разбит на 5 основных разделов, добраться к которым можно с помощью вкладок в верхней части интерфейса.
+The DigitalDataManager panel allows you to control the flow of data between the site and third-party systems in case [the `digitalData` data layer is installed on the site](/for-developer/). Flow control is performed using five entities: Integration, Priorities, Events, Variables, Scripts. Accordingly, the system interface is divided into 5 main sections, which can be accessed via tabs at the top of the interface.
 
 ![](/img/overview.1.png)
 
-> Предварительно необходимо сделать [глобальные настройки проекта](/for-analyst/settings).
+> [Global project settings](/for-analyst/settings) have to be set up first.
 
-### 1. Интеграции
+### 1. Integration
 ------
-Каждая интеграция представляет собой коннектор между `digitalData` и сторонней системой. Интеграция умеет прослушивать все события, добавляемые в `digitalData`, а также преобразовывать информацию из событий в необходимый для сторонней системы формат. В случае, если данное событие является необходимым для системы, **DigitalDataManager** отправляет соответствующую информацию.
+Each integration is a connector between `digitalData` and a third-party system. An integration can listen to all events added to `digitalData.events`, and also convert information from events into a format that is necessary for a third-party system. If an event is mandatory for the system, **DigitalDataManager** sends the relevant information.
 
-В интерфейсе, каждая интеграция имеет набор настроек. Для одних интеграций - это только уникальный идентификатор в сторонней системе, для других - достаточно длинный список. Описание настроек всех интеграций есть в данной документации на соответствующих страницах. <br />
-[Подробнее об интеграциях](/for-analyst/integrations)
+In the interface, each integration has a set of settings. For some integrations, this is only a unique identifier in the system, for others - a fairly long list. You will find the description of the settings of all integrations on the corresponding pages. <br />
+[More about integrations] (/for-analyst/integrations)
 
-### 2. Приоритеты
+### 2. Priorities
 ------
-Приоритеты - это модуль DigitalDataManager'а, который позволяет управлять очередью загрузок интеграций. Приоритеты помогут увеличить скорость загрузки сайта. <br />
-[Подробнее о приоритетах](/for-analyst/priorities)
+Priorities is the DigitalDataManager module which allows you to manage the queue in which integrations load. Priorities will help decrease your website's load time.<br />
+[More about priorities](/for-analyst/priorities)
 
-### 3. События
+### 3. Events
 ------
-Событие - одна из наиболее важных составляющих digitalData. Любая информация отправляется в системы аналитики и другие маркетинговые системы только в виде событий. Каждое событие может нести в себе информацию о пользователе, текущей странице, виде действия пользователя и т.д. <br />
-[Подробнее о события](/for-analyst/events)
+Events is one of the most important components of `digitalData`. All information is sent to analytics and marketing systems in the form of events. Each event can carry information about the user, the current page, the type of user action, etc. <br />
+[More about events](/for-analyst/events)
 
-### 4. Переменные
+### 4. Variables
 ------
-Модуль "Переменные" позволяет на основе данных, находящихся в объекте `digitalData` создавать новые данные. Модуль решает широкий спектр задач: от преобразования одного формата данных к другому или создания новой переменной в `DigitalData` на основе данных, полученных из сторонних систем. <br />
-[Подробнее о переменные](/for-analyst/variables)
+The "Variables" module allows you to create new data based on the data in the `digitalData` object. The module solves a wide range of tasks: from converting one data format to another or creating a new variable in `digitalData` based on data received from third-party systems. <br />
+[More about variables](/for-analyst/variables)
 
-### 5. Скрипты
+### 5. Scripts
 ------
-Модуль “Скрипты” дает возможность исполнить любой JavaScript-код после срабатывания определенного триггера. Мы рекомендуем использовать модуль “Скрипты” только в том случае, если ваша задача не решается “Интеграциями”, “Событиями” и “Переменными”. <br />
-[Подробнее о скриптах](/for-analyst/scripts)
+The "Scripts" module makes it possible to execute any JavaScript code after a certain trigger. We recommend using the "Scripts" module only if your task can not solved by the functionality of "Integrations", "Events" and "Variables". <br />
+[More about scripts](/for-analyst/scripts)

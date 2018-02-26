@@ -1,84 +1,84 @@
 ---
 layout: page
 section: analyst
-title: "Настройки проекта"
+title: "Project settings"
 date: 2017-08-25 15:00:00
 order: 1
 ---
 
-В зависимости от особенностей архитектуры вашего сайта могут отличаться и настройки проекта. Если ваш сайт построен на технологии AJAX, или разные разделы сайта располагаются на разных поддоменах и в некоторых других случаях вам необходимо сделать ряд настроек.
+Depending on the architecture of your website, the project settings may differ. If your site is built on AJAX technology, different sections of the site are located on different subdomains, and in some other cases you need to make a number of settings.
 
-### Навигация по странице
+### Navigation
 ------
 <ul class="page-navigation">
-  <li><a href="#0">Введение</a></li>
-  <li><a href="#1">Автоматическая отправка события Viewed Page</a></li>
-  <li><a href="#2">Использовать Cookie вместо LocalStorage для хранения данных</a></li>
-  <li><a href="#3">Длина сессии в секундах</a></li>
-  <li><a href="#4">Максимальная ширина сайта в пикселях</a></li>
-  <li><a href="#5">Отслеживать ошибки валидации</a></li>
-  <li><a href="#6">Отслеживать все ошибки JavaScript</a></li>
+  <li><a href="#0">Introduction</a></li>
+  <li><a href="#1">Automatically send Viewed Page event</a></li>
+  <li><a href="#2">Use Cookie instead of LocalStorage for data storage</a></li>
+  <li><a href="#3">Session length in seconds</a></li>
+  <li><a href="#4">Maximum width of the site in pixels</a></li>
+  <li><a href="#5">Track validation errors</a></li>
+  <li><a href="#6">Track all JavaScript errors</a></li>
 </ul>
 
-### <a name="0"></a>Введение
+### <a name="0"></a>Introduction
 ------
-Чтобы задать настройки:
-1. Авторизуйтесь на сайте [ddmanager.ru](https://admin.ddmanager.ru/)
-2. Кликните на ссылку "настройки" в правом верхнем углу окна.
-3. Сделайте настройки согласно документации ниже
-4. Опубликуйте проект.
+How to adjust the settings:
+1. Log in to the site [ddmanager.ru](https://admin.ddmanager.ru/)
+2. Click on the "Settings" link in the upper right corner of the window.
+3. Adjust the settings according to the documentation below
+4. Publish the project.
 
 ![](/img/settings.png)
 
-### <a name="1"></a>Автоматическая отправка события Viewed Page
+### <a name="1"></a> Automatic sending of the Viewed Page event
 ------
-Событие `Viewed Page` - это базовое событие. Оно необходимо для работы большинства сторонних систем. Вместе с событием Viewed Page в сторонние системы отправляются различные данные из объекта `digitalData`: `digitalData.page.type`, `digitalData.user.userId`, `digitalData.listing.categoryId` и многие другие.
+The `Viewed Page` event is the base event. It is necessary for the operation of most third-party systems. Along with the Viewed Page event, various data is sent to third-party systems from the `digitalData` object: `digitalData.page.type`, `digitalData.user.userId`, `digitalData.listing.categoryId` and many others.
 
-> Событие `Viewed Page`  должно быть добавлено в массив `digitalData.events` только после полного заполнения данными объекта `digitalData`.
+> The `Viewed Page` event must be added to the array `digitalData.events` only after the data of the `digitalData` object has been fully populated.
 
-По умолчанию DigitalDataManager автоматически добавляет событие `Viewed Page` в массив `digitalData.events` в момент загрузки библиотеки `ddmanager.js`. Это происходит при каждой загрузке страницы.
+By default, DigitalDataManager automatically adds the `Viewed Page` event to the `digitalData.events` array when the `ddmanager.js` library is loaded. This happens every time a page loads.
 
-Если вы добавляете событие `Viewed Page` в массив `digitalData.events` самостоятельно из кода сайта, делайте это только после заполнения объекта digitalData всеми переменными. В этом случае выключите тумблер "Автоматической отправки события Viewed Page".
+If you add the `Viewed Page` event to the `digitalData.events` array yourself from the site code, do this only after filling the digitalData object with all the variables. In this case, turn off the "Automatic send Viewed Page event" switch.
 
-### <a name="2"></a>Использовать Cookie вместо LocalStorage для хранения данных
+### <a name="2"></a> Use Cookie instead of LocalStorage to store data
 ------
-DigitalDataManager позволяет на основе событий и переменных объекта `digitalData` создавать новые переменные и сохранять их на определенный срок. Например: вам необходимо передать в google analytics количество просмотров карточек товаров перед покупкой. Подробнее о сохранении переменных читайте в разделе [Переменные](/for-analyst/events/).
+DigitalDataManager allows you to create new variables based on the events and variables of the `digitalData` object and save them for a certain period. For example: you need to give google analytics the number of times product pages are viewed before a transaction. For more information about saving variables, see [Variables](/for-analyst/events/).
 
-По умолчанию значение любой переменной сохраняется в [LocalStorage](https://www.w3schools.com/html/html5_webstorage.asp) браузера посетителя в виде строки. LocalStorage поддерживается всеми современными браузерами. В отличие от Cookie, LocalStorage является более безопасным хранилищем, вмещает до 5 мб, и информация никогда не отправляется на сервер.
+By default, the value of any variable is stored in the [LocalStorage] (https://www.w3schools.com/html/html5_webstorage.asp) of the visitor's browser as a string. LocalStorage is supported by all modern browsers. Unlike Cookie, LocalStorage is a more secure storage, holds up to 5 MB, and information is never sent to the server.
 
-Однако LocalStorage хранит информацию в рамках одного домена. Это значит, что вы не можете получить доступ к информации со страниц поддомена.
+However, LocalStorage stores information within the same domain. This means that you can not access information from the subdomain pages.
 
-> Если разные разделы вашего сайта расположены на поддоменах - используйте Cookie вместо LocalStorage
+> If different sections of your site are located on subdomains - use Cookie instead of LocalStorage
 
-В качестве домена для установки cookie укажите домен верхнего уровня.
-Например, ваш интернет-магазин расположен по адресу https://shop.ru, но корзина расположена по адресу https://cart.shop.ru. Чтобы со страниц корзины была доступна информация, сохраненная на страницах карточек товаров, необходимо использовать cookie с доменом shop.ru
+For the domain to set the cookie, specify the top-level domain.
+For example, your online store is located at https://shop.ru, but the basket is located at https://cart.shop.ru. To ensure that the information stored on the pages of the goods cards is available from the shopping cart pages, you must use the cookie with the domain shop.ru
 
-> Cookie хранят только 4кб. Обратите на это внимание при сохранении больших массивов или строк.
+> Cookies store only 4kb. Pay attention to this when saving large arrays or strings.
 
-### <a name="3"></a> Длина сессии в секундах
+### <a name="3"></a> Session Length in Seconds
 ------
-DigitalDataManager имеет встроенное событие `Session Started`. Это событие автоматически добавляется в массив `digitalData.events` в случае, если у данного пользователя с момента любого другого события прошло больше заданного отрезка времени. По умолчанию этот отрезок времени (Длина сессии) равен одному часу или 3600 секунд.
-Примеры:
-1. Пользователь впервые попал на сайт. Одновременно с первым событием `Viewed Page` DigitalDataManager добавит событие `Session Started` в массив `digitalData.events`.
-2. Пользователь ходил по сайту, оставил вкладку браузера открытой и ушел на 2 часа. Пользователь вернулся к сайту и кликнул на баннер или перешел на другую страницу. В этот момент событие `Session Started` будет автоматически добавлено в массив `digitalData.events`.
+DigitalDataManager has a built-in event `Session Started`. This event is automatically added to the array `digitalData.events` if the given user has passed more than the specified time interval from the moment of any other event. By default, this length of time (Session Length) is one hour or 3600 seconds.
+For example:
+1. A user visits the website for the first time. Simultaneously with the first event, `Viewed Page` DigitalDataManager will add the `Session Started` event to the array `digitalData.events`.
+2. The interacted with the website, left the browser tab open and left for 2 hours. The user returned to the site and clicked on a banner or moved to another page. At this point, the event `Session Started` will be automatically added to the array `digitalData.events`.
 
-Это событие может вам понадобиться, если вы захотите обнулять или перезаписывать значение переменной в объекте digitalData в момент старта новой сессии.
+You may need this event if you want to nullify or overwrite the value of a variable in the digitalData object when the new session starts.
 
-> Рекомендуем и в Google Analytics и в DigitalDataManager задать одинаковую длину сессии.
+> We recommend setting the same session length in both Google Analytics and DigitalDataManager.
 
-### <a name="4"></a> Максимальная ширина сайта в пикселях
+### <a name="4"></a> Maximum width of the site in pixels
 ------
-Если вы используете на сайте блок со слайдером баннеров, рекомендуем задать в поле настройки максимальную ширину окна вашего сайта. Эта настройка поможет правильно учитывать [события показов баннеров](/events/viewed-campaign).
+If you use a block with a banner slider on the site, we recommend setting the maximum width of the window of your site in the field of settings. This setting will help to correctly setup the [events of banner impressions](/events/viewed-campaign).
 
-### <a name="5"></a> Отслеживать ошибки валидации
+### <a name="5"></a> Tracking validation errors
 ------
-DigitalDataManger имеет встроенный [модуль отслеживания ошибок работы интеграций](/for-analyst/integrations#2). Данный модуль выводит в консоль разработчика информацию обо всех данных, отправляемых в сторонние системы. Если вы включите отслеживание ошибок валидации, то каждый раз при возникновении ошибки в работе интеграции у любого из посетителей сайта, DigitalDataManager будет автоматически добавлять это событие в массив `digitalData.events`. Теперь это событие может быть отправлено в любую систему статистики для последующего анализа причин возникновения ошибки.
+DigitalDataManger has a built-in [integration error tracking module](/for-analyst/integrations#2). This module displays information about all the data sent to third-party systems in the developer console. If you enable the tracking of validation errors, whenever an integration error occurs with any of the site visitors, DigitalDataManager will automatically add this event to the array `digitalData.events`. Now this event can be sent to any statistics system for further analysis of the causes of the error.
 
-Если у вас настроена интеграция с [Google Analytics](/integrations/google-analytics), информацию об ошибках валидации вы найдете в отчетах по событиям.
+If you have set up the [Google Analytics](/integrations/google-analytics) integration, you can find information about validation errors in the event reports.
 
-### <a name="6"></a> Отслеживать все ошибки JavaScript
+### <a name="6"></a> Track all JavaScript errors
 ------
-DigitalDataManger также умеет перехватывать сообщения о возникновении любых JavaScript-ошибок на вашем сайте. Обычно на сайтах происходят тысячи ошибок: не подгружаются библиотеки сторонних систем, ошибки в скриптах разработчиков, непредвиденные действия пользователей и так далее. Все эти ошибки могут быть переданы в Google Analytics с хитами типа [exceptions](https://developers.google.com/analytics/devguides/collection/analyticsjs/exceptions). Построив кастомный отчет в интерфейсе Google Analytics вы сможете найти страницы и условия при которых случаются ошибки.
+DigitalDataManger can also intercept messages about the occurrence of any JavaScript errors on your site. Typically, there are thousands of errors on websites: libraries of third-party systems do not loading, errors in the developers' scripts, unexpected user actions and so on. All these errors can be passed to Google Analytics with hits such as [exceptions](https://developers.google.com/analytics/devguides/collection/analyticsjs/exceptions). By building a custom report in the Google Analytics interface, you can find the pages and conditions under which errors occur.
 
 ![](/img/settings.1.png)
-Пример настройки отчета в интерфейсе Google Analytics
+Example of a report setup in the Google Analytics interface

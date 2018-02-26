@@ -3,23 +3,23 @@ layout: default
 title: "Documentation Index Page"
 ---
 
-### Введение:
+### Introduction:
 ------
-**DigitalDataManager** - это универсальное решение, которое управляет потоками информации между сайтом и множеством аналитических и маркетинговых систем. Эти системы умеют принимать информацию об определенных событиях, происходящих на сайте, в определенном формате. Всем нужны разные события: 
- - Системе ретаргетинга Criteo важно знать в какой момент времени пользователь посещает страницу корзины, а Retail Rocket - нет.
- - Для Yandex Metrica важно получить информацию о товаре в момент его удаления из корзины, а для Google Analytics - нет
- - Системы стриминга данных записывают все события, происходящие на сайте, для последующего глубокого анализа.
+**DigitalDataManager** is a universal solution that manages the flow of information between the site and a variety of analytics and marketing systems. These systems are able to receive information about certain events occurring on the site in a certain format. Every system needs different events:
+ - For the Criteo retargeting system, it is important to know at what point in time the user visits the basket page, while for the Retail Rocket system it is not.
+ - For Yandex Metrica, it is important to get information about the product at the time of its removal from the basket, while it isn't important for Google Analytics
+ - Data streaming systems record all events occurring on the site for further in-depth analysis.
 
-Механизм работы DigitalDataManager основан на 2-х базисах:
-- **[DigitalData](http://docs.ddmanager.ru/for-developer/)** - это открытый стандарт представления информации на веб-страницах. Технически DigitalDataLayer - простой JavaScript-объект в формате JSON, который содержит структурированную информацию о пользователе, странице, и всех событиях (просмотры страниц, товаров, клики, добавления в корзину, транзакции, ошибки JavaScript и многое другое). 
-- **[Панель DigitalDataManager](http://docs.ddmanager.ru/for-analyst/)** - это система, которая работает с данными из DigitalDataLayer. DigitalDataManager преобразовывает информацию в любой формат и передает ее в маркетинговые и аналитические системы в нужные моменты времени. Также DigitalDataManager обогащает DigitalDataLayer данными из сторонних систем, например: CRM ,DMP, API погоды и т.д.
+DigitalDataManager is functioning with the help of the following:
+- **[DigitalData] (http://docs.ddmanager.ru/for-developer/)** is an open standard for presenting information on web pages. Technically, DigitalDataLayer is a simple JavaScript object in JSON format that contains structured information about a user, a page, and all events (pageviews, items, clicks, additions to cart, transactions, JavaScript errors, and more).
+- **[DigitalDataManager Panel] (http://docs.ddmanager.ru/for-analyst/)** is a system that works with data from DigitalDataLayer. DigitalDataManager converts information into any format and passes it to marketing and analytics systems at the right time. Also DigitalDataManager enriches DigitalDataLayer with data from third-party systems, for example: CRM, DMP, weather API, etc.
 
-### Ключевые особенности:
+### Key features:
 ------
-- Подключение и отключение маркетинговых систем в 1 клик. 
-- Снижение издержек на интеграции в 8-10 раз.
-- Управление приоритетами загрузки интеграций.
-- Real-time валидация всех ошибок.
-- Автоматическая отправка данных о любых сбоях работы интеграций в аналитику.
-- Безопасность данных. Трекеры получают только необходимую информацию для эффективной работы системы и ни бита больше.
-- Стриминг всех событий в Google BigQuery.
+- Activation and deactivation of marketing systems in 1 click.
+- Reducing the cost of integrations by 8-10 times.
+- Integration prioritization management.
+- Real-time error validation.
+- Automatic sending of data on any integration failures to analytics.
+- Data security. Trackers only get the necessary information for the effective operation of their system and not a bit more.
+- Streaming of all events into Google BigQuery.
