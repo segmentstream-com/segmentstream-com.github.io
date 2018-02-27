@@ -12,12 +12,12 @@ Depending on the architecture of your website, the project settings may differ. 
 ------
 <ul class="page-navigation">
   <li><a href="#0">Introduction</a></li>
-  <li><a href="#1">Automatically send Viewed Page event</a></li>
-  <li><a href="#2">Use Cookie instead of LocalStorage for data storage</a></li>
-  <li><a href="#3">Session length in seconds</a></li>
-  <li><a href="#4">Maximum width of the site in pixels</a></li>
-  <li><a href="#5">Track validation errors</a></li>
-  <li><a href="#6">Track all JavaScript errors</a></li>
+  <li><a href="#1">Automatically send Viewed Page event</a></li>
+  <li><a href="#2">Use Cookie instead of LocalStorage for data storage</a></li>
+  <li><a href="#3">Session length in seconds</a></li>
+  <li><a href="#4">Maximum width of the site in pixels</a></li>
+  <li><a href="#5">Track validation errors</a></li>
+  <li><a href="#6">Track all JavaScript errors</a></li>
 </ul>
 
 ### <a name="0"></a>Introduction
