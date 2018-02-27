@@ -6,7 +6,7 @@ date: 2017-08-25 15:00:00
 order: 1
 ---
 
-Depending on the architecture of your website, the project settings may differ. If your site is built on AJAX technology, different sections of the site are located on different subdomains, and in some other cases you need to make a number of settings.
+Depending on the architecture of your website, the project settings may differ. If your site is built on AJAX technology, different sections of the site are located on different subdomains, and in some other cases you need to tweak the settings.
 
 ### Navigation
 ------
@@ -32,17 +32,17 @@ How to adjust the settings:
 
 ### <a name="1"></a> Automatic sending of the Viewed Page event
 ------
-The `Viewed Page` event is the base event. It is necessary for the operation of most third-party systems. Along with the Viewed Page event, various data is sent to third-party systems from the `digitalData` object: `digitalData.page.type`, `digitalData.user.userId`, `digitalData.listing.categoryId` and many others.
+The `Viewed Page` event is the base event. It is necessary for the operation of most third-party systems. Various data from the `digitalData` object is sent to third-party systems along with the Viewed Page event: `digitalData.page.type`, `digitalData.user.userId`, `digitalData.listing.categoryId` and many others.
 
 > The `Viewed Page` event must be added to the array `digitalData.events` only after the data of the `digitalData` object has been fully populated.
 
 By default, DigitalDataManager automatically adds the `Viewed Page` event to the `digitalData.events` array when the `ddmanager.js` library is loaded. This happens every time a page loads.
 
-If you add the `Viewed Page` event to the `digitalData.events` array yourself from the site code, do this only after filling the digitalData object with all the variables. In this case, turn off the "Automatic send Viewed Page event" switch.
+If you add the `Viewed Page` event to the `digitalData.events` array yourself from the site code, do this only after filling the digitalData object with all the variables. In this case, turn off the "Automatic send Viewed Page event" option using the switch.
 
 ### <a name="2"></a> Use Cookie instead of LocalStorage to store data
 ------
-DigitalDataManager allows you to create new variables based on the events and variables of the `digitalData` object and save them for a certain period. For example: you need to give google analytics the number of times product pages are viewed before a transaction. For more information about saving variables, see [Variables](/for-analyst/events/).
+DigitalDataManager allows you to create new variables based on the events and variables of the `digitalData` object and save them for a certain period. For example: you need to give google analytics the number of times product pages are viewed before a transaction is completed. For more information about saving variables, see [Variables](/for-analyst/events/).
 
 By default, the value of any variable is stored in the [LocalStorage] (https://www.w3schools.com/html/html5_webstorage.asp) of the visitor's browser as a string. LocalStorage is supported by all modern browsers. Unlike Cookie, LocalStorage is a more secure storage, holds up to 5 MB, and information is never sent to the server.
 

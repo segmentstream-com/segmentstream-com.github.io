@@ -6,18 +6,18 @@ date: 2017-06-05 12:00:00
 order: 0
 ---
 
-The DigitalDataManager panel allows you to control the flow of data between the site and third-party systems in case [the `digitalData` data layer is installed on the site](/for-developer/). Flow control is performed using five entities: Integration, Priorities, Events, Variables, Scripts. Accordingly, the system interface is divided into 5 main sections, which can be accessed via tabs at the top of the interface.
+The DigitalDataManager panel allows you to control the flow of data between the site and third-party systems in case [the `digitalData` data layer is installed on the site](/for-developer/). Flow control is performed using five entities: Integrations, Priorities, Events, Variables, Scripts. Accordingly, the system interface is divided into 5 main sections, which can be accessed via tabs at the top of the interface.
 
 ![](/img/overview.1.png)
 
-> [Global project settings](/for-analyst/settings) have to be set up first.
+> [Global project settings](/for-analyst/settings) have to be set up before continuing.
 
 ### 1. Integration
 ------
-Each integration is a connector between `digitalData` and a third-party system. An integration can listen to all events added to `digitalData.events`, and also convert information from events into a format that is necessary for a third-party system. If an event is mandatory for the system, **DigitalDataManager** sends the relevant information.
+Each integration is a connector between `digitalData` and a third-party system. An integration can listen to all events added to `digitalData.events`, and convert information from events into a format that is necessary for a third-party system. If an event is mandatory for the system, **DigitalDataManager** sends the relevant information.
 
 In the interface, each integration has a set of settings. For some integrations, this is only a unique identifier in the system, for others - a fairly long list. You will find the description of the settings of all integrations on the corresponding pages. <br />
-[More about integrations] (/for-analyst/integrations)
+[More about integrations](/for-analyst/integrations)
 
 ### 2. Priorities
 ------
@@ -31,7 +31,7 @@ Events is one of the most important components of `digitalData`. All information
 
 ### 4. Variables
 ------
-The "Variables" module allows you to create new data based on the data in the `digitalData` object. The module solves a wide range of tasks: from converting one data format to another or creating a new variable in `digitalData` based on data received from third-party systems. <br />
+The "Variables" module allows you to create new data based on the data in the `digitalData` object. The module solves a wide range of tasks: from converting one data format to another to creating a new variable in `digitalData` based on data received from third-party systems. <br />
 [More about variables](/for-analyst/variables)
 
 ### 5. Scripts

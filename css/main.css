@@ -393,18 +393,18 @@ blockquote {
         height: 26px;
         width: 40px;  
         background-size: 20px 13px;
-        background-position: center;      
-        position: absolute;
+        background-position: left;      
+        float: left;
     }
 
     #menu-toggle.active {
         background: url(../img/x.png) no-repeat;
         background-size: 18px 16px;   
-        background-position: center;                        
+        background-position: left;                        
     }    
 
     .brand {
-        float: right;
+        float: left;
     }
 
     .brand img {
@@ -551,5 +551,20 @@ blockquote {
         color: #1392e0;
         text-decoration: none;
     }    
+
+}
+
+@media only screen and (max-width: 450px)  {
+
+    .ddm-logo {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 12px;
+    }
+
+    .brand img {
+        height: 28px;
+        margin-top: 20px;
+    }
 
 }
