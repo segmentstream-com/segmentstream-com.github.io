@@ -124,7 +124,7 @@ return timeout(1500, function() {
 
 ### <a name="4"></a>Event naming convention
 ------
-Standard DigitalDataManager integrations work with a list of reserved events, for example: [Viewed Product Detail](/events/viewed-product-detail), [Viewed Checkout Step](/events/viewed-checkout-step), [Completed Transaction] (/events/completed-transaction), etc.
-The complete list of reserved events is in the side menu under "Events List". Use the event names listed in this list.
+Standard DigitalDataManager integrations work with a list of reserved events, for example: [Viewed Product Detail](/events/viewed-product-detail), [Viewed Checkout Step](/events/viewed-checkout-step), [Completed Transaction](/events/completed-transaction), etc.
+The complete list of reserved events is located in the side menu under "Events List". Use the event names listed in this list.
 
-If you need to add an event that is not in the reserved list - use our[event naming convention](/for-developer/naming)
+If you need to add an event that is not in the reserved list - use our [event naming convention](/for-developer/naming)
