@@ -1,69 +1,69 @@
 ---
 layout: page
 section: analyst
-title: "События"
+title: "Events"
 date: 2013-06-05 12:00:00
 order: 2
 ---
 
-Событие - одна из наиболее важных составляющих digitalData. Любая информация отправляется в системы аналитики и другие маркетинговые системы только в виде событий. Ниже будут описаны способы создания и управления событиями в интерфейсе DigitalDataManager.
+Events is one of the most important components of `digitalData`. All information is sent to analytics and marketing systems in the form of events. Below, you will find a detailed description on how to create and manage events in the DigitalDataManager interface.
 
-### Навигация по странице
+### Page contents
 ------
 <ul class="page-navigation">
-  <li><a href="#0">Введение</a></li>
-  <li><a href="#1">Создание события</a></li>
-  <li><a href="#3">Вспомогательные функции</a></li>
-  <li><a href="#4">Как называть события</a></li>
+  <li><a href="#0">Introduction</a></li>
+  <li><a href="#1">Event creation</a></li>
+  <li><a href="#3">Helper functions</a></li>
+  <li><a href="#4">Event naming convention</a></li>
 </ul>
 
-### <a name="0"></a>Введение
+### <a name="0"></a>Introduction
 ------
-Любое событие - это набор информации, который поступает в массив данных digitalData.events. Информация в массиве должна быть представлена в виде javaScript объекта.
-Например: DigitalDataManager зарегистрирует событие с именем "Event Happened" в момент, когда будет выполнен следующий код:
+Any event is a set of information that enters the digitalData.events data array. The information in the array must be represented as a javaScript object.
+For example: DigitalDataManager will register an event with the name "Event Happened" when the following code is executed:
 ```javascript
 digitalData.events.push({
   name: 'Event Happened',
   value: 3000
 });      
 ```
-Теперь DigitalDataManager может отправить информацию о событии "Event Happened" вместе со значением 3000 в любую систему, например в Google Analytics или Yandex Metrica.
+Now DigitalDataManager can send information about the event "Event Happened" with the value 3000 to any system, for example, Google Analytics and Yandex Metrica.
 
-### <a name="1"></a>Создание события
+### <a name="1"></a>Event creation
 ------
-В DigitalDataManager есть 3 базисных триггера:
-* Событие
-* Клик
-* Показ
+DigitalDataManager has 3 basic triggers:
+* Event
+* Click
+* Impression
 
->Важно! В DigitalDataManager есть 1 встроенное событие - Viewed Page. Это событие наступает в тот момент, когда полностью загружает библиотека ddmanager.
+>Important! DigitalDataManager has 1 built-in event - Viewed Page. This event occurs when the ddmanager library is fully loaded.
 
 ![](/img/events.1.png)
 
-На основе этих триггеров и данных из digitalData можно создавать новые события события.
+Based on these triggers and data from digitalData, you can create new events.
 
 
-**Пример 1: Событие `Viewed Product Detail`**
+**Пример 1: `Viewed Product Detail` Event**
 
-Большинству маркетинговых систем требуется информация о просмотрах карточек товаров вашего интернет-магазина. Чтобы отправить в интеграцию информацию о просмотренном товаре, вам нужно настроить событие Viewed Product Detail. Это событие наступает в момент загрузки пользователем карточки товара или на языке digitalData: Наступило событие Viewed Page при условии, что digitalData.page.type === 'product' (тип страницы, на которой находится пользователь: товар).
+Most marketing systems require information about your online store's product page views. To send the information about the viewed product to any integration, you need to configure the Viewed Product Detail event. This event occurs when the user loads a product page, or in the digitalData language: The Viewed Page event has occurred while the variable digitalData.page.type is equal to 'product' (the type of page on which the user is located is a product page).
 
 ![](/img/events.2.png)
 
 ```javascript
-if (this.digitalData('page.type') === 'product') {
+if (_digitalData('page.type') === 'product') {
   return {
     category: 'Ecommerce',
     name: 'Viewed Product Detail'
   };
 }  
 ```
-Конструкция this.digitalData('page.type') [описана ниже](#3).
+The code _digitalData('page.type') [is explained below](#3).
 
 
-**Пример 2: Событие `Clicked Campaign`**
+**Пример 2: `Clicked Campaign` Event**
 
-Для отслеживания CTR и других показателей эффективности внутренних кампаний, необходимо отслеживать клики по баннерам. Это событие наступает в момент клика пользователем по баннеру или на языке digitalData: Сработал триггер Click по элементу страницы, содержащему CSS class="ddl_campaign_link".
->Важно! Если при настройке кампании вы выбрали в качестве триггера - "Клик", в поле "Функция, которая обращает объект события" вы можете обратиться к переменной "element". Element - это объект DOM, CSS селектор которого вы указали.
+For tracking CTR and other indicators of the effectiveness of internal campaigns, you need to track clicks on banners. This event occurs when the user clicks on a banner or in the digitalData language: The Click trigger fires on the page element that contains the CSS class = "ddl_campaign_link".
+> Important! If you selected "Click" as the trigger in the campaign setup, in the "Function that returns an event object" field, you can refer to the "element" variable. Element is the DOM object whose CSS selector you specified.
 
 ![](/img/events.3.png)
 
@@ -76,10 +76,10 @@ return {
 };  
 ```
 
-**Пример 3: Событие `Viewed Campaign`**
+**Пример 3: `Viewed Campaign` Event**
 
-В связке с кликами по баннерам, необходимо отслеживать и показы баннеров. Встроенный триггер "Показ" срабатывает только тогда, когда в поле видимости браузера посетителя сайта попало 75% отслеживаемого элемента страницы. CSS селектор отслеживаемого элемента указывается в соответствующем после настройки события.
->Важно! Если при настройке кампании вы выбрали в качестве триггера - "Показ", в поле "Функция, которая обращает объект события" вы можете обратиться к переменной "elements". Elements - это массив объектов DOM, CSS селектор которых вы указали.
+In conjunction with clicks on banners, you need to track banner impressions. The built-in "Impression" trigger works only when 75% of the monitored page element is in the site visitor's browser field of view. The CSS selector for the tracked element is specified in the corresponding event setting field.
+> Important! If you selected "Impression" as the trigger in the campaign setup, in the "Function that returns an event object" field, you can refer to the "elements" variable. Elements is an array of DOM objects whose CSS selector you specified.
 
 ![](/img/events.4.png)
 
@@ -96,36 +96,35 @@ return {
 };
 ```
 
-### <a name="3"></a>Вспомогательные функции
+### <a name="3"></a>Helper functions
 ------
 ```javascript
-_queryParam('q') // получить значение параметра URL
-_cookie('_ga') // получить значение куки по ее имени
-_get(event, 'transaction.lineItems') // Безопасно получить любое свойство любого объекта
-_digitalData('transaction.lineItems') // Безопасно получить любое свойство объекта digitalData 
-_global('settings.mobile_app') // Безопасно получить любое свойство объекта window
-_domQuery('#logo') // получить массив элементов по CSS-селектору
-_dataLayer('ecommerce.purchase') // Безопасно получить переменную из GTM dataLayer
+_queryParam('q') // get url parameter value
+_cookie('_ga') // get cookie value
+_get(event, 'transaction.lineItems') // Safely get any event property 
+_digitalData('transaction.lineItems') // Safely get any digitalData property
+_global('settings.mobile_app') // Safely get any window property
+_domQuery('#logo') // get an array of elements by CSS-selector
+_dataLayer('ecommerce.purchase') // Safely get a GTM dataLayer variable
 return _fetch('/ajax?cart', function(result) {
   return result;
-}); // забрать данные с удаленного сервера асинхронно
+}); // get data from a remote server using ajax
 return timeout(1500, function() {
   return {
     name: 'Event With Timeout';
   }
-}); // Задержка перед тем как обработчик вернет результат
+}); // Delay before the handler returns the result
 ```
 
-> Функция `_queryParam()` всегда возвращает значение в нижнем регистре
+> The `_queryParam()` function always returns values in lowercase
 
-> Функция `_domQuery()`, а также селекторы в триггерах **клик** и **показ** работают по следующему принципу:
->  - если на сайте не установлен jQuery (нет глобального объекта window.jQuery) или библиотека jQuery загружается после библиотеки DigitalDataManager (стоит ниже по коду) - используется [document.querySelectorAll](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll),
->  - если есть глобальный объект window.jQuery - используются селекторы jQuery.
+> The `_domQuery()` function, and the selectors in the triggers **Click** and **Impression** work by the following principle:
+>  - if jQuery is not loaded on the website (there is no global window.jQuery object) or jQuery is loaded after DigitalDataManager (is located further down the HTML page), [document.querySelectorAll](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll) is used,
+>  - if jQuery is loaded on the website, jQuery selectors are used.
 
-### <a name="4"></a>Как называть события
+### <a name="4"></a>Event naming convention
 ------
-Стандартные интеграции в DigitalDataManager работают со [списком зарезервированных событий](#), например: Viewed Product Detail, Viewed Cart, Viewed Checkout Step, Completed Transaction и т.д. 
-Мы настоятельно рекомендуем придерживать описанных ниже правил при создании новых событий:
-1. Проверьте список зарезервированных событий. Если вы не нашли подходящего события - переходите к пункту 2.
-2. Название событие всегда пишется строчными буквами на английском языке, при этом каждое слово отделено пробелом и начинается с прописной буквы.
-3. Название события содержит в себе действие в прошедшем времени. 
+Standard DigitalDataManager integrations work with a list of reserved events, for example: [Viewed Product Detail](/events/viewed-product-detail), [Viewed Checkout Step](/events/viewed-checkout-step), [Completed Transaction] (/events/completed-transaction), etc.
+The complete list of reserved events is in the side menu under "Events List". Use the event names listed in this list.
+
+If you need to add an event that is not in the reserved list - use our[event naming convention](/for-developer/naming)

@@ -11,8 +11,8 @@ title: "Documentation Index Page"
 - Data streaming systems record all events occurring on the site for further in-depth analysis.
 
 DigitalDataManager is functioning with the help of the following:
-- **[DigitalData](http://docs.ddmanager.ru/for-developer/)** is an open standard for presenting information on web pages. Technically, DigitalDataLayer is a simple JavaScript object in JSON format that contains structured information about a user, a page, and all events (pageviews, items, clicks, additions to cart, transactions, JavaScript errors, and more).
-- **[DigitalDataManager Panel](http://docs.ddmanager.ru/for-analyst/)** is a system that works with data from DigitalDataLayer. DigitalDataManager converts information into any format and passes it to marketing and analytics systems at the right time. Also DigitalDataManager enriches DigitalDataLayer with data from third-party systems, for example: CRM, DMP, weather API, etc.
+- **[DigitalData](http://docs.segmentstream.com/for-developer/)** is an open standard for presenting information on web pages. Technically, DigitalDataLayer is a simple JavaScript object in JSON format that contains structured information about a user, a page, and all events (pageviews, items, clicks, additions to cart, transactions, JavaScript errors, and more).
+- **[DigitalDataManager Panel](http://docs.segmentstream.com/for-analyst/)** is a system that works with data from DigitalDataLayer. DigitalDataManager converts information into any format and passes it to marketing and analytics systems at the right time. Also DigitalDataManager enriches DigitalDataLayer with data from third-party systems, for example: CRM, DMP, weather API, etc.
 
 ### Key features:
 ------
