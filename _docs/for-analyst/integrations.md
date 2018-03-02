@@ -8,7 +8,7 @@ order: 2
 
 Each integration is a connector between `digitalData` and a third-party system. An integration can listen to all events added to the array `digitalData.events`, and also convert events into a format required for a third-party system. If an event is necessary for a system, **DigitalDataManager** sends it.
 
-### Навигация по странице
+### Page contents
 ------
 <ul class="page-navigation">
   <li><a href="#0">Introduction</a></li>

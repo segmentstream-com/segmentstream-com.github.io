@@ -1,87 +1,88 @@
 ---
 layout: page
 section: analyst
-title: "Переменные"
+title: "Variables"
 date: 2013-06-05 12:00:00
 order: 4
 ---
 
-**Модуль "Переменные"** позволяет на основе данных, находящихся в объекте `digitalData` создавать новые данные. Модуль решает широкий спектр задач: от преобразования одного формата данных к другому или создания новой переменной в `DigitalData` на основе данных, полученных из сторонних систем.
+The **"Variables"** module allows you to create new data based on the data in the `digitalData` object. This module solves a wide range of tasks: from converting one data format to another, to creating a new variables in `digitalData` based on data received from third-party systems.
 
-### Навигация по странице
+### Page contents
 ------
 <ul class="page-navigation">
-  <li><a href="#0">Введение</a></li>
-  <li><a href="#1">Создание новой переменной</a></li>
-  <li><a href="#3">Типы триггеров</a></li>
-  <li><a href="#4">Вспомогательные функции</a></li>
-  <li><a href="#5">Тестирование переменных</a></li>
+  <li><a href="#0">Introduction</a></li>
+  <li><a href="#1">Creating a new variable</a></li>
+  <li><a href="#2">Trigger types</a></li>
+  <li><a href="#3">Saving a variable</a></li>
+  <li><a href="#4">Helper functions</a></li>
+  <li><a href="#5">Testing variables</a></li>
 </ul>
 
-### <a name="0"></a>Введение
+### <a name="0"></a>Introduction
 ------
-DigitalDataManager позволяет отправлять данные из объекта `digitalData` в любые маркетинговые системы, например информацию о том, что пользователь уже делал покупки в [Criteo](http://www.criteo.com/). Criteo в качестве сегмента принимает только числовое значение, поэтому вам придется преобразовать информацию о покупках к числовому виду. Можно попросить ваших программистов с каждой загрузкой страницы передавать в переменную `digitalData.user.criteoSegment` значение 1, но проще создать эту переменную в интерфейсе DigitalDataManager.
-Чтобы создать новую переменную нажмите кнопку "Добавить" на экране списка всех переменных. Для редактирования созданных ранее переменных - нажмите на название необходимой переменной.
+DigitalDataManager allows you to send data from the `digitalData` object to any marketing system, for example, send information that the user has already made purchases into [Criteo](http://www.criteo.com/). Criteo only accepts numeric segment values, so you have to convert the purchase information to a numeric form. You can ask your programmers to send a value of 1 to the variable `digitalData.user.criteoSegment` every time a page loads, but it's easier to create this variable in the DigitalDataManager interface.
+To create a new variable, click the "Add" button ontop of the list of all the variables. To edit previously created variables - click on the name of the required variable.
 
-### <a name="1"></a>Создание новой переменной
+### <a name="1"></a>Creating a new variable
 ------
-В момент поступления события `Completed Transaction` вы должны определить переменную `digitalData.user.criteoSegment` со значением `1` и сохранить ее навсегда в Local storage (хранилище в браузере посетителя).
+At the time of the Completed Transaction event, you must define the variable `digitalData.user.criteoSegment` with the value of `1` and save it permanently in the Local storage (storage in the visitor's browser).
 
 ![](/img/variables.1.png)
 
-Далее в настройках интеграции Criteo укажите имя переменной, в которой хранится пользовательский сегмент - `digitalData.user.criteoSegment`.
+Next, in the Criteo integration settings, specify the name of the variable in which the user segment is stored - `digitalData.user.criteoSegment`.
 
-### <a name="2"></a>Типы триггеров
+### <a name="2"></a>Trigger types
 ------
-В инструменте создания переменных существует 2 типа триггеров:
-1. В случае если вы не указываете название триггера (оставляете поле **Триггер** пустым), переменная добавится в `digitalData` непосредственно перед событием [`Viewed Page`](/events/viewed-page). Это значит, что если вы вместе с событием `Viewed Page` хотите отправить значение из созданной вами переменной, оно уйдет вместе с этим событием. 
-2. Если же вы в поле триггер укажите `Viewed Page`, то переменная будет создана после события и информация не сможете уйти вместе с просмотром страницы.
+There are two inputs in the trigger settings of the variable creation tool. The first input lets you specify whether the variable will be added/updated before or after the event specified in the trigger name (the second input).
+1. If you select 'before', you will be able to send a value from the generated variable along with the event specified in the second input.
+2. If you select 'after', the variable will be created after the event and the information will not be sent along with event.
 
-### <a name="3"></a>Сохранение переменной
+### <a name="3"></a>Saving a variable
 ------
-В зависимости от настроек, переменные будут создаваться каждый раз заново при срабатывании заданного триггера либо будут извлекаться из локального хранилища на устройстве пользователя (Local Storage).
-Срок хранения (в секундах) переменной можно указать в настройках.
+Depending on the settings, the variables will be created each time the trigger event is sent to the 'digitalData.events' array, or they are extracted from the local storage of the user's device.
+The storage period (in seconds) of a variable can be specified in the settings.
 
-> Совет. Бывает так, что сохранять переменную нужно не на определенное время, а до наступления определенного события. В этом случае необходимо создать 2 переменные
+> Advice. It is sometimes necessary to save a variable not for a certain time, but until the occurrence of a certain event. In this case, you will need to create 2 variables
 
-**Пример**: Необходимо передать в google analytics количество просмотров карточек товаров перед покупкой.
+**Example**: You must pass the number of product page views into google analytics before a purchase.
 
-Для решения данной задачи вам нужно увеличивать на 1 значение счетчика при срабатывании события [`Viewed Product Detail`](/events/viewed-product-detail) и сохранять значение в переменной `digitalData.custom.viewedProductsCount`.Вместе с событием [`Completed Transaction`](/events/completed-transaction) - отправлять значение переменной в качестве [пользовательской метрики](/integrations/google-analytics#11). После наступлении события `Completed Transaction` - обнулять счетчик и сохранять в переменной `digitalData.custom.viewedProductsCount`.
-1. `digitalData.custom.viewedProductsCount` - сохранение значения счетчика.
+To solve this task, you need to increase the value of a counter by 1 each time the [`Viewed Product Detail`](/events/viewed-product-detail) event is triggered and save that value inside the `digitalData.custom.viewedProductsCount` variable. When the [`Completed Transaction`](/events/completed-transaction) triggers - you should send the variable's value as a [custom metric](/integrations/google-analytics#11). After the `Completed Transaction` event triggers you should nullify the value of the `digitalData.custom.viewedProductsCount` variable.
+1. `digitalData.custom.viewedProductsCount` - saving the counter value.
 
   ![](/img/variables.2.png)
 
-  **Функция, которая заполняет значение переменной**
+  **Function that returns the variable value**
 
   ```javascript
   var viewedProductsCount = _digitalData('custom.viewedProductsCount') || 0;
   return (viewedProductsCount + 1);
   ```
-2. `digitalData.custom.viewedProductsCount` - сохранение значения счетчика.
+2. `digitalData.custom.viewedProductsCount` - saving the counter value.
 
 ![](/img/variables.2.png)
 
-**Функция, которая заполняет значение переменной**
+**Function that returns the variable value**
 
 ```javascript
 return 0;
 ```
 
-### <a name="4"></a>Вспомогательные функции
+### <a name="4"></a>Helper functions
 ------
-При создании переменных полезно использовать набор встроенных функций, которые значительно упрощают и сокращают код исполнительных функций. Перечень вспомогательных функций описан [разделе события](/for-analyst/events#3).
+When creating variables, it is useful to use a set of built-in functions that greatly simplify and shorten the code of the executed functions. The list of helper functions is described in the [events](/for-analyst/events#3) page.
 
-### <a name="5"></a>Тестирование переменных
+### <a name="5"></a>Testing variables
 ------
-Логика тестирования переменных идентична логике тестирования событий и интеграций:
-1. Новая переменная всегда создается в "активном состоянии". Это значит, что если вы нажмете кнопку "Опубликовать", ваша переменная будет работать (или не работать, если она была неправильно настроена). Вы можете заранее проверить правильность заполнения переменной, перейдя на ваш сайт в режиме test_mode. После загрузки страницы откройте консоль (клик правой кнопкой мыши), наберите digitalData.
+The logic for testing variables is identical to the logic for testing events and integrations:
+1. A new variable is always created in the "active state". This means that if you click the Publish button, your variable will work (or not work if it was not configured correctly). You can check in advance the correctness of the variable value by going to your site in test_mode mode. After loading the page, open the console (right-click the mouse), type digitalData.
 
 ![](/img/variables.4.png)
 
-> Чтобы активировать test_mode необходимо загрузить любую страницу вашего сайте с GET-параметром ddm_test_mode=1, например: [http://shop1.driveback.ru/?ddm_test_mode=1](http://shop1.driveback.ru/?ddm_test_mode=1)
+> To activate test_mode you should load any page of your website with the ddm_test_mode=1 GET-parameter, for example: [http://shop1.driveback.ru/?ddm_test_mode=1](http://shop1.driveback.ru/?ddm_test_mode=1)
 
-2. Если вы хотите отключить переменную, нажмите на кнопку в правом верхнем углу настройки переменной и переведите в состояние "Отключена".
+2. If you want to disable the variable, click the button in the upper right corner of the variable's configuration and put it into the "Disabled" state.
 
 ![](/img/variables.5.png)
 
-3. Переменная всегда может быть удалена по нажатию на кнопку "удалить" в самой нижней части панели настроек переменной.
+3. A variable can always be deleted by clicking on the "delete" button at the bottom of the variable settings panel.
