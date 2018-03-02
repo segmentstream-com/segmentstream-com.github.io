@@ -16,7 +16,7 @@ The **"Variables"** module allows you to create new data based on the data in th
   <li><a href="#2">Trigger types</a></li>
   <li><a href="#3">Saving a variable</a></li>
   <li><a href="#4">Helper functions</a></li>
-  <li><a href="#5">Testing variables</a></li>
+  <li><a href="#5">Variable testing</a></li>
 </ul>
 
 ### <a name="0"></a>Introduction
@@ -34,9 +34,12 @@ Next, in the Criteo integration settings, specify the name of the variable in wh
 
 ### <a name="2"></a>Trigger types
 ------
-There are two inputs in the trigger settings of the variable creation tool. The first input lets you specify whether the variable will be added/updated before or after the event specified in the trigger name (the second input).
-1. If you select 'before', you will be able to send a value from the generated variable along with the event specified in the second input.
-2. If you select 'after', the variable will be created after the event and the information will not be sent along with event.
+There are two settings in the trigger settings of the variable creation tool:
+1. The first setting lets you specify whether the variable will be added/updated before or after the event.
+2. The event name is specified in the second setting.
+
+If you select 'before' in the first setting, you will be able to send a value from the generated variable along with the event specified in the second setting.
+If you select 'after', the variable will be created after the event and the information will not be sent along with event.
 
 ### <a name="3"></a>Saving a variable
 ------
@@ -72,7 +75,7 @@ return 0;
 ------
 When creating variables, it is useful to use a set of built-in functions that greatly simplify and shorten the code of the executed functions. The list of helper functions is described in the [events](/for-analyst/events#3) page.
 
-### <a name="5"></a>Testing variables
+### <a name="5"></a>Variable testing
 ------
 The logic for testing variables is identical to the logic for testing events and integrations:
 1. A new variable is always created in the "active state". This means that if you click the Publish button, your variable will work (or not work if it was not configured correctly). You can check in advance the correctness of the variable value by going to your site in test_mode mode. After loading the page, open the console (right-click the mouse), type digitalData.

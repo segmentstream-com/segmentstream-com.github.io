@@ -1,29 +1,29 @@
 ---
 layout: page
 section: analyst
-title: "Скрипты"
+title: "Scripts"
 date: 2017-08-11 17:32:00
 order: 5
 ---
 
-Модуль "Скрипты" дает возможность исполнить любой JavaScript-код после срабатывания определенного триггера. Мы рекомендуем использовать модуль "Скрипты" только в том случае, если ваша задача не решается "Интеграциями", "Событиями" и "Переменными".
+The "Scripts" module makes it possible to execute any JavaScript code after the trigger is fired. We recommend using the "Scripts" module only if your task can not solved by the functionality of "Integrations", "Events" and "Variables".
 
 <ul class="page-navigation">
-  <li><a href="#0">Введение</a></li>
-  <li><a href="#1">Создание нового скрипта</a></li>
-  <li><a href="#2">Типы триггеров</a></li>
-  <li><a href="#3">Вспомогательные функции</a></li>
-  <li><a href="#4">Тестирование скриптов</a></li>
+  <li><a href="#0">Introduction</a></li>
+  <li><a href="#1">Creating a new script</a></li>
+  <li><a href="#2">Event name</a></li>
+  <li><a href="#3">Helper functions</a></li>
+  <li><a href="#4">Script testing</a></li>
 </ul>
 
-### <a name="0"></a>Введение
+### <a name="0"></a>Introduction
 ------
-Иногда бывает нужно асинхронно обратиться к удаленному серверу, запросить определенные данные и обогатить `digitalData` этими данными либо отправить на удаленный сервер информацию. Например: в специальной форме вы собрали email пользователя и хотите отправить его в вашу CRM или ESP. Можно попросить ваших программистов сделать это в коде сайта, либо сделать это самостоятельно из модуля "Скрипты".
-В интерфейсе системы создание и редактирование скриптов аналогично созданию и редактированию Событий и Переменных.
+Sometimes you need to asynchronously access a remote server, request certain data to enrich `digitalData`, or send information to a remote server. For example: you collect the email of a user in a special form and want to send it to your CRM or ESP. You can ask your programmers to do this in the site code, or do it yourself from the "Scripts" module.
+In the system interface, creating and editing scripts is similar to creating and editing Events and Variables.
 
-### <a name="1"></a>Создание нового скрипта
+### <a name="1"></a>Creating a new script
 ------
-Ниже приведен пример скрипта, выполняющего отправку Email'а пользователя при поступлении события "Subscribed".
+Below is an example of a script that sends a user's Email when a "Subscribed" event fires.
 
 ![](/img/scripts.1.png)
 
@@ -35,18 +35,16 @@ jQuery.ajax({
   data: 'email=' + event.email
 });
 ```
-> Важно! Html-теги `<script></script>` в теле скрипта указывать не нужно.
+> Important! Html-tags `<script></script>` aren't needed inside the script body.
 
-### <a name="2"></a>Типы триггеров
+### <a name="2"></a>Event name
 ------
-Также как и в случае переменных, существует 2 типа триггеров:
-1. Скрипт будет выполнен непосредственно перед наступлением события 'Viewed Page'. В данном случае поле "Название события" необходимо оставить пустым.
-2. Скрипт будет выполнен сразу после наступления события. В данном случае в поле "Название события" необходимо указать название события.
+In this field you have to enter the name of the event after which you want the script code to execute.
 
-### <a name="3"></a>Вспомогательные функции
+### <a name="3"></a>Helper functions
 ------
-При создании переменных полезно использовать набор встроенных функций, которые значительно упрощают и сокращают код исполнительных функций. Перечень вспомогательных функций описан [разделе события](/for-analyst/events#3).
+When creating scripts, it is useful to use a set of built-in functions that greatly simplify and shorten the code of the executed functions. The list of helper functions is described in the [events](/for-analyst/events#3) page.
 
 ### <a name="4"></a>Тестирование скриптов
 ------
-Процесс тестирования скриптов описан в [разделе "Переменные"](/for-analyst/variables#5). Процесс идентичен.
+The process of testing scripts is described in the [Variables section](/for-analyst/variables#5). The process is identical.
