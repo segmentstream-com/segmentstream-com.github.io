@@ -1,68 +1,69 @@
 ---
 layout: page
 section: developer
-title: "Обзор"
+title: "Overview"
 date: 2017-06-05 12:00:00
 order: 1
 ---
 
->Предыдущая версия документации по внедрению digitalData доступна по ссылке [digitaldata.readme.io](https://digitaldata.readme.io/docs)
+>The previous version of the documentation for the implementation of digitalData is available here: [digitaldata.readme.io](https://digitaldata.readme.io/docs)
 
-**digitalData** - это слой данных (JavaScript-объект), в котором хранится информация в формате имя-значение. Значением может служить число, строка, другой объект, со своей структурой или массив (ряд однотипных объектов).
+**digitalData** - is a data layer (JavaScript-object), in which information is stored in the name-value format. The value can be a number, a string, another object, with its own structure or an array (a series of similar objects).
 
- Можно представить, что объект - это шкаф с ящиками, подписанными уникальными именами. В каждом ящике могут находиться документы, также имеющие свои имена. Доступ к информации осуществляется по пути к документу, лежащему в ящике ('имя шкафа'.'имя ящика'.'имя документа').
+ One can imagine that the object is a cabinet with drawers signed with unique names. In each drawer there can be documents, also having their names. Access to information is carried out by the path to the document that lies in the drawer ('Cabinet name'. 'Drawer name'. 'Document name').
 
-**DigitalDataManager** - это программа, которая умеет работать с объектом `digitalData`, заполненным в соответствии со стандартом. DigitalDataManager автоматически находит нужные документы в нужных ящиках, собирает их вместе и централизованно отправляет в другие хранилища документов - сторонние маркетинговые и аналитические системы.
+**DigitalDataManager** - is a program that can work with the `digitalData` object, implemented in accordance with the standard. DigitalDataManager automatically finds the necessary documents in the required drawers, collects them together and centrally sends them to other document stores - third-party marketing and analytics systems.
 
-### Навигация по странице
+### Page contents
 ------
 <ul class="page-navigation">
-  <li><a href="#0">Стандарт digitalData</a></li>
-  <li><a href="#1">Подключение библиотеки DigitalDataManager к сайту</a></li>
-  <li><a href="#2">События</a></li>
-  <li><a href="#3">Изменения в digitalData без перезагрузки страницы</a></li>
-  <li><a href="#4">HTML-разметка страниц</a></li>
+  <li><a href="#0">digitalData standard</a></li>
+  <li><a href="#1">Connecting the DigitalDataManager library to a website</a></li>
+  <li><a href="#2">Events</a></li>
+  <li><a href="#3">Changes in digitalData without page reload</a></li>
+  <li><a href="#4">Page HTML-markup</a></li>
 </ul>
 
-### <a name="0"></a>Стандарт digitalData
+### <a name="0"></a>digitalData standard
 ------
-digitalData - это стандарт, который разработала команда проекта DigitalDataManager.
-Когда все заполнено в соответствии со стандартом, вы, например, легко узнаете тип страницы, на которой сейчас находитесь. Просто обратитесь к объекту `digitalData.page.type`.
-Где, 
-- `digitalData` - шкаф, 
-- `page` - ящик, 
-- `type` - документ. 
-В документе может быть написано "home", если вы находитесь на главной странице, "product" - на странице товара, "cart" - в корзине и т.д. Так как в документ можно записать любое значение, его называют переменной. Ниже пойдет речь о том, как правильно заполнить каждую переменную объекта `digitalData` для каждой страницы и каждого события, происходящего на сайте.
+digitalData - is the standard developed by the DigitalDataManager project team.
+When everything is filled in accordance with the standard, you can, for example, easily recognize the type of page you are currently on. Just refer to the object `digitalData.page.type`.
+Where, 
+- `digitalData` - Cabinet, 
+- `page` - Drawer, 
+- `type` - Document. 
+The document will have "home" written in it if you are on the main page, "product" - on the product page, "cart" - in the basket, etc. Since any value can be written to a document, it is called a variable. Below we will talk about how to correctly fill each variable of the object `digitalData` for each page and every event that occurs on the site.
 
-[Подробнее о стандарте заполнения digitalData](/for-developer/digitaldata)
+[Learn more about the digitalData standard.](/for-developer/digitaldata)
 
-### <a name="1"></a>Подключение библиотеки DigitalDataManager к сайту
+### <a name="1"></a>Connecting the DigitalDataManager library to a website
 ------
-Как было сказано выше, всей системой управляет программа (библиотека, скрипт) DigitalDataManager. Важно инициализировать библиотеку в правильном месте исходного кода вашего сайта. DigitalDataManager должен вызываться на каждой странице сайта.
+As it was noted above, the whole system is controlled by the program (library, script) DigitalDataManager. It is important to initialize the library in the correct place of the source code of your site. The DigitalDataManager should be called on every page of the site.
 
-[Подробнее о подключении](/for-developer/#snippet)
+[Learn more about connecting](/for-developer/#snippet)
 
-### <a name="2"></a>События
+### <a name="2"></a>Events
 ------
-Есть один ящик в шкафу `digitalData`, который называется **events**. `digitalData.events` - это массив, он может содержать в себе однотипные объекты - события. Доступ к каждому событию осуществляется по порядковому номеру добавления события в ящик, например `digitalData.events[2]`. Само событие - это объект, который содержит в себе информацию о том, что произошло.
-Например, при загрузке страницы сайта происходит событие `Viewed Page`. Оно самым первым добавляется в массив `digitalData.events`.<br />
-DigitalDataManager все время наблюдает за массивом `digitalData.events`. Как только в массив поступает событие, DigitalDataManager обогащает его информацией из других переменных объекта и отправляет в подключенные маркетинговые и аналитические системы.
- - [Подробнее о событиях](/for-developer/#events)
- - [Создание событий в интерфейсе DigitalDataManager](/for-analyst/events)
+There is one drawer in the `digitalData` cabinet, which is called **events**. `digitalData.events` is an array, it can contain the same objects - events. Access to each event is carried out by the sequence number of its addition to the drawer, for example `digitalData.events[2]`. The event itself is an object that contains information about what happened.
+For example, when a page of a site is loaded, the `Viewed Page` event occurs. It is the very first event added to the array `digitalData.events`. <br />
+DigitalDataManager watches the array `digitalData.events` all the time. As soon as an event arrives in the array, DigitalDataManager enriches it with information from other object variables and sends it to connected marketing and analytics systems.
+ - [Learn more about events](/for-developer/#events)
+ - [Creating events in the DigitalDataManager interface](/for-analyst/events)
 
-### <a name="3"></a>Изменения в digitalData без перезагрузки страницы
+### <a name="3"></a>Changes in digitalData without page reload
 ------
-Еще один ящик называется **changes**. `digitalData.changes` - это массив, который содержит в себе информацию о всех изменениях, которые произошли с переменными в digitalData без перезагрузки страницы. 
-Например: изменился состав корзины, применился фильтр товаров в каталоге, пользователь изменил способ доставки и другие.
-Все эти изменения необходимо проводить с использованием метода changes.
+Another drawer is called **changes**. `digitalData.changes` is an array that contains information about all the changes that occurred with variables in digitalData without a page reload.
+For example: the composition of the basket has changed, a filter of goods in the catalog has been applied, the user has changed the delivery method and others.
+All these changes must be made using the changes method.
 
-> Хотя это физически и возможно, не вносите изменения в объект digitalData без использования метода digitalData.changes[] 
+> Although it is physically possible, do not modify the digitalData object without using the digitalData.changes [] method
 
-[Подробнее о динамическом изменении digitalData](/for-developer/#changes)
+[Learn more about dynamically changing digitalData](/for-developer/#changes)
 
-### <a name="4"></a>HTML-разметка страниц
+### <a name="4"></a>Page HTML-markup
 ------
-DigitalDataManager умеет отслеживать взаимодействие пользователя с контентом сайта. Во время попадания определенных элементов сайта в поле видимости пользователя или при клики на ссылки и активные элементы, DigitalDataManager автоматически добавляет события в массив `digitalData.events`. 
-Чтобы все работало корректно необходимо добавить специальные классы и data-атрибуты к отслеживаемым элементам.
+DigitalDataManager is able to monitor user's interactions with website content. When certain site elements appear the user's field of view or when he clicks on links and active elements, DigitalDataManager automatically adds events to the array 
+`digitalData.events`. 
+For everything to work correctly, you need to add special classes and data-attributes to the tracked elements.
 
-[Подробнее о HTML-разметке отслеживаемых элементов сайта](/for-developer/#markup)
+[Learn more about the HTML-markup of tracked elements](/for-developer/#markup)
