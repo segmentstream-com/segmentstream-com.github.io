@@ -1,23 +1,25 @@
 ---
 layout: page
 section: analyst
-title: "Приоритеты"
+title: "Priorities"
 date: 2017-08-15 12:00:00
 order: 6
 ---
 
-**Приоритеты** - это модуль DigitalDataManager'а, который позволяет управлять очередью загрузок интеграций. Приоритеты помогут увеличить скорость загрузки сайта.
+**Priorities** is the DigitalDataManager module, which allows you to manage the queue at which integrations load. Priorities will help you increase your website's load speed.
 
-По умолчанию все ваши интеграции загружаются в асинхронном режиме параллельно с вашим сайтом. В случае если у вас подключено много интеграций, данные с различных серверов создают много потоков (например системы ретаргетинга начинают подгружать десятки пикселей рекламных сетей для синхронизации кук). Однако браузер пользователя не может принимать больше определенного количества потоков одновременно, в результате все потоки данных выстраиваются в **"случайную" очередь**. Часто так бывает, что скрипт с вашего CDN встает на загрузку в очереди после пикселя рекламной системы, а без этого скрипта взаимодействие с сайтом - невозможно. В результате, скорость загрузки сайта падает (другими словами, увеличивается интервал времени между моментом начала загрузки страницы и моментом появления у пользователя возможности взаимодействия с контентом).
+By default, all your integrations are loaded in asynchronous mode in parallel with your site. In case you have a lot of integrations, data from different servers creates a lot of threads (for example, retargeting systems start to load dozens of pixels of ad networks for synchronization of cookies). However, the user's browser can not accept more than a certain number of threads at the same time, as a result, all data streams are lined up into a **"random" queue**. It often happens, that the script from your CDN gets in the queue after the pixel of an advertising system, and without this script interaction with the site is impossible. As a result, the website load speed falls (in other words, the time interval between the moment when the page starts loading and the time when the user is able to interact with the content increases).
 
-Приоритеты позволяют сделать из "случайной" очереди - контролируемую.
+Priorities allow you to make a "random" queue - a controlled one.
+
+>Prioritization order: Left to right, Top to bottom
 
 ![](/img/priorities.1.png)
 
-Настройка модуля очень проста. В интерфейсе системы есть 2 столбца:
-1. Во время загрузки сайта
-Все интеграции, которые находятся в этом столбце, загружаются параллельно с сайтом в порядке очереди слева направо, сверху вниз. Внутри столбца сортировка условная, т.к. мы управляем только последовательностью вызова кода интеграции, однако из-за асинхронности и различной скорости ответа серверов систем, очередь может приобрести "случайную" последовательность.
-2. После загрузки сайта
-Все интеграции, которые находятся в этом столбце загружаются после загрузки сайта. Это значит, что системы начнут загружаться после того момента, когда у пользователя появится возможность нормально взаимодействовать с контентом. В данном случае порядок очереди внутри столбца работает идентично предыдущему пункту.
+The configuration of the module is very simple. There are 2 columns in the system interface:
+1. While the site is loading
+All the integrations that are in this column are loaded in parallel with the site in the order of the queue from left to right, top to bottom. Inside the column sorting is conditional, because We control only the sequence of the invocation of the integration code, but because of the asynchrony and different speed of response of the systems servers, the queue can acquire a "random" sequence.
+2. After the site is loaded
+All the integrations that are in this column are downloaded after the site is downloaded. This means that the systems will start to load after the moment when the user will be able to interact normally with the content. In this case, the order of the queue inside the column works identically to the previous item.
 
-Чтобы изменить приоритеты - просто перетащите мышкой блок в нужное место.
+To change the priorities - just drag the block to the desired location.
