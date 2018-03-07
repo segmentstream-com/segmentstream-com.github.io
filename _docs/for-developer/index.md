@@ -38,7 +38,7 @@ The document will have "home" written in it if you are on the main page, "produc
 
 ### <a name="1"></a>Connecting the DigitalDataManager library to a website
 ------
-As it was noted above, the whole system is controlled by the program (library, script) DigitalDataManager. It is important to initialize the library in the correct place of the source code of your site. The DigitalDataManager should be called on every page of the site.
+As it was noted above, the whole system is controlled by the program (library, script) DigitalDataManager. It is important to initialize the library in the correct place of the source code of your site. DigitalDataManager should be called on every page of the site.
 
 [Learn more about connecting](/for-developer/#snippet)
 
