@@ -12,16 +12,16 @@ In this section you will learn:
 
 digitalData is a global JavaScript object. It must be declared as high as possible in the source code of the site, [before connecting the DigitalDataManager library](/for-developer/snippet). This object should be present on every page of the site.
 
-> Declare the `window.digitalData` object the first time the page loads. Do not try to build a system in which the object is created after an AJAX request. This decision will worsen the work of your entire marketing infrastructure and make it unmanageable.
+> Declare the `window.digitalData` object the first time the page loads. Do not try to build a system in which the object is created after an AJAX request. This decision will negatively affect your marketing infrastructure and make it unmanageable.
 
-### Навигация по странице
+### Page contents
 ------
 <ul class="page-navigation">
   <li><a href="#0">Introduction</a></li>
   <li><a href="#1">How to fill the object</a></li>
 </ul>
 
-### <a name="0"></a>Введение
+### <a name="0"></a>Introduction
 ------
 Let's analyze the structure of the object in more detail. The object consists of other objects and arrays. All these objects and arrays must be filled with information in accordance with the standard described in this documentation.
 
@@ -47,40 +47,42 @@ window.digitalData = {
 
 The detailed composition of each variable is discussed below.
 
-### <a name="1"></a>Как заполнять объект
+### <a name="1"></a>How to fill the object
 ------
-digitalData можно представить как структурированное описание страницы, которую посетитель видит на экране своего монитора. Состав объекта digitalData зависит от содержания страницы. Приведем несколько примеров:
- - Пользователь перешел на карточку товара и видит детальную информацию о товаре: изображение, название, цену, бренд и т.д. Вся эта информация должна содержаться в объекте `digitalData.product`
- - Пользователь перешел на главную страницу, видит список рекомендованных товаров и несколько баннеров. Информация о рекомендованных товарах должна содержаться в массиве `digitalData.recommendation`, а информация о баннерах в массиве `digitalData.campaigns`.
- - Иконка корзины с количеством товаров видна на каждой странице интернет-магазина. Это значит, что объект digitalData.cart должен быть заполнен на каждой странице сайта.
+digitalData can be represented as a structured description of the page that the visitor sees on the screen of his monitor. The composition of the digitalData object depends on the content of the page. Here are some examples:
+ - The user loaded a product page and sees detailed information about the product: image, name, price, brand, etc. All this information should be contained in the object `digitalData.product`
+ - The user loaded the main page, sees a list of recommended products and several banners. Information about the recommended products should be contained in the array `digitalData.recommendation`, and information about the banners in the array `digitalData.campaigns`.
+ - The basket icon with the number of items is visible on each page of the online store. This means that the object `digitalData.cart` must be filled on every page of the site.
 
-Также digitalData содержит информацию о том пользователе, который просматривает сайт. Эта информация может и не отображается в явном виде, но должна присутствовать в объекте, например: подписан ли пользователь на email-рассылку, совершал ли пользователь покупки ранее, имя пользователя и т.д.
+Also, digitalData contains information about the user that is visiting the website. This information may or may not be displayed explicitly, but should be present in the object, for example: whether the user subscribed to the email newletter, whether the user made purchases earlier, the user's name, etc.
 
-Как видно из примеров выше, одни переменные должны быть заполнены на каждой страницы, другие - на определенных типах страниц. Если содержание страницы изменяется без перезагрузки страницы - содержание объекта `digitalData` также необходимо изменить.
+As you can see from the examples above, some variables must be filled on each page, others - only on certain types of pages. If the content of the page changes without reloading the page - the content of the object `digitalData` also needs to be changed.
 
-Далее мы рассмотрим подробнее стандарт заполнения каждой переменной и разберем примеры заполнения объекта для всех типовых страниц интернет-магазина.
+Next, we'll look in more detail at the standard for filling each variable and examine examples of filling an object for all typical pages of an online store.
 
-Подробное описание объектов:
+Detailed object descriptions:
  - [version](/digitaldata/standard-version)
  - [website](/digitaldata/website)
- - [page](/for-developer/#listing)
- - [product](/for-developer/#listing)
- - [wishlist](/for-developer/#listing)
- - [cart](/for-developer/#listing)
- - [transaction](/for-developer/#listing)
- - [listing](/for-developer/#listing)
- - [recommendation](/for-developer/#listing)
- - [campaigns](/for-developer/#listing)
- - [context](/for-developer/#listing)
- - [changes](/for-developer/#listing)
- - [events](/for-developer/#listing)
+ - [page](/digitaldata/page)
+ - [product](/digitaldata/product)
+ - [wishlist](/digitaldata/wishlist)
+ - [cart](/digitaldata/cart)
+ - [transaction](/digitaldata/transaction)
+ - [listing](/digitaldata/listing)
+ - [recommendation](/digitaldata/recommendation)
+ - [campaigns](/digitaldata/campaigns)
+ - [context](/digitaldata/context)
+ - [changes](/digitaldata/#changes)
+ - [events](/digitaldata/events)
 
-Подробнее описание состава digitalData для типовых страниц:
- - [Главная страница](/for-developer/#main-page)
- - [Категория товаров](/for-developer/#listing)
- - [Результаты поиска](/for-developer/#listing)
- - [Карточка товара](/for-developer/#listing)
- - [Корзина](/for-developer/#listing)
- - [Станицы этапов оформления заказа](/for-developer/#listing)
- - [Страница подтверждения заказа](/for-developer/#listing)
- - [Текстовая страница](/for-developer/#listing)
+More detailed description of the composition of digitalData for **typical pages of an online store**:
+ - [Main page](/ecommerce/main-page)
+ - [Product listing](/ecommerce/listing)
+ - [Search results](/ecommerce/search)
+ - [Product page](/ecommerce/product)
+ - [Cart](/ecommerce/cart)
+ - [Checkout pages](/ecommerce/checkout)
+ - [Thank you page](/ecommerce/confirmation)
+ - [Content page](/ecommerce/content)
+
+ >If your website is not an online store, you can still use the DigitalDataManager. We will help you prepare a data schema (the structure of the digitalData object) specifically for your project.
