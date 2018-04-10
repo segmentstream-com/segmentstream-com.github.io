@@ -1,51 +1,51 @@
 ---
 layout: page
 section: developer
-title: "digitalData"
+title: "digitalData object"
 date: 2017-06-05 12:00:00
 order: 2
 ---
 
-В данном разделе вы узнаете:
-* Как установить слой данных digitalData на сайт.
-* Как правильно заполнить все переменные объекта digitalData.
+In this section you will learn:
+* How to install the digitalData data layer on your website.
+* How to correctly fill in all the variables inside the digitalData object.
 
-digitalData - это глобальный JavaScript объект. Его необходимо объявить как можно выше в исходном коде сайта, [перед подключением библиотеки DigitalDataManager](/for-developer/snippet). Данный объект должен присутствовать на каждой странице сайта.
+digitalData is a global JavaScript object. It must be declared as high as possible in the source code of the site, [before connecting the DigitalDataManager library](/for-developer/snippet). This object should be present on every page of the site.
 
-> Объявляйте объект `window.digitalData` при первоначальной загрузке страницы. Не пытайтесь построить систему, в которой объект создается после AJAX-запроса. Такое решение ухудшит работу всей вашей маркетинговой инфраструктуры и сделает ее неуправляемой.
+> Declare the `window.digitalData` object the first time the page loads. Do not try to build a system in which the object is created after an AJAX request. This decision will worsen the work of your entire marketing infrastructure and make it unmanageable.
 
 ### Навигация по странице
 ------
 <ul class="page-navigation">
-  <li><a href="#0">Введение</a></li>
-  <li><a href="#1">Как заполнять объект</a></li>
+  <li><a href="#0">Introduction</a></li>
+  <li><a href="#1">How to fill the object</a></li>
 </ul>
 
 ### <a name="0"></a>Введение
 ------
-Разберем структуру объекта подробнее. Объект состоит из других объектов и массивов. Все эти объекты и массивы необходимо заполнять информацией в соответствии со стандартом, описанным в данной документации.
+Let's analyze the structure of the object in more detail. The object consists of other objects and arrays. All these objects and arrays must be filled with information in accordance with the standard described in this documentation.
 
-В общем виде объект `digitalData` выглядит следующим образом:
+In general, the `digitalData` object looks like this:
 
-```JavaScript
+```javascript
 window.digitalData = {
   version: '1.1.2',
-  website: {...},         //Глобальная информация о сайте
-  page: {...},            //Текущая страница
-  user: {...},            //Посетитель или авторизованный пользователь
-  product: {...},         //Товар, отображаемый на странице
-  wishlist: {...},        //Список избранных товаров
-  cart: {...},            //Состояние покупательской корзины
-  transaction: {...},     //Транзакция, которая была только что завершена 
-  listing: {...},         //Список товаров, отображаемых на странице
-  recommendation: [...],  //Список товаров, рекомендованных для пользователя
-  campaigns: [...],       //Список всех маркетинговых кампаний
-  changes: [...],         //Изменения которые произошли в DDL после инициализации
-  events: [...]           //События, произошедшие на данной странице
+  website: {...},         //Global information about the website
+  page: {...},            //Data about the current page
+  user: {...},            //Data about the visitor or authorized user
+  product: {...},         //Data about the product currenly viewed
+  wishlist: {...},        //Data about the users wishlist
+  cart: {...},            //State of the users cart
+  transaction: {...},     //Data about the completed transaction
+  listing: {...},         //List of products viewed on the page
+  recommendation: [...],  //List of recommended products viewed on the page
+  campaigns: [...],       //List of internal promotion campaigns
+  changes: [...],         //Changes that occured in the digitalData after it's initialization
+  events: [...]           //Events that fired on the current page
 }
 ```
 
-Подробный состав каждой переменной мы разберем дальше.
+The detailed composition of each variable is discussed below.
 
 ### <a name="1"></a>Как заполнять объект
 ------
