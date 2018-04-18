@@ -10,7 +10,7 @@ In this section you will learn:
 * How to correctly name custom variables in DigitalData.
 * How to correctly name events.
 
-We strongly recommend that you name variables and events in the same style. This approach will greatly simplify the work with all analytics and marketing systems.
+We strongly recommend that you name variables and events in the same style. This approach will greatly simplify your work with all analytics and marketing systems.
 
 ### Page contents
 ------
