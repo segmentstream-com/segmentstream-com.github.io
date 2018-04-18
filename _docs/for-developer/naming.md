@@ -1,51 +1,51 @@
 ---
 layout: page
 section: developer
-title: "Правила именования переменных и событий"
+title: "Event and variable naming conventions"
 date: 2017-06-05 12:00:00
 order: 3
 ---
 
-В данном разделе вы узнаете:
-* Как правильно называть кастомные переменные в DigitalData.
-* Как правильно называть события.
+In this section you will learn:
+* How to correctly name custom variables in DigitalData.
+* How to correctly name events.
 
-Мы настоятельно рекомендуем называть переменные и события в едином стиле. Такой подход значительно упростит работу со всеми системами аналитики и маркетинга.
+We strongly recommend that you name variables and events in the same style. This approach will greatly simplify the work with all analytics and marketing systems.
 
-### Навигация по странице
+### Page contents
 ------
 <ul class="page-navigation">
-  <li><a href="#0">Введение</a></li>
-  <li><a href="#1">Как называть переменные</a></li>
-  <li><a href="#1">Как называть события</a></li>
+  <li><a href="#0">Introduction</a></li>
+  <li><a href="#1">How to name variables</a></li>
+  <li><a href="#1">How to name events</a></li>
 </ul>
 
-### <a name="1"></a>Введение
+### <a name="1"></a>Introduction
 ------
-Существует много методов именования переменных в языках программирования. Каждый разработчик придумывает свои “стандарты”, понятные и удобные только ему. В результате ваша аналитика загрязняется кучей разрозненных данных, которые сложно понимать и анализировать.
+There are many methods for naming variables in programming languages. Each developer comes up with his own "standards", understandable and convenient only to him. As a result, your analytics is filled with a bunch of dissimilar data that is difficult to understand and analyze.
 
-> На первый взгляд может показаться неочевидным, но существует огромное количество названий одному и тому же пользовательскому событию или переменной.
+> At first glance it may not seem obvious, but there are a lot of names that could be used for the same user event or variable.
 
-К примеру, авторизацию пользователя на сайте можно назвать по-разному:
+For example, the user's authorization on the site can be called in different ways:
 
 * logged_in
 * logged in
 * Logged In
 * LoggedIn
 
-**Какой из этих способов является правильным?**
+**Which one of these methods is correct?**
 
-Чтобы избежать долгих размышлений над этим вопросом и заняться действительно важными аналитическими вопросами, мы разработали стандарты именования, которые позволят сохранить порядок в данных.
+To avoid long reflection on this issue and to engage in really important analytical issues, we have developed naming standards that will preserve order in the data.
 
-Данные стандарты призваны соблюдать 3 главных принципа:
+These standards are designed to comply with 3 main principles:
 
-* Стандартизация
-* Удобство
-* Ясность
+* Standardization
+* Convenience
+* Clarity
 
-### <a name="1"></a>Как называть переменные
+### <a name="1"></a>How to name variables
 ------
-В основе DigitalDataManager лежит стандарт digitalData, который представляет собой многоуровневый объект со вложенной структурой. Все объекты первого уровня определены стандартом и не могут быть изменены:
+The DigitalDataManager is based on the digitalData standard, which is a multilevel object with a nested structure. All objects of the first level are defined by the standard and can not be changed:
 
 * website
 * page
@@ -56,19 +56,19 @@ order: 3
 * events
 * ... 
 
-Каждый из этих объектов может иметь неограниченное количество вложенных объектов или переменных. Часть из них уже определена стандартом, остальные могут задаваться на ваше усмотрение.
+Each of these objects can have an unlimited number of nested objects or variables. Some of them are already defined by the standard, the rest can be set at your discretion.
 
-При создании новых объектов и параметров в digitalData важно следовать следующим правилам.
+When creating new objects and parameters in digitalData, it is important to follow the following rules.
 
-* Проверять, не является ли параметр уже зарезервированным в стандарте - [https://digitaldata.readme.io/docs/описание-объектов](https://digitaldata.readme.io/docs/описание-объектов)
-* Все параметры и объекты должны именоваться в [camelCase](https://en.wikipedia.org/wiki/Camel_case)
+* Check if the parameter is already reserved in the standard - [https://digitaldata.readme.io/docs/описание-объектов](https://digitaldata.readme.io/docs/описание-объектов)
+* All parameters and objects must be named in [camelCase](https://en.wikipedia.org/wiki/Camel_case)
 
 
-### <a name="2"></a>Как называть события
+### <a name="2"></a>How to name events
 ------
-В DigigtalDataManager мы используем набор четких правил именования событий, ориентированный на действия в прошедшем времени:
+In DigitalDataManager we use a set of clear naming rules for events, oriented to past-time actions:
 
-* Выберите все объекты, с которыми возможно произвести те или иные действия на вашем сайте. Например, для Ecommerce это могут быть:
+* Select all objects with which it is possible to perform certain actions on your site. For example,for Ecommerce, this could be:
   * Profile Info
   * Product
   * Cart
@@ -76,9 +76,9 @@ order: 3
   * Campaign
   * ...
 
-* Выберите действия, которые можно производить с каждым объектом:
+* Select the actions that can be performed with each object:
 
-  Объект | Действие
+  Object | Action
   --- | ---
   Profile Info|Updated
   Product|Viewed, Clicked, Added, Removed
@@ -86,7 +86,7 @@ order: 3
   Transaction|Completed, Refunded
   Campaign|Viewed, Clicked
 
-* Соедините все вместе используя [Title Case](http://titlecase.com):
+* Connect them using [Title Case](http://titlecase.com):
   * Updated Profile Info
   * Viewed Product
   * Clicked Product
@@ -98,19 +98,19 @@ order: 3
   * Viewed Campaign
   * Clicked Campaign
 
-> Не используйте уникальные данные в названии события. Например:
+> Do not use unique data in the name of the event. for example:
 
 ```
 digitalData.events.push({ name: 'Viewed Product - iPhone X' });
 ```
 
-или
+or
 
 ```
 digitalData.events.push({ name: 'Selected Credit Term - 3 months' });
 ```
 
-Вместо этого, отправляйте эти данные в виде параметров:
+Instead, send this data as parameters:
 
 ```JavaScript
 digitalData.events.push({ 
