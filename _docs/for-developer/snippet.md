@@ -6,7 +6,7 @@ date: 2017-09-15 18:15:00
 order: 3
 ---
 
-In this section, you will learn how to connect the DigitalDataManager to your site.
+In this section, you will learn how to connect DigitalDataManager to your site.
 
 ### Page contents
 ------
