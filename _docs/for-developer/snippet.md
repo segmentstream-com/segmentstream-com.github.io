@@ -19,7 +19,7 @@ In this section, you will learn how to connect DigitalDataManager to your site.
 ### <a name="0"></a>Introduction
 ------
 For the correct operation of DigitalDataManager, when loading each page of the site, you need to call 2 files:
- 1. https://cdn.ddmanager.ru/ddm-initialization/<project_id>.js
+ 1. https://cdn.ddmanager.ru/ddm-initialization/`<project_id>`.js
  2. https://cdn.ddmanager.ru/sdk/dd-manager.js
 
 You should contact the DigitalDataManager team to receive your `<project_id>`.
