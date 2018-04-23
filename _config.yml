@@ -15,11 +15,11 @@ navigation: 1
 
 # Default categories (in order) to appear in the navigation
 sections: [
-    ['analyst', 'Аналитику'],
-    ['developer', 'Разработчику'],
+    ['analyst', 'Analyst'],
+    ['developer', 'Developer'],
     ['digitaldata', 'digitaldata'],
-    ['integrations', 'Список интеграций'],
-    ['events', 'Список событий']
+    ['integrations', 'Integration list'],
+    ['events', 'Events list']
 ]
 
 # Keep as an empty string if served up at the root. If served up at a specific
