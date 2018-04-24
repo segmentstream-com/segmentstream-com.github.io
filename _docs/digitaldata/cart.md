@@ -140,7 +140,7 @@ window.digitalData = {
 where,
  - **product** - [product](/digitalData/product/) object. **required** variable
  - **quantity** - number. **required** variable, which contains the quantity of goods with a certain `product.id` and `product.skuCode`
-  >In the basket can be several identical products with different variations, for example 2 pairs of identical shoes with different sizes. Each variation must be described by a unique array object `lineItems`
+  >The basket can contain several identical products with different variations, for example 2 pairs of identical shoes with different sizes. Each variation must be described by a unique array object `lineItems`
  - **subtotal** - number. The total cost of all lineItems, which is calculated as product.unitSalePrice * quantity.
  - **totalDiscount** - number. The total discount for the current element of the array lineItems from the applied coupons to a specific product or from promotions related to the quantity of goods purchased, such as "buy 2, get 1 free".
  - **shippingMethod** - string. An optional variable. Typically, shippingMethod is defined for the whole basket, however, if it is possible to select different delivery methods for different products, this property can be used in the element of the array lineItems
