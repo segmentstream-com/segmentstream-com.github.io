@@ -66,7 +66,7 @@ Below each variable of the `campaign` object is described in detail.
 ------
 Data type: string.
 
-`campaign.id` - **required** variable that contains the unique identifier of the banner.
+`campaign.id` - **required** variable, which contains the unique identifier of the banner.
 
 >The value of the variable `campaign.id` must be unique for each banner within a single page. If a banner is shown on multiple pages, the value of `campaign.id` can be repeated from page to page.
 
@@ -74,7 +74,7 @@ Data type: string.
 ------
 Data type: string.
 
-`campaign.name` - **required** variable that contains the name of the banner.
+`campaign.name` - **required** variable, which contains the name of the banner.
 
 >The value of the variable `campaign.name` will appear in the GA Internal Promotions reports
 
