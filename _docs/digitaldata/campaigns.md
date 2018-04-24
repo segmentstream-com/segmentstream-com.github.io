@@ -58,7 +58,7 @@ window.digitalData = {
 }
 ```
 
->Since the variable with the key `digitalData.campaigns` is an array, then the number of each element of the array (`campaign` objects) is a number. The key "campaign" in the structure of digitalData is not found anywhere.
+>Since the variable with the key `digitalData.campaigns` is an array, then the number of each element of the array (`campaign` objects) is a number. The key "campaign" is not found anywhere in the structure of digitalData.
 
 Below each variable of the `campaign` object is described in detail.
 
