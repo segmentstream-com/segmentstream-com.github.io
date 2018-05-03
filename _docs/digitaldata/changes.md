@@ -6,26 +6,26 @@ date: 2018-04-13 17:00:00
 order: 1
 ---
 
-Часто бывает необходимо изменить содержание переменной `digitalData` без перезагрузки страницы. Например: при подписке на рассылку, добавлении товара в корзину, авторизации, регистрации и многих других событиях. В таком случае следуют использовать конструкцию вида `digitalData.changes.push(...)`. DigitalDataManager "слушает" изменение массива `digitalData.changes` и автоматически обновляет соответствующие элементы объекта `digitalData`.
+It is often necessary to change the contents of the `digitalData` variable without reloading the page. For example: when subscribing to a newsletter, adding a product to the cart, logging in, registering, and many other events. In this case, you should use the construct in the form of `digitalData.changes.push (...)`. DigitalDataManager "listens" to the change of the array `digitalData.changes` and automatically updates the corresponding elements of the `digitalData` object.
 
-> Мы настоятельно не рекомендуем изменять содержимое `digitalData` прямым переопределением элементов вида `digitalData.user.name` = 'Иван'.
+> We strongly do not recommend changing the contents of `digitalData` by directly overriding elements in the form of `digitalData.user.name` = 'Ivan'.
 
-### Существует 2 вида использования метода changes:
+### There are 2 ways to use the changes method:
 ------
 <ul class="page-navigation">
-  <li><a href="#0">Изменение конкретной переменной</a></li>
-  <li><a href="#1">Изменение всего объекта `digitalData`</a></li>
+  <li><a href="#0">Changing a specific variable</a></li>
+  <li><a href="#1">Changing the entire `digitalData` object</a></li>
 </ul>
 
-### <a name="0"></a>Изменение конкретной переменной
-Если необходимо динамически изменить значение одной переменной, в массив `digitalData.changes` должен быть добавлен специальный массив из 3-х элементов:
- - Имя переменной объекта `digitalData`, значение которой необходимо динамически изменить
- - Объект, Строка или Число, которые заменят значение переменной
- - Название источника изменения данных
+### <a name="0"></a>Changing a specific variable
+If you need to dynamically change the value of one variable, a special array of 3 elements must be added to the array `digitalData.changes`:
+ - The name of the `digitalData` variable the value of which must be dynamically changed
+ - An object, a String, or a Number that will replace the value of a variable
+ - Name of the source of the data change
 
-**Пример**: Посетитель сайта подписывается на рассылку. Информация о том, что посетитель успешно подписался отображается без перезагрузки страницы. В этот момент необходимо изменить значение переменной `digitalData.user.isSubscribed` с false на true.
+**Example**: The visitor of the site subscribes to the newsletter. The information that the visitor has successfully subscribed is displayed without reloading the page. At this point, you need to change the value of the variable `digitalData.user.isSubscribed` from false to true.
 
-##### Состояние digitalData до события подписки:
+##### State of the digitalData before the subscription event:
 ```javascript
 digitalData = {
   ...
@@ -38,21 +38,21 @@ digitalData = {
 }
 ```
 
-##### Последовательное добавление события и изменения в `digitalData`:
+##### The sequence of adding the event and changes in `digitalData`:
 ```javascript
-//После возвращения с сервера сигнала об успешно подписке - добавляем событие в массив digitalData.events
+//After the server responds, confirming a successful subscription - we add the event to the array digitalData.events
 digitalData.events.push({
   category: 'Email',
   name: 'Subscribed',
   user: {...}
 });
 
-//После добавления события - добавляем изменение в массив digitalData.changes
+//After adding the event - add a change to the digitalData.changes array
 digitalData.changes.push(['user.isSubscribed', true, 'Source Code']);
 ```
 
 
-##### Состояние `digitalData` после события подписки:
+##### State of the digitalData after the subscription event:
 ```javascript
 digitalData = {
   ...
@@ -65,62 +65,62 @@ digitalData = {
 }
 ```
 
-### <a name="1"></a>Изменение всего объекта digitalData
-Данный подход необходимо использовать для сайтов, полностью построенных на технологии AJAX или Single-page (SP) сайтах.
+### <a name="1"></a>Changing the entire `digitalData` object
+This approach should be used for sites that are fully built on AJAX or Single-page (SP) sites.
 
-Single-page сайты немного отличаются от обычных сайтов. При переходе по ссылке, в SP не происходит загрузка новой страницы. Вместо этого браузер посетителя отправляет асинхронных запрос (AJAX-запрос) на сервер. Сервер возвращает новый контент. Этим контентом браузер посетителя динамически заменяет или дополняет тот контент, который до этого был на сайте. В результате у посетителя создается впечатление, что была загружена новая страница сайта.
+Single-page sites are a bit different from the usual sites. When clicking on a link, the SP does not load a new page. Instead, the visitor's browser sends an asynchronous request (AJAX-request) to the server. The server returns new content. With this content, the visitor's browser dynamically replaces or complements the content that was previously on the site. As a result, the visitor seems to have downloaded a new page of the site.
 
-Для того, чтобы DigitalDataManager корректно обрабатывал динамические изменения контента, необходимо динамически обновлять слой данных digitalData. Ниже описан алгоритм:
+In order for DigitalDataManager to correctly process dynamic content changes, you need to dynamically update the data layer of digitalData. The algorithm is described below:
 
-- Пользователь нажимает на ссылку, запрос уходит на сервер
-- Сервер возвращает контент с содержанием новой страницы, а также новым слепком объекта digitalData
-- После того, как контент и URL сайта изменяются необходимо последовательно вызвать методы: `digitalData.changes.push({...})` и `digitalData.events.push({name: 'Viewed Page'})`
+- The user clicks on a link, the request goes to the server
+- The server responds with the content of the new page, as well as a new copy of the digitalData object
+- After the content and URL of the site change, you need to call the methods in the following sequence: `digitalData.changes.push({...})` и `digitalData.events.push({name: 'Viewed Page'})`
 
-> Важно. Полное изменение объекта `digitalData` на single-page сайтах всегда должно сопровождаться событием "Viewed Page". Это событие помогает системе DigitalDataManager определить момент "виртуальной загрузки" новой страницы.
+> Important. A complete change of the object `digitalData` on single-page sites should always be accompanied by the event "Viewed Page". This event helps the DigitalDataManager system to determine the moment of "virtual load" of a new page.
 
-**Пример**: Посетитель single-page сайта переходит по ссылке из каталога на карточку товара. Контент сайта динамически обновляется.
+**Example**: A visitor on a single-page site navigates through a link from the catalog to a product card. The content of the site is dynamically updated.
 
-##### Состояние digitalData до перехода по ссылки из каталога:
+##### State of digitalData before moving through a link from the catalog:
 ```javascript
 digitalData = {
-  version: '1.1.2', // не изменится
-  website: {...},   // не изменится      
-  page: {...},      // изменится
-  listing: {...},   // изменится. Объект digitalData.listing должен отсутствовать на карточке товара   
-  user: {...},      // не изменится                  
-  cart: {...},      // не изменится       
-  changes: [...],   // изменится. В массив будет добавлен новый слепок digitalData
-  events: [...]     // изменится. В массив будет добавлено событие 'Viewed Page'
+  version: '1.1.2', // wont change
+  website: {...},   // wont change
+  page: {...},      // will change
+  listing: {...},   // will change. The digitalData.listing object should not be present on the product page
+  user: {...},      // wont change
+  cart: {...},      // wont change
+  changes: [...],   // will change. A new digitalData snapshot will be added to the array
+  events: [...]     // will chagne. A 'Viewed Page' event will be added to the array
 }
 ```
 
-##### Последовательное добавление события загрузки новой страницы и изменения в digitalData:
+##### The sequence of adding the event of loading a new page and changes to digitalData:
 ```javascript
-//После добавления события - добавляем изменение в массив digitalData.changes
+//Add a change to the array digitalData.changes
 digitalData.changes.push({
-  product: {...},     //описывает отобразившийся товар
-  page: {...}         //описывает "загруженную" страницу
+  product: {...},     //describes the product loaded
+  page: {...}         //describes the "loaded" page
 });
 
-//После динамического изменения объекта digitalData необходимо добавить событие 'Viewed Page'
+//After dynamically changing the digitalData object, the 'Viewed Page' event must be added
 digitalData.events.push({
   name: 'Viewed Page',
 });
 ```
-> Обратите внимание на последовательность: сначала изменение объекта, затем событие "Viewed Page"
+> Note the sequence: first change the object, then add the event "Viewed Page"
 
-##### Состояние digitalData после загрузки карточки товара:
+##### State of digitalData after loading the product page:
 ```javascript
 digitalData = {
-  version: '1.1.2', // не изменился
-  website: {...},   // не изменился      
-  page: {...},      // изменился. Заменен объектом из метода changes
-  product: {...},   // добавлен. 
-  user: {...},      // не изменился                  
-  cart: {...},      // не изменился       
-  changes: [...],   // изменился. Добавлен измененный объект
-  events: [...]     // изменился. Добавлено событие "Viewed Page"
+  version: '1.1.2', // didnt change
+  website: {...},   // didnt change
+  page: {...},      // changed with the object pushed to changes
+  product: {...},   // added. 
+  user: {...},      // didnt change
+  cart: {...},      // didnt change
+  changes: [...],   // changed. Added the changed object
+  events: [...]     // changed. Added the "Viewed Page" event
 }
 ```
 
-> Важно. Если в новом объекте не будут использованы ключи "version", "user", "context", "cart", "website" - содержания соответствующих переменных останется без изменений.
+> Important. If the keys "version", "user", "context", "cart", "website" are not used in the new object, the contents of the corresponding variables will remain unchanged.
