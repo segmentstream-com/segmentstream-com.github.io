@@ -75,9 +75,9 @@ In order for DigitalDataManager to correctly process dynamic content changes, yo
 
 - The user clicks on a link, the request goes to the server
 - The server responds with the content of the new page, as well as a new copy of the digitalData object
-- After the content and URL of the site change, you need to call the methods in the following sequence: `digitalData.changes.push({...})` и `digitalData.events.push({name: 'Viewed Page'})`
+- After the content and URL of the site change, you need to call the methods in the following sequence: `digitalData.changes.push({...})` and `digitalData.events.push({name: 'Viewed Page'})`
 
-> Important. A complete change of the object `digitalData` on single-page sites should always be accompanied by the event "Viewed Page". This event helps the DigitalDataManager system to determine the moment of "virtual load" of a new page.
+> Important. A complete change of the object `digitalData` on single-page sites should always be accompanied by the event "Viewed Page". This event helps the DigitalDataManager system to determine the moment of the "virtual load" of a new page.
 
 **Example**: A visitor on a single-page site navigates through a link from the catalog to a product card. The content of the site is dynamically updated.
 
