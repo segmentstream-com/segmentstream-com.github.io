@@ -6,7 +6,8 @@ date: 2018-04-13 17:00:00
 order: 1
 ---
 
-It is often necessary to change the contents of the `digitalData` variable without reloading the page. For example: when subscribing to a newsletter, adding a product to the cart, logging in, registering, and many other events. In this case, you should use the construct in the form of `digitalData.changes.push (...)`. DigitalDataManager "listens" to the change of the array `digitalData.changes` and automatically updates the corresponding elements of the `digitalData` object.
+It is often necessary to change the contents of the `digitalData` variable without reloading the page.
+For example: when subscribing to a newsletter, adding a product to the cart, logging in, registering, and many other events. In this case, you should use the construct in the form of `digitalData.changes.push (...)`. DigitalDataManager "listens" to the change of the array `digitalData.changes` and automatically updates the corresponding elements of the `digitalData` object.
 
 > We strongly do not recommend changing the contents of `digitalData` by directly overriding elements in the form of `digitalData.user.name` = 'Ivan'.
 
