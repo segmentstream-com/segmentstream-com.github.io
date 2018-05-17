@@ -39,4 +39,4 @@ digitalData.events.push({
   ```
  - From the admin panel interface, based on other events and the content of the object `digitalData`
 
->For more details on working with events, see inside the section "analyst":[Events](/for-analyst/events)
+>For more details on working with events, see inside the section "analyst": [Events](/for-analyst/events)
