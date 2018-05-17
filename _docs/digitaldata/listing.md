@@ -28,7 +28,7 @@ The `listing` object contains variables that describe the list of goods: an arra
 
 ### <a name="0"></a>Introduction
 ------
-The `listing` object must be declared and filled in the source code of the page or after the page is loaded in case of using an AJAX-load catalog. The list of products can be located on the search page (`digitalData.page.type` равно 'search'), on a catalog category page (`digitalData.page.type` = 'listing') or on any other page as one or more lists of recommended products (`digitalData.recommendation` equalt to [ `listing`, `listing`, `listing`]).
+The `listing` object must be declared and filled in the source code of the page or after the page is loaded in case an AJAX-load catalog is used. The list of products can be located on the search page (`digitalData.page.type` равно 'search'), on a catalog category page (`digitalData.page.type` = 'listing') or on any other page as one or more lists of recommended products (`digitalData.recommendation` equalt to [ `listing`, `listing`, `listing`]).
 
 Example of filling the object on a catalog category page:
 ```javascript
@@ -99,7 +99,7 @@ Data type: string.
 
 `listing.listName` - **required** variable that contains the name of the list of products.
 
->ЗThe value of this variable will be displayed as the list name in the [Google Analytics](/integrations/google-analytics) reports
+>The value of this variable will be displayed as the list name in the [Google Analytics](/integrations/google-analytics) reports
 
 ### <a name="2"></a>listing.listId
 ------
