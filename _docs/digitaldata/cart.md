@@ -38,7 +38,7 @@ window.digitalData = {
   ...,
   cart: {
     id: "CART2203",
-    currency: "RUB",
+    currency: "USD",
     subtotal: 25000,
     vouchers: [
       "MYVOUCHER1"
@@ -61,7 +61,7 @@ Example of filling an empty basket:
 window.digitalData = {
   ...,
   cart: {
-    currency: "RUB",
+    currency: "USD",
     subtotal: 0,
     total: 0,
     lineItems: []
@@ -74,7 +74,7 @@ window.digitalData = {
 ------
 Data type: string.
 
-`cart.currency` - **required** variable, which contains the basket currency in the ISO 4217 format (USD, EUR, RUB).
+`cart.currency` - **required** variable, which contains the basket currency in the ISO 4217 format (USD, EUR, USD).
 
 ### <a name="2"></a>cart.subtotal
 ------
@@ -114,7 +114,7 @@ window.digitalData = {
           description: "Description",
           manufacturer: "Timberland",
           category: ["Footwear","Boots"],
-          currency: "RUB",
+          currency: "USD",
           unitPrice: 12990,
           unitSalePrice: 10990,
           skuCode: "TBL6065RW",
