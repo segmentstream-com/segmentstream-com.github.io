@@ -33,7 +33,7 @@ The `digitalData.user` object contains the variables that describe the visitor o
 ------
 The `digitalData.user` object must be declared and filled in the source code of each page of the site.
 
-> Declare the variable and give it an empty object `{}`, If there is no information about the visitor. If the user is not authorized, but the system recognized it - fill the object `digitalData.user` to the maximum.
+> Declare the variable and give it an empty object `{}`, If there is no information about the visitor. If the user is not authorized, but the system recognized him - fill the object `digitalData.user` to the maximum.
 
 Example:
 ```javascript
@@ -142,11 +142,11 @@ Data type: string in ISO 8601 format.
 Data type: string.
 
 `user.googleClientId` - contains the browser identifier in the Google Analytics system.
->This variable is declared and populated automatically by the DigitalDataManager library when you enable integration with GA via DigitalDataManager.
+>This variable is declared and populated automatically by the DigitalDataManager library when you enable the GA integration via DigitalDataManager.
 
 ### <a name="14"></a>user.segment
 ------
 Data type: object.
 
-`user.segment` is an object that contains the variables that characterize the user.
+`user.segment` is an object that contains variables that characterize the user.
 >If you use different types of segmentation of your users: RFM, LTV, Sale, etc. - describe them in an object inside `digitalData.user.segment`.
