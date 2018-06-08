@@ -32,11 +32,11 @@ Example:
   window.digitalData = {
     ...,
     website: {
-      region: "Москва",
+      region: "London",
       regionId: "12",
       type: "desktop",
       language: "ru",
-      currency: "RUB",
+      currency: "USD",
       environment: "production"
     },
     ...
@@ -49,7 +49,7 @@ Example:
 
 ### <a name="2"></a>website.regionId
 ------
-`website.regionId` - contains the unique identifier of the region, for example "77". A variable is declared and populated only if the site has the option of selecting a region.
+`website.regionId` - contains the unique identifier of a region, for example "77". A variable is declared and populated only if the site has the option of selecting a region.
 
 ### <a name="3"></a>website.type
 ------
