@@ -13,7 +13,7 @@ In this section you will learn:
 * How to connect the click map and Webvisor.
 * How to connect the e-commerce module in Yandex Metrica.
 
-Yandex Metrica is a system for analyzing the behavior of users on your website. Integration with Yandex Metrics allows you to transfer segments to Yandex Direct for advanced targeting of your advertising.
+Yandex Metrica is a system for analyzing the behavior of users on your website. Integration with Yandex Metrica allows you to transfer segments to Yandex Direct for advanced targeting of your advertising.
 
 ### Page contents
 ------
@@ -36,7 +36,7 @@ With the help of DigitalDataManager, you can fully integrate Yandex Metrica in y
 [Yandex guide on integrating Yandex Metrica](https://yandex.com/support/metrica/index.html)
 
 To configure your integration with Yandex Metrica: 
-1. Login on the [ddmanager.ru](https://admin.ddmanager.ru/) website and go to the integration control panel.
+1. Login on the [segmentstream.com](https://admin.ddmanager.ru/) website and go to the integration control panel.
 2. Enter the "Integration" tab and click on the block with the Yandex Metrica logo.
 3. In the panel that opens, configure the integration.
 ![](/img/integrations.ym.settings.png)
@@ -130,5 +130,5 @@ In order to configure the transmission of the session parameter:
 If you want to send a user segment to Yandex Metrica, for example an RFM segment or a sign that the user is subscribed to a mailing list or a sign that the user has an abandoned cart, you can set up the transmission of user parameters.
 The configuration process is described in detail in [session parameters](#8)
 
-[Yandex guide on user parameters](https://yandex.ru/support/metrika/data/user-params.html)
+[Yandex guide on user parameters](https://yandex.com/support/metrika/data/user-params.html)
 
