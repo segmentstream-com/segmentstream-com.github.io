@@ -1,19 +1,19 @@
 ---
 layout: page
 section: integrations
-title: "Yandex Metrica"
+title: "Yandex.Metrica"
 date: 2017-08-21 12:00:00
 order: 1
 ---
 
 In this section you will learn:
-* How to install the Yandex Metrica counter on the site.
-* How to set up goals and events in Yandex Metrica.
-* How to transfer the parameters of visits and users to Yandex Metrica.
+* How to install the Yandex.Metrica counter on the site.
+* How to set up goals and events in Yandex.Metrica.
+* How to transfer the parameters of visits and users to Yandex.Metrica.
 * How to connect the click map and Webvisor.
-* How to connect the e-commerce module in Yandex Metrica.
+* How to connect the e-commerce module in Yandex.Metrica.
 
-Yandex Metrica is a system for analyzing the behavior of users on your website. Integration with Yandex Metrica allows you to transfer segments to Yandex Direct for advanced targeting of your advertising.
+Yandex.Metrica is a system for analyzing the behavior of users on your website. Integration with Yandex.Metrica allows you to transfer segments to Yandex.Direct for advanced targeting of your advertising.
 
 ### Page contents
 ------
@@ -32,12 +32,12 @@ Yandex Metrica is a system for analyzing the behavior of users on your website. 
 
 ### <a name="0"></a>Introduction
 ------
-With the help of DigitalDataManager, you can fully integrate Yandex Metrica in your website: goals, Webvisor, click map, e-commerce, and more.<br />
-[Yandex guide on integrating Yandex Metrica](https://yandex.com/support/metrica/index.html)
+With the help of DigitalDataManager, you can fully integrate Yandex.Metrica in your website: goals, Webvisor, click map, e-commerce, and more.<br />
+[Yandex guide on integrating Yandex.Metrica](https://yandex.com/support/metrica/index.html)
 
-To configure your integration with Yandex Metrica: 
+To configure your integration with Yandex.Metrica: 
 1. Login on the [segmentstream.com](https://admin.ddmanager.ru/) website and go to the integration control panel.
-2. Enter the "Integration" tab and click on the block with the Yandex Metrica logo.
+2. Enter the "Integration" tab and click on the block with the Yandex.Metrica logo.
 3. In the panel that opens, configure the integration.
 ![](/img/integrations.ym.settings.png)
 <br />
@@ -45,7 +45,7 @@ You will find a more detailed description of the settings below.
 
 ### <a name="1"></a>Counter ID
 ------
-To set up site tracking, you must create a counter in your Yandex Metrica account. When creating a counter, Yandex Metrica will generate a unique tracking ID. The screenshot below demonstrates how to find your ID.
+To set up site tracking, you must create a counter in your Yandex.Metrica account. When creating a counter, Yandex.Metrica will generate a unique tracking ID. The screenshot below demonstrates how to find your ID.
 
 ![](/img/integrations.ym.counterid.png)
 
@@ -53,36 +53,36 @@ To set up site tracking, you must create a counter in your Yandex Metrica accoun
 
 ### <a name="2"></a>Click map option
 ------
-Yandex Metrica allows you to collect information about all clicks (not just links) that visitors make on the site. There is a special report in the Metrica interface that will help you understand how your users interact with the site.
+Yandex.Metrica allows you to collect information about all clicks (not just links) that visitors make on the site. There is a special report in the Metrica interface that will help you understand how your users interact with the site.
 You can enable or disable the Click Map in 1 click.
 
 [Yandex guide on the click map](https://yandex.com/support/metrika/behavior/click-map.html)
 
 ### <a name="3"></a>Webvisor option
 ------
-The Webvisor allows not only to transmit information about clicks, but also about the movement of the user's cursor. As a result, Yandex Metrica provides an opportunity to view videos of the users interaction with the site. You can enable or disable the Webvisor in 1 click.
+The Webvisor allows not only to transmit information about clicks, but also about the movement of the user's cursor. As a result, Yandex.Metrica provides an opportunity to view videos of the users interaction with the site. You can enable or disable the Webvisor in 1 click.
 
 [Yandex guide on the Webvisor](https://yandex.com/support/metrika/webvisor/about-webvisor.html)
 
 ### <a name="4"></a>Tracking external links option
 ------
-Yandex Metrica allows you to view the amount of user traffic that moves from your site to other sites. In the Yandex Metrica interface, the report is located at: "Content"> "External links". You can enable or disable External link tracking in 1 click.
+Yandex.Metrica allows you to view the amount of user traffic that moves from your site to other sites. In the Yandex.Metrica interface, the report is located at: "Content"> "External links". You can enable or disable External link tracking in 1 click.
 
 [Yandex guide on the External links](https://yandex.com/support/metrika/content/external-links.html)
 
 ### <a name="5"></a>Send User ID to Metrica option
 ------
-Yandex Metrica makes it possible to link visits to your site by the same user from different devices - into one story. To do this, you must configure the transfer of your internal client ID to the variable `digitalData.user.userId`. Enable or disable the option by clicking on the toggle switch.
+Yandex.Metrica makes it possible to link visits to your site by the same user from different devices - into one story. To do this, you must configure the transfer of your internal client ID to the variable `digitalData.user.userId`. Enable or disable the option by clicking on the toggle switch.
 
 [Yandex guide on UserID](https://yandex.com/support/metrica/general/clientid-userid.html)
 
 ### <a name="6"></a>Purchase Goal Numeric Id
-By default, the integration with Yandex Metrica includes the e-commerce module. For its correct operation, certain events (list below) must be configured, and the numerical id of the purchase goal should be set up.
+By default, the integration with Yandex.Metrica includes the e-commerce module. For its correct operation, certain events (list below) must be configured, and the numerical id of the purchase goal should be set up.
 
-The purchase goal ID is generated by Yandex Metrica when creating a goal ("Settings"> "Goals")
+The purchase goal ID is generated by Yandex.Metrica when creating a goal ("Settings"> "Goals")
 1. Click on the "Add goal" button
 2. Enter a name, for example "Order" or "Transaction"
-3. If you use retargeting campaigns in Yandex Direct, check the "Retargeting" box
+3. If you use retargeting campaigns in Yandex.Direct, check the "Retargeting" box
 4. Set the condition type to "JavaScript event"
 5. Set the Goal ID to 'transaction' or whatever you feel like
 ![](/img/integrations.ym.goal.1.png)
@@ -100,26 +100,26 @@ The purchase goal ID is generated by Yandex Metrica when creating a goal ("Setti
 [Yandex guide on setting up ecommerce](https://yandex.com/support/metrika/reports/ecommerce.html)
 
 ### <a name="7"></a>Goal setup
-All events that are added to the `digitalData.events` array can be passed as goals to Yandex Metrica. To do this you need:
-1. Create a new goal in the Yandex Metrica interface. Be sure to specify the condition type: JavaScript event. Set the Goal ID
-2. In the DigitalDataManager interface, in the left field, specify the name of the Event in `digitalData.events`, and in the right - the Goal ID in Yandex Metrica.
+All events that are added to the `digitalData.events` array can be passed as goals to Yandex.Metrica. To do this you need:
+1. Create a new goal in the Yandex.Metrica interface. Be sure to specify the condition type: JavaScript event. Set the Goal ID
+2. In the DigitalDataManager interface, in the left field, specify the name of the Event in `digitalData.events`, and in the right - the Goal ID in Yandex.Metrica.
 
 ![](/img/integrations.ym.goals.png)
 
 [Yandex guide on goals](https://yandex.com/support/metrika/general/goals.html)
 
 ### <a name="8"></a>Session parameters
-If you want to build reports in Yandex Metrica for those parameters that are not in the standard reports, you need to configure the transfer of special parameters. For example: mobile or desktop version of the site.
+If you want to build reports in Yandex.Metrica for those parameters that are not in the standard reports, you need to configure the transfer of special parameters. For example: mobile or desktop version of the site.
 
 > It is important to distinguish the session parameters from user parameters. The session parameters are only distributed to the session during which they were transferred. If yesterday you passed the session parameter along with all hits of the user, and today you stopped passing it, this parameter will be missing in today's reports. If you passed the user parameter, this parameter will be assigned to the user (the user's browser) for all time (past and future), until the value of the user parameter is overwritten by a new value.
 
 In order to configure the transmission of the session parameter:
 
-1. Think of the name of the parameter by which you want to build reports in the Yandex Metrica interface
+1. Think of the name of the parameter by which you want to build reports in the Yandex.Metrica interface
 2. Write this name in the left field of the settings for the session parameters
 3. Specify the data source:
- - **DigitalData**. Any variable that is contained in the digitalData object can be passed to Yandex Metrica as a session parameter
- - **Event**. Any variable of any event added to the `digitalData.events` array can be passed to Yandex Metrica as a session parameter at the moment of triggering this event
+ - **DigitalData**. Any variable that is contained in the digitalData object can be passed to Yandex.Metrica as a session parameter
+ - **Event**. Any variable of any event added to the `digitalData.events` array can be passed to Yandex.Metrica as a session parameter at the moment of triggering this event
  4. Specify the name of the variable in the right field
 
 ![](/img/integrations.ym.session-params.png)
@@ -127,7 +127,7 @@ In order to configure the transmission of the session parameter:
 [Yandex guide on session parameters](https://yandex.com/support/metrika/data/visit-params.html)
 
 ### <a name="9"></a>User parameters
-If you want to send a user segment to Yandex Metrica, for example an RFM segment or a sign that the user is subscribed to a mailing list or a sign that the user has an abandoned cart, you can set up the transmission of user parameters.
+If you want to send a user segment to Yandex.Metrica, for example an RFM segment or a sign that the user is subscribed to a mailing list or a sign that the user has an abandoned cart, you can set up the transmission of user parameters.
 The configuration process is described in detail in [session parameters](#8)
 
 [Yandex guide on user parameters](https://yandex.com/support/metrika/data/user-params.html)
