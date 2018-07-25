@@ -29,17 +29,17 @@ Typical cases are described below.
 
 ### <a name="1"></a> Tracking an arbitrary event
 ------
-`name`, `source` are required variables for third-party system events. The following variables: `category`, `action`, `label`, `value`, `nonInteraction` are auxiliary and are necessary for sending the corresponding parameters to Google Analytics.
+`name`, `source` are required variables for third-party system events. The following variables: `category`, `action`, `label`, `value`, `nonInteraction` are optional and are necessary for sending the corresponding parameters to Google Analytics.
 
 ```javascript
 digitalData.events.push({
-  name: '<Partner> Event',           //Replace <Partner> to the name of the system
+  name: '<Partner> Event',    //Replace <Partner> with the name of the system
   category: '<Event category>',    
   action: '<Event action>',    
   label: '<Event label>',           
-  value: '<Event value>',         //Number, not a string
-  nonInteraction: true,              //If this variable isn't declared onInteraction: false will be passed by default 
-  source: '<Partner>'                //Name of the system that pushed the event to digitalData.events
+  value: '<Event value>',   //Number, not a string
+  nonInteraction: true,     //If this variable isn't declared onInteraction: false will be passed by default 
+  source: '<Partner>'       //Name of the system that pushed the event to digitalData.events
 });
 ```
 
@@ -93,11 +93,11 @@ where,
 * `position` - Product position in the list
 * `listName` - List name. This name will appear in the Google Analytics Performance report
 * `product.id` - String, even if the identifier is numeric. Matches the groupId in the XML feed. In the event that the products in the feed have no groups, it corresponds to the offerId.
-* `product.skuCode` - String, even if the identifier is numeric. Meets the offerId in the XML feed. Not necessary if the products in the feed do not have groups.
+* `product.skuCode` - String, even if the identifier is numeric. Matches the offerId in the XML feed. Not necessary if the products in the feed do not have groups.
 * `product.category` - Array of strings from parent to child from left to right
 * `product.unitPrice` - Number, not a string. Price before discount
 * `product.unitSalePrice` -  Number, not a string. Price including discount. If there is no discount, unitPrice = unitSalePrice. Required field.
-* `product.variant` - Could contain size, color or other extra feature
+* `product.variant` - Could contain the size, color or other extra feature
 
 ### <a name="3"></a> Tracking product clicks in a list
 ------
@@ -129,8 +129,8 @@ where,
 * `position` - Product position in the list
 * `listName` - List name. This name will appear in the Google Analytics Performance report
 * `product.id` - String, even if the identifier is numeric. Matches the groupId in the XML feed. In the event that the products in the feed have no groups, it corresponds to the offerId.
-* `product.skuCode` - String, even if the identifier is numeric. Meets the offerId in the XML feed. Not necessary if the products in the feed do not have groups.
+* `product.skuCode` - String, even if the identifier is numeric. Matches the offerId in the XML feed. Not necessary if the products in the feed do not have groups.
 * `product.category` - Array of strings from parent to child from left to right
 * `product.unitPrice` - Number, not a string. Price before discount
 * `product.unitSalePrice` -  Number, not a string. Price including discount. If there is no discount, unitPrice = unitSalePrice. Required field.
-* `product.variant` - Could contain size, color or other extra feature
+* `product.variant` - Could contain the size, color or other extra feature
