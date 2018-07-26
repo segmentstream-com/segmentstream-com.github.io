@@ -2,12 +2,11 @@
 layout: page
 section: events
 title: "Added Payment Info"
-date: 2017-11-10 12:00:00
 order: 2
 ---
-`Added Payment Info` - это событие, которое должно быть добавлено в массив `digitalData.events` при загрузке страницы сохранении биллинговой информации пользователем в процессе оформления заказа. Данное событие необходимо вызывать только в том случае, если вы сохраняете биллинговую информацию клиентов.
+The `Added Payment Info` event should be pushed to the `digitalData.events` array when loading the page that saves the users billing information in the process of placing an order. This event should be called only if you save the customer's billing information.
 
-### Из кода сайта / при использовании AJAX
+#### From the site code / when using AJAX
 ```javascript
 digitalData.events.push({
   category: 'Ecommerce',
@@ -16,9 +15,9 @@ digitalData.events.push({
 });
 ```
 
-### Из интерфейса DDManager
-Событие `Added Payment Info` является серверным. Его невозможно создать на основе встроенных триггеров DDManager. Событие должно быть добавлено из кода при успешном возрвате ответа с сервера.
+#### From the DDManager interface
+`Added Payment Info` is a server event. It can not be created from the built-in DDManager triggers. The event must be added from the code if the server responds successfully.
 
-### Необходимо для работы интеграций:
-* [Vkontakte Динамический ретаргетинг](/integrations/vkontakte)
+### Required by the following integrations:
+* [Vkontakte Dynamic retargeting](/integrations/vkontakte)
 * [Facebook](/integrations/facebook)

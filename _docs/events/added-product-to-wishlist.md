@@ -2,12 +2,11 @@
 layout: page
 section: events
 title: "Added Product to Wishlist"
-date: 2017-08-16 12:00:00
 order: 2
 ---
-`Added Product to Wishlist` - это событие, которое должно быть добавлено в `digitalData.events` при добавлении пользователем товара в Wishlist.
+The `Added Product to Wishlist` event must be pushed to the `digitalData.events` array when a user adds a product to their Wishlist.
 
-#### Из кода сайта / при использовании AJAX
+#### From the site code / when using AJAX
 ```javascript
 digitalData.events.push({
   name: 'Added Product to Wishlist',
@@ -15,16 +14,16 @@ digitalData.events.push({
   product: {...}
 })
 ```
-> Подробное описание объекта `product` смотрите в разделе для разработчиков.
+> For a detailed description of the `product` object, see the developer section.
 
-#### Из интерфейса DDManager
-> Если вы уверены, что товар будет добавлен в Избранное по нажатию на кнопку "Добавить в избранное", можете использовать следующие настройки события:
+#### From the DDManager interface
+> If you are sure that the product will be added to Favorites by clicking on "Add to Favorites" button, you can use the following event settings:
 
-**Триггер**: `клик`,
+**Триггер**: `click`,
 
-**CSS селектор**: `.your_add_to_wishlist_button_class`,
+**CSS selector**: `.your_add_to_wishlist_button_class`,
 
-**Функция, которая возвращает объект события**:
+**Event handler**:
 
 ```javascript
 return {
@@ -34,5 +33,5 @@ return {
 };
 ```
 
-#### Необходимо для работы интеграций:
+### Required by the following integrations:
 * Facebook
