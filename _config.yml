@@ -17,7 +17,7 @@ navigation: 1
 sections: [
     ['analyst', 'Analyst'],
     ['developer', 'Developer'],
-    ['digitaldata', 'digitaldata'],
+    ['digitaldata', 'Variable list'],
     ['integrations', 'Integration list'],
     ['events', 'Events list']
 ]

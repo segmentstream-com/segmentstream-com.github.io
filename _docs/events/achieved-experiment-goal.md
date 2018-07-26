@@ -2,12 +2,11 @@
 layout: page
 section: events
 title: "Achieved Experiment Goal"
-date: 2017-08-16 12:00:00
 order: 2
 ---
-`Achieved Experiment Goal` - это событие, которое должно быть добавлено в `digitalData.events` в случае достижения пользователем цели эксперимента. Это может быть как транзакция, так и добавление товара в корзину или в избранное и т.д.
+The `Achieved Experiment Goal` event, should be pushed to `digitalData.events` in case the user reaches the goal of an experiment. This can be either the completion of a transaction, adding a product to the shopping cart or to the favorites list, etc.
 
-#### Из кода сайта / при использовании AJAX
+#### From the site code / when using AJAX
 ```javascript
 digitalData.events.push({
   name: 'Achieved Experiment Goal'
@@ -15,16 +14,16 @@ digitalData.events.push({
 ```
 
 
-#### Из интерфейса DDManager
-В случае, если целью эксперимента является одно из уже существующих событий (например Покупка), настройка может быть похожа на:
+#### From the DDManager interface
+In case the experiment's goal is one of the already existing events (for example, 'Completed Transaction'), it can be set up as such:
 
-**Триггер**: событие `Completed Transaction`,
+**Trigger**: event `Completed Transaction`,
 
-**Функция, которая возвращает объект события**:
+**Event handler**:
 
 ```javascript
 return { name: 'Achieved Experiment Goal' };
 ```
 
-#### Необходимо для работы интеграций:
+#### Is required for the following integrations:
 * Driveback Experiments
