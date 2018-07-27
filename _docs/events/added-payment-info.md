@@ -18,6 +18,6 @@ digitalData.events.push({
 #### From the DDManager interface
 `Added Payment Info` is a server event. It can not be created from the built-in DDManager triggers. The event must be added to the website code if the server responds successfully.
 
-### Required by the following integrations:
+#### Required by the following integrations:
 * [Vkontakte Dynamic retargeting](/integrations/vkontakte)
 * [Facebook](/integrations/facebook)

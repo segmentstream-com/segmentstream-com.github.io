@@ -39,6 +39,6 @@ return {
 };
 ```
 
-### Required by the following integrations:
+#### Required by the following integrations:
 * Google Analytics (Enhanced Ecommerce)
 * Retail Rocket

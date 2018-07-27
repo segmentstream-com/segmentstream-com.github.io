@@ -33,5 +33,5 @@ return {
 };
 ```
 
-### Required by the following integrations:
+#### Required by the following integrations:
 * Facebook
