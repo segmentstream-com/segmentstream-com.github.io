@@ -2,15 +2,21 @@
 layout: page
 section: events
 title: "Completed Transaction"
-date: 2017-08-16 12:00:00
 order: 2
 ---
-`Completed Transaction` - это событие, которое должно быть добавлено в `digitalData.events` в случае загрузки страницы с сообщением об удачно созданном заказе (страница "Спасибо за покупку").
 
-#### Из кода сайта / при использовании AJAX
-В некоторых случаях стоит добавлять событие `Completed Transaction` из кода сайта:
-* если вы используете "покупку в 1 клик" и после возврата с сервера сигнала об удачной покупке не происходит редирект на страницу "Спасибо за покупку", событие о покупке должно быть добавлена в массив `digitalData.events` из кода сайта.
-* если пользователь выбрал "оплату онлайн" и перед загрузкой страницы "Спасибо за покупку" происходит редирект на шлюз платежной системы, стоит перед редиректом вернуть на клиента идентификатор транзакции, добавить событие `Completed Transaction` и сделать небольшую задержку, чтобы сигнал успел поступить во все системы. В случае, если на сайте системы оплаты происходит сбой, вы не потеряете информацию о заказе.
+The `Completed Transaction` event must be pushed to the `digitalData.events` array when the page informing the user about a sucessfully created order is loaded ("Thank you" page).
+
+#### From the site code / when using AJAX
+In some cases, it's worth adding the `Completed Transaction` event from the site code:
+* If you use a "1 click purchase" and the server sends a response about a successful purchase and there is no redirect to the "Thank you for your purchase" page, the purchase event should be added to the `digitalData.events` array from the site code.
+* if the user selects "online payment" and before redirecting to the "Thank you for your purchase" page, a redirect to the payment system gateway occurs, the following actions should be taken before the redirect:
+
+1. The order ID should be received from the server response creating the transaction.
+2. The `Completed Transaction` event should be pushed to the `digitalData.events` array.
+3. A small delay should be added to the redirect to make sure that the data has enough time to be passed to all integrations.
+
+In the event that the payment system site fails, you will not lose the order information.
 
 ```javascript
 digitalData.events.push({
@@ -19,24 +25,26 @@ digitalData.events.push({
   transaction: {...}
 })
 ```
-> Подробное описание объекта `transaction` смотрите в разделе для разработчиков.
+> For a detailed description of the `transaction` object, see the section for developers.
 
-#### Из интерфейса DDManager
-**Триггер**: событие `Viewed Page`,
+#### From the DDManager interface
+**Trigger**: event `Viewed Page`,
 
-**Функция, которая возвращает объект события**:
+**Event handler**:
 ```javascript
-if (this.digitalData('page.type') === 'confirmation' &&
-    this.digitalData('transaction.isReturning') !== true) {
+if (
+  _digitalData('page.type') === 'confirmation' &&
+  _digitalData('transaction.isReturning') !== true
+) {
   return {
     category: 'Ecommerce',
     name: 'Completed Transaction',
-    transaction: this.digitalData('transaction')
+    transaction: _digitalData('transaction')
   };
 }
 ```
 
-#### Необходимо для работы интеграций:
+#### Required by the following integrations:
 * Adwords
 * Criteo
 * Facebook
@@ -45,7 +53,7 @@ if (this.digitalData('page.type') === 'confirmation' &&
 * RTB House
 * Sociomantic
 * Segmento
-* Yandex Metrica
+* Yandex.Metrica
 * Google Analytics (Enhanced Ecommerce)
 * Admitad
 * GdeSlon
