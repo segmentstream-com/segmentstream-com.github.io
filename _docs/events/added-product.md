@@ -2,13 +2,12 @@
 layout: page
 section: events
 title: "Added Product"
-date: 2013-06-05 12:00:00
 order: 2
 ---
-`Added Product` - это событие, которое должно быть добавлено в digitalData.events при добавлении пользователем товара в корзину или увеличении количества единиц одного и того же товара.
->Важно! Событие должно быть добавлено не после нажатия на кнопку "Добавить в корзину", а после возврата с сервера сигнала об успешном добавлении товара в корзину.
+The `Added Product` event must be pushed to the `digitalData.events` array when a user adds a product to their cart or increases the quantity of a product in the cart.
+>Important! The event should not be added after clicking on the "Add to Cart" button, but after the server returns a signal about the successful addition of the product to the cart.
 
-#### Из кода сайта / при использовании AJAX
+#### From the site code / when using AJAX
 ```javascript
 digitalData.events.push({
   name: 'Added Product',
@@ -16,16 +15,16 @@ digitalData.events.push({
   quantity: 1
 });
 ```
-> Подробное описание объекта `product` смотрите в разделе для разработчиков.
+> For a detailed description of the `product` object, see the developer section.
 
-#### Из интерфейса DDManager
-> Если вы уверены, что товар будет добавлен в корзину по нажатию на кнопку "Добавить в корзину", можете использовать следующие настройки события:
+#### From the DDManager interface
+> If you are sure that the product will be added to the user's cart by clicking on the "Add to Cart" button, you can use the following event settings:
 
-**Триггер**: `клик`,
+**Trigger**: `click`,
 
-**CSS селектор**: `.your_add_button_class,.your_increment_button_class`,
+**CSS selector**: `.your_add_button_class,.your_increment_button_class`,
 
-**Функция, которая возвращает объект события**:
+**Event handler**:
 
 ```javascript
 return {
@@ -36,9 +35,9 @@ return {
 };
 ```
 
-#### Необходимо для работы интеграций:
+### Required by the following integrations:
 * Facebook
 * Retail Rocket
 * Segmento
-* Yandex Metrica
+* Yandex.Metrica
 * Google Analytics (Enhanced Ecommerce)
