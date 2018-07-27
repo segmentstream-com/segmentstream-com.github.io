@@ -6,7 +6,7 @@ order: 2
 ---
 The `Clicked Product` event must be pushed to the `digitalData.events` array when a user clicks on a product link in a products list.
 
-> Important! The product's links must be marked by the `ddl_product_link` class, or by the `ddl_product_link_js` class if the links open a 'Quick View' of the product. The links should also have the `data-product-id` data attribute. For more information, see the HTML page layout section.
+> Important! The product's links must be marked by the `ddl_product_link` class, or by the `ddl_product_link_js` class if the links open a 'Quick View' popup of the product. The links should also have the `data-product-id` data attribute. For more information, see the HTML page layout section.
 
 #### From the site code / when using AJAX
 ```javascript

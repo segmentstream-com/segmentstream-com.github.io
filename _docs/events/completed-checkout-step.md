@@ -2,42 +2,42 @@
 layout: page
 section: events
 title: "Completed Checkout Step"
-date: 2017-08-16 12:00:00
 order: 2
 ---
-`Completed Checkout Step` - это событие, которое должно быть добавлено в `digitalData.events` в одном из двух случаев:
-* В процессе оформления заказа пользователь выбрал опцию заказа (тип доставки, тип оплаты и т.п.) на одном из шагов и нажал на кнопку "Перейти к следующему шагу",
-* При загрузке страницы очередного шага оформления покупки. Вместе с событием просмотра страницы будет отправлено событие с информацией о завершении предыдущего шага оформления.
+The `Completed Checkout Step` event must be pushed to the `digitalData.events` array in one of the following scenarios:
 
-#### Из кода сайта / при использовании AJAX
+* During the checkout process, the user chose an order option (delivery type, payment type, etc.) in one of the steps and clicked on the "Proceed to next step" button,
+* When loading the page of the next step in the checkout process. Along with the pageview event, an event with information about the completion of the previous checkout step should be sent.
+
+#### From the site code / when using AJAX
 ```javascript
 digitalData.events.push({
   category: 'Ecommerce',
   name: 'Completed Checkout Step',
-  step: 2, //например
-  option: 'MasterCard' //например
+  step: 2, //example
+  option: 'MasterCard' //example
 });
 ```
 
 
-#### Из интерфейса DDManager
-> Допустим процесс оформления заказа у вас разбит на 4 шага: 
-> 1. просмотр корзины
-> 2. ввод информации об адресе и способе доставки
-> 3. ввод информации о способе оплаты
-> 4. проверка введенных данных и кнопка "Завершить заказ"
-> В этом случае вам потребует отправить 2 события `Completed Checkout Step`, одно при загрузке этапа 3 (с информацией о выбранном спсобе доставки), второе - при загрузке этапа 4 (с информацией о выборе способа оплаты)
+#### From the DDManager interface
+> Let's say the checkout process on your website contains 4 steps:
+> 1. view the shopping cart
+> 2. enter information about the address and method of delivery
+> 3. enter information about the payment method
+> 4. order review and the "Complete Order" button
+> In this case, you will need to push two `Completed Checkout Step` events, one should be pushed when you load the page of the third step (with information about the selected delivery method), and another when you download step 4 (with information about the chosen payment method)
 
-**Триггер**: событие `Viewed Checkout Step`,
+**Trigger**: event `Viewed Checkout Step`,
 
-**Функция, которая возвращает объект события**:
+**Event handler**:
 
 ```javascript
 var checkoutSteps = [3,4];
-var checkoutStep = this.digitalData('cart.checkoutStep');
+var checkoutStep = _digitalData('cart.checkoutStep');
 if (checkoutSteps.indexOf(checkoutStep) !== -1) {
-  var option = this.digitalData('cart.shippingMethod')
-  if (checkoutStep === 4 ) option = this.digitalData('cart.paymentMethod');
+  var option = _digitalData('cart.shippingMethod')
+  if (checkoutStep === 4 ) option = _digitalData('cart.paymentMethod');
   return {
     category: 'Ecommerce',
     name: 'Completed Checkout Step',
@@ -47,5 +47,5 @@ if (checkoutSteps.indexOf(checkoutStep) !== -1) {
 };
 ```
 
-#### Необходимо для работы интеграций:
+### Required by the following integrations:
 * Google Analytics (Enhanced Ecommerce)
