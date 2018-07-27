@@ -2,33 +2,29 @@
 layout: page
 section: events
 title: "Clicked Product"
-date: 2017-08-16 12:00:00
 order: 2
 ---
-`Clicked Product` - это событие, которое должно быть добавлено в `digitalData.events` в момент нажатия пользователем на ссылку карточки товара в товарном листинге.
+The `Clicked Product` event must be pushed to the `digitalData.events` array when a user clicks on a product link in a products list.
 
-> Важно! Ссылки карточек товаров должны быть размечены классами `ddl_product_link` или `ddl_product_link_js`, в случае если эти ссылки ведут к открытию попапа быстрого просмотра. Также ссылки должны иметь дата-атрибуты `data-product-id` и `data-list-id`. Подробнее читайте в разделе HTML-разметки контента страниц.
+> Important! The product's links must be marked by the `ddl_product_link` class, or by the `ddl_product_link_js` class if the links open a 'Quick View' of the product. The links should also have the `data-product-id` data attribute. For more information, see the HTML page layout section.
 
-#### Из кода сайта / при использовании AJAX
+#### From the site code / when using AJAX
 ```javascript
-var productId = element.getAttribute('data-product-id');
-var listId = element.getAttribute('data-list-id');
 digitalData.events.push({
   name: 'Clicked Product',
   listItem: {
     product: productId,
     listId: listId
   }
-})
+});
 ```
 
+#### From the DDManager interface
+**Trigger**: `click`,
 
-#### Из интерфейса DDManager
-**Триггер**: `клик`,
+**CSS selector**: `.ddl_campaign_link`
 
-**CSS селектор**: `.ddl_product_link,.ddl_product_link_js`,
-
-**Функция, которая возвращает объект события**:
+**Event handler**:
 
 ```javascript
 var productId = element.getAttribute('data-product-id');
@@ -43,6 +39,6 @@ return {
 };
 ```
 
-#### Необходимо для работы интеграций:
+### Required by the following integrations:
 * Google Analytics (Enhanced Ecommerce)
 * Retail Rocket

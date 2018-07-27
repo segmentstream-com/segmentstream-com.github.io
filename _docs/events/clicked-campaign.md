@@ -2,30 +2,27 @@
 layout: page
 section: events
 title: "Clicked Campaign"
-date: 2017-08-16 12:00:00
 order: 2
 ---
-`Clicked Campaign` - это событие, которое должно быть добавлено в digitalData.events при клике пользователем на баннер.
+The `Clicked Campaign` event must be pushed to the `digitalData.events` array when a user clicks on a banner link.
 
-> Важно! Ссылки карточек товаров должны быть размечены классом `ddl_campaign_link`. Также ссылки должны иметь дата-атрибут `data-campaign-id`. Подробнее читайте в разделе HTML-разметки контента страниц.
+> Important! The banner's links must be marked with the `ddl_campaign_link` class and should also have the `data-campaign-id` data attribute. For more information, see the HTML page layout section.
 
-#### Из кода сайта / при использовании AJAX
+#### From the site code / when using AJAX
 ```javascript
 digitalData.events.push({
   name: 'Clicked Campaign',
-  listItem: {
-    product: 'productId',
-    listId: 'listId'
-  }
+  category: 'Promo',
+  campaign: campaignId
 });
 ```
 
-#### Из интерфейса DDManager
-**Триггер**: `клик`,
+#### From the DDManager interface
+**Trigger**: `click`,
 
-**CSS селектор**: `.ddl_campaign_link`,
+**CSS selector**: `.ddl_campaign_link`
 
-**Функция, которая возвращает объект события**:
+**Event handler**:
 
 ```javascript
 var campaignId = element.getAttribute('data-campaign-id');
@@ -36,5 +33,5 @@ return {
 };
 ```
 
-#### Необходимо для работы интеграций:
+### Required by the following integrations:
 * Google Analytics (Enhanced Ecommerce)
