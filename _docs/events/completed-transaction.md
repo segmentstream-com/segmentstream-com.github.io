@@ -5,7 +5,7 @@ title: "Completed Transaction"
 order: 2
 ---
 
-The `Completed Transaction` event must be pushed to the `digitalData.events` array when the page informing the user about a sucessfully created order is loaded ("Thank you" page).
+The `Completed Transaction` event must be pushed to the `digitalData.events` array when the page informing the user about a successfully created order is loaded ("Thank you" page).
 
 #### From the site code / when using AJAX
 In some cases, it's necessary adding the `Completed Transaction` event from the site code:

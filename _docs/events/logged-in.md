@@ -2,20 +2,19 @@
 layout: page
 section: events
 title: "Logged In"
-date: 2017-08-10 12:54:00
 order: 2
 ---
-`Logged In` - это событие, которое должно быть добавлено в `digitalData.events` в случае возврата с сервера сообщения об удачной авторизации пользователя.
+The `Logged In` event must be pushed to the `digitalData.events` array when the server responds with a message about a successful user authorization.
 
-#### Из кода сайта / при использовании AJAX
+#### From the site code / when using AJAX
 ```javascript
 digitalData.events.push({
   name: 'Logged In'
 })
 ```
 
-#### Из интерфейса DDManager
-Событие `Logged In` невозможно создать на основе встроенных триггеров DDManager. Событие должно быть добавлено из кода.
+#### From the DDManager interface
+The `Logged In` event can not be created from the built-in DDManager triggers. The event must be added from the site code.
 
-#### Необходимо для работы интеграций:
+#### Required by the following integrations:
 * Mindbox
