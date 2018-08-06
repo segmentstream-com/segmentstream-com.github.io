@@ -2,27 +2,26 @@
 layout: page
 section: events
 title: "Unsubscribed"
-date: 2017-08-10 12:54:00
 order: 2
 ---
-`Unsubscribed` - это событие, которое должно быть добавлено в `digitalData.events` в случае возврата с сервера сообщения об удачной отписке пользователя.
+The `Unsubscribed` event must be pushed to the `digitalData.events` array when the server responds with a message about a successful unsubscription of the user from a newsletter .
 
->Совет. Часто бывает, что email-рассылки клиентам отправляются двумя и более ESP-системами (например массовые и триггерные рассылки). В этом случае стоит создать страницу управления подписками на сайте, и на основе события `Unsubscribed` отправлять сигнал в CRM и ESP-системы. В будущем можно будет смотивировать пользователя подписаться снова с помощью персональных сообщений на сайте и в ретаргетинге.
+>Advice. It often happens that email-neswletters to clients are sent by two or more ESP-systems (for example, mass and trigger newsletter). In this case, it is necessary to create a page for managing subscriptions on the site, and on the basis of the `Unsubscribed` event send a signal to the CRM and ESP-systems. In the future, you can motivate the user to subscribe again using personal messages on the site and through retargeting.
 
-#### Из кода сайта / при использовании AJAX
+#### From the site code / when using AJAX
 ```javascript
 digitalData.events.push({
   name: 'Unsubscribed',
   user: {
-    id: 'идентификатор пользователя в вашей CRM системе',
-    email: 'users.email@mail.ru'
+    id: 'user id in your CRM system',
+    email: 'users.email@mail.com'
   }
 })
 ```
 
 
-#### Из интерфейса DDManager
-Событие `Unsubscribed` невозможно создать на основе встроенных триггеров DDManager. Событие должно быть добавлено из кода.
+#### From the DDManager interface
+The `Unsubscribed` event can not be created from the built-in DDManager triggers. The event must be added from the site code.
 
-#### Необходимо для работы интеграций:
+#### Required by the following integrations:
 * Driveback
