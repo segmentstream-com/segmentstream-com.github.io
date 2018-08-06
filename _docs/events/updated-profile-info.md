@@ -2,22 +2,43 @@
 layout: page
 section: events
 title: "Updated Profile Info"
-date: 2017-08-10 12:54:00
 order: 2
 ---
-`Updated Profile Info` - это событие, которое должно быть добавлено в `digitalData.events` в случае возврата с сервера сообщения об успешным изменении пользовательских данных.
+The `Updated Profile Info` should be pushed to the `digitalData.events` array when the server responds with a message about a successful user profile info update.
 
-#### Из кода сайта / при использовании AJAX
+#### From the site code / when using AJAX
 ```javascript
 digitalData.events.push({
   name: 'Updated Profile Info',
-  user: {...}
+  user: {
+    firstName: 'Bob',
+    phone: '+79161110022',
+    ...,
+    ...,
+    subscriptions: [
+        {
+          type: 'email',
+          topic: 'Discounts',
+          isSubscribed: true, // subscribed
+        },
+        {
+          type: 'email',
+          topic: 'News',
+          isSubscribed: false, // unsubscribed
+        },
+        {
+          type: 'sms',
+          topic: 'Seasonal sale',
+          isSubscribed: true, // subscribed
+        }
+      ]
+  }
 })
 ```
-> В объект user следует передать измененные параметры пользователя.
+> In the user object, you must pass the changed user data (updated email, phone, name etc.).
 
-#### Из интерфейса DDManager
-Событие `Updated Profile Info` невозможно создать на основе встроенных триггеров DDManager. Событие должно быть добавлено из кода.
+#### From the DDManager interface
+The `Updated Profile Info` event can not be created from the built-in DDManager triggers. The event must be added from the site code.
 
-#### Необходимо для работы интеграций:
-* Mindbox
+#### Required by the following integrations:
+* [Mindbox](/integrations/mindbox)
