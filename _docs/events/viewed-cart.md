@@ -4,7 +4,7 @@ section: events
 title: "Viewed Cart"
 order: 2
 ---
-The `Viewed Cart` event must be pushed to the `digitalData.events` array when a campaign banner enters a users viewport. In the event that clicking on the link to the cart does not load a new page, but opens a pop-up with the contents of the cart - you should also push the `Viewed Cart` event.
+The `Viewed Cart` event must be pushed to the `digitalData.events` array when the cart page is loaded. In the event that clicking on the link to the cart does not load a new page, but opens a pop-up with the contents of the cart - you should also push the `Viewed Cart` event.
 
 #### From the site code / when using AJAX
 ```javascript

@@ -20,7 +20,7 @@ We do not recommend pushing the `Viewed Campaign` event from the site code.
 ```javascript
 var viewedCampaigns = [];
 for (var i = 0; i < elements.length; i++) {
-	var campaignId = elements[i].getAttribute('data-campaign-id');
+  var campaignId = elements[i].getAttribute('data-campaign-id');
   viewedCampaigns.push(campaignId);
 }
 return {
