@@ -2,14 +2,13 @@
 layout: page
 section: events
 title: "Removed Product from Wishlist"
-date: 2017-08-10 13:19:00
 order: 2
 ---
-> Необязательное событие. Приведено в качестве примера.
+> Optional event given as an example.
 
-`Removed Product from Wishlist` - это событие, которое должно быть добавлено в `digitalData.events` при удалении пользователем товара из Wishlist'a.
+The `Removed Product from Wishlist` event must be pushed to the `digitalData.events` array when a user deletes a product from their wishlist.
 
-#### Из кода сайта / при использовании AJAX
+#### From the site code / when using AJAX
 ```javascript
 digitalData.events.push({
   name: 'Added Product to Wishlist',
@@ -17,7 +16,7 @@ digitalData.events.push({
   product: {...}
 });
 ```
-> Подробное описание объекта `product` смотрите в разделе для разработчиков.
+> For a detailed description of the `product` object, see the developer section.
 
 #### Из интерфейса DDManager
-> Удаление товара из Wishlist'a - это серверное событие. Мы рекомендуем добавлять его в массив `digitalData.events` из кода.
+> The deletion of a product from the wishlist is a server event. We recommend pushing it to the `digitalData.events` array from the site code.
