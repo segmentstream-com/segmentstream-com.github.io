@@ -2,12 +2,11 @@
 layout: page
 section: events
 title: "Viewed Cart"
-date: 2017-08-16 12:00:00
 order: 2
 ---
-`Viewed Cart` - это событие, которое должно быть добавлено в `digitalData.events` при загрузке страницы корзины. В случае, если по клику на ссылку с корзиной не происходит загрузка новой страницы, а открывается попап с содержимым корзины - также следует отправить событие `Viewed Cart`.
+The `Viewed Cart` event must be pushed to the `digitalData.events` array when a campaign banner enters a users viewport. In the event that clicking on the link to the cart does not load a new page, but opens a pop-up with the contents of the cart - you should also push the `Viewed Cart` event.
 
-### Из кода сайта / при использовании AJAX
+#### From the site code / when using AJAX
 ```javascript
 digitalData.events.push({
   category: 'Ecommerce',
@@ -15,8 +14,10 @@ digitalData.events.push({
 });
 ```
 
-### Из интерфейса DDManager
-**Триггер**: событие `Viewed Page`
+#### From the DDManager interface
+**Trigger**: event `Viewed Page`
+
+**Event handler**:
 ```javascript
 if (_digitalData('page.type') === 'checkout') {
   return {
@@ -26,7 +27,7 @@ if (_digitalData('page.type') === 'checkout') {
 }
 ```
 
-### Необходимо для работы интеграций:
+#### Required by the following integrations:
 * Adwords
 * Criteo
 * MyTarget
