@@ -2,12 +2,11 @@
 layout: page
 section: events
 title: "Searched Products"
-date: 2017-08-16 12:00:00
 order: 2
 ---
-`Searched Products` - это событие, которое должно быть добавлено в `digitalData.events` в случае загрузки страницы с результатом поиска.
+The `Searched Products` event must be pushed to the `digitalData.events` array when a search result page is loaded.
 
-#### Из кода сайта / при использовании AJAX
+#### From the site code / when using AJAX
 ```javascript
 digitalData.events.push({
   name: 'Searched Products'
@@ -15,19 +14,18 @@ digitalData.events.push({
 ```
 
 
-#### Из интерфейса DDManager
-**Триггер**: событие `Viewed Page`
+#### From the DDManager interface
+**Trigger**: event `Viewed Page`
 ```javascript
-if (this.digitalData('page.type') === 'search') {
+if (_digitalData('page.type') === 'search') {
   return { name: 'Searched Products' };
 }
 ```
 
-#### Необходимо для работы интеграций:
+#### Required by the following integrations:
 * Adwords
 * Criteo
 * Facebook
-* MyTarget
 * Retail Rocket
 * RTB House
 * Sociomantic

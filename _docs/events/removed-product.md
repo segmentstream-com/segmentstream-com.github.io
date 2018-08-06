@@ -4,7 +4,6 @@ section: events
 title: "Removed Product"
 order: 2
 ---
-`Removed Product` - это событие, которое должно быть добавлено в `digitalData.events` при удалении пользователем товара из корзины или уменьшении количества одинаковых товаров в корзине.
 The `Removed Product` event must be pushed to the `digitalData.events` array when a user removes a product from their cart or decreases the quantity of a product in the cart.
 
 #### From the site code / when using AJAX
