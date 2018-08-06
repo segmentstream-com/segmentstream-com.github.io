@@ -2,12 +2,11 @@
 layout: page
 section: events
 title: "Started Order"
-date: 2017-11-10 12:00:00
 order: 2
 ---
-`Started Order` - это событие, которое должно быть добавлено в массив `digitalData.events` при загрузке страницы первого шага воронки оформления заказа. Обычно оформление заказа начинается со страницы выбора способа оформления: с авторизацией/регистрацией или в качестве гостя.
+The `Started Order` event must be pushed to the `digitalData.events` array when the page of the first step of the checkout funnel is loaded. Usually the order is started from the page where the user is given the choice of ordering as a guest or as an authorized user.
 
-### Из кода сайта / при использовании AJAX
+#### From the site code / when using AJAX
 ```javascript
 digitalData.events.push({
   category: 'Ecommerce',
@@ -16,10 +15,13 @@ digitalData.events.push({
 });
 ```
 
-### Из интерфейса DDManager
-**Триггер**: событие `Viewed Page`
+#### From the DDManager interface
+**Trigger**: event `Viewed Page`
 ```javascript
-if (_digitalData('page.type') === 'checkout' && _digitalData('page.category') === 'Authorization') {
+if (
+  _digitalData('page.type') === 'checkout' &&
+  _digitalData('page.category') === 'Authorization'
+  ) {
   return {
     category: 'Ecommerce',
     name: 'Viewed Cart',
@@ -28,6 +30,6 @@ if (_digitalData('page.type') === 'checkout' && _digitalData('page.category') ==
 }
 ```
 
-### Необходимо для работы интеграций:
-* [Vkontakte Динамический ретагретинг](/integrations/vkontakte)
+#### Required by the following integrations:
+* [Vkontakte Dynamic Retargeting](/integrations/vkontakte)
 * [RTB House]
