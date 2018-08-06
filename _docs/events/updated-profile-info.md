@@ -4,7 +4,7 @@ section: events
 title: "Updated Profile Info"
 order: 2
 ---
-The `Updated Profile Info` should be pushed to the `digitalData.events` array when the server responds with a message about a successful user profile info update.
+The `Updated Profile Info` event should be pushed to the `digitalData.events` array when the server responds with a message about a successful user profile info update.
 
 #### From the site code / when using AJAX
 ```javascript
@@ -35,7 +35,7 @@ digitalData.events.push({
   }
 })
 ```
-> In the user object, you must pass the changed user data (updated email, phone, name etc.).
+> In the user object, you must pass the updated user data (updated email, phone, name etc.).
 
 #### From the DDManager interface
 The `Updated Profile Info` event can not be created from the built-in DDManager triggers. The event must be added from the site code.
