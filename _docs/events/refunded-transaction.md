@@ -2,26 +2,25 @@
 layout: page
 section: events
 title: "Refunded Transaction"
-date: 2017-08-10 15:24:00
 order: 2
 ---
-`Refunded Transaction` - это событие, которое должно быть добавлено в `digitalData.events` в случае полного или частичного возврата заказанных раннее товаров пользователем.
+The `Refunded Transaction` event must be pushed to the `digitalData.events` array in the event of a full or partial return of previously ordered goods.
 
-#### Из кода сайта / при использовании AJAX
+#### From the site code / when using AJAX
 ```javascript
 digitalData.events.push({
   category: 'Ecommerce',
   name: 'Refunded Transaction',
   transaction: {
-    orderId: 'Номер заказа', 
+    orderId: 'The id of the refunded order', 
     lineItems: [...]
   }
 });
 ```
->Подробнее о массиве объектов `lineItems` читайте в разделе для разработчиков.
+> For more information about the `lineItems` array of  objects, see the 'for developer' section.
 
-#### Из интерфейса DDManager
-Событие `Refunded Transaction` невозможно создать на основе встроенных триггеров DDManager. Событие должно быть добавлено из кода.
+#### From the DDManager interface
+The `Refunded Transaction` event can not be created from the built-in DDManager triggers. The event must be added from the site code.
 
-#### Необходимо для работы интеграций:
+#### Required by the following integrations:
 * Google Analytics (Enhanced Ecommerce)
