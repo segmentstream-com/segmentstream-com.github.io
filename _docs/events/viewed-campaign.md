@@ -2,22 +2,21 @@
 layout: page
 section: events
 title: "Viewed Campaign"
-date: 2017-08-16 12:00:00
 order: 2
 ---
-`Viewed Campaign` - это событие, которое должно быть добавлено в digitalData.events при попадании баннера в поле зрения посетителя.
->Важно! DigitalDataManager имеет встроенный триггер "Показ", который срабатывает в случае, если в поле зрения посетителя попало 75% отслеживаемого элемента.
+The `Viewed Campaign` event must be pushed to the `digitalData.events` array when a campaign banner enters a users viewport.
+>Important! DigitalDataManager has a built-in "Impression" trigger, which works if 75% of the tracked item enters the user's viewport.
 
-#### Из кода сайта / при использовании AJAX
-не рекомендуем добавлять событие `Viewed Campaign` из кода сайта самостоятельно.
+#### From the site code / when using AJAX
+We do not recommend pushing the `Viewed Campaign` event from the site code.
 
->Важно! Баннеры должны быть размечены классом `ddl_campaign`. Также они должны иметь дата-атрибут `data-campaign-id`. Подробнее читайте в разделе HTML-разметки контента страниц.
+>Important! Banners must be marked with the `ddl_campaign` class. Also, they must have the `data-campaign-id` data attribute. For more information, see the HTML page layout section.
 
-**Триггер**: событие `Просмотр`,
+**Trigger**: event `Impression`,
 
-**CSS селектор**: `.ddl_campaign`,
+**CSS selector**: `.ddl_campaign`,
 
-**Функция, которая возвращает объект события**:
+**Event handler**:
 ```javascript
 var viewedCampaigns = [];
 for (var i = 0; i < elements.length; i++) {
@@ -31,5 +30,5 @@ return {
 };
 ```
 
-#### Необходимо для работы интеграций:
+#### Required by the following integrations:
 * Google Analytics (Enhanced Ecommerce)
