@@ -4,7 +4,7 @@ section: events
 title: "Viewed Product Listing"
 order: 2
 ---
-The `Viewed Product Detail` event must be pushed to the `digitalData.events` array when a page containing a listing of products other than the search results page is loaded.
+The `Viewed Product Listing` event must be pushed to the `digitalData.events` array when a page containing a listing of products other than the search results page is loaded.
 
 #### From the site code / when using AJAX
 ```javascript

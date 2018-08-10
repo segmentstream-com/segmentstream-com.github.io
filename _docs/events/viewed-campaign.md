@@ -4,7 +4,7 @@ section: events
 title: "Viewed Campaign"
 order: 2
 ---
-The `Viewed Campaign` event must be pushed to the `digitalData.events` array when a campaign banner enters a users viewport.
+The `Viewed Campaign` event must be pushed to the `digitalData.events` array when a campaign banner enters a user's viewport.
 >Important! DigitalDataManager has a built-in "Impression" trigger, which works if 75% of the tracked item enters the user's viewport.
 
 #### From the site code / when using AJAX
