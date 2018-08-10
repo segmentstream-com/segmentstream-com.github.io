@@ -17,6 +17,8 @@ digitalData.events.push({
 
 #### From the DDManager interface
 **Trigger**: event `Viewed Page`
+
+**Event handler**:
 ```javascript
 if (
   _digitalData('page.type') === 'checkout' &&

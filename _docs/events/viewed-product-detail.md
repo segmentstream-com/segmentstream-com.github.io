@@ -2,12 +2,11 @@
 layout: page
 section: events
 title: "Viewed Product Detail"
-date: 2017-08-16 12:00:00
 order: 2
 ---
-`Viewed Product Detail` - это событие, которое должно быть добавлено в `digitalData.events` в случае загрузки страницы с детальным описанием товара, или загрузки попапа с быстрым просмотром товара.
+The `Viewed Campaign` event must be pushed to the `digitalData.events` array when a product page or a 'quick-view' popup window with a product's details is loaded.
 
-#### Из кода сайта на странице товара
+#### From the site code
 ```javascript
 digitalData.events.push({
   category: 'Ecommerce',
@@ -15,7 +14,7 @@ digitalData.events.push({
 });
 ```
 
-#### Из кода сайта при AJAX запросе (быстрый просмотр)
+#### When using AJAX (quick-view)
 ```javascript
 digitalData.events.push({
   category: 'Ecommerce',
@@ -23,15 +22,15 @@ digitalData.events.push({
   product: {...}
 });
 ```
-> Подробное описание объекта product смотрите в разделе для разработчиков.
+> For a detailed description of the `product` object, see the developer section.
 
-#### Из интерфейса DDManager
-**Триггер**: событие `Viewed Page`,
+#### From the DDManager interface
+**Trigger**: event `Viewed Page`,
 
-**Функция, которая возвращает объект события**:
+**Event handler**:
 
 ```javascript
-if (this.digitalData('page.type') === 'product') {
+if (_digitalData('page.type') === 'product') {
   return {
     category: 'Ecommerce',
     name: 'Viewed Product Detail'
@@ -39,7 +38,7 @@ if (this.digitalData('page.type') === 'product') {
 }
 ```
 
-#### Необходимо для работы интеграций:
+#### Required by the following integrations:
 * Adwords
 * Criteo
 * Facebook
