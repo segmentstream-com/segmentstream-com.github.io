@@ -4,7 +4,7 @@ section: events
 title: "Viewed Product Detail"
 order: 2
 ---
-The `Viewed Campaign` event must be pushed to the `digitalData.events` array when a product page or a 'quick-view' popup window with a product's details is loaded.
+The `Viewed Product Detail` event must be pushed to the `digitalData.events` array when a product page or a 'quick-view' popup window with a product's details is loaded.
 
 #### From the site code
 ```javascript

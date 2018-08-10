@@ -2,12 +2,11 @@
 layout: page
 section: events
 title: "Viewed Product Listing"
-date: 2017-06-05 12:00:00
 order: 2
 ---
-`Viewed Product Listing` - это событие, которое должно быть добавлено в `digitalData.events` в случае загрузки страницы с листингом товаров, кроме страницы результатов поиска.
+The `Viewed Product Detail` event must be pushed to the `digitalData.events` array when a page containing a listing of products other than the search results page is loaded.
 
-#### Из кода сайта / при использовании AJAX
+#### From the site code / when using AJAX
 ```javascript
 digitalData.events.push({
   category: 'Ecommerce',
@@ -16,10 +15,10 @@ digitalData.events.push({
 ```
 
 
-#### Из интерфейса DDManager
-**Триггер**: событие `Viewed Page`,
+#### From the DDManager interface
+**Trigger**: event `Viewed Page`
 
-**Функция, которая возвращает объект события**:
+**Event handler**:
 
 ```javascript
 if (_digitalData('page.type') === 'listing') {
@@ -30,7 +29,7 @@ if (_digitalData('page.type') === 'listing') {
 }
 ```
 
-#### Необходимо для работы интеграций:
+#### Required by the following integrations:
 * Adwords
 * Criteo
 * MyTarget
