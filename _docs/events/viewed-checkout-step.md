@@ -2,14 +2,13 @@
 layout: page
 section: events
 title: "Viewed Checkout Step"
-date: 2017-08-16 12:00:00
 order: 2
 ---
-`Viewed Checkout Step` - это событие, которое должно быть добавлено в `digitalData.events` во время загрузки страницы с этапом оформления покупки. 
->Важно! В случае если вы используете одностраничную корзину, шаги в которой подгружаются AJAX'ом, следует на каждом новом шаге добавлять событие `Viewed Checkout Step` из кода сайта.
+The `Viewed Checkout Step` event must be pushed to the `digitalData.events` array when a checkout process page is loaded.
+>Important! In case you use a single-page basket page, in which each checkout step is loaded by AJAX, you should add a `Viewed Checkout Step` event from the site code at each new step.
 
-### Из кода сайта / при использовании AJAX
-**Шаг 1**
+#### From the site code / when using AJAX
+**Step 1**
 ```javascript
 digitalData.events.push({
   category: 'Ecommerce',
@@ -18,7 +17,7 @@ digitalData.events.push({
   option: '4-step-cart'
 });
 ```
-**Шаг 2**
+**Step 2**
 ```javascript
 digitalData.events.push({
   category: 'Ecommerce',
@@ -27,7 +26,7 @@ digitalData.events.push({
   option: 'DHL'
 });
 ```
-**Шаг 3**
+**Step 3**
 ```javascript
 digitalData.events.push({
   category: 'Ecommerce',
@@ -36,7 +35,7 @@ digitalData.events.push({
   option: 'Mastercard'
 });
 ```
-**Шаг 4**
+**Step 4**
 ```javascript
 digitalData.events.push({
   category: 'Ecommerce',
@@ -45,10 +44,10 @@ digitalData.events.push({
 });
 ```
 
-### Из интерфейса DDManager
-**Триггер**: событие `Viewed Page`,
+#### From the DDManager interface
+**Trigger**: событие `Viewed Page`,
 
-**Функция, которая возвращает объект события**:
+**Event handler**:
 
 ```javascript
 if (_digitalData('page.type') === 'checkout' || _digitalData('page.type') === 'cart') {
@@ -74,7 +73,7 @@ if (_digitalData('page.type') === 'checkout' || _digitalData('page.type') === 'c
 }
 ```
 
-### Необходимо для работы интеграций:
+#### Required by the following integrations:
 * [Facebook](/integrations/facebook)
 * RTB House
 * Segmento
