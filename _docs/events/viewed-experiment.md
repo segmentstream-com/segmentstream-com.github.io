@@ -2,21 +2,54 @@
 layout: page
 section: events
 title: "Viewed Experiment"
-date: 2017-08-10 12:00:00
 order: 2
 ---
-`Viewed Experiment` - это событие, которое должно быть добавлено в `digitalData.events` в момент попадания пользователя одну из веток сплит-теста.
+The `Viewed Experiment` event must be pushed to the `digitalData.events` array the moment the user is split into one of the variations of a split-test.
 
-#### Из кода сайта / при использовании AJAX
+#### From the site code / when using AJAX
 ```javascript
 digitalData.events.push({
-  name: 'Viewed Experiment'
+  name: 'Viewed Experiment',
+  experiment: {
+    id: "27fbe483-77bf-4949-b6f1-135806cc995c",
+    name: "Product page test",
+    variationId: 1,
+    variationName: "Bigger product image"
+  }
 })
 ```
-> Состав объекта события будет зависеть от того, какой системой проведения экспериментов вы пользуетесь.
+> The composition of the event object depends on the experiments system used. The example above is of an event for the Driveback Experiments system.
 
-#### Из интерфейса DDManager
-Событие `Viewed Experiment` невозможно создать на основе встроенных триггеров DDManager. Событие должно быть добавлено из кода.
+> If you want to track experiment results in Google Analytics, add category, action, label variables to the event object.
 
-#### Необходимо для работы интеграций:
+#### From the DDManager interface
+**Trigger**: evemt `Viewed Cart`,
+
+**Event handler**:
+
+```javascript
+if(_digitalData('user.abGroup') === 1) {
+  return {
+    name: 'Viewed Experiment',
+    experiment: {
+      id: "27fbe483-77bf-4949-b6f1-135806cc995c",
+      name: "Cart recommendations test",
+      variationId: 1,
+      variationName: "New recommendation algorithm"
+    }
+  };
+} else {
+  return {
+    name: 'Viewed Experiment',
+    experiment: {
+      id: "27fbe483-77bf-4949-b6f1-135806cc995c",
+      name: "Cart recommendations test",
+      variationId: 2,
+      variationName: "Old recommendation algorithm"
+    }
+  };
+}
+```
+
+#### Required by the following integrations:
 * Driveback

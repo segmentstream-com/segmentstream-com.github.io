@@ -45,7 +45,7 @@ digitalData.events.push({
 ```
 
 #### From the DDManager interface
-**Trigger**: событие `Viewed Page`,
+**Trigger**: event `Viewed Page`,
 
 **Event handler**:
 

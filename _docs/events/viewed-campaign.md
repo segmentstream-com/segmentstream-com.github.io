@@ -12,6 +12,7 @@ We do not recommend pushing the `Viewed Campaign` event from the site code.
 
 >Important! Banners must be marked with the `ddl_campaign` class. Also, they must have the `data-campaign-id` data attribute. For more information, see the HTML page layout section.
 
+#### From the DDManager interface
 **Trigger**: event `Impression`,
 
 **CSS selector**: `.ddl_campaign`,
