@@ -2,19 +2,18 @@
 layout: page
 section: events
 title: "Viewed Page"
-date: 2017-08-16 12:00:00
-order: 1
+order: 2
 ---
-`Viewed Page` - это базовое событие, которое добавляется в массив `digitalData.events` автоматически в момент загрузки библиотеки DigitalDataManager. Если ваш сайт использует технологию AJAX, бывает нужно отправить событие Viewed Page без полной перезагрузки страницы. Для этого вам из кода сайта нужно добавить событие в массив `digitalData.events`:
-#### Из кода сайта / при использовании AJAX
+`Viewed Page` is a base event that is automatically pushed to the `digitalData.events` array  when the DigitalDataManager library is loaded. If your site uses AJAX technology, it may be necessary to send the Viewed Page event without a full page reload. To do this you need to push the event to the `digitalData.events` array from the site code:
+#### From the site code / when using AJAX
 ```javascript
 digitalData.events.push({
   name: 'Viewed Page'
 });
 ```
-#### Из интерфейса DDManager
-> Событие `Viewed Page` создавать не нужно. Вы всегда сможете использовать в качестве триггера это событие при создании других событий.
+#### From the DDManager interface
+> You dont have to create the `Viewed Page` event. You can always use this event as a trigger when creating other events.
 
-#### Необходимо для работы интеграций:
+#### Required by the following integrations:
 * Google Analytics
 * Yandex Metrica

@@ -23,7 +23,7 @@ digitalData.events.push({
 > If you want to track experiment results in Google Analytics, add category, action, label variables to the event object.
 
 #### From the DDManager interface
-**Trigger**: evemt `Viewed Cart`,
+**Trigger**: event `Viewed Cart`,
 
 **Event handler**:
 
