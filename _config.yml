@@ -17,9 +17,10 @@ navigation: 1
 sections: [
     ['analyst', 'Analyst'],
     ['developer', 'Developer'],
+    ['ecommerce', 'Внедрение в ecommerce'],
     ['digitaldata', 'Variable list'],
-    ['integrations', 'Integration list'],
-    ['events', 'Events list']
+    ['events', 'Events list'],
+    ['integrations', 'Integration list']
 ]
 
 # Keep as an empty string if served up at the root. If served up at a specific
