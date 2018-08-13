@@ -17,7 +17,7 @@ navigation: 1
 sections: [
     ['analyst', 'Analyst'],
     ['developer', 'Developer'],
-    ['ecommerce', 'Внедрение в ecommerce'],
+    ['ecommerce', 'Ecommerce integration'],
     ['digitaldata', 'Variable list'],
     ['events', 'Events list'],
     ['integrations', 'Integration list']
