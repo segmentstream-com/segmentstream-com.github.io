@@ -51,7 +51,7 @@ Example:
 ------
 The `digitalData.cart` object must be declared and filled when loading each page of the site, including the basket page.
 
-> If the basket changes dynamically, you need to dynamically update the digitalData.cart object. Simply pass the new object to the changes method: digitalData.changes.push(['cart', {/* object cart * /}])
+> If the basket changes dynamically, you need to dynamically update the digitalData.cart object. Simply pass the new object to the changes method: digitalData.changes.push(['cart', {/* cart object * /}])
 
 [More about the **cart** object](/digitaldata/cart)
 
@@ -142,7 +142,7 @@ window.digitalData = {
 ------
 The `digitalData.version` variable must be declared and filled when loading each page of the site.
 
-[More about the **user** object](/digitaldata/standard-version)
+[More about the **version** variable](/digitaldata/standard-version)
 
 Example:
 ```javascript
@@ -159,7 +159,7 @@ window.digitalData = {
 ------
 The `digitalData.campaigns` array must be declared and filled if the page you are loading has banners whose effectiveness you plan to track.
 
-[More about the **campaigns** object](/digitaldata/campaigns)
+[More about the **campaigns** array](/digitaldata/campaigns)
 
 Example:
 ```javascript
@@ -186,7 +186,7 @@ window.digitalData = {
 ------
 The `digitalData.recommendation` array must be declared and filled if there is at least 1 list of products on the loaded page.
 
-[More about the **recommendation** object](/digitaldata/recommendation)
+[More about the **recommendation** array](/digitaldata/recommendation)
 
 Example:
 ```javascript

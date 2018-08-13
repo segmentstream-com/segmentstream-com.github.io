@@ -34,6 +34,11 @@ $(document).ready(function() {
         $(".drop-menu.digitaldata").toggle();
     }); 
 
+    $(".nav-header.ecommerce").click(function() {
+        $(this).toggleClass("active");
+        $(".drop-menu.ecommerce").toggle();
+    });    
+
     $("#menu-toggle").click(function() {
         $(this).toggleClass("active");
         $("#navigation").toggle(300);    
