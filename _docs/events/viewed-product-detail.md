@@ -10,7 +10,8 @@ The `Viewed Product Detail` event must be pushed to the `digitalData.events` arr
 ```javascript
 digitalData.events.push({
   category: 'Ecommerce',
-  name: 'Viewed Product Detail'
+  name: 'Viewed Product Detail',
+  product: {...}
 });
 ```
 
@@ -33,10 +34,13 @@ digitalData.events.push({
 if (_digitalData('page.type') === 'product') {
   return {
     category: 'Ecommerce',
-    name: 'Viewed Product Detail'
+    name: 'Viewed Product Detail',
+    product: {...}
   };
 }
 ```
+
+> If the product object already exists in the digitalData object, you can add the trimmed version of the product to the 'Viewed Product Detail' event: {id: '1212', skuCode: '1212000003'}.
 
 #### Required by the following integrations:
 * Adwords
@@ -47,5 +51,5 @@ if (_digitalData('page.type') === 'product') {
 * RTB House
 * Sociomantic
 * Segmento
-* Yandex Metrica
+* Yandex.Metrica
 * Google Analytics (Enhanced Ecommerce)
