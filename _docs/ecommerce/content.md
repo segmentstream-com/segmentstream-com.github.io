@@ -230,8 +230,8 @@ In the end, your code will be similar to:
 ```javascript
 window.digitalData = {
   page: {
-    type: 'home',
-    category: 'Home'
+    type: 'content',
+    category: 'Content'
   },
   website: {
     type: "desktop",
