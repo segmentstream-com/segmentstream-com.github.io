@@ -148,7 +148,7 @@ Example:
 ```javascript
 window.digitalData = {
   ...,
-  version: '1.1.2',
+  version: '1.1.3',
   ...
 }
 ```
@@ -276,7 +276,7 @@ window.digitalData = {
       }
     ]
   },
-  version: '1.1.2',
+  version: '1.1.3',
   campaigns: [
     {
       id: "PROMO124",

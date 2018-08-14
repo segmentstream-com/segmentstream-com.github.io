@@ -8,7 +8,7 @@ order: 1
 
 Below is an example of filling the `digitalData` data layer for the homepage of the online store.
 
-### Introduction
+### Page contents
 ------
 <ul class="page-navigation">
   <li><a href="#0">Introduction</a></li>
@@ -96,9 +96,9 @@ window.digitalData = {
 
 ### <a name="4"></a>cart
 ------
-The `digitalData.cart` object must be declared and filled when loading each page of the site, including the basket page.
+The `digitalData.cart` object must be declared and filled when loading each page of the site.
 
-> If the basket changes dynamically, you need to dynamically update the digitalData.cart object. Simply pass the new object to the changes method: digitalData.changes.push(['cart', {/* cart object * /}])
+If the user's cart is empty fill the object as described in the [cart object description](/digitaldata/cart#0)
 
 [More about the **cart** object](/digitaldata/cart)
 
@@ -148,7 +148,7 @@ Example:
 ```javascript
 window.digitalData = {
   ...,
-  version: '1.1.2',
+  version: '1.1.3',
   ...
 }
 ```
@@ -276,7 +276,7 @@ window.digitalData = {
       }
     ]
   },
-  version: '1.1.2',
+  version: '1.1.3',
   campaigns: [
     {
       id: "PROMO124",
