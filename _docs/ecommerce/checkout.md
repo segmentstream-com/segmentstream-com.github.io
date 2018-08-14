@@ -6,7 +6,7 @@ date: 2018-02-09 12:00:00
 order: 6
 ---
 
-Below is an example of filling the `digitalData` data layer checkout pages. Most often this is a set of pages representing a funnel between the basket page and the "Thank you for your purchase" page.
+Below is an example of filling the `digitalData` data layer on checkout pages. Most often this is a set of pages representing a funnel between the basket page and the "Thank you for your purchase" page.
 
 ### Page contents
 ------
