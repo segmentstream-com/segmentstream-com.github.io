@@ -26,7 +26,7 @@ The following is an example of filling the `digitalData` data layer for the cart
 ------
 The following properties must be declared and filled on the cart page of the online store:
  - Required:  `page`, `website`, `user`, `cart`, `version`
- - Optional (depends on the page content): `campaigns`, `recommendation`
+ - Optional (depends on page content): `campaigns`, `recommendation`
 
 
 ### <a name="1"></a>page
@@ -311,7 +311,7 @@ window.digitalData = {
     },
   ]
 }
-/* There should be a snippet of the initialization of the DigitalDataManage library */
+/* Here you should place the snippet of the initialization of the DigitalDataManager library */
 ```
 
 >For convenience, we did not list the repeating elements of the recommendations, items, campaigns, lineItems arrays but left just one example in each.
