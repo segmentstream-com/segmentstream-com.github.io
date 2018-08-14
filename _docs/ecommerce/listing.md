@@ -308,7 +308,7 @@ window.digitalData = {
   },
   website: {
     type: "desktop",
-    currency: "RUB",
+    currency: "GBP",
     environment: "production"
   },
   user: {
@@ -320,7 +320,7 @@ window.digitalData = {
   },
   cart: {
     id: "CART2203",
-    currency: "RUB",
+    currency: "GBP",
     vouchers: [
       "MYVOUCHER1"
     ],

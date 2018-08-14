@@ -1,17 +1,17 @@
 ---
 layout: page
 section: ecommerce
-title: "Карточка товара"
+title: "Product page"
 date: 2018-02-09 12:00:00
 order: 4
 ---
 
-Ниже приведен пример заполнения слоя данных `digitalData` для страницы с детальным описанием товара.
+Below is an example of filling the data layer `digitalData` for a page with a detailed description of the product.
 
-### Навигация по странице
+### Page contents
 ------
 <ul class="page-navigation">
-  <li><a href="#0">Введение</a></li>
+  <li><a href="#0">Introduction</a></li>
   <li><a href="#0.1">product</a></li>
   <li><a href="#1">page</a></li>
   <li><a href="#2">website</a></li>
@@ -20,24 +20,24 @@ order: 4
   <li><a href="#5">version</a></li>
   <li><a href="#6">campaigns</a></li>
   <li><a href="#7">recommendation</a></li>
-  <li><a href="#8">Объект целиком</a></li>
+  <li><a href="#8">Whole object</a></li>
 </ul>
 
-### <a name="0"></a>Введение
+### <a name="0"></a>Introduction
 ------
-На странице детального описания товара интернет-магазина должны быть объявлены и заполнены следующие объекты:
- - Обязательные:  `product`, `page`, `website`, `user`, `cart`, `version`
- - Необязательные (зависит от контента): `campaigns` ,`recommendation`
+On the product detail of the online store, the following objects must be declared and filled:
+ - Required: `product`, `page`, `website`, `user`, `cart`, `version`
+ - Optional (depends on page content): `campaigns` ,`recommendation`
 
 ### <a name="0.1"></a>product
 ------
-Объект `digitalData.product` должен быть объявлен и заполнен для любой страницы, у которой `page.type` = 'product'.
+The `digitalData.product` object must be declared and filled on any page that has `digitalData.page.type` = 'product'.
 
->При наличии функции быстрого просмотра товара на странице категории рекомендуем следующий подход. При появлении окна быстрого просмотра товара сделайте push в массив changes: digitalData.changes.push(['product',{/*объект product*/}]). Далее необходимо вызвать событие "Viewed Page": digitalData.events.push({name: 'Viewed Page'}). Такой подход произведет полную эмуляцию загрузки страницы с детальным описанием товаров для систем аналитики, ретаргетинга и других маркетинговых систем.
+>If you have a Quick Review feature on your website, we recommend the following approach. When the product preview window appears, make a push into the changes array: digitalData.changes.push(['product', {/ * product product * /}]). Next, you need to call the "Viewed Page" event: digitalData.events.push({name: 'Viewed Page'}). Such an approach will produce a full emulation of the page load with a detailed description of the goods for the systems of analytics, retargeting and other marketing systems.
 
-[Подробнее об объекте **listing**](/digitaldata/listing)
+[More about the **product** object](/digitaldata/product)
 
-Пример заполнения:
+Example:
 ```javascript
 window.digitalData = {
   ...,
@@ -46,18 +46,17 @@ window.digitalData = {
     url: "http://website.com/product.html",
     imageUrl: "http://website.com/image.png",
     thumbnailUrl: "http://website.com/image_thump.png",
-    name: "Ботинки Timberland",
-    description: "Описание данного товара",
-    manufacturer: "Timberland",
-    category: ["Обувь","Ботинки"],
-    categoryId: "123",
-    currency: "RUB",
-    unitPrice: 12990,
-    unitSalePrice: 10990,
-    skuCode: "TBL6065RW",
+    name: "Leather skirt",
+    description: "Description",
+    manufacturer: "Gucci",
+    category: ['Clothing','Skirts','Mini'],
+    currency: "GBP",
+    unitPrice: 100,
+    unitSalePrice: 100,
+    skuCode: 'TBL6065RW'
     stock: 21,
     voucher: "MYVOUCHER1",
-    color: "желто-бежевый",
+    color: "black",
     size: "41",
     variations: [
       ...,
@@ -78,9 +77,9 @@ window.digitalData = {
 ------
 В объекте `digitalData.page` необходимо объявить и заполнить только 2 переменные. Все остальные переменные автоматически заполнит DigitalDataManager.
 
-[Подробнее об объекте **page**](/digitaldata/page)
+[More about the **page** object](/digitaldata/page)
 
-Пример заполнения:
+Example:
 ```javascript
   window.digitalData = {
     ...,
@@ -92,24 +91,24 @@ window.digitalData = {
   }
 ```
 
->Рекомендуем для проданных товаров в значение `page.category` передавать 'Sold Out'
+>We recommend passing giving the `digitalData.page.category` variable a value of 'Sold Out' on products that aren't in stock.
 
 ### <a name="2"></a>website
 ------
-В объекте `digitalData.website` необходимо объявить и заполнить только 6 переменных. Обязательными к заполнению являются только 3: `website.type`, `website.currency`, `website.environment`. Остальные переменные зависят от особенностей вашего сайта.
+You need to declare and fill in only 6 variables in the `digitalData.website` object. The following 3 variables are required: `website.type`,` website.currency`, `website.environment`. The remaining variables depend on the characteristics of your site.
 
-[Подробнее об объекте **website**](/digitaldata/website)
+[More about the **website** object](/digitaldata/website)
 
-Пример заполнения:
+Example:
 ```javascript
   window.digitalData = {
     ...,
     website: {
-      region: "Москва",
-      regionId: "12",
+      region: "London",
+      regionId: "11",
       type: "desktop",
-      language: "ru",
-      currency: "RUB",
+      language: "en-gb",
+      currency: "GBP",
       environment: "production"
     },
     ...
@@ -118,15 +117,15 @@ window.digitalData = {
 
 ### <a name="3"></a>user
 ------
-Состав объекта `digitalData.user` сильно зависит от требований проекта. Мы рекомендуем заполнять как минимум следующие переменные: `userId`, `user.email`, `user.isLoggedIn`, `user.firstName`, `user.isSubscribed`
+The composition of the `digitalData.user` object strongly depends on the requirements of the project. We recommend that you fill at least the following variables: `userId`, `user.email`, `user.isLoggedIn`, `user.firstName`, `user.isSubscribed`
 
->Если у вас нет информации о конкретном свойстве посетители - не объявляйте переменную. Например: вы не знает подписан или нет посетитель на email-рассылку. **Правильно**: не объявлять переменную `digitalData.user.isSubscribed`, **Неправильно**: объявить переменную и присвоить ей значение FALSE.
+>If you do not have information about a particular property of a visitor, do not declare the variable. For example: you do not know if the visitor is subscribed to the email-list. **Correct**: do not declare the variable `digitalData.user.isSubscribed`, **Wrong**: declare a variable and assign it a value of FALSE.
 
->Даже если посетитель сейчас не авторизован, но был авторизован в прошлом, передавайте информацию о нем в объект `digitalData.user`. Это поможет при таргетировании кампаний персонализации и в управлении рекламными системами.
+>Even if the visitor is not authorized, but has been authorized in the past, pass the information about him to the object `digitalData.user`. This will help with the targeting of personalization campaigns and in the management of advertising systems.
 
-[Подробнее об объекте **user**](/digitaldata/user)
+[More about the **user** object](/digitaldata/user)
 
-Пример заполнения:
+Example:
 ```javascript
 window.digitalData = {
   ...,
@@ -143,28 +142,21 @@ window.digitalData = {
 
 ### <a name="4"></a>cart
 ------
-Объект `digitalData.cart` должен быть объявлен и заполнен при загрузке каждой страницы сайта.
+The `digitalData.cart` object must be declared and filled when loading each page of the site.
 
->Если корзина посетителя сайта пуста, заполните объект так, как описано в [справке](/digitaldata/cart#0).
+If the user's cart is empty fill the object as described in the [cart object description](/digitaldata/cart#0)
 
-[Подробнее об объекте **cart**](/digitaldata/cart)
+[More about the **cart** object](/digitaldata/cart)
 
-Пример заполнения:
+Example:
 ```javascript
 window.digitalData = {
   ...,
   cart: {
     id: "CART2203",
-    currency: "RUB",
-    subtotal: 25000,
-    vouchers: [
-      "MYVOUCHER1"
-    ],
-    voucherDiscount: 500,
-    tax: 0,
-    shippingCost: 1500,
-    shippingMethod: "Доставка курьером",
-    total: 26000,
+    currency: "GBP",
+    subtotal: 100,
+    total: 105,
     lineItems: [
       ...,
       {
@@ -172,20 +164,18 @@ window.digitalData = {
           id: "1234567890",
           url: "http://website.com/product.html",
           imageUrl: "http://website.com/image.png",
-          thumbnailUrl: "http://website.com/image_thump.png",
-          name: "Ботинки Timberland",
-          description: "Описание данного товара",
+          thumbnailUrl: "http://website.com/image_thumb.png",
+          name: "Big Boots",
+          description: "Product description",
           manufacturer: "Timberland",
-          category: ["Обувь","Ботинки"],
-          currency: "RUB",
-          unitPrice: 12990,
-          unitSalePrice: 10990,
+          category: ["Footwear","Boots"],
+          currency: "GBP",
+          unitPrice: 60,
+          unitSalePrice: 50,
           skuCode: "TBL6065RW"
         },
         quantity: 2,
-        subtotal: 10990,
-        shippingMethod: "Почта России",
-        shippingCost: 800
+        subtotal: 100
       },
       ...
     ]
@@ -196,28 +186,28 @@ window.digitalData = {
 
 ### <a name="5"></a>version
 ------
-Переменная `digitalData.version` должна быть объявлена и заполнена при загрузке каждой страницы сайта.
+The `digitalData.version` variable must be declared and filled when loading each page of the site.
 
-[Подробнее об объекте **cart**](/digitaldata/standard-version)
+[More about the **version** variable](/digitaldata/standard-version)
 
-Пример заполнения:
+Example:
 ```javascript
 window.digitalData = {
   ...,
-  version: '1.1.2',
+  version: '1.1.3',
   ...
 }
 ```
 
-## Необязательные объекты
+## Optional properties
 
 ### <a name="6"></a>campaigns
 ------
-Массив `digitalData.campaigns` должен быть объявлен и заполнен, если на загружаемой странице есть баннеры, эффективность которых вы планируете отслеживать.
+The `digitalData.campaigns` array must be declared and filled if the page you are loading has banners whose effectiveness you plan to track.
 
-[Подробнее о массиве **campaigns**](/digitaldata/campaigns)
+[More about the **campaigns** array](/digitaldata/campaigns)
 
-Пример заполнения:
+Example:
 ```javascript
 window.digitalData = {
   ...,
@@ -225,10 +215,10 @@ window.digitalData = {
     ...,
     {
       id: "PROMO124",
-      name: "Новинки сезона осень/зима",
-      description: "1500 новых моделей",
-      category: "Баннер",
-      subcategory: "Новинки",
+      name: "SS18 SALE",
+      description: "1500 models for sale",
+      category: "Banner",
+      subcategory: "Sales",
       design: "600x120",
       position: "left"
     },
@@ -240,20 +230,18 @@ window.digitalData = {
 
 ### <a name="7"></a>recommendation
 ------
-Массив `digitalData.recommendation` должен быть объявлен и заполнен, если на загружаемой странице хотя бы 1 список рекомендуемых товаров.
+The `digitalData.recommendation` array must be declared and filled if there is at least 1 list of products on the loaded page.
 
-> На странице с листингом товаров может присутствовать список рекомендаций, например: список недавно просмотренных товаров. 
+[More about the **recommendation** array](/digitaldata/recommendation)
 
-[Подробнее о массиве **recommendation**](/digitaldata/recommendation)
-
-Пример заполнения:
+Example:
 ```javascript
 window.digitalData = {
   ...,
   recommendation: [
     ...,
     {
-      listName: "Список недавно просмотренных товаров",
+      listName: "Recently viewed products",
       listId: "recentlyViewed",
       items: [
         ...,
@@ -261,15 +249,15 @@ window.digitalData = {
           id: "1234567890",
           url: "http://website.com/product.html",
           imageUrl: "http://website.com/image.png",
-          thumbnailUrl: "http://website.com/image_thump.png",
-          name: "Ботинки Timberland",
-          description: "Описание данного товара",
+          thumbnailUrl: "http://website.com/image_thumb.png",
+          name: "Big Boots",
+          description: "Product description",
           manufacturer: "Timberland",
-          category: ["Обувь","Ботинки"],
-          currency: "RUB",
-          unitPrice: 12990,
-          unitSalePrice: 10990,
-          skuCode: "TBL6065RW",
+          category: ["Footwear","Boots"],
+          currency: "GBP",
+          unitPrice: 60,
+          unitSalePrice: 50,
+          skuCode: "TBL6065RW"
         },
         ...
       ]
@@ -280,9 +268,9 @@ window.digitalData = {
 }
 ```
 
-### <a name="8"></a>Объект целиком
+### <a name="8"></a>Whole object
 ------
-В итоге, ваш код будет похож на:
+In the end, your code will be similar to:
 ```javascript
 window.digitalData = {
   product: {
@@ -290,18 +278,17 @@ window.digitalData = {
     url: "http://website.com/product.html",
     imageUrl: "http://website.com/image.png",
     thumbnailUrl: "http://website.com/image_thump.png",
-    name: "Ботинки Timberland",
-    description: "Описание данного товара",
-    manufacturer: "Timberland",
-    category: ["Обувь","Ботинки"],
-    categoryId: "123",
-    currency: "RUB",
-    unitPrice: 12990,
-    unitSalePrice: 10990,
-    skuCode: "TBL6065RW",
+    name: "Leather skirt",
+    description: "Description",
+    manufacturer: "Gucci",
+    category: ['Clothing','Skirts','Mini'],
+    currency: "GBP",
+    unitPrice: 100,
+    unitSalePrice: 100,
+    skuCode: 'TBL6065RW'
     stock: 21,
     voucher: "MYVOUCHER1",
-    color: "желто-бежевый",
+    color: "black",
     size: "41",
     variations: [
       {
@@ -317,7 +304,7 @@ window.digitalData = {
   },
   website: {
     type: "desktop",
-    currency: "RUB",
+    currency: "GBP",
     environment: "production"
   },
   user: {
@@ -329,75 +316,73 @@ window.digitalData = {
   },
   cart: {
     id: "CART2203",
-    currency: "RUB",
+    currency: "GBP",
     vouchers: [
       "MYVOUCHER1"
     ],
-    voucherDiscount: 500,
-    tax: 4010,
-    shippingCost: 800,
-    shippingMethod: "Доставка курьером",
-    subtotal: 21980,
-    total: 22280,
+    voucherDiscount: 10,
+    tax: 10,
+    shippingCost: 5,
+    shippingMethod: "Delivery",
+    subtotal: 100,
+    total: 95,
     lineItems: [
       {
         product: {
           id: "1234567890",
           url: "http://website.com/product.html",
           imageUrl: "http://website.com/image.png",
-          thumbnailUrl: "http://website.com/image_thump.png",
-          name: "Ботинки Timberland",
-          description: "Описание данного товара",
+          thumbnailUrl: "http://website.com/image_thumb.png",
+          name: "Big Boots",
+          description: "Product description",
           manufacturer: "Timberland",
-          category: ["Обувь","Ботинки"],
-          currency: "RUB",
-          unitPrice: 12990,
-          unitSalePrice: 10990,
+          category: ["Footwear","Boots"],
+          currency: "GBP",
+          unitPrice: 60,
+          unitSalePrice: 50,
           skuCode: "TBL6065RW"
         },
         quantity: 2,
-        subtotal: 10990,
-        shippingMethod: "Почта России",
-        shippingCost: 800
+        subtotal: 100
       }
     ]
   },
-  version: '1.1.2',
+  version: '1.1.3',
   campaigns: [
     {
       id: "PROMO124",
-      name: "Новинки сезона осень/зима",
-      description: "1500 новых моделей",
-      category: "Баннер",
-      subcategory: "Новинки",
+      name: "SS18 SALE",
+      description: "1500 models for sale",
+      category: "Banner",
+      subcategory: "Sales",
       design: "600x120",
       position: "left"
     }
   ],
   recommendation: [
     {
-      listName: "Список недавно просмотренных товаров",
+      listName: "Recently viewed products",
       listId: "recentlyViewed",
       items: [
         {
           id: "1234567890",
           url: "http://website.com/product.html",
           imageUrl: "http://website.com/image.png",
-          thumbnailUrl: "http://website.com/image_thump.png",
-          name: "Ботинки Timberland",
-          description: "Описание данного товара",
+          thumbnailUrl: "http://website.com/image_thumb.png",
+          name: "Big Boots",
+          description: "Product description",
           manufacturer: "Timberland",
-          category: ["Обувь","Ботинки"],
-          currency: "RUB",
-          unitPrice: 12990,
-          unitSalePrice: 10990,
+          category: ["Footwear","Boots"],
+          currency: "GBP",
+          unitPrice: 60,
+          unitSalePrice: 50,
           skuCode: "TBL6065RW"
         }
       ]
-    }
+    },
   ]
 }
-/* Здесь должен идти сниппет инициализации библиотеки DigitalDataManage */
+/* Here you should place the snippet of the initialization of the DigitalDataManager library */
 ```
 
->Для удобства мы не стали перечислять повторяющиеся элементы массивов recommendation, items, campaigns, lineItems, variations, а привели по одному примеру.
+>For convenience, we did not list the repeating elements of the recommendations, items, campaigns, lineItems arrays but left just one example in each.

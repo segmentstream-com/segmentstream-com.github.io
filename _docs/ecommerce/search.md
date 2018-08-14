@@ -50,13 +50,13 @@ window.digitalData = {
         url: "http://website.com/product.html",
         imageUrl: "http://website.com/image.png",
         thumbnailUrl: "http://website.com/image_thump.png",
-        name: "Юбка из кожи",
-        description: "Описание данного товара",
+        name: "Leather skirt",
+        description: "Description",
         manufacturer: "Gucci",
-        category: ['Одежда','Юбки','Мини'],
-        currency: "RUB",
-        unitPrice: 12990,
-        unitSalePrice: 10990,
+        category: ['Clothing','Skirts','Mini'],
+        currency: "GBP",
+        unitPrice: 100,
+        unitSalePrice: 100,
         skuCode: 'TBL6065RW'
       },
       ...
@@ -302,7 +302,7 @@ window.digitalData = {
   },
   website: {
     type: "desktop",
-    currency: "RUB",
+    currency: "GBP",
     environment: "production"
   },
   user: {
@@ -314,7 +314,7 @@ window.digitalData = {
   },
   cart: {
     id: "CART2203",
-    currency: "RUB",
+    currency: "GBP",
     vouchers: [
       "MYVOUCHER1"
     ],
