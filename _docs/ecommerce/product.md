@@ -75,7 +75,7 @@ window.digitalData = {
 
 ### <a name="1"></a>page
 ------
-В объекте `digitalData.page` необходимо объявить и заполнить только 2 переменные. Все остальные переменные автоматически заполнит DigitalDataManager.
+You need to declare and fill in only 2 variables in the `digitalData.page` object. All other variables will be automatically filled by the DigitalDataManager library.
 
 [More about the **page** object](/digitaldata/page)
 
