@@ -36,7 +36,7 @@ Setting up the DDM Streaming integration:
 ![](/img/integrations.ddmstreaming.3.png)
 ![](/img/integrations.ddmstreaming.4.png)
 ![](/img/integrations.ddmstreaming.5.png)
-4. Open the left meny and click IAM & admin. Select IAM in the menu.
+4. Open the left menu and click IAM & admin. Select IAM in the menu.
 ![](/img/integrations.ddmstreaming.16.png)
 5. Click **+ADD** in the top menu.
 ![](/img/integrations.ddmstreaming.17.png)
@@ -61,7 +61,7 @@ Type `ddmanager_streaming` into the BigQuery DataSet name.
 
 ### <a name="1_3"></a>UTC offset
 ------
-Select the time zone. For example, for all reports to be generated according to Moscow time, select "+03: 00".
+Select the time zone. For example, for all reports to be generated according to Moscow time, select "+03:00".
 
 
 ### <a name="2"></a>Custom dimension
