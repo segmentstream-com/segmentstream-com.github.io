@@ -33,8 +33,6 @@ On the product detail of the online store, the following objects must be declare
 ------
 The `digitalData.product` object must be declared and filled on any page that has `digitalData.page.type` = 'product'.
 
->If you have a Quick Review feature on your website, we recommend the following approach. When the product preview window appears, make a push into the changes array: digitalData.changes.push(['product', {/ * product product * /}]). Next, you need to call the "Viewed Page" event: digitalData.events.push({name: 'Viewed Page'}). Such an approach will produce a full emulation of the page load with a detailed description of the goods for the systems of analytics, retargeting and other marketing systems.
-
 [More about the **product** object](/digitaldata/product)
 
 Example:
