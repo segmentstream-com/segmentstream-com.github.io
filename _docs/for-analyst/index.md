@@ -12,7 +12,7 @@ The DigitalDataManager panel allows you to control the flow of data between the 
 
 > [Global project settings](/for-analyst/settings) have to be set up before continuing.
 
-### 1. Integration
+### 1. Integrations
 ------
 Each integration is a connector between `digitalData` and a third-party system. An integration can listen to all events added to `digitalData.events`, and convert information from events into a format that is necessary for a third-party system. If an event is mandatory for the system, **DigitalDataManager** sends the relevant information.
 
