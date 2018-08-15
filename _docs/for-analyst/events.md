@@ -43,7 +43,7 @@ DigitalDataManager has 3 basic triggers:
 Based on these triggers and data from digitalData, you can create new events.
 
 
-**Пример 1: `Viewed Product Detail` Event**
+**Example 1: `Viewed Product Detail` Event**
 
 Most marketing systems require information about your online store's product page views. To send the information about the viewed product to any integration, you need to configure the Viewed Product Detail event. This event occurs when the user loads a product page, or in the digitalData language: The Viewed Page event has occurred while the variable digitalData.page.type is equal to 'product' (the type of page on which the user is located is a product page).
 
@@ -60,7 +60,7 @@ if (_digitalData('page.type') === 'product') {
 The code _digitalData('page.type') [is explained below](#3).
 
 
-**Пример 2: `Clicked Campaign` Event**
+**Example 2: `Clicked Campaign` Event**
 
 For tracking CTR and other indicators of the effectiveness of internal campaigns, you need to track clicks on banners. This event occurs when the user clicks on a banner or in the digitalData language: The Click trigger fires on the page element that contains the CSS class = "ddl_campaign_link".
 > Important! If you selected "Click" as the trigger in the campaign setup, in the "Function that returns an event object" field, you can refer to the "element" variable. Element is the DOM object whose CSS selector you specified.
@@ -76,7 +76,7 @@ return {
 };  
 ```
 
-**Пример 3: `Viewed Campaign` Event**
+**Example 3: `Viewed Campaign` Event**
 
 In conjunction with clicks on banners, you need to track banner impressions. The built-in "Impression" trigger works only when 75% of the monitored page element is in the site visitor's browser field of view. The CSS selector for the tracked element is specified in the corresponding event setting field.
 > Important! If you selected "Impression" as the trigger in the campaign setup, in the "Function that returns an event object" field, you can refer to the "elements" variable. Elements is an array of DOM objects whose CSS selector you specified.

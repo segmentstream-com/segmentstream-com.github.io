@@ -43,13 +43,14 @@ You can set up the integration inside the panel. Read more about each integratio
 Let's take a look at an example of the product identifier override depending on the region of the user on a Google Adwords integration.
 1. Click the "Event Variables" tab and click "Add"
   ![](/img/integrations.4.png)
-2. In the window that opens, fill in the fields: Variable name, Event name, Function, which returns the value of the variable.
-3. In the "Variable name" field, you must specify the event variable whose value you want to change. Since the Google Adwords integration gets data from `digitalData.events[].product.id` when a product page is viewed, it is necessary to specify `product.id` in the configuration field.
-4. In the "Event name" field, you must specify the name of the event whose variables will be overwritten "on the fly". If you do not specify any name, the overwrite will work for all events in which the variable specified in the "Variable Name" field occurs.
-5. The function that fills the value of the variable must return a value (contain the return construct). The value returned by this function will be placed in the variable specified in the "Variable Name" field when the "Event Name" event occurs.
+2. In the window that opens, fill in the fields: Scope, Variable name, Event handler.
+3. In the "Scope" field, you must specify the scope where you want to change the value, if you select "Event", then the variable name specified in the input below will only be modified on a particular event, if you select "Product", then all instances of the product object will have the specified variable overwritten. Since we need to have the same product identifier for the whole integration, we select `product`. 
+4. In the "Variable name" field, you must specify the variable whose value you want to change. Since the Google Adwords integration gets data from `digitalData.events[].product.id` when a product page is viewed, it is necessary to specify `id` in the configuration field.
+5. If we would have selected `event` on step 2, the "Event name" field would be present, here you must specify the name of the event whose variables will be overwritten "on the fly". If you do not specify any name, the overwrite will work for all events in which the variable specified in the "Variable Name" field occurs.
+6. The event handler must return a value (contain the return construct). The value returned by this function will be placed in the variable specified in the "Variable Name" field of the selected scope when any event occurs.
   ![](/img/integrations.5.png)
 
-As you can see in the example, the variable `product.id` takes a different value depending on the region of the user. For users from Moscow, the suffix "-moscow" is added to the value of the field `digitalData.product.skuCode`.
+As you can see in the example, the variable `product.id` takes a different value depending on the region of the user. For users from Moscow, the suffix "-moscow" is added to the value of the field `digitalData.product.id`.
 If before in Google Adwords the following value of the productId variable would have passed: "3856", then after the change, the value will be "3856003-moscow".
 
  - '3856' - is the product identifier, it has the same value for all variations of this product

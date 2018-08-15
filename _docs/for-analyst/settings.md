@@ -78,7 +78,7 @@ If you have set up the [Google Analytics](/integrations/google-analytics) integr
 
 ### <a name="6"></a> Track all JavaScript errors
 ------
-DigitalDataManger can also intercept messages about the occurrence of any JavaScript errors on your site. Typically, there are thousands of errors on websites: libraries of third-party systems do not loading, errors in the developers' scripts, unexpected user actions and so on. All these errors can be passed to Google Analytics with hits such as [exceptions](https://developers.google.com/analytics/devguides/collection/analyticsjs/exceptions). By building a custom report in the Google Analytics interface, you can find the pages and conditions under which errors occur.
+DigitalDataManger can also intercept messages about the occurrence of any JavaScript errors on your site. Typically, there are thousands of errors on websites: libraries of third-party systems do not loading, errors in the developers' scripts, unexpected user actions and so on. All these errors can be passed to Google Analytics as [exception type hits](https://developers.google.com/analytics/devguides/collection/analyticsjs/exceptions). By building a custom report in the Google Analytics interface, you can find the pages and conditions under which errors occur.
 
 ![](/img/settings.1.png)
 Example of a report setup in the Google Analytics interface
