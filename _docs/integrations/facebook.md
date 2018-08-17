@@ -57,7 +57,7 @@ Copy the ID and paste it into the "Pixel Facebook ID" field of the integration s
 
 ### <a name="2_1"></a>Product feed has grouped products
 ------
-Facebook receives information about products placed on the site through an XML feed. With a certain interval, the Criteo robot downloads a feed from your server. This feed contains information about all products on the site.
+Facebook receives information about products placed on the site through an XML feed. With a certain interval, the Facebook robot downloads a feed from your server. This feed contains information about all products on the site.
 
 [Learn more about the feed format.](https://support.google.com/merchants/answer/7052112)
 
