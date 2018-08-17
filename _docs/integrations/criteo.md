@@ -10,7 +10,7 @@ In this section you will learn:
 * How to check the correctness of the integration settings.
 * How to configure the sending of custom segments.
 
-Criteo is a dynamic retargeting system. DigitalDataManager allows you to send data about the behavior of your users to [Criteo](https://criteo.com/).
+Criteo is a dynamic retargeting system. SegmentStream allows you to send data about the behavior of your users to [Criteo](https://criteo.com/).
 
 ### Page contents
 ------
@@ -27,7 +27,7 @@ Criteo is a dynamic retargeting system. DigitalDataManager allows you to send da
 
 ### <a name="0"></a>Introduction
 ------
-With the help of DigitalDataManager, you can fully integrate Criteo with your site: events, hashed users' email addresses, deduplication and so on. <br />
+With the help of SegmentStream, you can fully integrate Criteo with your site: events, hashed users' email addresses, deduplication and so on. <br />
 [Criteo integration guide](https://support.criteo.com/hc/en-us/sections/200972171-%D0%9A%D0%B0%D0%BA-%D0%B2%D0%BD%D0%B5%D0%B4%D1%80%D0%B8%D1%82%D1%8C-Criteo-OneTag) <br/><br/>
 To configure integration with Criteo:
 1. Log in on the [segmentstream.com](https://admin.ddmanager.ru/) website and go to the integration management panel
@@ -57,7 +57,7 @@ It is also necessary to configure the filling of certain variables of the `digit
 * `user.email` or `user.emailHash` variables
 * and others
 
-> In the case of simultaneous filling of the variables `user.email` and` user.emailHash`, **DigitalDataManager** will send the value of the `user.emailHash` variable to Criteo. In the absence of `user.emailHash`, **DigitalDataManager** itself will hash the value of the `user.email` variable and send it to Criteo.
+> In the case of simultaneous filling of the variables `user.email` and` user.emailHash`, **SegmentStream** will send the value of the `user.emailHash` variable to Criteo. In the absence of `user.emailHash`, **SegmentStream** itself will hash the value of the `user.email` variable and send it to Criteo.
 
 ### <a name="2"></a>Criteo Account ID
 ------
@@ -90,7 +90,7 @@ For more information about creating variables, see [variables](/for-analyst/vari
 Deduplication is an attribution setting that can be sent to Criteo along with the order. By default, this feature is disabled. This means that Criteo uses its own attribution model to set up its own machine learning algorithms.
 > The attribution model is the rule by which the value of the conversion/(order value) is redistributed between all sources of traffic that led the user to the site before buying. There is a large number of [attribution models](https://support.google.com/analytics/answer/1665189?hl=en), the most common of these is last non-direct click. When using this model of attribution - 100% of the conversion value will be assigned to the last indirect source of traffic. For example, if a user first came to the site from a search, then from Criteo, then typed the URL in the browser - the whole value of the order will be assigned to the source of "Criteo".
 
-If you use "own deduplication", DigitalDataManager will remember the source (the value of the GET parameter utm_source). If this value is "criteo", the transaction will be attributed to the Criteo source.
+If you use "own deduplication", SegmentStream will remember the source (the value of the GET parameter utm_source). If this value is "criteo", the transaction will be attributed to the Criteo source.
 
 [Criteo deduplication parameter guide](https://support.criteo.com/hc/en-us/articles/205573701-%D0%9F%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80-%D0%B4%D0%B5%D0%B4%D1%83%D0%BF%D0%BB%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D0%B8)
 
@@ -100,5 +100,5 @@ Enable this feature if your website uses multiple currencies.
 
 ### <a name="5"></a>Checking the correctness of the integration settings
 ------
-After configuring the integration in the DigitalDataManager interface, but before PUBLICATION - go to the site in test_mode, [go through the conversion funnel and check for errors](/for-analyst/integrations#2).
+After configuring the integration in the SegmentStream interface, but before PUBLICATION - go to the site in test_mode, [go through the conversion funnel and check for errors](/for-analyst/integrations#2).
 If there are no errors - publish the current version.
