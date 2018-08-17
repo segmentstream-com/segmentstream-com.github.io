@@ -88,11 +88,15 @@ For more information about creating variables, see [variables](/for-analyst/vari
 ### <a name="4"></a>Use custom deduplication
 ------
 Deduplication is an attribution setting that can be sent to Criteo along with the order. By default, this feature is disabled. This means that Criteo uses its own attribution model to set up its own machine learning algorithms.
-> The attribution model is the rule by which the value of the conversion/(order value) is redistributed between all sources of traffic that led the user to the site before buying. There is a large number of [attribution models] (https://support.google.com/analytics/answer/1665189?hl=en), the most common of these is last non-direct click. When using this model of attribution - 100% of the conversion value will be assigned to the last indirect source of traffic. For example, if a user first came to the site from a search, then from Criteo, then typed the URL in the browser - the whole value of the order will be assigned to the source of "Criteo".
+> The attribution model is the rule by which the value of the conversion/(order value) is redistributed between all sources of traffic that led the user to the site before buying. There is a large number of [attribution models](https://support.google.com/analytics/answer/1665189?hl=en), the most common of these is last non-direct click. When using this model of attribution - 100% of the conversion value will be assigned to the last indirect source of traffic. For example, if a user first came to the site from a search, then from Criteo, then typed the URL in the browser - the whole value of the order will be assigned to the source of "Criteo".
 
 If you use "own deduplication", DigitalDataManager will remember the source (the value of the GET parameter utm_source). If this value is "criteo", the transaction will be attributed to the Criteo source.
 
 [Criteo deduplication parameter guide](https://support.criteo.com/hc/en-us/articles/205573701-%D0%9F%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80-%D0%B4%D0%B5%D0%B4%D1%83%D0%BF%D0%BB%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D0%B8)
+
+### <a name="6"></a>Website has multiple currencies
+------
+Enable this feature if your website uses multiple currencies.
 
 ### <a name="5"></a>Checking the correctness of the integration settings
 ------
