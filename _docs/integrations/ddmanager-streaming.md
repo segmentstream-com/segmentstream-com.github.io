@@ -1,11 +1,11 @@
 ---
 layout: page
 section: integrations
-title: "DDManager Streaming"
+title: "Streaming"
 order: 1
 ---
 
-The built-in "Streaming" module allows you to collect raw data in Google BigQuery. After connecting the streaming module, DigitalDataManager starts sending all of your users behavior data to the BigQuery cloud data storage. The format of data storage completely corresponds to the DigitalData standard.
+The built-in "Streaming" module allows you to collect raw data in Google BigQuery. After connecting the streaming module, SegmentStream starts sending all of your users behavior data to the BigQuery cloud data storage. The format of data storage completely corresponds to the DigitalData standard.
 
 ### Page contents
 ------
@@ -23,7 +23,7 @@ The built-in "Streaming" module allows you to collect raw data in Google BigQuer
 ### <a name="0"></a>Introduction
 Setting up the DDM Streaming integration:
 1. Create an account in Google BigQuery and configure the rights and roles.
-2. Log in to the [ddmanager.ru](https://admin.ddmanager.ru/) website and go to the integration management panel
+2. Log in to the [segmentstream.com](https://admin.ddmanager.ru/) website and go to the integration management panel
 3. Enter the "Integration" tab and click on the block with the DDManager Streaming logo.
 4. In the panel that opens, configure the integration.
 
@@ -43,7 +43,7 @@ Setting up the DDM Streaming integration:
 6. Add `ddmanager@ddm-streaming.iam.gserviceaccount.com` to the New Members field. Add 2 rules: `BigQuery Data Owner` and `BigQuery User`. Click Save.
 ![](/img/integrations.ddmstreaming.18.png)
 
-This completes the configuration of the BigQuery account. Now you can proceed to setting up streaming in the DigitalDataManager admin page.
+This completes the configuration of the BigQuery account. Now you can proceed to setting up streaming in the SegmentStream admin page.
 ![](/img/integrations.ddmstreaming.1_1.png)
 
 ### <a name="1_1"></a>Google Cloud project ID

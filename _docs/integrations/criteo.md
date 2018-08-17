@@ -22,7 +22,7 @@ Criteo is a dynamic retargeting system. SegmentStream allows you to send data ab
   <li><a href="#3">User segment</a></li>
   <li><a href="#4">Use custom deduplication</a></li>
   <li><a href="#6">Website has multiple currencies</a></li>
-  <li><a href="#5">Checking the correctness of the integration settings</a></li>
+  <li><a href="#5">Checking the correctness of the integration setup</a></li>
 </ul>
 
 ### <a name="0"></a>Introduction
@@ -98,7 +98,7 @@ If you use "own deduplication", SegmentStream will remember the source (the valu
 ------
 Enable this feature if your website uses multiple currencies.
 
-### <a name="5"></a>Checking the correctness of the integration settings
+### <a name="5"></a>Checking the correctness of the integration setup
 ------
 After configuring the integration in the SegmentStream interface, but before PUBLICATION - go to the site in test_mode, [go through the conversion funnel and check for errors](/for-analyst/integrations#2).
 If there are no errors - publish the current version.
