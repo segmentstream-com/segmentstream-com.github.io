@@ -24,7 +24,7 @@ The Google Adwords dynamic remarketing module allows you to display ads with pro
 
 ### <a name="0"></a>Introduction
 ------
-With the help of DigitalDataManager, you can fully integrate the Google Adwords Dynamic Remarketing Module with your site.
+With the help of SegmentStream, you can fully integrate the Google Adwords Dynamic Remarketing Module with your site.
 
 [Google integration guide](https://support.google.com/tagmanager/answer/6106009?hl=en#OneTagPerFunnel)
 
@@ -33,7 +33,6 @@ To configure the Adwords integration:
 2. Go to the "Integration" tab and click on the block with the Adwords logo.
 3. In the opened panel - configure the integration.
 ![](/img/integrations.googleadwords.1.png)
-![](/img/integrations.facebook.1.png)
 <br />
 You can read more details about the settings below.
 
@@ -63,11 +62,11 @@ You can find the conversion tracking ID in the Google Adwords system interface.
 
 ### <a name="2_1"></a>Business type
 ------
-The code for dynamic Google Ad Remarketing depends on the type of activity selected in the campaign settings. It is necessary in the DigitalDataManager interface to choose the same type as in the Google Ads API.
+The code for dynamic Google Ad Remarketing depends on the type of activity selected in the campaign settings. It is necessary in the SegmentStream interface to choose the same type as in the Google Ads API.
 
-For example, if you select the "Retail" type in Google Ads, you must also select "Retail" in the DigitalDataManager interface.
+For example, if you select the "Retail" type in Google Ads, you must also select "Retail" in the SegmentStream interface.
 
->If the necessary type of activity is missing in the DigitalDataManager interface - contact support at support@ddmanager.ru
+>If the necessary type of activity is missing in the SegmentStream interface - contact support at support@ddmanager.ru
 
 [More about business types](https://support.google.com/google-ads/answer/7305793?hl=en)
 
