@@ -28,7 +28,7 @@ Facebook is a social network with a large set of advertising tools. Facebook sho
 ------
 Using DigitalDataManager, you can fully integrate Facebook with your site: Including standard and custom events
 
-[Facebook integration guide](hhttps://developers.facebook.com/docs/facebook-pixel/api-reference)
+[Facebook integration guide](https://developers.facebook.com/docs/facebook-pixel/api-reference)
 
 To configure the Facebook integration:
 1. Log in to the [segmentstream.com](https://admin.ddmanager.ru/) website and go to the integration management panel
