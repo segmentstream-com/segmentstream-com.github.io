@@ -10,7 +10,7 @@ In this section you will learn:
 * How to set up Google Analytics event tracking
 * How to configure the advanced e-commerce module.
 * How to set up Google Analytics events
-* How to pass custom parameters, metrics and content groups
+* How to pass custom dimensions, metrics and content groups
 * How to fine-tune Google Analytics tracking on your site
 
 SegmentStream makes it easy to send data about your users' behavior to [Google Analytics](https://analytics.google.com/). After full [integration of digitalData with your site](/for-developer/), you can go to the integration setup in the SegmentStream panel.
@@ -41,9 +41,9 @@ SegmentStream makes it easy to send data about your users' behavior to [Google A
 ### <a name="0"></a>Introduction
 ------
 With the help of SegmentStream, you can fully integrate Google Analytics with your website: events, advanced e-commerce, special metrics and parameters, content groups and much more. <br />
-[Google Analytics help](https://support.google.com/analytics#topic=3544906) <br/><br/>
-Чтобы настроить интеграцию с Google Analytics:
-1. Log in to the [segmentstream.com](https://admin.ddmanager.ru/) website and go to the integration management panel
+[Google Analytics integration guide](https://support.google.com/analytics#topic=3544906) <br/><br/>
+To configure the Google Analytics integration:
+1. Log in to the [segmentstream.com](https://admin.ddmanager.ru/) website and go to the integration management panel.
 2. Go to the "Integration" tab and click on the block with the Analytics logo.
 3. In the opened panel - configure the integration.
 ![](/img/integrations.ga.settings.png)
