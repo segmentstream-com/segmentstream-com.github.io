@@ -32,7 +32,7 @@ To configure the Adwords integration:
 1. Log in to the [segmentstream.com](https://admin.ddmanager.ru/) website and go to the integration management panel
 2. Go to the "Integration" tab and click on the block with the Adwords logo.
 3. In the opened panel - configure the integration.
-![](/img/integrations.google-adwords.1.png)
+![](/img/integrations.googleadwords.1.png)
 ![](/img/integrations.facebook.1.png)
 <br />
 You can read more details about the settings below.
