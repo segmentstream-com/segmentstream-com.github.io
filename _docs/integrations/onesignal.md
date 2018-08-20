@@ -20,7 +20,7 @@ OneSignal is a system for sending cross-browser and cross-platform push notifica
   <li><a href="#3">Push subscription trigger event</a></li>
   <li><a href="#4">Automatic registration</a></li>
   <li><a href="#6">Tag settings</a></li>
-  <li><a href="#7">Catching system popup events</a></li>
+  <li><a href="#7">Tracking system popup events</a></li>
 </ul>
 
 
@@ -79,7 +79,7 @@ To configure the transfer of variables, fill in 3 fields:
 
 See the first screenshot for an example.
 
-### <a name="7"></a>Catching system popup events
+### <a name="7"></a>Tracking system popup events
 ------
 OneSignal gives you the option to subscribe to the events of interaction with the push notifications subscription system. There are 3 ways to interact:
  - Click on "Allow" - "Allowed Push Notifications"
