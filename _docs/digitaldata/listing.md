@@ -2,7 +2,6 @@
 layout: page
 section: digitaldata
 title: "listing"
-date: 2018-01-16 15:00:00
 order: 1
 ---
 
@@ -43,7 +42,7 @@ window.digitalData = {
     sortBy: "price_asc",
     resultCount: 20,
     pagesCount: 13,
-    currentPage: 2,       
+    currentPage: 2,
     layout: "grid"
   },
   ...
@@ -62,7 +61,7 @@ window.digitalData = {
     sortBy: "price_asc",
     resultCount: 20,
     pagesCount: 13,
-    currentPage: 2,       
+    currentPage: 2,
     layout: "grid"
   },
   ...
@@ -127,7 +126,7 @@ Data type: string.
 ------
 Data type: Array of strings.
 
-`listing.category` - **required** variable that contains a category hierarchy for this category. 
+`listing.category` - **required** variable that contains a category hierarchy for this category.
 
 >This element must be included only in catalog category pages (pages where digitalData.page.type is equal to "listing").
 

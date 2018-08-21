@@ -2,7 +2,6 @@
 layout: page
 section: digitaldata
 title: "website"
-date: 2017-12-29 12:00:00
 order: 1
 ---
 
@@ -72,7 +71,7 @@ Example:
 
 ### <a name="6"></a>website.environment
 ------
-`website.environment` - contains the name of the environment in which the site is downloaded, for example: 
- - "development" - development environment, 
- - "testing" - testing environment, 
+`website.environment` - contains the name of the environment in which the site is downloaded, for example:
+ - "development" - development environment,
+ - "testing" - testing environment,
  - "production" - production environment, which is loaded for all site visitors.

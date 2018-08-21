@@ -2,7 +2,6 @@
 layout: page
 section: digitaldata
 title: "page"
-date: 2017-12-13 12:00:00
 order: 1
 ---
 

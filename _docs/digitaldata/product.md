@@ -2,7 +2,6 @@
 layout: page
 section: digitaldata
 title: "product"
-date: 2018-01-11 18:00:00
 order: 1
 ---
 
@@ -80,7 +79,7 @@ Data type: string.
 
 >`product.id` must match the value of offer.group_id from your XML feed if you are using XML feeds that group products. Product groups are often found on Fashion websites, when `product.id` has the same value for all product sizes of the same color. For each color model, `product.id` should assume a unique value.
 
- - [More about the group_id variable in XML feeds of the Yandex format](https://yandex.ru/support/partnermarket/offers.html) 
+ - [More about the group_id variable in XML feeds of the Yandex format](https://yandex.ru/support/partnermarket/offers.html)
  - [Learn more about the item_group_id variable in Google XML feeds.](https://support.google.com/merchants/answer/6324507)
 
  >If your products do not have variations, use the bundle `product.id` = `offer.id` (your XML feed). In this case, the `product.skuCode` variable is optional.
@@ -202,7 +201,7 @@ where,
 ------
 Data type: string.
 
-`product.color` contains the name of products color 
+`product.color` contains the name of products color
 
 ### <a name="17"></a>product.size
 ------

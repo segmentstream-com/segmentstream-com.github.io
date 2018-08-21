@@ -2,7 +2,6 @@
 layout: page
 section: digitaldata
 title: "events"
-date: 2018-01-16 18:00:00
 order: 1
 ---
 
@@ -23,7 +22,7 @@ digitalData.events: [
     category: "Email",
     user: {
       email: "johndoe@example.com"
-    }  
+    }
   }
 ]
 ```

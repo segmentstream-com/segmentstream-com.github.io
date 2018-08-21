@@ -2,7 +2,6 @@
 layout: page
 section: digitaldata
 title: "changes"
-date: 2018-04-13 17:00:00
 order: 1
 ---
 

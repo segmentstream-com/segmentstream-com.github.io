@@ -2,7 +2,6 @@
 layout: page
 section: digitaldata
 title: "transaction"
-date: 2018-01-15 12:00:00
 order: 1
 ---
 

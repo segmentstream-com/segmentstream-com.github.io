@@ -2,7 +2,6 @@
 layout: page
 section: digitaldata
 title: "cart"
-date: 2018-01-12 18:00:00
 order: 1
 ---
 
@@ -80,7 +79,7 @@ Data type: string.
 ------
 Data type: number.
 
-`cart.subtotal` - **required** variable, which contains the total value of all the goods in the users basket. 
+`cart.subtotal` - **required** variable, which contains the total value of all the goods in the users basket.
 `cart.subtotal` does not account for the shipping price and the discounts applied to the basket
 
 >Includes discounts applied to specific goods, for example seasonal discounts.
@@ -156,9 +155,9 @@ Data type: string.
 
 ### <a name="6"></a>cart.vouchers
 ------
-Data type: string. 
+Data type: string.
 
-`cart.vouchers` - a variable that contains an array of promotional codes applied to the shopping cart. 
+`cart.vouchers` - a variable that contains an array of promotional codes applied to the shopping cart.
 
 >If only one promotional code has been applied to the shopping cart, the variable will take the value of an array consisting of one line
 
@@ -170,7 +169,7 @@ Data type: number.
 
 ### <a name="8"></a>cart.shippingMethod
 ------
-Data type: string. 
+Data type: string.
 
 `cart.shippingMethod` - a variable that contains the delivery method selected in the order process.
 
@@ -186,7 +185,7 @@ Data type: number.
 
 ### <a name="10"></a>cart.paymentMethod
 ------
-Data type: string. 
+Data type: string.
 
 `cart.paymentMethod` - a variable that contains the method of payment for the order.
 

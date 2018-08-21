@@ -2,7 +2,6 @@
 layout: page
 section: digitaldata
 title: "version"
-date: 2017-06-05 12:00:00
 order: 1
 ---
 

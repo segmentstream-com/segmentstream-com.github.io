@@ -2,7 +2,6 @@
 layout: page
 section: digitaldata
 title: "recommendation"
-date: 2018-01-16 18:00:00
 order: 1
 ---
 

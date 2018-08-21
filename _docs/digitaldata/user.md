@@ -2,7 +2,6 @@
 layout: page
 section: digitaldata
 title: "user"
-date: 2018-01-09 12:00:00
 order: 1
 ---
 
