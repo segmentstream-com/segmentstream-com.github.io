@@ -6,13 +6,14 @@ date: 2017-06-05 12:00:00
 order: 1
 ---
 
-The variable `digitalData.version` contains the version of the standard. The last stable version is `1.1.2`
+The variable `digitalData.version` contains the version of the standard. The last stable version is `1.1.3`
 - Type of data - string.
 - Should be present on every page
 - Example:
-```JavaScript
+```javascript
   window.digitalData = {
-    version: '1.1.2',
+    ...,
+    version: '1.1.3',
     ...
   }
 ```
@@ -20,6 +21,11 @@ The variable `digitalData.version` contains the version of the standard. The las
 
 ### Version history
 ------
+**1.1.3 -  May 2018**
+- Added `Updated Cart` server event. Based on this event, DigitalDataManager automatically creates the `Added Product` and `Removed Product` events, depending on the current basket composition.
+- the `Added Product` and` Removed Product` server events are obsolete.
+- Added the `user.subscriptions` array in the `Subscribed` and `Updated Profile Info` events for mass management of subscriptions
+
 **1.1.2 - January 2017**
 - added digitalData.changes method
 
