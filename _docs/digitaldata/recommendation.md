@@ -11,7 +11,7 @@ The array `digitalData.recommendation` contains `listing` objects  that describe
 ------
 <ul class="page-navigation">
   <li><a href="#0">Introduction</a></li>
-  <li><a href="#1">Filling the array using a third-party recommendation system</a></li>
+  <li><a href="#1">What to do if the list of recommendations is formed by a third-party system?</a></li>
 </ul>
 
 
@@ -25,12 +25,12 @@ window.digitalData = {
   ...,
   recommendation: [
     ...,
-    { //это объект listing
+    { //this is a listing object
       listName: "Last viewed products",
       listId: "recentlyViewed",
       items: [Product, Product, Product, ...]
     },
-    { //это объект listing
+    { //this is a listing object
       listName: "People also bought",
       listId: "crossSell",
       items: [Product, Product, Product, ...]
@@ -45,9 +45,8 @@ window.digitalData = {
 
 [Detailed description of the `listing` object](/digitaldata/listing)
 
-### <a name="1"></a>Filling the array using a third-party recommendation system
+### <a name="1"></a>What to do if the list of recommendations is formed by a third-party system?
 ------
 There are services that generate a list of recommendations on their side. After loading the page of your site, the service integrates the generated list into the code of your site. However, for the user, the integration list is loaded a little later than the main content of the page.
 
-In this case, the `digitalData.recommendation` array should be filled by the developers of the recommendation system. For them, we prepared [a universal technical document in Google Docs format](https://docs.google.com/document/d/1WYBDLx6RLg6mPa_XBfeRmaPiiSzeI1Ion1AtnrZt6-E/edit?usp=sharing).
-Pass this link to your recommendation system's manager.
+In this case, the connected system itself tracks impressions and clicks of the product blocks. To send information about impressions and clicks to Google Analytics, you need the third-party system to push events to the `digitalData.events` array. To correctly track events in Google Analytics send the [third-party system developer guide](/for-developer/partners) link to the manager of the connected system.
