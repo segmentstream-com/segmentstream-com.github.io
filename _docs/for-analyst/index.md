@@ -6,7 +6,7 @@ date: 2017-06-05 12:00:00
 order: 0
 ---
 
-The DigitalDataManager panel allows you to control the flow of data between the site and third-party systems in case [the `digitalData` data layer is installed on the site](/for-developer/). Flow control is performed using five entities: Integrations, Priorities, Events, Variables, Scripts. Accordingly, the system interface is divided into 5 main sections, which can be accessed via tabs at the top of the interface.
+The SegmentStream panel allows you to control the flow of data between the site and third-party systems in case [the `digitalData` data layer is installed on the site](/for-developer/). Flow control is performed using five entities: Integrations, Priorities, Events, Variables, Scripts. Accordingly, the system interface is divided into 5 main sections, which can be accessed via tabs at the top of the interface.
 
 ![](/img/overview.1.png)
 
@@ -14,14 +14,14 @@ The DigitalDataManager panel allows you to control the flow of data between the 
 
 ### 1. Integrations
 ------
-Each integration is a connector between `digitalData` and a third-party system. An integration can listen to all events added to `digitalData.events`, and convert information from events into a format that is necessary for a third-party system. If an event is mandatory for the system, **DigitalDataManager** sends the relevant information.
+Each integration is a connector between `digitalData` and a third-party system. An integration can listen to all events added to `digitalData.events`, and convert information from events into a format that is necessary for a third-party system. If an event is mandatory for the system, **SegmentStream** sends the relevant information.
 
 In the interface, each integration has a set of settings. For some integrations, this is only a unique identifier in the system, for others - a fairly long list. You will find the description of the settings of all integrations on the corresponding pages. <br />
 [More about integrations](/for-analyst/integrations)
 
 ### 2. Priorities
 ------
-Priorities is the DigitalDataManager module which allows you to manage the queue in which integrations load. Priorities will help decrease your website's load time.<br />
+Priorities is the SegmentStream module which allows you to manage the queue in which integrations load. Priorities will help decrease your website's load time.<br />
 [More about priorities](/for-analyst/priorities)
 
 ### 3. Events

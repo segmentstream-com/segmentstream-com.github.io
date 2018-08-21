@@ -78,31 +78,31 @@ Example:
 
 ### <a name="3"></a>page.breadcrumb
 ------
-`page.breadcrumb` contains the path to the current page in the site structure. The variable is an array where element 0 is the highest level of the category, and the last element of the array is the lowest (the name of the current page). 
+`page.breadcrumb` contains the path to the current page in the site structure. The variable is an array where element 0 is the highest level of the category, and the last element of the array is the lowest (the name of the current page).
 > On many sites, the array will be equivalent to the breadcrumb navigation element, excluding the first link to the "Main" page.
 
 The variable `page.breadcrumb` does not need to be filled on pages with `page.type`: "home", "cart", "checkout", "confirmation"
 
 ### <a name="4"></a>page.url
 ------
-`page.url` contains the full url of the page. You do not need to declare and fill in this variable as it is done automatically by the DigitalDataManager library.
+`page.url` contains the full url of the page. You do not need to declare and fill in this variable as it is done automatically by the SegmentStream library.
 
 ### <a name="5"></a>page.hash
 ------
-`page.hash` contains the url part after the # character. For example, for the URL http://website.com/wommen/dresses/mini/?sortBy=price#black `page.hash` is set to "#black". You do not need to declare and fill in this variable as it is done automatically by the DigitalDataManager library.
+`page.hash` contains the url part after the # character. For example, for the URL http://website.com/wommen/dresses/mini/?sortBy=price#black `page.hash` is set to "#black". You do not need to declare and fill in this variable as it is done automatically by the SegmentStream library.
 
 ### <a name="6"></a>page.path
 ------
-`page.path` contains the url part between the first and last slash after the domain. For example, for the URL http://website.com/wommen/dresses/mini/?sortBy=price#black `page.path` takes the value of "/women/dresses/mini/". You do not need to declare and fill in this variable as it is done automatically by the DigitalDataManager library.
+`page.path` contains the url part between the first and last slash after the domain. For example, for the URL http://website.com/wommen/dresses/mini/?sortBy=price#black `page.path` takes the value of "/women/dresses/mini/". You do not need to declare and fill in this variable as it is done automatically by the SegmentStream library.
 
 ### <a name="7"></a>page.queryString
 ------
-`page.queryString` contains the url part with GET parameters. For example, for the URL http://website.com/wommen/dresses/mini/?sortBy=price#black `page.queryString` takes the value of "?SortBy=price". You do not need to declare and fill in this variable as it is done automatically by the DigitalDataManager library.
+`page.queryString` contains the url part with GET parameters. For example, for the URL http://website.com/wommen/dresses/mini/?sortBy=price#black `page.queryString` takes the value of "?SortBy=price". You do not need to declare and fill in this variable as it is done automatically by the SegmentStream library.
 
 ### <a name="8"></a>page.referrer
 ------
-`page.referrer` contains the url of the previous page. The page from which the link or redirect to the current page occurred. The value corresponds to the content of the global js-variable `document.referrer`. You do not need to declare and fill in this variable as it is done automatically by the DigitalDataManager library.
+`page.referrer` contains the url of the previous page. The page from which the link or redirect to the current page occurred. The value corresponds to the content of the global js-variable `document.referrer`. You do not need to declare and fill in this variable as it is done automatically by the SegmentStream library.
 
 ### <a name="9"></a>page.title
 ------
-`page.title` contains the value of the meta tag <title>Page title</title>. You do not need to declare and fill in this variable as it is done automatically by the DigitalDataManager library.
+`page.title` contains the value of the meta tag <title>Page title</title>. You do not need to declare and fill in this variable as it is done automatically by the SegmentStream library.

@@ -25,7 +25,7 @@ The `digitalData.context` object contains variables that describe the environmen
 ------
 The `digitalData.context` object must be declared and filled in the source code of each page.
 
->All variables of the object `digitalData.context` are filled automatically by the DigitalDataManager library. On your part, you only need to declare the object and fill in the value of the variable `digitalData.context.ip`.
+>All variables of the object `digitalData.context` are filled automatically by the SegmentStream library. On your part, you only need to declare the object and fill in the value of the variable `digitalData.context.ip`.
 
 Example for the URL 'http://website.com/?utm_campaign=sale_05_06_2016&utm_medium=cpc&utm_source=criteo':
 ```javascript
@@ -122,7 +122,7 @@ Data type: object. Filled automatically
 
 `context.campaign` - contains an object that describes the source of the visit, including the channel, the name of the advertising campaign and other data.
 
->DigitalDataManager recognizes utm_marks from the URL of the loaded page, forms the object `digital.context.campaign` and stores this information in the site visitor's browser localStorage for 90 days or until a "Completed Transaction" event has occurred.
+>SegmentStream recognizes utm_marks from the URL of the loaded page, forms the object `digital.context.campaign` and stores this information in the site visitor's browser localStorage for 90 days or until a "Completed Transaction" event has occurred.
 
 Path|Data Type|Description
 ---|---|---

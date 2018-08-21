@@ -21,7 +21,7 @@ The **"Variables"** module allows you to create new data based on the data in th
 
 ### <a name="0"></a>Introduction
 ------
-DigitalDataManager allows you to send data from the `digitalData` object to any marketing system, for example, send information that the user has already made purchases into [Criteo](http://www.criteo.com/). Criteo only accepts numeric segment values, so you have to convert the purchase information to a numeric form. You can ask your programmers to send a value of 1 to the variable `digitalData.user.criteoSegment` every time a page loads, but it's easier to create this variable in the DigitalDataManager interface.
+SegmentStream allows you to send data from the `digitalData` object to any marketing system, for example, send information that the user has already made purchases into [Criteo](http://www.criteo.com/). Criteo only accepts numeric segment values, so you have to convert the purchase information to a numeric form. You can ask your programmers to send a value of 1 to the variable `digitalData.user.criteoSegment` every time a page loads, but it's easier to create this variable in the SegmentStream interface.
 To create a new variable, click the "Add" button ontop of the list of all the variables. To edit previously created variables - click on the name of the required variable.
 
 ### <a name="1"></a>Creating a new variable

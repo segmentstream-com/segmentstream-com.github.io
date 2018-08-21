@@ -1,12 +1,12 @@
 ---
 layout: page
 section: developer
-title: "Connecting DigitalDataManager"
+title: "Connecting SegmentStream"
 date: 2017-09-15 18:15:00
 order: 3
 ---
 
-In this section, you will learn how to connect DigitalDataManager to your site.
+In this section, you will learn how to connect SegmentStream to your site.
 
 ### Page contents
 ------
@@ -18,20 +18,20 @@ In this section, you will learn how to connect DigitalDataManager to your site.
 
 ### <a name="0"></a>Introduction
 ------
-For the correct operation of DigitalDataManager, when loading each page of the site, you need to call 2 files:
+For the correct operation of SegmentStream, when loading each page of the site, you need to call 2 files:
  1. https://cdn.ddmanager.ru/ddm-initialization/`<project_id>`.js
  2. https://cdn.ddmanager.ru/sdk/dd-manager.js
 
-You should contact the DigitalDataManager team to receive your `<project_id>`.
+You should contact the SegmentStream team to receive your `<project_id>`.
 
 The first file contains information about the settings that the analyst made in the control panel [https://admin.ddmanager.ru](https://admin.ddmanager.ru). You can read more about the features in the [analysts section](/for-analyst/index).<br/>
-The second file is the latest stable version of the DigitalDataManager library.
+The second file is the latest stable version of the SegmentStream library.
 
 Below we show the 2 ways of connecting the files to your site.
 
 ### <a name="1"></a>Standard connection via remote CDN
 ------
-To connect the DigitalDataManager via our CDN:
+To connect the SegmentStream via our CDN:
 
 1. Copy the snippet and paste it into the code for each page of your site.
 ```JavaScript
@@ -46,12 +46,12 @@ c.unshift(k);a.push(c);return a}};for(b=0;b<a.methods.length;b++){var f=a.method
 
 2. Replace `<PROJECT_ID>` with your unique project id.
 
->The DigitalDataManager snippet should be declared after the global variable `window.digitalData` and the jquery plugin.
+>The SegmentStream snippet should be declared after the global variable `window.digitalData` and the jquery plugin.
 
-### <a name="2"></a>Installing DigitalDataManager on your own CDN
+### <a name="2"></a>Installing SegmentStream on your own CDN
 ------
 In this case, no adBlock systems can interrupt the loading of scripts located within your domain.
-To install DigitalDataManager on your CDN - you need to perform the following steps:
+To install SegmentStream on your CDN - you need to perform the following steps:
 
 1. Copy the snippet and paste it into the code for each page of your site.
 ```JavaScript
@@ -65,7 +65,7 @@ c.unshift(k);a.push(c);return a}};for(b=0;b<a.methods.length;b++){var f=a.method
 </script>
 <!-- //Digital Data Manager snippet -->
 ```
->The DigitalDataManager snippet should be declared after the global variable `window.digitalData` and the jquery plugin.
+>The SegmentStream snippet should be declared after the global variable `window.digitalData` and the jquery plugin.
 
 2. Every 5 minutes, you need to check the md5 hash of the two files. If the files have changed - you need to download a new version of the file and update its local version.
 The latest version of the initialization script:
@@ -76,11 +76,11 @@ https://cdn.ddmanager.ru/sdk/dd-manager.js
 3. In the updated DDManager snippet it is necessary to uncomment the  `DDMANAGER_INIT_URL` and` DDMANAGER_SDK_URL` global variables to assign them the absolute path to the local version of the files on your own CDN.
 ```JavaScript
 // window.DDMANAGER_INIT_URL = '<YOUR_BACKUP_STABLE_INITIALIZATION_SCRIPT_URL>';
-// window.DDMANAGER_SDK_URL = '<YOUR_BACKUP_STABLE_SDK_SCRIPT_URL>';  
+// window.DDMANAGER_SDK_URL = '<YOUR_BACKUP_STABLE_SDK_SCRIPT_URL>';
 ```
 Example:
 ```JavaScript
 window.DDMANAGER_INIT_URL = 'https://cdn.website.ru/js/ddmanager/init_15_05_2017.js';
-window.DDMANAGER_SDK_URL = 'https://cdn.website.ru/js/ddmanager/sdk_15_05_2017.js';  
+window.DDMANAGER_SDK_URL = 'https://cdn.website.ru/js/ddmanager/sdk_15_05_2017.js';
 ```
 >always use absolute paths with http/https

@@ -51,8 +51,8 @@ window.digitalData = {
     hasTransacted: true,
     lastTransactionDate: "2017-12-01T09:00Z",
     segment: {
-      rfm: "vip", 
-      churnRisk: "low", 
+      rfm: "vip",
+      churnRisk: "low",
       LTV: 178990
     }
   },
@@ -142,7 +142,7 @@ Data type: string in ISO 8601 format.
 Data type: string.
 
 `user.googleClientId` - contains the browser identifier in the Google Analytics system.
->This variable is declared and populated automatically by the DigitalDataManager library when you enable the GA integration via DigitalDataManager.
+>This variable is declared and populated automatically by the SegmentStream library when you enable the GA integration via SegmentStream.
 
 ### <a name="14"></a>user.segment
 ------

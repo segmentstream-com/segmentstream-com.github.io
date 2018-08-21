@@ -45,7 +45,7 @@ These standards are designed to comply with 3 main principles:
 
 ### <a name="1"></a>How to name variables
 ------
-The DigitalDataManager is based on the digitalData standard, which is a multilevel object with a nested structure. All objects of the first level are defined by the standard and can not be changed:
+The SegmentStream is based on the digitalData standard, which is a multilevel object with a nested structure. All objects of the first level are defined by the standard and can not be changed:
 
 * website
 * page
@@ -54,7 +54,7 @@ The DigitalDataManager is based on the digitalData standard, which is a multilev
 * transaction
 * cart
 * events
-* ... 
+* ...
 
 Each of these objects can have an unlimited number of nested objects or variables. Some of them are already defined by the standard, the rest can be set at your discretion.
 
@@ -66,7 +66,7 @@ When creating new objects and parameters in digitalData, it is important to foll
 
 ### <a name="2"></a>How to name events
 ------
-In DigitalDataManager we use a set of clear naming rules for events, oriented to past-time actions:
+In SegmentStream we use a set of clear naming rules for events, oriented to past-time actions:
 
 * Select all objects with which it is possible to perform certain actions on your site. For example,for Ecommerce, this could be:
   * Profile Info
@@ -113,7 +113,7 @@ digitalData.events.push({ name: 'Selected Credit Term - 3 months' });
 Instead, send this data as parameters:
 
 ```JavaScript
-digitalData.events.push({ 
+digitalData.events.push({
     name: 'Viewed Product',
     product: {
         name: 'iPhone X'
@@ -122,8 +122,8 @@ digitalData.events.push({
 ```
 
 ```JavaScript
-digitalData.events.push({ 
+digitalData.events.push({
     name: 'Selected Credit Term',
-    creditTerm: '3 months' 
+    creditTerm: '3 months'
 });
 ```

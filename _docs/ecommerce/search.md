@@ -74,7 +74,7 @@ window.digitalData = {
 
 ### <a name="1"></a>page
 ------
-You need to declare and fill in only 2 variables in the `digitalData.page` object. All other variables will be automatically filled by the DigitalDataManager library.
+You need to declare and fill in only 2 variables in the `digitalData.page` object. All other variables will be automatically filled by the SegmentStream library.
 
 [More about the **page** object](/digitaldata/page)
 
@@ -295,7 +295,7 @@ window.digitalData = {
     pagesCount: 13,
     currentPage: 2,
     layout: "grid"
-  },  
+  },
   page: {
     type: 'search',
     category: 'Search Listing'
@@ -380,7 +380,7 @@ window.digitalData = {
     },
   ]
 }
-/* Here you should place the snippet of the initialization of the DigitalDataManager library */
+/* Here you should place the snippet of the initialization of the SegmentStream library */
 ```
 
 >For convenience, we did not list the repeating elements of the recommendations, items, campaigns, lineItems arrays but left just one example in each.

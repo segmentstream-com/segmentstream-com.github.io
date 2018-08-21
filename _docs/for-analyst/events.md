@@ -6,7 +6,7 @@ date: 2013-06-05 12:00:00
 order: 2
 ---
 
-Events is one of the most important components of `digitalData`. All information is sent to analytics and marketing systems in the form of events. Below, you will find a detailed description on how to create and manage events in the DigitalDataManager interface.
+Events is one of the most important components of `digitalData`. All information is sent to analytics and marketing systems in the form of events. Below, you will find a detailed description on how to create and manage events in the SegmentStream interface.
 
 ### Page contents
 ------
@@ -20,23 +20,23 @@ Events is one of the most important components of `digitalData`. All information
 ### <a name="0"></a>Introduction
 ------
 Any event is a set of information that enters the digitalData.events data array. The information in the array must be represented as a javaScript object.
-For example: DigitalDataManager will register an event with the name "Event Happened" when the following code is executed:
+For example: SegmentStream will register an event with the name "Event Happened" when the following code is executed:
 ```javascript
 digitalData.events.push({
   name: 'Event Happened',
   value: 3000
-});      
+});
 ```
-Now DigitalDataManager can send information about the event "Event Happened" with the value 3000 to any system, for example, Google Analytics and Yandex Metrica.
+Now SegmentStream can send information about the event "Event Happened" with the value 3000 to any system, for example, Google Analytics and Yandex Metrica.
 
 ### <a name="1"></a>Event creation
 ------
-DigitalDataManager has 3 basic triggers:
+SegmentStream has 3 basic triggers:
 * Event
 * Click
 * Impression
 
->Important! DigitalDataManager has 1 built-in event - Viewed Page. This event occurs when the ddmanager library is fully loaded.
+>Important! SegmentStream has 1 built-in event - Viewed Page. This event occurs when the ddmanager library is fully loaded.
 
 ![](/img/events.1.png)
 
@@ -55,7 +55,7 @@ if (_digitalData('page.type') === 'product') {
     category: 'Ecommerce',
     name: 'Viewed Product Detail'
   };
-}  
+}
 ```
 The code _digitalData('page.type') [is explained below](#3).
 
@@ -73,7 +73,7 @@ return {
   name: 'Clicked Campaign',
   category: 'Promo',
   campaign: campaignId
-};  
+};
 ```
 
 **Example 3: `Viewed Campaign` Event**
@@ -101,7 +101,7 @@ return {
 ```javascript
 _queryParam('q') // get url parameter value
 _cookie('_ga') // get cookie value
-_get(event, 'transaction.lineItems') // Safely get any event property 
+_get(event, 'transaction.lineItems') // Safely get any event property
 _digitalData('transaction.lineItems') // Safely get any digitalData property
 _global('settings.mobile_app') // Safely get any window property
 _domQuery('#logo') // get an array of elements by CSS-selector
@@ -119,12 +119,12 @@ return timeout(1500, function() {
 > The `_queryParam()` function always returns values in lowercase
 
 > The `_domQuery()` function, and the selectors in the triggers **Click** and **Impression** work by the following principle:
->  - if jQuery is not loaded on the website (there is no global window.jQuery object) or jQuery is loaded after DigitalDataManager (is located further down the HTML page), [document.querySelectorAll](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll) is used,
+>  - if jQuery is not loaded on the website (there is no global window.jQuery object) or jQuery is loaded after SegmentStream (is located further down the HTML page), [document.querySelectorAll](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll) is used,
 >  - if jQuery is loaded on the website, jQuery selectors are used.
 
 ### <a name="4"></a>Event naming convention
 ------
-Standard DigitalDataManager integrations work with a list of reserved events, for example: [Viewed Product Detail](/events/viewed-product-detail), [Viewed Checkout Step](/events/viewed-checkout-step), [Completed Transaction](/events/completed-transaction), etc.
+Standard SegmentStream integrations work with a list of reserved events, for example: [Viewed Product Detail](/events/viewed-product-detail), [Viewed Checkout Step](/events/viewed-checkout-step), [Completed Transaction](/events/completed-transaction), etc.
 The complete list of reserved events is located in the side menu under "Events List". Use the event names listed in this list.
 
 If you need to add an event that is not in the reserved list - use our [event naming convention](/for-developer/naming)

@@ -7,7 +7,7 @@ order: 1
 ---
 
 It is often necessary to change the contents of the `digitalData` variable without reloading the page.
-For example: when subscribing to a newsletter, adding a product to the cart, logging in, registering, and many other events. In this case, you should use the construct in the form of `digitalData.changes.push (...)`. DigitalDataManager "listens" to the change of the array `digitalData.changes` and automatically updates the corresponding elements of the `digitalData` object.
+For example: when subscribing to a newsletter, adding a product to the cart, logging in, registering, and many other events. In this case, you should use the construct in the form of `digitalData.changes.push (...)`. SegmentStream "listens" to the change of the array `digitalData.changes` and automatically updates the corresponding elements of the `digitalData` object.
 
 > We strongly do not recommend changing the contents of `digitalData` by directly overriding elements in the form of `digitalData.user.name` = 'Ivan'.
 
@@ -71,13 +71,13 @@ This approach should be used for sites that are fully built on AJAX or Single-pa
 
 Single-page sites are a bit different from the usual sites. When clicking on a link, the SP does not load a new page. Instead, the visitor's browser sends an asynchronous request (AJAX-request) to the server. The server returns new content. With this content, the visitor's browser dynamically replaces or complements the content that was previously on the site. As a result, the visitor seems to have downloaded a new page of the site.
 
-In order for DigitalDataManager to correctly process dynamic content changes, you need to dynamically update the data layer of digitalData. The algorithm is described below:
+In order for SegmentStream to correctly process dynamic content changes, you need to dynamically update the data layer of digitalData. The algorithm is described below:
 
 - The user clicks on a link, the request goes to the server
 - The server responds with the content of the new page, as well as a new copy of the digitalData object
 - After the content and URL of the site change, you need to call the methods in the following sequence: `digitalData.changes.push({...})` and `digitalData.events.push({name: 'Viewed Page'})`
 
-> Important. A complete change of the object `digitalData` on single-page sites should always be accompanied by the event "Viewed Page". This event helps the DigitalDataManager system to determine the moment of the "virtual load" of a new page.
+> Important. A complete change of the object `digitalData` on single-page sites should always be accompanied by the event "Viewed Page". This event helps the SegmentStream system to determine the moment of the "virtual load" of a new page.
 
 **Example**: A visitor on a single-page site navigates through a link from the catalog to a product card. The content of the site is dynamically updated.
 
@@ -116,7 +116,7 @@ digitalData = {
   version: '1.1.2', // didnt change
   website: {...},   // didnt change
   page: {...},      // changed with the object pushed to changes
-  product: {...},   // added. 
+  product: {...},   // added.
   user: {...},      // didnt change
   cart: {...},      // didnt change
   changes: [...],   // changed. Added the changed object

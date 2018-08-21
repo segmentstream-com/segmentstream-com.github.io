@@ -6,7 +6,7 @@ date: 2013-06-05 12:00:00
 order: 2
 ---
 
-Each integration is a connector between `digitalData` and a third-party system. An integration can listen to all events added to the array `digitalData.events`, and also convert events into a format required for a third-party system. If an event is necessary for a system, **DigitalDataManager** sends it.
+Each integration is a connector between `digitalData` and a third-party system. An integration can listen to all events added to the array `digitalData.events`, and also convert events into a format required for a third-party system. If an event is necessary for a system, **SegmentStream** sends it.
 
 ### Page contents
 ------
@@ -44,7 +44,7 @@ Let's take a look at an example of the product identifier override depending on 
 1. Click the "Event Variables" tab and click "Add"
   ![](/img/integrations.4.png)
 2. In the window that opens, fill in the fields: Scope, Variable name, Event handler.
-3. In the "Scope" field, you must specify the scope where you want to change the value, if you select "Event", then the variable name specified in the input below will only be modified on a particular event, if you select "Product", then all instances of the product object will have the specified variable overwritten. Since we need to have the same product identifier for the whole integration, we select `product`. 
+3. In the "Scope" field, you must specify the scope where you want to change the value, if you select "Event", then the variable name specified in the input below will only be modified on a particular event, if you select "Product", then all instances of the product object will have the specified variable overwritten. Since we need to have the same product identifier for the whole integration, we select `product`.
 4. In the "Variable name" field, you must specify the variable whose value you want to change. Since the Google Adwords integration gets data from `digitalData.events[].product.id` when a product page is viewed, it is necessary to specify `id` in the configuration field.
 5. If we would have selected `event` on step 2, the "Event name" field would be present, here you must specify the name of the event whose variables will be overwritten "on the fly". If you do not specify any name, the overwrite will work for all events in which the variable specified in the "Variable Name" field occurs.
 6. The event handler must return a value (contain the return construct). The value returned by this function will be placed in the variable specified in the "Variable Name" field of the selected scope when any event occurs.

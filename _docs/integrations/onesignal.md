@@ -9,7 +9,7 @@ In this section you will learn:
 * How to connect OneSignal Web Push notifications to your website.
 * How to configure the transfer of segments in OneSignal.
 
-OneSignal is a system for sending cross-browser and cross-platform push notifications. OneSignal is able to create audiences based on the events on the site and send browser-based pushes to this audience. DigitalDataManager allows you to send data about the behavior of your users to [OneSignal](https://onesignal.com/).
+OneSignal is a system for sending cross-browser and cross-platform push notifications. OneSignal is able to create audiences based on the events on the site and send browser-based pushes to this audience. SegmentStream allows you to send data about the behavior of your users to [OneSignal](https://onesignal.com/).
 
 
 ### Page contents
@@ -26,12 +26,12 @@ OneSignal is a system for sending cross-browser and cross-platform push notifica
 
 ### <a name="0"></a>Introduction
 ------
-Using DigitalDataManager, you can fully integrate OneSignal with your site.<br />
+Using SegmentStream, you can fully integrate OneSignal with your site.<br />
 [OneSignal Documentation](https://documentation.onesignal.com/docs/web-push-sdk-setup-https)
 
 > We recommend that you first fully transfer your site to https. In this case, the process of subscribing to push notifications for your users will be easier.
 
->Before configuring the integration in the DigitalDataManager interface you need to install 3 files to the root of your site.<br/>
+>Before configuring the integration in the SegmentStream interface you need to install 3 files to the root of your site.<br/>
 For details, see the [OneSignal documentation](https://documentation.onesignal.com/docs/web-push-sdk-setup-https#section-2-upload-required-files)
 
 To configure the OneSignal integration:
@@ -58,7 +58,7 @@ In order for the user to receive push notifications, he must first subscribe. Th
 
 ![](/img/integrations.onesignal.4.png)
 
-DigitalDataManager allows you to control the moment the subscription window is displayed. To specify this point, specify the name of the event in the corresponding field. After this event occurs (it will be pushed to the `digitalData.events` array), a standard window for subscribing to push notifications will be displayed.
+SegmentStream allows you to control the moment the subscription window is displayed. To specify this point, specify the name of the event in the corresponding field. After this event occurs (it will be pushed to the `digitalData.events` array), a standard window for subscribing to push notifications will be displayed.
 
 ### <a name="4"></a>Automatic registration
 ------
@@ -70,7 +70,7 @@ If you enable this toggle switch, the subscription window will appear immediatel
 ------
 OneSignal provides ample opportunities for building trigger communications. For example, you can configure the sending of push notifications to those users who put the goods in the basket and left (the abandoned basket). For this, the system must know the composition of the basket each time the page is loaded.
 
-DigitalDataManager can send any information from the `digitalData` object along with any events.
+SegmentStream can send any information from the `digitalData` object along with any events.
 
 To configure the transfer of variables, fill in 3 fields:
 1. Left - the name of the tag that you want to use in OneSignal

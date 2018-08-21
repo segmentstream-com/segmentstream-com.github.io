@@ -23,7 +23,7 @@ In order to correctly monitor the interaction of site visitors with blocks of co
 
 ### <a name="0"></a> Introduction
 ------
-The connected system gets access to the global `digitalData` object after its js-library is loaded. Now all events that occur with embedded content blocks must be pushed into the `digitalData.events` array. **DigitalDataManager** will intercept these events and send them to [Google Analytics](/integrations/google-analytics), [Yandex.Metrica](/integrations/yandex-metrica) or any other integration.
+The connected system gets access to the global `digitalData` object after its js-library is loaded. Now all events that occur with embedded content blocks must be pushed into the `digitalData.events` array. **SegmentStream** will intercept these events and send them to [Google Analytics](/integrations/google-analytics), [Yandex.Metrica](/integrations/yandex-metrica) or any other integration.
 
 Typical cases are described below.
 
@@ -34,11 +34,11 @@ Typical cases are described below.
 ```javascript
 digitalData.events.push({
   name: '<Partner> Event',    //Replace <Partner> with the name of the system
-  category: '<Event category>',    
-  action: '<Event action>',    
-  label: '<Event label>',           
+  category: '<Event category>',
+  action: '<Event action>',
+  label: '<Event label>',
   value: '<Event value>',   //Number, not a string
-  nonInteraction: true,     //If this variable isn't declared onInteraction: false will be passed by default 
+  nonInteraction: true,     //If this variable isn't declared onInteraction: false will be passed by default
   source: '<Partner>'       //Name of the system that pushed the event to digitalData.events
 });
 ```
@@ -58,9 +58,9 @@ digitalData.events.push({
         position: 4,
         listName: 'Homepage recommendations',
         product: {
-          id: 'AB32',										
+          id: 'AB32',
           skuCode: 'AB3200004',
-          name: 'Blue Dress',					
+          name: 'Blue Dress',
           category: ['Clothing', 'Dresses'],
           unitPrice: 1000,
           unitSalePrice: 800,
@@ -111,9 +111,9 @@ digitalData.events.push({
     position: 4,
     listName: 'Homepage recommendations',
     product: {
-      id: 'AB32',										
+      id: 'AB32',
       skuCode: 'AB3200004',
-      name: 'Blue Dress',					
+      name: 'Blue Dress',
       category: ['Clothing', 'Dresses'],
       unitPrice: 1000,
       unitSalePrice: 800,

@@ -16,7 +16,7 @@ digitalData.events.push({
   cart: {...}
 })
 ```
-> Do not call the code during or immediately before reloading the site page, for example, when you remove a product from the shopping cart. In this case, the redirect can happen before the DigitalDataManager has enough time to send the event to all connected systems
+> Do not call the code during or immediately before reloading the site page, for example, when you remove a product from the shopping cart. In this case, the redirect can happen before the SegmentStream has enough time to send the event to all connected systems
 
 > For a detailed description of the [`cart`](/digitaldata/cart) object, see the developer section.
 

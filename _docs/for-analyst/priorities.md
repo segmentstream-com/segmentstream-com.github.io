@@ -6,7 +6,7 @@ date: 2017-08-15 12:00:00
 order: 6
 ---
 
-**Priorities** is the DigitalDataManager module, which allows you to manage the queue at which integrations load. Priorities will help you increase your website's load speed.
+**Priorities** is the SegmentStream module, which allows you to manage the queue at which integrations load. Priorities will help you increase your website's load speed.
 
 By default, all your integrations are loaded in asynchronous mode in parallel with your site. In case you have a lot of integrations, data from different servers creates a lot of threads (for example, retargeting systems start to load dozens of pixels of ad networks for synchronization of cookies). However, the user's browser can not accept more than a certain number of threads at the same time, as a result, all data streams are lined up into a **"random" queue**. It often happens, that the script from your CDN gets in the queue after the pixel of an advertising system, and without this script interaction with the site is impossible. As a result, the website load speed falls (in other words, the time interval between the moment when the page starts loading and the time when the user is able to interact with the content increases).
 

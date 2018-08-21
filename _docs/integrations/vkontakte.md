@@ -11,7 +11,7 @@ In this section you will learn:
 * How to configure the transfer of events to Vkontakte.
 * How to setup dynamic retargeting Vkontakte
 
-Vkontakte is a social network with a small set of advertising tools. Vkontakte is able to create audiences based on site events and show ads to these audiences. In November 2017 Vkontakte added product dynamic remarketing. DigitalDataManager allows you to send data about the behavior of your users to [Vkontakte](https://vk.com/dev/manuals).
+Vkontakte is a social network with a small set of advertising tools. Vkontakte is able to create audiences based on site events and show ads to these audiences. In November 2017 Vkontakte added dynamic product remarketing. SegmentStream allows you to send data about the behavior of your users to [Vkontakte](https://vk.com/dev/manuals).
 
 ### Page contents
 ------
@@ -30,7 +30,7 @@ Using SegmentStream, you can fully integrate Vkontakte with your site.
 
 >Vkontakte supports 2 versions of the API, so in the SegmentStream interface there are settings for both new and old versions.
 
-To configure the OneSignal integration:
+To configure the Vkontakte integration:
 1. Log in on the [segmentstream.com](https://admin.ddmanager.ru/) website and go to the integration management panel
 2. Click on the "Integration" tab and click on the block with the Vkontakte logo.
 3. In the panel that opens, configure the integration.
