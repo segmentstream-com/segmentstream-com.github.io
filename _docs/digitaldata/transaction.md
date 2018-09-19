@@ -90,7 +90,18 @@ Data type: boolean.
 ------
 Data type: object.
 
-`transaction.contactInfo` - variable that contains the contact information of the user receiving the order.
+`transaction.contactInfo` - variable that contains the contact information of the user receiving the order. For example if during the checkout phase the user left his name, phone and email, then the value will look like this:
+
+```javascript
+digitalData.transaction: {
+  contactInfo: {
+    firstName: 'John',
+    phone: '+44 7911 123456',
+    email: 'john@segmentstream.com'
+  },
+  //...the rest of the transaction data
+}
+```
 
 ### <a name="5"></a>transaction.currency
 ------
