@@ -27,6 +27,7 @@ SegmentStream makes it easy to send data about your users' behavior to [Google A
   <li><a href="#5">Enhanced link attribution</a></li>
   <li><a href="#6">Anonymize IP</a></li>
   <li><a href="#16">Transliterate cyrillic symbols</a></li>
+  <li><a href="#7">Enable cross-domain tracking</a></li>
   <li><a href="#8">Default Currency</a></li>
   <li><a href="#9">Site speed sample rate</a></li>
   <li><a href="#10">Website domain</a></li>
