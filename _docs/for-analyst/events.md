@@ -36,7 +36,7 @@ SegmentStream has 3 basic triggers:
 * Click
 * Impression
 
->Important! SegmentStream has 1 built-in event - Viewed Page. This event occurs when the ddmanager library is fully loaded.
+>Important! SegmentStream has 1 built-in event - Viewed Page. This event occurs when the SegmentStream library is fully loaded.
 
 ![](/img/events.1.png)
 

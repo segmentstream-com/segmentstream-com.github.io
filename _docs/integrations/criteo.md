@@ -30,7 +30,7 @@ Criteo is a dynamic retargeting system. SegmentStream allows you to send data ab
 With the help of SegmentStream, you can fully integrate Criteo with your site: events, hashed users' email addresses, deduplication and so on. <br />
 [Criteo integration guide](https://support.criteo.com/hc/en-us/sections/200972171-%D0%9A%D0%B0%D0%BA-%D0%B2%D0%BD%D0%B5%D0%B4%D1%80%D0%B8%D1%82%D1%8C-Criteo-OneTag) <br/><br/>
 To configure integration with Criteo:
-1. Log in on the [segmentstream.com](https://admin.ddmanager.ru/) website and go to the integration management panel
+1. Log in on the [segmentstream.com](https://admin.segmentstream.com/) website and go to the integration management panel
 2. Click on the "Integration" tab and click on the block with the Criteo logo.
 3. In the panel that opens, configure the integration.
 ![](/img/integrations.criteo.settings.png)

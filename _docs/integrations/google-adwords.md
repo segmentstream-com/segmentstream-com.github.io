@@ -29,7 +29,7 @@ With the help of SegmentStream, you can fully integrate the Google Adwords Dynam
 [Google integration guide](https://support.google.com/tagmanager/answer/6106009?hl=en#OneTagPerFunnel)
 
 To configure the Adwords integration:
-1. Log in to the [segmentstream.com](https://admin.ddmanager.ru/) website and go to the integration management panel
+1. Log in to the [segmentstream.com](https://admin.segmentstream.com/) website and go to the integration management panel
 2. Go to the "Integration" tab and click on the block with the Adwords logo.
 3. In the opened panel - configure the integration.
 ![](/img/integrations.googleadwords.1.png)

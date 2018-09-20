@@ -31,7 +31,7 @@ Using SegmentStream, you can fully integrate Vkontakte with your site.
 >Vkontakte supports 2 versions of the API, so in the SegmentStream interface there are settings for both new and old versions.
 
 To configure the Vkontakte integration:
-1. Log in on the [segmentstream.com](https://admin.ddmanager.ru/) website and go to the integration management panel
+1. Log in on the [segmentstream.com](https://admin.segmentstream.com/) website and go to the integration management panel
 2. Click on the "Integration" tab and click on the block with the Vkontakte logo.
 3. In the panel that opens, configure the integration.
 

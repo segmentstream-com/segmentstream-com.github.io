@@ -23,8 +23,8 @@ The built-in "Streaming" module allows you to collect raw data in Google BigQuer
 ### <a name="0"></a>Introduction
 Setting up the DDM Streaming integration:
 1. Create an account in Google BigQuery and configure the rights and roles.
-2. Log in to the [segmentstream.com](https://admin.ddmanager.ru/) website and go to the integration management panel
-3. Enter the "Integration" tab and click on the block with the DDManager Streaming logo.
+2. Log in to the [segmentstream.com](https://admin.segmentstream.com/) website and go to the integration management panel
+3. Enter the "Integration" tab and click on the block with the SegmentStream Streaming logo.
 4. In the panel that opens, configure the integration.
 
 ### <a name="1"></a>Setting up BigQuery
@@ -86,7 +86,7 @@ In order to configure the transmission of custom dimensions (see screenshot belo
 
 ### <a name="3"></a>Custom metrics
 ------
-Similarly to custom dimensions, DDManager can pass custom metrics.
+Similarly to custom dimensions, SegmentStream can pass custom metrics.
 
 > There is a big difference between metrics and parameters. A metric is a quantitative value, a number (an integer, a fractional number, a time). Parameters are data attributes. All metrics (numeric data) are calculated in the parameter sections.
 

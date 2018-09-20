@@ -13,7 +13,7 @@ In this section, you will learn how to connect SegmentStream to your site.
 <ul class="page-navigation">
   <li><a href="#0">Introduction</a></li>
   <li><a href="#1">Standard connection via remote CDN</a></li>
-  <li><a href="#2">Installing DDManager on your own CDN</a></li>
+  <li><a href="#2">Installing SegmentStream on your own CDN</a></li>
 </ul>
 
 ### <a name="0"></a>Introduction
@@ -24,7 +24,7 @@ For the correct operation of SegmentStream, when loading each page of the site, 
 
 You should contact the SegmentStream team to receive your `<project_id>`.
 
-The first file contains information about the settings that the analyst made in the control panel [https://admin.ddmanager.ru](https://admin.ddmanager.ru). You can read more about the features in the [analysts section](/for-analyst/index).<br/>
+The first file contains information about the settings that the analyst made in the control panel [https://admin.segmentstream.com](https://admin.segmentstream.com). You can read more about the features in the [analysts section](/for-analyst/index).<br/>
 The second file is the latest stable version of the SegmentStream library.
 
 Below we show the 2 ways of connecting the files to your site.

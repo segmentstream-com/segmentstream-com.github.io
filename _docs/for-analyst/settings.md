@@ -23,7 +23,7 @@ Depending on the architecture of your website, the project settings may differ. 
 ### <a name="0"></a>Introduction
 ------
 How to adjust the settings:
-1. Log in to the site [ddmanager.ru](https://admin.ddmanager.ru/)
+1. Log in to the site [segmentstream.com](https://admin.segmentstream.com/)
 2. Click on the "Settings" link in the upper right corner of the window.
 3. Adjust the settings according to the documentation below
 4. Publish the project.
@@ -36,7 +36,7 @@ The `Viewed Page` event is the base event. It is necessary for the operation of 
 
 > The `Viewed Page` event must be added to the array `digitalData.events` only after the data of the `digitalData` object has been fully populated.
 
-By default, SegmentStream automatically adds the `Viewed Page` event to the `digitalData.events` array when the `ddmanager.js` library is loaded. This happens every time a page loads.
+By default, SegmentStream automatically adds the `Viewed Page` event to the `digitalData.events` array when the `segmentstream.js` library is loaded. This happens every time a page loads.
 
 If you add the `Viewed Page` event to the `digitalData.events` array yourself from the site code, do this only after filling the digitalData object with all the variables. In this case, turn off the "Automatic send Viewed Page event" option using the switch.
 

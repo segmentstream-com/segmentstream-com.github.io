@@ -45,7 +45,7 @@ SegmentStream makes it easy to send data about your users' behavior to [Google A
 With the help of SegmentStream, you can fully integrate Google Analytics with your website: events, advanced e-commerce, special metrics and parameters, content groups and much more. <br />
 [Google Analytics integration guide](https://support.google.com/analytics#topic=3544906) <br/><br/>
 To configure the Google Analytics integration:
-1. Log in to the [segmentstream.com](https://admin.ddmanager.ru/) website and go to the integration management panel.
+1. Log in to the [segmentstream.com](https://admin.segmentstream.com/) website and go to the integration management panel.
 2. Go to the "Integration" tab and click on the block with the Analytics logo.
 3. In the opened panel - configure the integration.
 ![](/img/integrations.ga.settings.png)

@@ -31,7 +31,7 @@ Using DigitalDataManager, you can fully integrate Facebook with your site: Inclu
 [Facebook integration guide](https://developers.facebook.com/docs/facebook-pixel/api-reference)
 
 To configure the Facebook integration:
-1. Log in to the [segmentstream.com](https://admin.ddmanager.ru/) website and go to the integration management panel
+1. Log in to the [segmentstream.com](https://admin.segmentstream.com/) website and go to the integration management panel
 2. Go to the "Integration" tab and click on the block with the Facebook logo.
 3. In the opened panel - configure the integration.
 ![](/img/integrations.facebook.1.png)

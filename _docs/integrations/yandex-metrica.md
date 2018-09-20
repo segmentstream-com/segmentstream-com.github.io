@@ -36,7 +36,7 @@ With the help of SegmentStream, you can fully integrate Yandex.Metrica in your w
 [Yandex guide on integrating Yandex.Metrica](https://yandex.com/support/metrica/index.html)
 
 To configure your integration with Yandex.Metrica:
-1. Login on the [segmentstream.com](https://admin.ddmanager.ru/) website and go to the integration control panel.
+1. Login on the [segmentstream.com](https://admin.segmentstream.com/) website and go to the integration control panel.
 2. Enter the "Integration" tab and click on the block with the Yandex.Metrica logo.
 3. In the panel that opens, configure the integration.
 ![](/img/integrations.ym.settings.png)

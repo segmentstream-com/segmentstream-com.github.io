@@ -35,7 +35,7 @@ Using SegmentStream, you can fully integrate OneSignal with your site.<br />
 For details, see the [OneSignal documentation](https://documentation.onesignal.com/docs/web-push-sdk-setup-https#section-2-upload-required-files)
 
 To configure the OneSignal integration:
-1. Log in on the [segmentstream.com](https://admin.ddmanager.ru/) website and go to the integration management panel
+1. Log in on the [segmentstream.com](https://admin.segmentstream.com/) website and go to the integration management panel
 2. Click on the "Integration" tab and click on the block with the OneSignal logo.
 3. In the panel that opens, configure the integration.
 
