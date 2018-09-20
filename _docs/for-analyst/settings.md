@@ -72,13 +72,13 @@ If you use a block with a banner slider on the site, we recommend setting the ma
 
 ### <a name="5"></a> Tracking validation errors
 ------
-DigitalDataManger has a built-in [integration error tracking module](/for-analyst/integrations#2). This module displays information about all the data sent to third-party systems in the developer console. If you enable the tracking of validation errors, whenever an integration error occurs with any of the site visitors, SegmentStream will automatically add this event to the array `digitalData.events`. Now this event can be sent to any statistics system for further analysis of the causes of the error.
+SegmentStream has a built-in [integration error tracking module](/for-analyst/integrations#2). This module displays information about all the data sent to third-party systems in the developer console. If you enable the tracking of validation errors, whenever an integration error occurs with any of the site visitors, SegmentStream will automatically add this event to the array `digitalData.events`. Now this event can be sent to any statistics system for further analysis of the causes of the error.
 
 If you have set up the [Google Analytics](/integrations/google-analytics) integration, you can find information about validation errors in the event reports.
 
 ### <a name="6"></a> Track all JavaScript errors
 ------
-DigitalDataManger can also intercept messages about the occurrence of any JavaScript errors on your site. Typically, there are thousands of errors on websites: libraries of third-party systems do not loading, errors in the developers' scripts, unexpected user actions and so on. All these errors can be passed to Google Analytics as [exception type hits](https://developers.google.com/analytics/devguides/collection/analyticsjs/exceptions). By building a custom report in the Google Analytics interface, you can find the pages and conditions under which errors occur.
+SegmentStream can also intercept messages about the occurrence of any JavaScript errors on your site. Typically, there are thousands of errors on websites: libraries of third-party systems do not loading, errors in the developers' scripts, unexpected user actions and so on. All these errors can be passed to Google Analytics as [exception type hits](https://developers.google.com/analytics/devguides/collection/analyticsjs/exceptions). By building a custom report in the Google Analytics interface, you can find the pages and conditions under which errors occur.
 
 ![](/img/settings.1.png)
 Example of a report setup in the Google Analytics interface

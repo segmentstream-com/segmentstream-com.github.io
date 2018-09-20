@@ -78,7 +78,7 @@ If you want to transfer the value of the goods to the `value` variable - enable 
 
 ### <a name="3"></a>Custom events
 ------
-DigitalDataManager can send custom events to Facebook along with standard events.
+SegmentStream can send custom events to Facebook along with standard events.
 To configure the transfer of custom events, fill in 2 fields:
 1. Left - Name the event that is pushed to the `digitalData.events` array, for example: [Registered](/events/registered)
 2. Right - The name of the event that you want to see in the Facebook interface.
