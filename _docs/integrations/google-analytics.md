@@ -147,6 +147,13 @@ Google Analytics allows site owners to hide their visitors' IP addresses when pr
 ------
 You can activate this setting if you are sending cyrillic symbols to GA. By transliterating you can significantly reduce the size of hits and events that contain product names, descriptions, etc.
 
+### <a name="7"></a>Enable cross-domain tracking
+------
+By default, Google Analytics does not glue together user visits to different second-level domains into the same history. This function could be necessary if different parts of the same site are on different domains, for example: an online store - https://shop.com and a blog - https://blog.com. To send information about the behavior of a particular visitor on different domains in the same Google Analytics property, you must enable cross-domain tracking.
+Activate the "Enable cross-domain tracking" feature and add all the domains you want to link.
+
+[Справка Google по кроссдоменному отслеживанию](https://support.google.com/analytics/answer/1034342?hl=en)
+
 ### <a name="8"></a>Currency
 ------
 In Google Analytics, there is a set of options for the enhanced e-commerce module that represent monetary values ​​in different currencies, for example: revenue from goods, transaction revenue, shipping costs, etc. A list of supported currencies is described in the Google currency guide. Important! If the currency specified in the SegmentStream integration settings is different from the global presentation currency (specified in the Analytics settings), Google Analytics will convert at the exchange rate for the previous day.
