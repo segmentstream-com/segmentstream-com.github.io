@@ -11,20 +11,24 @@ The array `digitalData.events` contains a list of objects. Each object describes
 
 Example:
 ```javascript
-digitalData.events: [
-  { //Add item to shopping cart event
-    name: "Added Product",
-    category: "Ecommerce",
-    product: {/*all variables of the product object*/}
-  },
-  { //Email subscription event
-    name: "Subscribed",
-    category: "Email",
-    user: {
-      email: "johndoe@example.com"
+window.digitalData = {
+  ...,
+  events: [
+    { //Add item to shopping cart event
+      name: "Added Product",
+      category: "Ecommerce",
+      product: {/*all variables of the product object*/}
+    },
+    { //Email subscription event
+      name: "Subscribed",
+      category: "Email",
+      user: {
+        email: "johndoe@example.com"
+      }
     }
-  }
-]
+  ],
+  ...
+}
 ```
 
 You can add an event to the array `digitalData.events` in two ways:
