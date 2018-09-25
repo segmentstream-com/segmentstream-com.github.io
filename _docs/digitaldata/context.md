@@ -28,31 +28,35 @@ The `digitalData.context` object must be declared and filled in the source code 
 
 Example for the URL 'http://website.com/?utm_campaign=sale_05_06_2016&utm_medium=cpc&utm_source=criteo':
 ```javascript
-digitalData.context: {
-  userAgent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36",
-  campaign: {
-    name: "sale_05_06_2016",
-    medium: "cpc",
-    source: "criteo"
-  },
-  ip: "46.250.135.5",
-  os: {
-    name: "Mac OS",
-    version: "10.13.2"
-  },
-  location: {
-    city: "Moscow",
-    country: "RU",
-    region: "Moscow"
-  },
-  device: {
-    type: "desktop"
-  },
-  browser: {
-    major: "63",
-    name: "Chrome",
-    version: "63.0.3239.132"
+window.digitalData = {
+  ...,
+  context: {
+    userAgent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36",
+    campaign: {
+      name: "sale_05_06_2016",
+      medium: "cpc",
+      source: "criteo"
+    },
+    ip: "46.250.135.5",
+    os: {
+      name: "Mac OS",
+      version: "10.13.2"
+    },
+    location: {
+      city: "Moscow",
+      country: "RU",
+      region: "Moscow"
+    },
+    device: {
+      type: "desktop"
+    },
+    browser: {
+      major: "63",
+      name: "Chrome",
+      version: "63.0.3239.132"
+    }
   }
+  ...
 }
 ```
 

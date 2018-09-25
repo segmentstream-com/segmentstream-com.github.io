@@ -47,25 +47,29 @@ The `product` object must be declared and filled in the source code of the page 
 
 Example:
 ```javascript
-.product = {
-  id: "1234567890",
-  url: "http://website.com/product.html",
-  imageUrl: "http://website.com/image.png",
-  thumbnailUrl: "http://website.com/image_thump.png",
-  name: "Timberland Boots",
-  description: "Short description...",
-  manufacturer: "Timberland",
-  category: ["Footwear","Boots"],
-  categoryId: "123",
-  currency: "USD",
-  unitPrice: 100,
-  unitSalePrice: 90,
-  skuCode: "TBL6065RW",
-  stock: 21,
-  voucher: "MYVOUCHER1",
-  color: "yellow",
-  size: "41",
-  variations: [Product, Product, Product, ...]
+window.digitalData = {
+  ...,
+  product: {
+    id: "1234567890",
+    url: "http://website.com/product.html",
+    imageUrl: "http://website.com/image.png",
+    thumbnailUrl: "http://website.com/image_thump.png",
+    name: "Timberland Boots",
+    description: "Short description...",
+    manufacturer: "Timberland",
+    category: ["Footwear","Boots"],
+    categoryId: "123",
+    currency: "USD",
+    unitPrice: 100,
+    unitSalePrice: 90,
+    skuCode: "TBL6065RW",
+    stock: 21,
+    voucher: "MYVOUCHER1",
+    color: "yellow",
+    size: "41",
+    variations: [Product, Product, Product, ...]
+  }
+  ...
 }
 ```
 
@@ -178,18 +182,22 @@ Data type: array of objects.
 
 Example of filling the **reviews** array with objects:
 ```javascript
-.product = {
+window.digitalData = {
   ...,
-  reviews: [
-    {
-      body: "Great Shoes!",
-      rating: 5.0
-    },
-    {
-      body: "Not bad.",
-      rating: 4.5
-    }
-  ],
+  product: {
+    ...,
+    reviews: [
+      {
+        body: "Great Shoes!",
+        rating: 5.0
+      },
+      {
+        body: "Not bad.",
+        rating: 4.5
+      }
+    ],
+    ...
+  }
   ...
 }
 ```

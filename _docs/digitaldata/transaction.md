@@ -37,24 +37,28 @@ The `digitalData.transaction` object must be declared and filled in the source c
 
 Example:
 ```javascript
-digitalData.transaction: {
-  orderId: "QA-123456",
-  cartId: "CART2203",
-  isFirst: true,
-  isReturning: false
+window.digitalData = {
+  ...,
+  transaction: {
+    orderId: "QA-123456",
+    cartId: "CART2203",
+    isFirst: true,
+    isReturning: false
 
-  //the variables listed below come from the digitalData.cart object
-  currency: "USD",
-  subtotal: 25000,
-  vouchers: [
-    "MYVOUCHER1"
-  ],
-  voucherDiscount: 500,
-  tax: 0,
-  shippingCost: 1500,
-  shippingMethod: "Delivery",
-  total: 26000,
-  lineItems: [LineItems, LineItem, LineItem, ...]
+    //the variables listed below come from the digitalData.cart object
+    currency: "USD",
+    subtotal: 25000,
+    vouchers: [
+      "MYVOUCHER1"
+    ],
+    voucherDiscount: 500,
+    tax: 0,
+    shippingCost: 1500,
+    shippingMethod: "Delivery",
+    total: 26000,
+    lineItems: [LineItems, LineItem, LineItem, ...]
+  }
+  ...
 }
 ```
 
@@ -93,13 +97,18 @@ Data type: object.
 `transaction.contactInfo` - variable that contains the contact information of the user receiving the order. For example if during the checkout phase the user left his name, phone and email, then the value will look like this:
 
 ```javascript
-digitalData.transaction: {
-  contactInfo: {
-    firstName: 'John',
-    phone: '+44 7911 123456',
-    email: 'john@segmentstream.com'
-  },
-  //...the rest of the transaction data
+window.digitalData = {
+  ...,
+  transaction: {
+    ...,
+    contactInfo: {
+      firstName: 'John',
+      phone: '+44 7911 123456',
+      email: 'john@segmentstream.com'
+    },
+    //...the rest of the transaction data
+  }
+  ...
 }
 ```
 
@@ -134,7 +143,7 @@ Example of **transaction.lineItems** filled with objects:
 ```javascript
 window.digitalData = {
   ...,
-  cart: {
+  transaction: {
     ...,
     lineItems: [
       {

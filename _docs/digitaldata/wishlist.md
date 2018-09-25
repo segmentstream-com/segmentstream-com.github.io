@@ -20,11 +20,15 @@ The `digitalData.wishlist` array must be declared and filled in the source code 
 
 Example:
 ```javascript
-digitalData.wishlist = [
-  { /*product object*/ },
-  { /*product object*/ },
+window.digitalData = {
+  ...,
+  wishlist = [
+    { /*product object*/ },
+    { /*product object*/ },
+    ...
+  ]
   ...
-]
+}
 ```
 [Detailed description of the `product` object](/digitaldata/product)
 
