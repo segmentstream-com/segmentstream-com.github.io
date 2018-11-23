@@ -103,13 +103,17 @@ _queryParam('q') // get url parameter value
 _cookie('_ga') // get cookie value
 _get(event, 'transaction.lineItems') // Safely get any event property
 _digitalData('transaction.lineItems') // Safely get any digitalData property
+_loadPixel({src: 'https://test.com/pixel.png', id: 'admit_ad'}) //Load pixel. Any number of attributes is supported
+_loadScript({src: 'https://test.com/script.js', id: 'google'}) //Load script. Any number of attributes is supported
+_loadIframe({src: 'https://test.com/window', style: 'display: none;'}) //Load iframe. Any number of attributes is supported
+_loadLink({href: 'https://test.com/style.css', type: "text/css"}) //Load styles through tag link. Any number of attributes is supported
 _global('settings.mobile_app') // Safely get any window property
 _domQuery('#logo') // get an array of elements by CSS-selector
 _dataLayer('ecommerce.purchase') // Safely get a GTM dataLayer variable
 return _fetch('/ajax?cart', function(result) {
   return result;
 }); // get data from a remote server using ajax
-return timeout(1500, function() {
+return _timeout(1500, function() {
   return {
     name: 'Event With Timeout';
   }
