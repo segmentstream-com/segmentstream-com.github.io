@@ -17,8 +17,9 @@ OneSignal is a system for sending cross-browser and cross-platform push notifica
 <ul class="page-navigation">
   <li><a href="#0">Introduction</a></li>
   <li><a href="#1">OneSignal App ID</a></li>
+  <li><a href="#2">Automatic registration</a></li>
   <li><a href="#3">Push subscription trigger event</a></li>
-  <li><a href="#4">Automatic registration</a></li>
+  <li><a href="#4">Use Slide Prompt</a></li>
   <li><a href="#6">Tag settings</a></li>
   <li><a href="#7">Tracking system popup events</a></li>
 </ul>
@@ -52,6 +53,12 @@ You can find the App ID in the OneSignal interface.
 
 Copy the ID and paste it into the "OneSignal App ID" field of the integration settings window.
 
+### <a name="2"></a>Automatic registration
+------
+If you enable this toggle switch, the subscription window will appear immediately after the first page of your site is loaded.
+
+> We do not recommend using this method of collecting subscriptions.
+
 ### <a name="3"></a>Push subscription trigger event
 ------
 In order for the user to receive push notifications, he must first subscribe. The subscription form depends only on the version of the browser, you can not change it in any way. You can only control the moment the form appears in the user's browser.
@@ -60,13 +67,16 @@ In order for the user to receive push notifications, he must first subscribe. Th
 
 SegmentStream allows you to control the moment the subscription window is displayed. To specify this point, specify the name of the event in the corresponding field. After this event occurs (it will be pushed to the `digitalData.events` array), a standard window for subscribing to push notifications will be displayed.
 
-### <a name="4"></a>Automatic registration
+### <a name="4"></a>Use Slide Prompt
 ------
-If you enable this toggle switch, the subscription window will appear immediately after the first page of your site is loaded.
+If you enable this toggle switch, a stylized OneSignal popup will appear instead of the system subscription window.
 
-> We do not recommend using this method of collecting subscriptions.
+![](/img/integrations.onesignal.5.png)
 
-### <a name="6"></a>Tag settings
+>This option only works if the 'Custom Code' setup was selected in the OneSignal cabinet.
+>When using this option without the 'Custom Code' setup, the configurations setup inside the OneSignal cabinet will be overwritten.
+
+### <a name="5"></a>Tag settings
 ------
 OneSignal provides ample opportunities for building trigger communications. For example, you can configure the sending of push notifications to those users who put the goods in the basket and left (the abandoned basket). For this, the system must know the composition of the basket each time the page is loaded.
 
@@ -79,7 +89,7 @@ To configure the transfer of variables, fill in 3 fields:
 
 See the first screenshot for an example.
 
-### <a name="7"></a>Tracking system popup events
+### <a name="6"></a>Tracking system popup events
 ------
 OneSignal gives you the option to subscribe to the events of interaction with the push notifications subscription system. There are 3 ways to interact:
  - Click on "Allow" - "Allowed Push Notifications"
