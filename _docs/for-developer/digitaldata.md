@@ -64,6 +64,7 @@ Detailed object descriptions:
  - [version](/digitaldata/standard-version)
  - [website](/digitaldata/website)
  - [page](/digitaldata/page)
+ - [user](/digitaldata/user)
  - [product](/digitaldata/product)
  - [wishlist](/digitaldata/wishlist)
  - [cart](/digitaldata/cart)
