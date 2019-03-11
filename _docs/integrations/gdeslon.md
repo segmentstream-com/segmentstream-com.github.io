@@ -59,6 +59,18 @@ Before you start setting up the integration in the SegmentStream panel, you need
 ------
 The Merchant ID is a unique identifier for your online project and is issued by GdeSlon employees at your request.
 
+### <a name="2_1"></a>Product feed has grouped products
+------
+GdeSlon receives information about products placed on the site through an XML feed.
+
+For correct integration, GdeSlon should also receive information about the interaction of users with products on the site - views, additions to the shopping cart, purchases, etc. The system must correctly match what it sees in the incoming events with the XML feed.
+
+-If you use grouping of goods using the `item_group_id` xml-feed parameter - be sure to activate this setting.
+  >In this case, the product id from your XML feed must match the `product.skuCode` of the `digitalData` object. Be sure to fill `product.skuCode` and `product.id` in each `product`.
+
+ -If you do NOT use grouping of goods using the `item_group_id` xml-feed parameter - do not activate this setting.
+  >In this case, the product id from your XML feed must match the `product.id` of the `digitalData` object.
+
 ### <a name="3"></a>Default action code
 ------
 Depending on your arrangements with GdeSlon, you may have one or more action codes. For example, if you pay one price for the first purchase in your online store, and another for another purchase.
