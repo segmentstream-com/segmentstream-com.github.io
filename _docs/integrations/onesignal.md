@@ -20,6 +20,7 @@ OneSignal is a system for sending cross-browser and cross-platform push notifica
   <li><a href="#2">Automatic registration</a></li>
   <li><a href="#3">Push subscription trigger event</a></li>
   <li><a href="#4">Use Slide Prompt</a></li>
+  <li><a href="#4_1">Slide Prompt Options</a></li>
   <li><a href="#6">Tag settings</a></li>
   <li><a href="#7">Tracking system popup events</a></li>
 </ul>
@@ -75,6 +76,19 @@ If you enable this toggle switch, a stylized OneSignal popup will appear instead
 
 >This option only works if the 'Custom Code' setup was selected in the OneSignal cabinet.
 >When using this option without the 'Custom Code' setup, the configurations setup inside the OneSignal cabinet will be overwritten.
+
+### <a name="4_1"></a>Slide Prompt Options
+------
+When you turn on the "Use Slide Prompt" toggle switch, the OneSignal pop-up window apears with the standart text, as shown in the screenshot above.<br>
+You can customize this text using the Slide Prompt Options. The text configuration is divided into 3 parts:
+- Slide Prompt action message (maximum length 90 characters)
+- Slide Prompt accept button text (maximum length 15 characters)
+- Slide Prompt cancel button text (maximum length 15 characters)
+
+Blank fields are displayed with the standard text.
+
+Configuration example and the result:
+![](/img/integrations.onesignal.7.png)
 
 ### <a name="5"></a>Tag settings
 ------
