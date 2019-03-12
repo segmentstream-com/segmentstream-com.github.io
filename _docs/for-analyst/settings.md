@@ -51,9 +51,13 @@ However, LocalStorage stores information within the same domain. This means that
 > If different sections of your site are located on subdomains - use Cookie instead of LocalStorage
 
 For the domain to set the cookie, specify the top-level domain.
-For example, your online store is located at https://shop.ru, but the basket is located at https://cart.shop.ru. To ensure that the information stored on the pages of the goods cards is available from the shopping cart pages, you must use the cookie with the domain shop.ru
+For example, your online store is located at https://shop.com, but the basket is located at https://cart.shop.com. To ensure that the information stored on the pages of the goods cards is available from the shopping cart pages, you must use the cookie with the domain shop.ru
 
 > Cookies store only 4kb. Pay attention to this when saving large arrays or strings.
+
+> When storing cookies that consist solely of numbers (for example: '123'), the variable will be stored as a number.
+If it is necessary to return a string of this type in a variable, it is necessary to add the function String() in the variable setting, for example: `return String(_digitalData('user.leadId'));`
+![](/img/settings.2.png)
 
 ### <a name="3"></a> Session Length in Seconds
 ------
