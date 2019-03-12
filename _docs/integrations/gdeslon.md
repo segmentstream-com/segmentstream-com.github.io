@@ -138,4 +138,12 @@ You also need to configure the filling of certain variables of the `digitalData`
 * `transaction.orderId`, `transaction.total`, `transaction.lineItems`.
 
 Table for clarification:
-![](/img/integrations.gdeslon.2.png)
+
+Events | Required variables
+--- | ---
+Viewed Page |	page.type
+Viewed Product Detail |	page.type<br> [product].id<br> [product].skuCode<br> [product].unitSalePrice
+Viewed Product Listing | page.type<br> [product].id<br> [product].skuCode<br> [product].unitSalePrice<br> listing.items<br> listing.categoryId
+Searched Products |	page.type<br> [product].id<br> [product].skuCode<br> [product].unitSalePrice<br> listing.items
+Viewed Cart |	page.type<br> [product].id<br> [product].skuCode<br> [product].unitSalePrice<br> lineItems.quantity
+Completed Transaction |	page.type<br> [product].id<br> [product].skuCode<br> [product].unitSalePrice<br> lineItems.quantity<br> transaction.orderId<br> transaction.total
