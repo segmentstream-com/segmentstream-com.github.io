@@ -10,7 +10,7 @@ In this section you will learn:
 * How to turn on dynamic retargeting in Facebook.
 * How to configure the transfer of custom events to Facebook.
 
-Facebook is a social network with a large set of advertising tools. Facebook shows ads in the news feed of its users, including dynamic retargeting. DigitalDataManager allows you to send data about the behavior of your users to the [Facebook Pixel](https://developers.facebook.com/docs/facebook-pixel/api-reference#events).
+Facebook is a social network with a large set of advertising tools. Facebook shows ads in the news feed of its users, including dynamic retargeting. SegmentStream allows you to send data about the behavior of your users to the [Facebook Pixel](https://developers.facebook.com/docs/facebook-pixel/api-reference#events).
 
 ### Page contents
 ------
@@ -26,7 +26,7 @@ Facebook is a social network with a large set of advertising tools. Facebook sho
 
 ### <a name="0"></a>Introduction
 ------
-Using DigitalDataManager, you can fully integrate Facebook with your site: Including standard and custom events
+Using SegmentStream, you can fully integrate Facebook with your site: Including standard and custom events
 
 [Facebook integration guide](https://developers.facebook.com/docs/facebook-pixel/api-reference)
 
@@ -73,7 +73,7 @@ For correct integration, Facebook should also receive information about the inte
 
 ### <a name="2_2"></a>Pass the cost of goods to the event value parameter
 ------
-By default, along with the `Viewed Product Detail` event, DigitalDataManager does not transfer the price of the item in the `value` parameter. In the Facebook documentation it is written that the value of an event should be passed to the value parameter and not the value of an item.
+By default, along with the `Viewed Product Detail` event, SegmentStream does not transfer the price of the item in the `value` parameter. In the Facebook documentation it is written that the value of an event should be passed to the value parameter and not the value of an item.
 If you want to transfer the value of the goods to the `value` variable - enable this setting. The currency from the variable `product.currency` will also automatically be transferred.
 
 ### <a name="3"></a>Custom events

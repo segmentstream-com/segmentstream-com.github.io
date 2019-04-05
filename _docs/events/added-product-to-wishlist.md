@@ -16,7 +16,7 @@ digitalData.events.push({
 ```
 > For a detailed description of the `product` object, see the developer section.
 
-#### From the DDManager interface
+#### From the SegmentStream interface
 > If you are sure that the product will be added to the user's Wishlist by clicking on the "Add to Favorites" button, you can use the following event settings:
 
 **Триггер**: `click`,

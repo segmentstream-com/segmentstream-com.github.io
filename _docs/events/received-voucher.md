@@ -15,5 +15,5 @@ digitalData.events.push({
 })
 ```
 
-#### From the DDManager interface
-The `Received Voucher` event can not be created from the built-in DDManager triggers. The event must be added from the site code.
+#### From the SegmentStream interface
+The `Received Voucher` event can not be created from the built-in SegmentStream triggers. The event must be added from the site code.

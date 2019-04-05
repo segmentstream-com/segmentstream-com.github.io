@@ -12,7 +12,7 @@ We do not recommend pushing the `Viewed Product` event from the site code.
 
 >Important! Product blocks must be marked with the `ddl_product` class. Also, they must have the `data-product-id` and `data-list-id` data attributes. For more information, see the HTML page layout section.
 
-#### From the DDManager interface
+#### From the SegmentStream interface
 **Trigger**: event `Impression`,
 
 **CSS selector**: `.ddl_product`,

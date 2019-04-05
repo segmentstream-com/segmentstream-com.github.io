@@ -384,7 +384,21 @@ blockquote {
     padding: 5px 15px;
 }
 
+#language-button {
+    height: 30px;
+    width: 24px;
+    top: 24px;
+    background-size: contain;
+    position: absolute;
+    right: 200px;
+}
+
 @media only screen and (max-width: 960px)  {
+
+    #language-button {
+        right: 140px;
+        top: 22px;
+    }
 
     #menu-toggle {
         background: url(../img/menu.png) no-repeat;
@@ -490,6 +504,11 @@ blockquote {
         background-size: contain;
         position: absolute;
         right: 8px;
+    }
+
+    #language-button {
+        top: 20px;
+        right: 48px;
     }
 
     .questionaire {

@@ -15,7 +15,7 @@ digitalData.events.push({
 ```
 
 
-#### From the DDManager interface
+#### From the SegmentStream interface
 **Trigger**: event `Viewed Page`
 
 **Event handler**:

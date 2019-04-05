@@ -11,7 +11,7 @@ digitalData.events.push({
   name: 'Viewed Page'
 });
 ```
-#### From the DDManager interface
+#### From the SegmentStream interface
 > You dont have to create the `Viewed Page` event. You can always use this event as a trigger when creating other events.
 
 #### Required by the following integrations:

@@ -17,8 +17,8 @@ digitalData.events.push({
 })
 ```
 
-#### From the DDManager interface
-The `Registered` event can not be created from the built-in DDManager triggers. The event must be added from the site code.
+#### From the SegmentStream interface
+The `Registered` event can not be created from the built-in SegmentStream triggers. The event must be added from the site code.
 
 #### Required by the following integrations:
 * Criteo

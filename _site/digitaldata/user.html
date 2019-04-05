@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+
+        <title>SegmentStream documentation : user</title>
+        <meta name="description" content="">
+
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/favicon/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicon/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favicon/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicon/apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/favicon/apple-touch-icon-60x60.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicon/apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/favicon/apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicon/apple-touch-icon-152x152.png" />
+        <link rel="icon" type="image/png" href="/favicon/favicon-196x196.png" sizes="196x196" />
+        <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16" />
+        <link rel="icon" type="image/png" href="/favicon/favicon-128.png" sizes="128x128" />
+        <meta name="application-name" content="&nbsp;"/>
+        <meta name="msapplication-TileColor" content="#FFFFFF" />
+        <meta name="msapplication-TileImage" content="/favicon/mstile-144x144.png" />
+        <meta name="msapplication-square70x70logo" content="/favicon/mstile-70x70.png" />
+        <meta name="msapplication-square150x150logo" content="/favicon/mstile-150x150.png" />
+        <meta name="msapplication-wide310x150logo" content="/favicon/mstile-310x150.png" />
+        <meta name="msapplication-square310x310logo" content="/favicon/mstile-310x310.png" />
+
+        <!-- <link rel="shortcut icon" type="image/x-icon" href="/favicon/favicon.ico"> -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/syntax.css">
+        <link rel="stylesheet" href="/css/main.css?v=1.1">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="/js/main.js?v=1.1"></script>
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="row">
+                <div id="header" class="col-sm-12">
+                    <div class="row">
+    <div class="col-sm-3 col-xs-12">
+        <div id="menu-toggle"></div>
+        <a target="_blank" href="https://admin.segmentstream.com/"><div id="login-button"></div></a>
+        <a class="brand" href="/"><img src="/img/segmentstream-logo.png" height="47" alt=SegmentStream documentation
+                class="ddm-logo">
+        </a>
+        <small></small>
+    </div>
+
+    <div class="col-sm-offset-5 col-sm-4 authorization">
+        <ul class="top-nav">
+            <li>
+                <a id="button-auth" target="_blank" href="https://admin.segmentstream.com/">
+                    
+                    Login
+                    
+                </a>
+            </li>
+        </ul>
+    </div>
+        
+            <a id="language-button" href='/ru/'>RU</a>
+        
+</div>
+
+
+                </div>
+            </div>
+            <div class="row">
+                
+                
+                    <div id="navigation" class="col-sm-3 col-md-3">
+                        <ul class="nav nav-list" >
+    
+    
+        
+        
+        
+        
+        
+        
+        
+            <li class="nav-header analyst ">Analyst</li>
+            
+                <li class="drop-menu analyst " data-order="0">
+                    <a href="/for-analyst/index">Overview</a>
+                </li>
+            
+                <li class="drop-menu analyst " data-order="1">
+                    <a href="/for-analyst/settings">Project settings</a>
+                </li>
+            
+                <li class="drop-menu analyst " data-order="2">
+                    <a href="/for-analyst/events">Events</a>
+                </li>
+            
+                <li class="drop-menu analyst " data-order="2">
+                    <a href="/for-analyst/integrations">Integrations</a>
+                </li>
+            
+                <li class="drop-menu analyst " data-order="4">
+                    <a href="/for-analyst/variables">Variables</a>
+                </li>
+            
+                <li class="drop-menu analyst " data-order="5">
+                    <a href="/for-analyst/scripts">Scripts</a>
+                </li>
+            
+                <li class="drop-menu analyst " data-order="6">
+                    <a href="/for-analyst/priorities">Priorities</a>
+                </li>
+            
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+            <li class="nav-header developer ">Developer</li>
+            
+                <li class="drop-menu developer " data-order="1">
+                    <a href="/for-developer/index">Overview</a>
+                </li>
+            
+                <li class="drop-menu developer " data-order="2">
+                    <a href="/for-developer/digitaldata">digitalData object</a>
+                </li>
+            
+                <li class="drop-menu developer " data-order="2">
+                    <a href="/for-developer/partners">Third-party system events</a>
+                </li>
+            
+                <li class="drop-menu developer " data-order="3">
+                    <a href="/for-developer/naming">Event and variable naming conventions</a>
+                </li>
+            
+                <li class="drop-menu developer " data-order="3">
+                    <a href="/for-developer/snippet">Connecting SegmentStream</a>
+                </li>
+            
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+            <li class="nav-header ecommerce ">Ecommerce integration</li>
+            
+                <li class="drop-menu ecommerce " data-order="1">
+                    <a href="/ecommerce/main-page">Homepage</a>
+                </li>
+            
+                <li class="drop-menu ecommerce " data-order="1">
+                    <a href="/ecommerce/index">Overview</a>
+                </li>
+            
+                <li class="drop-menu ecommerce " data-order="2">
+                    <a href="/ecommerce/listing">Product category</a>
+                </li>
+            
+                <li class="drop-menu ecommerce " data-order="3">
+                    <a href="/ecommerce/search">Search results</a>
+                </li>
+            
+                <li class="drop-menu ecommerce " data-order="4">
+                    <a href="/ecommerce/product">Product page</a>
+                </li>
+            
+                <li class="drop-menu ecommerce " data-order="5">
+                    <a href="/ecommerce/cart">Cart</a>
+                </li>
+            
+                <li class="drop-menu ecommerce " data-order="6">
+                    <a href="/ecommerce/checkout">Checkout process page</a>
+                </li>
+            
+                <li class="drop-menu ecommerce " data-order="7">
+                    <a href="/ecommerce/transaction">'Thank You' page</a>
+                </li>
+            
+                <li class="drop-menu ecommerce " data-order="8">
+                    <a href="/ecommerce/content">Content page</a>
+                </li>
+            
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+            <li class="nav-header digitaldata  active ">Variable list</li>
+            
+                <li class="drop-menu digitaldata active  " data-order="1">
+                    <a href="/digitaldata/wishlist">wishlist</a>
+                </li>
+            
+                <li class="drop-menu digitaldata active  " data-order="1">
+                    <a href="/digitaldata/cart">cart</a>
+                </li>
+            
+                <li class="drop-menu digitaldata active  " data-order="1">
+                    <a href="/digitaldata/changes">changes</a>
+                </li>
+            
+                <li class="drop-menu digitaldata active  " data-order="1">
+                    <a href="/digitaldata/context">context</a>
+                </li>
+            
+                <li class="drop-menu digitaldata active  " data-order="1">
+                    <a href="/digitaldata/events">events</a>
+                </li>
+            
+                <li class="drop-menu digitaldata active  " data-order="1">
+                    <a href="/digitaldata/listing">listing</a>
+                </li>
+            
+                <li class="drop-menu digitaldata active  " data-order="1">
+                    <a href="/digitaldata/page">page</a>
+                </li>
+            
+                <li class="drop-menu digitaldata active  " data-order="1">
+                    <a href="/digitaldata/product">product</a>
+                </li>
+            
+                <li class="drop-menu digitaldata active  " data-order="1">
+                    <a href="/digitaldata/recommendation">recommendation</a>
+                </li>
+            
+                <li class="drop-menu digitaldata active  " data-order="1">
+                    <a href="/digitaldata/standard-version">version</a>
+                </li>
+            
+                <li class="drop-menu digitaldata active  " data-order="1">
+                    <a href="/digitaldata/transaction">transaction</a>
+                </li>
+            
+                <li class="drop-menu digitaldata active   current " data-order="1">
+                    <a href="/digitaldata/user">user</a>
+                </li>
+            
+                <li class="drop-menu digitaldata active  " data-order="1">
+                    <a href="/digitaldata/website">website</a>
+                </li>
+            
+                <li class="drop-menu digitaldata active  " data-order="1">
+                    <a href="/digitaldata/campaigns">campaigns</a>
+                </li>
+            
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+            <li class="nav-header events ">Events list</li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/viewed-product">Viewed Product</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/added-payment-info">Added Payment Info</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/added-product-to-wishlist">Added Product to Wishlist</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/added-product">Added Product</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/clicked-campaign">Clicked Campaign</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/clicked-product">Clicked Product</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/completed-checkout-step">Completed Checkout Step</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/completed-transaction">Completed Transaction</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/logged-in">Logged In</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/received-voucher">Received Voucher</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/refunded-transaction">Refunded Transaction</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/registered">Registered</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/removed-product-from-wishlist">Removed Product from Wishlist</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/removed-product">Removed Product</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/searched-products">Searched Products</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/started-order">Started Order</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/subscribed">Subscribed</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/unsubscribed">Unsubscribed</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/updated-cart">Updated Cart</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/updated-profile-info">Updated Profile Info</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/viewed-campaign">Viewed Campaign</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/viewed-cart">Viewed Cart</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/viewed-checkout-step">Viewed Checkout Step</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/viewed-experiment">Viewed Experiment</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/viewed-page">Viewed Page</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/viewed-product-detail">Viewed Product Detail</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/viewed-product-listing">Viewed Product Listing</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/achieved-experiment-goal">Achieved Experiment Goal</a>
+                </li>
+            
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+            <li class="nav-header integrations ">Integration list</li>
+            
+                <li class="drop-menu integrations " data-order="1">
+                    <a href="/integrations/vkontakte">Vkontakte</a>
+                </li>
+            
+                <li class="drop-menu integrations " data-order="1">
+                    <a href="/integrations/criteo">Criteo</a>
+                </li>
+            
+                <li class="drop-menu integrations " data-order="1">
+                    <a href="/integrations/ddmanager-streaming">Streaming</a>
+                </li>
+            
+                <li class="drop-menu integrations " data-order="1">
+                    <a href="/integrations/facebook">Facebook</a>
+                </li>
+            
+                <li class="drop-menu integrations " data-order="1">
+                    <a href="/integrations/gdeslon">GdeSlon</a>
+                </li>
+            
+                <li class="drop-menu integrations " data-order="1">
+                    <a href="/integrations/google-adwords">Google Adwords</a>
+                </li>
+            
+                <li class="drop-menu integrations " data-order="1">
+                    <a href="/integrations/google-analytics">Google Analytics</a>
+                </li>
+            
+                <li class="drop-menu integrations " data-order="1">
+                    <a href="/integrations/onesignal">OneSignal</a>
+                </li>
+            
+                <li class="drop-menu integrations " data-order="1">
+                    <a href="/integrations/rtb-house">RTB House</a>
+                </li>
+            
+                <li class="drop-menu integrations " data-order="1">
+                    <a href="/integrations/yandex-metrica">Yandex.Metrica</a>
+                </li>
+            
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+    
+<!-- List additional links. It is recommended to add a divider
+    e.g. <li class="divider"></li> first to break up the content. -->
+</ul>
+
+
+                    </div>
+
+                    <div id="content" class="col-sm-9 col-md-7">
+                        <div class="page-header">
+    <h1>user
+        
+    </h1>
+</div>
+
+<p>The <code class="highlighter-rouge">digitalData.user</code> object contains the variables that describe the visitor of the site: name, email, phone, identifier in the CRM, RFM segment etc.</p>
+
+<h3 id="page-contents">Page contents</h3>
+<hr />
+<ul class="page-navigation">
+  <li><a href="#0">Introduction</a></li>
+  <li><a href="#1">user.userId</a></li>
+  <li><a href="#2">user.email</a></li>
+  <li><a href="#3">user.phone</a></li>
+  <li><a href="#4">user.isLoggedIn</a></li>
+  <li><a href="#5">user.firstName</a></li>
+  <li><a href="#6">user.lastName</a></li>
+  <li><a href="#7">user.isReturning</a></li>
+  <li><a href="#8">user.isSubscribed</a></li>
+  <li><a href="#9">user.hasTransacted</a></li>
+  <li><a href="#10">user.lastTransactionDate</a></li>
+  <li><a href="#11">user.lastDeliveryDate</a></li>
+  <li><a href="#12">user.birthDate</a></li>
+  <li><a href="#13">user.googleClientId</a></li>
+  <li><a href="#14">user.segment</a></li>
+</ul>
+
+<h3 id="introduction"><a name="0"></a>Introduction</h3>
+<hr />
+<p>The <code class="highlighter-rouge">digitalData.user</code> object must be declared and filled in the source code of each page of the site.</p>
+
+<blockquote>
+  <p>Declare the variable and give it an empty object <code class="highlighter-rouge"><span class="p">{}</span></code>, If there is no information about the visitor. If the user is not authorized, but the system recognized him - fill the object <code class="highlighter-rouge">digitalData.user</code> to the maximum.</p>
+</blockquote>
+
+<p>Example:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nb">window</span><span class="p">.</span><span class="nx">digitalData</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="p">...,</span>
+  <span class="na">user</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">firstName</span><span class="p">:</span> <span class="s2">"John"</span><span class="p">,</span>
+    <span class="na">userId</span><span class="p">:</span> <span class="s2">"4638mn1"</span><span class="p">,</span>
+    <span class="na">email</span><span class="p">:</span> <span class="s2">"jdoe@example.com"</span><span class="p">,</span>
+    <span class="na">isLoggedIn</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="na">isReturning</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="na">isSubscribed</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="na">googleClientId</span><span class="p">:</span> <span class="s2">"1234566778.7548375999"</span><span class="p">,</span>
+    <span class="na">lastName</span><span class="p">:</span> <span class="s2">"Doe"</span><span class="p">,</span>
+    <span class="na">hasTransacted</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="na">lastTransactionDate</span><span class="p">:</span> <span class="s2">"2017-12-01T09:00Z"</span><span class="p">,</span>
+    <span class="na">segment</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">rfm</span><span class="p">:</span> <span class="s2">"vip"</span><span class="p">,</span>
+      <span class="na">churnRisk</span><span class="p">:</span> <span class="s2">"low"</span><span class="p">,</span>
+      <span class="na">LTV</span><span class="p">:</span> <span class="mi">178990</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="p">...</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>The <code class="highlighter-rouge">digitalData.user</code> object can contain other variables as well. Everything depends on the needs of the project. This document lists the variables that are used frequently.</p>
+</blockquote>
+
+<h3 id="useruserid"><a name="1"></a>user.userId</h3>
+<hr />
+<p>Data type: string.</p>
+
+<p><code class="highlighter-rouge">user.userId</code> - a reserved variable that contains the primary identifier of the site visitor in your database. A visitor can have only 1 userId.</p>
+
+<h3 id="useremail"><a name="2"></a>user.email</h3>
+<hr />
+<p>Data type: string.</p>
+
+<p><code class="highlighter-rouge">user.email</code> - a reserved variable that contains the visitor’s email address. In the case of multiple email addresses from one visitor, send the main address in the <code class="highlighter-rouge">user.email</code> variable. All other addresses can be passed to the <code class="highlighter-rouge">user.emails = ['email1@mail.ru', 'email2@yandex.ru']</code> array.</p>
+
+<h3 id="userphone"><a name="3"></a>user.phone</h3>
+<hr />
+<p>Data type: string.</p>
+
+<p><code class="highlighter-rouge">user.phone</code> - a reserved variable that contains the visitor’s phone number. If there are several phone numbers from one visitor, send the main number in the <code class="highlighter-rouge">user.phone</code> variable. All other numbers can be passed to the <code class="highlighter-rouge">user.phones = ['79161001010', '79161002020']</code> array.</p>
+
+<h3 id="userisloggedin"><a name="4"></a>user.isLoggedIn</h3>
+<hr />
+<p>Data type: boolean.</p>
+
+<p><code class="highlighter-rouge">user.isLoggedIn</code> - reserved variable that contains the authorization status of the visitor. If the visitor is logged in, the variable <code class="highlighter-rouge">user.isLoggedIn</code> becomes ‘true’. Otherwise, ‘false’.</p>
+
+<h3 id="userfirstname"><a name="5"></a>user.firstName</h3>
+<hr />
+<p>Data type: string.</p>
+
+<p><code class="highlighter-rouge">user.firstName</code> - reserved variable that contains the visitor’s name.</p>
+
+<h3 id="userlastname"><a name="6"></a>user.lastName</h3>
+<hr />
+<p>Data type: string.</p>
+
+<p><code class="highlighter-rouge">user.lastName</code> - reserved variable that contains the visitor’s last name.</p>
+
+<h3 id="userisreturning"><a name="7"></a>user.isReturning</h3>
+<hr />
+<p>Data type: boolean.</p>
+
+<p><code class="highlighter-rouge">user.isReturning</code> contains information about the number of visits to the site by the user. In case the user visits the site for the first time, the variable takes the value ‘false’. In the opposite case, ‘true’.</p>
+
+<h3 id="userissubscribed"><a name="8"></a>user.isSubscribed</h3>
+<hr />
+<p>Data type: boolean.</p>
+
+<p><code class="highlighter-rouge">user.isSubscribed</code> - reserved variable that contains information about the status of a user’s subscription to an email newsletter. If the user is subscribed to a newsletter, the variable takes the value ‘true’. Otherwise, ‘false’.</p>
+
+<h3 id="userhastransacted"><a name="9"></a>user.hasTransacted</h3>
+<hr />
+<p>Data type: boolean.</p>
+
+<p><code class="highlighter-rouge">user.hasTransacted</code> - contains information about the user’s purchases. If the user previously created orders, the variable takes the value ‘true’. In the opposite case - ‘false’.</p>
+
+<h3 id="userlasttransactiondate"><a name="10"></a>user.lastTransactionDate</h3>
+<hr />
+<p>Data type: string in ISO 8601 format.</p>
+
+<p><code class="highlighter-rouge">user.lastTransactionDate</code> - contains the date of the last time the user completed a transaction.</p>
+<blockquote>
+  <p>Do not declare this variable if the user hasn’t completed any orders earlier</p>
+</blockquote>
+
+<h3 id="userlastdeliverydate"><a name="11"></a>user.lastDeliveryDate</h3>
+<hr />
+<p>Data type: string in ISO 8601 format.</p>
+
+<p><code class="highlighter-rouge">user.lastDeliveryDate</code> - contains the date the user last received an order.</p>
+<blockquote>
+  <p>Do not declare this variable if no order has been delivered to the user</p>
+</blockquote>
+
+<h3 id="userbirthdate"><a name="12"></a>user.birthDate</h3>
+<hr />
+<p>Data type: string in ISO 8601 format.</p>
+
+<p><code class="highlighter-rouge">user.birthDate</code> - contains the date of birth of the user.</p>
+<blockquote>
+  <p>Do not declare this variable if there is no information on the user’s birthday</p>
+</blockquote>
+
+<h3 id="usergoogleclientid"><a name="13"></a>user.googleClientId</h3>
+<hr />
+<p>Data type: string.</p>
+
+<p><code class="highlighter-rouge">user.googleClientId</code> - contains the browser identifier in the Google Analytics system.</p>
+<blockquote>
+  <p>This variable is declared and populated automatically by the SegmentStream library when you enable the GA integration via SegmentStream.</p>
+</blockquote>
+
+<h3 id="usersegment"><a name="14"></a>user.segment</h3>
+<hr />
+<p>Data type: object.</p>
+
+<p><code class="highlighter-rouge">user.segment</code> is an object that contains variables that characterize the user.</p>
+<blockquote>
+  <p>If you use different types of segmentation of your users: RFM, LTV, Sale, etc. - describe them in an object inside <code class="highlighter-rouge">digitalData.user.segment</code>.</p>
+</blockquote>
+
+
+                    </div>
+                
+            </div>
+            <button id="myBtn" title="Go to top"></button>
+        </div>
+        <div id="footer">
+            <div class="questionaire">
+    <div class="row step1">
+        <div class="col-sm-6 question">
+            
+            Was this page helpful?
+            
+        </div>
+        <div class="col-sm-6 answer">
+            <div class="button-questionaire">
+                YES
+            </div>
+            <div class="button-questionaire">
+                NO
+            </div>
+        </div>
+    </div>
+    <div class="row step2">
+        <div class="col-xs-12">
+            
+            Thanks for the feedback!
+            
+        </div>
+    </div>
+</div>
+<a href="/"><img src="/img/segmentstream-logo.png" height="47" alt=SegmentStream documentation class="ddm-logo-footer"></a>
+<p class="copyright">Copyright © 2019 "SegmentStream" All rights reserved.</p>
+
+        </div>
+        <!-- SegmentStream snippet -->
+        <script type="text/javascript">
+        (function(h,d){d=d||"cdn.segmentstream.com";var a=window.ddManager=window.ddManager||[];window.ddListener=window.ddListener||[];var b=window.digitalData=window.digitalData||{};b.events=b.events||[];b.changes=b.changes||[];if(!a.initialize)if(a.invoked)window.console&&console.error&&console.error("SegmentStream snippet included twice.");else{a.invoked=!0;a.methods="initialize addIntegration persist unpersist on once off setConsent".split(" ");a.factory=function(k){return function(){var c=Array.prototype.slice.call(arguments);
+        c.unshift(k);a.push(c);return a}};for(b=0;b<a.methods.length;b++){var f=a.methods[b];a[f]=a.factory(f)}a.load=function(a){var c=document.createElement("script");c.type="text/javascript";c.charset="utf-8";c.async=!0;c.src=a;a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(c,a)};a.loadProject=function(b){var c=window.location.search;if(0<=c.indexOf("ddm_test_mode=1"))try{var e=!0;window.localStorage.setItem("_ddm_test_mode","1")}catch(g){}else if(0<=c.indexOf("ddm_test_mode=0"))try{e=
+        !1,window.localStorage.removeItem("_ddm_test_mode")}catch(g){}else try{e="1"===window.localStorage.getItem("_ddm_test_mode")}catch(g){}e?a.load(window.DDMANAGER_TESTMODE_INIT_URL||"https://api.segmentstream.com/v1/ddm-initialization/"+b+".js"):a.load(window.DDMANAGER_INIT_URL||"https://"+d+"/project/"+b+".js")};a.CDN_DOMAIN=d;a.SNIPPET_VERSION="1.0.11";a.loadProject(h)}})("975f9b27-a262-4758-9019-0bf81f566d68");
+        </script>
+        <!-- //SegmentStream snippet -->
+    </body>
+</html>

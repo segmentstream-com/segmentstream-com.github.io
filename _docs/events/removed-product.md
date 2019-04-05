@@ -17,7 +17,7 @@ digitalData.events.push({
 ```
 > For a detailed description of the `product` object, see the developer section.
 
-#### From the DDManager interface
+#### From the SegmentStream interface
 > The deletion of a product from the cart is a server event. We recommend pushing it to the `digitalData.events` array from the site code.
 
 #### Required by the following integrations:

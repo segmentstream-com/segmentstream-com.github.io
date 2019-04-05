@@ -20,7 +20,7 @@ digitalData.events.push({
 
 > For a detailed description of the [`cart`](/digitaldata/cart) object, see the developer section.
 
-#### From the DDManager interface
+#### From the SegmentStream interface
 > `Updated Cart` is a server event. We recommend pushing it to the `digitalData.events` array from the site code. Do not create the "Updated Cart" event based on a "Add to cart" button click trigger. Clicking on the button does not guarantee that the cart content on the server will update.
 
 #### Required by the following integrations:

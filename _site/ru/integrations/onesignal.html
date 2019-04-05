@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+
+        <title>SegmentStream documentation : OneSignal</title>
+        <meta name="description" content="">
+
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/favicon/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicon/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favicon/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicon/apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/favicon/apple-touch-icon-60x60.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicon/apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/favicon/apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicon/apple-touch-icon-152x152.png" />
+        <link rel="icon" type="image/png" href="/favicon/favicon-196x196.png" sizes="196x196" />
+        <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16" />
+        <link rel="icon" type="image/png" href="/favicon/favicon-128.png" sizes="128x128" />
+        <meta name="application-name" content="&nbsp;"/>
+        <meta name="msapplication-TileColor" content="#FFFFFF" />
+        <meta name="msapplication-TileImage" content="/favicon/mstile-144x144.png" />
+        <meta name="msapplication-square70x70logo" content="/favicon/mstile-70x70.png" />
+        <meta name="msapplication-square150x150logo" content="/favicon/mstile-150x150.png" />
+        <meta name="msapplication-wide310x150logo" content="/favicon/mstile-310x150.png" />
+        <meta name="msapplication-square310x310logo" content="/favicon/mstile-310x310.png" />
+
+        <!-- <link rel="shortcut icon" type="image/x-icon" href="/favicon/favicon.ico"> -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/syntax.css">
+        <link rel="stylesheet" href="/css/main.css?v=1.1">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="/js/main.js?v=1.1"></script>
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="row">
+                <div id="header" class="col-sm-12">
+                    <div class="row">
+    <div class="col-sm-3 col-xs-12">
+        <div id="menu-toggle"></div>
+        <a target="_blank" href="https://admin.segmentstream.com/"><div id="login-button"></div></a>
+        <a class="brand" href="/"><img src="/img/segmentstream-logo.png" height="47" alt=SegmentStream documentation
+                class="ddm-logo">
+        </a>
+        <small></small>
+    </div>
+
+    <div class="col-sm-offset-5 col-sm-4 authorization">
+        <ul class="top-nav">
+            <li>
+                <a id="button-auth" target="_blank" href="https://admin.segmentstream.com/">
+                    
+                    Войти
+                    
+                </a>
+            </li>
+        </ul>
+    </div>
+        
+            <a id="language-button" href='/'>EN</a>
+        
+</div>
+
+
+                </div>
+            </div>
+            <div class="row">
+                
+                
+                    <div id="navigation" class="col-sm-3 col-md-3">
+                        <ul class="nav nav-list" >
+    
+    
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+            <li class="nav-header analystRU ">Аналитику</li>
+            
+                <li class="drop-menu analystRU " data-order="0">
+                    <a href="/ru/for-analyst/index">Обзор</a>
+                </li>
+            
+                <li class="drop-menu analystRU " data-order="1">
+                    <a href="/ru/for-analyst/settings">Настройки проекта</a>
+                </li>
+            
+                <li class="drop-menu analystRU " data-order="2">
+                    <a href="/ru/for-analyst/events">События</a>
+                </li>
+            
+                <li class="drop-menu analystRU " data-order="2">
+                    <a href="/ru/for-analyst/integrations">Интеграции</a>
+                </li>
+            
+                <li class="drop-menu analystRU " data-order="4">
+                    <a href="/ru/for-analyst/variables">Переменные</a>
+                </li>
+            
+                <li class="drop-menu analystRU " data-order="5">
+                    <a href="/ru/for-analyst/scripts">Скрипты</a>
+                </li>
+            
+                <li class="drop-menu analystRU " data-order="6">
+                    <a href="/ru/for-analyst/priorities">Приоритеты</a>
+                </li>
+            
+        
+        
+    
+        
+        
+        
+        
+        
+            <li class="nav-header developerRU ">Разработчику</li>
+            
+                <li class="drop-menu developerRU " data-order="1">
+                    <a href="/ru/for-developer/index">Обзор</a>
+                </li>
+            
+                <li class="drop-menu developerRU " data-order="2">
+                    <a href="/ru/for-developer/digitaldata">Объект digitalData</a>
+                </li>
+            
+                <li class="drop-menu developerRU " data-order="2">
+                    <a href="/ru/for-developer/partners">События партнерских систем</a>
+                </li>
+            
+                <li class="drop-menu developerRU " data-order="3">
+                    <a href="/ru/for-developer/naming">Правила именования переменных и событий</a>
+                </li>
+            
+                <li class="drop-menu developerRU " data-order="3">
+                    <a href="/ru/for-developer/snippet">Подключение SegmentStream</a>
+                </li>
+            
+        
+        
+    
+        
+        
+        
+        
+        
+            <li class="nav-header ecommerceRU ">Внедрение в ecommerce</li>
+            
+                <li class="drop-menu ecommerceRU " data-order="1">
+                    <a href="/ru/ecommerce/main-page">Главная страница</a>
+                </li>
+            
+                <li class="drop-menu ecommerceRU " data-order="1">
+                    <a href="/ru/ecommerce/index">Обзор</a>
+                </li>
+            
+                <li class="drop-menu ecommerceRU " data-order="2">
+                    <a href="/ru/ecommerce/listing">Категория товаров</a>
+                </li>
+            
+                <li class="drop-menu ecommerceRU " data-order="3">
+                    <a href="/ru/ecommerce/search">Результаты поиска</a>
+                </li>
+            
+                <li class="drop-menu ecommerceRU " data-order="4">
+                    <a href="/ru/ecommerce/product">Карточка товара</a>
+                </li>
+            
+                <li class="drop-menu ecommerceRU " data-order="5">
+                    <a href="/ru/ecommerce/cart">Корзина</a>
+                </li>
+            
+                <li class="drop-menu ecommerceRU " data-order="6">
+                    <a href="/ru/ecommerce/checkout">Страница оформления заказа</a>
+                </li>
+            
+                <li class="drop-menu ecommerceRU " data-order="7">
+                    <a href="/ru/ecommerce/transaction">Спасибо за покупку</a>
+                </li>
+            
+                <li class="drop-menu ecommerceRU " data-order="8">
+                    <a href="/ru/ecommerce/content">Текстовая страница</a>
+                </li>
+            
+        
+        
+    
+        
+        
+        
+        
+        
+            <li class="nav-header digitalDataRU ">Список переменных</li>
+            
+                <li class="drop-menu digitalDataRU " data-order="1">
+                    <a href="/ru/digitaldata/wishlist">wishlist</a>
+                </li>
+            
+                <li class="drop-menu digitalDataRU " data-order="1">
+                    <a href="/ru/digitaldata/cart">cart</a>
+                </li>
+            
+                <li class="drop-menu digitalDataRU " data-order="1">
+                    <a href="/ru/digitaldata/changes">changes</a>
+                </li>
+            
+                <li class="drop-menu digitalDataRU " data-order="1">
+                    <a href="/ru/digitaldata/context">context</a>
+                </li>
+            
+                <li class="drop-menu digitalDataRU " data-order="1">
+                    <a href="/ru/digitaldata/events">events</a>
+                </li>
+            
+                <li class="drop-menu digitalDataRU " data-order="1">
+                    <a href="/ru/digitaldata/listing">listing</a>
+                </li>
+            
+                <li class="drop-menu digitalDataRU " data-order="1">
+                    <a href="/ru/digitaldata/page">page</a>
+                </li>
+            
+                <li class="drop-menu digitalDataRU " data-order="1">
+                    <a href="/ru/digitaldata/product">product</a>
+                </li>
+            
+                <li class="drop-menu digitalDataRU " data-order="1">
+                    <a href="/ru/digitaldata/recommendation">recommendation</a>
+                </li>
+            
+                <li class="drop-menu digitalDataRU " data-order="1">
+                    <a href="/ru/digitaldata/standard-version">version</a>
+                </li>
+            
+                <li class="drop-menu digitalDataRU " data-order="1">
+                    <a href="/ru/digitaldata/transaction">transaction</a>
+                </li>
+            
+                <li class="drop-menu digitalDataRU " data-order="1">
+                    <a href="/ru/digitaldata/user">user</a>
+                </li>
+            
+                <li class="drop-menu digitalDataRU " data-order="1">
+                    <a href="/ru/digitaldata/website">website</a>
+                </li>
+            
+                <li class="drop-menu digitalDataRU " data-order="1">
+                    <a href="/ru/digitaldata/campaigns">campaigns</a>
+                </li>
+            
+        
+        
+    
+        
+        
+        
+        
+        
+            <li class="nav-header eventsRU ">Список событий</li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/viewed-product">Viewed Product</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/added-payment-info">Added Payment Info</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/added-product-to-wishlist">Added Product to Wishlist</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/added-product">Added Product</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/clicked-campaign">Clicked Campaign</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/clicked-product">Clicked Product</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/completed-checkout-step">Completed Checkout Step</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/completed-transaction">Completed Transaction</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/logged-in">Logged In</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/received-voucher">Received Voucher</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/refunded-transaction">Refunded Transaction</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/registered">Registered</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/removed-product-from-wishlist">Removed Product from Wishlist</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/removed-product">Removed Product</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/searched-products">Searched Products</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/started-order">Started Order</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/subscribed">Subscribed</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/unsubscribed">Unsubscribed</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/updated-cart">Updated Cart</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/updated-profile-info">Updated Profile Info</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/viewed-campaign">Viewed Campaign</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/viewed-cart">Viewed Cart</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/viewed-checkout-step">Viewed Checkout Step</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/viewed-experiment">Viewed Experiment</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/viewed-page">Viewed Page</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/viewed-product-detail">Viewed Product Detail</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/viewed-product-listing">Viewed Product Listing</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/achieved-experiment-goal">Achieved Experiment Goal</a>
+                </li>
+            
+        
+        
+    
+        
+        
+        
+        
+        
+            <li class="nav-header integrationsRU ">Список интеграций</li>
+            
+                <li class="drop-menu integrationsRU " data-order="1">
+                    <a href="/ru/integrations/yandex-metrica">Yandex Metrica</a>
+                </li>
+            
+                <li class="drop-menu integrationsRU " data-order="1">
+                    <a href="/ru/integrations/admitad">Admitad</a>
+                </li>
+            
+                <li class="drop-menu integrationsRU " data-order="1">
+                    <a href="/ru/integrations/citiads">Cityads</a>
+                </li>
+            
+                <li class="drop-menu integrationsRU " data-order="1">
+                    <a href="/ru/integrations/criteo">Criteo</a>
+                </li>
+            
+                <li class="drop-menu integrationsRU " data-order="1">
+                    <a href="/ru/integrations/ddmanager-streaming">SegmentStream Streaming</a>
+                </li>
+            
+                <li class="drop-menu integrationsRU " data-order="1">
+                    <a href="/ru/integrations/facebook">Facebook</a>
+                </li>
+            
+                <li class="drop-menu integrationsRU " data-order="1">
+                    <a href="/ru/integrations/gdeslon">GdeSlon</a>
+                </li>
+            
+                <li class="drop-menu integrationsRU " data-order="1">
+                    <a href="/ru/integrations/google-adwords">Google Adwords</a>
+                </li>
+            
+                <li class="drop-menu integrationsRU " data-order="1">
+                    <a href="/ru/integrations/google-analytics">Google Analytics</a>
+                </li>
+            
+                <li class="drop-menu integrationsRU " data-order="1">
+                    <a href="/ru/integrations/google-tag-manager">Google Tag Manager</a>
+                </li>
+            
+                <li class="drop-menu integrationsRU " data-order="1">
+                    <a href="/ru/integrations/linkprofit">LinkProfit</a>
+                </li>
+            
+                <li class="drop-menu integrationsRU " data-order="1">
+                    <a href="/ru/integrations/mindbox">Mindbox</a>
+                </li>
+            
+                <li class="drop-menu integrationsRU " data-order="1">
+                    <a href="/ru/integrations/mixmarket">Mixmarket</a>
+                </li>
+            
+                <li class="drop-menu integrationsRU " data-order="1">
+                    <a href="/ru/integrations/ofsys">Ofsys</a>
+                </li>
+            
+                <li class="drop-menu integrationsRU  current " data-order="1">
+                    <a href="/ru/integrations/onesignal">OneSignal</a>
+                </li>
+            
+                <li class="drop-menu integrationsRU " data-order="1">
+                    <a href="/ru/integrations/owox">OWOX</a>
+                </li>
+            
+                <li class="drop-menu integrationsRU " data-order="1">
+                    <a href="/ru/integrations/retail-rocket">Retail Rocket</a>
+                </li>
+            
+                <li class="drop-menu integrationsRU " data-order="1">
+                    <a href="/ru/integrations/rtb-house">RTB House</a>
+                </li>
+            
+                <li class="drop-menu integrationsRU " data-order="1">
+                    <a href="/ru/integrations/vkontakte">Vkontakte</a>
+                </li>
+            
+                <li class="drop-menu integrationsRU " data-order="1">
+                    <a href="/ru/integrations/weborama">Weborama</a>
+                </li>
+            
+                <li class="drop-menu integrationsRU " data-order="1">
+                    <a href="/ru/integrations/actionpay">Actionpay</a>
+                </li>
+            
+        
+        
+    
+<!-- List additional links. It is recommended to add a divider
+    e.g. <li class="divider"></li> first to break up the content. -->
+</ul>
+
+
+                    </div>
+
+                    <div id="content" class="col-sm-9 col-md-7">
+                        <div class="page-header">
+    <h1>OneSignal
+        
+    </h1>
+</div>
+
+<p>В данном разделе вы узнаете:</p>
+<ul>
+  <li>Как подключить Веб-Пуши от oneSignal на сайте.</li>
+  <li>Как настроить передачу сегментов в oneSignal.</li>
+</ul>
+
+<p>OneSignal - система для отправки кросс-браузерных и кросс-платформенных пуш-уведомлений. OneSignal умеет создавать аудитории на основе событий сайта и отправлять браузерные пуши этой аудитории. SegmentStream позволяет передавать данные о поведении ваших пользователей в <a href="https://onesignal.com/">oneSignal</a>.</p>
+
+<h3 id="Навигация-по-странице">Навигация по странице</h3>
+<hr />
+<ul class="page-navigation">
+  <li><a href="#0">Введение</a></li>
+  <li><a href="#1">OneSignal App ID</a></li>
+  <li><a href="#2">Автоматическая регистрация</a></li>
+  <li><a href="#3">Событие digitalData, инициирующее подписку на push</a></li>
+  <li><a href="#4">Использовать Slide Prompt</a></li>
+  <li><a href="#4_1">Настройки Slide Prompt</a></li>
+  <li><a href="#5">Настройка тегов</a></li>
+  <li><a href="#6">Перехват событий системного попапа</a></li>
+</ul>
+
+<h3 id="Введение"><a name="0"></a>Введение</h3>
+<hr />
+<p>С помощью SegmentStream можно полностью интегрировать OneSignal с вашим сайтом.<br />
+<a href="https://documentation.onesignal.com/docs/web-push-sdk-setup-https">Техническая документация OneSignal</a></p>
+
+<blockquote>
+  <p>Рекомендуем предварительно полностью перевести ваш сайт на протокол https. В этом случае процесс подписки на пуш-уведомления для ваших пользователей будет проще.</p>
+</blockquote>
+
+<blockquote>
+  <p>Перед настройкой интеграции в интерфейсе SegmentStream необходимо установить в корень вашего сайта 3 файла.<br /> Подробнее читайте в <a href="https://documentation.onesignal.com/docs/web-push-sdk-setup-https#section-2-upload-required-files">документации от OneSignal</a></p>
+</blockquote>
+
+<p>Чтобы настроить интеграцию с OneSignal:</p>
+<ol>
+  <li>Авторизуйтесь на сайте <a href="https://admin.segmentstream.com/">segmentstream.com</a> и перейдите к панели управления интеграциями</li>
+  <li>Войдите на вкладку “Интеграции” и кликните по блоку с логотипом OneSignal.</li>
+  <li>В открывшейся панели - настройте интеграцию.</li>
+</ol>
+
+<p><img src="/img/integrations.onesignal.1.png" alt="" /></p>
+
+<p>Подробнее о настройках вы можете прочитать ниже.</p>
+
+<h3 id="onesignal-app-id"><a name="1"></a>OneSignal App ID</h3>
+<hr />
+<p>Идентификатор проекта вы можете найти в интерфейсе OneSignal.</p>
+
+<p><img src="/img/integrations.onesignal.2.png" alt="" /></p>
+
+<p>Скопируйте идентификатор и вставьте его в поле “OneSignal App ID” окна настроек интеграции.</p>
+
+<h3 id="Автоматическая-регистрация"><a name="2"></a>Автоматическая регистрация</h3>
+<hr />
+<p>Если включить данный тумблер, то окно подписки будет появляться сразу после загрузки первой страницы вашего сайта.</p>
+
+<blockquote>
+  <p>Не рекомендуем использовать данный метод сбора подписок.</p>
+</blockquote>
+
+<h3 id="Событие-digitaldata-инициирующее-подписку-на-push"><a name="3"></a>Событие digitalData, инициирующее подписку на push</h3>
+<hr />
+<p>Для того чтобы пользователь смог получать пуш-уведомления, сначала он должен подписаться. Форма для подписки зависит только от версии браузера, вы не можете ее никак изменить. Вы можете только управлять моментом появления формы ы браузере пользователя.</p>
+
+<p><img src="/img/integrations.onesignal.4.png" alt="" /></p>
+
+<p>SegmentStream позволяет управлять моментом показа окна подписки. Для того чтобы задать этот момент, укажите в соответствующем поле имя события. После того, как данное событие произойдет (будет добавлено в массив <code class="highlighter-rouge">digitalData.events</code>), отобразится стандартное окно подписки на push-уведомления.</p>
+
+<h3 id="Использовать-slide-prompt"><a name="4"></a>Использовать Slide Prompt</h3>
+<hr />
+<p>Если включить данный тумблер, то вместо системного окна подписки будет появляться стилизованное окно подписки от OneSignal.</p>
+
+<p><img src="/img/integrations.onesignal.5.png" alt="" /></p>
+
+<blockquote>
+  <p>Эта опция работает корректно только если в настройках в кабинете OneSignal была выбрана настройка “Custom Code”.
+При использовании этой опции без настройки “Custom Code”, конфигурации сделаные в кабинете OneSignal будут перезаписаны.</p>
+</blockquote>
+
+<h3 id="Настройки-slide-prompt"><a name="4_1"></a>Настройки Slide Prompt</h3>
+<hr />
+<p>При включении тумблера “Использовать Slide Prompt” во всплывающем окне передается стандартный текст OneSignal как показано на скриншоте выше.<br />
+Используя настройки Slide Prompt можно кастомизировать этот текст. Настройка текста делится на 3 части:</p>
+<ul>
+  <li>Сообщение Slide Prompt (максимальная длинна 90 символов)</li>
+  <li>Текст кнопки подтверждения Slide Prompt (максимальная длинна 15 символов)</li>
+  <li>Текст кнопки отказа Slide Prompt (максимальная длинна 15 символов)</li>
+</ul>
+
+<p>Незаполненные поля отображаются со стандартным текстом.</p>
+
+<p>Пример настройки и результат:
+<img src="/img/integrations.onesignal.7.png" alt="" /></p>
+
+<h3 id="Настройка-тегов"><a name="5"></a>Настройка тегов</h3>
+<hr />
+<p>OneSignal дает широкие возможности для построения триггерных коммуникаций. Например вы можете настроить отправку пуш-уведомлений тем пользователям, которые положили товар в корзину и ушли (брошенная корзина). Для этого система должна знать состав корзины при каждой загрузки страницы.</p>
+
+<p>SegmentStream умеет отправлять вместе с любыми событиями любую информацию из объекта <code class="highlighter-rouge">digitalData</code>.</p>
+
+<p>Чтобы настроить передачу переменных, заполните 2 поля:</p>
+<ol>
+  <li>Слева - Название переменной, вы хотите видеть в интерфейсе OneSignal</li>
+  <li>В центре - укажите <code class="highlighter-rouge">digitalData</code>, если переменная присутствует в объекте всегда или <code class="highlighter-rouge">event</code>, если переменная появляется только в определенных событиях.</li>
+  <li>Справа - путь к переменной в объекте <code class="highlighter-rouge">digitalData</code> или <code class="highlighter-rouge">event</code>.</li>
+</ol>
+
+<p>Пример заполнения смотрите на первом скриншоте.</p>
+
+<h3 id="Перехват-событий-системного-попапа"><a name="6"></a>Перехват событий системного попапа</h3>
+<hr />
+<p>OneSignal дает возможность подписаться на события взаимодействия с системным попапом подписки на push-уведомления. Существует 3 способа взаимодействия:</p>
+<ul>
+  <li>Нажатие на кнопку “Разрешить” - “Allowed Push Notifications”</li>
+  <li>Нажатие на кнопку “Блокировать” - “Blocked Push Notifications”</li>
+  <li>Нажатие на крестик, закрывающий попап - “Closed Push Notifications Prompt”</li>
+</ul>
+
+<p><img src="/img/integrations.onesignal.6.png" alt="" /></p>
+
+<p>После того, как пользователь совершит одно из 3-х возможных действий, в массив <code class="highlighter-rouge">digitalData.events</code> будет автоматически добавлено соответствующее событие:</p>
+
+<ol>
+  <li>Нажатие на кнопку “Разрешить”
+    <div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">digitalData</span><span class="p">.</span><span class="nx">events</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
+  <span class="na">category</span><span class="p">:</span> <span class="s1">'Push Notifications'</span><span class="p">,</span>
+  <span class="na">name</span><span class="p">:</span> <span class="s1">'Allowed Push Notifications'</span>
+<span class="p">})</span>
+</code></pre>
+    </div>
+  </li>
+  <li>Нажатие на кнопку “Блокировать”
+    <div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">digitalData</span><span class="p">.</span><span class="nx">events</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
+  <span class="na">category</span><span class="p">:</span> <span class="s1">'Push Notifications'</span><span class="p">,</span>
+  <span class="na">name</span><span class="p">:</span> <span class="s1">'Blocked Push Notifications'</span>
+<span class="p">})</span>
+</code></pre>
+    </div>
+  </li>
+  <li>Нажатие на крестик, закрывающий попап
+    <div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">digitalData</span><span class="p">.</span><span class="nx">events</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
+  <span class="na">category</span><span class="p">:</span> <span class="s1">'Push Notifications'</span><span class="p">,</span>
+  <span class="na">name</span><span class="p">:</span> <span class="s1">'Closed Push Notifications Prompt'</span>
+<span class="p">})</span>
+</code></pre>
+    </div>
+  </li>
+</ol>
+
+
+                    </div>
+                
+            </div>
+            <button id="myBtn" title="Go to top"></button>
+        </div>
+        <div id="footer">
+            <div class="questionaire">
+    <div class="row step1">
+        <div class="col-sm-6 question">
+            
+            Эта статья была для Вас полезна?
+            
+        </div>
+        <div class="col-sm-6 answer">
+            <div class="button-questionaire">
+                ДА
+            </div>
+            <div class="button-questionaire">
+                НЕТ
+            </div>
+        </div>
+    </div>
+    <div class="row step2">
+        <div class="col-xs-12">
+            
+            Спасибо за отзыв!
+            
+        </div>
+    </div>
+</div>
+<a href="/"><img src="/img/segmentstream-logo.png" height="47" alt=SegmentStream documentation class="ddm-logo-footer"></a>
+<p class="copyright">Copyright © 2019 "SegmentStream" Все права защищены.</p>
+
+        </div>
+        <!-- SegmentStream snippet -->
+        <script type="text/javascript">
+        (function(h,d){d=d||"cdn.segmentstream.com";var a=window.ddManager=window.ddManager||[];window.ddListener=window.ddListener||[];var b=window.digitalData=window.digitalData||{};b.events=b.events||[];b.changes=b.changes||[];if(!a.initialize)if(a.invoked)window.console&&console.error&&console.error("SegmentStream snippet included twice.");else{a.invoked=!0;a.methods="initialize addIntegration persist unpersist on once off setConsent".split(" ");a.factory=function(k){return function(){var c=Array.prototype.slice.call(arguments);
+        c.unshift(k);a.push(c);return a}};for(b=0;b<a.methods.length;b++){var f=a.methods[b];a[f]=a.factory(f)}a.load=function(a){var c=document.createElement("script");c.type="text/javascript";c.charset="utf-8";c.async=!0;c.src=a;a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(c,a)};a.loadProject=function(b){var c=window.location.search;if(0<=c.indexOf("ddm_test_mode=1"))try{var e=!0;window.localStorage.setItem("_ddm_test_mode","1")}catch(g){}else if(0<=c.indexOf("ddm_test_mode=0"))try{e=
+        !1,window.localStorage.removeItem("_ddm_test_mode")}catch(g){}else try{e="1"===window.localStorage.getItem("_ddm_test_mode")}catch(g){}e?a.load(window.DDMANAGER_TESTMODE_INIT_URL||"https://api.segmentstream.com/v1/ddm-initialization/"+b+".js"):a.load(window.DDMANAGER_INIT_URL||"https://"+d+"/project/"+b+".js")};a.CDN_DOMAIN=d;a.SNIPPET_VERSION="1.0.11";a.loadProject(h)}})("975f9b27-a262-4758-9019-0bf81f566d68");
+        </script>
+        <!-- //SegmentStream snippet -->
+    </body>
+</html>

@@ -12,15 +12,15 @@ digitalData.events.push({
   category: 'Ecommerce',
   name: 'Refunded Transaction',
   transaction: {
-    orderId: 'The id of the refunded order', 
+    orderId: 'The id of the refunded order',
     lineItems: [...]
   }
 });
 ```
 > For more information about the `lineItems` array of  objects, see the 'for developer' section.
 
-#### From the DDManager interface
-The `Refunded Transaction` event can not be created from the built-in DDManager triggers. The event must be added from the site code.
+#### From the SegmentStream interface
+The `Refunded Transaction` event can not be created from the built-in SegmentStream triggers. The event must be added from the site code.
 
 #### Required by the following integrations:
 * Google Analytics (Enhanced Ecommerce)

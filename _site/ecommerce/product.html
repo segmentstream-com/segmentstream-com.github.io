@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+
+        <title>SegmentStream documentation : Product page</title>
+        <meta name="description" content="">
+
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/favicon/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicon/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favicon/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicon/apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/favicon/apple-touch-icon-60x60.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicon/apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/favicon/apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicon/apple-touch-icon-152x152.png" />
+        <link rel="icon" type="image/png" href="/favicon/favicon-196x196.png" sizes="196x196" />
+        <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16" />
+        <link rel="icon" type="image/png" href="/favicon/favicon-128.png" sizes="128x128" />
+        <meta name="application-name" content="&nbsp;"/>
+        <meta name="msapplication-TileColor" content="#FFFFFF" />
+        <meta name="msapplication-TileImage" content="/favicon/mstile-144x144.png" />
+        <meta name="msapplication-square70x70logo" content="/favicon/mstile-70x70.png" />
+        <meta name="msapplication-square150x150logo" content="/favicon/mstile-150x150.png" />
+        <meta name="msapplication-wide310x150logo" content="/favicon/mstile-310x150.png" />
+        <meta name="msapplication-square310x310logo" content="/favicon/mstile-310x310.png" />
+
+        <!-- <link rel="shortcut icon" type="image/x-icon" href="/favicon/favicon.ico"> -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/syntax.css">
+        <link rel="stylesheet" href="/css/main.css?v=1.1">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="/js/main.js?v=1.1"></script>
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="row">
+                <div id="header" class="col-sm-12">
+                    <div class="row">
+    <div class="col-sm-3 col-xs-12">
+        <div id="menu-toggle"></div>
+        <a target="_blank" href="https://admin.segmentstream.com/"><div id="login-button"></div></a>
+        <a class="brand" href="/"><img src="/img/segmentstream-logo.png" height="47" alt=SegmentStream documentation
+                class="ddm-logo">
+        </a>
+        <small></small>
+    </div>
+
+    <div class="col-sm-offset-5 col-sm-4 authorization">
+        <ul class="top-nav">
+            <li>
+                <a id="button-auth" target="_blank" href="https://admin.segmentstream.com/">
+                    
+                    Login
+                    
+                </a>
+            </li>
+        </ul>
+    </div>
+        
+            <a id="language-button" href='/ru/'>RU</a>
+        
+</div>
+
+
+                </div>
+            </div>
+            <div class="row">
+                
+                
+                    <div id="navigation" class="col-sm-3 col-md-3">
+                        <ul class="nav nav-list" >
+    
+    
+        
+        
+        
+        
+        
+        
+        
+            <li class="nav-header analyst ">Analyst</li>
+            
+                <li class="drop-menu analyst " data-order="0">
+                    <a href="/for-analyst/index">Overview</a>
+                </li>
+            
+                <li class="drop-menu analyst " data-order="1">
+                    <a href="/for-analyst/settings">Project settings</a>
+                </li>
+            
+                <li class="drop-menu analyst " data-order="2">
+                    <a href="/for-analyst/events">Events</a>
+                </li>
+            
+                <li class="drop-menu analyst " data-order="2">
+                    <a href="/for-analyst/integrations">Integrations</a>
+                </li>
+            
+                <li class="drop-menu analyst " data-order="4">
+                    <a href="/for-analyst/variables">Variables</a>
+                </li>
+            
+                <li class="drop-menu analyst " data-order="5">
+                    <a href="/for-analyst/scripts">Scripts</a>
+                </li>
+            
+                <li class="drop-menu analyst " data-order="6">
+                    <a href="/for-analyst/priorities">Priorities</a>
+                </li>
+            
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+            <li class="nav-header developer ">Developer</li>
+            
+                <li class="drop-menu developer " data-order="1">
+                    <a href="/for-developer/index">Overview</a>
+                </li>
+            
+                <li class="drop-menu developer " data-order="2">
+                    <a href="/for-developer/digitaldata">digitalData object</a>
+                </li>
+            
+                <li class="drop-menu developer " data-order="2">
+                    <a href="/for-developer/partners">Third-party system events</a>
+                </li>
+            
+                <li class="drop-menu developer " data-order="3">
+                    <a href="/for-developer/naming">Event and variable naming conventions</a>
+                </li>
+            
+                <li class="drop-menu developer " data-order="3">
+                    <a href="/for-developer/snippet">Connecting SegmentStream</a>
+                </li>
+            
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+            <li class="nav-header ecommerce  active ">Ecommerce integration</li>
+            
+                <li class="drop-menu ecommerce active  " data-order="1">
+                    <a href="/ecommerce/main-page">Homepage</a>
+                </li>
+            
+                <li class="drop-menu ecommerce active  " data-order="1">
+                    <a href="/ecommerce/index">Overview</a>
+                </li>
+            
+                <li class="drop-menu ecommerce active  " data-order="2">
+                    <a href="/ecommerce/listing">Product category</a>
+                </li>
+            
+                <li class="drop-menu ecommerce active  " data-order="3">
+                    <a href="/ecommerce/search">Search results</a>
+                </li>
+            
+                <li class="drop-menu ecommerce active   current " data-order="4">
+                    <a href="/ecommerce/product">Product page</a>
+                </li>
+            
+                <li class="drop-menu ecommerce active  " data-order="5">
+                    <a href="/ecommerce/cart">Cart</a>
+                </li>
+            
+                <li class="drop-menu ecommerce active  " data-order="6">
+                    <a href="/ecommerce/checkout">Checkout process page</a>
+                </li>
+            
+                <li class="drop-menu ecommerce active  " data-order="7">
+                    <a href="/ecommerce/transaction">'Thank You' page</a>
+                </li>
+            
+                <li class="drop-menu ecommerce active  " data-order="8">
+                    <a href="/ecommerce/content">Content page</a>
+                </li>
+            
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+            <li class="nav-header digitaldata ">Variable list</li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/wishlist">wishlist</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/cart">cart</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/changes">changes</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/context">context</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/events">events</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/listing">listing</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/page">page</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/product">product</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/recommendation">recommendation</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/standard-version">version</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/transaction">transaction</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/user">user</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/website">website</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/campaigns">campaigns</a>
+                </li>
+            
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+            <li class="nav-header events ">Events list</li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/viewed-product">Viewed Product</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/added-payment-info">Added Payment Info</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/added-product-to-wishlist">Added Product to Wishlist</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/added-product">Added Product</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/clicked-campaign">Clicked Campaign</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/clicked-product">Clicked Product</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/completed-checkout-step">Completed Checkout Step</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/completed-transaction">Completed Transaction</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/logged-in">Logged In</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/received-voucher">Received Voucher</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/refunded-transaction">Refunded Transaction</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/registered">Registered</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/removed-product-from-wishlist">Removed Product from Wishlist</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/removed-product">Removed Product</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/searched-products">Searched Products</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/started-order">Started Order</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/subscribed">Subscribed</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/unsubscribed">Unsubscribed</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/updated-cart">Updated Cart</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/updated-profile-info">Updated Profile Info</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/viewed-campaign">Viewed Campaign</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/viewed-cart">Viewed Cart</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/viewed-checkout-step">Viewed Checkout Step</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/viewed-experiment">Viewed Experiment</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/viewed-page">Viewed Page</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/viewed-product-detail">Viewed Product Detail</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/viewed-product-listing">Viewed Product Listing</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/achieved-experiment-goal">Achieved Experiment Goal</a>
+                </li>
+            
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+            <li class="nav-header integrations ">Integration list</li>
+            
+                <li class="drop-menu integrations " data-order="1">
+                    <a href="/integrations/vkontakte">Vkontakte</a>
+                </li>
+            
+                <li class="drop-menu integrations " data-order="1">
+                    <a href="/integrations/criteo">Criteo</a>
+                </li>
+            
+                <li class="drop-menu integrations " data-order="1">
+                    <a href="/integrations/ddmanager-streaming">Streaming</a>
+                </li>
+            
+                <li class="drop-menu integrations " data-order="1">
+                    <a href="/integrations/facebook">Facebook</a>
+                </li>
+            
+                <li class="drop-menu integrations " data-order="1">
+                    <a href="/integrations/gdeslon">GdeSlon</a>
+                </li>
+            
+                <li class="drop-menu integrations " data-order="1">
+                    <a href="/integrations/google-adwords">Google Adwords</a>
+                </li>
+            
+                <li class="drop-menu integrations " data-order="1">
+                    <a href="/integrations/google-analytics">Google Analytics</a>
+                </li>
+            
+                <li class="drop-menu integrations " data-order="1">
+                    <a href="/integrations/onesignal">OneSignal</a>
+                </li>
+            
+                <li class="drop-menu integrations " data-order="1">
+                    <a href="/integrations/rtb-house">RTB House</a>
+                </li>
+            
+                <li class="drop-menu integrations " data-order="1">
+                    <a href="/integrations/yandex-metrica">Yandex.Metrica</a>
+                </li>
+            
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+    
+<!-- List additional links. It is recommended to add a divider
+    e.g. <li class="divider"></li> first to break up the content. -->
+</ul>
+
+
+                    </div>
+
+                    <div id="content" class="col-sm-9 col-md-7">
+                        <div class="page-header">
+    <h1>Product page
+        
+    </h1>
+</div>
+
+<p>Below is an example of filling the data layer <code class="highlighter-rouge">digitalData</code> for a page with a detailed description of the product.</p>
+
+<h3 id="page-contents">Page contents</h3>
+<hr />
+<ul class="page-navigation">
+  <li><a href="#0">Introduction</a></li>
+  <li><a href="#0.1">product</a></li>
+  <li><a href="#1">page</a></li>
+  <li><a href="#2">website</a></li>
+  <li><a href="#3">user</a></li>
+  <li><a href="#4">cart</a></li>
+  <li><a href="#5">version</a></li>
+  <li><a href="#6">campaigns</a></li>
+  <li><a href="#7">recommendation</a></li>
+  <li><a href="#8">Whole object</a></li>
+</ul>
+
+<h3 id="introduction"><a name="0"></a>Introduction</h3>
+<hr />
+<p>On the product detail of the online store, the following objects must be declared and filled:</p>
+<ul>
+  <li>Required: <code class="highlighter-rouge">product</code>, <code class="highlighter-rouge">page</code>, <code class="highlighter-rouge">website</code>, <code class="highlighter-rouge">user</code>, <code class="highlighter-rouge">cart</code>, <code class="highlighter-rouge">version</code></li>
+  <li>Optional (depends on page content): <code class="highlighter-rouge">campaigns</code> ,<code class="highlighter-rouge">recommendation</code></li>
+</ul>
+
+<h3 id="product"><a name="0.1"></a>product</h3>
+<hr />
+<p>The <code class="highlighter-rouge">digitalData.product</code> object must be declared and filled on any page that has <code class="highlighter-rouge">digitalData.page.type</code> = ‘product’.</p>
+
+<p><a href="/digitaldata/product">More about the <strong>product</strong> object</a></p>
+
+<p>Example:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nb">window</span><span class="p">.</span><span class="nx">digitalData</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="p">...,</span>
+  <span class="na">product</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">id</span><span class="p">:</span> <span class="s2">"1234567890"</span><span class="p">,</span>
+    <span class="na">url</span><span class="p">:</span> <span class="s2">"http://website.com/product.html"</span><span class="p">,</span>
+    <span class="na">imageUrl</span><span class="p">:</span> <span class="s2">"http://website.com/image.png"</span><span class="p">,</span>
+    <span class="na">thumbnailUrl</span><span class="p">:</span> <span class="s2">"http://website.com/image_thump.png"</span><span class="p">,</span>
+    <span class="na">name</span><span class="p">:</span> <span class="s2">"Leather skirt"</span><span class="p">,</span>
+    <span class="na">description</span><span class="p">:</span> <span class="s2">"Description"</span><span class="p">,</span>
+    <span class="na">manufacturer</span><span class="p">:</span> <span class="s2">"Gucci"</span><span class="p">,</span>
+    <span class="na">category</span><span class="p">:</span> <span class="p">[</span><span class="s1">'Clothing'</span><span class="p">,</span><span class="s1">'Skirts'</span><span class="p">,</span><span class="s1">'Mini'</span><span class="p">],</span>
+    <span class="na">currency</span><span class="p">:</span> <span class="s2">"GBP"</span><span class="p">,</span>
+    <span class="na">unitPrice</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+    <span class="na">unitSalePrice</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+    <span class="na">skuCode</span><span class="p">:</span> <span class="s1">'TBL6065RW'</span>
+    <span class="na">stock</span><span class="p">:</span> <span class="mi">21</span><span class="p">,</span>
+    <span class="na">voucher</span><span class="p">:</span> <span class="s2">"MYVOUCHER1"</span><span class="p">,</span>
+    <span class="na">color</span><span class="p">:</span> <span class="s2">"black"</span><span class="p">,</span>
+    <span class="na">size</span><span class="p">:</span> <span class="s2">"41"</span><span class="p">,</span>
+    <span class="na">variations</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">...,</span>
+      <span class="p">{</span>
+        <span class="na">id</span><span class="p">:</span> <span class="s2">"1234567890"</span><span class="p">,</span>
+        <span class="na">skuCode</span><span class="p">:</span> <span class="s2">"TBL6065RF"</span><span class="p">,</span>
+        <span class="na">size</span><span class="p">:</span> <span class="s2">"43"</span>
+      <span class="p">},</span>
+      <span class="p">...</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="p">...</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<h3 id="page"><a name="1"></a>page</h3>
+<hr />
+<p>You need to declare and fill in only 2 variables in the <code class="highlighter-rouge">digitalData.page</code> object. All other variables will be automatically filled by the SegmentStream library.</p>
+
+<p><a href="/digitaldata/page">More about the <strong>page</strong> object</a></p>
+
+<p>Example:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code>  <span class="nb">window</span><span class="p">.</span><span class="nx">digitalData</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="p">...,</span>
+    <span class="na">page</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">type</span><span class="p">:</span> <span class="s1">'product'</span><span class="p">,</span>
+      <span class="na">category</span><span class="p">:</span> <span class="s1">'Product Detail'</span>
+    <span class="p">},</span>
+    <span class="p">...</span>
+  <span class="p">}</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>We recommend passing giving the <code class="highlighter-rouge">digitalData.page.category</code> variable a value of ‘Sold Out’ on products that aren’t in stock.</p>
+</blockquote>
+
+<h3 id="website"><a name="2"></a>website</h3>
+<hr />
+<p>You need to declare and fill in only 6 variables in the <code class="highlighter-rouge">digitalData.website</code> object. The following 3 variables are required: <code class="highlighter-rouge">website.type</code>,<code class="highlighter-rouge"> website.currency</code>, <code class="highlighter-rouge">website.environment</code>. The remaining variables depend on the characteristics of your site.</p>
+
+<p><a href="/digitaldata/website">More about the <strong>website</strong> object</a></p>
+
+<p>Example:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code>  <span class="nb">window</span><span class="p">.</span><span class="nx">digitalData</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="p">...,</span>
+    <span class="na">website</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">region</span><span class="p">:</span> <span class="s2">"London"</span><span class="p">,</span>
+      <span class="na">regionId</span><span class="p">:</span> <span class="s2">"11"</span><span class="p">,</span>
+      <span class="na">type</span><span class="p">:</span> <span class="s2">"desktop"</span><span class="p">,</span>
+      <span class="na">language</span><span class="p">:</span> <span class="s2">"en-gb"</span><span class="p">,</span>
+      <span class="na">currency</span><span class="p">:</span> <span class="s2">"GBP"</span><span class="p">,</span>
+      <span class="na">environment</span><span class="p">:</span> <span class="s2">"production"</span>
+    <span class="p">},</span>
+    <span class="p">...</span>
+  <span class="p">}</span>
+</code></pre>
+</div>
+
+<h3 id="user"><a name="3"></a>user</h3>
+<hr />
+<p>The composition of the <code class="highlighter-rouge">digitalData.user</code> object strongly depends on the requirements of the project. We recommend that you fill at least the following variables: <code class="highlighter-rouge">userId</code>, <code class="highlighter-rouge">user.email</code>, <code class="highlighter-rouge">user.isLoggedIn</code>, <code class="highlighter-rouge">user.firstName</code>, <code class="highlighter-rouge">user.isSubscribed</code></p>
+
+<blockquote>
+  <p>If you do not have information about a particular property of a visitor, do not declare the variable. For example: you do not know if the visitor is subscribed to the email-list. <strong>Correct</strong>: do not declare the variable <code class="highlighter-rouge">digitalData.user.isSubscribed</code>, <strong>Wrong</strong>: declare a variable and assign it a value of FALSE.</p>
+</blockquote>
+
+<blockquote>
+  <p>Even if the visitor is not authorized, but has been authorized in the past, pass the information about him to the object <code class="highlighter-rouge">digitalData.user</code>. This will help with the targeting of personalization campaigns and in the management of advertising systems.</p>
+</blockquote>
+
+<p><a href="/digitaldata/user">More about the <strong>user</strong> object</a></p>
+
+<p>Example:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nb">window</span><span class="p">.</span><span class="nx">digitalData</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="p">...,</span>
+  <span class="na">user</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">firstName</span><span class="p">:</span> <span class="s2">"John"</span><span class="p">,</span>
+    <span class="na">userId</span><span class="p">:</span> <span class="s2">"4638mn1"</span><span class="p">,</span>
+    <span class="na">email</span><span class="p">:</span> <span class="s2">"jdoe@example.com"</span><span class="p">,</span>
+    <span class="na">isLoggedIn</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="na">isSubscribed</span><span class="p">:</span> <span class="kc">false</span>
+  <span class="p">},</span>
+  <span class="p">...</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<h3 id="cart"><a name="4"></a>cart</h3>
+<hr />
+<p>The <code class="highlighter-rouge">digitalData.cart</code> object must be declared and filled when loading each page of the site.</p>
+
+<p>If the user’s cart is empty fill the object as described in the <a href="/digitaldata/cart#0">cart object description</a></p>
+
+<p><a href="/digitaldata/cart">More about the <strong>cart</strong> object</a></p>
+
+<p>Example:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nb">window</span><span class="p">.</span><span class="nx">digitalData</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="p">...,</span>
+  <span class="na">cart</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">id</span><span class="p">:</span> <span class="s2">"CART2203"</span><span class="p">,</span>
+    <span class="na">currency</span><span class="p">:</span> <span class="s2">"GBP"</span><span class="p">,</span>
+    <span class="na">subtotal</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+    <span class="na">total</span><span class="p">:</span> <span class="mi">105</span><span class="p">,</span>
+    <span class="na">lineItems</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">...,</span>
+      <span class="p">{</span>
+        <span class="na">product</span><span class="p">:</span> <span class="p">{</span>
+          <span class="na">id</span><span class="p">:</span> <span class="s2">"1234567890"</span><span class="p">,</span>
+          <span class="na">url</span><span class="p">:</span> <span class="s2">"http://website.com/product.html"</span><span class="p">,</span>
+          <span class="na">imageUrl</span><span class="p">:</span> <span class="s2">"http://website.com/image.png"</span><span class="p">,</span>
+          <span class="na">thumbnailUrl</span><span class="p">:</span> <span class="s2">"http://website.com/image_thumb.png"</span><span class="p">,</span>
+          <span class="na">name</span><span class="p">:</span> <span class="s2">"Big Boots"</span><span class="p">,</span>
+          <span class="na">description</span><span class="p">:</span> <span class="s2">"Product description"</span><span class="p">,</span>
+          <span class="na">manufacturer</span><span class="p">:</span> <span class="s2">"Timberland"</span><span class="p">,</span>
+          <span class="na">category</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Footwear"</span><span class="p">,</span><span class="s2">"Boots"</span><span class="p">],</span>
+          <span class="na">currency</span><span class="p">:</span> <span class="s2">"GBP"</span><span class="p">,</span>
+          <span class="na">unitPrice</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+          <span class="na">unitSalePrice</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
+          <span class="na">skuCode</span><span class="p">:</span> <span class="s2">"TBL6065RW"</span>
+        <span class="p">},</span>
+        <span class="na">quantity</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="na">subtotal</span><span class="p">:</span> <span class="mi">100</span>
+      <span class="p">},</span>
+      <span class="p">...</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="p">...</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<h3 id="version"><a name="5"></a>version</h3>
+<hr />
+<p>The <code class="highlighter-rouge">digitalData.version</code> variable must be declared and filled when loading each page of the site.</p>
+
+<p><a href="/digitaldata/standard-version">More about the <strong>version</strong> variable</a></p>
+
+<p>Example:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nb">window</span><span class="p">.</span><span class="nx">digitalData</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="p">...,</span>
+  <span class="na">version</span><span class="p">:</span> <span class="s1">'1.1.3'</span><span class="p">,</span>
+  <span class="p">...</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<h2 id="optional-properties">Optional properties</h2>
+
+<h3 id="campaigns"><a name="6"></a>campaigns</h3>
+<hr />
+<p>The <code class="highlighter-rouge">digitalData.campaigns</code> array must be declared and filled if the page you are loading has banners whose effectiveness you plan to track.</p>
+
+<p><a href="/digitaldata/campaigns">More about the <strong>campaigns</strong> array</a></p>
+
+<p>Example:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nb">window</span><span class="p">.</span><span class="nx">digitalData</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="p">...,</span>
+  <span class="na">campaigns</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">...,</span>
+    <span class="p">{</span>
+      <span class="na">id</span><span class="p">:</span> <span class="s2">"PROMO124"</span><span class="p">,</span>
+      <span class="na">name</span><span class="p">:</span> <span class="s2">"SS18 SALE"</span><span class="p">,</span>
+      <span class="na">description</span><span class="p">:</span> <span class="s2">"1500 models for sale"</span><span class="p">,</span>
+      <span class="na">category</span><span class="p">:</span> <span class="s2">"Banner"</span><span class="p">,</span>
+      <span class="na">subcategory</span><span class="p">:</span> <span class="s2">"Sales"</span><span class="p">,</span>
+      <span class="na">design</span><span class="p">:</span> <span class="s2">"600x120"</span><span class="p">,</span>
+      <span class="na">position</span><span class="p">:</span> <span class="s2">"left"</span>
+    <span class="p">},</span>
+    <span class="p">...</span>
+  <span class="p">],</span>
+  <span class="p">...</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<h3 id="recommendation"><a name="7"></a>recommendation</h3>
+<hr />
+<p>The <code class="highlighter-rouge">digitalData.recommendation</code> array must be declared and filled if there is at least 1 list of products on the loaded page.</p>
+
+<p><a href="/digitaldata/recommendation">More about the <strong>recommendation</strong> array</a></p>
+
+<p>Example:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nb">window</span><span class="p">.</span><span class="nx">digitalData</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="p">...,</span>
+  <span class="na">recommendation</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">...,</span>
+    <span class="p">{</span>
+      <span class="na">listName</span><span class="p">:</span> <span class="s2">"Recently viewed products"</span><span class="p">,</span>
+      <span class="na">listId</span><span class="p">:</span> <span class="s2">"recentlyViewed"</span><span class="p">,</span>
+      <span class="na">items</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">...,</span>
+        <span class="p">{</span>
+          <span class="na">id</span><span class="p">:</span> <span class="s2">"1234567890"</span><span class="p">,</span>
+          <span class="na">url</span><span class="p">:</span> <span class="s2">"http://website.com/product.html"</span><span class="p">,</span>
+          <span class="na">imageUrl</span><span class="p">:</span> <span class="s2">"http://website.com/image.png"</span><span class="p">,</span>
+          <span class="na">thumbnailUrl</span><span class="p">:</span> <span class="s2">"http://website.com/image_thumb.png"</span><span class="p">,</span>
+          <span class="na">name</span><span class="p">:</span> <span class="s2">"Big Boots"</span><span class="p">,</span>
+          <span class="na">description</span><span class="p">:</span> <span class="s2">"Product description"</span><span class="p">,</span>
+          <span class="na">manufacturer</span><span class="p">:</span> <span class="s2">"Timberland"</span><span class="p">,</span>
+          <span class="na">category</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Footwear"</span><span class="p">,</span><span class="s2">"Boots"</span><span class="p">],</span>
+          <span class="na">currency</span><span class="p">:</span> <span class="s2">"GBP"</span><span class="p">,</span>
+          <span class="na">unitPrice</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+          <span class="na">unitSalePrice</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
+          <span class="na">skuCode</span><span class="p">:</span> <span class="s2">"TBL6065RW"</span>
+        <span class="p">},</span>
+        <span class="p">...</span>
+      <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="p">...</span>
+  <span class="p">],</span>
+  <span class="p">...</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<h3 id="whole-object"><a name="8"></a>Whole object</h3>
+<hr />
+<p>In the end, your code will be similar to:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nb">window</span><span class="p">.</span><span class="nx">digitalData</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">product</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">id</span><span class="p">:</span> <span class="s2">"1234567890"</span><span class="p">,</span>
+    <span class="na">url</span><span class="p">:</span> <span class="s2">"http://website.com/product.html"</span><span class="p">,</span>
+    <span class="na">imageUrl</span><span class="p">:</span> <span class="s2">"http://website.com/image.png"</span><span class="p">,</span>
+    <span class="na">thumbnailUrl</span><span class="p">:</span> <span class="s2">"http://website.com/image_thump.png"</span><span class="p">,</span>
+    <span class="na">name</span><span class="p">:</span> <span class="s2">"Leather skirt"</span><span class="p">,</span>
+    <span class="na">description</span><span class="p">:</span> <span class="s2">"Description"</span><span class="p">,</span>
+    <span class="na">manufacturer</span><span class="p">:</span> <span class="s2">"Gucci"</span><span class="p">,</span>
+    <span class="na">category</span><span class="p">:</span> <span class="p">[</span><span class="s1">'Clothing'</span><span class="p">,</span><span class="s1">'Skirts'</span><span class="p">,</span><span class="s1">'Mini'</span><span class="p">],</span>
+    <span class="na">currency</span><span class="p">:</span> <span class="s2">"GBP"</span><span class="p">,</span>
+    <span class="na">unitPrice</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+    <span class="na">unitSalePrice</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+    <span class="na">skuCode</span><span class="p">:</span> <span class="s1">'TBL6065RW'</span>
+    <span class="na">stock</span><span class="p">:</span> <span class="mi">21</span><span class="p">,</span>
+    <span class="na">voucher</span><span class="p">:</span> <span class="s2">"MYVOUCHER1"</span><span class="p">,</span>
+    <span class="na">color</span><span class="p">:</span> <span class="s2">"black"</span><span class="p">,</span>
+    <span class="na">size</span><span class="p">:</span> <span class="s2">"41"</span><span class="p">,</span>
+    <span class="na">variations</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="na">id</span><span class="p">:</span> <span class="s2">"1234567890"</span><span class="p">,</span>
+        <span class="na">skuCode</span><span class="p">:</span> <span class="s2">"TBL6065RF"</span><span class="p">,</span>
+        <span class="na">size</span><span class="p">:</span> <span class="s2">"43"</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="na">page</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">type</span><span class="p">:</span> <span class="s1">'product'</span><span class="p">,</span>
+    <span class="na">category</span><span class="p">:</span> <span class="s1">'Product Detail'</span>
+  <span class="p">},</span>
+  <span class="na">website</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">type</span><span class="p">:</span> <span class="s2">"desktop"</span><span class="p">,</span>
+    <span class="na">currency</span><span class="p">:</span> <span class="s2">"GBP"</span><span class="p">,</span>
+    <span class="na">environment</span><span class="p">:</span> <span class="s2">"production"</span>
+  <span class="p">},</span>
+  <span class="na">user</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">firstName</span><span class="p">:</span> <span class="s2">"John"</span><span class="p">,</span>
+    <span class="na">userId</span><span class="p">:</span> <span class="s2">"4638mn1"</span><span class="p">,</span>
+    <span class="na">email</span><span class="p">:</span> <span class="s2">"jdoe@example.com"</span><span class="p">,</span>
+    <span class="na">isLoggedIn</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="na">isSubscribed</span><span class="p">:</span> <span class="kc">false</span>
+  <span class="p">},</span>
+  <span class="na">cart</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">id</span><span class="p">:</span> <span class="s2">"CART2203"</span><span class="p">,</span>
+    <span class="na">currency</span><span class="p">:</span> <span class="s2">"GBP"</span><span class="p">,</span>
+    <span class="na">vouchers</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">"MYVOUCHER1"</span>
+    <span class="p">],</span>
+    <span class="na">voucherDiscount</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="na">tax</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="na">shippingCost</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="na">shippingMethod</span><span class="p">:</span> <span class="s2">"Delivery"</span><span class="p">,</span>
+    <span class="na">subtotal</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+    <span class="na">total</span><span class="p">:</span> <span class="mi">95</span><span class="p">,</span>
+    <span class="na">lineItems</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="na">product</span><span class="p">:</span> <span class="p">{</span>
+          <span class="na">id</span><span class="p">:</span> <span class="s2">"1234567890"</span><span class="p">,</span>
+          <span class="na">url</span><span class="p">:</span> <span class="s2">"http://website.com/product.html"</span><span class="p">,</span>
+          <span class="na">imageUrl</span><span class="p">:</span> <span class="s2">"http://website.com/image.png"</span><span class="p">,</span>
+          <span class="na">thumbnailUrl</span><span class="p">:</span> <span class="s2">"http://website.com/image_thumb.png"</span><span class="p">,</span>
+          <span class="na">name</span><span class="p">:</span> <span class="s2">"Big Boots"</span><span class="p">,</span>
+          <span class="na">description</span><span class="p">:</span> <span class="s2">"Product description"</span><span class="p">,</span>
+          <span class="na">manufacturer</span><span class="p">:</span> <span class="s2">"Timberland"</span><span class="p">,</span>
+          <span class="na">category</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Footwear"</span><span class="p">,</span><span class="s2">"Boots"</span><span class="p">],</span>
+          <span class="na">currency</span><span class="p">:</span> <span class="s2">"GBP"</span><span class="p">,</span>
+          <span class="na">unitPrice</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+          <span class="na">unitSalePrice</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
+          <span class="na">skuCode</span><span class="p">:</span> <span class="s2">"TBL6065RW"</span>
+        <span class="p">},</span>
+        <span class="na">quantity</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="na">subtotal</span><span class="p">:</span> <span class="mi">100</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="na">version</span><span class="p">:</span> <span class="s1">'1.1.3'</span><span class="p">,</span>
+  <span class="na">campaigns</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="na">id</span><span class="p">:</span> <span class="s2">"PROMO124"</span><span class="p">,</span>
+      <span class="na">name</span><span class="p">:</span> <span class="s2">"SS18 SALE"</span><span class="p">,</span>
+      <span class="na">description</span><span class="p">:</span> <span class="s2">"1500 models for sale"</span><span class="p">,</span>
+      <span class="na">category</span><span class="p">:</span> <span class="s2">"Banner"</span><span class="p">,</span>
+      <span class="na">subcategory</span><span class="p">:</span> <span class="s2">"Sales"</span><span class="p">,</span>
+      <span class="na">design</span><span class="p">:</span> <span class="s2">"600x120"</span><span class="p">,</span>
+      <span class="na">position</span><span class="p">:</span> <span class="s2">"left"</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="na">recommendation</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="na">listName</span><span class="p">:</span> <span class="s2">"Recently viewed products"</span><span class="p">,</span>
+      <span class="na">listId</span><span class="p">:</span> <span class="s2">"recentlyViewed"</span><span class="p">,</span>
+      <span class="na">items</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="na">id</span><span class="p">:</span> <span class="s2">"1234567890"</span><span class="p">,</span>
+          <span class="na">url</span><span class="p">:</span> <span class="s2">"http://website.com/product.html"</span><span class="p">,</span>
+          <span class="na">imageUrl</span><span class="p">:</span> <span class="s2">"http://website.com/image.png"</span><span class="p">,</span>
+          <span class="na">thumbnailUrl</span><span class="p">:</span> <span class="s2">"http://website.com/image_thumb.png"</span><span class="p">,</span>
+          <span class="na">name</span><span class="p">:</span> <span class="s2">"Big Boots"</span><span class="p">,</span>
+          <span class="na">description</span><span class="p">:</span> <span class="s2">"Product description"</span><span class="p">,</span>
+          <span class="na">manufacturer</span><span class="p">:</span> <span class="s2">"Timberland"</span><span class="p">,</span>
+          <span class="na">category</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Footwear"</span><span class="p">,</span><span class="s2">"Boots"</span><span class="p">],</span>
+          <span class="na">currency</span><span class="p">:</span> <span class="s2">"GBP"</span><span class="p">,</span>
+          <span class="na">unitPrice</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+          <span class="na">unitSalePrice</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
+          <span class="na">skuCode</span><span class="p">:</span> <span class="s2">"TBL6065RW"</span>
+        <span class="p">}</span>
+      <span class="p">]</span>
+    <span class="p">},</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+<span class="cm">/* Here you should place the snippet of the initialization of the SegmentStream library */</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>For convenience, we did not list the repeating elements of the recommendations, items, campaigns, lineItems arrays but left just one example in each.</p>
+</blockquote>
+
+
+                    </div>
+                
+            </div>
+            <button id="myBtn" title="Go to top"></button>
+        </div>
+        <div id="footer">
+            <div class="questionaire">
+    <div class="row step1">
+        <div class="col-sm-6 question">
+            
+            Was this page helpful?
+            
+        </div>
+        <div class="col-sm-6 answer">
+            <div class="button-questionaire">
+                YES
+            </div>
+            <div class="button-questionaire">
+                NO
+            </div>
+        </div>
+    </div>
+    <div class="row step2">
+        <div class="col-xs-12">
+            
+            Thanks for the feedback!
+            
+        </div>
+    </div>
+</div>
+<a href="/"><img src="/img/segmentstream-logo.png" height="47" alt=SegmentStream documentation class="ddm-logo-footer"></a>
+<p class="copyright">Copyright © 2019 "SegmentStream" All rights reserved.</p>
+
+        </div>
+        <!-- SegmentStream snippet -->
+        <script type="text/javascript">
+        (function(h,d){d=d||"cdn.segmentstream.com";var a=window.ddManager=window.ddManager||[];window.ddListener=window.ddListener||[];var b=window.digitalData=window.digitalData||{};b.events=b.events||[];b.changes=b.changes||[];if(!a.initialize)if(a.invoked)window.console&&console.error&&console.error("SegmentStream snippet included twice.");else{a.invoked=!0;a.methods="initialize addIntegration persist unpersist on once off setConsent".split(" ");a.factory=function(k){return function(){var c=Array.prototype.slice.call(arguments);
+        c.unshift(k);a.push(c);return a}};for(b=0;b<a.methods.length;b++){var f=a.methods[b];a[f]=a.factory(f)}a.load=function(a){var c=document.createElement("script");c.type="text/javascript";c.charset="utf-8";c.async=!0;c.src=a;a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(c,a)};a.loadProject=function(b){var c=window.location.search;if(0<=c.indexOf("ddm_test_mode=1"))try{var e=!0;window.localStorage.setItem("_ddm_test_mode","1")}catch(g){}else if(0<=c.indexOf("ddm_test_mode=0"))try{e=
+        !1,window.localStorage.removeItem("_ddm_test_mode")}catch(g){}else try{e="1"===window.localStorage.getItem("_ddm_test_mode")}catch(g){}e?a.load(window.DDMANAGER_TESTMODE_INIT_URL||"https://api.segmentstream.com/v1/ddm-initialization/"+b+".js"):a.load(window.DDMANAGER_INIT_URL||"https://"+d+"/project/"+b+".js")};a.CDN_DOMAIN=d;a.SNIPPET_VERSION="1.0.11";a.loadProject(h)}})("975f9b27-a262-4758-9019-0bf81f566d68");
+        </script>
+        <!-- //SegmentStream snippet -->
+    </body>
+</html>

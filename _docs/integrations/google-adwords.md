@@ -66,7 +66,7 @@ The code for dynamic Google Ad Remarketing depends on the type of activity selec
 
 For example, if you select the "Retail" type in Google Ads, you must also select "Retail" in the SegmentStream interface.
 
->If the necessary type of activity is missing in the SegmentStream interface - contact support at support@ddmanager.ru
+>If the necessary type of activity is missing in the SegmentStream interface - contact support at support@segmentstream.com
 
 [More about business types](https://support.google.com/google-ads/answer/7305793?hl=en)
 

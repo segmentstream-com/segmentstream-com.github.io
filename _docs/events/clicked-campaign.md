@@ -17,7 +17,7 @@ digitalData.events.push({
 });
 ```
 
-#### From the DDManager interface
+#### From the SegmentStream interface
 **Trigger**: `click`,
 
 **CSS selector**: `.ddl_campaign_link`

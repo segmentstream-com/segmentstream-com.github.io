@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+
+        <title>SegmentStream documentation : Yandex Metrica</title>
+        <meta name="description" content="">
+
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/favicon/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicon/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favicon/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicon/apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/favicon/apple-touch-icon-60x60.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicon/apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/favicon/apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicon/apple-touch-icon-152x152.png" />
+        <link rel="icon" type="image/png" href="/favicon/favicon-196x196.png" sizes="196x196" />
+        <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16" />
+        <link rel="icon" type="image/png" href="/favicon/favicon-128.png" sizes="128x128" />
+        <meta name="application-name" content="&nbsp;"/>
+        <meta name="msapplication-TileColor" content="#FFFFFF" />
+        <meta name="msapplication-TileImage" content="/favicon/mstile-144x144.png" />
+        <meta name="msapplication-square70x70logo" content="/favicon/mstile-70x70.png" />
+        <meta name="msapplication-square150x150logo" content="/favicon/mstile-150x150.png" />
+        <meta name="msapplication-wide310x150logo" content="/favicon/mstile-310x150.png" />
+        <meta name="msapplication-square310x310logo" content="/favicon/mstile-310x310.png" />
+
+        <!-- <link rel="shortcut icon" type="image/x-icon" href="/favicon/favicon.ico"> -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/syntax.css">
+        <link rel="stylesheet" href="/css/main.css?v=1.1">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="/js/main.js?v=1.1"></script>
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="row">
+                <div id="header" class="col-sm-12">
+                    <div class="row">
+    <div class="col-sm-3 col-xs-12">
+        <div id="menu-toggle"></div>
+        <a target="_blank" href="https://admin.segmentstream.com/"><div id="login-button"></div></a>
+        <a class="brand" href="/"><img src="/img/segmentstream-logo.png" height="47" alt=SegmentStream documentation
+                class="ddm-logo">
+        </a>
+        <small></small>
+    </div>
+
+    <div class="col-sm-offset-5 col-sm-4 authorization">
+        <ul class="top-nav">
+            <li>
+                <a id="button-auth" target="_blank" href="https://admin.segmentstream.com/">
+                    
+                    Войти
+                    
+                </a>
+            </li>
+        </ul>
+    </div>
+        
+            <a id="language-button" href='/'>EN</a>
+        
+</div>
+
+
+                </div>
+            </div>
+            <div class="row">
+                
+                
+                    <div id="navigation" class="col-sm-3 col-md-3">
+                        <ul class="nav nav-list" >
+    
+    
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+            <li class="nav-header analystRU ">Аналитику</li>
+            
+                <li class="drop-menu analystRU " data-order="0">
+                    <a href="/ru/for-analyst/index">Обзор</a>
+                </li>
+            
+                <li class="drop-menu analystRU " data-order="1">
+                    <a href="/ru/for-analyst/settings">Настройки проекта</a>
+                </li>
+            
+                <li class="drop-menu analystRU " data-order="2">
+                    <a href="/ru/for-analyst/events">События</a>
+                </li>
+            
+                <li class="drop-menu analystRU " data-order="2">
+                    <a href="/ru/for-analyst/integrations">Интеграции</a>
+                </li>
+            
+                <li class="drop-menu analystRU " data-order="4">
+                    <a href="/ru/for-analyst/variables">Переменные</a>
+                </li>
+            
+                <li class="drop-menu analystRU " data-order="5">
+                    <a href="/ru/for-analyst/scripts">Скрипты</a>
+                </li>
+            
+                <li class="drop-menu analystRU " data-order="6">
+                    <a href="/ru/for-analyst/priorities">Приоритеты</a>
+                </li>
+            
+        
+        
+    
+        
+        
+        
+        
+        
+            <li class="nav-header developerRU ">Разработчику</li>
+            
+                <li class="drop-menu developerRU " data-order="1">
+                    <a href="/ru/for-developer/index">Обзор</a>
+                </li>
+            
+                <li class="drop-menu developerRU " data-order="2">
+                    <a href="/ru/for-developer/digitaldata">Объект digitalData</a>
+                </li>
+            
+                <li class="drop-menu developerRU " data-order="2">
+                    <a href="/ru/for-developer/partners">События партнерских систем</a>
+                </li>
+            
+                <li class="drop-menu developerRU " data-order="3">
+                    <a href="/ru/for-developer/naming">Правила именования переменных и событий</a>
+                </li>
+            
+                <li class="drop-menu developerRU " data-order="3">
+                    <a href="/ru/for-developer/snippet">Подключение SegmentStream</a>
+                </li>
+            
+        
+        
+    
+        
+        
+        
+        
+        
+            <li class="nav-header ecommerceRU ">Внедрение в ecommerce</li>
+            
+                <li class="drop-menu ecommerceRU " data-order="1">
+                    <a href="/ru/ecommerce/main-page">Главная страница</a>
+                </li>
+            
+                <li class="drop-menu ecommerceRU " data-order="1">
+                    <a href="/ru/ecommerce/index">Обзор</a>
+                </li>
+            
+                <li class="drop-menu ecommerceRU " data-order="2">
+                    <a href="/ru/ecommerce/listing">Категория товаров</a>
+                </li>
+            
+                <li class="drop-menu ecommerceRU " data-order="3">
+                    <a href="/ru/ecommerce/search">Результаты поиска</a>
+                </li>
+            
+                <li class="drop-menu ecommerceRU " data-order="4">
+                    <a href="/ru/ecommerce/product">Карточка товара</a>
+                </li>
+            
+                <li class="drop-menu ecommerceRU " data-order="5">
+                    <a href="/ru/ecommerce/cart">Корзина</a>
+                </li>
+            
+                <li class="drop-menu ecommerceRU " data-order="6">
+                    <a href="/ru/ecommerce/checkout">Страница оформления заказа</a>
+                </li>
+            
+                <li class="drop-menu ecommerceRU " data-order="7">
+                    <a href="/ru/ecommerce/transaction">Спасибо за покупку</a>
+                </li>
+            
+                <li class="drop-menu ecommerceRU " data-order="8">
+                    <a href="/ru/ecommerce/content">Текстовая страница</a>
+                </li>
+            
+        
+        
+    
+        
+        
+        
+        
+        
+            <li class="nav-header digitalDataRU ">Список переменных</li>
+            
+                <li class="drop-menu digitalDataRU " data-order="1">
+                    <a href="/ru/digitaldata/wishlist">wishlist</a>
+                </li>
+            
+                <li class="drop-menu digitalDataRU " data-order="1">
+                    <a href="/ru/digitaldata/cart">cart</a>
+                </li>
+            
+                <li class="drop-menu digitalDataRU " data-order="1">
+                    <a href="/ru/digitaldata/changes">changes</a>
+                </li>
+            
+                <li class="drop-menu digitalDataRU " data-order="1">
+                    <a href="/ru/digitaldata/context">context</a>
+                </li>
+            
+                <li class="drop-menu digitalDataRU " data-order="1">
+                    <a href="/ru/digitaldata/events">events</a>
+                </li>
+            
+                <li class="drop-menu digitalDataRU " data-order="1">
+                    <a href="/ru/digitaldata/listing">listing</a>
+                </li>
+            
+                <li class="drop-menu digitalDataRU " data-order="1">
+                    <a href="/ru/digitaldata/page">page</a>
+                </li>
+            
+                <li class="drop-menu digitalDataRU " data-order="1">
+                    <a href="/ru/digitaldata/product">product</a>
+                </li>
+            
+                <li class="drop-menu digitalDataRU " data-order="1">
+                    <a href="/ru/digitaldata/recommendation">recommendation</a>
+                </li>
+            
+                <li class="drop-menu digitalDataRU " data-order="1">
+                    <a href="/ru/digitaldata/standard-version">version</a>
+                </li>
+            
+                <li class="drop-menu digitalDataRU " data-order="1">
+                    <a href="/ru/digitaldata/transaction">transaction</a>
+                </li>
+            
+                <li class="drop-menu digitalDataRU " data-order="1">
+                    <a href="/ru/digitaldata/user">user</a>
+                </li>
+            
+                <li class="drop-menu digitalDataRU " data-order="1">
+                    <a href="/ru/digitaldata/website">website</a>
+                </li>
+            
+                <li class="drop-menu digitalDataRU " data-order="1">
+                    <a href="/ru/digitaldata/campaigns">campaigns</a>
+                </li>
+            
+        
+        
+    
+        
+        
+        
+        
+        
+            <li class="nav-header eventsRU ">Список событий</li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/viewed-product">Viewed Product</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/added-payment-info">Added Payment Info</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/added-product-to-wishlist">Added Product to Wishlist</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/added-product">Added Product</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/clicked-campaign">Clicked Campaign</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/clicked-product">Clicked Product</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/completed-checkout-step">Completed Checkout Step</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/completed-transaction">Completed Transaction</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/logged-in">Logged In</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/received-voucher">Received Voucher</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/refunded-transaction">Refunded Transaction</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/registered">Registered</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/removed-product-from-wishlist">Removed Product from Wishlist</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/removed-product">Removed Product</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/searched-products">Searched Products</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/started-order">Started Order</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/subscribed">Subscribed</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/unsubscribed">Unsubscribed</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/updated-cart">Updated Cart</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/updated-profile-info">Updated Profile Info</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/viewed-campaign">Viewed Campaign</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/viewed-cart">Viewed Cart</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/viewed-checkout-step">Viewed Checkout Step</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/viewed-experiment">Viewed Experiment</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/viewed-page">Viewed Page</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/viewed-product-detail">Viewed Product Detail</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/viewed-product-listing">Viewed Product Listing</a>
+                </li>
+            
+                <li class="drop-menu eventsRU " data-order="2">
+                    <a href="/ru/events/achieved-experiment-goal">Achieved Experiment Goal</a>
+                </li>
+            
+        
+        
+    
+        
+        
+        
+        
+        
+            <li class="nav-header integrationsRU ">Список интеграций</li>
+            
+                <li class="drop-menu integrationsRU  current " data-order="1">
+                    <a href="/ru/integrations/yandex-metrica">Yandex Metrica</a>
+                </li>
+            
+                <li class="drop-menu integrationsRU " data-order="1">
+                    <a href="/ru/integrations/admitad">Admitad</a>
+                </li>
+            
+                <li class="drop-menu integrationsRU " data-order="1">
+                    <a href="/ru/integrations/citiads">Cityads</a>
+                </li>
+            
+                <li class="drop-menu integrationsRU " data-order="1">
+                    <a href="/ru/integrations/criteo">Criteo</a>
+                </li>
+            
+                <li class="drop-menu integrationsRU " data-order="1">
+                    <a href="/ru/integrations/ddmanager-streaming">SegmentStream Streaming</a>
+                </li>
+            
+                <li class="drop-menu integrationsRU " data-order="1">
+                    <a href="/ru/integrations/facebook">Facebook</a>
+                </li>
+            
+                <li class="drop-menu integrationsRU " data-order="1">
+                    <a href="/ru/integrations/gdeslon">GdeSlon</a>
+                </li>
+            
+                <li class="drop-menu integrationsRU " data-order="1">
+                    <a href="/ru/integrations/google-adwords">Google Adwords</a>
+                </li>
+            
+                <li class="drop-menu integrationsRU " data-order="1">
+                    <a href="/ru/integrations/google-analytics">Google Analytics</a>
+                </li>
+            
+                <li class="drop-menu integrationsRU " data-order="1">
+                    <a href="/ru/integrations/google-tag-manager">Google Tag Manager</a>
+                </li>
+            
+                <li class="drop-menu integrationsRU " data-order="1">
+                    <a href="/ru/integrations/linkprofit">LinkProfit</a>
+                </li>
+            
+                <li class="drop-menu integrationsRU " data-order="1">
+                    <a href="/ru/integrations/mindbox">Mindbox</a>
+                </li>
+            
+                <li class="drop-menu integrationsRU " data-order="1">
+                    <a href="/ru/integrations/mixmarket">Mixmarket</a>
+                </li>
+            
+                <li class="drop-menu integrationsRU " data-order="1">
+                    <a href="/ru/integrations/ofsys">Ofsys</a>
+                </li>
+            
+                <li class="drop-menu integrationsRU " data-order="1">
+                    <a href="/ru/integrations/onesignal">OneSignal</a>
+                </li>
+            
+                <li class="drop-menu integrationsRU " data-order="1">
+                    <a href="/ru/integrations/owox">OWOX</a>
+                </li>
+            
+                <li class="drop-menu integrationsRU " data-order="1">
+                    <a href="/ru/integrations/retail-rocket">Retail Rocket</a>
+                </li>
+            
+                <li class="drop-menu integrationsRU " data-order="1">
+                    <a href="/ru/integrations/rtb-house">RTB House</a>
+                </li>
+            
+                <li class="drop-menu integrationsRU " data-order="1">
+                    <a href="/ru/integrations/vkontakte">Vkontakte</a>
+                </li>
+            
+                <li class="drop-menu integrationsRU " data-order="1">
+                    <a href="/ru/integrations/weborama">Weborama</a>
+                </li>
+            
+                <li class="drop-menu integrationsRU " data-order="1">
+                    <a href="/ru/integrations/actionpay">Actionpay</a>
+                </li>
+            
+        
+        
+    
+<!-- List additional links. It is recommended to add a divider
+    e.g. <li class="divider"></li> first to break up the content. -->
+</ul>
+
+
+                    </div>
+
+                    <div id="content" class="col-sm-9 col-md-7">
+                        <div class="page-header">
+    <h1>Yandex Metrica
+        
+    </h1>
+</div>
+
+<p>В данном разделе вы узнаете:</p>
+<ul>
+  <li>Как установить счетчик Яндекс Метрики на сайт.</li>
+  <li>Как настроить цели и события в Яндекс Метрике.</li>
+  <li>Как передать параметры визитов и пользователей в Яндекс Метрику.</li>
+  <li>Как подключить карту кликов и Вебвизор.</li>
+  <li>Как подключить модуль электронной торговли в Яндекс Метрике.</li>
+</ul>
+
+<p>Yandex Metrica - система анализа поведения пользователей на сайте. Интеграция с Яндекс Метрикой позволяет передавать сегменты в Яндекс Директ для продвинутого таргетирования ваших рекламных.</p>
+
+<h3 id="Навигация-по-странице">Навигация по странице</h3>
+<hr />
+<ul class="page-navigation">
+  <li><a href="#0">Введение</a></li>
+  <li><a href="#1">Counter ID</a></li>
+  <li><a href="#2">Признак сбора данных карты кликов</a></li>
+  <li><a href="#3">Признак использования Вебвизора</a></li>
+  <li><a href="#4">Признак отслеживания переходов по внешним ссылкам</a></li>
+  <li><a href="#5">Отправлять User ID в Метрику</a></li>
+  <li><a href="#6">Числовой идентификатор цели покупки</a></li>
+  <li><a href="#7">Настройка целей</a></li>
+  <li><a href="#8">Параметры визитов</a></li>
+  <li><a href="#9">Параметры посетителей</a></li>
+</ul>
+
+<h3 id="Введение"><a name="0"></a>Введение</h3>
+<hr />
+<p>С помощью SegmentStream можно полностью интегрировать Яндекс Метрику с вашим сайтом: цели, вебвизор, карта кликов, электронная торговля, и другое.<br />
+<a href="https://yandex.ru/support/metrika/index.html">Справка Yandex по интеграции с Yandex Metrica</a></p>
+
+<p>Чтобы настроить интеграцию с Yandex Metrica:</p>
+<ol>
+  <li>авторизуйтесь на сайте <a href="https://admin.segmentstream.com/">segmentstream.com</a> и перейдите к панели управления интеграциями</li>
+  <li>Войдите на вкладку “Интеграции” и кликните по блоку с логотипом Yandex Metrica.</li>
+  <li>В открывшейся панели - настройте интеграцию.
+<img src="/img/integrations.ym.settings.png" alt="" />
+<br />
+Подробнее о настройках вы можете прочитать ниже.</li>
+</ol>
+
+<h3 id="counter-id"><a name="1"></a>Counter ID</h3>
+<hr />
+<p>Чтобы настроить отслеживание сайта необходимо создать счетчик в аккаунте Yandex Metrica. При создании счетчика, YAndex Metrica сгенерирует уникальный идентификатор отслеживания. Как его найти - смотрите на скриншоте ниже.</p>
+
+<p><img src="/img/integrations.ym.counterid.png" alt="" /></p>
+
+<p><a href="https://yandex.ru/support/metrika/general/creating-counter.html">Справка Yandex по созданию счетчика</a></p>
+
+<h3 id="Признак-сбора-данных-карты-кликов"><a name="2"></a>Признак сбора данных карты кликов</h3>
+<hr />
+<p>Яндекс Метрика позволяет собирать информацию обо всех кликах (не только по ссылкам), которые посетители совершают на сайте. В интерфейсе метрики есть специальный отчет, который поможет понять как ваши пользователи взаимодействуют с сайтом.
+Включить или отключить Карту кликов можно в 1 клик.</p>
+
+<p><a href="https://yandex.ru/support/metrika/behavior/click-map.html">Справка Yandex по картам кликов</a></p>
+
+<h3 id="Признак-использования-Вебвизора"><a name="3"></a>Признак использования Вебвизора</h3>
+<hr />
+<p>Вебвизор позволяет не только передавать информацию о кликах, но и о движении курсора пользователя. В результате, Яндекс Метрика предоставляет возможность просматривать видео взаимодействия пользователей с сайтом. Включить или отключить Вебвизор можно в 1 клик.</p>
+
+<p><a href="https://yandex.ru/support/metrika/webvisor/about-webvisor.html">Справка Yandex по Вебвизору</a></p>
+
+<h3 id="Признак-отслеживания-переходов-по-внешним-ссылкам"><a name="4"></a>Признак отслеживания переходов по внешним ссылкам</h3>
+<hr />
+<p>Яндекс метрика позволяет анализировать переходы на внешние ресурсы со страниц вашего сайта. В интерфейсе Яндекс Метрики отчет находится по адресу: “содержание” &gt; “внешние переходы”. Включить или отключить Отслеживание по внешним переходам можно в 1 клик.</p>
+
+<p><a href="https://yandex.ru/support/metrika/content/external-links.html">Справка Yandex по Внешним переходам</a></p>
+
+<h3 id="Отправлять-user-id-в-Метрику"><a name="5"></a>Отправлять User ID в Метрику</h3>
+<hr />
+<p>Yandex Metrica дает возможность связывать посещения вашего сайта одним и тем же пользователем с разных устройств - в одну историю. Для этого необходимо настроить передачу вашего внутреннего идентификатора клиентов в переменную <code class="highlighter-rouge">digitalData.user.userId</code>. Включить или отключить Передачу UserId можно кликнув на тумблер.</p>
+
+<p><a href="https://yandex.ru/support/metrika/content/external-links.html">Справка Yandex по собственным идентификаторам клиентов</a></p>
+
+<h3 id="Числовой-идентификатор-цели-покупки"><a name="6"></a>Числовой идентификатор цели покупки</h3>
+<p>По умолчание в интеграции с Яндекс Метрика включен модуль электронной торговли. Для его корректной работы должны быть настроены определенные события (список ниже), а также указан числовой идентификатор цели покупки.</p>
+
+<p>Идентификатор цели покупки генерируется Яндекс Метрикой при создании цели (“Настройки” &gt; “Цели”).</p>
+<ol>
+  <li>Нажмите кнопку “Добавить цель”</li>
+  <li>Укажите название, например: ‘Transaction’ или ‘Заказ’</li>
+  <li>Если вы используете ретаргетинговые кампании в Яндекс Директ, установите галку “Ретаргетинг”</li>
+  <li>Тип условия: JavaScript-событие</li>
+  <li>Идентификатор цели: ‘transaction’ или любой другой
+<img src="/img/integrations.ym.goal.1.png" alt="" /></li>
+  <li>Нажмите ОК и затем сохраните изменения раздела ‘Цели’</li>
+  <li>После сохранения скопируйте числовой идентификатор сохраненной цели и вставьте его в поле соответствующей настройки
+<img src="/img/integrations.ym.goal.2.png" alt="" /></li>
+</ol>
+
+<p><strong>Обязательные события</strong></p>
+<ul>
+  <li><a href="/events/viewed-page">Viewed Page</a></li>
+  <li><a href="/events/viewed-product-detail">Viewed Product Detail</a></li>
+  <li><a href="/events/added-product">Added Product</a></li>
+  <li><a href="/events/removed-product">Removed Product</a></li>
+  <li><a href="/events/completed-transaction">Completed Transaction</a></li>
+</ul>
+
+<p><a href="https://yandex.ru/support/metrika/reports/ecommerce.html">Справка Yandex по настройки электронной торговли</a></p>
+
+<h3 id="Настройка-целей"><a name="7"></a>Настройка целей</h3>
+<p>Все события, которые добавляются в массив <code class="highlighter-rouge">digitalData.events</code> могут быть переданы в качестве целей в Яндекс Метрику. Для этого необходимо:</p>
+<ol>
+  <li>Создать новую цель в интерфейсе Yandex Metrica. Обязательно указать тип условия: JavaScript-событие. Задать Идентификатор цели</li>
+  <li>В интерфейсе SegmentStream в левом поле указать название События в <code class="highlighter-rouge">digitalData.events</code>, а в правом - Идентификатор цели в Яндекс Метрике.</li>
+</ol>
+
+<p><img src="/img/integrations.ym.goals.png" alt="" /></p>
+
+<p><a href="https://yandex.ru/support/metrika/general/goals.html">Справка Yandex по целям</a></p>
+
+<h3 id="Параметры-визитов"><a name="8"></a>Параметры визитов</h3>
+<p>Если вы хотите строить отчеты в Яндекс Метрике по тем параметрам, которых нет в стандартных отчетах, вам необходимо настроить передачу специальных параметров. Например: мобильная или десктопная версия сайта.</p>
+
+<blockquote>
+  <p>Важно отличать параметры визитов от параметров посетителей. Параметры визитов распространяются только на сессию, в течение которой они были переданы. Если вы вчера передавали параметр визита вместе со всеми хитами пользователя, а сегодня не передаете, то в отчетах за сегодня этого параметра уже не будет. Если же вы передавали параметр посетителя, то этот параметр будет закреплен за пользователем(браузером пользователя) за все время (в прошлом и будущем), до тех пор пока значение параметра посетителя не будет перезаписано новым значением.</p>
+</blockquote>
+
+<p>Для того, чтобы настроить передачу параметра визита:</p>
+
+<ol>
+  <li>Придумайте имя параметра, по которому вы хотите строить отчеты в интерфейсе Яндекс Метрики</li>
+  <li>Запишите это имя в левом поле настроек параметров визитов</li>
+  <li>Укажите источник данных:
+    <ul>
+      <li><strong>DigitalData</strong>. Любая переменная, которая содержится в объекте digitalData, может быть передана в Яндекс Метрику в качестве параметра визита</li>
+      <li><strong>Event</strong>. Любая переменная любого события, добавленного в массив <code class="highlighter-rouge">digitalData.events</code> может быть передана в Яндекс Метрику в качестве параметра визита, в момент срабатывания этого события</li>
+    </ul>
+  </li>
+  <li>Укажите в правом поле название переменной</li>
+</ol>
+
+<p><img src="/img/integrations.ym.session-params.png" alt="" /></p>
+
+<p><a href="https://yandex.ru/support/metrika/data/visit-params.html">Справка Yandex по параметрам визитов</a></p>
+
+<h3 id="Параметры-посетителей"><a name="9"></a>Параметры посетителей</h3>
+<p>Если вы хотите передать в Яндекс Метрику сегмент пользователя, например RFM-сегмент или признак того, что пользователь подписан на рассылку или признак того, что у пользователя брошена корзина - вы можете настроить передачу параметров посетителей.
+Процесс настройки подробно описан в <a href="#8">параметрах визитов</a></p>
+
+<p><a href="https://yandex.ru/support/metrika/data/user-params.html">Справка Yandex по параметрам посетителей</a></p>
+
+
+
+                    </div>
+                
+            </div>
+            <button id="myBtn" title="Go to top"></button>
+        </div>
+        <div id="footer">
+            <div class="questionaire">
+    <div class="row step1">
+        <div class="col-sm-6 question">
+            
+            Эта статья была для Вас полезна?
+            
+        </div>
+        <div class="col-sm-6 answer">
+            <div class="button-questionaire">
+                ДА
+            </div>
+            <div class="button-questionaire">
+                НЕТ
+            </div>
+        </div>
+    </div>
+    <div class="row step2">
+        <div class="col-xs-12">
+            
+            Спасибо за отзыв!
+            
+        </div>
+    </div>
+</div>
+<a href="/"><img src="/img/segmentstream-logo.png" height="47" alt=SegmentStream documentation class="ddm-logo-footer"></a>
+<p class="copyright">Copyright © 2019 "SegmentStream" Все права защищены.</p>
+
+        </div>
+        <!-- SegmentStream snippet -->
+        <script type="text/javascript">
+        (function(h,d){d=d||"cdn.segmentstream.com";var a=window.ddManager=window.ddManager||[];window.ddListener=window.ddListener||[];var b=window.digitalData=window.digitalData||{};b.events=b.events||[];b.changes=b.changes||[];if(!a.initialize)if(a.invoked)window.console&&console.error&&console.error("SegmentStream snippet included twice.");else{a.invoked=!0;a.methods="initialize addIntegration persist unpersist on once off setConsent".split(" ");a.factory=function(k){return function(){var c=Array.prototype.slice.call(arguments);
+        c.unshift(k);a.push(c);return a}};for(b=0;b<a.methods.length;b++){var f=a.methods[b];a[f]=a.factory(f)}a.load=function(a){var c=document.createElement("script");c.type="text/javascript";c.charset="utf-8";c.async=!0;c.src=a;a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(c,a)};a.loadProject=function(b){var c=window.location.search;if(0<=c.indexOf("ddm_test_mode=1"))try{var e=!0;window.localStorage.setItem("_ddm_test_mode","1")}catch(g){}else if(0<=c.indexOf("ddm_test_mode=0"))try{e=
+        !1,window.localStorage.removeItem("_ddm_test_mode")}catch(g){}else try{e="1"===window.localStorage.getItem("_ddm_test_mode")}catch(g){}e?a.load(window.DDMANAGER_TESTMODE_INIT_URL||"https://api.segmentstream.com/v1/ddm-initialization/"+b+".js"):a.load(window.DDMANAGER_INIT_URL||"https://"+d+"/project/"+b+".js")};a.CDN_DOMAIN=d;a.SNIPPET_VERSION="1.0.11";a.loadProject(h)}})("975f9b27-a262-4758-9019-0bf81f566d68");
+        </script>
+        <!-- //SegmentStream snippet -->
+    </body>
+</html>

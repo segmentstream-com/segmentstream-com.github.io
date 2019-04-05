@@ -21,7 +21,7 @@ The variable `digitalData.version` contains the version of the standard. The las
 ### Version history
 ------
 **1.1.3 -  May 2018**
-- Added `Updated Cart` server event. Based on this event, DigitalDataManager automatically creates the `Added Product` and `Removed Product` events, depending on the current basket composition.
+- Added `Updated Cart` server event. Based on this event, SegmentStream automatically creates the `Added Product` and `Removed Product` events, depending on the current basket composition.
 - the `Added Product` and` Removed Product` server events are obsolete.
 - Added the `user.subscriptions` array in the `Subscribed` and `Updated Profile Info` events for mass management of subscriptions
 

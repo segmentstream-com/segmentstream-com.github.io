@@ -5,253 +5,826 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
 
-        <title>DDManager documentation : Google Analytics</title>
+        <title>SegmentStream documentation : Google Analytics</title>
         <meta name="description" content="">
 
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/favicon/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicon/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favicon/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicon/apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/favicon/apple-touch-icon-60x60.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicon/apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/favicon/apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicon/apple-touch-icon-152x152.png" />
+        <link rel="icon" type="image/png" href="/favicon/favicon-196x196.png" sizes="196x196" />
+        <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16" />
+        <link rel="icon" type="image/png" href="/favicon/favicon-128.png" sizes="128x128" />
+        <meta name="application-name" content="&nbsp;"/>
+        <meta name="msapplication-TileColor" content="#FFFFFF" />
+        <meta name="msapplication-TileImage" content="/favicon/mstile-144x144.png" />
+        <meta name="msapplication-square70x70logo" content="/favicon/mstile-70x70.png" />
+        <meta name="msapplication-square150x150logo" content="/favicon/mstile-150x150.png" />
+        <meta name="msapplication-wide310x150logo" content="/favicon/mstile-310x150.png" />
+        <meta name="msapplication-square310x310logo" content="/favicon/mstile-310x310.png" />
+
+        <!-- <link rel="shortcut icon" type="image/x-icon" href="/favicon/favicon.ico"> -->
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="/css/syntax.css">
-        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/main.css?v=1.1">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="/js/main.js?v=1.1"></script>
     </head>
     <body>
 
         <div class="container">
             <div class="row">
                 <div id="header" class="col-sm-12">
-                    <h4><a class="brand" href="/">DDManager documentation</a>
-    <small></small>
-</h4>
+                    <div class="row">
+    <div class="col-sm-3 col-xs-12">
+        <div id="menu-toggle"></div>
+        <a target="_blank" href="https://admin.segmentstream.com/"><div id="login-button"></div></a>
+        <a class="brand" href="/"><img src="/img/segmentstream-logo.png" height="47" alt=SegmentStream documentation
+                class="ddm-logo">
+        </a>
+        <small></small>
+    </div>
+
+    <div class="col-sm-offset-5 col-sm-4 authorization">
+        <ul class="top-nav">
+            <li>
+                <a id="button-auth" target="_blank" href="https://admin.segmentstream.com/">
+                    
+                    Login
+                    
+                </a>
+            </li>
+        </ul>
+    </div>
+        
+            <a id="language-button" href='/ru/'>RU</a>
+        
+</div>
+
 
                 </div>
             </div>
             <div class="row">
                 
                 
-                    <div id="navigation" class="col-sm-2">
-                        <ul class="nav nav-list">
+                    <div id="navigation" class="col-sm-3 col-md-3">
+                        <ul class="nav nav-list" >
     
-
-    
-        
-        
-        
-        
-            
-                <li class="nav-header">Аналитику</li>
-            
-            <li data-order="2"><a href="/for-analyst/events">События</a></li>
-        
-            
-            <li data-order="2"><a href="/for-analyst/integrations">Интеграции</a></li>
-        
-            
-            <li data-order="4"><a href="/for-analyst/variables">Переменные</a></li>
-        
-            
-            <li data-order="1"><a href="/for-analyst/index">Обзор</a></li>
-        
     
         
         
         
         
+        
+        
+        
+            <li class="nav-header analyst ">Analyst</li>
             
-                <li class="nav-header">Разработчику</li>
+                <li class="drop-menu analyst " data-order="0">
+                    <a href="/for-analyst/index">Overview</a>
+                </li>
             
-            <li data-order="1"><a href="/for-developer/index">Обзор</a></li>
+                <li class="drop-menu analyst " data-order="1">
+                    <a href="/for-analyst/settings">Project settings</a>
+                </li>
+            
+                <li class="drop-menu analyst " data-order="2">
+                    <a href="/for-analyst/events">Events</a>
+                </li>
+            
+                <li class="drop-menu analyst " data-order="2">
+                    <a href="/for-analyst/integrations">Integrations</a>
+                </li>
+            
+                <li class="drop-menu analyst " data-order="4">
+                    <a href="/for-analyst/variables">Variables</a>
+                </li>
+            
+                <li class="drop-menu analyst " data-order="5">
+                    <a href="/for-analyst/scripts">Scripts</a>
+                </li>
+            
+                <li class="drop-menu analyst " data-order="6">
+                    <a href="/for-analyst/priorities">Priorities</a>
+                </li>
+            
+        
         
     
         
         
         
         
+        
+        
+        
+            <li class="nav-header developer ">Developer</li>
             
-                <li class="nav-header">Список интеграций</li>
+                <li class="drop-menu developer " data-order="1">
+                    <a href="/for-developer/index">Overview</a>
+                </li>
             
-            <li data-order="1"><a href="/integrations/google-analytics">Google Analytics</a></li>
+                <li class="drop-menu developer " data-order="2">
+                    <a href="/for-developer/digitaldata">digitalData object</a>
+                </li>
+            
+                <li class="drop-menu developer " data-order="2">
+                    <a href="/for-developer/partners">Third-party system events</a>
+                </li>
+            
+                <li class="drop-menu developer " data-order="3">
+                    <a href="/for-developer/naming">Event and variable naming conventions</a>
+                </li>
+            
+                <li class="drop-menu developer " data-order="3">
+                    <a href="/for-developer/snippet">Connecting SegmentStream</a>
+                </li>
+            
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+            <li class="nav-header ecommerce ">Ecommerce integration</li>
+            
+                <li class="drop-menu ecommerce " data-order="1">
+                    <a href="/ecommerce/main-page">Homepage</a>
+                </li>
+            
+                <li class="drop-menu ecommerce " data-order="1">
+                    <a href="/ecommerce/index">Overview</a>
+                </li>
+            
+                <li class="drop-menu ecommerce " data-order="2">
+                    <a href="/ecommerce/listing">Product category</a>
+                </li>
+            
+                <li class="drop-menu ecommerce " data-order="3">
+                    <a href="/ecommerce/search">Search results</a>
+                </li>
+            
+                <li class="drop-menu ecommerce " data-order="4">
+                    <a href="/ecommerce/product">Product page</a>
+                </li>
+            
+                <li class="drop-menu ecommerce " data-order="5">
+                    <a href="/ecommerce/cart">Cart</a>
+                </li>
+            
+                <li class="drop-menu ecommerce " data-order="6">
+                    <a href="/ecommerce/checkout">Checkout process page</a>
+                </li>
+            
+                <li class="drop-menu ecommerce " data-order="7">
+                    <a href="/ecommerce/transaction">'Thank You' page</a>
+                </li>
+            
+                <li class="drop-menu ecommerce " data-order="8">
+                    <a href="/ecommerce/content">Content page</a>
+                </li>
+            
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+            <li class="nav-header digitaldata ">Variable list</li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/wishlist">wishlist</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/cart">cart</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/changes">changes</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/context">context</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/events">events</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/listing">listing</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/page">page</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/product">product</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/recommendation">recommendation</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/standard-version">version</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/transaction">transaction</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/user">user</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/website">website</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/campaigns">campaigns</a>
+                </li>
+            
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+            <li class="nav-header events ">Events list</li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/viewed-product">Viewed Product</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/added-payment-info">Added Payment Info</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/added-product-to-wishlist">Added Product to Wishlist</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/added-product">Added Product</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/clicked-campaign">Clicked Campaign</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/clicked-product">Clicked Product</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/completed-checkout-step">Completed Checkout Step</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/completed-transaction">Completed Transaction</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/logged-in">Logged In</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/received-voucher">Received Voucher</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/refunded-transaction">Refunded Transaction</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/registered">Registered</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/removed-product-from-wishlist">Removed Product from Wishlist</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/removed-product">Removed Product</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/searched-products">Searched Products</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/started-order">Started Order</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/subscribed">Subscribed</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/unsubscribed">Unsubscribed</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/updated-cart">Updated Cart</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/updated-profile-info">Updated Profile Info</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/viewed-campaign">Viewed Campaign</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/viewed-cart">Viewed Cart</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/viewed-checkout-step">Viewed Checkout Step</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/viewed-experiment">Viewed Experiment</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/viewed-page">Viewed Page</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/viewed-product-detail">Viewed Product Detail</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/viewed-product-listing">Viewed Product Listing</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/achieved-experiment-goal">Achieved Experiment Goal</a>
+                </li>
+            
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+            <li class="nav-header integrations  active ">Integration list</li>
+            
+                <li class="drop-menu integrations active  " data-order="1">
+                    <a href="/integrations/vkontakte">Vkontakte</a>
+                </li>
+            
+                <li class="drop-menu integrations active  " data-order="1">
+                    <a href="/integrations/criteo">Criteo</a>
+                </li>
+            
+                <li class="drop-menu integrations active  " data-order="1">
+                    <a href="/integrations/ddmanager-streaming">Streaming</a>
+                </li>
+            
+                <li class="drop-menu integrations active  " data-order="1">
+                    <a href="/integrations/facebook">Facebook</a>
+                </li>
+            
+                <li class="drop-menu integrations active  " data-order="1">
+                    <a href="/integrations/gdeslon">GdeSlon</a>
+                </li>
+            
+                <li class="drop-menu integrations active  " data-order="1">
+                    <a href="/integrations/google-adwords">Google Adwords</a>
+                </li>
+            
+                <li class="drop-menu integrations active   current " data-order="1">
+                    <a href="/integrations/google-analytics">Google Analytics</a>
+                </li>
+            
+                <li class="drop-menu integrations active  " data-order="1">
+                    <a href="/integrations/onesignal">OneSignal</a>
+                </li>
+            
+                <li class="drop-menu integrations active  " data-order="1">
+                    <a href="/integrations/rtb-house">RTB House</a>
+                </li>
+            
+                <li class="drop-menu integrations active  " data-order="1">
+                    <a href="/integrations/yandex-metrica">Yandex.Metrica</a>
+                </li>
+            
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
         
     
 <!-- List additional links. It is recommended to add a divider
     e.g. <li class="divider"></li> first to break up the content. -->
 </ul>
 
+
                     </div>
 
-                    <div id="content" class="col-sm-10">
+                    <div id="content" class="col-sm-9 col-md-7">
                         <div class="page-header">
-    <h2>Google Analytics
+    <h1>Google Analytics
         
-    </h2>
+    </h1>
 </div>
 
-<p>Digital Data Manager позволяет с легкостью отправлять данные о поведении ваших пользователей в <a href="https://analytics.google.com/">Google Analytics</a>. После полной интеграции digitalData с вашим сайтом, можно перейти к настройке интеграции в панели Digital Data Manager.</p>
+<p>In this section you will learn:</p>
+<ul>
+  <li>How to install the Google Analytics counter on your site.</li>
+  <li>How to set up Google Analytics event tracking</li>
+  <li>How to configure the advanced e-commerce module.</li>
+  <li>How to set up Google Analytics events</li>
+  <li>How to pass custom dimensions, metrics and content groups</li>
+  <li>How to fine-tune Google Analytics tracking on your site</li>
+</ul>
 
-<blockquote>
-  <p>Навигация по странице <br />
-<a href="#0">Введение</a> <br />
-<a href="#1">Идентификатор отслеживания</a> <br />
-<a href="#2">Модуль Enhanced Ecommerce</a> <br />
-<a href="#3">Модуль Double Click</a> <br />
-<a href="#4">User Id</a> <br />
-<a href="#5">Улучшенная атрибуция ссылок</a> <br />
-<a href="#6">Анонимизация IP</a> <br />
-<a href="#7">QueryString</a> <br />
-<a href="#8">Валюта</a> <br />
-<a href="#9">Частота сэмплирования</a> <br />
-<a href="#10">Домен сайта</a> <br />
-<a href="#11">Пользовательские метрики</a> <br />
-<a href="#12">Пользовательские параметры</a> <br />
-<a href="#13">Группы контента</a> <br />
-<a href="#14">Кастомные поля</a> <br />
-<a href="#15">Название трекера</a> <br /></p>
-</blockquote>
+<p>SegmentStream makes it easy to send data about your users’ behavior to <a href="https://analytics.google.com/">Google Analytics</a>. After full <a href="/for-developer/">integration of digitalData with your site</a>, you can go to the integration setup in the SegmentStream panel.</p>
 
-<h4 id="Введение"><a name="0"></a>Введение</h4>
-<p>С помощью Digital Data Manager можно полностью интегрировать Google Analytics с вашим сайтом: события, расширенная электронная торговля, кастомные метрики и параметры, группы котента и много другое. <br />
-<a href="https://support.google.com/analytics#topic=3544906">Справка Google по Google Analytics</a> <br /><br />
-Чтобы настроить интеграцию с Google Analytics:</p>
+<h3 id="page-contents">Page contents</h3>
+<hr />
+<ul class="page-navigation">
+  <li><a href="#0">Introduction</a></li>
+  <li><a href="#1">Tracking ID</a></li>
+  <li><a href="#1_1">Event tracking</a></li>
+  <li><a href="#1_2">Use Proxy</a></li>
+  <li><a href="#2">Enhanced Ecommerce module</a></li>
+  <li><a href="#4">User Id</a></li>
+  <li><a href="#5">Enhanced link attribution</a></li>
+  <li><a href="#6">Anonymize IP</a></li>
+  <li><a href="#16">Transliterate cyrillic symbols</a></li>
+  <li><a href="#7">Enable cross-domain tracking</a></li>
+  <li><a href="#8">Default Currency</a></li>
+  <li><a href="#9">Site speed sample rate</a></li>
+  <li><a href="#10">Website domain</a></li>
+  <li><a href="#11_1">ClientId</a></li>
+  <li><a href="#17">Optimize Container ID</a></li>
+  <li><a href="#11">Metrics</a></li>
+  <li><a href="#12">Dimensions</a></li>
+  <li><a href="#13">Content groups</a></li>
+  <li><a href="#15">Namespace</a></li>
+  <!-- <li><a href="#18">Checkout options</a></li> -->
+</ul>
+
+<h3 id="introduction"><a name="0"></a>Introduction</h3>
+<hr />
+<p>With the help of SegmentStream, you can fully integrate Google Analytics with your website: events, advanced e-commerce, special metrics and parameters, content groups and much more. <br />
+<a href="https://support.google.com/analytics#topic=3544906">Google Analytics integration guide</a> <br /><br />
+To configure the Google Analytics integration:</p>
 <ol>
-  <li>авторизуйтесь на сайте <a href="ddmanager.ru">ddmanager.ru</a> и перейдите к <a href="https://admin.ddmanager.ru/">панеле управления интеграциями</a></li>
-  <li>Нажмите на блок с логотипом Google Analytics
-<img src="/img/integrations.ga.listing.png" alt="" /></li>
-  <li>В открывшейся панели - настройте Google Analytics.
+  <li>Log in to the <a href="https://admin.segmentstream.com/">segmentstream.com</a> website and go to the integration management panel.</li>
+  <li>Go to the “Integration” tab and click on the block with the Analytics logo.</li>
+  <li>In the opened panel - configure the integration.
 <img src="/img/integrations.ga.settings.png" alt="" />
 <br />
-Подробнее о настройках вы можете прочитать ниже.</li>
+You can read more details about the settings below.</li>
 </ol>
 
-<h4 id="Идентификатор-отслеживания"><a name="1"></a>Идентификатор отслеживания</h4>
-<p>Чтобы настроить отслеживание сайта необходимо создать ресурс в аккаунте Google Analytics. При создании ресурса Google Analytics сгенерирует уникальный идентификатор отслеживания. Как его найти - смотрите на скриншоте ниже. 
-<img src="/img/integrations.ga.id.png" alt="" />
-Скопируйте идентификатор отслеживания и вставьте его в интерфейсе Digital Data Manager в соотвествующее поле.
-<img src="/img/integrations.ga.settings.id.png" alt="" />
-<br />
-<a href="https://support.google.com/analytics/answer/7372977?hl=ru">Справка Google по Идентификатору отслеживания</a></p>
-<h4 id="Модуль-enhanced-ecommerce"><a name="2"></a>Модуль Enhanced Ecommerce</h4>
-<p>Google Analytics позволяет отслеживать взаимодействие пользователей с вашими товарами: просмотры товаров в каталогах, клики на товары, детальный просмотр карточек товаров, добавления в корзину, покупки и другое. Интеграция с DDM позволяет подключить или отключить модуль расширенной электронной торговли в 1 клик. <br />
-<a href="https://support.google.com/analytics/answer/6166254?hl=ru">Справка Google по Enhanced Ecommerce</a></p>
-<h4 id="Модуль-double-click"><a name="3"></a>Модуль Double Click</h4>
-<p>Не знаю что делает эта настройка</p>
-<h4 id="user-id"><a name="4"></a>User Id</h4>
-<p>Если Digital Data Manager правильно интегрирован в ваш сайт, то значит на каждой странице у вас передан идентификатор посетителя из вашей CRM или ERP в переменную digitalData.user.id. Google Analytics позволяет склеивать сеансы вашего пользователя, произведенные с разных браузеров или устройств, в одну историю благодаря модулю “USER-ID”. Включить или отключить отправку USER-ID в Google Analytics можно в 1 клик. <br /><a href="https://support.google.com/analytics/answer/3123662?hl=ru">Справка Google по USER-ID</a></p>
-<h4 id="Улучшенная-атрибуция-ссылок"><a name="5"></a>Улучшенная атрибуция ссылок</h4>
-<p>Не знаю что это такое</p>
-<h4 id="Анонимизация-ip"><a name="6"></a>Анонимизация IP</h4>
-<p>Google Analytics позволяет владельцам сайтов скрывать IP-адреса своих посетителей при обработки данных. Включить или отключить функцию анонимизации IP можно в 1 клик.<br />
-<a href="https://support.google.com/analytics/answer/2763052?hl=ru">Справка Google по Анонимизации IP</a></p>
-<h4 id="querystring"><a name="7"></a>QueryString</h4>
-<p>Не знаю что это такое</p>
-<h4 id="Валюта"><a name="8"></a>Валюта</h4>
-<p>В Google Analytics есть набор параметров модуля расшиернной электронной торговли, которые представляют собой денежные значения в различной валюте, например: доход от товаров, доход от транзакции, стоимость доставки и т.д. Список поддерживаемых валют описан в справке Google. Важно! Если указанная в настройках интеграции Digital Data Manager валюта отличается от глобальной валюты представления (указанной в настройках Google Analytics), Google Analytics произведет конвертацию по курсу обмена за предыдущий день.
-<a href="https://support.google.com/analytics/answer/6205902?hl=ru">Справка Google по Валюте</a></p>
-<h4 id="Частота-сэмплирования-данных-о-скорости-загрузки-сайта"><a name="9"></a>Частота сэмплирования данных о скорости загрузки сайта</h4>
-<p>Google позволяет указать процент пользователей, данные которых будут отправляться для отслеживания скорости загрузки сайтов. Значение по умолчанию - 1.
-<a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/field-reference#siteSpeedSampleRate">Справка Google по Сэмплированию данных о скорости загрузки сайта</a></p>
-<h4 id="Домен-сайта"><a name="10"></a>Домен сайта</h4>
+<blockquote>
+  <p>Important! To work with the main Google Analytics tracker, you need to configure the <a href="/events/viewed-page">Viewed Page</a> event.</p>
+</blockquote>
 
-<p><a href="https://support.google.com/analytics/answer/1034342?hl=ru">Справка Google по Кросс-доменному отслеживанию</a></p>
-<h4 id="Специальные-показатели"><a name="11"></a>Специальные показатели</h4>
-<p>В Google Analytics есть возможность передавать специальные показатели (метрики). Показатель - это количественное значение (Целое число, дробное число, время). Например: количество сеансов, сумма заказа, глубина просмотра и т.д. Метрики можно передавать на разном уровне:</p>
+<h3 id="tracking-id"><a name="1"></a>Tracking ID</h3>
+<hr />
+<p>To set up site tracking, you must create a resource in your Google Analytics account. When creating a resource, Google Analytics will generate a unique tracking ID. Look at the screenshot below for help on how to find it.
+<img src="/img/integrations.ga.id.png" alt="" />
+Copy the tracking ID and paste it into the appropriate field in the SegmentStream interface.
+<img src="/img/integrations.ga.settings.id.png" alt="" /></p>
+
+<h3 id="event-tracking"><a name="1_1"></a>Event tracking</h3>
+<hr />
+<p>By default, SegmentStream sends all the events that are pushed to the <code class="highlighter-rouge">digitalData.events</code> array to Google Analytics.</p>
+
+<blockquote>
+  <p>Important! The <a href="/events/viewed-page">Viewed Page</a> event is automatically converted to the pageview interaction type and is not included in the Behavior &gt; events &gt; top events report.</p>
+</blockquote>
+
+<p>All events passed to Google Analytics can have several characteristics: eventCategory, eventAction, eventLabel, eventValue, nonInteraction.
+SegmentStream has a built-in digitalData format mapper in the Google Analytics format. Below is an example of a click event on a button.</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">digitalData</span><span class="p">.</span><span class="nx">events</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
+  <span class="na">category</span><span class="p">:</span> <span class="s1">'UX'</span><span class="p">,</span>
+  <span class="na">name</span><span class="p">:</span> <span class="s1">'Clicked Button'</span><span class="p">,</span>
+  <span class="na">action</span><span class="p">:</span> <span class="s1">'Clicked Button'</span><span class="p">,</span>
+  <span class="na">label</span><span class="p">:</span> <span class="s1">'Green'</span><span class="p">,</span>
+  <span class="na">value</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+  <span class="na">nonInteraction</span><span class="p">:</span> <span class="kc">true</span>
+<span class="p">})</span>
+</code></pre>
+</div>
+
+<p>This event will be automatically converted to the Google Analytics format:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">ga</span><span class="p">(</span><span class="s1">'send'</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">hitType</span><span class="p">:</span> <span class="s1">'event'</span><span class="p">,</span>
+  <span class="na">eventCategory</span><span class="p">:</span> <span class="s1">'UX'</span><span class="p">,</span>
+  <span class="na">eventAction</span><span class="p">:</span> <span class="s1">'Clicked Button'</span><span class="p">,</span>
+  <span class="na">eventLabel</span><span class="p">:</span> <span class="s1">'Green'</span><span class="p">,</span>
+  <span class="na">eventLabel</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+  <span class="na">nonInteraction</span><span class="p">:</span> <span class="kc">true</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Important! By default, if you do not pass the action field, the value of the name field will be used as the eventAction. Thus, action and name can take different values.</p>
+</blockquote>
+
+<blockquote>
+  <p>Important! By default, nonInteraction is set to false.</p>
+</blockquote>
+
+<p><a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/events?hl=en">Google guide on event tracking</a></p>
+
+<h3 id="use-proxy"><a name="1_2"></a>Use Proxy</h3>
+<hr />
+<p>You can activate this setting if your users ISPs might be blocking requests to the Google Analytics server.</p>
+
+<h3 id="enhanced-ecommerce-module"><a name="2"></a>Enhanced Ecommerce module</h3>
+<hr />
+<p>Google Analytics allows you to track the interaction of users with your products: product impressions in catalogs, product clicks, detailed viewing of product pages, adding to cart, orders and more. The integration SegmentStream allows you to connect or disconnect the advanced e-commerce module in 1 click.</p>
+
+<p><a href="https://support.google.com/analytics/answer/6166254?hl=en">Google Enhanced Ecommerce guide</a></p>
+
+<blockquote>
+  <p>Important! You must configure the transmission of certain events to the <code class="highlighter-rouge">digitalData.events</code> array for the Enhanced Ecommerce module to work correctly. The list of events is as follows:</p>
+</blockquote>
+
+<p><strong>Required events</strong></p>
 <ul>
-  <li>на уровне хита (любое взаимодействие пользователя с сайтом, информация о котором уходит на сервера Google Analytics)</li>
-  <li>на уровне продукта (все взаимодействия пользователя с товаром).
-Для того, чтобы настроить передачу специального показателя:</li>
+  <li><a href="/events/viewed-page">Viewed Page</a></li>
+  <li><a href="/events/viewed-product-detail">Viewed Product Detail</a></li>
+  <li><a href="/events/added-product">Added Product</a></li>
+  <li><a href="/events/viewed-checkout-step">Viewed Checkout Step</a></li>
+  <li><a href="/events/completed-transaction">Completed Transaction</a></li>
+</ul>
+
+<p><strong>Optional events</strong></p>
+<ul>
+  <li><a href="/events/viewed-product">Viewed Product</a></li>
+  <li><a href="/events/clicked-product">Clicked Product</a></li>
+  <li><a href="/events/viewed-campaign">Viewed Campaign</a></li>
+  <li><a href="/events/clicked-campaign">Clicked Campaign</a></li>
+  <li><a href="/events/completed-checkout-step">Completed Checkout Step</a></li>
+  <li><a href="/events/refunded-transaction">Refunded Transaction</a></li>
+  <li><a href="/events/viewed-product-listing">Viewed Product Listing</a></li>
+  <li><a href="/events/searched-products">Searched Products</a></li>
+  <li><a href="/events/searched-products">Viewed Cart</a></li>
+</ul>
+
+<h3 id="user-id"><a name="4"></a>User Id</h3>
+<hr />
+<p>If SegmentStream is correctly integrated into your site, it means that on each page you have passed the visitor ID from your CRM or ERP to the digitalData.user.id variable. Google Analytics allows you to glue your user sessions from different browsers or devices into one story thanks to the “USER-ID” module. You can enable or disable USER-ID sending in Google Analytics in 1 click.</p>
+
+<p><a href="https://support.google.com/analytics/answer/3123662?hl=en">Google USER-ID guide</a></p>
+<h3 id="enhanced-link-attribution"><a name="5"></a>Enhanced link attribution</h3>
+<hr />
+<p>The improved link attribution module allows you to automatically distinguish links on a page that lead to the same URL. This can be useful if you are using the Page Analytics extension for Chrome. This extension adds a layer of analytical data on top of the page. The extension highlights each link and displays a set of KPIs. In case if the improved link attribution was not enabled, KPIs for 2 links leading to the same URL would have identical values.</p>
+
+<p><a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/enhanced-link-attribution">Google Enchanced link attribution guide</a></p>
+<h3 id="anonymize-ip"><a name="6"></a>Anonymize IP</h3>
+<hr />
+<p>Google Analytics allows site owners to hide their visitors’ IP addresses when processing data. Enable or disable the IP anonymization feature in 1 click.</p>
+
+<p><a href="https://support.google.com/analytics/answer/2763052?hl=en">Google IP anonymization guide</a></p>
+
+<h3 id="transliterate-cyrillic-symbols"><a name="16"></a>Transliterate cyrillic symbols</h3>
+<hr />
+<p>You can activate this setting if you are sending cyrillic symbols to GA. By transliterating you can significantly reduce the size of hits and events that contain product names, descriptions, etc.</p>
+
+<h3 id="enable-cross-domain-tracking"><a name="7"></a>Enable cross-domain tracking</h3>
+<hr />
+<p>By default, Google Analytics does not glue together user visits to different second-level domains into the same history. This function could be necessary if different parts of the same site are on different domains, for example: an online store - https://shop.com and a blog - https://blog.com. To send information about the behavior of a particular visitor on different domains in the same Google Analytics property, you must enable cross-domain tracking.
+Activate the “Enable cross-domain tracking” feature and add all the domains you want to link.</p>
+
+<p><a href="https://support.google.com/analytics/answer/1034342?hl=en">Справка Google по кроссдоменному отслеживанию</a></p>
+
+<h3 id="currency"><a name="8"></a>Currency</h3>
+<hr />
+<p>In Google Analytics, there is a set of options for the enhanced e-commerce module that represent monetary values ​​in different currencies, for example: revenue from goods, transaction revenue, shipping costs, etc. A list of supported currencies is described in the Google currency guide. Important! If the currency specified in the SegmentStream integration settings is different from the global presentation currency (specified in the Analytics settings), Google Analytics will convert at the exchange rate for the previous day.</p>
+
+<p><a href="https://support.google.com/analytics/answer/6205902?hl=en">Google currency guide</a></p>
+
+<h3 id="site-speed-sample-rate"><a name="9"></a>Site speed sample rate</h3>
+<hr />
+<p>Google allows you to specify the percentage of users whose data will be collected to track the speed of the site. The default value is 1.</p>
+
+<p><a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/field-reference#siteSpeedSampleRate">Google guide on site speed sample rate</a></p>
+
+<h3 id="website-domain"><a name="10"></a>Website domain</h3>
+<hr />
+<p>In this setting, you can specify the domain in which the cookie will be stored with the unique visitor ID of your site. We recommend using the default value: <code class="highlighter-rouge">auto</code>. In this case, the Google Analytics library automatically saves all cookies to the highest-level domain.</p>
+
+<p><a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cross-domain">Google guide on Cross-domain tracking</a></p>
+
+<h3 id="clientid"><a name="11_1"></a>ClientId</h3>
+<hr />
+<p>Google Analytics identifies different hits from the same site visitor using ClientId.
+The identifier is generated by the analytics.js library and stored in the visitor’s cookies.
+Through SegmentStream, sending ClientId with the first and all subsequent hits of the visitor can be configured in 1 click.
+Select the number of the custom parameter in the drop-down list below the “ClientId custom dimension” field.</p>
+
+<p><a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookies-user-id">Google guide on ClientId</a></p>
+
+<h3 id="optimize-container-id"><a name="17"></a>Optimize Container ID</h3>
+<hr />
+<p>If you are using Google Optimize you can pass the container ID into this field.</p>
+
+<p><a href="https://support.google.com/tagmanager/answer/7164339?hl=en">Google guide on Optimize</a></p>
+
+<h3 id="metrics"><a name="11"></a>Metrics</h3>
+<hr />
+<p>In Google Analytics, you can send custom metrics. The indicator is a quantitative value (integer, fractional number, time). For example: the number of sessions, the amount of the order, the depth of viewing, etc. Metrics can be transmitted at different levels:</p>
+<ul>
+  <li>at hit level (any interaction of the user with the site, information about which goes to the Google Analytics server)</li>
+  <li>at the product level (all user interactions with the product).
+In order to configure the transfer of a custom metric:</li>
 </ul>
 
 <ol>
-  <li>Создайте специальный показатель в интерфейсе Google Analytics. Запомните номер созданного показателя
+  <li>Create a custom metric in the GA interface. Remember the number of the created metric.
  <img src="/img/integrations.ga.metric.2.png" alt="" /></li>
-  <li>Перейдите к панеле настройки интеграции Digital Data Manager, поле “Пользовательские метрики”.
+  <li>Go to the Metrics field in the GA integration setup in the SegmentStream admin panel.
  <img src="/img/integrations.ga.metric.1.png" alt="" /></li>
-  <li>В выпадающем списке выберите номер метрики, который вы только что создали в Google Analytics (например metric1).
+  <li>In the drop-down list, select the metric number that you just created in Google Analytics (for example metric1).
  <img src="/img/integrations.ga.metric.3.png" alt="" /></li>
-  <li>Укажите источник данных:
+  <li>Specify the data source:
     <ul>
-      <li><strong>DigitalData</strong>. Любая числовая переменная, которая содержится в объекте digitalData, может быть передана в Google Analytics на уровнях хита. Например: вместе с загрузкой страницы можно передать в Google Analytics на уровне хита количество товаров, которое прямо сейчас у пользователя лежит в корзине.</li>
-      <li><strong>Event</strong>. В Google Analytics вместе с событием можно передать дополнительную информацию, например: если вам не хватает полей Event Category, Event Action, Event Label, Value.</li>
-      <li><strong>Product</strong>. Google Analytics позволяет принимать специальные показатели на уровне продукта. Таким образом, вместе со всеми событиями, которые происходят с товарами на вашем сайте (например: просмотр карточки товара, добавления товара в корзину, покупка товара) вы можете передавать дополнительные показатели. Например, можно передать количество товарных единиц, доступное на складе в момент просмотра пользователем карточки товаров.</li>
+      <li><strong>DigitalData</strong>. Any numeric variable that is contained in a digitalData object can be passed to Google Analytics at hit levels. For example: along with loading a page, you can transfer to Google Analytics at the hit level the number of products that the user has in the cart.</li>
+      <li><strong>Event</strong>. In Google Analytics, along with the event, you can send additional information, for example: if you don’t have data for the Event Category, Event Action, Event Label, Value fields.</li>
+      <li><strong>Product</strong>. Google Analytics allows you to pass specific metrics at the product level. Thus, along with all the events that occur with the goods on your site (for example: viewing the product page, adding goods to the shopping cart, buying goods), you can transfer additional indicators. For example, you can transfer the number of items available in the warehouse when the user views the product card.</li>
     </ul>
   </li>
-  <li>Сохраните и опубликуйте изменения.</li>
+  <li>Save and publish the changes.</li>
 </ol>
 
-<p><a href="https://support.google.com/analytics/answer/2709829?hl=ru#set_up_custom_metrics">Справка Google по Специальным показателям</a></p>
-<h4 id="Пользовательские-параметры"><a name="12"></a>Пользовательские параметры</h4>
-<p>В Google Analytics есть возможность передавать специальные Параметры (dimensions). Параметры - это атрибуты данных. Все метрики (числовые данные) рассчитываются в срезах параметров. Примеры параметров: Источник трафика, URL страницы, Регион и т.д. Параметры можно передавать на разном уровне:</p>
+<p><a href="https://support.google.com/analytics/answer/2709829?hl=en#set_up_custom_metrics">Google Guide on custom metrics</a></p>
+
+<h3 id="dimensions"><a name="12"></a>Dimensions</h3>
+<hr />
+<p>In Google Analytics, you can pass custom dimensions. Parameters are data attributes. All metrics (numeric data) are calculated in the parameter sections. Examples of parameters: Traffic source, Page URL, Region, etc. Parameters can be transmitted at different levels:</p>
 <ul>
-  <li>на уровне хита (информация не аггрегируется)</li>
-  <li>на уровне сеанса (информация аггрегируется в срезе каждого сеанса каждого пользователя)</li>
-  <li>на уровне пользователя (информация аггрегируется в срезе всех сеансов каждого пользователя)</li>
-  <li>на уровне продукта (информация аггрегируется в срезе продуктов).
-    <blockquote>
-      <p>Короткое пояснение, для понимания разницы уровней: Например вы хотите передать в GA хобби вашего пользователя в тот момент когда пользователь сохраняет информацию о себе на вашем сайте. Вы отправляете событие и вместе с событием передает специальный параметр (название хобби вашего пользователя). Если вы настроили параметр на уровне хита, то информация о хобби пользователя будет доступна только в отчетах по событиям. Если вы настроили параметр на уровне сеанса, то информация о хобби будет доступна в большинстве отчетов, но только в рамках одного дня и одного сеанса. Если вы настроили параметр на уровне пользователя, то информация о хобби будет доступна в большинстве отчетов и за любой диапазон дат после события.<br /></p>
-    </blockquote>
-  </li>
+  <li>at hit level (information isn’t aggregated)</li>
+  <li>at session level (information is aggregated by each session of each user)</li>
+  <li>at the user level (information is aggregated by all sessions of each user)</li>
+  <li>at product level (information is aggregated by each product).</li>
 </ul>
 
-<p>Настройка специальных параметров идентична <a href="#11">настройке специальных показателей</a>.</p>
+<blockquote>
+  <p>A short explanation, for understanding the difference in levels: For example, you want to transfer to the GA your user’s hobby when the user saves information about himself on your site. You send the event and along with the event you transmit a special parameter (the name of your user’s hobby). If you have configured a parameter at the hit level, then the user’s hobby information will only be available in the event reports. If you have configured the parameter at the session level, hobby information will be available in most reports, but only within one day and one session. If you have configured a parameter at the user level, hobby information will be available in most reports and for any date range after the event.<br /></p>
+</blockquote>
 
-<p><a href="https://support.google.com/analytics/answer/2709829?hl=ru#set_up_custom_dimensions">Справка Google по Специальным параметрам</a></p>
-<h4 id="Группы-контента"><a name="13"></a>Группы контента</h4>
-<p>В Google Analytics существует возможность просматривать отчеты не только в срезах определенных адресов страниц, но и групп страниц. Эти группы вы можете задавать сами.</p>
+<p>The setting of the custom dimensions is identical to <a href="#11">setting custom metrics</a>.</p>
 
-<p><a href="https://support.google.com/analytics/answer/2853546?hl=ru">Справка Google по Группам контента</a></p>
-<h4 id="Кастомные-поля"><a name="14"></a>Кастомные поля</h4>
-<p>Иногда бывает нужно отправить в Google Analytics специальные поля….</p>
-<h4 id="Название-трекера"><a name="15"></a>Название трекера</h4>
-<p><a href="https://support.google.com/analytics/answer/2709829?hl=ru#set_up_custom_metrics">Справка Google по Названию трекера</a></p>
+<p><a href="https://support.google.com/analytics/answer/2709829?hl=en#set_up_custom_dimensions">Google guide on custom dimensions</a></p>
+
+<h3 id="content-groups"><a name="13"></a>Content groups</h3>
+<hr />
+<p>In Google Analytics, you can view reports not only in the slices of certain page addresses, but also in page groups. You can set these groups to your liking. For example, you can create a “Page type” content group and upload the value of the <code class="highlighter-rouge">digitalData.page.type</code> variable every time the page loads.</p>
+<ol>
+  <li>Create a content group:
+<img src="/img/integrations.ga.content-grouping.png" alt="" /></li>
+  <li>Setup the transmission of <code class="highlighter-rouge">digitalData.page.type</code> in the SegmentStream interface:
+<img src="/img/integrations.ga.content-grouping.1.png" alt="" /></li>
+</ol>
+
+<p><a href="https://support.google.com/analytics/answer/2853546?hl=ru">Google guide on Content Grouping</a></p>
+
+<h3 id="namespace"><a name="15"></a>Namespace</h3>
+<hr />
+<p>The analytics.js library allows you to create not one but several counters on the same page. This can be useful if you are sending data to two or more resources. For example, if you have an international business and you collect data from all regions in one common resource, but each region has its own resource with its own special settings.
+We recommend that you specify a unique value, for example <code class="highlighter-rouge">ss</code>.</p>
+
+<p><a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/creating-trackers?hl=en#working_with_multiple_trackers">Google on Working with multiple trackers</a></p>
+
+<!-- ### <a name="18"></a>Checkout options
+------
+If you are measuring checkout option effectiveness you can pass.
+
+[Google guide on checkout options](https://developers.google.com/analytics/devguides/collection/analyticsjs/enhanced-ecommerce#measuring-checkout) -->
+
 
 
                     </div>
                 
             </div>
-
-            <div class="row">
-                <div id="footer" class="col-sm-12">
-                    Documentation for <a href="">DDManager documentation</a>
-
-                </div>
+            <button id="myBtn" title="Go to top"></button>
+        </div>
+        <div id="footer">
+            <div class="questionaire">
+    <div class="row step1">
+        <div class="col-sm-6 question">
+            
+            Was this page helpful?
+            
+        </div>
+        <div class="col-sm-6 answer">
+            <div class="button-questionaire">
+                YES
+            </div>
+            <div class="button-questionaire">
+                NO
             </div>
         </div>
+    </div>
+    <div class="row step2">
+        <div class="col-xs-12">
+            
+            Thanks for the feedback!
+            
+        </div>
+    </div>
+</div>
+<a href="/"><img src="/img/segmentstream-logo.png" height="47" alt=SegmentStream documentation class="ddm-logo-footer"></a>
+<p class="copyright">Copyright © 2019 "SegmentStream" All rights reserved.</p>
 
-        <script>
-            function orderNav() {
-                var list,
-                    section,
-                    header,
-                    sections = [],
-                    lists = {},
-                    headers = {};
-                var navUl = document.querySelectorAll('#navigation ul')[0],
-                    navLis = document.querySelectorAll('#navigation ul li');
-                if (!navUl) return;
-                for (var i = 0; i < navLis.length; i++) {
-                    var order, li = navLis[i];
-                    if (li.classList.contains('nav-header')) {
-                        section = li.textContent || li.innerText;
-                        sections.push(section);
-                        headers[section] = li;
-                        continue;
-                    }
-                    if (!lists[section]) {
-                        lists[section] = [];
-                    }
-                    order = parseFloat(li.getAttribute('data-order'))
-                    lists[section].push([order, li]);
-                }
-                for (var i = 0; i < sections.length; i++) {
-                    section = sections[i];
-                    list = lists[section].sort(function(a, b) {
-                        return a[0] - b[0];
-                    });
-                    if (header = headers[section]) {
-                        navUl.appendChild(header);
-                    }
-                    for (var j = 0; j < list.length; j++) {
-                        navUl.appendChild(list[j][1]);
-                    }
-                }
-            }
-            if (document.querySelectorAll) orderNav();
+        </div>
+        <!-- SegmentStream snippet -->
+        <script type="text/javascript">
+        (function(h,d){d=d||"cdn.segmentstream.com";var a=window.ddManager=window.ddManager||[];window.ddListener=window.ddListener||[];var b=window.digitalData=window.digitalData||{};b.events=b.events||[];b.changes=b.changes||[];if(!a.initialize)if(a.invoked)window.console&&console.error&&console.error("SegmentStream snippet included twice.");else{a.invoked=!0;a.methods="initialize addIntegration persist unpersist on once off setConsent".split(" ");a.factory=function(k){return function(){var c=Array.prototype.slice.call(arguments);
+        c.unshift(k);a.push(c);return a}};for(b=0;b<a.methods.length;b++){var f=a.methods[b];a[f]=a.factory(f)}a.load=function(a){var c=document.createElement("script");c.type="text/javascript";c.charset="utf-8";c.async=!0;c.src=a;a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(c,a)};a.loadProject=function(b){var c=window.location.search;if(0<=c.indexOf("ddm_test_mode=1"))try{var e=!0;window.localStorage.setItem("_ddm_test_mode","1")}catch(g){}else if(0<=c.indexOf("ddm_test_mode=0"))try{e=
+        !1,window.localStorage.removeItem("_ddm_test_mode")}catch(g){}else try{e="1"===window.localStorage.getItem("_ddm_test_mode")}catch(g){}e?a.load(window.DDMANAGER_TESTMODE_INIT_URL||"https://api.segmentstream.com/v1/ddm-initialization/"+b+".js"):a.load(window.DDMANAGER_INIT_URL||"https://"+d+"/project/"+b+".js")};a.CDN_DOMAIN=d;a.SNIPPET_VERSION="1.0.11";a.loadProject(h)}})("975f9b27-a262-4758-9019-0bf81f566d68");
         </script>
+        <!-- //SegmentStream snippet -->
     </body>
 </html>

@@ -20,7 +20,7 @@ digitalData.events.push({
 ```
 
 
-#### From the DDManager interface
+#### From the SegmentStream interface
 > Let's say the checkout process on your website contains 4 steps:
 > 1. view the shopping cart
 > 2. enter information about the address and method of delivery

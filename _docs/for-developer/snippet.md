@@ -73,7 +73,7 @@ https://cdn.segmentstream.com/project/<your_project_id>.js
 The latest version of the sdk:
 https://cdn.segmentstream.com/sdk/dd-manager.js
 
-3. In the updated DDManager snippet it is necessary to uncomment the  `DDMANAGER_INIT_URL` and` DDMANAGER_SDK_URL` global variables to assign them the absolute path to the local version of the files on your own CDN.
+3. In the updated SegmentStream snippet it is necessary to uncomment the  `DDMANAGER_INIT_URL` and` DDMANAGER_SDK_URL` global variables to assign them the absolute path to the local version of the files on your own CDN.
 ```JavaScript
 // window.DDMANAGER_INIT_URL = '<YOUR_BACKUP_STABLE_INITIALIZATION_SCRIPT_URL>';
 // window.DDMANAGER_SDK_URL = '<YOUR_BACKUP_STABLE_SDK_SCRIPT_URL>';

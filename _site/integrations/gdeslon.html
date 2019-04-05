@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+
+        <title>SegmentStream documentation : GdeSlon</title>
+        <meta name="description" content="">
+
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/favicon/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicon/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favicon/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicon/apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/favicon/apple-touch-icon-60x60.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicon/apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/favicon/apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicon/apple-touch-icon-152x152.png" />
+        <link rel="icon" type="image/png" href="/favicon/favicon-196x196.png" sizes="196x196" />
+        <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16" />
+        <link rel="icon" type="image/png" href="/favicon/favicon-128.png" sizes="128x128" />
+        <meta name="application-name" content="&nbsp;"/>
+        <meta name="msapplication-TileColor" content="#FFFFFF" />
+        <meta name="msapplication-TileImage" content="/favicon/mstile-144x144.png" />
+        <meta name="msapplication-square70x70logo" content="/favicon/mstile-70x70.png" />
+        <meta name="msapplication-square150x150logo" content="/favicon/mstile-150x150.png" />
+        <meta name="msapplication-wide310x150logo" content="/favicon/mstile-310x150.png" />
+        <meta name="msapplication-square310x310logo" content="/favicon/mstile-310x310.png" />
+
+        <!-- <link rel="shortcut icon" type="image/x-icon" href="/favicon/favicon.ico"> -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/syntax.css">
+        <link rel="stylesheet" href="/css/main.css?v=1.1">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="/js/main.js?v=1.1"></script>
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="row">
+                <div id="header" class="col-sm-12">
+                    <div class="row">
+    <div class="col-sm-3 col-xs-12">
+        <div id="menu-toggle"></div>
+        <a target="_blank" href="https://admin.segmentstream.com/"><div id="login-button"></div></a>
+        <a class="brand" href="/"><img src="/img/segmentstream-logo.png" height="47" alt=SegmentStream documentation
+                class="ddm-logo">
+        </a>
+        <small></small>
+    </div>
+
+    <div class="col-sm-offset-5 col-sm-4 authorization">
+        <ul class="top-nav">
+            <li>
+                <a id="button-auth" target="_blank" href="https://admin.segmentstream.com/">
+                    
+                    Login
+                    
+                </a>
+            </li>
+        </ul>
+    </div>
+        
+            <a id="language-button" href='/ru/'>RU</a>
+        
+</div>
+
+
+                </div>
+            </div>
+            <div class="row">
+                
+                
+                    <div id="navigation" class="col-sm-3 col-md-3">
+                        <ul class="nav nav-list" >
+    
+    
+        
+        
+        
+        
+        
+        
+        
+            <li class="nav-header analyst ">Analyst</li>
+            
+                <li class="drop-menu analyst " data-order="0">
+                    <a href="/for-analyst/index">Overview</a>
+                </li>
+            
+                <li class="drop-menu analyst " data-order="1">
+                    <a href="/for-analyst/settings">Project settings</a>
+                </li>
+            
+                <li class="drop-menu analyst " data-order="2">
+                    <a href="/for-analyst/events">Events</a>
+                </li>
+            
+                <li class="drop-menu analyst " data-order="2">
+                    <a href="/for-analyst/integrations">Integrations</a>
+                </li>
+            
+                <li class="drop-menu analyst " data-order="4">
+                    <a href="/for-analyst/variables">Variables</a>
+                </li>
+            
+                <li class="drop-menu analyst " data-order="5">
+                    <a href="/for-analyst/scripts">Scripts</a>
+                </li>
+            
+                <li class="drop-menu analyst " data-order="6">
+                    <a href="/for-analyst/priorities">Priorities</a>
+                </li>
+            
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+            <li class="nav-header developer ">Developer</li>
+            
+                <li class="drop-menu developer " data-order="1">
+                    <a href="/for-developer/index">Overview</a>
+                </li>
+            
+                <li class="drop-menu developer " data-order="2">
+                    <a href="/for-developer/digitaldata">digitalData object</a>
+                </li>
+            
+                <li class="drop-menu developer " data-order="2">
+                    <a href="/for-developer/partners">Third-party system events</a>
+                </li>
+            
+                <li class="drop-menu developer " data-order="3">
+                    <a href="/for-developer/naming">Event and variable naming conventions</a>
+                </li>
+            
+                <li class="drop-menu developer " data-order="3">
+                    <a href="/for-developer/snippet">Connecting SegmentStream</a>
+                </li>
+            
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+            <li class="nav-header ecommerce ">Ecommerce integration</li>
+            
+                <li class="drop-menu ecommerce " data-order="1">
+                    <a href="/ecommerce/main-page">Homepage</a>
+                </li>
+            
+                <li class="drop-menu ecommerce " data-order="1">
+                    <a href="/ecommerce/index">Overview</a>
+                </li>
+            
+                <li class="drop-menu ecommerce " data-order="2">
+                    <a href="/ecommerce/listing">Product category</a>
+                </li>
+            
+                <li class="drop-menu ecommerce " data-order="3">
+                    <a href="/ecommerce/search">Search results</a>
+                </li>
+            
+                <li class="drop-menu ecommerce " data-order="4">
+                    <a href="/ecommerce/product">Product page</a>
+                </li>
+            
+                <li class="drop-menu ecommerce " data-order="5">
+                    <a href="/ecommerce/cart">Cart</a>
+                </li>
+            
+                <li class="drop-menu ecommerce " data-order="6">
+                    <a href="/ecommerce/checkout">Checkout process page</a>
+                </li>
+            
+                <li class="drop-menu ecommerce " data-order="7">
+                    <a href="/ecommerce/transaction">'Thank You' page</a>
+                </li>
+            
+                <li class="drop-menu ecommerce " data-order="8">
+                    <a href="/ecommerce/content">Content page</a>
+                </li>
+            
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+            <li class="nav-header digitaldata ">Variable list</li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/wishlist">wishlist</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/cart">cart</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/changes">changes</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/context">context</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/events">events</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/listing">listing</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/page">page</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/product">product</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/recommendation">recommendation</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/standard-version">version</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/transaction">transaction</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/user">user</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/website">website</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/campaigns">campaigns</a>
+                </li>
+            
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+            <li class="nav-header events ">Events list</li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/viewed-product">Viewed Product</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/added-payment-info">Added Payment Info</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/added-product-to-wishlist">Added Product to Wishlist</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/added-product">Added Product</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/clicked-campaign">Clicked Campaign</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/clicked-product">Clicked Product</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/completed-checkout-step">Completed Checkout Step</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/completed-transaction">Completed Transaction</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/logged-in">Logged In</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/received-voucher">Received Voucher</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/refunded-transaction">Refunded Transaction</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/registered">Registered</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/removed-product-from-wishlist">Removed Product from Wishlist</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/removed-product">Removed Product</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/searched-products">Searched Products</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/started-order">Started Order</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/subscribed">Subscribed</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/unsubscribed">Unsubscribed</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/updated-cart">Updated Cart</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/updated-profile-info">Updated Profile Info</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/viewed-campaign">Viewed Campaign</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/viewed-cart">Viewed Cart</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/viewed-checkout-step">Viewed Checkout Step</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/viewed-experiment">Viewed Experiment</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/viewed-page">Viewed Page</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/viewed-product-detail">Viewed Product Detail</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/viewed-product-listing">Viewed Product Listing</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/achieved-experiment-goal">Achieved Experiment Goal</a>
+                </li>
+            
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+            <li class="nav-header integrations  active ">Integration list</li>
+            
+                <li class="drop-menu integrations active  " data-order="1">
+                    <a href="/integrations/vkontakte">Vkontakte</a>
+                </li>
+            
+                <li class="drop-menu integrations active  " data-order="1">
+                    <a href="/integrations/criteo">Criteo</a>
+                </li>
+            
+                <li class="drop-menu integrations active  " data-order="1">
+                    <a href="/integrations/ddmanager-streaming">Streaming</a>
+                </li>
+            
+                <li class="drop-menu integrations active  " data-order="1">
+                    <a href="/integrations/facebook">Facebook</a>
+                </li>
+            
+                <li class="drop-menu integrations active   current " data-order="1">
+                    <a href="/integrations/gdeslon">GdeSlon</a>
+                </li>
+            
+                <li class="drop-menu integrations active  " data-order="1">
+                    <a href="/integrations/google-adwords">Google Adwords</a>
+                </li>
+            
+                <li class="drop-menu integrations active  " data-order="1">
+                    <a href="/integrations/google-analytics">Google Analytics</a>
+                </li>
+            
+                <li class="drop-menu integrations active  " data-order="1">
+                    <a href="/integrations/onesignal">OneSignal</a>
+                </li>
+            
+                <li class="drop-menu integrations active  " data-order="1">
+                    <a href="/integrations/rtb-house">RTB House</a>
+                </li>
+            
+                <li class="drop-menu integrations active  " data-order="1">
+                    <a href="/integrations/yandex-metrica">Yandex.Metrica</a>
+                </li>
+            
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+    
+<!-- List additional links. It is recommended to add a divider
+    e.g. <li class="divider"></li> first to break up the content. -->
+</ul>
+
+
+                    </div>
+
+                    <div id="content" class="col-sm-9 col-md-7">
+                        <div class="page-header">
+    <h1>GdeSlon
+        
+    </h1>
+</div>
+
+<p>In this section you will learn:</p>
+<ul>
+  <li>How to turn GdeSlon on or off on your website.</li>
+  <li>How to set up deduplication of paid channels.</li>
+  <li>How to activate GdeSlon retargeting.</li>
+</ul>
+
+<p>GdeSlon is an affiliate network that connects advertisers with web-masters. SegmentStream allows you to send all necessary user behaviour data to GdeSlon.</p>
+
+<h3 id="page-contents">Page contents</h3>
+<hr />
+<ul class="page-navigation">
+  <li><a href="#0">Introduction</a></li>
+  <li><a href="#1">Requirements</a></li>
+  <li><a href="#2">Merchant ID</a></li>
+  <li><a href="#2_1">Product feed has grouped products</a></li>
+  <li><a href="#3">Default action code</a></li>
+  <li><a href="#4">Name of the cookie that stores the affiliate id</a></li>
+  <li><a href="#5">Automatic cookie tracking</a></li>
+  <li><a href="#6">Activate deduplication</a></li>
+  <li><a href="#7">GdeSlon utm_source</a></li>
+</ul>
+
+<h3 id="introduction"><a name="0"></a>Introduction</h3>
+<hr />
+<p>With the help of SegmentStream you can add the GdeSlon pixel on your website’s ‘Thank You’ page, save the trafic source and partner id in the browser’s cookies, and connect the GdeSlon retargeting module.</p>
+
+<p>To configure your integration with GdeSlon:</p>
+<ol>
+  <li>Login on the <a href="https://admin.segmentstream.com/">segmentstream.com</a> website and go to the integration control panel.</li>
+  <li>Enter the “Integration” tab and click on the block with the GdeSlon logo.</li>
+  <li>In the panel that opens, configure the integration.</li>
+</ol>
+
+<p>You will find a more detailed description of the settings below.</p>
+
+<h3 id="requirements"><a name="1"></a>Requirements</h3>
+<hr />
+<p>Before you start setting up the integration in the SegmentStream panel, you need to register in the connected system and prepare all the necessary data:</p>
+<ul>
+  <li>Request a test link from your GdeSlon manager
+    <ul>
+      <li>It is important that the link contains the following
+GET_parameters: utm_medium, utm_source, gdeslon_uid. If there are no such parameters or other parameters are used, you should ask the GdeSlon manager to create a link in the following format https://site.com/?utm_medium=cpa&amp;utm_source=gdeslon&amp;utm_campaign=xxxxxgdeslon_uid=yyyyyy</li>
+    </ul>
+  </li>
+  <li>Merchant ID</li>
+  <li>A list of all action codes and their application, for example:
+    <ul>
+      <li>1 - first purchase</li>
+      <li>2 - consecutive purchase
+        <ul>
+          <li>or</li>
+        </ul>
+      </li>
+      <li>1 - purchase a product from the ‘Jeans’ category</li>
+      <li>2 - purchase a product from the ‘Accessories’ category</li>
+      <li>3 - ….</li>
+    </ul>
+  </li>
+  <li>Link to the product feed. It is needed to compare product IDs in the feed and digitalData layer.</li>
+  <li>If GdeSlon is already working on the website, you need to specify the name of the cookie in which the gdeslon_uid is stored by the developer or analyst. After the integration is enabled via SegmentStream, it will be necessary to disable the saving of cookies on the developers side.</li>
+  <li>You need to know with which traffic channels utm_medium deduplication will be configured. For example: with all or only with CPA or CPA and CPC.</li>
+</ul>
+
+<h3 id="merchant-id"><a name="2"></a>Merchant ID</h3>
+<hr />
+<p>The Merchant ID is a unique identifier for your online project and is issued by GdeSlon employees at your request.</p>
+
+<h3 id="product-feed-has-grouped-products"><a name="2_1"></a>Product feed has grouped products</h3>
+<hr />
+<p>GdeSlon receives information about products placed on the site through an XML feed.</p>
+
+<p>For correct integration, GdeSlon should also receive information about the interaction of users with products on the site - views, additions to the shopping cart, purchases, etc. The system must correctly match what it sees in the incoming events with the XML feed.</p>
+
+<p>-If you use grouping of goods using the <code class="highlighter-rouge">item_group_id</code> xml-feed parameter - be sure to activate this setting.</p>
+<blockquote>
+  <p>In this case, the product id from your XML feed must match the <code class="highlighter-rouge">product.skuCode</code> of the <code class="highlighter-rouge">digitalData</code> object. Be sure to fill <code class="highlighter-rouge">product.skuCode</code> and <code class="highlighter-rouge">product.id</code> in each <code class="highlighter-rouge">product</code>.</p>
+</blockquote>
+
+<p>-If you do NOT use grouping of goods using the <code class="highlighter-rouge">item_group_id</code> xml-feed parameter - do not activate this setting.</p>
+<blockquote>
+  <p>In this case, the product id from your XML feed must match the <code class="highlighter-rouge">product.id</code> of the <code class="highlighter-rouge">digitalData</code> object.</p>
+</blockquote>
+
+<h3 id="default-action-code"><a name="3"></a>Default action code</h3>
+<hr />
+<p>Depending on your arrangements with GdeSlon, you may have one or more action codes. For example, if you pay one price for the first purchase in your online store, and another for another purchase.</p>
+
+<p>Most online stores pay the same price for all activities. In this case, you will have one action code, which you can learn from your GdeSlon manager.</p>
+
+<p>If you have multiple action codes, you will need to configure Event Variables.
+In the GdeSlon integration settings window, click on the Event Variables tab and click add.</p>
+
+<p>Below is an example of setting different action codes depending on the visitor’s purchase number:
+<img src="/img/integrations.gdeslon.1.png" alt="" /></p>
+
+<h3 id="name-of-the-cookie-that-stores-the-affiliate-id"><a name="4"></a>Name of the cookie that stores the affiliate id</h3>
+<hr />
+<p>Every webmaster has a unique identifier in the GdeSlon network. This identifier is present as a GET parameter in all advertising links leading to your site. To remember the webmaster who brought you a potential buyer, you need to save the webmaster ID in the cookie. The webmaster whose number will be in the cookie at the time of order will receive a reward.</p>
+
+<blockquote>
+  <p>If GdeSlon has already been integrated with your site before, we recommend that you specify the former name of the cookie in the settings so that the identifiers of partners who have previously led traffic to the site are not lost.</p>
+</blockquote>
+
+<h3 id="automatic-cookie-tracking"><a name="5"></a>Automatic cookie tracking</h3>
+<hr />
+<p>SegmentStream is able to automatically save the partner ID in a cookie for a set period.
+Turn on the “Automatic tracking cookie” switch, specify the storage time in days and the domain of the cookie.</p>
+
+<blockquote>
+  <p>If different sections of your site are located on subdomains, for example, the basket is located at checkout.site.ru, specify the top-level domain in the integration settings</p>
+</blockquote>
+
+<blockquote>
+  <p>If you are already saving gdeslon_uid to a specific cookie, enter its name. After verification, ask the developer to disable the previous cookie filling.</p>
+</blockquote>
+
+<h3 id="activate-deduplication"><a name="6"></a>Activate deduplication</h3>
+<hr />
+<p>Deduplication or attribution is the rule according to which the value of the completed order is redistributed among all traffic sources that brought the user to the site before his purchase. In the case of partner networks, the ‘last cookie wins’ rule is most often used. This means that the last partner takes all the value.</p>
+
+<p>By default, deduplication is disabled. This means that the webmaster who brought a user to the site will receive his reward, regardless of whether the webmasters of other partner networks or targeted and contextual advertising systems brought traffic to the site later.</p>
+
+<p>If you enable deduplication, the system will remember the last traffic source (utm_source and utm_medium).
+If you specify the list utm_medium, then SegmentStream will not send information about the purchase to GdeSlon, if the last user’s transition before the purchase was with the corresponding utm_tag. For example, if you specify ‘cpc’, then any transitions from contextual advertising (if of course, your contextual advertising ads are marked as ‘cpc’) will “overwrite” previous navigation through webmasters’ links.</p>
+
+<p>If don’t specify any utm_medium, then all redirects to links containing a utm_medium parameter will “overwrite” previous clicks on webmasters’ links.</p>
+
+<blockquote>
+  <p>If you are working with several partner networks at the same time, we strongly recommend that you enable deduplication and specify the utm_medium links of other partner networks.</p>
+</blockquote>
+
+<h3 id="gdeslon-partner-links-utm_source"><a name="7"></a>GdeSlon partner links utm_source</h3>
+<hr />
+<p>For deduplication and the accounting of partner rewards to work correctly it is necessary to specify the utm_source of the partner links. Confirm the value of this parameter with your GdeSlon manager.</p>
+
+<h3 id="activate-retargeting"><a name="8"></a>Activate retargeting</h3>
+<hr />
+<p>To enable GdeSlon retargeting, you need to enable the “Activate retargeting” toggle switch.</p>
+
+<p>For GdeSlon retargeting to work correctly on your site, you must configure the transmission of certain events to the <code class="highlighter-rouge">digitalData.events</code> array. The list of events is given below:</p>
+
+<p><strong>Required events</strong></p>
+<ul>
+  <li><a href="/events/viewed-page">Viewed Page</a></li>
+  <li><a href="/events/viewed-product-detail">Viewed Product Detail</a></li>
+  <li><a href="/events/viewed-product-listing">Viewed Product Listing</a></li>
+  <li><a href="/events/searched-products">Searched Products</a></li>
+  <li><a href="/events/viewed-cart">Viewed Cart</a></li>
+  <li><a href="/events/completed-transaction">Completed Transaction</a></li>
+</ul>
+
+<p>You also need to configure the filling of certain variables of the <code class="highlighter-rouge">digitalData</code> object. Some variables are listed below:</p>
+<ul>
+  <li><code class="highlighter-rouge">page.type</code></li>
+  <li><code class="highlighter-rouge">product.id</code>, <code class="highlighter-rouge">product.skuCode</code>, <code class="highlighter-rouge">product.unitSalePrice</code> - there are several instances of the product object in <code class="highlighter-rouge">digitalData</code>: directly in <code class="highlighter-rouge">digitalData.product</code>, and in the <code class="highlighter-rouge">items</code>,<code class="highlighter-rouge">lineItems</code> arrays of the <code class="highlighter-rouge">listing</code>, <code class="highlighter-rouge">cart</code>, <code class="highlighter-rouge">transaction</code> objects.</li>
+  <li><code class="highlighter-rouge">listing.items</code>, <code class="highlighter-rouge">listing.categoryId</code>.</li>
+  <li><code class="highlighter-rouge">cart.lineItems</code>.</li>
+  <li><code class="highlighter-rouge">transaction.orderId</code>, <code class="highlighter-rouge">transaction.total</code>, <code class="highlighter-rouge">transaction.lineItems</code>.</li>
+</ul>
+
+<p>Table for clarification:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Events</th>
+      <th>Required variables</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Viewed Page</td>
+      <td>page.type</td>
+    </tr>
+    <tr>
+      <td>Viewed Product Detail</td>
+      <td>page.type<br /> [product].id<br /> [product].skuCode<br /> [product].unitSalePrice</td>
+    </tr>
+    <tr>
+      <td>Viewed Product Listing</td>
+      <td>page.type<br /> [product].id<br /> [product].skuCode<br /> [product].unitSalePrice<br /> listing.items<br /> listing.categoryId</td>
+    </tr>
+    <tr>
+      <td>Searched Products</td>
+      <td>page.type<br /> [product].id<br /> [product].skuCode<br /> [product].unitSalePrice<br /> listing.items</td>
+    </tr>
+    <tr>
+      <td>Viewed Cart</td>
+      <td>page.type<br /> [product].id<br /> [product].skuCode<br /> [product].unitSalePrice<br /> lineItems.quantity</td>
+    </tr>
+    <tr>
+      <td>Completed Transaction</td>
+      <td>page.type<br /> [product].id<br /> [product].skuCode<br /> [product].unitSalePrice<br /> lineItems.quantity<br /> transaction.orderId<br /> transaction.total</td>
+    </tr>
+  </tbody>
+</table>
+
+
+                    </div>
+                
+            </div>
+            <button id="myBtn" title="Go to top"></button>
+        </div>
+        <div id="footer">
+            <div class="questionaire">
+    <div class="row step1">
+        <div class="col-sm-6 question">
+            
+            Was this page helpful?
+            
+        </div>
+        <div class="col-sm-6 answer">
+            <div class="button-questionaire">
+                YES
+            </div>
+            <div class="button-questionaire">
+                NO
+            </div>
+        </div>
+    </div>
+    <div class="row step2">
+        <div class="col-xs-12">
+            
+            Thanks for the feedback!
+            
+        </div>
+    </div>
+</div>
+<a href="/"><img src="/img/segmentstream-logo.png" height="47" alt=SegmentStream documentation class="ddm-logo-footer"></a>
+<p class="copyright">Copyright © 2019 "SegmentStream" All rights reserved.</p>
+
+        </div>
+        <!-- SegmentStream snippet -->
+        <script type="text/javascript">
+        (function(h,d){d=d||"cdn.segmentstream.com";var a=window.ddManager=window.ddManager||[];window.ddListener=window.ddListener||[];var b=window.digitalData=window.digitalData||{};b.events=b.events||[];b.changes=b.changes||[];if(!a.initialize)if(a.invoked)window.console&&console.error&&console.error("SegmentStream snippet included twice.");else{a.invoked=!0;a.methods="initialize addIntegration persist unpersist on once off setConsent".split(" ");a.factory=function(k){return function(){var c=Array.prototype.slice.call(arguments);
+        c.unshift(k);a.push(c);return a}};for(b=0;b<a.methods.length;b++){var f=a.methods[b];a[f]=a.factory(f)}a.load=function(a){var c=document.createElement("script");c.type="text/javascript";c.charset="utf-8";c.async=!0;c.src=a;a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(c,a)};a.loadProject=function(b){var c=window.location.search;if(0<=c.indexOf("ddm_test_mode=1"))try{var e=!0;window.localStorage.setItem("_ddm_test_mode","1")}catch(g){}else if(0<=c.indexOf("ddm_test_mode=0"))try{e=
+        !1,window.localStorage.removeItem("_ddm_test_mode")}catch(g){}else try{e="1"===window.localStorage.getItem("_ddm_test_mode")}catch(g){}e?a.load(window.DDMANAGER_TESTMODE_INIT_URL||"https://api.segmentstream.com/v1/ddm-initialization/"+b+".js"):a.load(window.DDMANAGER_INIT_URL||"https://"+d+"/project/"+b+".js")};a.CDN_DOMAIN=d;a.SNIPPET_VERSION="1.0.11";a.loadProject(h)}})("975f9b27-a262-4758-9019-0bf81f566d68");
+        </script>
+        <!-- //SegmentStream snippet -->
+    </body>
+</html>

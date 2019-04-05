@@ -5,254 +5,692 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
 
-        <title>DDManager documentation : События</title>
+        <title>SegmentStream documentation : Events</title>
         <meta name="description" content="">
 
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/favicon/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicon/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favicon/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicon/apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/favicon/apple-touch-icon-60x60.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicon/apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/favicon/apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicon/apple-touch-icon-152x152.png" />
+        <link rel="icon" type="image/png" href="/favicon/favicon-196x196.png" sizes="196x196" />
+        <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16" />
+        <link rel="icon" type="image/png" href="/favicon/favicon-128.png" sizes="128x128" />
+        <meta name="application-name" content="&nbsp;"/>
+        <meta name="msapplication-TileColor" content="#FFFFFF" />
+        <meta name="msapplication-TileImage" content="/favicon/mstile-144x144.png" />
+        <meta name="msapplication-square70x70logo" content="/favicon/mstile-70x70.png" />
+        <meta name="msapplication-square150x150logo" content="/favicon/mstile-150x150.png" />
+        <meta name="msapplication-wide310x150logo" content="/favicon/mstile-310x150.png" />
+        <meta name="msapplication-square310x310logo" content="/favicon/mstile-310x310.png" />
+
+        <!-- <link rel="shortcut icon" type="image/x-icon" href="/favicon/favicon.ico"> -->
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="/css/syntax.css">
-        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/main.css?v=1.1">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="/js/main.js?v=1.1"></script>
     </head>
     <body>
 
         <div class="container">
             <div class="row">
                 <div id="header" class="col-sm-12">
-                    <h4><a class="brand" href="/">DDManager documentation</a>
-    <small></small>
-</h4>
+                    <div class="row">
+    <div class="col-sm-3 col-xs-12">
+        <div id="menu-toggle"></div>
+        <a target="_blank" href="https://admin.segmentstream.com/"><div id="login-button"></div></a>
+        <a class="brand" href="/"><img src="/img/segmentstream-logo.png" height="47" alt=SegmentStream documentation
+                class="ddm-logo">
+        </a>
+        <small></small>
+    </div>
+
+    <div class="col-sm-offset-5 col-sm-4 authorization">
+        <ul class="top-nav">
+            <li>
+                <a id="button-auth" target="_blank" href="https://admin.segmentstream.com/">
+                    
+                    Login
+                    
+                </a>
+            </li>
+        </ul>
+    </div>
+        
+            <a id="language-button" href='/ru/'>RU</a>
+        
+</div>
+
 
                 </div>
             </div>
             <div class="row">
                 
                 
-                    <div id="navigation" class="col-sm-2">
-                        <ul class="nav nav-list">
+                    <div id="navigation" class="col-sm-3 col-md-3">
+                        <ul class="nav nav-list" >
     
-
-    
-        
-        
-        
-        
-            
-                <li class="nav-header">Аналитику</li>
-            
-            <li data-order="2"><a href="/for-analyst/events">События</a></li>
-        
-            
-            <li data-order="2"><a href="/for-analyst/integrations">Интеграции</a></li>
-        
-            
-            <li data-order="4"><a href="/for-analyst/variables">Переменные</a></li>
-        
-            
-            <li data-order="1"><a href="/for-analyst/index">Обзор</a></li>
-        
     
         
         
         
         
+        
+        
+        
+            <li class="nav-header analyst  active ">Analyst</li>
             
-                <li class="nav-header">Разработчику</li>
+                <li class="drop-menu analyst active  " data-order="0">
+                    <a href="/for-analyst/index">Overview</a>
+                </li>
             
-            <li data-order="1"><a href="/for-developer/index">Обзор</a></li>
+                <li class="drop-menu analyst active  " data-order="1">
+                    <a href="/for-analyst/settings">Project settings</a>
+                </li>
+            
+                <li class="drop-menu analyst active   current " data-order="2">
+                    <a href="/for-analyst/events">Events</a>
+                </li>
+            
+                <li class="drop-menu analyst active  " data-order="2">
+                    <a href="/for-analyst/integrations">Integrations</a>
+                </li>
+            
+                <li class="drop-menu analyst active  " data-order="4">
+                    <a href="/for-analyst/variables">Variables</a>
+                </li>
+            
+                <li class="drop-menu analyst active  " data-order="5">
+                    <a href="/for-analyst/scripts">Scripts</a>
+                </li>
+            
+                <li class="drop-menu analyst active  " data-order="6">
+                    <a href="/for-analyst/priorities">Priorities</a>
+                </li>
+            
+        
         
     
         
         
         
         
+        
+        
+        
+            <li class="nav-header developer ">Developer</li>
             
-                <li class="nav-header">Список интеграций</li>
+                <li class="drop-menu developer " data-order="1">
+                    <a href="/for-developer/index">Overview</a>
+                </li>
             
-            <li data-order="1"><a href="/integrations/google-analytics">Google Analytics</a></li>
+                <li class="drop-menu developer " data-order="2">
+                    <a href="/for-developer/digitaldata">digitalData object</a>
+                </li>
+            
+                <li class="drop-menu developer " data-order="2">
+                    <a href="/for-developer/partners">Third-party system events</a>
+                </li>
+            
+                <li class="drop-menu developer " data-order="3">
+                    <a href="/for-developer/naming">Event and variable naming conventions</a>
+                </li>
+            
+                <li class="drop-menu developer " data-order="3">
+                    <a href="/for-developer/snippet">Connecting SegmentStream</a>
+                </li>
+            
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+            <li class="nav-header ecommerce ">Ecommerce integration</li>
+            
+                <li class="drop-menu ecommerce " data-order="1">
+                    <a href="/ecommerce/main-page">Homepage</a>
+                </li>
+            
+                <li class="drop-menu ecommerce " data-order="1">
+                    <a href="/ecommerce/index">Overview</a>
+                </li>
+            
+                <li class="drop-menu ecommerce " data-order="2">
+                    <a href="/ecommerce/listing">Product category</a>
+                </li>
+            
+                <li class="drop-menu ecommerce " data-order="3">
+                    <a href="/ecommerce/search">Search results</a>
+                </li>
+            
+                <li class="drop-menu ecommerce " data-order="4">
+                    <a href="/ecommerce/product">Product page</a>
+                </li>
+            
+                <li class="drop-menu ecommerce " data-order="5">
+                    <a href="/ecommerce/cart">Cart</a>
+                </li>
+            
+                <li class="drop-menu ecommerce " data-order="6">
+                    <a href="/ecommerce/checkout">Checkout process page</a>
+                </li>
+            
+                <li class="drop-menu ecommerce " data-order="7">
+                    <a href="/ecommerce/transaction">'Thank You' page</a>
+                </li>
+            
+                <li class="drop-menu ecommerce " data-order="8">
+                    <a href="/ecommerce/content">Content page</a>
+                </li>
+            
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+            <li class="nav-header digitaldata ">Variable list</li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/wishlist">wishlist</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/cart">cart</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/changes">changes</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/context">context</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/events">events</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/listing">listing</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/page">page</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/product">product</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/recommendation">recommendation</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/standard-version">version</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/transaction">transaction</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/user">user</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/website">website</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/campaigns">campaigns</a>
+                </li>
+            
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+            <li class="nav-header events  active ">Events list</li>
+            
+                <li class="drop-menu events active  " data-order="2">
+                    <a href="/events/viewed-product">Viewed Product</a>
+                </li>
+            
+                <li class="drop-menu events active  " data-order="2">
+                    <a href="/events/added-payment-info">Added Payment Info</a>
+                </li>
+            
+                <li class="drop-menu events active  " data-order="2">
+                    <a href="/events/added-product-to-wishlist">Added Product to Wishlist</a>
+                </li>
+            
+                <li class="drop-menu events active  " data-order="2">
+                    <a href="/events/added-product">Added Product</a>
+                </li>
+            
+                <li class="drop-menu events active  " data-order="2">
+                    <a href="/events/clicked-campaign">Clicked Campaign</a>
+                </li>
+            
+                <li class="drop-menu events active  " data-order="2">
+                    <a href="/events/clicked-product">Clicked Product</a>
+                </li>
+            
+                <li class="drop-menu events active  " data-order="2">
+                    <a href="/events/completed-checkout-step">Completed Checkout Step</a>
+                </li>
+            
+                <li class="drop-menu events active  " data-order="2">
+                    <a href="/events/completed-transaction">Completed Transaction</a>
+                </li>
+            
+                <li class="drop-menu events active  " data-order="2">
+                    <a href="/events/logged-in">Logged In</a>
+                </li>
+            
+                <li class="drop-menu events active  " data-order="2">
+                    <a href="/events/received-voucher">Received Voucher</a>
+                </li>
+            
+                <li class="drop-menu events active  " data-order="2">
+                    <a href="/events/refunded-transaction">Refunded Transaction</a>
+                </li>
+            
+                <li class="drop-menu events active  " data-order="2">
+                    <a href="/events/registered">Registered</a>
+                </li>
+            
+                <li class="drop-menu events active  " data-order="2">
+                    <a href="/events/removed-product-from-wishlist">Removed Product from Wishlist</a>
+                </li>
+            
+                <li class="drop-menu events active  " data-order="2">
+                    <a href="/events/removed-product">Removed Product</a>
+                </li>
+            
+                <li class="drop-menu events active  " data-order="2">
+                    <a href="/events/searched-products">Searched Products</a>
+                </li>
+            
+                <li class="drop-menu events active  " data-order="2">
+                    <a href="/events/started-order">Started Order</a>
+                </li>
+            
+                <li class="drop-menu events active  " data-order="2">
+                    <a href="/events/subscribed">Subscribed</a>
+                </li>
+            
+                <li class="drop-menu events active  " data-order="2">
+                    <a href="/events/unsubscribed">Unsubscribed</a>
+                </li>
+            
+                <li class="drop-menu events active  " data-order="2">
+                    <a href="/events/updated-cart">Updated Cart</a>
+                </li>
+            
+                <li class="drop-menu events active  " data-order="2">
+                    <a href="/events/updated-profile-info">Updated Profile Info</a>
+                </li>
+            
+                <li class="drop-menu events active  " data-order="2">
+                    <a href="/events/viewed-campaign">Viewed Campaign</a>
+                </li>
+            
+                <li class="drop-menu events active  " data-order="2">
+                    <a href="/events/viewed-cart">Viewed Cart</a>
+                </li>
+            
+                <li class="drop-menu events active  " data-order="2">
+                    <a href="/events/viewed-checkout-step">Viewed Checkout Step</a>
+                </li>
+            
+                <li class="drop-menu events active  " data-order="2">
+                    <a href="/events/viewed-experiment">Viewed Experiment</a>
+                </li>
+            
+                <li class="drop-menu events active  " data-order="2">
+                    <a href="/events/viewed-page">Viewed Page</a>
+                </li>
+            
+                <li class="drop-menu events active  " data-order="2">
+                    <a href="/events/viewed-product-detail">Viewed Product Detail</a>
+                </li>
+            
+                <li class="drop-menu events active  " data-order="2">
+                    <a href="/events/viewed-product-listing">Viewed Product Listing</a>
+                </li>
+            
+                <li class="drop-menu events active  " data-order="2">
+                    <a href="/events/achieved-experiment-goal">Achieved Experiment Goal</a>
+                </li>
+            
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+            <li class="nav-header integrations ">Integration list</li>
+            
+                <li class="drop-menu integrations " data-order="1">
+                    <a href="/integrations/vkontakte">Vkontakte</a>
+                </li>
+            
+                <li class="drop-menu integrations " data-order="1">
+                    <a href="/integrations/criteo">Criteo</a>
+                </li>
+            
+                <li class="drop-menu integrations " data-order="1">
+                    <a href="/integrations/ddmanager-streaming">Streaming</a>
+                </li>
+            
+                <li class="drop-menu integrations " data-order="1">
+                    <a href="/integrations/facebook">Facebook</a>
+                </li>
+            
+                <li class="drop-menu integrations " data-order="1">
+                    <a href="/integrations/gdeslon">GdeSlon</a>
+                </li>
+            
+                <li class="drop-menu integrations " data-order="1">
+                    <a href="/integrations/google-adwords">Google Adwords</a>
+                </li>
+            
+                <li class="drop-menu integrations " data-order="1">
+                    <a href="/integrations/google-analytics">Google Analytics</a>
+                </li>
+            
+                <li class="drop-menu integrations " data-order="1">
+                    <a href="/integrations/onesignal">OneSignal</a>
+                </li>
+            
+                <li class="drop-menu integrations " data-order="1">
+                    <a href="/integrations/rtb-house">RTB House</a>
+                </li>
+            
+                <li class="drop-menu integrations " data-order="1">
+                    <a href="/integrations/yandex-metrica">Yandex.Metrica</a>
+                </li>
+            
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
         
     
 <!-- List additional links. It is recommended to add a divider
     e.g. <li class="divider"></li> first to break up the content. -->
 </ul>
 
+
                     </div>
 
-                    <div id="content" class="col-sm-10">
+                    <div id="content" class="col-sm-9 col-md-7">
                         <div class="page-header">
-    <h2>События
+    <h1>Events
         
-    </h2>
+    </h1>
 </div>
 
-<p>Событие - одно из наиболее важных составляющих digitalData. Любая информация отправляется в системы аналитики и другие маркетинговые системы только в виде событий. Ниже будут описаны способы создания и управления событиями в интерфейсе Digital Data Manager.</p>
+<p>Events is one of the most important components of <code class="highlighter-rouge">digitalData</code>. All information is sent to analytics and marketing systems in the form of events. Below, you will find a detailed description on how to create and manage events in the SegmentStream interface.</p>
 
-<blockquote>
-  <p>Навигация по странице <br />
-<a href="#0">Введение</a> <br />
-<a href="#1">Создание события</a> <br />
-<a href="#3">Вспомогательные функции</a> <br />
-<a href="#4">Как называть события</a> <br /></p>
-</blockquote>
+<h3 id="page-contents">Page contents</h3>
+<hr />
+<ul class="page-navigation">
+  <li><a href="#0">Introduction</a></li>
+  <li><a href="#1">Event creation</a></li>
+  <li><a href="#3">Helper functions</a></li>
+  <li><a href="#4">Event naming convention</a></li>
+</ul>
 
-<h4 id="Введение"><a name="0"></a>Введение</h4>
-<p>Любое событие - это набор информации, который поступает в массив данных digitalData.events. Информация в массиве должна быть представлена в виде javaScript объекта.
-Например: Digital Data Manager зарегистрирует событие с именем “Event Happened” в момент, когда будет выполнен следующий код:</p>
+<h3 id="introduction"><a name="0"></a>Introduction</h3>
+<hr />
+<p>Any event is a set of information that enters the digitalData.events data array. The information in the array must be represented as a javaScript object.
+For example: SegmentStream will register an event with the name “Event Happened” when the following code is executed:</p>
 <div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">digitalData</span><span class="p">.</span><span class="nx">events</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
   <span class="na">name</span><span class="p">:</span> <span class="s1">'Event Happened'</span><span class="p">,</span>
   <span class="na">value</span><span class="p">:</span> <span class="mi">3000</span>
-<span class="p">});</span>      
+<span class="p">});</span>
 </code></pre>
 </div>
-<p>Теперь Digital Data Manager может отправить информацию о событии “Event Happened” вместе со значением 3000 в любую систему, например в Google Analytics или Yandex Metrika.</p>
+<p>Now SegmentStream can send information about the event “Event Happened” with the value 3000 to any system, for example, Google Analytics and Yandex Metrica.</p>
 
-<h4 id="Создание-события"><a name="1"></a>Создание события</h4>
-
-<p>В Digital Data Manager есть 3 базисных триггера:</p>
+<h3 id="event-creation"><a name="1"></a>Event creation</h3>
+<hr />
+<p>SegmentStream has 3 basic triggers:</p>
 <ul>
-  <li>Событие</li>
-  <li>Клик</li>
-  <li>Показ
-    <blockquote>
-      <p>В Digital Data Manager есть 1 встроенное событие - Viewed Page. Это событие наступает в тот момент, когда полностью загружает библиотека ddmanager.
-<img src="/img/events.1.png" alt="" /></p>
-    </blockquote>
-  </li>
+  <li>Event</li>
+  <li>Click</li>
+  <li>Impression</li>
 </ul>
 
-<p>На основе этих триггеров и данных из digitalData можно создавать новые события события.</p>
+<blockquote>
+  <p>Important! SegmentStream has 1 built-in event - Viewed Page. This event occurs when the SegmentStream library is fully loaded.</p>
+</blockquote>
 
-<h5 id="Пример-1-Событие-viewed-product-detail">Пример 1: Событие Viewed Product Detail</h5>
-<p>Большинству маркетинговых систем требуется информация о просмотрах карточек товаров вашего интернет-магазина. Чтобы отправить в интеграцию информацию о просмотренном товаре, вам нужно настроить событие Viewed Product Detail. Это событие наступает в момент загрузки пользователем карточки товара или на языке digitalData: Наступило событие Viewed Page при условии, что digitalData.page.type === ‘product’ (тип страницы, на которой находится пользователь: товар).</p>
+<p><img src="/img/events.1.png" alt="" /></p>
+
+<p>Based on these triggers and data from digitalData, you can create new events.</p>
+
+<p><strong>Example 1: <code class="highlighter-rouge">Viewed Product Detail</code> Event</strong></p>
+
+<p>Most marketing systems require information about your online store’s product page views. To send the information about the viewed product to any integration, you need to configure the Viewed Product Detail event. This event occurs when the user loads a product page, or in the digitalData language: The Viewed Page event has occurred while the variable digitalData.page.type is equal to ‘product’ (the type of page on which the user is located is a product page).</p>
 
 <p><img src="/img/events.2.png" alt="" /></p>
-<h4 id="javascript">JavaScript</h4>
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">digitalData</span><span class="p">(</span><span class="s1">'page.type'</span><span class="p">)</span> <span class="o">===</span> <span class="s1">'product'</span><span class="p">)</span> <span class="p">{</span>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="nx">_digitalData</span><span class="p">(</span><span class="s1">'page.type'</span><span class="p">)</span> <span class="o">===</span> <span class="s1">'product'</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">return</span> <span class="p">{</span>
     <span class="na">category</span><span class="p">:</span> <span class="s1">'Ecommerce'</span><span class="p">,</span>
     <span class="na">name</span><span class="p">:</span> <span class="s1">'Viewed Product Detail'</span>
   <span class="p">};</span>
-<span class="p">}</span>  
+<span class="p">}</span>
 </code></pre>
 </div>
-<p>Конструкция this.digitalData(‘page.type’) <a href="#3">описана ниже</a>.</p>
+<p>The code _digitalData(‘page.type’) <a href="#3">is explained below</a>.</p>
 
-<h5 id="Пример-2-Событие-clicked-campaign">Пример 2: Событие Clicked Campaign</h5>
-<p>Для отслеживания CTR и других показателей эффективности внутренних кампаний, необходимо отлеживать клики по баннерам. Это событие наступает в момент клика пользователем по баннеру или на языке digitalData: Сработал триггер Click по элементу страницы, содержащему CSS class=”ddl_campaign_link”.</p>
+<p><strong>Example 2: <code class="highlighter-rouge">Clicked Campaign</code> Event</strong></p>
+
+<p>For tracking CTR and other indicators of the effectiveness of internal campaigns, you need to track clicks on banners. This event occurs when the user clicks on a banner or in the digitalData language: The Click trigger fires on the page element that contains the CSS class = “ddl_campaign_link”.</p>
 <blockquote>
-  <p>Важно! Если при настройке кампании вы выбрали в качестве триггера - “Клик”, в поле “Функция, которая обращает объект события” вы можете обратиться к переменной “element”. Element - это объект DOM, CSS селектор которого вы указали.</p>
+  <p>Important! If you selected “Click” as the trigger in the campaign setup, in the “Function that returns an event object” field, you can refer to the “element” variable. Element is the DOM object whose CSS selector you specified.</p>
 </blockquote>
 
 <p><img src="/img/events.3.png" alt="" /></p>
-<h4 id="javascript-1">JavaScript</h4>
+
 <div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">campaignId</span> <span class="o">=</span> <span class="nx">element</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s1">'data-campaign-id'</span><span class="p">);</span>
 <span class="k">return</span> <span class="p">{</span>
   <span class="na">name</span><span class="p">:</span> <span class="s1">'Clicked Campaign'</span><span class="p">,</span>
   <span class="na">category</span><span class="p">:</span> <span class="s1">'Promo'</span><span class="p">,</span>
   <span class="na">campaign</span><span class="p">:</span> <span class="nx">campaignId</span>
-<span class="p">};</span>  
+<span class="p">};</span>
 </code></pre>
 </div>
 
-<h5 id="Пример-3-Событие-viewed-campaign">Пример 3: Событие Viewed Campaign</h5>
-<p>В связке с кликами по баннерам, необходимо отслеживать и показы баннеров. Встроенный триггер “Показ” срабатывает только тогда, когда в поле видимости браузера посетителя сайта попало 75% отслеживаемого элемента страницы. CSS селектор отслеживаниемого элемента указывается в соответствующем после настройки события.</p>
+<p><strong>Example 3: <code class="highlighter-rouge">Viewed Campaign</code> Event</strong></p>
+
+<p>In conjunction with clicks on banners, you need to track banner impressions. The built-in “Impression” trigger works only when 75% of the monitored page element is in the site visitor’s browser field of view. The CSS selector for the tracked element is specified in the corresponding event setting field.</p>
 <blockquote>
-  <p>Важно! Если при настройке кампании вы выбрали в качестве триггера - “Показ”, в поле “Функция, которая обращает объект события” вы можете обратиться к переменной “elements”. Elements - это массив объектов DOM, CSS селектор которых вы указали.</p>
+  <p>Important! If you selected “Impression” as the trigger in the campaign setup, in the “Function that returns an event object” field, you can refer to the “elements” variable. Elements is an array of DOM objects whose CSS selector you specified.</p>
 </blockquote>
 
 <p><img src="/img/events.4.png" alt="" /></p>
-<h4 id="javascript-2">JavaScript</h4>
+
 <div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">viewedCampaigns</span> <span class="o">=</span> <span class="p">[];</span>
 <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">elements</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-	<span class="kd">var</span> <span class="nx">campaignId</span> <span class="o">=</span> <span class="nx">elements</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s1">'data-campaign-id'</span><span class="p">);</span>
+  <span class="kd">var</span> <span class="nx">campaignId</span> <span class="o">=</span> <span class="nx">elements</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s1">'data-campaign-id'</span><span class="p">);</span>
   <span class="nx">viewedCampaigns</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">campaignId</span><span class="p">);</span>
 <span class="p">}</span>
 <span class="k">return</span> <span class="p">{</span>
-	<span class="na">name</span><span class="p">:</span> <span class="s1">'Viewed Campaign'</span><span class="p">,</span>
+  <span class="na">name</span><span class="p">:</span> <span class="s1">'Viewed Campaign'</span><span class="p">,</span>
   <span class="na">category</span><span class="p">:</span> <span class="s1">'Promo'</span><span class="p">,</span>
   <span class="na">campaigns</span><span class="p">:</span> <span class="nx">viewedCampaigns</span>
 <span class="p">};</span>
 </code></pre>
 </div>
 
-<h4 id="Вспомогательные-функции"><a name="3"></a>Вспомогательные функции</h4>
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="k">this</span><span class="p">.</span><span class="nx">queryParam</span><span class="p">(</span><span class="s1">'q'</span><span class="p">)</span> <span class="c1">// получить значение параметр URL</span>
-<span class="k">this</span><span class="p">.</span><span class="nx">cookie</span><span class="p">(</span><span class="s1">'_ga'</span><span class="p">)</span> <span class="c1">// получить значение куки по ее имени</span>
-<span class="k">this</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="s1">'transaction.lineItems'</span><span class="p">)</span> <span class="c1">// Безопасно получить любое свойство любого объекта</span>
-<span class="k">this</span><span class="p">.</span><span class="nx">digitalData</span><span class="p">(</span><span class="s1">'transaction.lineItems'</span><span class="p">)</span> <span class="c1">// Безопасно получить любое свойство объекта digitalData </span>
-<span class="k">this</span><span class="p">.</span><span class="nx">global</span><span class="p">(</span><span class="s1">'settings.mobile_app'</span><span class="p">)</span> <span class="c1">// Безопасно получить любое свойство объекта window</span>
-<span class="k">this</span><span class="p">.</span><span class="nx">domQuery</span><span class="p">(</span><span class="s1">'#logo'</span><span class="p">)</span> <span class="c1">// получить массив элементов по CSS-селектору</span>
-<span class="k">this</span><span class="p">.</span><span class="nx">dataLayer</span><span class="p">(</span><span class="s1">'ecommerce.purchase'</span><span class="p">)</span> <span class="c1">// Безопасно получить переменную из GTM datalayer</span>
-<span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">fetch</span><span class="p">(</span><span class="s1">'/ajax?cart'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+<h3 id="helper-functions"><a name="3"></a>Helper functions</h3>
+<hr />
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_queryParam</span><span class="p">(</span><span class="s1">'q'</span><span class="p">)</span> <span class="c1">// get url parameter value</span>
+<span class="nx">_cookie</span><span class="p">(</span><span class="s1">'_ga'</span><span class="p">)</span> <span class="c1">// get cookie value</span>
+<span class="nx">_get</span><span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="s1">'transaction.lineItems'</span><span class="p">)</span> <span class="c1">// Safely get any event property</span>
+<span class="nx">_digitalData</span><span class="p">(</span><span class="s1">'transaction.lineItems'</span><span class="p">)</span> <span class="c1">// Safely get any digitalData property</span>
+<span class="nx">_loadPixel</span><span class="p">({</span><span class="na">src</span><span class="p">:</span> <span class="s1">'https://test.com/pixel.png'</span><span class="p">,</span> <span class="na">id</span><span class="p">:</span> <span class="s1">'admit_ad'</span><span class="p">})</span> <span class="c1">//Load pixel. Any number of attributes is supported</span>
+<span class="nx">_loadScript</span><span class="p">({</span><span class="na">src</span><span class="p">:</span> <span class="s1">'https://test.com/script.js'</span><span class="p">,</span> <span class="na">id</span><span class="p">:</span> <span class="s1">'google'</span><span class="p">})</span> <span class="c1">//Load script. Any number of attributes is supported</span>
+<span class="nx">_loadIframe</span><span class="p">({</span><span class="na">src</span><span class="p">:</span> <span class="s1">'https://test.com/window'</span><span class="p">,</span> <span class="na">style</span><span class="p">:</span> <span class="s1">'display: none;'</span><span class="p">})</span> <span class="c1">//Load iframe. Any number of attributes is supported</span>
+<span class="nx">_loadLink</span><span class="p">({</span><span class="na">href</span><span class="p">:</span> <span class="s1">'https://test.com/style.css'</span><span class="p">,</span> <span class="na">type</span><span class="p">:</span> <span class="s2">"text/css"</span><span class="p">})</span> <span class="c1">//Load styles through tag link. Any number of attributes is supported</span>
+<span class="nx">_global</span><span class="p">(</span><span class="s1">'settings.mobile_app'</span><span class="p">)</span> <span class="c1">// Safely get any window property</span>
+<span class="nx">_domQuery</span><span class="p">(</span><span class="s1">'#logo'</span><span class="p">)</span> <span class="c1">// get an array of elements by CSS-selector</span>
+<span class="nx">_dataLayer</span><span class="p">(</span><span class="s1">'ecommerce.purchase'</span><span class="p">)</span> <span class="c1">// Safely get a GTM dataLayer variable</span>
+<span class="k">return</span> <span class="nx">_fetch</span><span class="p">(</span><span class="s1">'/ajax?cart'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
-<span class="p">});</span> <span class="c1">// забрать данные с удаленного сервера асинхронно</span>
-<span class="k">return</span> <span class="nx">timeout</span><span class="p">(</span><span class="mi">1500</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="p">});</span> <span class="c1">// get data from a remote server using ajax</span>
+<span class="k">return</span> <span class="nx">_timeout</span><span class="p">(</span><span class="mi">1500</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
   <span class="k">return</span> <span class="p">{</span>
     <span class="na">name</span><span class="p">:</span> <span class="s1">'Event With Timeout'</span><span class="p">;</span>
   <span class="p">}</span>
-<span class="p">});</span> <span class="c1">// Задержка перед тем как обработчик вернет результат</span>
+<span class="p">});</span> <span class="c1">// Delay before the handler returns the result</span>
 </code></pre>
 </div>
 
-<h4 id="Как-называть-события"><a name="4"></a>Как называть события</h4>
-<p>Стандартные интеграции в Digital Data Manager работают со <a href="#">списком зарезервированных событий</a>, например: Viewed Product Detail, Viewed Cart, Viewed Checkout Step, Completed Transacion и т.д. 
-Мы настоятельно рекомендуем придерживать описанных ниже правил при создании новых событий:</p>
-<ol>
-  <li>Проверьте список зарезервированных событий. Если вы не нашли подходящего события - переходите к пункту 2.</li>
-  <li>Название событие всегда пишется строчными буквами на английском языке, при этом каждое слово отделено пробелом и начинается с прописной буквы.</li>
-  <li>Название события содержит в себе действие в прошедшем времени.</li>
-</ol>
+<blockquote>
+  <p>The <code class="highlighter-rouge">_queryParam()</code> function always returns values in lowercase</p>
+</blockquote>
+
+<blockquote>
+  <p>The <code class="highlighter-rouge">_domQuery()</code> function, and the selectors in the triggers <strong>Click</strong> and <strong>Impression</strong> work by the following principle:</p>
+  <ul>
+    <li>if jQuery is not loaded on the website (there is no global window.jQuery object) or jQuery is loaded after SegmentStream (is located further down the HTML page), <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll">document.querySelectorAll</a> is used,</li>
+    <li>if jQuery is loaded on the website, jQuery selectors are used.</li>
+  </ul>
+</blockquote>
+
+<h3 id="event-naming-convention"><a name="4"></a>Event naming convention</h3>
+<hr />
+<p>Standard SegmentStream integrations work with a list of reserved events, for example: <a href="/events/viewed-product-detail">Viewed Product Detail</a>, <a href="/events/viewed-checkout-step">Viewed Checkout Step</a>, <a href="/events/completed-transaction">Completed Transaction</a>, etc.
+The complete list of reserved events is located in the side menu under “Events List”. Use the event names listed in this list.</p>
+
+<p>If you need to add an event that is not in the reserved list - use our <a href="/for-developer/naming">event naming convention</a></p>
 
 
                     </div>
                 
             </div>
-
-            <div class="row">
-                <div id="footer" class="col-sm-12">
-                    Documentation for <a href="">DDManager documentation</a>
-
-                </div>
+            <button id="myBtn" title="Go to top"></button>
+        </div>
+        <div id="footer">
+            <div class="questionaire">
+    <div class="row step1">
+        <div class="col-sm-6 question">
+            
+            Was this page helpful?
+            
+        </div>
+        <div class="col-sm-6 answer">
+            <div class="button-questionaire">
+                YES
+            </div>
+            <div class="button-questionaire">
+                NO
             </div>
         </div>
+    </div>
+    <div class="row step2">
+        <div class="col-xs-12">
+            
+            Thanks for the feedback!
+            
+        </div>
+    </div>
+</div>
+<a href="/"><img src="/img/segmentstream-logo.png" height="47" alt=SegmentStream documentation class="ddm-logo-footer"></a>
+<p class="copyright">Copyright © 2019 "SegmentStream" All rights reserved.</p>
 
-        <script>
-            function orderNav() {
-                var list,
-                    section,
-                    header,
-                    sections = [],
-                    lists = {},
-                    headers = {};
-                var navUl = document.querySelectorAll('#navigation ul')[0],
-                    navLis = document.querySelectorAll('#navigation ul li');
-                if (!navUl) return;
-                for (var i = 0; i < navLis.length; i++) {
-                    var order, li = navLis[i];
-                    if (li.classList.contains('nav-header')) {
-                        section = li.textContent || li.innerText;
-                        sections.push(section);
-                        headers[section] = li;
-                        continue;
-                    }
-                    if (!lists[section]) {
-                        lists[section] = [];
-                    }
-                    order = parseFloat(li.getAttribute('data-order'))
-                    lists[section].push([order, li]);
-                }
-                for (var i = 0; i < sections.length; i++) {
-                    section = sections[i];
-                    list = lists[section].sort(function(a, b) {
-                        return a[0] - b[0];
-                    });
-                    if (header = headers[section]) {
-                        navUl.appendChild(header);
-                    }
-                    for (var j = 0; j < list.length; j++) {
-                        navUl.appendChild(list[j][1]);
-                    }
-                }
-            }
-            if (document.querySelectorAll) orderNav();
+        </div>
+        <!-- SegmentStream snippet -->
+        <script type="text/javascript">
+        (function(h,d){d=d||"cdn.segmentstream.com";var a=window.ddManager=window.ddManager||[];window.ddListener=window.ddListener||[];var b=window.digitalData=window.digitalData||{};b.events=b.events||[];b.changes=b.changes||[];if(!a.initialize)if(a.invoked)window.console&&console.error&&console.error("SegmentStream snippet included twice.");else{a.invoked=!0;a.methods="initialize addIntegration persist unpersist on once off setConsent".split(" ");a.factory=function(k){return function(){var c=Array.prototype.slice.call(arguments);
+        c.unshift(k);a.push(c);return a}};for(b=0;b<a.methods.length;b++){var f=a.methods[b];a[f]=a.factory(f)}a.load=function(a){var c=document.createElement("script");c.type="text/javascript";c.charset="utf-8";c.async=!0;c.src=a;a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(c,a)};a.loadProject=function(b){var c=window.location.search;if(0<=c.indexOf("ddm_test_mode=1"))try{var e=!0;window.localStorage.setItem("_ddm_test_mode","1")}catch(g){}else if(0<=c.indexOf("ddm_test_mode=0"))try{e=
+        !1,window.localStorage.removeItem("_ddm_test_mode")}catch(g){}else try{e="1"===window.localStorage.getItem("_ddm_test_mode")}catch(g){}e?a.load(window.DDMANAGER_TESTMODE_INIT_URL||"https://api.segmentstream.com/v1/ddm-initialization/"+b+".js"):a.load(window.DDMANAGER_INIT_URL||"https://"+d+"/project/"+b+".js")};a.CDN_DOMAIN=d;a.SNIPPET_VERSION="1.0.11";a.loadProject(h)}})("975f9b27-a262-4758-9019-0bf81f566d68");
         </script>
+        <!-- //SegmentStream snippet -->
     </body>
 </html>

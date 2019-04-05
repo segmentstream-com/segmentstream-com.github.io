@@ -14,7 +14,7 @@ digitalData.events.push({
 ```
 
 
-#### From the DDManager interface
+#### From the SegmentStream interface
 In case the experiment's goal is one of the already existing events (for example, 'Completed Transaction'), it can be set up as such:
 
 **Trigger**: event `Completed Transaction`,

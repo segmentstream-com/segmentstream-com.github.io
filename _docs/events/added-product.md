@@ -17,7 +17,7 @@ digitalData.events.push({
 ```
 > For a detailed description of the `product` object, see the developer section.
 
-#### From the DDManager interface
+#### From the SegmentStream interface
 > If you are sure that the product will be added to the user's cart by clicking on the "Add to Cart" button, you can use the following event settings:
 
 **Trigger**: `click`,

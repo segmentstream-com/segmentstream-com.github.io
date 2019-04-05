@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+
+        <title>SegmentStream documentation : Streaming</title>
+        <meta name="description" content="">
+
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/favicon/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicon/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favicon/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicon/apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/favicon/apple-touch-icon-60x60.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicon/apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/favicon/apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicon/apple-touch-icon-152x152.png" />
+        <link rel="icon" type="image/png" href="/favicon/favicon-196x196.png" sizes="196x196" />
+        <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16" />
+        <link rel="icon" type="image/png" href="/favicon/favicon-128.png" sizes="128x128" />
+        <meta name="application-name" content="&nbsp;"/>
+        <meta name="msapplication-TileColor" content="#FFFFFF" />
+        <meta name="msapplication-TileImage" content="/favicon/mstile-144x144.png" />
+        <meta name="msapplication-square70x70logo" content="/favicon/mstile-70x70.png" />
+        <meta name="msapplication-square150x150logo" content="/favicon/mstile-150x150.png" />
+        <meta name="msapplication-wide310x150logo" content="/favicon/mstile-310x150.png" />
+        <meta name="msapplication-square310x310logo" content="/favicon/mstile-310x310.png" />
+
+        <!-- <link rel="shortcut icon" type="image/x-icon" href="/favicon/favicon.ico"> -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/syntax.css">
+        <link rel="stylesheet" href="/css/main.css?v=1.1">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="/js/main.js?v=1.1"></script>
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="row">
+                <div id="header" class="col-sm-12">
+                    <div class="row">
+    <div class="col-sm-3 col-xs-12">
+        <div id="menu-toggle"></div>
+        <a target="_blank" href="https://admin.segmentstream.com/"><div id="login-button"></div></a>
+        <a class="brand" href="/"><img src="/img/segmentstream-logo.png" height="47" alt=SegmentStream documentation
+                class="ddm-logo">
+        </a>
+        <small></small>
+    </div>
+
+    <div class="col-sm-offset-5 col-sm-4 authorization">
+        <ul class="top-nav">
+            <li>
+                <a id="button-auth" target="_blank" href="https://admin.segmentstream.com/">
+                    
+                    Login
+                    
+                </a>
+            </li>
+        </ul>
+    </div>
+        
+            <a id="language-button" href='/ru/'>RU</a>
+        
+</div>
+
+
+                </div>
+            </div>
+            <div class="row">
+                
+                
+                    <div id="navigation" class="col-sm-3 col-md-3">
+                        <ul class="nav nav-list" >
+    
+    
+        
+        
+        
+        
+        
+        
+        
+            <li class="nav-header analyst ">Analyst</li>
+            
+                <li class="drop-menu analyst " data-order="0">
+                    <a href="/for-analyst/index">Overview</a>
+                </li>
+            
+                <li class="drop-menu analyst " data-order="1">
+                    <a href="/for-analyst/settings">Project settings</a>
+                </li>
+            
+                <li class="drop-menu analyst " data-order="2">
+                    <a href="/for-analyst/events">Events</a>
+                </li>
+            
+                <li class="drop-menu analyst " data-order="2">
+                    <a href="/for-analyst/integrations">Integrations</a>
+                </li>
+            
+                <li class="drop-menu analyst " data-order="4">
+                    <a href="/for-analyst/variables">Variables</a>
+                </li>
+            
+                <li class="drop-menu analyst " data-order="5">
+                    <a href="/for-analyst/scripts">Scripts</a>
+                </li>
+            
+                <li class="drop-menu analyst " data-order="6">
+                    <a href="/for-analyst/priorities">Priorities</a>
+                </li>
+            
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+            <li class="nav-header developer ">Developer</li>
+            
+                <li class="drop-menu developer " data-order="1">
+                    <a href="/for-developer/index">Overview</a>
+                </li>
+            
+                <li class="drop-menu developer " data-order="2">
+                    <a href="/for-developer/digitaldata">digitalData object</a>
+                </li>
+            
+                <li class="drop-menu developer " data-order="2">
+                    <a href="/for-developer/partners">Third-party system events</a>
+                </li>
+            
+                <li class="drop-menu developer " data-order="3">
+                    <a href="/for-developer/naming">Event and variable naming conventions</a>
+                </li>
+            
+                <li class="drop-menu developer " data-order="3">
+                    <a href="/for-developer/snippet">Connecting SegmentStream</a>
+                </li>
+            
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+            <li class="nav-header ecommerce ">Ecommerce integration</li>
+            
+                <li class="drop-menu ecommerce " data-order="1">
+                    <a href="/ecommerce/main-page">Homepage</a>
+                </li>
+            
+                <li class="drop-menu ecommerce " data-order="1">
+                    <a href="/ecommerce/index">Overview</a>
+                </li>
+            
+                <li class="drop-menu ecommerce " data-order="2">
+                    <a href="/ecommerce/listing">Product category</a>
+                </li>
+            
+                <li class="drop-menu ecommerce " data-order="3">
+                    <a href="/ecommerce/search">Search results</a>
+                </li>
+            
+                <li class="drop-menu ecommerce " data-order="4">
+                    <a href="/ecommerce/product">Product page</a>
+                </li>
+            
+                <li class="drop-menu ecommerce " data-order="5">
+                    <a href="/ecommerce/cart">Cart</a>
+                </li>
+            
+                <li class="drop-menu ecommerce " data-order="6">
+                    <a href="/ecommerce/checkout">Checkout process page</a>
+                </li>
+            
+                <li class="drop-menu ecommerce " data-order="7">
+                    <a href="/ecommerce/transaction">'Thank You' page</a>
+                </li>
+            
+                <li class="drop-menu ecommerce " data-order="8">
+                    <a href="/ecommerce/content">Content page</a>
+                </li>
+            
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+            <li class="nav-header digitaldata ">Variable list</li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/wishlist">wishlist</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/cart">cart</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/changes">changes</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/context">context</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/events">events</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/listing">listing</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/page">page</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/product">product</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/recommendation">recommendation</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/standard-version">version</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/transaction">transaction</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/user">user</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/website">website</a>
+                </li>
+            
+                <li class="drop-menu digitaldata " data-order="1">
+                    <a href="/digitaldata/campaigns">campaigns</a>
+                </li>
+            
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+            <li class="nav-header events ">Events list</li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/viewed-product">Viewed Product</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/added-payment-info">Added Payment Info</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/added-product-to-wishlist">Added Product to Wishlist</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/added-product">Added Product</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/clicked-campaign">Clicked Campaign</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/clicked-product">Clicked Product</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/completed-checkout-step">Completed Checkout Step</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/completed-transaction">Completed Transaction</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/logged-in">Logged In</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/received-voucher">Received Voucher</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/refunded-transaction">Refunded Transaction</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/registered">Registered</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/removed-product-from-wishlist">Removed Product from Wishlist</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/removed-product">Removed Product</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/searched-products">Searched Products</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/started-order">Started Order</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/subscribed">Subscribed</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/unsubscribed">Unsubscribed</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/updated-cart">Updated Cart</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/updated-profile-info">Updated Profile Info</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/viewed-campaign">Viewed Campaign</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/viewed-cart">Viewed Cart</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/viewed-checkout-step">Viewed Checkout Step</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/viewed-experiment">Viewed Experiment</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/viewed-page">Viewed Page</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/viewed-product-detail">Viewed Product Detail</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/viewed-product-listing">Viewed Product Listing</a>
+                </li>
+            
+                <li class="drop-menu events " data-order="2">
+                    <a href="/events/achieved-experiment-goal">Achieved Experiment Goal</a>
+                </li>
+            
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+            <li class="nav-header integrations  active ">Integration list</li>
+            
+                <li class="drop-menu integrations active  " data-order="1">
+                    <a href="/integrations/vkontakte">Vkontakte</a>
+                </li>
+            
+                <li class="drop-menu integrations active  " data-order="1">
+                    <a href="/integrations/criteo">Criteo</a>
+                </li>
+            
+                <li class="drop-menu integrations active   current " data-order="1">
+                    <a href="/integrations/ddmanager-streaming">Streaming</a>
+                </li>
+            
+                <li class="drop-menu integrations active  " data-order="1">
+                    <a href="/integrations/facebook">Facebook</a>
+                </li>
+            
+                <li class="drop-menu integrations active  " data-order="1">
+                    <a href="/integrations/gdeslon">GdeSlon</a>
+                </li>
+            
+                <li class="drop-menu integrations active  " data-order="1">
+                    <a href="/integrations/google-adwords">Google Adwords</a>
+                </li>
+            
+                <li class="drop-menu integrations active  " data-order="1">
+                    <a href="/integrations/google-analytics">Google Analytics</a>
+                </li>
+            
+                <li class="drop-menu integrations active  " data-order="1">
+                    <a href="/integrations/onesignal">OneSignal</a>
+                </li>
+            
+                <li class="drop-menu integrations active  " data-order="1">
+                    <a href="/integrations/rtb-house">RTB House</a>
+                </li>
+            
+                <li class="drop-menu integrations active  " data-order="1">
+                    <a href="/integrations/yandex-metrica">Yandex.Metrica</a>
+                </li>
+            
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+    
+<!-- List additional links. It is recommended to add a divider
+    e.g. <li class="divider"></li> first to break up the content. -->
+</ul>
+
+
+                    </div>
+
+                    <div id="content" class="col-sm-9 col-md-7">
+                        <div class="page-header">
+    <h1>Streaming
+        
+    </h1>
+</div>
+
+<p>The built-in “Streaming” module allows you to collect raw data in Google BigQuery. After connecting the streaming module, SegmentStream starts sending all of your users behavior data to the BigQuery cloud data storage. The format of data storage completely corresponds to the DigitalData standard.</p>
+
+<h3 id="page-contents">Page contents</h3>
+<hr />
+<ul class="page-navigation">
+  <li><a href="#0">Introduction</a></li>
+  <li><a href="#1">Setting up BigQuery</a></li>
+  <li><a href="#1_1">Google Cloud project ID</a></li>
+  <li><a href="#1_2">BigQuery dataset name</a></li>
+  <li><a href="#1_3">UTC offset</a></li>
+  <li><a href="#2">Custom dimensions</a></li>
+  <li><a href="#3">Custom metrics</a></li>
+  <li><a href="#4">Data schema</a></li>
+</ul>
+
+<h3 id="introduction"><a name="0"></a>Introduction</h3>
+<p>Setting up the DDM Streaming integration:</p>
+<ol>
+  <li>Create an account in Google BigQuery and configure the rights and roles.</li>
+  <li>Log in to the <a href="https://admin.segmentstream.com/">segmentstream.com</a> website and go to the integration management panel</li>
+  <li>Enter the “Integration” tab and click on the block with the SegmentStream Streaming logo.</li>
+  <li>In the panel that opens, configure the integration.</li>
+</ol>
+
+<h3 id="setting-up-bigquery"><a name="1"></a>Setting up BigQuery</h3>
+<hr />
+<ol>
+  <li>Create an account in the <a href="https://cloud.google.com/">Google Cloud Platform</a>. On 15/08/2018 Google gives a $300 free credit to spend on the Google Cloud Platform over the next 12 months.</li>
+  <li>Select a Google Cloud project or create a new one
+<img src="/img/integrations.ddmstreaming.2.png" alt="" /></li>
+  <li>Activate BigQuery API for your project
+<img src="/img/integrations.ddmstreaming.3.png" alt="" />
+<img src="/img/integrations.ddmstreaming.4.png" alt="" />
+<img src="/img/integrations.ddmstreaming.5.png" alt="" /></li>
+  <li>Open the left menu and click IAM &amp; admin. Select IAM in the menu.
+<img src="/img/integrations.ddmstreaming.16.png" alt="" /></li>
+  <li>Click <strong>+ADD</strong> in the top menu.
+<img src="/img/integrations.ddmstreaming.17.png" alt="" /></li>
+  <li>Add <code class="highlighter-rouge">ddmanager@ddm-streaming.iam.gserviceaccount.com</code> to the New Members field. Add 2 rules: <code class="highlighter-rouge">BigQuery Data Owner</code> and <code class="highlighter-rouge">BigQuery User</code>. Click Save.
+<img src="/img/integrations.ddmstreaming.18.png" alt="" /></li>
+</ol>
+
+<p>This completes the configuration of the BigQuery account. Now you can proceed to setting up streaming in the SegmentStream admin page.
+<img src="/img/integrations.ddmstreaming.1_1.png" alt="" /></p>
+
+<h3 id="google-cloud-project-id"><a name="1_1"></a>Google Cloud project ID</h3>
+<p>Enter the Google Big Query project ID in the <code class="highlighter-rouge">Google Cloud project ID</code> field.
+The easiest way to find the project ID is on the <a href="https://console.cloud.google.com/">google cloud console main page</a>:</p>
+<ol>
+  <li>Enter the console and select the required project from the drop-down list.</li>
+  <li>Copy the Project ID from the corresponding <code class="highlighter-rouge">Project info</code> widget field
+<img src="/img/integrations.ddmstreaming.1_2.png" alt="" /></li>
+</ol>
+
+<h3 id="bigquery-dataset-name"><a name="1_2"></a>BigQuery dataset name</h3>
+<p>Type <code class="highlighter-rouge">ddmanager_streaming</code> into the BigQuery DataSet name.</p>
+<blockquote>
+  <p>We recommend using the <code class="highlighter-rouge">ddmanager_streaming</code> name. If you want the data to stream into another DataSet, specify its name instead of <code class="highlighter-rouge">ddmanager_streaming</code>. Use only Latin letters and underscores.</p>
+</blockquote>
+
+<h3 id="utc-offset"><a name="1_3"></a>UTC offset</h3>
+<hr />
+<p>Select the time zone. For example, for all reports to be generated according to Moscow time, select “+03:00”.</p>
+
+<h3 id="custom-dimension"><a name="2"></a>Custom dimension</h3>
+<hr />
+<p>By default, DDMStreaming sends a certain set of variables to BigQuery. These variables are sufficient for most data analysis tasks. If you do not have enough variables, you can send custom variables along with each event.</p>
+
+<p>For example:</p>
+<ul>
+  <li>Send googleClientId to compare the data in BigQuery and Google Analytics,</li>
+  <li>Pass a parameter that marks if the user is logged in or not,</li>
+  <li>etc.</li>
+</ul>
+
+<p>In order to configure the transmission of custom dimensions (see screenshot below):</p>
+<ol>
+  <li>Think of the name of the dimension by which you want to build reports in BigQuery</li>
+  <li>Write this name in the left field of the custom dimensions</li>
+  <li>Specify the data source:
+    <ul>
+      <li><strong>DigitalData</strong>. Any variable that is present in the digitalData object</li>
+      <li><strong>Event</strong>. Any variable of any event that is pushed to the  <code class="highlighter-rouge">digitalData.events</code> array</li>
+      <li><strong>Product</strong>. Any variable of the <code class="highlighter-rouge">product</code> object</li>
+    </ul>
+  </li>
+  <li>Specify the name of the variable in the right field</li>
+</ol>
+
+<p><img src="/img/integrations.ddmstreaming.1.png" alt="" /></p>
+
+<h3 id="custom-metrics"><a name="3"></a>Custom metrics</h3>
+<hr />
+<p>Similarly to custom dimensions, SegmentStream can pass custom metrics.</p>
+
+<blockquote>
+  <p>There is a big difference between metrics and parameters. A metric is a quantitative value, a number (an integer, a fractional number, a time). Parameters are data attributes. All metrics (numeric data) are calculated in the parameter sections.</p>
+</blockquote>
+
+<p>In order to configure the transmission of custom metrics (see screenshot above):</p>
+<ol>
+  <li>Think of the name of the metric that will participate in calculating other metrics in BigQuery</li>
+  <li>Write this name in the left field of custom metric settings</li>
+  <li>Specify the data source:
+    <ul>
+      <li><strong>DigitalData</strong>. Any variable that is present in the digitalData object</li>
+      <li><strong>Event</strong>. Any variable of any event that is pushed to the  <code class="highlighter-rouge">digitalData.events</code> array</li>
+      <li><strong>Product</strong>. Any variable of the <code class="highlighter-rouge">product</code> object</li>
+    </ul>
+  </li>
+  <li>Specify the name of the variable in the right field</li>
+</ol>
+
+<h3 id="data-schema"><a name="4"></a>Data schema</h3>
+<hr />
+
+<table>
+  <thead>
+    <tr>
+      <th>Variable name</th>
+      <th>Data type</th>
+      <th>Comments</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">hitId</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Hit Id</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">anonymousId</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Anonymous client Id</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">emailHash</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>User’s hashed email</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">userId</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Authorized user’s Id</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">projectId</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Project id</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">projectName</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Project name</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">receivedAt</code></td>
+      <td><code class="highlighter-rouge">TIMESTAMP</code></td>
+      <td>Time the server received the event (UTC)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">sentAt</code></td>
+      <td><code class="highlighter-rouge">TIMESTAMP</code></td>
+      <td>Time the event was sent from client (UTC, depends on the time set up on the computer)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">version</code></td>
+      <td><code class="highlighter-rouge">INTEGER</code></td>
+      <td>Data schema version</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">context</code></td>
+      <td><code class="highlighter-rouge">RECORD</code></td>
+      <td>Information on the context of visiting a page</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">context.browser</code></td>
+      <td><code class="highlighter-rouge">RECORD</code></td>
+      <td>Description of the visitor’s browser</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">context.browser.major</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Brief information about the browser version</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">context.browser.name</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Name of the browser</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">context.browser.version</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Full information about the browser version</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">context.campaign</code></td>
+      <td><code class="highlighter-rouge">RECORD</code></td>
+      <td>Description of the last source of traffic from which the visit to the site was made</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">context.campaign.content</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Contents of the utm_content GET-parameter</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">context.campaign.medium</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Contents of the utm_medium GET-parameter</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">context.campaign.name</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Contents of the utm_campaign GET-parameter</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">context.campaign.source</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Contents of the utm_source GET-parameter</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">context.campaign.term</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Contents of the utm_term GET-parameter</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">context.device</code></td>
+      <td><code class="highlighter-rouge">RECORD</code></td>
+      <td>Description of the visitor’s device</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">context.device.model</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Model of the device. Irrelevant for “desktops”.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">context.device.type</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Device type: “desktop”, “mobile”, “tablet”</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">context.device.vendor</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Device manufacturer. Irrelevant for “desktops”.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">context.ip</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Visitor’s IP-address.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">context.location</code></td>
+      <td><code class="highlighter-rouge">RECORD</code></td>
+      <td>Description of the visitor’s location</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">context.location.city</code></td>
+      <td><code class="highlighter-rouge">Строка</code></td>
+      <td>Visitor’s city</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">context.location.country</code></td>
+      <td><code class="highlighter-rouge">Строка</code></td>
+      <td>Visitor’s country</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">context.location.region</code></td>
+      <td><code class="highlighter-rouge">Строка</code></td>
+      <td>Visitor’s region/state</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">context.os</code></td>
+      <td><code class="highlighter-rouge">RECORD</code></td>
+      <td>Description of the operating system of the visitor’s device</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">context.os.name</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Operating system name</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">context.os.version</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Operating system version</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">context.page</code></td>
+      <td><code class="highlighter-rouge">RECORD</code></td>
+      <td>Description of page where the event happened</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">context.page.path</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Page path</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">context.page.referrer</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>URL of the page from which directed the user to the current page</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">context.page.title</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Page title</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">context.page.url</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Page URL</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">context.screenHeight</code></td>
+      <td><code class="highlighter-rouge">INTEGER</code></td>
+      <td>The height of the screen of the visitor’s device in pixels</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">context.screenWidth</code></td>
+      <td><code class="highlighter-rouge">INTEGER</code></td>
+      <td>The width of the screen of the visitor’s device in pixels</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">context.userAgent</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Information about the user’s browser</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.campaign</code></td>
+      <td><code class="highlighter-rouge">RECORD</code></td>
+      <td>The array of marketing campaigns</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.campaign.category</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Campaign Category</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.campaign.design</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Campaign ad/banner design</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.campaign.id</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Marketing campaign ID</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.campaign.name</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Marketing campaign name</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.campaign.position</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Location of the campaign ad/banner</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.cart</code></td>
+      <td><code class="highlighter-rouge">RECORD</code></td>
+      <td>Description of cart</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.cart.currency</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Cart currency</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.cart.id</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Cart Id</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.cart.lineItems</code></td>
+      <td><code class="highlighter-rouge">RECORD</code></td>
+      <td>Description of goods in the cart and their quantity.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.cart.lineItems.product</code></td>
+      <td><code class="highlighter-rouge">RECORD</code></td>
+      <td>Description of item in the cart</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.cart.lineItems.product.category</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>The hierarchy of product listing categories for an item in the cart in the form of a line separated by “/”</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.cart.lineItems.product.categoryId</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Listing category identifier for an item in the cart</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.cart.lineItems.product.color</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Color of product in the cart</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.cart.lineItems.product.currency</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Currency of product in the cart</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.cart.lineItems.product.customDimensions</code></td>
+      <td><code class="highlighter-rouge">RECORD</code></td>
+      <td>Custom dimensions of the product in the cart</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.cart.lineItems.product.customDimensions.name</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Name of the custom dimension of the product in the cart</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.cart.lineItems.product.customDimensions.value</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Value of the custom dimension of the product in the cart</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.cart.lineItems.product.customMetrics</code></td>
+      <td><code class="highlighter-rouge">RECORD</code></td>
+      <td>Array of custom metrics of the product in the cart</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.cart.lineItems.product.customMetrics.name</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Name of the custom metric of the product in the cart</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.cart.lineItems.product.customMetrics.value</code></td>
+      <td><code class="highlighter-rouge">FLOAT</code></td>
+      <td>Value of the custom metric of the product in the cart</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.cart.lineItems.product.id</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Product id of the product in the cart</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.cart.lineItems.product.imageUrl</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Image URL of the product in the cart</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.cart.lineItems.product.manufacturer</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Manufacturer of the product in the cart</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.cart.lineItems.product.name</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Name of the product in the cart</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.cart.lineItems.product.size</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Size of the product in the cart</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.cart.lineItems.product.skuCode</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>`Stock Keeping Unit - identifier of product variation of the product in the cart</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.cart.lineItems.product.thumbnailUrl</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Thumbnail URL of the product in the cart</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.cart.lineItems.product.unitPrice</code></td>
+      <td><code class="highlighter-rouge">FLOAT</code></td>
+      <td>Price of the product in the cart not including discount</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.cart.lineItems.product.unitSalePrice</code></td>
+      <td><code class="highlighter-rouge">FLOAT</code></td>
+      <td>Price of the product in the cart including discount, the real price that is paid for the purchase of this product</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.cart.lineItems.product.url</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>URL of page of the product in the cart</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.cart.lineItems.quantity</code></td>
+      <td><code class="highlighter-rouge">INTEGER</code></td>
+      <td>Quantity of the particular product in the cart</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.cart.lineItems.subtotal</code></td>
+      <td><code class="highlighter-rouge">FLOAT</code></td>
+      <td>The total cost of particular good in the cart multiplied by its quantity</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.cart.shippingCost</code></td>
+      <td><code class="highlighter-rouge">FLOAT</code></td>
+      <td>Price</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.cart.subtotal</code></td>
+      <td><code class="highlighter-rouge">FLOAT</code></td>
+      <td>The total cost of the cart, not including shipping and discounts applied to the cart.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.cart.total</code></td>
+      <td><code class="highlighter-rouge">FLOAT</code></td>
+      <td>The total cost of the cart, including shipping and discounts applied to the cart.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.cart.vouchers</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>A list of the identifiers of the discounts applied, separated by a comma</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.category</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Event category</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.customDimensions</code></td>
+      <td><code class="highlighter-rouge">RECORD</code></td>
+      <td>Array of custom dimensions</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.customDimensions.name</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Custom dimension name</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.customDimensions.value</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Custom dimension value</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.customMetrics</code></td>
+      <td><code class="highlighter-rouge">RECORD</code></td>
+      <td>Array of custom metrics</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.customMetrics.name</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Custom metric name</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.customMetrics.value</code></td>
+      <td><code class="highlighter-rouge">FLOAT</code></td>
+      <td>Custom metric value</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.experiment</code></td>
+      <td><code class="highlighter-rouge">RECORD</code></td>
+      <td>The experiment object for the Viewed Experiment event</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.experiment.id</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>`Experiment ID</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.experiment.name</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Experiment Name</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.experiment.variantId</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>`Variant Id</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.experiment.variantName</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Variant Name</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.label</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Event label</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.listing</code></td>
+      <td><code class="highlighter-rouge">RECORD</code></td>
+      <td>Array of product listings</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.listing.category</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>The hierarchy of product categories for the listing as a string separated by “/”</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.listing.categoryId</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Listing category id</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.listing.currentPage</code></td>
+      <td><code class="highlighter-rouge">INTEGER</code></td>
+      <td>The number of the listing page on which the user is located.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.listing.layout</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Layout in which the user is viewing the listing</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.listing.listId</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Product list identifier</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.listing.listName</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Product list name</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.listing.pagesCount</code></td>
+      <td><code class="highlighter-rouge">INTEGER</code></td>
+      <td>Number of pages with goods.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.listing.query</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Search query that generated the listing</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.listing.resultCount</code></td>
+      <td><code class="highlighter-rouge">INTEGER</code></td>
+      <td>The number of all products in the category or the number of all products found by the search query.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.listing.sortBy</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>The value by which the user has sorted the list.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.name</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Event name</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.page</code></td>
+      <td><code class="highlighter-rouge">RECORD</code></td>
+      <td>Description of the page on which the event occurred</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.page.breadcrumb</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>The category hierarchy for the event page as a string separated by “/”</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.page.category</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Page category</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.page.hash</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>The part of the URL after the # sign (hash)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.page.name</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Page name</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.page.path</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Page URI without GET parameters</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.page.queryString</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Search query for issuing a page with an event</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.page.title</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Page title</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.page.type</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Page type</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.page.url</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Page URL</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.product</code></td>
+      <td><code class="highlighter-rouge">RECORD</code></td>
+      <td>Product description</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.product.category</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>The hierarchy of categories to which the product belongs, in the form of a line separated by “/”</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.product.categoryId</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Product Category Id</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.product.color</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Product color</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.product.currency</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Currency in which the price is displayed</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.product.customDimensions</code></td>
+      <td><code class="highlighter-rouge">RECORD</code></td>
+      <td>Array of custom dimensions</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.product.customDimensions.name</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Custom dimension name</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.product.customDimensions.value</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Custom dimension value</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.product.customMetrics</code></td>
+      <td><code class="highlighter-rouge">RECORD</code></td>
+      <td>Array of custom metrics</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.product.customMetrics.name</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Custom metric name</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.product.customMetrics.value</code></td>
+      <td><code class="highlighter-rouge">FLOAT</code></td>
+      <td>Custom metric value</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.product.id</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Product id</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.product.imageUrl</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>URL of product image</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.product.manufacturer</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Product manufacturer</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.product.name</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Product name</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.product.size</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Product size</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.product.skuCode</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>`Stock Keeping Unit - product variation identifier</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.product.thumbnailUrl</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>URL of product thumbnail</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.product.unitPrice</code></td>
+      <td><code class="highlighter-rouge">FLOAT</code></td>
+      <td>Product price excluding discount</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.product.unitSalePrice</code></td>
+      <td><code class="highlighter-rouge">FLOAT</code></td>
+      <td>Price of the product including discount, the real price that is paid for the purchase of this product</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.product.url</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>URL of product page</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.quantity</code></td>
+      <td><code class="highlighter-rouge">INTEGER</code></td>
+      <td>The amount of something, for example, the number of products. Used in events such as Added Product, Removed Product and so on</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.step</code></td>
+      <td><code class="highlighter-rouge">INTEGER</code></td>
+      <td>Step number in the funnel. Used in events such as Viewed Checkout Step, Completed Checkout Step and so on</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.transaction</code></td>
+      <td><code class="highlighter-rouge">RECORD</code></td>
+      <td>Information about the transaction</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.transaction.currency</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Currency of the transaction</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.transaction.isFirst</code></td>
+      <td><code class="highlighter-rouge">BOOLEAN</code></td>
+      <td>Is this the user’s first purchase</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.transaction.lineItems</code></td>
+      <td><code class="highlighter-rouge">RECORD</code></td>
+      <td>Description of goods in the transaction and their quantity.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.transaction.lineItems.product</code></td>
+      <td><code class="highlighter-rouge">RECORD</code></td>
+      <td>Description of item in the cart</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.transaction.lineItems.product.category</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>The hierarchy of product listing categories for an item in the cart in the form of a line separated by “/”</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.transaction.lineItems.product.categoryId</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Listing category identifier for an item in the cart</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.transaction.lineItems.product.color</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Color of product in the cart</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.transaction.lineItems.product.currency</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Currency of product in the cart</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.transaction.lineItems.product.customDimensions</code></td>
+      <td><code class="highlighter-rouge">RECORD</code></td>
+      <td>Array of custom dimensions of the product in the cart</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.transaction.lineItems.product.customDimensions.name</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Name of the custom dimension of the product in the cart</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.transaction.lineItems.product.customDimensions.value</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Value of the custom dimension of the product in the cart</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.transaction.lineItems.product.customMetrics</code></td>
+      <td><code class="highlighter-rouge">RECORD</code></td>
+      <td>Array of custom metrics of the product in the cart</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.transaction.lineItems.product.customMetrics.name</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Name of the custom metric of the product in the cart</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.transaction.lineItems.product.customMetrics.value</code></td>
+      <td><code class="highlighter-rouge">FLOAT</code></td>
+      <td>Value of the custom metric of the product in the cart</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.transaction.lineItems.product.id</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Product id of the product in the cart</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.transaction.lineItems.product.imageUrl</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Image URL of the product in the cart</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.transaction.lineItems.product.manufacturer</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Manufacturer of the product in the cart</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.transaction.lineItems.product.name</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Name of the product in the cart</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.transaction.lineItems.product.size</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Size of the product in the cart</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.transaction.lineItems.product.skuCode</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>`Stock Keeping Unit - identifier of product variation of the product in the cart</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.transaction.lineItems.product.thumbnailUrl</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Thumbnail URL of the product in the cart</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.transaction.lineItems.product.unitPrice</code></td>
+      <td><code class="highlighter-rouge">FLOAT</code></td>
+      <td>Price of the product in the cart not including discount</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.transaction.lineItems.product.unitSalePrice</code></td>
+      <td><code class="highlighter-rouge">FLOAT</code></td>
+      <td>Price of the product in the cart including discount, the real price that is paid for the purchase of this product</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.transaction.lineItems.product.url</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>URL of page of the product in the cart</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.transaction.lineItems.quantity</code></td>
+      <td><code class="highlighter-rouge">INTEGER</code></td>
+      <td>Quantity of the particular product in the cart</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.transaction.lineItems.subtotal</code></td>
+      <td><code class="highlighter-rouge">FLOAT</code></td>
+      <td>The total cost of particular good in the cart multiplied by its quantity</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.transaction.orderId</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Order id</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.transaction.shippingCost</code></td>
+      <td><code class="highlighter-rouge">FLOAT</code></td>
+      <td>Delivery price</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.transaction.subtotal</code></td>
+      <td><code class="highlighter-rouge">FLOAT</code></td>
+      <td>The total cost of the cart, not including shipping and discounts applied to the cart.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.transaction.total</code></td>
+      <td><code class="highlighter-rouge">FLOAT</code></td>
+      <td>The total cost of the cart, including shipping and discounts applied to the cart.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">event.transaction.vouchers</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>A list of the identifiers of the discounts applied, separated by a comma</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">website</code></td>
+      <td><code class="highlighter-rouge">RECORD</code></td>
+      <td>Global information about the website’s pages</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">website.currency</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Currency of prices on the website</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">website.environment</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>The name of the environment for which the Digital Data Layer was created</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">website.language</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Website language</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">website.region</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>The name of the city where the user selected store is located</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">website.regionId</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>City identifier</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">website.type</code></td>
+      <td><code class="highlighter-rouge">STRING</code></td>
+      <td>Type of website</td>
+    </tr>
+  </tbody>
+</table>
+
+
+                    </div>
+                
+            </div>
+            <button id="myBtn" title="Go to top"></button>
+        </div>
+        <div id="footer">
+            <div class="questionaire">
+    <div class="row step1">
+        <div class="col-sm-6 question">
+            
+            Was this page helpful?
+            
+        </div>
+        <div class="col-sm-6 answer">
+            <div class="button-questionaire">
+                YES
+            </div>
+            <div class="button-questionaire">
+                NO
+            </div>
+        </div>
+    </div>
+    <div class="row step2">
+        <div class="col-xs-12">
+            
+            Thanks for the feedback!
+            
+        </div>
+    </div>
+</div>
+<a href="/"><img src="/img/segmentstream-logo.png" height="47" alt=SegmentStream documentation class="ddm-logo-footer"></a>
+<p class="copyright">Copyright © 2019 "SegmentStream" All rights reserved.</p>
+
+        </div>
+        <!-- SegmentStream snippet -->
+        <script type="text/javascript">
+        (function(h,d){d=d||"cdn.segmentstream.com";var a=window.ddManager=window.ddManager||[];window.ddListener=window.ddListener||[];var b=window.digitalData=window.digitalData||{};b.events=b.events||[];b.changes=b.changes||[];if(!a.initialize)if(a.invoked)window.console&&console.error&&console.error("SegmentStream snippet included twice.");else{a.invoked=!0;a.methods="initialize addIntegration persist unpersist on once off setConsent".split(" ");a.factory=function(k){return function(){var c=Array.prototype.slice.call(arguments);
+        c.unshift(k);a.push(c);return a}};for(b=0;b<a.methods.length;b++){var f=a.methods[b];a[f]=a.factory(f)}a.load=function(a){var c=document.createElement("script");c.type="text/javascript";c.charset="utf-8";c.async=!0;c.src=a;a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(c,a)};a.loadProject=function(b){var c=window.location.search;if(0<=c.indexOf("ddm_test_mode=1"))try{var e=!0;window.localStorage.setItem("_ddm_test_mode","1")}catch(g){}else if(0<=c.indexOf("ddm_test_mode=0"))try{e=
+        !1,window.localStorage.removeItem("_ddm_test_mode")}catch(g){}else try{e="1"===window.localStorage.getItem("_ddm_test_mode")}catch(g){}e?a.load(window.DDMANAGER_TESTMODE_INIT_URL||"https://api.segmentstream.com/v1/ddm-initialization/"+b+".js"):a.load(window.DDMANAGER_INIT_URL||"https://"+d+"/project/"+b+".js")};a.CDN_DOMAIN=d;a.SNIPPET_VERSION="1.0.11";a.loadProject(h)}})("975f9b27-a262-4758-9019-0bf81f566d68");
+        </script>
+        <!-- //SegmentStream snippet -->
+    </body>
+</html>

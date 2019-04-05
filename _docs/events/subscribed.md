@@ -18,7 +18,7 @@ digitalData.events.push({
       phone: '+79161110022',          //depends on the subscription medium
       subscriptions: [
         {
-          type: 'email',            //channel 
+          type: 'email',            //channel
           topic: 'News'          //theme
         },
         {
@@ -31,7 +31,7 @@ digitalData.events.push({
         }
       ],
     },
-    campaign: {               //This object is necessary to track the field or campaign where the user subscribed 
+    campaign: {               //This object is necessary to track the field or campaign where the user subscribed
       id: '1233214',           //optional field
       name: 'Footer subscription'
     }
@@ -39,8 +39,8 @@ digitalData.events.push({
 ```
 
 
-#### From the DDManager interface
-The `Subscribed` event can not be created from the built-in DDManager triggers. The event must be added from the site code.
+#### From the SegmentStream interface
+The `Subscribed` event can not be created from the built-in SegmentStream triggers. The event must be added from the site code.
 
 #### Required by the following integrations:
 * Criteo

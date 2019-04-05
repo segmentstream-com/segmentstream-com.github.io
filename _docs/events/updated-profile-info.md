@@ -37,8 +37,8 @@ digitalData.events.push({
 ```
 > In the user object, you must pass the updated user data (updated email, phone, name etc.).
 
-#### From the DDManager interface
-The `Updated Profile Info` event can not be created from the built-in DDManager triggers. The event must be added from the site code.
+#### From the SegmentStream interface
+The `Updated Profile Info` event can not be created from the built-in SegmentStream triggers. The event must be added from the site code.
 
 #### Required by the following integrations:
 * [Mindbox](/integrations/mindbox)

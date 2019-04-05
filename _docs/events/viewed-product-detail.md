@@ -25,7 +25,7 @@ digitalData.events.push({
 ```
 > For a detailed description of the `product` object, see the developer section.
 
-#### From the DDManager interface
+#### From the SegmentStream interface
 **Trigger**: event `Viewed Page`,
 
 **Event handler**:
