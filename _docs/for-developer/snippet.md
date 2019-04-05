@@ -19,8 +19,8 @@ In this section, you will learn how to connect SegmentStream to your site.
 ### <a name="0"></a>Introduction
 ------
 For the correct operation of SegmentStream, when loading each page of the site, you need to call 2 files:
- 1. https://cdn.ddmanager.ru/ddm-initialization/`<project_id>`.js
- 2. https://cdn.ddmanager.ru/sdk/dd-manager.js
+ 1. https://cdn.segmentstream.com/project/`<project_id>`.js
+ 2. https://cdn.segmentstream.com/sdk/dd-manager.js
 
 You should contact the SegmentStream team to receive your `<project_id>`.
 
@@ -37,9 +37,9 @@ To connect the SegmentStream via our CDN:
 ```JavaScript
 <!-- SegmentStream snippet -->
 <script type="text/javascript">
-(function(h,d){d=d||"cdn.ddmanager.ru";var a=window.ddManager=window.ddManager||[];window.ddListener=window.ddListener||[];var b=window.digitalData=window.digitalData||{};b.events=b.events||[];b.changes=b.changes||[];if(!a.initialize)if(a.invoked)window.console&&console.error&&console.error("SegmentStream snippet included twice.");else{a.invoked=!0;a.methods="initialize addIntegration persist unpersist on once off getConsent setConsent".split(" ");a.factory=function(k){return function(){var c=
-Array.prototype.slice.call(arguments);c.unshift(k);a.push(c);return a}};for(b=0;b<a.methods.length;b++){var f=a.methods[b];a[f]=a.factory(f)}a.load=function(a){var c=document.createElement("script");c.type="text/javascript";c.charset="utf-8";c.async=!0;c.src=a;a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(c,a)};a.loadProject=function(b){var c=window.location.search;if(0<=c.indexOf("ddm_test_mode=1"))try{var e=!0;window.localStorage.setItem("_ddm_test_mode","1")}catch(g){}else if(0<=
-c.indexOf("ddm_test_mode=0"))try{e=!1,window.localStorage.removeItem("_ddm_test_mode")}catch(g){}else try{e="1"===window.localStorage.getItem("_ddm_test_mode")}catch(g){}e?a.load(window.DDMANAGER_TESTMODE_INIT_URL||"https://api.ddmanager.ru/v1/ddm-initialization/"+b+".js"):a.load(window.DDMANAGER_INIT_URL||"https://"+d+"/ddm-initialization/"+b+".js")};a.CDN_DOMAIN=d;a.SNIPPET_VERSION="1.0.11";a.loadProject(h)}})("<PROJECT_ID>");
+(function(h,d){d=d||"cdn.segmentstream.com";var a=window.ddManager=window.ddManager||[];window.ddListener=window.ddListener||[];var b=window.digitalData=window.digitalData||{};b.events=b.events||[];b.changes=b.changes||[];if(!a.initialize)if(a.invoked)window.console&&console.error&&console.error("SegmentStream snippet included twice.");else{a.invoked=!0;a.methods="initialize addIntegration persist unpersist on once off setConsent".split(" ");a.factory=function(k){return function(){var c=Array.prototype.slice.call(arguments);
+c.unshift(k);a.push(c);return a}};for(b=0;b<a.methods.length;b++){var f=a.methods[b];a[f]=a.factory(f)}a.load=function(a){var c=document.createElement("script");c.type="text/javascript";c.charset="utf-8";c.async=!0;c.src=a;a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(c,a)};a.loadProject=function(b){var c=window.location.search;if(0<=c.indexOf("ddm_test_mode=1"))try{var e=!0;window.localStorage.setItem("_ddm_test_mode","1")}catch(g){}else if(0<=c.indexOf("ddm_test_mode=0"))try{e=
+!1,window.localStorage.removeItem("_ddm_test_mode")}catch(g){}else try{e="1"===window.localStorage.getItem("_ddm_test_mode")}catch(g){}e?a.load(window.DDMANAGER_TESTMODE_INIT_URL||"https://api.segmentstream.com/v1/ddm-initialization/"+b+".js"):a.load(window.DDMANAGER_INIT_URL||"https://"+d+"/project/"+b+".js")};a.CDN_DOMAIN=d;a.SNIPPET_VERSION="1.0.11";a.loadProject(h)}})("<PROJECT_ID>");
 </script>
 <!-- //SegmentStream snippet -->
 ```
@@ -59,9 +59,9 @@ To install SegmentStream on your CDN - you need to perform the following steps:
 <script type="text/javascript">
 // window.DDMANAGER_INIT_URL = '<YOUR_BACKUP_STABLE_INITIALIZATION_SCRIPT_URL>';
 // window.DDMANAGER_SDK_URL = '<YOUR_BACKUP_STABLE_SDK_SCRIPT_URL>';
-(function(h,d){d=d||"cdn.ddmanager.ru";var a=window.ddManager=window.ddManager||[];window.ddListener=window.ddListener||[];var b=window.digitalData=window.digitalData||{};b.events=b.events||[];b.changes=b.changes||[];if(!a.initialize)if(a.invoked)window.console&&console.error&&console.error("SegmentStream snippet included twice.");else{a.invoked=!0;a.methods="initialize addIntegration persist unpersist on once off getConsent setConsent".split(" ");a.factory=function(k){return function(){var c=
-Array.prototype.slice.call(arguments);c.unshift(k);a.push(c);return a}};for(b=0;b<a.methods.length;b++){var f=a.methods[b];a[f]=a.factory(f)}a.load=function(a){var c=document.createElement("script");c.type="text/javascript";c.charset="utf-8";c.async=!0;c.src=a;a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(c,a)};a.loadProject=function(b){var c=window.location.search;if(0<=c.indexOf("ddm_test_mode=1"))try{var e=!0;window.localStorage.setItem("_ddm_test_mode","1")}catch(g){}else if(0<=
-c.indexOf("ddm_test_mode=0"))try{e=!1,window.localStorage.removeItem("_ddm_test_mode")}catch(g){}else try{e="1"===window.localStorage.getItem("_ddm_test_mode")}catch(g){}e?a.load(window.DDMANAGER_TESTMODE_INIT_URL||"https://api.ddmanager.ru/v1/ddm-initialization/"+b+".js"):a.load(window.DDMANAGER_INIT_URL||"https://"+d+"/ddm-initialization/"+b+".js")};a.CDN_DOMAIN=d;a.SNIPPET_VERSION="1.0.11";a.loadProject(h)}})("<PROJECT_ID>");
+(function(h,d){d=d||"cdn.segmentstream.com";var a=window.ddManager=window.ddManager||[];window.ddListener=window.ddListener||[];var b=window.digitalData=window.digitalData||{};b.events=b.events||[];b.changes=b.changes||[];if(!a.initialize)if(a.invoked)window.console&&console.error&&console.error("SegmentStream snippet included twice.");else{a.invoked=!0;a.methods="initialize addIntegration persist unpersist on once off setConsent".split(" ");a.factory=function(k){return function(){var c=Array.prototype.slice.call(arguments);
+c.unshift(k);a.push(c);return a}};for(b=0;b<a.methods.length;b++){var f=a.methods[b];a[f]=a.factory(f)}a.load=function(a){var c=document.createElement("script");c.type="text/javascript";c.charset="utf-8";c.async=!0;c.src=a;a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(c,a)};a.loadProject=function(b){var c=window.location.search;if(0<=c.indexOf("ddm_test_mode=1"))try{var e=!0;window.localStorage.setItem("_ddm_test_mode","1")}catch(g){}else if(0<=c.indexOf("ddm_test_mode=0"))try{e=
+!1,window.localStorage.removeItem("_ddm_test_mode")}catch(g){}else try{e="1"===window.localStorage.getItem("_ddm_test_mode")}catch(g){}e?a.load(window.DDMANAGER_TESTMODE_INIT_URL||"https://api.segmentstream.com/v1/ddm-initialization/"+b+".js"):a.load(window.DDMANAGER_INIT_URL||"https://"+d+"/project/"+b+".js")};a.CDN_DOMAIN=d;a.SNIPPET_VERSION="1.0.11";a.loadProject(h)}})("<PROJECT_ID>","<CDN_DOMAIN>");
 </script>
 <!-- //SegmentStream snippet -->
 ```
@@ -69,9 +69,9 @@ c.indexOf("ddm_test_mode=0"))try{e=!1,window.localStorage.removeItem("_ddm_test_
 
 2. Every 5 minutes, you need to check the md5 hash of the two files. If the files have changed - you need to download a new version of the file and update its local version.
 The latest version of the initialization script:
-https://cdn.ddmanager.ru/ddm-initialization/<your_project_id>.js
+https://cdn.segmentstream.com/project/<your_project_id>.js
 The latest version of the sdk:
-https://cdn.ddmanager.ru/sdk/dd-manager.js
+https://cdn.segmentstream.com/sdk/dd-manager.js
 
 3. In the updated DDManager snippet it is necessary to uncomment the  `DDMANAGER_INIT_URL` and` DDMANAGER_SDK_URL` global variables to assign them the absolute path to the local version of the files on your own CDN.
 ```JavaScript
@@ -80,7 +80,7 @@ https://cdn.ddmanager.ru/sdk/dd-manager.js
 ```
 Example:
 ```JavaScript
-window.DDMANAGER_INIT_URL = 'https://cdn.website.ru/js/ddmanager/init_15_05_2017.js';
-window.DDMANAGER_SDK_URL = 'https://cdn.website.ru/js/ddmanager/sdk_15_05_2017.js';
+window.DDMANAGER_INIT_URL = 'https://cdn.website.com/js/ddmanager/init_15_05_2017.js';
+window.DDMANAGER_SDK_URL = 'https://cdn.website.com/js/ddmanager/sdk_15_05_2017.js';
 ```
 >always use absolute paths with http/https
