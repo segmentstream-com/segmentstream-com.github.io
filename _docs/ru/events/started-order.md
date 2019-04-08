@@ -28,5 +28,5 @@ if (_digitalData('page.type') === 'checkout' && _digitalData('page.category') ==
 ```
 
 ### Необходимо для работы интеграций:
-* [Vkontakte Динамический ретагретинг](/integrations/vkontakte)
+* [Vkontakte Динамический ретагретинг](/ru/integrations/vkontakte)
 * [RTB House]

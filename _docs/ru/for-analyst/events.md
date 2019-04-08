@@ -128,7 +128,7 @@ return _timeout(1500, function() {
 
 ### <a name="4"></a>Как называть события
 ------
-Стандартные интеграции в SegmentStream работают со списком зарезервированных событий, например: [Viewed Product Detail](/events/viewed-product-detail), [Viewed Cart](/events/viewed-cart), [Viewed Checkout Step](/events/viewed-checkout-step), [Completed Transaction](/events/completed-transaction) и т.д.
+Стандартные интеграции в SegmentStream работают со списком зарезервированных событий, например: [Viewed Product Detail](/ru/events/viewed-product-detail), [Viewed Cart](/ru/events/viewed-cart), [Viewed Checkout Step](/ru/events/viewed-checkout-step), [Completed Transaction](/ru/events/completed-transaction) и т.д.
 Полный список зарезервированных событий есть есть в боком меню "Список событий". Используйте имена событий, приведенные в данном списке.
 
-Если вам необходимо добавить событие, которое отсутствует в списке зарезервированных - используйте [правила именования событий](/for-developer/naming)
+Если вам необходимо добавить событие, которое отсутствует в списке зарезервированных - используйте [правила именования событий](/ru/for-developer/naming)

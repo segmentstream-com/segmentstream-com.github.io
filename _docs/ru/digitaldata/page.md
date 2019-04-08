@@ -73,7 +73,7 @@ order: 1
  - Sales Listing - список товаров со скидкой
  - Trend Listing - список трендовых товаров
 
-> Значение переменных `page.category` и `page.type` удобно использовать в [качестве групп контента Google Analytics](/integrations/google-analytics#13)
+> Значение переменных `page.category` и `page.type` удобно использовать в [качестве групп контента Google Analytics](/ru/integrations/google-analytics#13)
 
 ### <a name="3"></a>page.breadcrumb
 ------

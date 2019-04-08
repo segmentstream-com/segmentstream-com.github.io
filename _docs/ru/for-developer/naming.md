@@ -60,7 +60,7 @@ order: 3
 
 При создании новых объектов и параметров в digitalData важно следовать следующим правилам.
 
-* Проверять, не является ли параметр уже зарезервированным в стандарте - [digitalData](/for-developers/digitaldata)
+* Проверять, не является ли параметр уже зарезервированным в стандарте - [digitalData](/ru/for-developers/digitaldata)
 * Все параметры и объекты должны именоваться в [camelCase](https://en.wikipedia.org/wiki/Camel_case)
 
 

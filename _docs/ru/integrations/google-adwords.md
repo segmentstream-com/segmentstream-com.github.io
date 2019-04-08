@@ -41,12 +41,12 @@ order: 1
 Для корректной работы интеграции вашего сайта с Adwords - необходимо настроить передачу определенных событий в массив `digitalData.events`. Список событий приведен ниже:
 
 **Обязательные события**
-* [Viewed Page](/events/viewed-page)
-* [Viewed Product Detail](/events/viewed-product-detail)
-* [Viewed Product Listing](/events/viewed-product-listing)
-* [Searched Products](/events/searched-products)
-* [Viewed Cart](/events/searched-products)
-* [Completed Transaction](/events/completed-transaction)
+* [Viewed Page](/ru/events/viewed-page)
+* [Viewed Product Detail](/ru/events/viewed-product-detail)
+* [Viewed Product Listing](/ru/events/viewed-product-listing)
+* [Searched Products](/ru/events/searched-products)
+* [Viewed Cart](/ru/events/searched-products)
+* [Completed Transaction](/ru/events/completed-transaction)
 
 Также необходимо настроить заполнение определенных переменных объекта `digitalData`. Список некоторых переменных приведен ниже:
 * `page.type`
@@ -54,7 +54,7 @@ order: 1
 * объекты `listing`, `cart`, `transaction`
 * и другие
 
->Мы настоятельно рекомендуем настроить передачу всех переменных в объект `digitalData` (а не только описанных выше), в соответствии с [документацией](/for-developer/).
+>Мы настоятельно рекомендуем настроить передачу всех переменных в объект `digitalData` (а не только описанных выше), в соответствии с [документацией](/ru/for-developer/).
 
 ### <a name="2"></a>Идентификатор отслеживания конверсий
 ------
@@ -88,5 +88,5 @@ Google Ads получает информацию о товарах, размещ
 
 ### <a name="5"></a>Проверка корректности настройки интеграции
 ------
-После настройки интеграции в интерфейсе SegmentStream, но ДО ПУБЛИКАЦИИ - перейдите на сайт в режиме test_mode, [пройдитесь по воронке конверсии и проверьте, нет ли ошибок](/for-analyst/integrations#2).
+После настройки интеграции в интерфейсе SegmentStream, но ДО ПУБЛИКАЦИИ - перейдите на сайт в режиме test_mode, [пройдитесь по воронке конверсии и проверьте, нет ли ошибок](/ru/for-analyst/integrations#2).
 Если ошибок нет - опубликуйте текущую версию.

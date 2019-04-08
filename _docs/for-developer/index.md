@@ -6,8 +6,6 @@ date: 2017-06-05 12:00:00
 order: 1
 ---
 
->The previous version of the documentation for the implementation of digitalData is available here: [digitaldata.readme.io](https://digitaldata.readme.io/docs)
-
 **digitalData** - is a data layer (JavaScript-object), in which information is stored in the name-value format. The value can be a number, a string, another object, with its own structure or an array (a series of similar objects).
 
  One can imagine that the object is a cabinet with drawers signed with unique names. In each drawer there can be documents, also having their names. Access to information is carried out by the path to the document that lies in the drawer ('Cabinet name'. 'Drawer name'. 'Document name').

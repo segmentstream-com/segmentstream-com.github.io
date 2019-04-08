@@ -49,7 +49,7 @@ SegmentStream позволяет отправлять данные из объе
 
 **Пример**: Необходимо передать в google analytics количество просмотров карточек товаров перед покупкой.
 
-Для решения данной задачи вам нужно увеличивать на 1 значение счетчика при срабатывании события [`Viewed Product Detail`](/events/viewed-product-detail) и сохранять значение в переменной `digitalData.custom.viewedProductsCount`.Вместе с событием [`Completed Transaction`](/events/completed-transaction) - отправлять значение переменной в качестве [пользовательской метрики](/integrations/google-analytics#11). После наступлении события `Completed Transaction` - обнулять счетчик и сохранять в переменной `digitalData.custom.viewedProductsCount`.
+Для решения данной задачи вам нужно увеличивать на 1 значение счетчика при срабатывании события [`Viewed Product Detail`](/ru/events/viewed-product-detail) и сохранять значение в переменной `digitalData.custom.viewedProductsCount`.Вместе с событием [`Completed Transaction`](/ru/events/completed-transaction) - отправлять значение переменной в качестве [пользовательской метрики](/ru/integrations/google-analytics#11). После наступлении события `Completed Transaction` - обнулять счетчик и сохранять в переменной `digitalData.custom.viewedProductsCount`.
 1. `digitalData.custom.viewedProductsCount` - сохранение значения счетчика.
 
   ![](/img/variables.2.png)
@@ -72,7 +72,7 @@ return 0;
 
 ### <a name="4"></a>Вспомогательные функции
 ------
-При создании переменных полезно использовать набор встроенных функций, которые значительно упрощают и сокращают код исполнительных функций. Перечень вспомогательных функций описан [разделе события](/for-analyst/events#3).
+При создании переменных полезно использовать набор встроенных функций, которые значительно упрощают и сокращают код исполнительных функций. Перечень вспомогательных функций описан [разделе события](/ru/for-analyst/events#3).
 
 ### <a name="5"></a>Тестирование переменных
 ------

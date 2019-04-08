@@ -43,9 +43,9 @@ Facebook - социальная сеть с большим набором рек
 Для корректной работы интеграции вашего сайта с Facebook - необходимо настроить передачу 3-х событий в массив `digitalData.events`. Список событий приведен ниже:
 
 **Обязательные события**
-* [Viewed Page](/events/viewed-page)
-* [Viewed Product Detail](/events/viewed-product-detail)
-* [Completed Transaction](/events/completed-transaction)
+* [Viewed Page](/ru/events/viewed-page)
+* [Viewed Product Detail](/ru/events/viewed-product-detail)
+* [Completed Transaction](/ru/events/completed-transaction)
 
 ### <a name="2"></a>Идентификатор Facebook Pixel
 ------
@@ -81,7 +81,7 @@ Facebook получает информацию о товарах, размеще
 ------
 SegmentStream наравне со стандартными событиями может передавать и кастомные события в Facebook.
 Чтобы настроить передачу кастомных событий заполните 2 поля:
-1. Слева - Название событие, которое добавляется в массив `digitalData.events`, например: [Registered](/events/registered)
+1. Слева - Название событие, которое добавляется в массив `digitalData.events`, например: [Registered](/ru/events/registered)
 2. Справа - Название события, которое вы хотите видеть в интерфейсе Facebook.
 
 > Название события в Facebook вы можете выбирать на свое усмотрение, однако мы рекомендуем придерживаться правил наименования самого Facebook. Facebook использует CamelCase формат.
@@ -90,5 +90,5 @@ SegmentStream наравне со стандартными событиями м
 
 ### <a name="4"></a>Проверка корректности настройки интеграции
 ------
-После настройки интеграции в интерфейсе SegmentStream, но ДО ПУБЛИКАЦИИ - перейдите на сайт в режиме test_mode, [пройдитесь по воронке конверсии и проверьте, нет ли ошибок](/for-analyst/integrations#2).
+После настройки интеграции в интерфейсе SegmentStream, но ДО ПУБЛИКАЦИИ - перейдите на сайт в режиме test_mode, [пройдитесь по воронке конверсии и проверьте, нет ли ошибок](/ru/for-analyst/integrations#2).
 Если ошибок нет - опубликуйте текущую версию.

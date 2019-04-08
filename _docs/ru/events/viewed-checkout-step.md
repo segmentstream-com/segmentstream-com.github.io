@@ -74,6 +74,6 @@ if (_digitalData('page.type') === 'checkout' || _digitalData('page.type') === 'c
 ```
 
 ### Необходимо для работы интеграций:
-* [Facebook](/integrations/facebook)
+* [Facebook](/ru/integrations/facebook)
 * RTB House
 * Segmento

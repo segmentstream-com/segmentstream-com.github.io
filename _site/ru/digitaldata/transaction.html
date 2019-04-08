@@ -534,7 +534,7 @@
 <p>Объект <code class="highlighter-rouge">digitalData.transaction</code> содержит в себе переменные, которые описывают номер, состав и сумму заказа, условия оплаты и доставки.</p>
 
 <blockquote>
-  <p>Объект <code class="highlighter-rouge">transaction</code> должен появляться только на странице “Спасибо за покупку” (<code class="highlighter-rouge">page.type</code>=’confirmation’) или в составе события <a href="/events/completed-transaction">“Completed Transaction”</a>.</p>
+  <p>Объект <code class="highlighter-rouge">transaction</code> должен появляться только на странице “Спасибо за покупку” (<code class="highlighter-rouge">page.type</code>=’confirmation’) или в составе события <a href="/ru/events/completed-transaction">“Completed Transaction”</a>.</p>
 </blockquote>
 
 <h3 id="Навигация-по-странице">Навигация по странице</h3>
@@ -559,7 +559,7 @@
 
 <h3 id="Введение"><a name="0"></a>Введение</h3>
 <hr />
-<p>Объект <code class="highlighter-rouge">digitalData.transaction</code> должен быть объявлен и заполнен в исходном коде страницы “Спасибо за покупку”. Состав объекта практически полностью совпадает с составом объекта <a href="/digitaldata/cart"><code class="highlighter-rouge">digitalData.cart</code></a>.</p>
+<p>Объект <code class="highlighter-rouge">digitalData.transaction</code> должен быть объявлен и заполнен в исходном коде страницы “Спасибо за покупку”. Состав объекта практически полностью совпадает с составом объекта <a href="/ru/digitaldata/cart"><code class="highlighter-rouge">digitalData.cart</code></a>.</p>
 
 <p>Пример заполнения:</p>
 <div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">digitalData</span><span class="p">.</span><span class="nx">transaction</span><span class="err">:</span> <span class="p">{</span>
@@ -722,7 +722,7 @@
 </div>
 <p>где,</p>
 <ul>
-  <li><strong>product</strong> - объект <a href="/digitalData/product/">product</a>. <strong>Обязательная</strong> переменная</li>
+  <li><strong>product</strong> - объект <a href="/ru/digitalData/product/">product</a>. <strong>Обязательная</strong> переменная</li>
   <li><strong>quantity</strong> - число. <strong>Обязательная</strong> переменная, которая содержит в себе количество товаров с определенными <code class="highlighter-rouge">product.id</code> и <code class="highlighter-rouge">product.skuCode</code>
     <blockquote>
       <p>В корзине может лежать несколько одинаковых товаров с разными вариациями, например 2 пары одинаковых ботинок с разным размером. Каждая вариация должна быть описана уникальным объектом массива <code class="highlighter-rouge">lineItems</code></p>

@@ -37,11 +37,11 @@ Ofsys - платформа для отправки массовых и триг�
 Для корректной работы интеграции вашего сайта с Ofsys необходимо настроить передачу определенных событий в массив `digitalData.events`. Список событий приведен ниже:
 
 **Обязательные события**
-* [Viewed Page](/events/viewed-page)
-* [Viewed Product Detail](/events/viewed-product-detail)
-* [Added Product](/events/added-product)
-* [Removed Product](/events/removed-product)
-* [Completed Transaction](/events/completed-transaction)
+* [Viewed Page](/ru/events/viewed-page)
+* [Viewed Product Detail](/ru/events/viewed-product-detail)
+* [Added Product](/ru/events/added-product)
+* [Removed Product](/ru/events/removed-product)
+* [Completed Transaction](/ru/events/completed-transaction)
 
 Также необходимо при загрузке каждой страницы сайта инициировать и заполнять следующие переменные:
 * `digitalData.cart.id` - уникальный идентификатор корзины. В качестве уникального идентификатора корзины может быть уникальный идентификатор браузера пользователя, например googleClientId.

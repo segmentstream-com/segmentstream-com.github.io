@@ -21,7 +21,7 @@ order: 2
 
 ### <a name="0"></a> Введение
 ------
-Для корректной работы интеграций необходимо настроить добавление в массив `digitalData.events` семантических событий: [Viewed Product Detail](/events/viewed-product-detail), [Clicked Product](/events/clicked-product), [Added Product](/events/added-product), [Completed Transaction](/events/completed-transaction) и других. Каждая интеграция использует свой набор событий. Полный список зарезервированных событий описан в документации.
+Для корректной работы интеграций необходимо настроить добавление в массив `digitalData.events` семантических событий: [Viewed Product Detail](/ru/events/viewed-product-detail), [Clicked Product](/ru/events/clicked-product), [Added Product](/ru/events/added-product), [Completed Transaction](/ru/events/completed-transaction) и других. Каждая интеграция использует свой набор событий. Полный список зарезервированных событий описан в документации.
 
 Интерфейс управления интеграциями содержит 2 вкладки:
  - **Настройки**. Каждая интеграция имеет набор настроек. Для одних интеграций - это только уникальный идентификатор в сторонней системе, для других - достаточно длинный список. Описание настроек всех интеграций есть в данной документации на соответствующих страницах.

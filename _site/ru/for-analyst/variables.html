@@ -578,7 +578,7 @@
 
 <p><strong>Пример</strong>: Необходимо передать в google analytics количество просмотров карточек товаров перед покупкой.</p>
 
-<p>Для решения данной задачи вам нужно увеличивать на 1 значение счетчика при срабатывании события <a href="/events/viewed-product-detail"><code class="highlighter-rouge">Viewed Product Detail</code></a> и сохранять значение в переменной <code class="highlighter-rouge">digitalData.custom.viewedProductsCount</code>.Вместе с событием <a href="/events/completed-transaction"><code class="highlighter-rouge">Completed Transaction</code></a> - отправлять значение переменной в качестве <a href="/integrations/google-analytics#11">пользовательской метрики</a>. После наступлении события <code class="highlighter-rouge">Completed Transaction</code> - обнулять счетчик и сохранять в переменной <code class="highlighter-rouge">digitalData.custom.viewedProductsCount</code>.</p>
+<p>Для решения данной задачи вам нужно увеличивать на 1 значение счетчика при срабатывании события <a href="/ru/events/viewed-product-detail"><code class="highlighter-rouge">Viewed Product Detail</code></a> и сохранять значение в переменной <code class="highlighter-rouge">digitalData.custom.viewedProductsCount</code>.Вместе с событием <a href="/ru/events/completed-transaction"><code class="highlighter-rouge">Completed Transaction</code></a> - отправлять значение переменной в качестве <a href="/ru/integrations/google-analytics#11">пользовательской метрики</a>. После наступлении события <code class="highlighter-rouge">Completed Transaction</code> - обнулять счетчик и сохранять в переменной <code class="highlighter-rouge">digitalData.custom.viewedProductsCount</code>.</p>
 <ol>
   <li><code class="highlighter-rouge">digitalData.custom.viewedProductsCount</code> - сохранение значения счетчика.</li>
 </ol>
@@ -605,7 +605,7 @@
 
 <h3 id="Вспомогательные-функции"><a name="4"></a>Вспомогательные функции</h3>
 <hr />
-<p>При создании переменных полезно использовать набор встроенных функций, которые значительно упрощают и сокращают код исполнительных функций. Перечень вспомогательных функций описан <a href="/for-analyst/events#3">разделе события</a>.</p>
+<p>При создании переменных полезно использовать набор встроенных функций, которые значительно упрощают и сокращают код исполнительных функций. Перечень вспомогательных функций описан <a href="/ru/for-analyst/events#3">разделе события</a>.</p>
 
 <h3 id="Тестирование-переменных"><a name="5"></a>Тестирование переменных</h3>
 <hr />

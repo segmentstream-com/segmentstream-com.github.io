@@ -538,7 +538,7 @@
   <li>Как правильно динамически изменять состав объекта digitalData</li>
 </ul>
 
-<p>digitalData - это глобальный JavaScript объект. Его необходимо объявить как можно выше в исходном коде сайта, <a href="/for-developer/snippet">перед подключением библиотеки SegmentStream</a>. Данный объект должен присутствовать на каждой странице сайта.</p>
+<p>digitalData - это глобальный JavaScript объект. Его необходимо объявить как можно выше в исходном коде сайта, <a href="/ru/for-developer/snippet">перед подключением библиотеки SegmentStream</a>. Данный объект должен присутствовать на каждой странице сайта.</p>
 
 <blockquote>
   <p>Объявляйте объект <code class="highlighter-rouge">window.digitalData</code> при первоначальной загрузке страницы. Не пытайтесь построить систему, в которой объект создается после AJAX-запроса. Такое решение ухудшит работу всей вашей маркетинговой инфраструктуры и сделает ее неуправляемой.</p>
@@ -595,32 +595,32 @@
 
 <p>Подробное описание объектов:</p>
 <ul>
-  <li><a href="/digitaldata/standard-version">version</a></li>
-  <li><a href="/digitaldata/website">website</a></li>
-  <li><a href="/digitaldata/page">page</a></li>
-  <li><a href="/digitaldata/user">user</a></li>
-  <li><a href="/digitaldata/product">product</a></li>
-  <li><a href="/digitaldata/wishlist">wishlist</a></li>
-  <li><a href="/digitaldata/cart">cart</a></li>
-  <li><a href="/digitaldata/transaction">transaction</a></li>
-  <li><a href="/digitaldata/listing">listing</a></li>
-  <li><a href="/digitaldata/recommendation">recommendation</a></li>
-  <li><a href="/digitaldata/campaigns">campaigns</a></li>
-  <li><a href="/digitaldata/context">context</a></li>
-  <li><a href="/digitaldata/changes">changes</a></li>
-  <li><a href="/digitaldata/events">events</a></li>
+  <li><a href="/ru/digitaldata/standard-version">version</a></li>
+  <li><a href="/ru/digitaldata/website">website</a></li>
+  <li><a href="/ru/digitaldata/page">page</a></li>
+  <li><a href="/ru/digitaldata/user">user</a></li>
+  <li><a href="/ru/digitaldata/product">product</a></li>
+  <li><a href="/ru/digitaldata/wishlist">wishlist</a></li>
+  <li><a href="/ru/digitaldata/cart">cart</a></li>
+  <li><a href="/ru/digitaldata/transaction">transaction</a></li>
+  <li><a href="/ru/digitaldata/listing">listing</a></li>
+  <li><a href="/ru/digitaldata/recommendation">recommendation</a></li>
+  <li><a href="/ru/digitaldata/campaigns">campaigns</a></li>
+  <li><a href="/ru/digitaldata/context">context</a></li>
+  <li><a href="/ru/digitaldata/changes">changes</a></li>
+  <li><a href="/ru/digitaldata/events">events</a></li>
 </ul>
 
 <p>Подробное описание состава digitalData для <strong>типовых страниц интернет-магазина</strong>:</p>
 <ul>
-  <li><a href="/ecommerce/main-page">Главная страница</a></li>
-  <li><a href="/ecommerce/listing">Категория товаров</a></li>
-  <li><a href="/ecommerce/search">Результаты поиска</a></li>
-  <li><a href="/ecommerce/product">Карточка товара</a></li>
-  <li><a href="/ecommerce/cart">Корзина</a></li>
-  <li><a href="/ecommerce/checkout">Станицы этапов оформления заказа</a></li>
-  <li><a href="/ecommerce/confirmation">Страница подтверждения заказа</a></li>
-  <li><a href="/ecommerce/content">Текстовая страница</a></li>
+  <li><a href="/ru/ecommerce/main-page">Главная страница</a></li>
+  <li><a href="/ru/ecommerce/listing">Категория товаров</a></li>
+  <li><a href="/ru/ecommerce/search">Результаты поиска</a></li>
+  <li><a href="/ru/ecommerce/product">Карточка товара</a></li>
+  <li><a href="/ru/ecommerce/cart">Корзина</a></li>
+  <li><a href="/ru/ecommerce/checkout">Станицы этапов оформления заказа</a></li>
+  <li><a href="/ru/ecommerce/confirmation">Страница подтверждения заказа</a></li>
+  <li><a href="/ru/ecommerce/content">Текстовая страница</a></li>
 </ul>
 
 <blockquote>
@@ -631,7 +631,7 @@
 <hr />
 <p>Часто бывает необходимо изменить содержание переменной <code class="highlighter-rouge">digitalData</code> без перезагрузки страницы. Например: при подписке на рассылку, добавлении товара в корзину, авторизации, регистрации и многих других событиях. В таком случае следуют использовать конструкцию вида <code class="highlighter-rouge">digitalData.changes.push(...)</code>. SegmentStream “слушает” изменение массива <code class="highlighter-rouge">digitalData.changes</code> и автоматически обновляет соответствующие элементы объекта <code class="highlighter-rouge">digitalData</code>.</p>
 
-<p>Примеры использования метода <code class="highlighter-rouge">digitalData.changes.push(...)</code> подробно описаны в разделе <a href="/digitaldata/changes">changes</a>.</p>
+<p>Примеры использования метода <code class="highlighter-rouge">digitalData.changes.push(...)</code> подробно описаны в разделе <a href="/ru/digitaldata/changes">changes</a>.</p>
 
 
                     </div>

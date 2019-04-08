@@ -53,7 +53,7 @@ Vkontakte - социальная сеть с небольшим набором �
 ------
 SegmentStream может передавать любые события в Vkontakte.
 Чтобы настроить передачу событий, заполните 2 поля:
-1. Слева - Название события, которое добавляется в массив `digitalData.events`, например: [Registered](/events/registered)
+1. Слева - Название события, которое добавляется в массив `digitalData.events`, например: [Registered](/ru/events/registered)
 2. Справа - Название события, которое вы хотите видеть в интерфейсе Vkontakte.
 
 Вы можете добавить неограниченное количество событий.
@@ -64,23 +64,23 @@ SegmentStream может передавать любые события в Vkont
 ------
 В устаревшей версии API под каждое событие в интерфейсе vkontakte нужно создать специальный трекер.
 Чтобы настроить передачу событий в эти трекеры, заполните 2 поля:
-1. Слева - Название событие, которое добавляется в массив `digitalData.events`, например: [Completed Transaction](/events/completed-transaction)
+1. Слева - Название событие, которое добавляется в массив `digitalData.events`, например: [Completed Transaction](/ru/events/completed-transaction)
 2. Справа - URL трекера из интерфейса Vkontakte.
 
 ### <a name="4"></a>ID прайс-листа по умолчанию для динамического ретаргетинга
 ------
 Для корректной работы модуля динамического ретаргетинга необходимы следующие события:
-* [Viewed Page](/events/viewed-page)
-* [Viewed Product Detail](/events/viewed-product-detail)
-* [Viewed Product Listing](/events/viewed-product-listing)
-* [Searched Products](/events/searched-products)
-* [Added Product](/events/added-product)
-* [Added Product to Wishlist](/events/added-product-to-wishlist)
-* [Removed Product](/events/removed-product)
-* [Removed Product from Wishlist](/events/removed-product-from-wishlist)
-* [Started Order](/events/started-order) (не обязательно)
-* [Added Payment Info](/events/added-payment-info) (не обязательно)
-* [Completed Transaction](/events/completed-transaction)
+* [Viewed Page](/ru/events/viewed-page)
+* [Viewed Product Detail](/ru/events/viewed-product-detail)
+* [Viewed Product Listing](/ru/events/viewed-product-listing)
+* [Searched Products](/ru/events/searched-products)
+* [Added Product](/ru/events/added-product)
+* [Added Product to Wishlist](/ru/events/added-product-to-wishlist)
+* [Removed Product](/ru/events/removed-product)
+* [Removed Product from Wishlist](/ru/events/removed-product-from-wishlist)
+* [Started Order](/ru/events/started-order) (не обязательно)
+* [Added Payment Info](/ru/events/added-payment-info) (не обязательно)
+* [Completed Transaction](/ru/events/completed-transaction)
 
 >Динамический ретаргетинг работает только с новой версией пикселя.
 

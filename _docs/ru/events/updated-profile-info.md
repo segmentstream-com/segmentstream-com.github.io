@@ -41,4 +41,4 @@ digitalData.events.push({
 Событие `Updated Profile Info` невозможно создать на основе встроенных триггеров SegmentStream. Событие должно быть добавлено из кода.
 
 ### Необходимо для работы интеграций:
-* [Mindbox](/integrations/mindbox)
+* [Mindbox](/ru/integrations/mindbox)

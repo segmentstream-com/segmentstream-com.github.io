@@ -41,13 +41,13 @@ Criteo - система динамического ретаргетинга. Seg
 Для корректной работы интеграции вашего сайта с Criteo - необходимо настроить передачу определенных событий в массив `digitalData.events`. Список событий приведен ниже:
 
 **Обязательные события**
-* [Viewed Page](/events/viewed-page)
-* [Viewed Product Detail](/events/viewed-product-detail)
-* [Viewed Product Listing](/events/viewed-product-listing)
-* [Searched Products](/events/searched-products)
-* [Viewed Cart](/events/viewed-cart)
-* [Completed Transaction](/events/completed-transaction)
-* [Subscribed](/events/subscribed)
+* [Viewed Page](/ru/events/viewed-page)
+* [Viewed Product Detail](/ru/events/viewed-product-detail)
+* [Viewed Product Listing](/ru/events/viewed-product-listing)
+* [Searched Products](/ru/events/searched-products)
+* [Viewed Cart](/ru/events/viewed-cart)
+* [Completed Transaction](/ru/events/completed-transaction)
+* [Subscribed](/ru/events/subscribed)
 
 Также необходимо настроить заполнение определенных переменных объекта `digitalData`. Список некоторых переменных приведен ниже:
 * `page.type`
@@ -82,7 +82,7 @@ Criteo получает информацию о товарах, размещен
 ------
 Criteo позволяет вместе с каждым событием передавать пользовательские сегменты. Например если вы хотите полностью отключить ретаргетинг для определенного сегмента пользователей - вам необходимо создать числовую переменную в объекте `digitalData` и вставить ее адрес в поле настройки интеграции.
 Например, для всех пользователей, на которых вы хотите отключить ретаргетинг, в переменную `digitalData.user.criteoSegment` вы передаете значение 1. Для остальных - 0.
-Подробнее о создании переменных читайте в разделе [переменные](/for-analyst/variables).
+Подробнее о создании переменных читайте в разделе [переменные](/ru/for-analyst/variables).
 
 ### <a name="4"></a>Флаг: Использовать собственную дедупликацию
 ------
@@ -95,5 +95,5 @@ Criteo позволяет вместе с каждым событием пере
 
 ### <a name="5"></a>Проверка корректности настройки интеграции
 ------
-После настройки интеграции в интерфейсе SegmentStream, но ДО ПУБЛИКАЦИИ - перейдите на сайт в режиме test_mode, [пройдитесь по воронке конверсии и проверьте, нет ли ошибок](/for-analyst/integrations#2).
+После настройки интеграции в интерфейсе SegmentStream, но ДО ПУБЛИКАЦИИ - перейдите на сайт в режиме test_mode, [пройдитесь по воронке конверсии и проверьте, нет ли ошибок](/ru/for-analyst/integrations#2).
 Если ошибок нет - опубликуйте текущую версию.

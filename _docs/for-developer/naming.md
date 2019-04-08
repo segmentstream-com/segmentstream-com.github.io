@@ -60,7 +60,7 @@ Each of these objects can have an unlimited number of nested objects or variable
 
 When creating new objects and parameters in digitalData, it is important to follow the following rules.
 
-* Check if the parameter is already reserved in the standard - [https://digitaldata.readme.io/docs/описание-объектов](https://digitaldata.readme.io/docs/описание-объектов)
+* Check if the parameter is already reserved in the standard
 * All parameters and objects must be named in [camelCase](https://en.wikipedia.org/wiki/Camel_case)
 
 

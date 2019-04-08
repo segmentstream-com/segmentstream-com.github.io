@@ -90,11 +90,11 @@ Yandex Metrica дает возможность связывать посещен
 ![](/img/integrations.ym.goal.2.png)
 
 **Обязательные события**
-* [Viewed Page](/events/viewed-page)
-* [Viewed Product Detail](/events/viewed-product-detail)
-* [Added Product](/events/added-product)
-* [Removed Product](/events/removed-product)
-* [Completed Transaction](/events/completed-transaction)
+* [Viewed Page](/ru/events/viewed-page)
+* [Viewed Product Detail](/ru/events/viewed-product-detail)
+* [Added Product](/ru/events/added-product)
+* [Removed Product](/ru/events/removed-product)
+* [Completed Transaction](/ru/events/completed-transaction)
 
 [Справка Yandex по настройки электронной торговли](https://yandex.ru/support/metrika/reports/ecommerce.html)
 

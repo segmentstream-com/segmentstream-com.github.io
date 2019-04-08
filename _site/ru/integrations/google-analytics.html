@@ -541,7 +541,7 @@
   <li>Как тонко настроить отслеживание Google Analytics на вашем сайте</li>
 </ul>
 
-<p>SegmentStream позволяет с легкостью отправлять данные о поведении ваших пользователей в <a href="https://analytics.google.com/">Google Analytics</a>. После полной <a href="/for-developer/">интеграции digitalData с вашим сайтом</a>, можно перейти к настройке интеграции в панели SegmentStream.</p>
+<p>SegmentStream позволяет с легкостью отправлять данные о поведении ваших пользователей в <a href="https://analytics.google.com/">Google Analytics</a>. После полной <a href="/ru/for-developer/">интеграции digitalData с вашим сайтом</a>, можно перейти к настройке интеграции в панели SegmentStream.</p>
 
 <h3 id="Навигация-по-странице">Навигация по странице</h3>
 <hr />
@@ -580,7 +580,7 @@
 </ol>
 
 <blockquote>
-  <p>Важно! Для работы основного трекера Google Analytics необходимо настроить событие <a href="/events/viewed-page">Viewed Page</a></p>
+  <p>Важно! Для работы основного трекера Google Analytics необходимо настроить событие <a href="/ru/events/viewed-page">Viewed Page</a></p>
 </blockquote>
 
 <h3 id="Идентификатор-отслеживания"><a name="1"></a>Идентификатор отслеживания</h3>
@@ -595,7 +595,7 @@
 <p>SegmentStream по-умолчанию отправляет в Google Analytics все события, добавленные в массив <code class="highlighter-rouge">digitalData.events</code>.</p>
 
 <blockquote>
-  <p>Важно! Событие <a href="/events/viewed-page">Viewed Page</a> автоматически преобразуется к типу взаимодействия pageview и не попадают в отчет Behaviour &gt; events &gt; top events</p>
+  <p>Важно! Событие <a href="/ru/events/viewed-page">Viewed Page</a> автоматически преобразуется к типу взаимодействия pageview и не попадают в отчет Behaviour &gt; events &gt; top events</p>
 </blockquote>
 
 <p>Все события, передаваемые в Google Analytics, могут иметь несколько характеристик: eventCategory, eventAction, eventLabel, eventValue, nonInteraction.
@@ -645,17 +645,17 @@ SegmentStream имеет встроенный мэппер формата digita
 
 <p><strong>Поддерживаемые события</strong></p>
 <ul>
-  <li><a href="/events/viewed-product">Viewed Product</a></li>
-  <li><a href="/events/clicked-product">Clicked Product</a></li>
-  <li><a href="/events/viewed-campaign">Viewed Campaign</a></li>
-  <li><a href="/events/clicked-campaign">Clicked Campaign</a></li>
-  <li><a href="/events/viewed-product-detail">Viewed Product Detail</a></li>
-  <li><a href="/events/added-product">Added Product</a></li>
-  <li><a href="/events/removed-product">Removed Product</a></li>
-  <li><a href="/events/viewed-checkout-step">Viewed Checkout Step</a></li>
-  <li><a href="/events/completed-checkout-step">Completed Checkout Step</a></li>
-  <li><a href="/events/completed-transaction">Completed Transaction</a></li>
-  <li><a href="/events/refunded-transaction">Refunded Transaction</a></li>
+  <li><a href="/ru/events/viewed-product">Viewed Product</a></li>
+  <li><a href="/ru/events/clicked-product">Clicked Product</a></li>
+  <li><a href="/ru/events/viewed-campaign">Viewed Campaign</a></li>
+  <li><a href="/ru/events/clicked-campaign">Clicked Campaign</a></li>
+  <li><a href="/ru/events/viewed-product-detail">Viewed Product Detail</a></li>
+  <li><a href="/ru/events/added-product">Added Product</a></li>
+  <li><a href="/ru/events/removed-product">Removed Product</a></li>
+  <li><a href="/ru/events/viewed-checkout-step">Viewed Checkout Step</a></li>
+  <li><a href="/ru/events/completed-checkout-step">Completed Checkout Step</a></li>
+  <li><a href="/ru/events/completed-transaction">Completed Transaction</a></li>
+  <li><a href="/ru/events/refunded-transaction">Refunded Transaction</a></li>
 </ul>
 
 <blockquote>
@@ -777,7 +777,7 @@ SegmentStream имеет встроенный мэппер формата digita
 ### <a name="14"></a>Специальные поля
 ------
 Библиотека analytics.js при загрузке каждой страницы создает трекер отслеживания, который отправляет на сервера Google Analytics информацию о действиях пользователя. Информация передается в виде имя-значение. В справке GA [задокументировано много имен/полей](https://developers.google.com/analytics/devguides/collection/analyticsjs/field-reference), которые умеет распознавать и записывать в БД система, однако можно создать свое поле и записать туда определенное значение. Это поле будет проигнорировано сервером Google Analytics, но запрос с этим полем будет сформирован библиотекой analytics.js
-> Этот нестандартный прием в редких случаях нужен [интеграции с OWOX](/integrations/owox) для того, чтобы например, личные данные пользователя не попали в GA, но при этом записались в bigQuery.
+> Этот нестандартный прием в редких случаях нужен [интеграции с OWOX](/ru/integrations/owox) для того, чтобы например, личные данные пользователя не попали в GA, но при этом записались в bigQuery.
 
 Настройка специальных полей идентична [настройке специальных показателей](#11).
 -->

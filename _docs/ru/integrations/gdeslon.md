@@ -19,12 +19,12 @@ GdeSlon - партнерская сеть, объединяющая реклам
 Для корректной работы ретаргетинга GdeSlon на вашем сайте - необходимо настроить передачу определенных событий в массив `digitalData.events`. Список событий приведен ниже:
 
 **Обязательные события**
-* [Viewed Page](/events/viewed-page)
-* [Viewed Product Detail](/events/viewed-product-detail)
-* [Viewed Product Listing](/events/viewed-product-listing)
-* [Searched Products](/events/searched-products)
-* [Viewed Cart](/events/viewed-cart)
-* [Completed Transaction](/events/completed-transaction)
+* [Viewed Page](/ru/events/viewed-page)
+* [Viewed Product Detail](/ru/events/viewed-product-detail)
+* [Viewed Product Listing](/ru/events/viewed-product-listing)
+* [Searched Products](/ru/events/searched-products)
+* [Viewed Cart](/ru/events/viewed-cart)
+* [Completed Transaction](/ru/events/completed-transaction)
 
 Также необходимо настроить заполнение определенных переменных объекта `digitalData`. Список некоторых переменных приведен ниже:
 * `page.type`

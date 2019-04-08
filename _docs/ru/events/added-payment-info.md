@@ -19,5 +19,5 @@ digitalData.events.push({
 Событие `Added Payment Info` является серверным. Его невозможно создать на основе встроенных триггеров SegmentStream. Событие должно быть добавлено из кода при успешном возрвате ответа с сервера.
 
 ### Необходимо для работы интеграций:
-* [Vkontakte Динамический ретаргетинг](/integrations/vkontakte)
-* [Facebook](/integrations/facebook)
+* [Vkontakte Динамический ретаргетинг](/ru/integrations/vkontakte)
+* [Facebook](/ru/integrations/facebook)

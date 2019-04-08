@@ -43,14 +43,14 @@ Retail Rocket - сервис товарных рекомендаций и три
 Для корректной работы интеграции вашего сайта с Retail Rocket - необходимо настроить передачу определенных событий в массив `digitalData.events`. Список событий приведен ниже:
 
 **Обязательные события**
-* [Viewed Page](/events/viewed-page)
-* [Viewed Product Detail](/events/viewed-product-detail)
-* [Viewed Product Listing](/events/viewed-product-listing)
-* [Clicked Product](/events/clicked-product)
-* [Added Product](/events/added-product)
-* [Searched Products](/events/searched-products)
-* [Completed Transaction](/events/completed-transaction)
-* [Subscribed](/events/subscribed)
+* [Viewed Page](/ru/events/viewed-page)
+* [Viewed Product Detail](/ru/events/viewed-product-detail)
+* [Viewed Product Listing](/ru/events/viewed-product-listing)
+* [Clicked Product](/ru/events/clicked-product)
+* [Added Product](/ru/events/added-product)
+* [Searched Products](/ru/events/searched-products)
+* [Completed Transaction](/ru/events/completed-transaction)
+* [Subscribed](/ru/events/subscribed)
 
 
 ### <a name="2"></a>Retail Rocket Partner ID
