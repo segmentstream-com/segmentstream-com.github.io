@@ -5,7 +5,7 @@ title: "CSV file upload"
 date: 2019-04-09 12:00:00
 order: 0
 ---
-> Attention! [DDManager Streaming](/integrations/ddmanager-streaming.md) integration has to be enabled to use Data Import.
+> Attention! [DDManager Streaming](/integrations/ddmanager-streaming) integration has to be enabled to use Data Import.
 
 The CSV file upload functionality allows you to import cost data from CSV files to Google BigQuery.
 

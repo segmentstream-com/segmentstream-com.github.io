@@ -5,7 +5,7 @@ title: "Загрузка CSV файлов"
 date: 2019-04-09 12:00:00
 order: 0
 ---
-> ВНИМАНИЕ! Для активации данного функционала необходимо включить и настроить интеграцию [DDManager Streaming](/ru/integrations/ddmanager-streaming.md).
+> ВНИМАНИЕ! Для активации данного функционала необходимо включить и настроить интеграцию [DDManager Streaming](/ru/integrations/ddmanager-streaming).
 
 Функционал загрузки CSV файлов позволяет импортировать данные данные о расходах из CSV файлов в Google BigQuery.
 
