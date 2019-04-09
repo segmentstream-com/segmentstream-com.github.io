@@ -1,6 +1,6 @@
 ---
 layout: page
-section: digitalDataRU
+section: digitaldataRU
 title: "product"
 order: 1
 ---

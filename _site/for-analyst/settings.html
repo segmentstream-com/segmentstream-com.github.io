@@ -86,6 +86,7 @@
         
         
         
+        
             <li class="nav-header analyst  active ">Analyst</li>
             
                 <li class="drop-menu analyst active  " data-order="0">
@@ -126,6 +127,7 @@
         
         
         
+        
             <li class="nav-header developer ">Developer</li>
             
                 <li class="drop-menu developer " data-order="1">
@@ -151,6 +153,7 @@
         
         
     
+        
         
         
         
@@ -199,6 +202,7 @@
         
         
     
+        
         
         
         
@@ -267,6 +271,7 @@
         
         
     
+        
         
         
         
@@ -398,6 +403,7 @@
         
         
         
+        
             <li class="nav-header integrations ">Integration list</li>
             
                 <li class="drop-menu integrations " data-order="1">
@@ -451,25 +457,9 @@
         
         
         
-    
-        
-        
-        
-        
-        
-        
-        
         
     
         
-        
-        
-        
-        
-        
-        
-        
-    
         
         
         
@@ -487,7 +477,29 @@
         
         
         
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
         
         
         
@@ -516,16 +528,19 @@
 <h3 id="page-contents">Page contents</h3>
 <hr />
 <ul class="page-navigation">
-  <li><a href="#0">Introduction</a></li>
-  <li><a href="#1">Automatically send Viewed Page event</a></li>
-  <li><a href="#2">Use Cookie instead of LocalStorage for data storage</a></li>
-  <li><a href="#3">Session length in seconds</a></li>
-  <li><a href="#4">Maximum width of the site in pixels</a></li>
-  <li><a href="#5">Track validation errors</a></li>
-  <li><a href="#6">Track all JavaScript errors</a></li>
+  <li><a href="#intro">Introduction</a></li>
+  <li><a href="#sendViewedPageEvent">Automatically send Viewed Page event</a></li>
+  <li><a href="#useCookieStorage">Use Cookie instead of LocalStorage for data storage</a></li>
+  <li><a href="#sessionLength">Session length in seconds</a></li>
+  <li><a href="#websiteMaxWidth">Maximum width of the site in pixels</a></li>
+  <li><a href="#pageLoadTimeout">Page load timeout in milliseconds</a></li>
+  <li><a href="#trackValidationErrors">Track validation errors</a></li>
+  <li><a href="#trackJsErrors">Track all JavaScript errors</a></li>
+  <li><a href="#cookieConsent">Cookie consent</a></li>
+  <li><a href="#unpersistContextCampaignOnTransaction">Clear context.campaign on "Completed Transaction"</a></li>
 </ul>
 
-<h3 id="introduction"><a name="0"></a>Introduction</h3>
+<h3 id="introduction"><a name="intro"></a>Introduction</h3>
 <hr />
 <p>How to adjust the settings:</p>
 <ol>
@@ -537,7 +552,7 @@
 
 <p><img src="/img/settings.png" alt="" /></p>
 
-<h3 id="-automatic-sending-of-the-viewed-page-event"><a name="1"></a> Automatic sending of the Viewed Page event</h3>
+<h3 id="-automatic-sending-of-the-viewed-page-event"><a name="sendViewedPageEvent"></a> Automatic sending of the Viewed Page event</h3>
 <hr />
 <p>The <code class="highlighter-rouge">Viewed Page</code> event is the base event. It is necessary for the operation of most third-party systems. Various data from the <code class="highlighter-rouge">digitalData</code> object is sent to third-party systems along with the Viewed Page event: <code class="highlighter-rouge">digitalData.page.type</code>, <code class="highlighter-rouge">digitalData.user.userId</code>, <code class="highlighter-rouge">digitalData.listing.categoryId</code> and many others.</p>
 
@@ -549,11 +564,11 @@
 
 <p>If you add the <code class="highlighter-rouge">Viewed Page</code> event to the <code class="highlighter-rouge">digitalData.events</code> array yourself from the site code, do this only after filling the digitalData object with all the variables. In this case, turn off the “Automatic send Viewed Page event” option using the switch.</p>
 
-<h3 id="-use-cookie-instead-of-localstorage-to-store-data"><a name="2"></a> Use Cookie instead of LocalStorage to store data</h3>
+<h3 id="-use-cookie-instead-of-localstorage-to-store-data"><a name="useCookieStorage"></a> Use Cookie instead of LocalStorage to store data</h3>
 <hr />
 <p>SegmentStream allows you to create new variables based on the events and variables of the <code class="highlighter-rouge">digitalData</code> object and save them for a certain period. For example: you need to give google analytics the number of times product pages are viewed before a transaction is completed. For more information about saving variables, see <a href="/for-analyst/events/">Variables</a>.</p>
 
-<p>By default, the value of any variable is stored in the [LocalStorage] (https://www.w3schools.com/html/html5_webstorage.asp) of the visitor’s browser as a string. LocalStorage is supported by all modern browsers. Unlike Cookie, LocalStorage is a more secure storage, holds up to 5 MB, and information is never sent to the server.</p>
+<p>By default, the value of any variable is stored in the <a href="https://www.w3schools.com/html/html5_webstorage.asp">LocalStorage</a> of the visitor’s browser as a string. LocalStorage is supported by all modern browsers. Unlike Cookie, LocalStorage is a more secure storage, holds up to 5 MB, and information is never sent to the server.</p>
 
 <p>However, LocalStorage stores information within the same domain. This means that you can not access information from the subdomain pages.</p>
 
@@ -574,7 +589,7 @@ If it is necessary to return a string of this type in a variable, it is necessar
 <img src="/img/settings.2.png" alt="" /></p>
 </blockquote>
 
-<h3 id="-session-length-in-seconds"><a name="3"></a> Session Length in Seconds</h3>
+<h3 id="-session-length-in-seconds"><a name="sessionLength"></a> Session Length in Seconds</h3>
 <hr />
 <p>SegmentStream has a built-in event <code class="highlighter-rouge">Session Started</code>. This event is automatically added to the array <code class="highlighter-rouge">digitalData.events</code> if the given user has passed more than the specified time interval from the moment of any other event. By default, this length of time (Session Length) is one hour or 3600 seconds.
 For example:</p>
@@ -589,22 +604,96 @@ For example:</p>
   <p>We recommend setting the same session length in both Google Analytics and SegmentStream.</p>
 </blockquote>
 
-<h3 id="-maximum-width-of-the-site-in-pixels"><a name="4"></a> Maximum width of the site in pixels</h3>
+<h3 id="-maximum-width-of-the-site-in-pixels"><a name="websiteMaxWidth"></a> Maximum width of the site in pixels</h3>
 <hr />
 <p>If you use a block with a banner slider on the site, we recommend setting the maximum width of the window of your site in the field of settings. This setting will help to correctly setup the <a href="/events/viewed-campaign">events of banner impressions</a>.</p>
 
-<h3 id="-tracking-validation-errors"><a name="5"></a> Tracking validation errors</h3>
+<h3 id="-page-load-timeout-in-milliseconds"><a name="pageLoadTimeout"></a> Page load timeout in milliseconds</h3>
+<hr />
+<p>SegmentStream will try to load integrations from the “After site loading” block (see the <a href="/for-analyst/priorities">Priorities page</a>) even if the <code class="highlighter-rouge">window</code> <code class="highlighter-rouge">onload</code> event for has not occurred.</p>
+
+<h3 id="-tracking-validation-errors"><a name="trackValidationErrors"></a> Tracking validation errors</h3>
 <hr />
 <p>SegmentStream has a built-in <a href="/for-analyst/integrations#2">integration error tracking module</a>. This module displays information about all the data sent to third-party systems in the developer console. If you enable the tracking of validation errors, whenever an integration error occurs with any of the site visitors, SegmentStream will automatically add this event to the array <code class="highlighter-rouge">digitalData.events</code>. Now this event can be sent to any statistics system for further analysis of the causes of the error.</p>
 
 <p>If you have set up the <a href="/integrations/google-analytics">Google Analytics</a> integration, you can find information about validation errors in the event reports.</p>
 
-<h3 id="-track-all-javascript-errors"><a name="6"></a> Track all JavaScript errors</h3>
+<h3 id="-track-all-javascript-errors"><a name="trackJsErrors"></a> Track all JavaScript errors</h3>
 <hr />
 <p>SegmentStream can also intercept messages about the occurrence of any JavaScript errors on your site. Typically, there are thousands of errors on websites: libraries of third-party systems do not loading, errors in the developers’ scripts, unexpected user actions and so on. All these errors can be passed to Google Analytics as <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/exceptions">exception type hits</a>. By building a custom report in the Google Analytics interface, you can find the pages and conditions under which errors occur.</p>
 
 <p><img src="/img/settings.1.png" alt="" />
 Example of a report setup in the Google Analytics interface</p>
+
+<h3 id="-cookie-consent"><a name="cookieConsent"></a> Cookie consent</h3>
+<hr />
+<p>SegmentStream supports the general data protection policy (GDPR).
+The default policy is None, which does not provide for data protection.
+To install support for data protection regulations you need to do the following:</p>
+
+<ol>
+  <li>Make sure the site has the latest version of <a href="/en/for-developer/snippet">SegmentStream snippet</a>.</li>
+  <li>Select a policy in the project settings at <a href="http: //admin.segmentstream.com/">https://admin.segmentstream.com/</a> (see the screenshot in the introduction section).</li>
+  <li>Add a handler after the snippet to change the user’s consent status to the processing of their data:
+```
+ddManager.on(‘ready’, function() {
+  // the consent variable contains the
+  // user’s consent status on data processing:
+  // undefined - the user hasn’t accepted/declined the agreement
+  // true - the user accepted the agreement
+  // false - the user declined the agreement
+  var consent = ddManager.getConsent();</li>
+</ol>
+
+<p>if (consent === undefined) {
+    // show a pop-up window or a banner
+    // for getting a user’s agreement.
+    // If using the Opt-in / Opt-out policy
+    // you have to add accept/decline event handlers
+    // calling the ddManager.setConsent() method
+  }
+});
+```</p>
+
+<p>Data protection provides 4 types of regulations:</p>
+
+<ul>
+  <li><strong>None</strong></li>
+  <li><strong>Info</strong></li>
+  <li><strong>Opt-in</strong></li>
+  <li><strong>Opt-out</strong></li>
+</ul>
+
+<p><strong>None</strong> is the default value. In this mode, SegmentStream sends user data to all connected systems.</p>
+
+<p><strong>Info</strong> is the information mode. In this mode, when you first visit the site, you need to show the user a banner or pop-up window with information that the site collects user data. SegmentStream automatically calls the <code class="highlighter-rouge">ddManager.setConsent(true);</code> function, which sets the <code class="highlighter-rouge">digitalData.consent</code> variable to <code class="highlighter-rouge">true</code> after the user performs any of the following actions: pressing a key on the keyboard, clicking, scrolling, dragging a finger on the touch screen on the area site pages. <strong>Starting with the next <code class="highlighter-rouge">Viewed Page</code></strong> event, SegmentStream will send user data to all connected systems.</p>
+
+<p><strong>Opt-in</strong> this mode requires the explicit consent of the user to transfer data to third-party systems. In this mode, when you first visit the site, you need to show the user a banner or pop-up window with information that the site collects user data.</p>
+<ul>
+  <li>If the user agrees, he clicks the accept button, after which the site code calls the function <code class="highlighter-rouge">ddManager.setConsent(true);</code>, which sets the variable <code class="highlighter-rouge">digitalData.cookieConsent</code> to the value <code class="highlighter-rouge">true</code>. <strong>Starting with the next <code class="highlighter-rouge">Viewed Page</code></strong> event, SegmentStream will send user data to all connected systems.</li>
+  <li>If the user declines, the site code calls the function <code class="highlighter-rouge">ddManager.setConsent(false);</code>, which sets the variable <code class="highlighter-rouge">digitalData.cookieConsent</code> to the value<code class="highlighter-rouge"> false</code>. SegmentStream will not send user data to any of the connected systems.</li>
+</ul>
+
+<p><strong>Opt-out</strong> - a mode that requires the user to explicitly refuse to transfer data to third-party systems. At the initial visit to the site, SegmentStream sends user data to all connected systems. At the same time, it is necessary to immediately show the user a banner with information that user data is being collected.</p>
+<ul>
+  <li>If the user agrees, he presses the accept button. After clicking, the <code class="highlighter-rouge">ddManager.setConsent (true);</code> function is called, which sets the value <code class="highlighter-rouge">true</code> to the<code class="highlighter-rouge"> digitalData.cookieConsent</code> variable. SegmentStream will continue to send user data to all connected systems.</li>
+  <li>If the user does not agree, he presses the decline button. After clicking, the <code class="highlighter-rouge">ddManager.setConsent (false);</code> function is called, which sets the variable <code class="highlighter-rouge">digitalData.cookieConsent</code> to the value<code class="highlighter-rouge"> false</code>. From this point on, SegmentStream will not send user data to any of the connected systems.</li>
+</ul>
+
+<hr />
+
+<blockquote>
+  <p>SegmentStream does not load integration libraries in the <strong>Info</strong> and <strong>Opt-in</strong> modes. After receiving the acceptance of the user, SegmentStream waits for the next <strong>Viewed Page</strong> event, therefore SPA applications must generate a <strong>Viewed Page</strong> event after the user’s consent.</p>
+</blockquote>
+
+<p>The <a href="https://demo.segmentstream.com">https://demo.segmentstream.com</a> website provides an example of data protection according to the <strong>Opt-in</strong> regulations.</p>
+
+<h3 id="-clear-contextcampaign-on-completed-transaction"><a name="unpersistContextCampaignOnTransaction"></a> Clear context.campaign on “Completed Transaction”</h3>
+<hr />
+
+<p>On each redirect to the website, SegmentStream automatically reads utm_tags from the referrer url, and populates the <code class="highlighter-rouge">context.campaign</code> object with data. Read more in the <a href="/digitaldata/context#7">context</a> section.
+By default, the content of the <code class="highlighter-rouge">context.campaign</code> object is stored until any website url is loaded with new utm_tags, or until the <code class="highlighter-rouge">Completed Transaction</code> event occurs.
+You can enable or disable the clearing of the <code class="highlighter-rouge">context.campaign</code> object using this switch.</p>
 
 
                     </div>

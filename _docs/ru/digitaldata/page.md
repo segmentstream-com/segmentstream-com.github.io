@@ -1,6 +1,6 @@
 ---
 layout: page
-section: digitalDataRU
+section: digitaldataRU
 title: "page"
 order: 1
 ---

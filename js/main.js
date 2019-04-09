@@ -73,9 +73,9 @@ $(document).ready(function() {
         $(".drop-menu.integrationsRU").toggle();
     });
 
-    $(".nav-header.digitalDataRU").click(function() {
+    $(".nav-header.digitaldataRU").click(function() {
         $(this).toggleClass("active");
-        $(".drop-menu.digitalDataRU").toggle();
+        $(".drop-menu.digitaldataRU").toggle();
     });
 
     $(".nav-header.ecommerceRU").click(function() {

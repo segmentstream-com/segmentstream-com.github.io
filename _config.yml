@@ -24,7 +24,7 @@ sections: [
     ['analystRU', 'Аналитику'],
     ['developerRU', 'Разработчику'],
     ['ecommerceRU', 'Внедрение в ecommerce'],
-    ['digitalDataRU', 'Список переменных'],
+    ['digitaldataRU', 'Список переменных'],
     ['eventsRU', 'Список событий'],
     ['integrationsRU', 'Список интеграций']
 ]
