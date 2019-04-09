@@ -17,12 +17,36 @@ In some cases, it's necessary adding the `Completed Transaction` event from the 
 
 In the event that the payment system site fails, you will not lose the order information.
 
+Example:
 ```javascript
 digitalData.events.push({
   category: 'Ecommerce',
   name: 'Completed Transaction',
-  transaction: {...}
-})
+  transaction: {
+    orderId: "QA-123456",
+    currency: "RUB",
+    subtotal: 25000,
+    shippingCost: 1000,
+    shippingMethod: "Delivery",
+    total: 26000,
+    lineItems: [
+      {
+        product: {
+          id: "1234567890",
+          name: "Timberland shoes",
+          manufacturer: "Timberland",
+          category: ["Shoes","Boots"],
+          currency: "RUB",
+          unitPrice: 12990,
+          unitSalePrice: 10990,
+          skuCode: "TBL6065RW",
+        },
+        quantity: 2,
+        subtotal: 10990
+      }
+    ]
+  }
+});
 ```
 > For a detailed description of the `transaction` object, see the section for developers.
 
