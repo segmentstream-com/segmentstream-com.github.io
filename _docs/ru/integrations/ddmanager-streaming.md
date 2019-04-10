@@ -29,22 +29,21 @@ order: 1
 
 ### <a name="1"></a>Настройка BigQuery
 ------
-1. Создайте аккаунт в системе [Google Cloud Platform](https://cloud.google.com/). На 10.10.2017 google дает 300$ на использование системы в течение 3-х месяцев.
-2. Выберите проект Google Cloud или создайте новый
+1. Авторизуйтесь в Google под аккаунтом, который имеет полный доступ к BigQuery.
+2. Создайте новый проект или выберите существующий.
 ![](/img/integrations.ddmstreaming.2.png)
-3. Активируйте BigQuery API для проекта
+3. Активируйте "BigQuery API" в разделе "APIs & Services".
 ![](/img/integrations.ddmstreaming.3.png)
 ![](/img/integrations.ddmstreaming.4.png)
 ![](/img/integrations.ddmstreaming.5.png)
-4. Откройте левое меню и нажмите IAM & admin. Выберите IAM в списке.
-![](/img/integrations.ddmstreaming.16.png)
-5. В верхнем меню нажмите **+ADD**
-![](/img/integrations.ddmstreaming.17.png)
-6. Добавьте `ddmanager@ddm-streaming.iam.gserviceaccount.com` в поле New Members. Добавьте 2 роли: `BigQuery Data Owner` и `BigQuery User`. Нажмите Save.
-![](/img/integrations.ddmstreaming.18.png)
-
-На этом настройка аккаунта BigQuery завершена. Теперь можно переходить к настройке стриминга в **панели SegmentStream**.
-![](/img/integrations.ddmstreaming.1_1.png)
+4. Нажмите “Authenticate with Google” и следуйте дальнейшим инструкциям. После успешной аутентификации откроется форма настройки интеграции.
+![](/img/integrations.ddmstreaming.19.png)
+5. Укажите **Google Cloud Project ID** (1), он должен быть получен на **шаге 2**
+6. Укажите **BigQuery dataset name** (2).
+> Вы можете указать имя существующего Датасета. В этом случае SegmentStream будет автоматически создавать и обновлять таблицы в этом Датасете.
+> Вы также можете указать новое имя. В этом случае SegmentStream автоматически создаст новый Датасет.
+7. Кнопка "**Disconnect**" (3) необходима для того, чтобы отвязать ваш аккаунт от SegmentStream. После отвязки - стриминг данных остановится, но настройки сохранятся.
+![](/img/integrations.ddmstreaming.20.png)
 
 ### <a name="1_1"></a>Google Cloud project ID
 Введите в поле `Google Cloud project ID` идентификатор проекта в Google Big Query.

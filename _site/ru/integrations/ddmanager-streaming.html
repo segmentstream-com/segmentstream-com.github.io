@@ -574,23 +574,25 @@
 <h3 id="Настройка-bigquery"><a name="1"></a>Настройка BigQuery</h3>
 <hr />
 <ol>
-  <li>Создайте аккаунт в системе <a href="https://cloud.google.com/">Google Cloud Platform</a>. На 10.10.2017 google дает 300$ на использование системы в течение 3-х месяцев.</li>
-  <li>Выберите проект Google Cloud или создайте новый
+  <li>Авторизуйтесь в Google под аккаунтом, который имеет полный доступ к BigQuery.</li>
+  <li>Создайте новый проект или выберите существующий.
 <img src="/img/integrations.ddmstreaming.2.png" alt="" /></li>
-  <li>Активируйте BigQuery API для проекта
+  <li>Активируйте “BigQuery API” в разделе “APIs &amp; Services”.
 <img src="/img/integrations.ddmstreaming.3.png" alt="" />
 <img src="/img/integrations.ddmstreaming.4.png" alt="" />
 <img src="/img/integrations.ddmstreaming.5.png" alt="" /></li>
-  <li>Откройте левое меню и нажмите IAM &amp; admin. Выберите IAM в списке.
-<img src="/img/integrations.ddmstreaming.16.png" alt="" /></li>
-  <li>В верхнем меню нажмите <strong>+ADD</strong>
-<img src="/img/integrations.ddmstreaming.17.png" alt="" /></li>
-  <li>Добавьте <code class="highlighter-rouge">ddmanager@ddm-streaming.iam.gserviceaccount.com</code> в поле New Members. Добавьте 2 роли: <code class="highlighter-rouge">BigQuery Data Owner</code> и <code class="highlighter-rouge">BigQuery User</code>. Нажмите Save.
-<img src="/img/integrations.ddmstreaming.18.png" alt="" /></li>
+  <li>Нажмите “Authenticate with Google” и следуйте дальнейшим инструкциям. После успешной аутентификации откроется форма настройки интеграции.
+<img src="/img/integrations.ddmstreaming.19.png" alt="" /></li>
+  <li>Укажите <strong>Google Cloud Project ID</strong> (1), он должен быть получен на <strong>шаге 2</strong></li>
+  <li>Укажите <strong>BigQuery dataset name</strong> (2).
+    <blockquote>
+      <p>Вы можете указать имя существующего Датасета. В этом случае SegmentStream будет автоматически создавать и обновлять таблицы в этом Датасете.
+Вы также можете указать новое имя. В этом случае SegmentStream автоматически создаст новый Датасет.</p>
+    </blockquote>
+  </li>
+  <li>Кнопка “<strong>Disconnect</strong>” (3) необходима для того, чтобы отвязать ваш аккаунт от SegmentStream. После отвязки - стриминг данных остановится, но настройки сохранятся.
+<img src="/img/integrations.ddmstreaming.20.png" alt="" /></li>
 </ol>
-
-<p>На этом настройка аккаунта BigQuery завершена. Теперь можно переходить к настройке стриминга в <strong>панели SegmentStream</strong>.
-<img src="/img/integrations.ddmstreaming.1_1.png" alt="" /></p>
 
 <h3 id="google-cloud-project-id"><a name="1_1"></a>Google Cloud project ID</h3>
 <p>Введите в поле <code class="highlighter-rouge">Google Cloud project ID</code> идентификатор проекта в Google Big Query.

@@ -554,23 +554,25 @@
 <h3 id="setting-up-bigquery"><a name="1"></a>Setting up BigQuery</h3>
 <hr />
 <ol>
-  <li>Create an account in the <a href="https://cloud.google.com/">Google Cloud Platform</a>. On 15/08/2018 Google gives a $300 free credit to spend on the Google Cloud Platform over the next 12 months.</li>
+  <li>Log in to Google with an account that has full access to BigQuery.</li>
   <li>Select a Google Cloud project or create a new one
 <img src="/img/integrations.ddmstreaming.2.png" alt="" /></li>
   <li>Activate BigQuery API for your project
 <img src="/img/integrations.ddmstreaming.3.png" alt="" />
 <img src="/img/integrations.ddmstreaming.4.png" alt="" />
 <img src="/img/integrations.ddmstreaming.5.png" alt="" /></li>
-  <li>Open the left menu and click IAM &amp; admin. Select IAM in the menu.
-<img src="/img/integrations.ddmstreaming.16.png" alt="" /></li>
-  <li>Click <strong>+ADD</strong> in the top menu.
-<img src="/img/integrations.ddmstreaming.17.png" alt="" /></li>
-  <li>Add <code class="highlighter-rouge">ddmanager@ddm-streaming.iam.gserviceaccount.com</code> to the New Members field. Add 2 rules: <code class="highlighter-rouge">BigQuery Data Owner</code> and <code class="highlighter-rouge">BigQuery User</code>. Click Save.
-<img src="/img/integrations.ddmstreaming.18.png" alt="" /></li>
+  <li>Click “Authenticate with Google” and follow the instructions. After successful authorization the integration setup form will appear.
+<img src="/img/integrations.ddmstreaming.19.png" alt="" /></li>
+  <li>Enter your <strong>Google Cloud Project ID</strong> (1), you can get in on <strong>step 2</strong></li>
+  <li>Enter your <strong>BigQuery dataset name</strong> (2).
+    <blockquote>
+      <p>You can specify the name of an existing dataset. In this case, SegmentStream will automatically create and update tables in this dataset.
+You can also specify a new name. In this case, SegmentStream will automatically create a new Dataset.</p>
+    </blockquote>
+  </li>
+  <li>The “<strong>Disconnect</strong>” (3) button is needed to disconnect your Google account from SegmentStream. Data streaming will end after the disconnection, but the settings will be saved.
+<img src="/img/integrations.ddmstreaming.20.png" alt="" /></li>
 </ol>
-
-<p>This completes the configuration of the BigQuery account. Now you can proceed to setting up streaming in the SegmentStream admin page.
-<img src="/img/integrations.ddmstreaming.1_1.png" alt="" /></p>
 
 <h3 id="google-cloud-project-id"><a name="1_1"></a>Google Cloud project ID</h3>
 <p>Enter the Google Big Query project ID in the <code class="highlighter-rouge">Google Cloud project ID</code> field.

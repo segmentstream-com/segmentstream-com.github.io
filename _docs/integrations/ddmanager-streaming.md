@@ -29,22 +29,21 @@ Setting up the DDM Streaming integration:
 
 ### <a name="1"></a>Setting up BigQuery
 ------
-1. Create an account in the [Google Cloud Platform](https://cloud.google.com/). On 15/08/2018 Google gives a $300 free credit to spend on the Google Cloud Platform over the next 12 months.
+1. Log in to Google with an account that has full access to BigQuery.
 2. Select a Google Cloud project or create a new one
 ![](/img/integrations.ddmstreaming.2.png)
 3. Activate BigQuery API for your project
 ![](/img/integrations.ddmstreaming.3.png)
 ![](/img/integrations.ddmstreaming.4.png)
 ![](/img/integrations.ddmstreaming.5.png)
-4. Open the left menu and click IAM & admin. Select IAM in the menu.
-![](/img/integrations.ddmstreaming.16.png)
-5. Click **+ADD** in the top menu.
-![](/img/integrations.ddmstreaming.17.png)
-6. Add `ddmanager@ddm-streaming.iam.gserviceaccount.com` to the New Members field. Add 2 rules: `BigQuery Data Owner` and `BigQuery User`. Click Save.
-![](/img/integrations.ddmstreaming.18.png)
-
-This completes the configuration of the BigQuery account. Now you can proceed to setting up streaming in the SegmentStream admin page.
-![](/img/integrations.ddmstreaming.1_1.png)
+4. Click “Authenticate with Google” and follow the instructions. After successful authorization the integration setup form will appear.
+![](/img/integrations.ddmstreaming.19.png)
+5. Enter your **Google Cloud Project ID** (1), you can get in on **step 2**
+6. Enter your **BigQuery dataset name** (2).
+> You can specify the name of an existing dataset. In this case, SegmentStream will automatically create and update tables in this dataset.
+> You can also specify a new name. In this case, SegmentStream will automatically create a new Dataset.
+7. The "**Disconnect**" (3) button is needed to disconnect your Google account from SegmentStream. Data streaming will end after the disconnection, but the settings will be saved.
+![](/img/integrations.ddmstreaming.20.png)
 
 ### <a name="1_1"></a>Google Cloud project ID
 Enter the Google Big Query project ID in the `Google Cloud project ID` field.
