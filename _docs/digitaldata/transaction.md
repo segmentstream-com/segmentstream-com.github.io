@@ -180,7 +180,7 @@ window.digitalData = {
 }
 ```
 where,
- - **product** - [product](/digitalData/product/) object. **required** variable
+ - **product** - [product](/digitaldata/product/) object. **required** variable
  - **quantity** - number. **required** variable, which contains the quantity of goods with a certain `product.id` and `product.skuCode`
   >The basket can contain several identical products with different variations, for example 2 pairs of identical shoes with different sizes. Each variation must be described by a unique array object `lineItems`
  - **subtotal** - number. The total cost of all lineItems, which is calculated as product.unitSalePrice * quantity.

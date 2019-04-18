@@ -33,7 +33,7 @@ order: 1
 ------
 В объекте `digitalData.page` необходимо объявить и заполнить только 2 переменные. Все остальные переменные автоматически заполнит SegmentStream.
 
-[Подробнее об объекте **page**](/ru/digitalData/page)
+[Подробнее об объекте **page**](/ru/digitaldata/page)
 
 Пример заполнения:
 ```javascript
@@ -51,7 +51,7 @@ order: 1
 ------
 В объекте `digitalData.website` необходимо объявить и заполнить только 6 переменных. Обязательными к заполнению являются только 3: `website.type`, `website.currency`, `website.environment`. Остальные переменные зависят от особенностей вашего сайта.
 
-[Подробнее об объекте **website**](/ru/digitalData/website)
+[Подробнее об объекте **website**](/ru/digitaldata/website)
 
 Пример заполнения:
 ```javascript
@@ -77,7 +77,7 @@ order: 1
 
 >Даже если посетитель сейчас не авторизован, но был авторизован в прошлом, передавайте информацию о нем в объект `digitalData.user`. Это поможет при таргетировании кампаний персонализации и в управлении рекламными системами.
 
-[Подробнее об объекте **user**](/ru/digitalData/user)
+[Подробнее об объекте **user**](/ru/digitaldata/user)
 
 Пример заполнения:
 ```javascript
@@ -98,9 +98,9 @@ window.digitalData = {
 ------
 Объект `digitalData.cart` должен быть объявлен и заполнен при загрузке каждой страницы сайта.
 
->Если корзина посетителя сайта пуста, заполните объект так, как описано в [справке](/ru/digitalData/cart#0).
+>Если корзина посетителя сайта пуста, заполните объект так, как описано в [справке](/ru/digitaldata/cart#0).
 
-[Подробнее об объекте **cart**](/ru/digitalData/cart)
+[Подробнее об объекте **cart**](/ru/digitaldata/cart)
 
 Пример заполнения:
 ```javascript
@@ -151,7 +151,7 @@ window.digitalData = {
 ------
 Переменная `digitalData.version` должна быть объявлена и заполнена при загрузке каждой страницы сайта.
 
-[Подробнее об объекте **cart**](/ru/digitalData/standard-version)
+[Подробнее об объекте **cart**](/ru/digitaldata/standard-version)
 
 Пример заполнения:
 ```javascript
@@ -168,7 +168,7 @@ window.digitalData = {
 ------
 Массив `digitalData.campaigns` должен быть объявлен и заполнен, если на загружаемой странице есть баннеры, эффективность которых вы планируете отслеживать.
 
-[Подробнее о массиве **campaigns**](/ru/digitalData/campaigns)
+[Подробнее о массиве **campaigns**](/ru/digitaldata/campaigns)
 
 Пример заполнения:
 ```javascript
@@ -195,7 +195,7 @@ window.digitalData = {
 ------
 Массив `digitalData.recommendation` должен быть объявлен и заполнен, если на загружаемой странице хотя бы 1 список товаров.
 
-[Подробнее о массиве **recommendation**](/ru/digitalData/recommendation)
+[Подробнее о массиве **recommendation**](/ru/digitaldata/recommendation)
 
 Пример заполнения:
 ```javascript

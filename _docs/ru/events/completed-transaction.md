@@ -49,7 +49,7 @@ digitalData.events.push({
 });
 ```
 
-> Подробное описание объекта `transaction` со всеми возможными полями можно найти [тут](/ru/digitalData/transaction).
+> Подробное описание объекта `transaction` со всеми возможными полями можно найти [тут](/ru/digitaldata/transaction).
 
 #### Из интерфейса SegmentStream
 **Триггер**: событие `Viewed Page`,

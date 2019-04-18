@@ -23,7 +23,7 @@ digitalData.events.push({
   }
 })
 ```
-Read more about the [user](/digitalData/user/) object.
+Read more about the [user](/digitaldata/user/) object.
 
 #### From the SegmentStream interface
 The `Logged In` event can not be created from the built-in SegmentStream triggers. The event must be added from the site code.

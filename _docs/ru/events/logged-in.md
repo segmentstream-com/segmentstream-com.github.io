@@ -23,7 +23,7 @@ digitalData.events.push({
   }
 })
 ```
-Узнать больше об объекте [user](/ru/digitalData/user/).
+Узнать больше об объекте [user](/ru/digitaldata/user).
 
 #### Из интерфейса SegmentStream
 Событие `Logged In` невозможно создать на основе встроенных триггеров SegmentStream. Событие должно быть добавлено из кода.
