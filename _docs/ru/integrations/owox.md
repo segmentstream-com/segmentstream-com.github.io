@@ -5,9 +5,9 @@ title: "OWOX"
 order: 1
 ---
 
-OWOX - платформа для стриминга сырых данных в Google BigQuery. SegmentStream позволяет отправлять данные о поведении ваших пользователей одновременно как в [Google Analytics](/ru/integrations/google-analytics/), так и в BigQuery с помощью сервиса стриминга от [OWOX](https://owox.ru/).
+OWOX - платформа для стриминга сырых данных в Google BigQuery. SegmentStream позволяет отправлять данные о поведении ваших пользователей одновременно как в [Google Analytics](/ru/integrations/google-analytics), так и в BigQuery с помощью сервиса стриминга от [OWOX](https://owox.ru/).
 
-> Подключить OWOX можно только в том случае, если интеграция с [Google Analytics настроена через SegmentStream](/ru/integrations/google-analytics/)
+> Подключить OWOX можно только в том случае, если интеграция с [Google Analytics настроена через SegmentStream](/ru/integrations/google-analytics)
 
 ### Навигация по странице
 ------

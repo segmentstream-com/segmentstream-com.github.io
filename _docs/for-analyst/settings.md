@@ -45,7 +45,7 @@ If you add the `Viewed Page` event to the `digitalData.events` array yourself fr
 
 ### <a name="useCookieStorage"></a> Use Cookie instead of LocalStorage to store data
 ------
-SegmentStream allows you to create new variables based on the events and variables of the `digitalData` object and save them for a certain period. For example: you need to give google analytics the number of times product pages are viewed before a transaction is completed. For more information about saving variables, see [Variables](/for-analyst/events/).
+SegmentStream allows you to create new variables based on the events and variables of the `digitalData` object and save them for a certain period. For example: you need to give google analytics the number of times product pages are viewed before a transaction is completed. For more information about saving variables, see [Variables](/for-analyst/events).
 
 By default, the value of any variable is stored in the [LocalStorage](https://www.w3schools.com/html/html5_webstorage.asp) of the visitor's browser as a string. LocalStorage is supported by all modern browsers. Unlike Cookie, LocalStorage is a more secure storage, holds up to 5 MB, and information is never sent to the server.
 
