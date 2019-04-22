@@ -37,7 +37,7 @@ date | Date in yyyy-mm-dd format
 
 Processing is automatic, it can take up to 24 hours, after which the data will appear in BigQuery.
 
-The contents of the files will be written to a table with the name `custom_costs`, in the project and dataset configured in the DDManager Streaming integration settings.
+The contents of the files will be written to a table with the name `customCosts`, in the project and dataset configured in the DDManager Streaming integration settings.
 
 The following steps have to be taken to view the DDManager Streaming integration current project and dataset:
 
