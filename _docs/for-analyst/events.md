@@ -119,10 +119,10 @@ return _timeout(1500, function() {
   }
 }); // Delay before the handler returns the result
 
-this.retry(X, Z, Y); // Call function X every Y milliseconds, if it returns an error, try again up to Z times.
+_retry(X, Z, Y); // Call function X every Y milliseconds, if it returns an error, try again up to Z times.
 // Z and Y are optional, the default interval is 1000 milliseconds, and the default try count is 5
 // example:
-this.retry(function() {
+_retry(function() {
   window.externalLib.method()
 }, 10, 2000);
 // every 2 seconds call window.externalLib.method(), call 10 up to times if it returns an error.
