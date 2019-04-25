@@ -3,7 +3,7 @@ layout: page
 section: developer
 title: "Helper functions"
 date: 2017-06-05 12:00:00
-order: 1
+order: 5
 ---
 
 ### Page contents

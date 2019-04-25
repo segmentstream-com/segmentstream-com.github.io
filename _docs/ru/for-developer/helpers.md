@@ -1,22 +1,22 @@
 ---
 layout: page
 section: developerRU
-title: "Helper functions"
+title: "Вспомогательные функции"
 date: 2017-06-05 12:00:00
-order: 1
+order: 5
 ---
 
 ### Page contents
 ------
 <ul class="page-navigation">
-  <li><a href="#1">Why use helper functions?</a></li>
-  <li><a href="#2">List of helper functions</a></li>
+  <li><a href="#1">Зачем нужны вспомогательные функции?</a></li>
+  <li><a href="#2">Список вспомогательных функций</a></li>
 </ul>
 
-### <a name="1"></a>Why use helper functions?
-Helper functions help you write code faster and with fewer errors, plus, they make your code more readable.
+### <a name="1"></a>Зачем нужны вспомогательные функции?
+Вспомогательные функции помогают вам писать код быстрее и с меньшим количеством ошибок, также они делают ваш код более читабельным.
 
-### <a name="2"></a>Вспомогательные функции
+### <a name="2"></a>Список вспомогательных функций
 ------
 ```javascript
 _queryParam('q') // получить значение параметра URL
