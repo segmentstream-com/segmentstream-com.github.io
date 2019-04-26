@@ -7,7 +7,7 @@ order: 0
 ---
 > ВНИМАНИЕ! Для активации данного функционала необходимо включить и настроить интеграцию [SegmentStream Streaming](/ru/integrations/ddmanager-streaming).
 
-Функционал загрузки CSV файлов позволяет импортировать данные данные о расходах из CSV файлов в Google BigQuery.
+Функционал загрузки CSV файлов позволяет импортировать данные о расходах из CSV файлов в Google BigQuery.
 
 ![](/img/manual.data.import.1.png)
 

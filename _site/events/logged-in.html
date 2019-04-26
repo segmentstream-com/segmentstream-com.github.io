@@ -154,6 +154,10 @@
                     <a href="/for-developer/snippet">Connecting SegmentStream</a>
                 </li>
             
+                <li class="drop-menu developer " data-order="5">
+                    <a href="/for-developer/helpers">Helper functions</a>
+                </li>
+            
         
         
     
@@ -411,11 +415,7 @@
             <li class="nav-header integrations ">Integration list</li>
             
                 <li class="drop-menu integrations " data-order="1">
-                    <a href="/integrations/vkontakte">Vkontakte</a>
-                </li>
-            
-                <li class="drop-menu integrations " data-order="1">
-                    <a href="/integrations/criteo">Criteo</a>
+                    <a href="/integrations/yandex-metrica">Yandex.Metrica</a>
                 </li>
             
                 <li class="drop-menu integrations " data-order="1">
@@ -447,7 +447,11 @@
                 </li>
             
                 <li class="drop-menu integrations " data-order="1">
-                    <a href="/integrations/yandex-metrica">Yandex.Metrica</a>
+                    <a href="/integrations/vkontakte">Vkontakte</a>
+                </li>
+            
+                <li class="drop-menu integrations " data-order="1">
+                    <a href="/integrations/criteo">Criteo</a>
                 </li>
             
         
@@ -529,12 +533,24 @@
 
 <p>The <code class="highlighter-rouge">Logged In</code> event must be pushed to the <code class="highlighter-rouge">digitalData.events</code> array when the server responds with a message about a successful user authorization.</p>
 
-<h4 id="from-the-site-code--when-using-ajax">From the site code / when using AJAX</h4>
+<h4 id="from-the-site-code">From the site code</h4>
 <div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">digitalData</span><span class="p">.</span><span class="nx">events</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
   <span class="na">name</span><span class="p">:</span> <span class="s1">'Logged In'</span>
 <span class="p">})</span>
 </code></pre>
 </div>
+
+<h4 id="when-using-ajax--spa-website">When using AJAX / SPA website</h4>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">digitalData</span><span class="p">.</span><span class="nx">events</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
+  <span class="na">name</span><span class="p">:</span> <span class="s1">'Logged In'</span><span class="p">,</span>
+  <span class="na">user</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">firstName</span><span class="p">:</span> <span class="s1">'Name'</span><span class="p">,</span>
+    <span class="na">email</span><span class="p">:</span> <span class="s1">'users.email@mail.com'</span> <span class="c1">//required</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</code></pre>
+</div>
+<p>Read more about the <a href="/digitaldata/user">user</a> object.</p>
 
 <h4 id="from-the-segmentstream-interface">From the SegmentStream interface</h4>
 <p>The <code class="highlighter-rouge">Logged In</code> event can not be created from the built-in SegmentStream triggers. The event must be added from the site code.</p>

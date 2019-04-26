@@ -198,6 +198,10 @@
                     <a href="/ru/for-developer/snippet">Подключение SegmentStream</a>
                 </li>
             
+                <li class="drop-menu developerRU " data-order="5">
+                    <a href="/ru/for-developer/helpers">Вспомогательные функции</a>
+                </li>
+            
         
         
     
@@ -549,12 +553,24 @@
 
 <p><code class="highlighter-rouge">Logged In</code> - это событие, которое должно быть добавлено в <code class="highlighter-rouge">digitalData.events</code> в случае возврата с сервера сообщения об удачной авторизации пользователя.</p>
 
-<h4 id="Из-кода-сайта--при-использовании-ajax">Из кода сайта / при использовании AJAX</h4>
+<h4 id="Из-кода-сайта">Из кода сайта</h4>
 <div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">digitalData</span><span class="p">.</span><span class="nx">events</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
   <span class="na">name</span><span class="p">:</span> <span class="s1">'Logged In'</span>
 <span class="p">})</span>
 </code></pre>
 </div>
+
+<h4 id="При-использовании-ajax--На-spa-сайте">При использовании AJAX / На SPA сайте</h4>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">digitalData</span><span class="p">.</span><span class="nx">events</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
+  <span class="na">name</span><span class="p">:</span> <span class="s1">'Logged In'</span><span class="p">,</span>
+  <span class="na">user</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">firstName</span><span class="p">:</span> <span class="s1">'Имя'</span><span class="p">,</span>
+    <span class="na">email</span><span class="p">:</span> <span class="s1">'users.email@mail.ru'</span> <span class="c1">//обязательно</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</code></pre>
+</div>
+<p>Узнать больше об объекте <a href="/ru/digitaldata/user">user</a>.</p>
 
 <h4 id="Из-интерфейса-segmentstream">Из интерфейса SegmentStream</h4>
 <p>Событие <code class="highlighter-rouge">Logged In</code> невозможно создать на основе встроенных триггеров SegmentStream. Событие должно быть добавлено из кода.</p>

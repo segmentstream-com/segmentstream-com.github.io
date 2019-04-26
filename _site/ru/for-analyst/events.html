@@ -198,6 +198,10 @@
                     <a href="/ru/for-developer/snippet">Подключение SegmentStream</a>
                 </li>
             
+                <li class="drop-menu developerRU " data-order="5">
+                    <a href="/ru/for-developer/helpers">Вспомогательные функции</a>
+                </li>
+            
         
         
     
@@ -554,7 +558,6 @@
 <ul class="page-navigation">
   <li><a href="#0">Введение</a></li>
   <li><a href="#1">Создание события</a></li>
-  <li><a href="#3">Вспомогательные функции</a></li>
   <li><a href="#4">Как называть события</a></li>
 </ul>
 
@@ -580,7 +583,7 @@
 </ul>
 
 <blockquote>
-  <p>Важно! В SegmentStream есть 1 встроенное событие - Viewed Page. Это событие наступает в тот момент, когда полностью загружает библиотека ddmanager.</p>
+  <p>Важно! В SegmentStream есть 1 встроенное событие - Viewed Page. Это событие наступает в тот момент, когда полностью загружает библиотека segmentstream.</p>
 </blockquote>
 
 <p><img src="/img/events.1.png" alt="" /></p>
@@ -593,7 +596,7 @@
 
 <p><img src="/img/events.2.png" alt="" /></p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">digitalData</span><span class="p">(</span><span class="s1">'page.type'</span><span class="p">)</span> <span class="o">===</span> <span class="s1">'product'</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="nx">_digitalData</span><span class="p">(</span><span class="s1">'page.type'</span><span class="p">)</span> <span class="o">===</span> <span class="s1">'product'</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">return</span> <span class="p">{</span>
     <span class="na">category</span><span class="p">:</span> <span class="s1">'Ecommerce'</span><span class="p">,</span>
     <span class="na">name</span><span class="p">:</span> <span class="s1">'Viewed Product Detail'</span>
@@ -601,7 +604,7 @@
 <span class="p">}</span>
 </code></pre>
 </div>
-<p>Конструкция this.digitalData(‘page.type’) <a href="#3">описана ниже</a>.</p>
+<p>Конструкция _digitalData(‘page.type’) <a href="/ru/for-developer/helpers">описана в разделе вспомогательные функции</a>.</p>
 
 <p><strong>Пример 2: Событие <code class="highlighter-rouge">Clicked Campaign</code></strong></p>
 
@@ -643,46 +646,10 @@
 </code></pre>
 </div>
 
-<h3 id="Вспомогательные-функции"><a name="3"></a>Вспомогательные функции</h3>
-<hr />
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_queryParam</span><span class="p">(</span><span class="s1">'q'</span><span class="p">)</span> <span class="c1">// получить значение параметра URL</span>
-<span class="nx">_cookie</span><span class="p">(</span><span class="s1">'_ga'</span><span class="p">)</span> <span class="c1">// получить значение куки по ее имени</span>
-<span class="nx">_get</span><span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="s1">'transaction.lineItems'</span><span class="p">)</span> <span class="c1">// Безопасно получить любое свойство любого объекта</span>
-<span class="nx">_digitalData</span><span class="p">(</span><span class="s1">'transaction.lineItems'</span><span class="p">)</span> <span class="c1">// Безопасно получить любое свойство объекта digitalData</span>
-<span class="nx">_loadPixel</span><span class="p">({</span><span class="na">src</span><span class="p">:</span> <span class="s1">'https://test.com/pixel.png'</span><span class="p">,</span> <span class="na">id</span><span class="p">:</span> <span class="s1">'admit_ad'</span><span class="p">})</span> <span class="c1">//Загрузить пиксель. Поддерживается любое количество дополнительных атрибутов</span>
-<span class="nx">_loadScript</span><span class="p">({</span><span class="na">src</span><span class="p">:</span> <span class="s1">'https://test.com/script.js'</span><span class="p">,</span> <span class="na">id</span><span class="p">:</span> <span class="s1">'google'</span><span class="p">})</span> <span class="c1">//Загрузить скрипт. Поддерживается любое количество дополнительных атрибутов</span>
-<span class="nx">_loadIframe</span><span class="p">({</span><span class="na">src</span><span class="p">:</span> <span class="s1">'https://test.com/window'</span><span class="p">,</span> <span class="na">style</span><span class="p">:</span> <span class="s1">'display: none;'</span><span class="p">})</span> <span class="c1">//Загрузить Iframe. Поддерживается любое количество дополнительных атрибутов</span>
-<span class="nx">_loadLink</span><span class="p">({</span><span class="na">href</span><span class="p">:</span> <span class="s1">'https://test.com/style.css'</span><span class="p">,</span> <span class="na">type</span><span class="p">:</span> <span class="s2">"text/css"</span><span class="p">})</span> <span class="c1">//Загрузить стиль через тег Link. Поддерживается любое количество дополнительных атрибутов</span>
-<span class="nx">_global</span><span class="p">(</span><span class="s1">'settings.mobile_app'</span><span class="p">)</span> <span class="c1">// Безопасно получить любое свойство объекта window</span>
-<span class="nx">_domQuery</span><span class="p">(</span><span class="s1">'#logo'</span><span class="p">)</span> <span class="c1">// получить массив элементов по CSS-селектору</span>
-<span class="nx">_dataLayer</span><span class="p">(</span><span class="s1">'ecommerce.purchase'</span><span class="p">)</span> <span class="c1">// Безопасно получить переменную из GTM dataLayer</span>
-<span class="k">return</span> <span class="nx">_fetch</span><span class="p">(</span><span class="s1">'/ajax?cart'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
-<span class="p">});</span> <span class="c1">// забрать данные с удаленного сервера асинхронно</span>
-<span class="k">return</span> <span class="nx">_timeout</span><span class="p">(</span><span class="mi">1500</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="p">{</span>
-    <span class="na">name</span><span class="p">:</span> <span class="s1">'Event With Timeout'</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">});</span> <span class="c1">// Задержка перед тем как обработчик вернет результат</span>
-</code></pre>
-</div>
-
-<blockquote>
-  <p>Функция <code class="highlighter-rouge">_queryParam()</code> всегда возвращает значение в нижнем регистре</p>
-</blockquote>
-
-<blockquote>
-  <p>Функция <code class="highlighter-rouge">_domQuery()</code>, а также селекторы в триггерах <strong>клик</strong> и <strong>показ</strong> работают по следующему принципу:</p>
-  <ul>
-    <li>если на сайте не установлен jQuery (нет глобального объекта window.jQuery) или библиотека jQuery загружается после библиотеки SegmentStream (стоит ниже по коду) - используется <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll">document.querySelectorAll</a>,</li>
-    <li>если есть глобальный объект window.jQuery - используются селекторы jQuery.</li>
-  </ul>
-</blockquote>
-
 <h3 id="Как-называть-события"><a name="4"></a>Как называть события</h3>
 <hr />
 <p>Стандартные интеграции в SegmentStream работают со списком зарезервированных событий, например: <a href="/ru/events/viewed-product-detail">Viewed Product Detail</a>, <a href="/ru/events/viewed-cart">Viewed Cart</a>, <a href="/ru/events/viewed-checkout-step">Viewed Checkout Step</a>, <a href="/ru/events/completed-transaction">Completed Transaction</a> и т.д.
-Полный список зарезервированных событий есть есть в боком меню “Список событий”. Используйте имена событий, приведенные в данном списке.</p>
+Полный список зарезервированных событий есть в боком меню “Список событий”. Используйте имена событий, приведенные в данном списке.</p>
 
 <p>Если вам необходимо добавить событие, которое отсутствует в списке зарезервированных - используйте <a href="/ru/for-developer/naming">правила именования событий</a></p>
 

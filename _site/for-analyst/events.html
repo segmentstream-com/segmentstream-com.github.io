@@ -154,6 +154,10 @@
                     <a href="/for-developer/snippet">Connecting SegmentStream</a>
                 </li>
             
+                <li class="drop-menu developer " data-order="5">
+                    <a href="/for-developer/helpers">Helper functions</a>
+                </li>
+            
         
         
     
@@ -411,11 +415,7 @@
             <li class="nav-header integrations ">Integration list</li>
             
                 <li class="drop-menu integrations " data-order="1">
-                    <a href="/integrations/vkontakte">Vkontakte</a>
-                </li>
-            
-                <li class="drop-menu integrations " data-order="1">
-                    <a href="/integrations/criteo">Criteo</a>
+                    <a href="/integrations/yandex-metrica">Yandex.Metrica</a>
                 </li>
             
                 <li class="drop-menu integrations " data-order="1">
@@ -447,7 +447,11 @@
                 </li>
             
                 <li class="drop-menu integrations " data-order="1">
-                    <a href="/integrations/yandex-metrica">Yandex.Metrica</a>
+                    <a href="/integrations/vkontakte">Vkontakte</a>
+                </li>
+            
+                <li class="drop-menu integrations " data-order="1">
+                    <a href="/integrations/criteo">Criteo</a>
                 </li>
             
         
@@ -534,7 +538,6 @@
 <ul class="page-navigation">
   <li><a href="#0">Introduction</a></li>
   <li><a href="#1">Event creation</a></li>
-  <li><a href="#3">Helper functions</a></li>
   <li><a href="#4">Event naming convention</a></li>
 </ul>
 
@@ -548,7 +551,7 @@ For example: SegmentStream will register an event with the name “Event Happene
 <span class="p">});</span>
 </code></pre>
 </div>
-<p>Now SegmentStream can send information about the event “Event Happened” with the value 3000 to any system, for example, Google Analytics and Yandex Metrica.</p>
+<p>Now SegmentStream can send information about the event “Event Happened” with the value 3000 to any system, for example, Google Analytics and Yandex Metrika.</p>
 
 <h3 id="event-creation"><a name="1"></a>Event creation</h3>
 <hr />
@@ -581,7 +584,7 @@ For example: SegmentStream will register an event with the name “Event Happene
 <span class="p">}</span>
 </code></pre>
 </div>
-<p>The code _digitalData(‘page.type’) <a href="#3">is explained below</a>.</p>
+<p>The code _digitalData(‘page.type’) <a href="/for-developer/helpers">is explained in the helper functions section</a>.</p>
 
 <p><strong>Example 2: <code class="highlighter-rouge">Clicked Campaign</code> Event</strong></p>
 
@@ -623,48 +626,12 @@ For example: SegmentStream will register an event with the name “Event Happene
 </code></pre>
 </div>
 
-<h3 id="helper-functions"><a name="3"></a>Helper functions</h3>
-<hr />
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_queryParam</span><span class="p">(</span><span class="s1">'q'</span><span class="p">)</span> <span class="c1">// get url parameter value</span>
-<span class="nx">_cookie</span><span class="p">(</span><span class="s1">'_ga'</span><span class="p">)</span> <span class="c1">// get cookie value</span>
-<span class="nx">_get</span><span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="s1">'transaction.lineItems'</span><span class="p">)</span> <span class="c1">// Safely get any event property</span>
-<span class="nx">_digitalData</span><span class="p">(</span><span class="s1">'transaction.lineItems'</span><span class="p">)</span> <span class="c1">// Safely get any digitalData property</span>
-<span class="nx">_loadPixel</span><span class="p">({</span><span class="na">src</span><span class="p">:</span> <span class="s1">'https://test.com/pixel.png'</span><span class="p">,</span> <span class="na">id</span><span class="p">:</span> <span class="s1">'admit_ad'</span><span class="p">})</span> <span class="c1">//Load pixel. Any number of attributes is supported</span>
-<span class="nx">_loadScript</span><span class="p">({</span><span class="na">src</span><span class="p">:</span> <span class="s1">'https://test.com/script.js'</span><span class="p">,</span> <span class="na">id</span><span class="p">:</span> <span class="s1">'google'</span><span class="p">})</span> <span class="c1">//Load script. Any number of attributes is supported</span>
-<span class="nx">_loadIframe</span><span class="p">({</span><span class="na">src</span><span class="p">:</span> <span class="s1">'https://test.com/window'</span><span class="p">,</span> <span class="na">style</span><span class="p">:</span> <span class="s1">'display: none;'</span><span class="p">})</span> <span class="c1">//Load iframe. Any number of attributes is supported</span>
-<span class="nx">_loadLink</span><span class="p">({</span><span class="na">href</span><span class="p">:</span> <span class="s1">'https://test.com/style.css'</span><span class="p">,</span> <span class="na">type</span><span class="p">:</span> <span class="s2">"text/css"</span><span class="p">})</span> <span class="c1">//Load styles through tag link. Any number of attributes is supported</span>
-<span class="nx">_global</span><span class="p">(</span><span class="s1">'settings.mobile_app'</span><span class="p">)</span> <span class="c1">// Safely get any window property</span>
-<span class="nx">_domQuery</span><span class="p">(</span><span class="s1">'#logo'</span><span class="p">)</span> <span class="c1">// get an array of elements by CSS-selector</span>
-<span class="nx">_dataLayer</span><span class="p">(</span><span class="s1">'ecommerce.purchase'</span><span class="p">)</span> <span class="c1">// Safely get a GTM dataLayer variable</span>
-<span class="k">return</span> <span class="nx">_fetch</span><span class="p">(</span><span class="s1">'/ajax?cart'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
-<span class="p">});</span> <span class="c1">// get data from a remote server using ajax</span>
-<span class="k">return</span> <span class="nx">_timeout</span><span class="p">(</span><span class="mi">1500</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="p">{</span>
-    <span class="na">name</span><span class="p">:</span> <span class="s1">'Event With Timeout'</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">});</span> <span class="c1">// Delay before the handler returns the result</span>
-</code></pre>
-</div>
-
-<blockquote>
-  <p>The <code class="highlighter-rouge">_queryParam()</code> function always returns values in lowercase</p>
-</blockquote>
-
-<blockquote>
-  <p>The <code class="highlighter-rouge">_domQuery()</code> function, and the selectors in the triggers <strong>Click</strong> and <strong>Impression</strong> work by the following principle:</p>
-  <ul>
-    <li>if jQuery is not loaded on the website (there is no global window.jQuery object) or jQuery is loaded after SegmentStream (is located further down the HTML page), <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll">document.querySelectorAll</a> is used,</li>
-    <li>if jQuery is loaded on the website, jQuery selectors are used.</li>
-  </ul>
-</blockquote>
-
 <h3 id="event-naming-convention"><a name="4"></a>Event naming convention</h3>
 <hr />
 <p>Standard SegmentStream integrations work with a list of reserved events, for example: <a href="/events/viewed-product-detail">Viewed Product Detail</a>, <a href="/events/viewed-checkout-step">Viewed Checkout Step</a>, <a href="/events/completed-transaction">Completed Transaction</a>, etc.
 The complete list of reserved events is located in the side menu under “Events List”. Use the event names listed in this list.</p>
 
-<p>If you need to add an event that is not in the reserved list - use our <a href="/for-developer/naming">event naming convention</a></p>
+<p>If you need to add an event that is not in the reserved list - use our <a href="/for-developer/naming">event naming convention</a>.</p>
 
 
                     </div>

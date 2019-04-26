@@ -154,6 +154,10 @@
                     <a href="/for-developer/snippet">Connecting SegmentStream</a>
                 </li>
             
+                <li class="drop-menu developer " data-order="5">
+                    <a href="/for-developer/helpers">Helper functions</a>
+                </li>
+            
         
         
     
@@ -411,11 +415,7 @@
             <li class="nav-header integrations ">Integration list</li>
             
                 <li class="drop-menu integrations " data-order="1">
-                    <a href="/integrations/vkontakte">Vkontakte</a>
-                </li>
-            
-                <li class="drop-menu integrations " data-order="1">
-                    <a href="/integrations/criteo">Criteo</a>
+                    <a href="/integrations/yandex-metrica">Yandex.Metrica</a>
                 </li>
             
                 <li class="drop-menu integrations " data-order="1">
@@ -447,7 +447,11 @@
                 </li>
             
                 <li class="drop-menu integrations " data-order="1">
-                    <a href="/integrations/yandex-metrica">Yandex.Metrica</a>
+                    <a href="/integrations/vkontakte">Vkontakte</a>
+                </li>
+            
+                <li class="drop-menu integrations " data-order="1">
+                    <a href="/integrations/criteo">Criteo</a>
                 </li>
             
         
@@ -527,7 +531,7 @@
     </h1>
 </div>
 
-<p>The SegmentStream panel allows you to control the flow of data between the site and third-party systems in case <a href="/for-developer/">the <code class="highlighter-rouge">digitalData</code> data layer is installed on the site</a>. Flow control is performed using five entities: Integrations, Priorities, Events, Variables, Scripts. Accordingly, the system interface is divided into 5 main sections, which can be accessed via tabs at the top of the interface.</p>
+<p>The SegmentStream panel allows you to control the flow of data between the site and third-party systems in case <a href="/for-developer/">the <code class="highlighter-rouge">digitalData</code> data layer is installed on the site</a>. Flow control is performed using six entities: Variables, Events, Integrations, Priorities, Scripts, Manual Data Import. Accordingly, the system interface is divided into 6 main sections, which can be accessed via tabs at the side of the interface.</p>
 
 <p><img src="/img/overview.1.png" alt="" /></p>
 
@@ -535,32 +539,37 @@
   <p><a href="/for-analyst/settings">Global project settings</a> have to be set up before continuing.</p>
 </blockquote>
 
-<h3 id="1-integrations">1. Integrations</h3>
+<h3 id="1-variables">1. Variables</h3>
+<hr />
+<p>The “Variables” module allows you to create new data based on the data in the <code class="highlighter-rouge">digitalData</code> object. The module solves a wide range of tasks: from converting one data format to another to creating a new variable in <code class="highlighter-rouge">digitalData</code> based on data received from third-party systems. <br />
+<a href="/for-analyst/variables">More about variables</a></p>
+
+<h3 id="2-events">2. Events</h3>
+<hr />
+<p>Events is one of the most important components of <code class="highlighter-rouge">digitalData</code>. All information is sent to analytics and marketing systems in the form of events. Each event can carry information about the user, the current page, the type of user action, etc. <br />
+<a href="/for-analyst/events">More about events</a></p>
+
+<h3 id="3-integrations">3. Integrations</h3>
 <hr />
 <p>Each integration is a connector between <code class="highlighter-rouge">digitalData</code> and a third-party system. An integration can listen to all events added to <code class="highlighter-rouge">digitalData.events</code>, and convert information from events into a format that is necessary for a third-party system. If an event is mandatory for the system, <strong>SegmentStream</strong> sends the relevant information.</p>
 
 <p>In the interface, each integration has a set of settings. For some integrations, this is only a unique identifier in the system, for others - a fairly long list. You will find the description of the settings of all integrations on the corresponding pages. <br />
 <a href="/for-analyst/integrations">More about integrations</a></p>
 
-<h3 id="2-priorities">2. Priorities</h3>
+<h3 id="4-priorities">4. Priorities</h3>
 <hr />
 <p>Priorities is the SegmentStream module which allows you to manage the queue in which integrations load. Priorities will help decrease your website’s load time.<br />
 <a href="/for-analyst/priorities">More about priorities</a></p>
-
-<h3 id="3-events">3. Events</h3>
-<hr />
-<p>Events is one of the most important components of <code class="highlighter-rouge">digitalData</code>. All information is sent to analytics and marketing systems in the form of events. Each event can carry information about the user, the current page, the type of user action, etc. <br />
-<a href="/for-analyst/events">More about events</a></p>
-
-<h3 id="4-variables">4. Variables</h3>
-<hr />
-<p>The “Variables” module allows you to create new data based on the data in the <code class="highlighter-rouge">digitalData</code> object. The module solves a wide range of tasks: from converting one data format to another to creating a new variable in <code class="highlighter-rouge">digitalData</code> based on data received from third-party systems. <br />
-<a href="/for-analyst/variables">More about variables</a></p>
 
 <h3 id="5-scripts">5. Scripts</h3>
 <hr />
 <p>The “Scripts” module makes it possible to execute any JavaScript code after a certain trigger. We recommend using the “Scripts” module only if your task can not solved by the functionality of “Integrations”, “Events” and “Variables”. <br />
 <a href="/for-analyst/scripts">More about scripts</a></p>
+
+<h3 id="6-manual-data-import">6. Manual Data Import</h3>
+<hr />
+<p>The CSV file upload functionality allows you to import cost data from CSV files to Google BigQuery.<br />
+<a href="/for-analyst/manual-imports">More about CSV file upload</a></p>
 
 
                     </div>
