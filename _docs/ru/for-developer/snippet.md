@@ -20,7 +20,7 @@ order: 3
 ------
 Для корректной работы SegmentStream при загрузке каждой страницы сайта необходимо вызвать 2 файла:
  1. https://cdn.segmentstream.com/project/`<project_id>`.js
- 2. https://cdn.segmentstream.com/sdk/dd-manager.js
+ 2. https://cdn.segmentstream.com/sdk/segmentstream.min.js
 
 Где `<project_id>` необходимо запросить у команды SegmentStream.
 
@@ -38,9 +38,9 @@ order: 3
 ```JavaScript
 <!-- SegmentStream snippet -->
 <script type="text/javascript">
-(function(h,d){d=d||"cdn.segmentstream.com";var a=window.ddManager=window.ddManager||[];window.ddListener=window.ddListener||[];var b=window.digitalData=window.digitalData||{};b.events=b.events||[];b.changes=b.changes||[];if(!a.initialize)if(a.invoked)window.console&&console.error&&console.error("SegmentStream snippet included twice.");else{a.invoked=!0;a.methods="initialize addIntegration persist unpersist on once off setConsent".split(" ");a.factory=function(k){return function(){var c=Array.prototype.slice.call(arguments);
-c.unshift(k);a.push(c);return a}};for(b=0;b<a.methods.length;b++){var f=a.methods[b];a[f]=a.factory(f)}a.load=function(a){var c=document.createElement("script");c.type="text/javascript";c.charset="utf-8";c.async=!0;c.src=a;a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(c,a)};a.loadProject=function(b){var c=window.location.search;if(0<=c.indexOf("ddm_test_mode=1"))try{var e=!0;window.localStorage.setItem("_ddm_test_mode","1")}catch(g){}else if(0<=c.indexOf("ddm_test_mode=0"))try{e=
-!1,window.localStorage.removeItem("_ddm_test_mode")}catch(g){}else try{e="1"===window.localStorage.getItem("_ddm_test_mode")}catch(g){}e?a.load(window.DDMANAGER_TESTMODE_INIT_URL||"https://api.segmentstream.com/v1/ddm-initialization/"+b+".js"):a.load(window.DDMANAGER_INIT_URL||"https://"+d+"/project/"+b+".js")};a.CDN_DOMAIN=d;a.SNIPPET_VERSION="1.0.11";a.loadProject(h)}})("<PROJECT_ID>");
+(function(h,d){d=d||"cdn.segmentstream.com";var a=window.segmentstream=window.segmentstream||[];window.ddListener=window.ddListener||[];var b=window.digitalData=window.digitalData||{};b.events=b.events||[];b.changes=b.changes||[];if(!a.initialize)if(a.invoked)window.console&&console.error&&console.error("SegmentStream snippet included twice.");else{a.invoked=!0;a.methods="initialize addIntegration persist unpersist on once off getConsent setConsent".split(" ");a.factory=function(k){return function(){var c=
+Array.prototype.slice.call(arguments);c.unshift(k);a.push(c);return a}};for(b=0;b<a.methods.length;b++){var f=a.methods[b];a[f]=a.factory(f)}a.load=function(a){var c=document.createElement("script");c.type="text/javascript";c.charset="utf-8";c.async=!0;c.src=a;a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(c,a)};a.loadProject=function(b){var c=window.location.search;if(0<=c.indexOf("segmentstream_test_mode=1"))try{var e=!0;window.localStorage.setItem("_segmentstream_test_mode",
+"1")}catch(g){}else if(0<=c.indexOf("segmentstream_test_mode=0"))try{e=!1,window.localStorage.removeItem("_segmentstream_test_mode")}catch(g){}else try{e="1"===window.localStorage.getItem("_segmentstream_test_mode")}catch(g){}e?a.load(window.SEGMENTSTREAM_TESTMODE_INIT_URL||"https://api.segmentstream.com/v1/project/"+b+".js"):a.load(window.SEGMENTSTREAM_INIT_URL||"https://"+d+"/project/"+b+".js")};a.CDN_DOMAIN=d;a.SNIPPET_VERSION="2.0.0";a.loadProject(h)}})("<PROJECT_ID>");
 </script>
 <!-- //SegmentStream snippet -->
 ```
@@ -58,11 +58,11 @@ c.unshift(k);a.push(c);return a}};for(b=0;b<a.methods.length;b++){var f=a.method
 ```JavaScript
 <!-- SegmentStream snippet -->
 <script type="text/javascript">
-// window.DDMANAGER_INIT_URL = '<YOUR_BACKUP_STABLE_INITIALIZATION_SCRIPT_URL>';
-// window.DDMANAGER_SDK_URL = '<YOUR_BACKUP_STABLE_SDK_SCRIPT_URL>';
-(function(h,d){d=d||"cdn.segmentstream.com";var a=window.ddManager=window.ddManager||[];window.ddListener=window.ddListener||[];var b=window.digitalData=window.digitalData||{};b.events=b.events||[];b.changes=b.changes||[];if(!a.initialize)if(a.invoked)window.console&&console.error&&console.error("SegmentStream snippet included twice.");else{a.invoked=!0;a.methods="initialize addIntegration persist unpersist on once off setConsent".split(" ");a.factory=function(k){return function(){var c=Array.prototype.slice.call(arguments);
-c.unshift(k);a.push(c);return a}};for(b=0;b<a.methods.length;b++){var f=a.methods[b];a[f]=a.factory(f)}a.load=function(a){var c=document.createElement("script");c.type="text/javascript";c.charset="utf-8";c.async=!0;c.src=a;a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(c,a)};a.loadProject=function(b){var c=window.location.search;if(0<=c.indexOf("ddm_test_mode=1"))try{var e=!0;window.localStorage.setItem("_ddm_test_mode","1")}catch(g){}else if(0<=c.indexOf("ddm_test_mode=0"))try{e=
-!1,window.localStorage.removeItem("_ddm_test_mode")}catch(g){}else try{e="1"===window.localStorage.getItem("_ddm_test_mode")}catch(g){}e?a.load(window.DDMANAGER_TESTMODE_INIT_URL||"https://api.segmentstream.com/v1/ddm-initialization/"+b+".js"):a.load(window.DDMANAGER_INIT_URL||"https://"+d+"/project/"+b+".js")};a.CDN_DOMAIN=d;a.SNIPPET_VERSION="1.0.11";a.loadProject(h)}})("<PROJECT_ID>","<CDN_DOMAIN>");
+// window.SEGMENTSTREAM_INIT_URL = '<YOUR_BACKUP_STABLE_INITIALIZATION_SCRIPT_URL>';
+// window.SEGMENTSTREAM_SDK_URL = '<YOUR_BACKUP_STABLE_SDK_SCRIPT_URL>';
+(function(h,d){d=d||"cdn.segmentstream.com";var a=window.segmentstream=window.segmentstream||[];window.ddListener=window.ddListener||[];var b=window.digitalData=window.digitalData||{};b.events=b.events||[];b.changes=b.changes||[];if(!a.initialize)if(a.invoked)window.console&&console.error&&console.error("SegmentStream snippet included twice.");else{a.invoked=!0;a.methods="initialize addIntegration persist unpersist on once off getConsent setConsent".split(" ");a.factory=function(k){return function(){var c=
+Array.prototype.slice.call(arguments);c.unshift(k);a.push(c);return a}};for(b=0;b<a.methods.length;b++){var f=a.methods[b];a[f]=a.factory(f)}a.load=function(a){var c=document.createElement("script");c.type="text/javascript";c.charset="utf-8";c.async=!0;c.src=a;a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(c,a)};a.loadProject=function(b){var c=window.location.search;if(0<=c.indexOf("segmentstream_test_mode=1"))try{var e=!0;window.localStorage.setItem("_segmentstream_test_mode",
+"1")}catch(g){}else if(0<=c.indexOf("segmentstream_test_mode=0"))try{e=!1,window.localStorage.removeItem("_segmentstream_test_mode")}catch(g){}else try{e="1"===window.localStorage.getItem("_segmentstream_test_mode")}catch(g){}e?a.load(window.SEGMENTSTREAM_TESTMODE_INIT_URL||"https://api.segmentstream.com/v1/project/"+b+".js"):a.load(window.SEGMENTSTREAM_INIT_URL||"https://"+d+"/project/"+b+".js")};a.CDN_DOMAIN=d;a.SNIPPET_VERSION="2.0.0";a.loadProject(h)}})("<PROJECT_ID>","<CDN_DOMAIN>");
 </script>
 <!-- //SegmentStream snippet -->
 ```
@@ -70,18 +70,18 @@ c.unshift(k);a.push(c);return a}};for(b=0;b<a.methods.length;b++){var f=a.method
 
 2. Каждые 5 минут необходимо проверять md5 хеш двух файлов. Если файлы изменились - необходимо скачать новую версию файла и обновить его локальную версию.
 Последняя версия скрипта инициализации:
-https://cdn.segmentstream.com/project/<your_project_id>.js
+https://cdn.segmentstream.com/project/`<your_project_id>`.js
 Последняя версия sdk:
-https://cdn.segmentstream.com/sdk/dd-manager.js
+https://cdn.segmentstream.com/sdk/segmentstream.min.js
 
-3. В обновленном сниппете SegmentStream необходимо раскомментировать глобальные переменные `DDMANAGER_INIT_URL` и `DDMANAGER_SDK_URL` присвоить им абсолютный путь к локальной версии файлов на вашем собственном CDN.
+3. В обновленном сниппете SegmentStream необходимо раскомментировать глобальные переменные `SEGMENTSTREAM_INIT_URL` и `SEGMENTSTREAM_SDK_URL` присвоить им абсолютный путь к локальной версии файлов на вашем собственном CDN.
 ```JavaScript
-// window.DDMANAGER_INIT_URL = '<YOUR_BACKUP_STABLE_INITIALIZATION_SCRIPT_URL>';
-// window.DDMANAGER_SDK_URL = '<YOUR_BACKUP_STABLE_SDK_SCRIPT_URL>';
+// window.SEGMENTSTREAM_INIT_URL = '<YOUR_BACKUP_STABLE_INITIALIZATION_SCRIPT_URL>';
+// window.SEGMENTSTREAM_SDK_URL = '<YOUR_BACKUP_STABLE_SDK_SCRIPT_URL>';
 ```
 Например:
 ```JavaScript
-window.DDMANAGER_INIT_URL = 'https://cdn.website.ru/js/ddmanager/init_15_05_2017.js';
-window.DDMANAGER_SDK_URL = 'https://cdn.website.ru/js/ddmanager/sdk_15_05_2017.js';
+window.SEGMENTSTREAM_INIT_URL = 'https://cdn.website.ru/js/segmentstream/init_15_05_2017.js';
+window.SEGMENTSTREAM_SDK_URL = 'https://cdn.website.ru/js/segmentstream/sdk_15_05_2017.js';
 ```
 >всегда используйте только абсолютные пути c http/https
