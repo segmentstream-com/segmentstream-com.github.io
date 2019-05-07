@@ -19,14 +19,14 @@ Events is one of the most important components of `digitalData`. All information
 ### <a name="0"></a>Introduction
 ------
 Any event is a set of information that enters the digitalData.events data array. The information in the array must be represented as a javaScript object.
-For example: SegmentStream will register an event with the name "Event Happened" when the following code is executed:
+For example: SegmentStream will register an event with the name "Some event" when the following code is executed:
 ```javascript
 digitalData.events.push({
-  name: 'Event Happened',
+  name: 'Some event',
   value: 3000
 });
 ```
-Now SegmentStream can send information about the event "Event Happened" with the value 3000 to any system, for example, Google Analytics and Yandex Metrika.
+Now SegmentStream can send information about the event "Some event" with the value 3000 to any system, for example, Google Analytics and Yandex Metrika.
 
 ### <a name="1"></a>Event creation
 ------

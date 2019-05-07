@@ -552,7 +552,7 @@
 </div>
 
 <p>Вспомогательные функции помогают вам писать код быстрее и с меньшим количеством ошибок, также они делают ваш код более читабельным.
-Ими можно пользоваться в настройке переменных, событий, и скриптов.</p>
+Ими можно пользоваться для настройки переменных, событий, и скриптов.</p>
 
 <h3 id="Навигация-по-странице">Навигация по странице</h3>
 <hr />
@@ -574,9 +574,14 @@
 
 </ul>
 
-<h3 id="Получить-значение-параметра-url"><a name="_queryParam"></a>Получить значение параметра URL</h3>
+<h3 id="Получить-значение-параметра-url---_queryparam"><a name="_queryParam"></a>Получить значение параметра URL - _queryParam</h3>
 <hr />
-<p>Пример - получить значение параметра у страницы www.test.ru?q=blue%20ball:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_queryParam</span><span class="p">(</span><span class="nx">string</span><span class="p">);</span>
+</code></pre>
+</div>
+<p>Get <code class="highlighter-rouge">string</code> название параметра URL.</p>
+
+<p>Получить значение параметра у страницы www.test.ru?q=blue%20ball:</p>
 <div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_queryParam</span><span class="p">(</span><span class="s1">'q'</span><span class="p">);</span> <span class="c1">// blue%20ball</span>
 </code></pre>
 </div>
@@ -584,69 +589,126 @@
   <p>Функция <code class="highlighter-rouge">_queryParam()</code> всегда возвращает значение в нижнем регистре</p>
 </blockquote>
 
-<h3 id="Получить-значение-куки-по-ее-имени"><a name="_cookie"></a>Получить значение куки по ее имени</h3>
+<h3 id="Получить-значение-куки-по-ее-имени---_cookie"><a name="_cookie"></a>Получить значение куки по ее имени - _cookie</h3>
 <hr />
-<p>Пример - получить значение куки GA:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_cookie</span><span class="p">(</span><span class="nx">string</span><span class="p">);</span>
+</code></pre>
+</div>
+<p>Get <code class="highlighter-rouge">string</code> название куки.</p>
+
+<p>Получить значение куки GA:</p>
 <div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_cookie</span><span class="p">(</span><span class="s1">'_ga'</span><span class="p">);</span> <span class="c1">// GA1.2.1409919348.1513159051</span>
 </code></pre>
 </div>
 
-<h3 id="Безопасно-получить-любое-свойство-любого-объекта"><a name="_get"></a>Безопасно получить любое свойство любого объекта</h3>
+<h3 id="Безопасно-получить-любое-свойство-любого-объекта---_get"><a name="_get"></a>Безопасно получить любое свойство любого объекта - _get</h3>
 <hr />
-<p>Пример - получить значение ‘transaction.lineItems’ из события digitalData:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_get</span><span class="p">(</span><span class="nx">object</span><span class="p">,</span> <span class="nx">string</span><span class="p">);</span>
+</code></pre>
+</div>
+<p>Где <code class="highlighter-rouge">string</code> это путь внутри объекта <code class="highlighter-rouge">object</code>.</p>
+
+<p>Получить значение ‘transaction.lineItems’ из события digitalData:</p>
 <div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_get</span><span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="s1">'transaction.lineItems'</span><span class="p">);</span> <span class="c1">// массив lineItems [...]</span>
 </code></pre>
 </div>
 
-<h3 id="Безопасно-получить-любое-свойство-объекта-digitaldata"><a name="_digitalData"></a>Безопасно получить любое свойство объекта digitalData</h3>
+<h3 id="Безопасно-получить-любое-свойство-объекта-digitaldata---_digitaldata"><a name="_digitalData"></a>Безопасно получить любое свойство объекта digitalData - _digitalData</h3>
 <hr />
-<p>Пример - получить значение ‘transaction.lineItems’ из объекта digitalData:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_digitalData</span><span class="p">(</span><span class="nx">string</span><span class="p">);</span>
+</code></pre>
+</div>
+<p>Где <code class="highlighter-rouge">string</code> это путь внутри объекта digitalData.</p>
+
+<p>Получить значение ‘transaction.lineItems’ из объекта digitalData:</p>
 <div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_digitalData</span><span class="p">(</span><span class="s1">'transaction.lineItems'</span><span class="p">);</span> <span class="c1">// массив lineItems [...]</span>
 </code></pre>
 </div>
 
-<h3 id="Загрузить-пиксель"><a name="_loadPixel"></a>Загрузить пиксель</h3>
+<h3 id="Загрузить-пиксель---_loadpixel"><a name="_loadPixel"></a>Загрузить пиксель - _loadPixel</h3>
 <hr />
-<p>Поддерживается любое количество дополнительных атрибутов.
-Пример - Загрузить пиксель https://test.com/pixel.png:</p>
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_loadPixel</span><span class="p">({</span><span class="na">src</span><span class="p">:</span> <span class="s1">'https://test.com/pixel.png'</span><span class="p">,</span> <span class="na">id</span><span class="p">:</span> <span class="s1">'admit_ad'</span><span class="p">});</span>
+<p>Поддерживается любое количество дополнительных атрибутов.</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_loadPixel</span><span class="p">({</span>
+  <span class="na">src</span><span class="p">:</span> <span class="s1">'ссылка на пиксель'</span><span class="p">,</span>
+  <span class="na">id</span><span class="p">:</span> <span class="s1">'id пикселя'</span><span class="p">,</span>
+  <span class="c1">//...другие атрибуты</span>
+<span class="p">});</span>
 </code></pre>
 </div>
 
-<h3 id="Загрузить-скрипт"><a name="_loadScript"></a>Загрузить скрипт</h3>
-<hr />
-<p>Поддерживается любое количество дополнительных атрибутов.
-Пример - Загрузить скрипт https://test.com/script.js:</p>
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_loadScript</span><span class="p">({</span><span class="na">src</span><span class="p">:</span> <span class="s1">'https://test.com/script.js'</span><span class="p">,</span> <span class="na">id</span><span class="p">:</span> <span class="s1">'google'</span><span class="p">});</span>
+<p>Загрузить пиксель https://example.com/pixel.png:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_loadPixel</span><span class="p">({</span><span class="na">src</span><span class="p">:</span> <span class="s1">'https://example.com/pixel.png'</span><span class="p">,</span> <span class="na">id</span><span class="p">:</span> <span class="s1">'admit_ad'</span><span class="p">});</span>
 </code></pre>
 </div>
 
-<h3 id="Загрузить-iframe"><a name="_loadIframe"></a>Загрузить Iframe</h3>
+<h3 id="Загрузить-скрипт---_loadscript"><a name="_loadScript"></a>Загрузить скрипт - _loadScript</h3>
 <hr />
-<p>Поддерживается любое количество дополнительных атрибутов.
-Пример - Загрузить Iframe https://test.com/script.js:</p>
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_loadIframe</span><span class="p">({</span><span class="na">src</span><span class="p">:</span> <span class="s1">'https://test.com/window'</span><span class="p">,</span> <span class="na">style</span><span class="p">:</span> <span class="s1">'display: none;'</span><span class="p">});</span>
+<p>Поддерживается любое количество дополнительных атрибутов.</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_loadScript</span><span class="p">({</span>
+  <span class="na">src</span><span class="p">:</span> <span class="s1">'ссылка на скрипт'</span><span class="p">,</span>
+  <span class="na">id</span><span class="p">:</span> <span class="s1">'id скрипта'</span><span class="p">,</span>
+  <span class="c1">//...другие атрибуты</span>
+<span class="p">});</span>
 </code></pre>
 </div>
 
-<h3 id="Загрузить-link"><a name="_loadLink"></a>Загрузить Link</h3>
-<hr />
-<p>Поддерживается любое количество дополнительных атрибутов.
-Пример - Загрузить ссылку https://test.com/style.css:</p>
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_loadLink</span><span class="p">({</span><span class="na">src</span><span class="p">:</span> <span class="s1">'https://test.com/style.ss'</span><span class="p">,</span> <span class="na">type</span><span class="p">:</span> <span class="s2">"text/css"</span><span class="p">});</span>
+<p>Загрузить скрипт https://example.com/script.js:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_loadScript</span><span class="p">({</span><span class="na">src</span><span class="p">:</span> <span class="s1">'https://example.com/script.js'</span><span class="p">,</span> <span class="na">id</span><span class="p">:</span> <span class="s1">'google'</span><span class="p">});</span>
 </code></pre>
 </div>
 
-<h3 id="Безопасно-получить-любое-свойство-объекта-window"><a name="_global"></a>Безопасно получить любое свойство объекта window</h3>
+<h3 id="Загрузить-iframe---_loadiframe"><a name="_loadIframe"></a>Загрузить Iframe - _loadIframe</h3>
 <hr />
-<p>Пример - Получить значение window.settings.mobile_app:</p>
+<p>Поддерживается любое количество дополнительных атрибутов.</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_loadIframe</span><span class="p">({</span>
+  <span class="na">src</span><span class="p">:</span> <span class="s1">'ссылка на iframe'</span><span class="p">,</span>
+  <span class="na">style</span><span class="p">:</span> <span class="s1">'display: none;'</span><span class="p">,</span>
+  <span class="c1">//...другие атрибуты</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+
+<p>Загрузить Iframe https://example.com/window:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_loadIframe</span><span class="p">({</span><span class="na">src</span><span class="p">:</span> <span class="s1">'https://example.com/window'</span><span class="p">,</span> <span class="na">style</span><span class="p">:</span> <span class="s1">'display: none;'</span><span class="p">});</span>
+</code></pre>
+</div>
+
+<h3 id="Загрузить-link---_loadlink"><a name="_loadLink"></a>Загрузить Link - _loadLink</h3>
+<hr />
+<p>Поддерживается любое количество дополнительных атрибутов.</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_loadLink</span><span class="p">({</span>
+  <span class="na">src</span><span class="p">:</span> <span class="s1">'ссылка на файл'</span><span class="p">,</span>
+  <span class="na">type</span><span class="p">:</span> <span class="s1">'тип файла'</span><span class="p">,</span>
+  <span class="c1">//...другие атрибуты</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+
+<p>Загрузить ссылку https://example.com/style.css:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_loadLink</span><span class="p">({</span><span class="na">src</span><span class="p">:</span> <span class="s1">'https://example.com/style.ss'</span><span class="p">,</span> <span class="na">type</span><span class="p">:</span> <span class="s2">"text/css"</span><span class="p">});</span>
+</code></pre>
+</div>
+
+<h3 id="Безопасно-получить-любое-свойство-объекта-window---_global"><a name="_global"></a>Безопасно получить любое свойство объекта window - _global</h3>
+<hr />
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_global</span><span class="p">(</span><span class="nx">string</span><span class="p">);</span>
+</code></pre>
+</div>
+<p>Где <code class="highlighter-rouge">string</code> это путь внутри объекта window.</p>
+
+<p>Получить значение window.settings.mobile_app:</p>
 <div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_global</span><span class="p">(</span><span class="s1">'settings.mobile_app'</span><span class="p">);</span>
 </code></pre>
 </div>
 
-<h3 id="Получить-массив-элементов-по-css-селектору"><a name="_domQuery"></a>Получить массив элементов по CSS-селектору</h3>
+<h3 id="Получить-массив-элементов-по-css-селектору---_domquery"><a name="_domQuery"></a>Получить массив элементов по CSS-селектору - _domQuery</h3>
 <hr />
-<p>Пример - Получить значение элемента с id=’logo’:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_domQuery</span><span class="p">(</span><span class="nx">string</span><span class="p">);</span>
+</code></pre>
+</div>
+<p>Где <code class="highlighter-rouge">string</code> CSS-селектор.</p>
+
+<p>Получить значение элемента с id=’logo’:</p>
 <div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_domQuery</span><span class="p">(</span><span class="s1">'#logo'</span><span class="p">);</span>
 </code></pre>
 </div>
@@ -658,25 +720,44 @@
   </ul>
 </blockquote>
 
-<h3 id="Безопасно-получить-переменную-из-gtm-datalayer"><a name="_dataLayer"></a>Безопасно получить переменную из GTM dataLayer</h3>
+<h3 id="Безопасно-получить-переменную-из-gtm-datalayer---_datalayer"><a name="_dataLayer"></a>Безопасно получить переменную из GTM dataLayer - _dataLayer</h3>
 <hr />
-<p>Пример - Получить значение ‘ecommerce.purchase’ из dataLayer:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_dataLayer</span><span class="p">(</span><span class="nx">string</span><span class="p">);</span>
+</code></pre>
+</div>
+<p>Где <code class="highlighter-rouge">string</code> путь внутри объекта события _dataLayer.</p>
+
+<p>Получить значение ‘ecommerce.purchase’ из dataLayer:</p>
 <div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_dataLayer</span><span class="p">(</span><span class="s1">'ecommerce.purchase'</span><span class="p">);</span>
 </code></pre>
 </div>
 
-<h3 id="Забрать-данные-с-удаленного-сервера-асинхронно"><a name="_fetch"></a>Забрать данные с удаленного сервера асинхронно</h3>
+<h3 id="Забрать-данные-с-удаленного-сервера-асинхронно---_fetch"><a name="_fetch"></a>Забрать данные с удаленного сервера асинхронно - _fetch</h3>
 <hr />
-<p>Пример - Получить данные о корзине по ссылке ‘/ajax?cart’:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="k">return</span> <span class="nx">_fetch</span><span class="p">(</span><span class="nx">string</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+<p>Где <code class="highlighter-rouge">string</code> путь к серверу, и <code class="highlighter-rouge">result</code> данные в ответе сервера.</p>
+
+<p>Получить данные о корзине по ссылке ‘/ajax?cart’:</p>
 <div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="k">return</span> <span class="nx">_fetch</span><span class="p">(</span><span class="s1">'/ajax?cart'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
 <span class="p">});</span>
 </code></pre>
 </div>
 
-<h3 id="Задержка-перед-тем-как-обработчик-вернет-результат"><a name="_timeout"></a>Задержка перед тем как обработчик вернет результат</h3>
+<h3 id="Задержка-перед-тем-как-обработчик-вернет-результат---_timeout"><a name="_timeout"></a>Задержка перед тем как обработчик вернет результат - _timeout</h3>
 <hr />
-<p>Пример - Отправить событие с задержкой 1500 миллисекунд:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="k">return</span> <span class="nx">_timeout</span><span class="p">(</span><span class="nx">number</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">code</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+<p>Где <code class="highlighter-rouge">number</code> длинна задержки в миллисекундах, и <code class="highlighter-rouge">code</code> код который должен воспроизвестись после задержки.</p>
+
+<p>Отправить событие с задержкой 1500 миллисекунд:</p>
 <div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="k">return</span> <span class="nx">_timeout</span><span class="p">(</span><span class="mi">1500</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
   <span class="k">return</span> <span class="p">{</span>
     <span class="na">name</span><span class="p">:</span> <span class="s1">'Event With Timeout'</span><span class="p">;</span>
@@ -685,10 +766,10 @@
 </code></pre>
 </div>
 
-<h3 id="Сделать-несколько-попыток-вызвать-функцию"><a name="_retry"></a>Сделать несколько попыток вызвать функцию</h3>
+<h3 id="Сделать-несколько-попыток-вызвать-функцию---_retry"><a name="_retry"></a>Сделать несколько попыток вызвать функцию - _retry</h3>
 <hr />
 <p>Функция принимает 3 аргумента, функцию которую надо вызывать, количество попыток, интервал между попытками.
-Пример - Вызывать функцию X каждые Y миллисекунды, если функция возвращает ошибку, повторить попытку Z раз:</p>
+Вызывать функцию X каждые Y миллисекунды, если функция возвращает ошибку, повторить попытку Z раз:</p>
 <div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_retry</span><span class="p">(</span><span class="nx">X</span><span class="p">,</span> <span class="nx">Z</span><span class="p">,</span> <span class="nx">Y</span><span class="p">);</span>
 </code></pre>
 </div>
@@ -696,12 +777,15 @@
   <p>Аргументы Z и Y опциональные, по умолчанию интервал 1000 миллисекунд, число попыток - 5.</p>
 </blockquote>
 
-<p>Пример - Вызывать функцию window.externalLib.method() каждые 2000 миллисекунд, если функция возвращает ошибку, повторить попытку 10 раз:</p>
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_retry</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nb">window</span><span class="p">.</span><span class="nx">externalLib</span><span class="p">.</span><span class="nx">method</span><span class="p">()</span>
+<p>Возможный вариант использования:
+Внешняя библиотека загружается асинхронно, мы не знаем сколько времени потребуется для загрузки, поэтому чтобы избежать ошибок, мы будем использовать следующий код.</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_loadScript</span><span class="p">({</span><span class="na">src</span><span class="p">:</span> <span class="s1">'https://example.com/externalLib.js'</span><span class="p">,</span> <span class="na">id</span><span class="p">:</span> <span class="s1">'someName'</span><span class="p">});</span>
+<span class="nx">_retry</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nb">window</span><span class="p">.</span><span class="nx">externalLib</span><span class="p">.</span><span class="nx">method</span><span class="p">();</span>
 <span class="p">},</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2000</span><span class="p">);</span>
 </code></pre>
 </div>
+<p>Приведенный выше код загрузит библиотеку с помощью вспомогательной функции _loadScript, функция _retry будет вызывать функцию window.externalLib.method() каждые 2000 миллисекунд. Если функция возвращает ошибку, она будет повторит попытку вызова, но не более 10 раз.</p>
 
 
 

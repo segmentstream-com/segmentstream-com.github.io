@@ -563,19 +563,19 @@
 
 <h3 id="Введение"><a name="0"></a>Введение</h3>
 <hr />
-<p>Любое событие - это набор информации, который поступает в массив данных digitalData.events. Информация в массиве должна быть представлена в виде javaScript объекта.
-Например: SegmentStream зарегистрирует событие с именем “Event Happened” в момент, когда будет выполнен следующий код:</p>
+<p>Любое событие - это набор информации, который поступает в массив данных digitalData.events. Информация в массиве должна быть представлена в виде JavaScript объекта.
+Например, SegmentStream зарегистрирует событие с именем “Some event” в момент, когда будет выполнен следующий код:</p>
 <div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">digitalData</span><span class="p">.</span><span class="nx">events</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
-  <span class="na">name</span><span class="p">:</span> <span class="s1">'Event Happened'</span><span class="p">,</span>
+  <span class="na">name</span><span class="p">:</span> <span class="s1">'Some event'</span><span class="p">,</span>
   <span class="na">value</span><span class="p">:</span> <span class="mi">3000</span>
 <span class="p">});</span>
 </code></pre>
 </div>
-<p>Теперь SegmentStream может отправить информацию о событии “Event Happened” вместе со значением 3000 в любую систему, например в Google Analytics или Yandex Metrica.</p>
+<p>Теперь SegmentStream может отправить информацию о событии “Some event” вместе со значением 3000 в любую систему, например в Google Analytics или Yandex Metrica.</p>
 
 <h3 id="Создание-события"><a name="1"></a>Создание события</h3>
 <hr />
-<p>В SegmentStream есть 3 базисных триггера:</p>
+<p>В SegmentStream можно использовать 3 триггера:</p>
 <ul>
   <li>Событие</li>
   <li>Клик</li>
@@ -583,7 +583,7 @@
 </ul>
 
 <blockquote>
-  <p>Важно! В SegmentStream есть 1 встроенное событие - Viewed Page. Это событие наступает в тот момент, когда полностью загружает библиотека segmentstream.</p>
+  <p>Важно! Клиентская библиотека SegmentStream по умолчанию всегда отправляет встроенное событие Viewed Page после загрузки. Отправку этого события можно отменить, выключая в настройках проекта опцию <a href="/ru/for-analyst/settings/#sendViewedPageEvent">Автоматическая отправка события Viewed Page</a>.</p>
 </blockquote>
 
 <p><img src="/img/events.1.png" alt="" /></p>

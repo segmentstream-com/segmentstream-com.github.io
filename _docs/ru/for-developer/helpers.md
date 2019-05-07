@@ -7,7 +7,7 @@ order: 5
 ---
 
 Вспомогательные функции помогают вам писать код быстрее и с меньшим количеством ошибок, также они делают ваш код более читабельным.
-Ими можно пользоваться в настройке переменных, событий, и скриптов.
+Ими можно пользоваться для настройки переменных, событий, и скриптов.
 
 ### Навигация по странице
 ------
@@ -29,77 +29,139 @@ order: 5
 
 </ul>
 
-### <a name="_queryParam"></a>Получить значение параметра URL
+### <a name="_queryParam"></a>Получить значение параметра URL - _queryParam
 ------
-Пример - получить значение параметра у страницы www.test.ru?q=blue%20ball:
+```javascript
+_queryParam(string);
+```
+Get `string` название параметра URL.
+
+Получить значение параметра у страницы www.test.ru?q=blue%20ball:
 ```javascript
 _queryParam('q'); // blue%20ball
 ```
 > Функция `_queryParam()` всегда возвращает значение в нижнем регистре
 
-### <a name="_cookie"></a>Получить значение куки по ее имени
+### <a name="_cookie"></a>Получить значение куки по ее имени - _cookie
 ------
-Пример - получить значение куки GA:
+```javascript
+_cookie(string);
+```
+Get `string` название куки.
+
+Получить значение куки GA:
 ```javascript
 _cookie('_ga'); // GA1.2.1409919348.1513159051
 ```
 
-### <a name="_get"></a>Безопасно получить любое свойство любого объекта
+### <a name="_get"></a>Безопасно получить любое свойство любого объекта - _get
 ------
-Пример - получить значение 'transaction.lineItems' из события digitalData:
+```javascript
+_get(object, string);
+```
+Где `string` это путь внутри объекта `object`.
+
+Получить значение 'transaction.lineItems' из события digitalData:
 ```javascript
 _get(event, 'transaction.lineItems'); // массив lineItems [...]
 ```
 
-### <a name="_digitalData"></a>Безопасно получить любое свойство объекта digitalData
+### <a name="_digitalData"></a>Безопасно получить любое свойство объекта digitalData - _digitalData
 ------
-Пример - получить значение 'transaction.lineItems' из объекта digitalData:
+```javascript
+_digitalData(string);
+```
+Где `string` это путь внутри объекта digitalData.
+
+Получить значение 'transaction.lineItems' из объекта digitalData:
 ```javascript
 _digitalData('transaction.lineItems'); // массив lineItems [...]
 ```
 
-### <a name="_loadPixel"></a>Загрузить пиксель
+### <a name="_loadPixel"></a>Загрузить пиксель - _loadPixel
 ------
 Поддерживается любое количество дополнительных атрибутов.
-Пример - Загрузить пиксель https://test.com/pixel.png:
 ```javascript
-_loadPixel({src: 'https://test.com/pixel.png', id: 'admit_ad'});
+_loadPixel({
+  src: 'ссылка на пиксель',
+  id: 'id пикселя',
+  //...другие атрибуты
+});
 ```
 
-### <a name="_loadScript"></a>Загрузить скрипт
+Загрузить пиксель https://example.com/pixel.png:
+```javascript
+_loadPixel({src: 'https://example.com/pixel.png', id: 'admit_ad'});
+```
+
+### <a name="_loadScript"></a>Загрузить скрипт - _loadScript
 ------
 Поддерживается любое количество дополнительных атрибутов.
-Пример - Загрузить скрипт https://test.com/script.js:
 ```javascript
-_loadScript({src: 'https://test.com/script.js', id: 'google'});
+_loadScript({
+  src: 'ссылка на скрипт',
+  id: 'id скрипта',
+  //...другие атрибуты
+});
 ```
 
-### <a name="_loadIframe"></a>Загрузить Iframe
+Загрузить скрипт https://example.com/script.js:
+```javascript
+_loadScript({src: 'https://example.com/script.js', id: 'google'});
+```
+
+### <a name="_loadIframe"></a>Загрузить Iframe - _loadIframe
 ------
 Поддерживается любое количество дополнительных атрибутов.
-Пример - Загрузить Iframe https://test.com/script.js:
 ```javascript
-_loadIframe({src: 'https://test.com/window', style: 'display: none;'});
+_loadIframe({
+  src: 'ссылка на iframe',
+  style: 'display: none;',
+  //...другие атрибуты
+});
 ```
 
-### <a name="_loadLink"></a>Загрузить Link
+Загрузить Iframe https://example.com/window:
+```javascript
+_loadIframe({src: 'https://example.com/window', style: 'display: none;'});
+```
+
+### <a name="_loadLink"></a>Загрузить Link - _loadLink
 ------
 Поддерживается любое количество дополнительных атрибутов.
-Пример - Загрузить ссылку https://test.com/style.css:
 ```javascript
-_loadLink({src: 'https://test.com/style.ss', type: "text/css"});
+_loadLink({
+  src: 'ссылка на файл',
+  type: 'тип файла',
+  //...другие атрибуты
+});
 ```
 
-### <a name="_global"></a>Безопасно получить любое свойство объекта window
+Загрузить ссылку https://example.com/style.css:
+```javascript
+_loadLink({src: 'https://example.com/style.ss', type: "text/css"});
+```
+
+### <a name="_global"></a>Безопасно получить любое свойство объекта window - _global
 ------
-Пример - Получить значение window.settings.mobile_app:
+```javascript
+_global(string);
+```
+Где `string` это путь внутри объекта window.
+
+Получить значение window.settings.mobile_app:
 ```javascript
 _global('settings.mobile_app');
 ```
 
-### <a name="_domQuery"></a>Получить массив элементов по CSS-селектору
+### <a name="_domQuery"></a>Получить массив элементов по CSS-селектору - _domQuery
 ------
-Пример - Получить значение элемента с id='logo':
+```javascript
+_domQuery(string);
+```
+Где `string` CSS-селектор.
+
+Получить значение элемента с id='logo':
 ```javascript
 _domQuery('#logo');
 ```
@@ -107,25 +169,44 @@ _domQuery('#logo');
 >  - если на сайте не установлен jQuery (нет глобального объекта window.jQuery) или библиотека jQuery загружается после библиотеки SegmentStream (стоит ниже по коду) - используется [document.querySelectorAll](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll),
 >  - если есть глобальный объект window.jQuery - используются селекторы jQuery.
 
-### <a name="_dataLayer"></a>Безопасно получить переменную из GTM dataLayer
+### <a name="_dataLayer"></a>Безопасно получить переменную из GTM dataLayer - _dataLayer
 ------
-Пример - Получить значение 'ecommerce.purchase' из dataLayer:
+```javascript
+_dataLayer(string);
+```
+Где `string` путь внутри объекта события _dataLayer.
+
+Получить значение 'ecommerce.purchase' из dataLayer:
 ```javascript
 _dataLayer('ecommerce.purchase');
 ```
 
-### <a name="_fetch"></a>Забрать данные с удаленного сервера асинхронно
+### <a name="_fetch"></a>Забрать данные с удаленного сервера асинхронно - _fetch
 ------
-Пример - Получить данные о корзине по ссылке '/ajax?cart':
+```javascript
+return _fetch(string, function(result) {
+  return result;
+});
+```
+Где `string` путь к серверу, и `result` данные в ответе сервера.
+
+Получить данные о корзине по ссылке '/ajax?cart':
 ```javascript
 return _fetch('/ajax?cart', function(result) {
   return result;
 });
 ```
 
-### <a name="_timeout"></a>Задержка перед тем как обработчик вернет результат
+### <a name="_timeout"></a>Задержка перед тем как обработчик вернет результат - _timeout
 ------
-Пример - Отправить событие с задержкой 1500 миллисекунд:
+```javascript
+return _timeout(number, function() {
+  code
+});
+```
+Где `number` длинна задержки в миллисекундах, и `code` код который должен воспроизвестись после задержки.
+
+Отправить событие с задержкой 1500 миллисекунд:
 ```javascript
 return _timeout(1500, function() {
   return {
@@ -134,22 +215,22 @@ return _timeout(1500, function() {
 });
 ```
 
-### <a name="_retry"></a>Сделать несколько попыток вызвать функцию
+### <a name="_retry"></a>Сделать несколько попыток вызвать функцию - _retry
 ------
 Функция принимает 3 аргумента, функцию которую надо вызывать, количество попыток, интервал между попытками.
-Пример - Вызывать функцию X каждые Y миллисекунды, если функция возвращает ошибку, повторить попытку Z раз:
+Вызывать функцию X каждые Y миллисекунды, если функция возвращает ошибку, повторить попытку Z раз:
 ```javascript
 _retry(X, Z, Y);
 ```
 > Аргументы Z и Y опциональные, по умолчанию интервал 1000 миллисекунд, число попыток - 5.
 
-Пример - Вызывать функцию window.externalLib.method() каждые 2000 миллисекунд, если функция возвращает ошибку, повторить попытку 10 раз:
+Возможный вариант использования:
+Внешняя библиотека загружается асинхронно, мы не знаем сколько времени потребуется для загрузки, поэтому чтобы избежать ошибок, мы будем использовать следующий код.
 ```javascript
+_loadScript({src: 'https://example.com/externalLib.js', id: 'someName'});
 _retry(function() {
-  window.externalLib.method()
+  window.externalLib.method();
 }, 10, 2000);
 ```
-
-
-
+Приведенный выше код загрузит библиотеку с помощью вспомогательной функции _loadScript, функция _retry будет вызывать функцию window.externalLib.method() каждые 2000 миллисекунд. Если функция возвращает ошибку, она будет повторит попытку вызова, но не более 10 раз.
 

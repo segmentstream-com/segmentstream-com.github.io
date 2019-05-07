@@ -553,9 +553,14 @@ They can be used in the setup of variables, events, and scripts.</p>
   <li><a href="#_retry">Try calling a function several times</a></li>
 </ul>
 
-<h3 id="get-url-parameter-value"><a name="_queryParam"></a>Get URL parameter value</h3>
+<h3 id="get-url-parameter-value---_queryparam"><a name="_queryParam"></a>Get URL parameter value - _queryParam</h3>
 <hr />
-<p>Example - get the value of the parameter on the page www.test.ru?q=blue%20ball:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_queryParam</span><span class="p">(</span><span class="nx">string</span><span class="p">);</span>
+</code></pre>
+</div>
+<p>Where <code class="highlighter-rouge">string</code> is the name of the query parameter.</p>
+
+<p>Get the value of the parameter on the page www.test.ru?q=blue%20ball:</p>
 <div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_queryParam</span><span class="p">(</span><span class="s1">'q'</span><span class="p">);</span> <span class="c1">// blue%20ball</span>
 </code></pre>
 </div>
@@ -563,69 +568,127 @@ They can be used in the setup of variables, events, and scripts.</p>
   <p>The <code class="highlighter-rouge">_queryParam()</code> function always returns values in lowercase</p>
 </blockquote>
 
-<h3 id="get-cookie-value"><a name="_cookie"></a>Get cookie value</h3>
+<h3 id="get-cookie-value---_ga"><a name="_cookie"></a>Get cookie value - _ga</h3>
 <hr />
-<p>Example - get the GA cookie value:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_cookie</span><span class="p">(</span><span class="nx">string</span><span class="p">);</span>
+</code></pre>
+</div>
+<p>Where <code class="highlighter-rouge">string</code> is the name of the cookie.</p>
+
+<p>Get the GA cookie value:</p>
 <div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_cookie</span><span class="p">(</span><span class="s1">'_ga'</span><span class="p">);</span> <span class="c1">// GA1.2.1409919348.1513159051</span>
 </code></pre>
 </div>
 
-<h3 id="safely-get-any-property-of-an-object"><a name="_get"></a>Safely get any property of an object</h3>
+<h3 id="safely-get-any-property-of-an-object---_get"><a name="_get"></a>Safely get any property of an object - _get</h3>
 <hr />
-<p>Example - get the value of ‘transaction.lineItems’ from a digitalData event object:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_get</span><span class="p">(</span><span class="nx">object</span><span class="p">,</span> <span class="nx">string</span><span class="p">);</span>
+</code></pre>
+</div>
+<p>Where <code class="highlighter-rouge">string</code> is the path inside the <code class="highlighter-rouge">object</code>.</p>
+
+<p>Get the value of ‘transaction.lineItems’ from a digitalData event object:</p>
 <div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_get</span><span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="s1">'transaction.lineItems'</span><span class="p">);</span> <span class="c1">// lineItems array [...]</span>
 </code></pre>
 </div>
 
-<h3 id="safely-get-any-digitaldata-property"><a name="_digitalData"></a>Safely get any digitalData property</h3>
+<h3 id="safely-get-any-digitaldata-property---_digitaldata"><a name="_digitalData"></a>Safely get any digitalData property - _digitalData</h3>
 <hr />
-<p>Example - get the value of ‘transaction.lineItems’ from the digitalData object:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_digitalData</span><span class="p">(</span><span class="nx">string</span><span class="p">);</span>
+</code></pre>
+</div>
+<p>Where <code class="highlighter-rouge">string</code> is the path inside the digitalData object.</p>
+
+<p>Get the value of ‘transaction.lineItems’ from the digitalData object:</p>
 <div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_digitalData</span><span class="p">(</span><span class="s1">'transaction.lineItems'</span><span class="p">);</span> <span class="c1">// lineItems array [...]</span>
 </code></pre>
 </div>
 
-<h3 id="load-pixel"><a name="_loadPixel"></a>Load pixel</h3>
+<h3 id="load-pixel---_loadpixel"><a name="_loadPixel"></a>Load pixel - _loadPixel</h3>
 <hr />
-<p>Any number of attributes is supported.
-Example - load pixel from https://test.com/pixel.png:</p>
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_loadPixel</span><span class="p">({</span><span class="na">src</span><span class="p">:</span> <span class="s1">'https://test.com/pixel.png'</span><span class="p">,</span> <span class="na">id</span><span class="p">:</span> <span class="s1">'admit_ad'</span><span class="p">});</span>
+<p>Any number of attributes is supported.</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_loadPixel</span><span class="p">({</span>
+  <span class="na">src</span><span class="p">:</span> <span class="s1">'link to pixel'</span><span class="p">,</span>
+  <span class="na">id</span><span class="p">:</span> <span class="s1">'id of pixel'</span><span class="p">,</span>
+  <span class="c1">//...any other attributes</span>
+<span class="p">});</span>
 </code></pre>
 </div>
 
-<h3 id="load-script"><a name="_loadScript"></a>Load script</h3>
-<hr />
-<p>Any number of attributes is supported.
-Example - load script from https://test.com/script.js:</p>
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_loadScript</span><span class="p">({</span><span class="na">src</span><span class="p">:</span> <span class="s1">'https://test.com/script.js'</span><span class="p">,</span> <span class="na">id</span><span class="p">:</span> <span class="s1">'google'</span><span class="p">});</span>
+<p>Load pixel from https://example.com/pixel.png:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_loadPixel</span><span class="p">({</span><span class="na">src</span><span class="p">:</span> <span class="s1">'https://example.com/pixel.png'</span><span class="p">,</span> <span class="na">id</span><span class="p">:</span> <span class="s1">'admit_ad'</span><span class="p">});</span>
 </code></pre>
 </div>
 
-<h3 id="load-iframe"><a name="_loadIframe"></a>Load iframe</h3>
+<h3 id="load-script---_loadscript"><a name="_loadScript"></a>Load script - _loadScript</h3>
 <hr />
-<p>Any number of attributes is supported.
-Example - load iframe from https://test.com/window:</p>
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_loadIframe</span><span class="p">({</span><span class="na">src</span><span class="p">:</span> <span class="s1">'https://test.com/window'</span><span class="p">,</span> <span class="na">style</span><span class="p">:</span> <span class="s1">'display: none;'</span><span class="p">});</span>
+<p>Any number of attributes is supported.</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_loadScript</span><span class="p">({</span>
+  <span class="na">src</span><span class="p">:</span> <span class="s1">'link to script'</span><span class="p">,</span>
+  <span class="na">id</span><span class="p">:</span> <span class="s1">'id of script'</span><span class="p">,</span>
+  <span class="c1">//...any other attributes</span>
+<span class="p">});</span>
 </code></pre>
 </div>
 
-<h3 id="load-link"><a name="_loadLink"></a>Load link</h3>
-<hr />
-<p>Any number of attributes is supported.
-Example - load link from https://test.com/style.css:</p>
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_loadLink</span><span class="p">({</span><span class="na">href</span><span class="p">:</span> <span class="s1">'https://test.com/style.css'</span><span class="p">,</span> <span class="na">type</span><span class="p">:</span> <span class="s2">"text/css"</span><span class="p">});</span>
+<p>Load script from https://example.com/script.js:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_loadScript</span><span class="p">({</span><span class="na">src</span><span class="p">:</span> <span class="s1">'https://example.com/script.js'</span><span class="p">,</span> <span class="na">id</span><span class="p">:</span> <span class="s1">'google'</span><span class="p">});</span>
 </code></pre>
 </div>
 
-<h3 id="safely-get-any-window-property"><a name="_global"></a>Safely get any window property</h3>
+<h3 id="load-iframe---_loadiframe"><a name="_loadIframe"></a>Load iframe - _loadIframe</h3>
 <hr />
-<p>Example - Get the value of window.settings.mobile_app:</p>
+<p>Any number of attributes is supported.</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_loadIframe</span><span class="p">({</span>
+  <span class="na">src</span><span class="p">:</span> <span class="s1">'link to iframe'</span><span class="p">,</span>
+  <span class="na">id</span><span class="p">:</span> <span class="s1">'id of iframe'</span><span class="p">,</span>
+  <span class="na">style</span><span class="p">:</span> <span class="s1">'display: none;'</span><span class="p">,</span>
+  <span class="c1">//...any other attributes</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+
+<p>Load iframe from https://example.com/window:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_loadIframe</span><span class="p">({</span><span class="na">src</span><span class="p">:</span> <span class="s1">'https://example.com/window'</span><span class="p">,</span> <span class="na">style</span><span class="p">:</span> <span class="s1">'display: none;'</span><span class="p">});</span>
+</code></pre>
+</div>
+
+<h3 id="load-link---_loadlink"><a name="_loadLink"></a>Load link - _loadLink</h3>
+<hr />
+<p>Any number of attributes is supported.</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_loadLink</span><span class="p">({</span>
+  <span class="na">src</span><span class="p">:</span> <span class="s1">'link path'</span><span class="p">,</span>
+  <span class="na">type</span><span class="p">:</span> <span class="s1">'link type'</span><span class="p">,</span>
+  <span class="c1">//...any other attributes</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+
+<p>Load link from https://example.com/style.css:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_loadLink</span><span class="p">({</span><span class="na">href</span><span class="p">:</span> <span class="s1">'https://example.com/style.css'</span><span class="p">,</span> <span class="na">type</span><span class="p">:</span> <span class="s2">"text/css"</span><span class="p">});</span>
+</code></pre>
+</div>
+
+<h3 id="safely-get-any-window-property---_global"><a name="_global"></a>Safely get any window property - _global</h3>
+<hr />
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_global</span><span class="p">(</span><span class="nx">string</span><span class="p">);</span>
+</code></pre>
+</div>
+<p>Where <code class="highlighter-rouge">string</code> is the path inside the window object.</p>
+
+<p>Get the value of window.settings.mobile_app:</p>
 <div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_global</span><span class="p">(</span><span class="s1">'settings.mobile_app'</span><span class="p">);</span>
 </code></pre>
 </div>
 
-<h3 id="get-an-array-of-elements-by-css-selector"><a name="_global"></a>Get an array of elements by CSS-selector</h3>
+<h3 id="get-an-array-of-elements-by-css-selector---_global"><a name="_global"></a>Get an array of elements by CSS-selector - _global</h3>
 <hr />
-<p>Example - Get an array of elements which have the ‘logo’ id:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_domQuery</span><span class="p">(</span><span class="nx">string</span><span class="p">);</span>
+</code></pre>
+</div>
+<p>Where <code class="highlighter-rouge">string</code> is the CSS-selector.</p>
+
+<p>Get an array of elements which have the ‘logo’ id:</p>
 <div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_domQuery</span><span class="p">(</span><span class="s1">'#logo'</span><span class="p">);</span>
 </code></pre>
 </div>
@@ -637,25 +700,44 @@ Example - load link from https://test.com/style.css:</p>
   </ul>
 </blockquote>
 
-<h3 id="safely-get-a-gtm-datalayer-variable"><a name="_dataLayer"></a>Safely get a GTM dataLayer variable</h3>
+<h3 id="safely-get-a-gtm-datalayer-variable---_datalayer"><a name="_dataLayer"></a>Safely get a GTM dataLayer variable - _dataLayer</h3>
 <hr />
-<p>Example - Get the value of ‘ecommerce.purchase’ from the dataLayer:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_dataLayer</span><span class="p">(</span><span class="nx">string</span><span class="p">);</span>
+</code></pre>
+</div>
+<p>Where <code class="highlighter-rouge">string</code> is a path inside a _dataLayer event object.</p>
+
+<p>Get the value of ‘ecommerce.purchase’ from the dataLayer:</p>
 <div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_dataLayer</span><span class="p">(</span><span class="s1">'ecommerce.purchase'</span><span class="p">);</span>
 </code></pre>
 </div>
 
-<h3 id="get-data-from-a-remote-server-using-ajax"><a name="_fetch"></a>Get data from a remote server using ajax</h3>
+<h3 id="get-data-from-a-remote-server-using-ajax---_fetch"><a name="_fetch"></a>Get data from a remote server using ajax - _fetch</h3>
 <hr />
-<p>Example - Get data about the cart contents from the ‘/ajax?cart’ link:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="k">return</span> <span class="nx">_fetch</span><span class="p">(</span><span class="nx">string</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+<p>Where <code class="highlighter-rouge">string</code> is the route to the server, and <code class="highlighter-rouge">result</code> is the data from the server response.</p>
+
+<p>Get data about the cart contents from the ‘/ajax?cart’ link:</p>
 <div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="k">return</span> <span class="nx">_fetch</span><span class="p">(</span><span class="s1">'/ajax?cart'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
 <span class="p">});</span>
 </code></pre>
 </div>
 
-<h3 id="delay-before-the-handler-returns-the-result"><a name="_timeout"></a>Delay before the handler returns the result</h3>
+<h3 id="delay-before-the-handler-returns-the-result---_timeout"><a name="_timeout"></a>Delay before the handler returns the result - _timeout</h3>
 <hr />
-<p>Example - Send an event with a delay of 1500 milliseconds:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="k">return</span> <span class="nx">_timeout</span><span class="p">(</span><span class="nx">number</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">code</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+<p>Where <code class="highlighter-rouge">number</code> is the length of the delay in milliseconds, and <code class="highlighter-rouge">code</code> is the code that should be executed after the delay.</p>
+
+<p>Send an event with a delay of 1500 milliseconds:</p>
 <div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="k">return</span> <span class="nx">_timeout</span><span class="p">(</span><span class="mi">1500</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
   <span class="k">return</span> <span class="p">{</span>
     <span class="na">name</span><span class="p">:</span> <span class="s1">'Event With Timeout'</span><span class="p">;</span>
@@ -664,10 +746,10 @@ Example - load link from https://test.com/style.css:</p>
 </code></pre>
 </div>
 
-<h3 id="try-calling-a-function-several-times"><a name="_retry"></a>Try calling a function several times</h3>
+<h3 id="try-calling-a-function-several-times---_retry"><a name="_retry"></a>Try calling a function several times - _retry</h3>
 <hr />
 <p>The function takes 3 arguments, the function to be called, the number of attempts, the interval between the attempts.
-Example - Call function X every Y milliseconds, if the function returns an error, try again Z times:</p>
+Call function X every Y milliseconds, if the function returns an error, try again Z times:</p>
 <div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_retry</span><span class="p">(</span><span class="nx">X</span><span class="p">,</span> <span class="nx">Z</span><span class="p">,</span> <span class="nx">Y</span><span class="p">);</span>
 </code></pre>
 </div>
@@ -675,12 +757,15 @@ Example - Call function X every Y milliseconds, if the function returns an error
   <p>The arguments Z and Y are optional, the default interval is 1000 milliseconds, the default number of attempts is 5.</p>
 </blockquote>
 
-<p>Example - Call the window.externalLib.method() function every 2000 milliseconds, if the function returns an error, try again 10 times:</p>
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_retry</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nb">window</span><span class="p">.</span><span class="nx">externalLib</span><span class="p">.</span><span class="nx">method</span><span class="p">()</span>
+<p>Possible use case:
+An external library is loaded asynchronously, we don’t know how long it will take to load, so in order to avoid any errors, we will use the following code.</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_loadScript</span><span class="p">({</span><span class="na">src</span><span class="p">:</span> <span class="s1">'https://example.com/externalLib.js'</span><span class="p">,</span> <span class="na">id</span><span class="p">:</span> <span class="s1">'someName'</span><span class="p">});</span>
+<span class="nx">_retry</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nb">window</span><span class="p">.</span><span class="nx">externalLib</span><span class="p">.</span><span class="nx">method</span><span class="p">();</span>
 <span class="p">},</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2000</span><span class="p">);</span>
 </code></pre>
 </div>
+<p>The code above will load the library using the _loadScript helper, and the _retry helper will call the window.externalLib.method() function every 2000 milliseconds, if the function returns an error, it will try 10 times in total.</p>
 
 
                     </div>

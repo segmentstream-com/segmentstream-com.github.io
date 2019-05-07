@@ -30,7 +30,7 @@ order: 5
 **Скрипт**
 ```javascript
 jQuery.ajax({
-  url: 'https://test.com/handler/',
+  url: 'https://example.com/handler/',
   method: 'POST',
   data: 'email=' + event.email
 });

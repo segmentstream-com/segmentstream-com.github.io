@@ -30,7 +30,7 @@ Below is an example of a script that sends a user's Email when a "Subscribed" ev
 **Скрипт**
 ```javascript
 jQuery.ajax({
-  url: 'https://test.com/handler/',
+  url: 'https://example.com/handler/',
   method: 'POST',
   data: 'email=' + event.email
 });
