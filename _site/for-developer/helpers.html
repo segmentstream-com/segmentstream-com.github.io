@@ -531,52 +531,104 @@
     </h1>
 </div>
 
+<p>Helper functions help you write code faster and with fewer errors, plus, they make your code more readable.
+They can be used in the setup of variables, events, and scripts.</p>
+
 <h3 id="page-contents">Page contents</h3>
 <hr />
 <ul class="page-navigation">
-  <li><a href="#1">Why use helper functions?</a></li>
-  <li><a href="#2">List of helper functions</a></li>
+  <li><a href="#_queryParam">Get URL parameter value</a></li>
+  <li><a href="#_cookie">Get cookie value</a></li>
+  <li><a href="#_get">Safely get any property of an object</a></li>
+  <li><a href="#_digitalData">Safely get any digitalData property</a></li>
+  <li><a href="#_loadPixel">Load pixel</a></li>
+  <li><a href="#_loadScript">Load script</a></li>
+  <li><a href="#_loadIframe">Load Iframe</a></li>
+  <li><a href="#_loadLink">Load link</a></li>
+  <li><a href="#_global">Safely get any window property</a></li>
+  <li><a href="#_domQuery">Get an array of elements by CSS-selector</a></li>
+  <li><a href="#_dataLayer">Safely get a GTM dataLayer variable</a></li>
+  <li><a href="#_fetch">Get data from a remote server using ajax</a></li>
+  <li><a href="#_timeout">Delay before the handler returns the result</a></li>
+  <li><a href="#_retry">Try calling a function several times</a></li>
 </ul>
 
-<h3 id="why-use-helper-functions"><a name="1"></a>Why use helper functions?</h3>
-<p>Helper functions help you write code faster and with fewer errors, plus, they make your code more readable.</p>
-
-<h3 id="list-of-helper-functions"><a name="2"></a>List of helper functions</h3>
+<h3 id="get-url-parameter-value"><a name="_queryParam"></a>Get URL parameter value</h3>
 <hr />
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_queryParam</span><span class="p">(</span><span class="s1">'q'</span><span class="p">)</span> <span class="c1">// get url parameter value</span>
-<span class="nx">_cookie</span><span class="p">(</span><span class="s1">'_ga'</span><span class="p">)</span> <span class="c1">// get cookie value</span>
-<span class="nx">_get</span><span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="s1">'transaction.lineItems'</span><span class="p">)</span> <span class="c1">// Safely get any event property</span>
-<span class="nx">_digitalData</span><span class="p">(</span><span class="s1">'transaction.lineItems'</span><span class="p">)</span> <span class="c1">// Safely get any digitalData property</span>
-<span class="nx">_loadPixel</span><span class="p">({</span><span class="na">src</span><span class="p">:</span> <span class="s1">'https://test.com/pixel.png'</span><span class="p">,</span> <span class="na">id</span><span class="p">:</span> <span class="s1">'admit_ad'</span><span class="p">})</span> <span class="c1">//Load pixel. Any number of attributes is supported</span>
-<span class="nx">_loadScript</span><span class="p">({</span><span class="na">src</span><span class="p">:</span> <span class="s1">'https://test.com/script.js'</span><span class="p">,</span> <span class="na">id</span><span class="p">:</span> <span class="s1">'google'</span><span class="p">})</span> <span class="c1">//Load script. Any number of attributes is supported</span>
-<span class="nx">_loadIframe</span><span class="p">({</span><span class="na">src</span><span class="p">:</span> <span class="s1">'https://test.com/window'</span><span class="p">,</span> <span class="na">style</span><span class="p">:</span> <span class="s1">'display: none;'</span><span class="p">})</span> <span class="c1">//Load iframe. Any number of attributes is supported</span>
-<span class="nx">_loadLink</span><span class="p">({</span><span class="na">href</span><span class="p">:</span> <span class="s1">'https://test.com/style.css'</span><span class="p">,</span> <span class="na">type</span><span class="p">:</span> <span class="s2">"text/css"</span><span class="p">})</span> <span class="c1">//Load styles through tag link. Any number of attributes is supported</span>
-<span class="nx">_global</span><span class="p">(</span><span class="s1">'settings.mobile_app'</span><span class="p">)</span> <span class="c1">// Safely get any window property</span>
-<span class="nx">_domQuery</span><span class="p">(</span><span class="s1">'#logo'</span><span class="p">)</span> <span class="c1">// get an array of elements by CSS-selector</span>
-<span class="nx">_dataLayer</span><span class="p">(</span><span class="s1">'ecommerce.purchase'</span><span class="p">)</span> <span class="c1">// Safely get a GTM dataLayer variable</span>
-<span class="k">return</span> <span class="nx">_fetch</span><span class="p">(</span><span class="s1">'/ajax?cart'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
-<span class="p">});</span> <span class="c1">// get data from a remote server using ajax</span>
-<span class="k">return</span> <span class="nx">_timeout</span><span class="p">(</span><span class="mi">1500</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="p">{</span>
-    <span class="na">name</span><span class="p">:</span> <span class="s1">'Event With Timeout'</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">});</span> <span class="c1">// Delay before the handler returns the result</span>
-
-<span class="nx">_retry</span><span class="p">(</span><span class="nx">X</span><span class="p">,</span> <span class="nx">Z</span><span class="p">,</span> <span class="nx">Y</span><span class="p">);</span> <span class="c1">// Call function X every Y milliseconds, if it throws an exception, try again up to Z times.</span>
-<span class="c1">// Z and Y are optional, the default interval is 1000 milliseconds, and the default try count is 5</span>
-<span class="c1">// example:</span>
-<span class="nx">_retry</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nb">window</span><span class="p">.</span><span class="nx">externalLib</span><span class="p">.</span><span class="nx">method</span><span class="p">()</span>
-<span class="p">},</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2000</span><span class="p">);</span>
-<span class="c1">// every 2 seconds call window.externalLib.method(), call 10 up to times if it throws an exception.</span>
+<p>Example - get the value of the parameter on the page www.test.ru?q=blue%20ball:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_queryParam</span><span class="p">(</span><span class="s1">'q'</span><span class="p">);</span> <span class="c1">// blue%20ball</span>
 </code></pre>
 </div>
-
 <blockquote>
   <p>The <code class="highlighter-rouge">_queryParam()</code> function always returns values in lowercase</p>
 </blockquote>
 
+<h3 id="get-cookie-value"><a name="_cookie"></a>Get cookie value</h3>
+<hr />
+<p>Example - get the GA cookie value:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_cookie</span><span class="p">(</span><span class="s1">'_ga'</span><span class="p">);</span> <span class="c1">// GA1.2.1409919348.1513159051</span>
+</code></pre>
+</div>
+
+<h3 id="safely-get-any-property-of-an-object"><a name="_get"></a>Safely get any property of an object</h3>
+<hr />
+<p>Example - get the value of ‘transaction.lineItems’ from a digitalData event object:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_get</span><span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="s1">'transaction.lineItems'</span><span class="p">);</span> <span class="c1">// lineItems array [...]</span>
+</code></pre>
+</div>
+
+<h3 id="safely-get-any-digitaldata-property"><a name="_digitalData"></a>Safely get any digitalData property</h3>
+<hr />
+<p>Example - get the value of ‘transaction.lineItems’ from the digitalData object:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_digitalData</span><span class="p">(</span><span class="s1">'transaction.lineItems'</span><span class="p">);</span> <span class="c1">// lineItems array [...]</span>
+</code></pre>
+</div>
+
+<h3 id="load-pixel"><a name="_loadPixel"></a>Load pixel</h3>
+<hr />
+<p>Any number of attributes is supported.
+Example - load pixel from https://test.com/pixel.png:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_loadPixel</span><span class="p">({</span><span class="na">src</span><span class="p">:</span> <span class="s1">'https://test.com/pixel.png'</span><span class="p">,</span> <span class="na">id</span><span class="p">:</span> <span class="s1">'admit_ad'</span><span class="p">});</span>
+</code></pre>
+</div>
+
+<h3 id="load-script"><a name="_loadScript"></a>Load script</h3>
+<hr />
+<p>Any number of attributes is supported.
+Example - load script from https://test.com/script.js:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_loadScript</span><span class="p">({</span><span class="na">src</span><span class="p">:</span> <span class="s1">'https://test.com/script.js'</span><span class="p">,</span> <span class="na">id</span><span class="p">:</span> <span class="s1">'google'</span><span class="p">});</span>
+</code></pre>
+</div>
+
+<h3 id="load-iframe"><a name="_loadIframe"></a>Load iframe</h3>
+<hr />
+<p>Any number of attributes is supported.
+Example - load iframe from https://test.com/window:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_loadIframe</span><span class="p">({</span><span class="na">src</span><span class="p">:</span> <span class="s1">'https://test.com/window'</span><span class="p">,</span> <span class="na">style</span><span class="p">:</span> <span class="s1">'display: none;'</span><span class="p">});</span>
+</code></pre>
+</div>
+
+<h3 id="load-link"><a name="_loadLink"></a>Load link</h3>
+<hr />
+<p>Any number of attributes is supported.
+Example - load link from https://test.com/style.css:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_loadLink</span><span class="p">({</span><span class="na">href</span><span class="p">:</span> <span class="s1">'https://test.com/style.css'</span><span class="p">,</span> <span class="na">type</span><span class="p">:</span> <span class="s2">"text/css"</span><span class="p">});</span>
+</code></pre>
+</div>
+
+<h3 id="safely-get-any-window-property"><a name="_global"></a>Safely get any window property</h3>
+<hr />
+<p>Example - Get the value of window.settings.mobile_app:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_global</span><span class="p">(</span><span class="s1">'settings.mobile_app'</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<h3 id="get-an-array-of-elements-by-css-selector"><a name="_global"></a>Get an array of elements by CSS-selector</h3>
+<hr />
+<p>Example - Get an array of elements which have the ‘logo’ id:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_domQuery</span><span class="p">(</span><span class="s1">'#logo'</span><span class="p">);</span>
+</code></pre>
+</div>
 <blockquote>
   <p>The <code class="highlighter-rouge">_domQuery()</code> function, and the selectors in the triggers <strong>Click</strong> and <strong>Impression</strong> work by the following principle:</p>
   <ul>
@@ -584,6 +636,51 @@
     <li>if jQuery is loaded on the website, jQuery selectors are used.</li>
   </ul>
 </blockquote>
+
+<h3 id="safely-get-a-gtm-datalayer-variable"><a name="_dataLayer"></a>Safely get a GTM dataLayer variable</h3>
+<hr />
+<p>Example - Get the value of ‘ecommerce.purchase’ from the dataLayer:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_dataLayer</span><span class="p">(</span><span class="s1">'ecommerce.purchase'</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<h3 id="get-data-from-a-remote-server-using-ajax"><a name="_fetch"></a>Get data from a remote server using ajax</h3>
+<hr />
+<p>Example - Get data about the cart contents from the ‘/ajax?cart’ link:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="k">return</span> <span class="nx">_fetch</span><span class="p">(</span><span class="s1">'/ajax?cart'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+
+<h3 id="delay-before-the-handler-returns-the-result"><a name="_timeout"></a>Delay before the handler returns the result</h3>
+<hr />
+<p>Example - Send an event with a delay of 1500 milliseconds:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="k">return</span> <span class="nx">_timeout</span><span class="p">(</span><span class="mi">1500</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="na">name</span><span class="p">:</span> <span class="s1">'Event With Timeout'</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+
+<h3 id="try-calling-a-function-several-times"><a name="_retry"></a>Try calling a function several times</h3>
+<hr />
+<p>The function takes 3 arguments, the function to be called, the number of attempts, the interval between the attempts.
+Example - Call function X every Y milliseconds, if the function returns an error, try again Z times:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_retry</span><span class="p">(</span><span class="nx">X</span><span class="p">,</span> <span class="nx">Z</span><span class="p">,</span> <span class="nx">Y</span><span class="p">);</span>
+</code></pre>
+</div>
+<blockquote>
+  <p>The arguments Z and Y are optional, the default interval is 1000 milliseconds, the default number of attempts is 5.</p>
+</blockquote>
+
+<p>Example - Call the window.externalLib.method() function every 2000 milliseconds, if the function returns an error, try again 10 times:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">_retry</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nb">window</span><span class="p">.</span><span class="nx">externalLib</span><span class="p">.</span><span class="nx">method</span><span class="p">()</span>
+<span class="p">},</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2000</span><span class="p">);</span>
+</code></pre>
+</div>
 
 
                     </div>
