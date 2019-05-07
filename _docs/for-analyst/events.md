@@ -35,7 +35,7 @@ SegmentStream has 3 basic triggers:
 * Click
 * Impression
 
->Important! SegmentStream has 1 built-in event - Viewed Page. This event occurs when the SegmentStream library is fully loaded.
+> Important! The default SegmentStream client library always sends a built-in Viewed Page event after loading. This event can be disabled by turning off the [Automatic sending of the Viewed Page event](/for-analyst/settings#sendViewedPageEvent) option in the project settings.
 
 ![](/img/events.1.png)
 
