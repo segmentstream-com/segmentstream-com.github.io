@@ -83,6 +83,11 @@ $(document).ready(function() {
         $(".drop-menu.ecommerceRU").toggle();
     });
 
+    $(".nav-header.dataDownloadRU").click(function() {
+        $(this).toggleClass("active");
+        $(".drop-menu.dataDownloadRU").toggle();
+    });
+
     $('#myBtn').click(function() {
         $("html, body").animate({ scrollTop: 0 }, "fast");
     });

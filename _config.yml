@@ -26,7 +26,8 @@ sections: [
     ['ecommerceRU', 'Внедрение в ecommerce'],
     ['digitaldataRU', 'Список переменных'],
     ['eventsRU', 'Список событий'],
-    ['integrationsRU', 'Список интеграций']
+    ['integrationsRU', 'Список интеграций'],
+    ['dataDownloadRU', 'Автоматическая загрузка данных']
 ]
 
 # Keep as an empty string if served up at the root. If served up at a specific
