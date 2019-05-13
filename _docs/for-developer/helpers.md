@@ -31,9 +31,9 @@ They can be used in the setup of variables, events, and scripts.
 ### <a name="_queryParam"></a>Get URL parameter value - _queryParam
 ------
 ```javascript
-_queryParam(string);
+_queryParam(paramName);
 ```
-Where `string` is the name of the query parameter.
+Where `paramName` is the name of the query parameter - type `string`.
 
 Get the value of the parameter on the page www.test.ru?q=blue%20ball:
 ```javascript
@@ -44,9 +44,9 @@ _queryParam('q'); // blue%20ball
 ### <a name="_cookie"></a>Get cookie value - _ga
 ------
 ```javascript
-_cookie(string);
+_cookie(cookieName);
 ```
-Where `string` is the name of the cookie.
+Where `cookieName` is the name of the cookie - type `string`.
 
 Get the GA cookie value:
 ```javascript
@@ -56,9 +56,9 @@ _cookie('_ga'); // GA1.2.1409919348.1513159051
 ### <a name="_get"></a>Safely get any property of an object - _get
 ------
 ```javascript
-_get(object, string);
+_get(object, path);
 ```
-Where `string` is the path inside the `object`.
+Where `path` is the path inside the `object` - types `string` and `object` respectively.
 
 Get the value of 'transaction.lineItems' from a digitalData event object:
 ```javascript
@@ -68,9 +68,9 @@ _get(event, 'transaction.lineItems'); // lineItems array [...]
 ### <a name="_digitalData"></a>Safely get any digitalData property - _digitalData
 ------
 ```javascript
-_digitalData(string);
+_digitalData(path);
 ```
-Where `string` is the path inside the digitalData object.
+Where `path` is the path inside the digitalData object - type `string`.
 
 Get the value of 'transaction.lineItems' from the digitalData object:
 ```javascript
@@ -82,11 +82,12 @@ _digitalData('transaction.lineItems'); // lineItems array [...]
 Any number of attributes is supported.
 ```javascript
 _loadPixel({
-  src: 'link to pixel',
-  id: 'id of pixel',
+  src: 'pixelLink',
+  id: 'pixelId',
   //...any other attributes
 });
 ```
+Where `pixelLink` is the link to the pixel and `pixelId` is the id - type `string`.
 
 Load pixel from https://example.com/pixel.png:
 ```javascript
@@ -98,11 +99,12 @@ _loadPixel({src: 'https://example.com/pixel.png', id: 'admit_ad'});
 Any number of attributes is supported.
 ```javascript
 _loadScript({
-  src: 'link to script',
-  id: 'id of script',
+  src: 'scriptLink',
+  id: 'scriptId',
   //...any other attributes
 });
 ```
+Where `scriptLink` is the link to the script and `scriptId` is the id - type `string`.
 
 Load script from https://example.com/script.js:
 ```javascript
@@ -114,12 +116,12 @@ _loadScript({src: 'https://example.com/script.js', id: 'google'});
 Any number of attributes is supported.
 ```javascript
 _loadIframe({
-  src: 'link to iframe',
-  id: 'id of iframe',
-  style: 'display: none;',
+  src: 'iframeLink',
+  id: 'iframeId',
   //...any other attributes
 });
 ```
+Where `iframeLink` is the link to the iframe and `iframeId` is the id - type `string`.
 
 Load iframe from https://example.com/window:
 ```javascript
@@ -131,11 +133,12 @@ _loadIframe({src: 'https://example.com/window', style: 'display: none;'});
 Any number of attributes is supported.
 ```javascript
 _loadLink({
-  src: 'link path',
-  type: 'link type',
+  src: 'fileLink',
+  type: 'fileType',
   //...any other attributes
 });
 ```
+Where `fileLink` is the link to the file and `fileType` is the type - type `string`.
 
 Load link from https://example.com/style.css:
 ```javascript
@@ -145,9 +148,9 @@ _loadLink({href: 'https://example.com/style.css', type: "text/css"});
 ### <a name="_global"></a>Safely get any window property - _global
 ------
 ```javascript
-_global(string);
+_global(path);
 ```
-Where `string` is the path inside the window object.
+Where `path` is the path inside the window object - type `string`.
 
 Get the value of window.settings.mobile_app:
 ```javascript
@@ -157,9 +160,9 @@ _global('settings.mobile_app');
 ### <a name="_global"></a>Get an array of elements by CSS-selector - _global
 ------
 ```javascript
-_domQuery(string);
+_domQuery(cssSelector);
 ```
-Where `string` is the CSS-selector.
+Where `cssSelector` is the CSS-selector - type `string`.
 
 Get an array of elements which have the 'logo' id:
 ```javascript
@@ -172,9 +175,9 @@ _domQuery('#logo');
 ### <a name="_dataLayer"></a>Safely get a GTM dataLayer variable - _dataLayer
 ------
 ```javascript
-_dataLayer(string);
+_dataLayer(path);
 ```
-Where `string` is a path inside a _dataLayer event object.
+Where `path` is a path inside a _dataLayer event object - type `string`.
 
 Get the value of 'ecommerce.purchase' from the dataLayer:
 ```javascript
@@ -184,11 +187,11 @@ _dataLayer('ecommerce.purchase');
 ### <a name="_fetch"></a>Get data from a remote server using ajax - _fetch
 ------
 ```javascript
-return _fetch(string, function(result) {
+return _fetch(link, function(result) {
   return result;
 });
 ```
-Where `string` is the route to the server, and `result` is the data from the server response.
+Where `link` is the route to the server, and `result` is the data from the server response - types `string`.
 
 Get data about the cart contents from the '/ajax?cart' link:
 ```javascript
@@ -200,11 +203,11 @@ return _fetch('/ajax?cart', function(result) {
 ### <a name="_timeout"></a>Delay before the handler returns the result - _timeout
 ------
 ```javascript
-return _timeout(number, function() {
+return _timeout(delay, function() {
   code
 });
 ```
-Where `number` is the length of the delay in milliseconds, and `code` is the code that should be executed after the delay.
+Where `delay` (type `number`) is the length of the delay in milliseconds, and `code` is the code that should be executed after the delay.
 
 Send an event with a delay of 1500 milliseconds:
 ```javascript
@@ -218,11 +221,12 @@ return _timeout(1500, function() {
 ### <a name="_retry"></a>Try calling a function several times - _retry
 ------
 The function takes 3 arguments, the function to be called, the number of attempts, the interval between the attempts.
-Call function X every Y milliseconds, if the function returns an error, try again Z times:
 ```javascript
-_retry(X, Z, Y);
+_retry(callbackFunction, retryQuantity, retryInterval);
 ```
-> The arguments Z and Y are optional, the default interval is 1000 milliseconds, the default number of attempts is 5.
+Call `callbackFunction` every `retryInterval` milliseconds, if the function throws an error, try again `retryQuantity` times - types `function`, `number`, `number` respectively.
+
+> The arguments `retryQuantity` and `retryInterval` are optional, the default interval is 1000 milliseconds, the default number of attempts is 5.
 
 Possible use case:
 An external library is loaded asynchronously, we don't know how long it will take to load, so in order to avoid any errors, we will use the following code.

@@ -32,9 +32,9 @@ order: 5
 ### <a name="_queryParam"></a>Получить значение параметра URL - _queryParam
 ------
 ```javascript
-_queryParam(string);
+_queryParam(paramName);
 ```
-Get `string` название параметра URL.
+Где `paramName` название параметра URL - тип `string`.
 
 Получить значение параметра у страницы www.test.ru?q=blue%20ball:
 ```javascript
@@ -45,9 +45,9 @@ _queryParam('q'); // blue%20ball
 ### <a name="_cookie"></a>Получить значение куки по ее имени - _cookie
 ------
 ```javascript
-_cookie(string);
+_cookie(cookieName);
 ```
-Get `string` название куки.
+Где `cookieName` название куки - тип `string`.
 
 Получить значение куки GA:
 ```javascript
@@ -57,9 +57,9 @@ _cookie('_ga'); // GA1.2.1409919348.1513159051
 ### <a name="_get"></a>Безопасно получить любое свойство любого объекта - _get
 ------
 ```javascript
-_get(object, string);
+_get(object, path);
 ```
-Где `string` это путь внутри объекта `object`.
+Где `path` это путь внутри объекта `object` - типы `string` и `object` соответственно.
 
 Получить значение 'transaction.lineItems' из события digitalData:
 ```javascript
@@ -69,9 +69,9 @@ _get(event, 'transaction.lineItems'); // массив lineItems [...]
 ### <a name="_digitalData"></a>Безопасно получить любое свойство объекта digitalData - _digitalData
 ------
 ```javascript
-_digitalData(string);
+_digitalData(path);
 ```
-Где `string` это путь внутри объекта digitalData.
+Где `path` это путь внутри объекта digitalData - тип `string`.
 
 Получить значение 'transaction.lineItems' из объекта digitalData:
 ```javascript
@@ -83,11 +83,12 @@ _digitalData('transaction.lineItems'); // массив lineItems [...]
 Поддерживается любое количество дополнительных атрибутов.
 ```javascript
 _loadPixel({
-  src: 'ссылка на пиксель',
-  id: 'id пикселя',
+  src: 'pixelLink',
+  id: 'pixelId',
   //...другие атрибуты
 });
 ```
+Где `pixelLink` это ссылка на пиксель, `pixelId` идентификатор - типы `string`.
 
 Загрузить пиксель https://example.com/pixel.png:
 ```javascript
@@ -99,11 +100,12 @@ _loadPixel({src: 'https://example.com/pixel.png', id: 'admit_ad'});
 Поддерживается любое количество дополнительных атрибутов.
 ```javascript
 _loadScript({
-  src: 'ссылка на скрипт',
-  id: 'id скрипта',
+  src: 'scriptLink',
+  id: 'scriptId',
   //...другие атрибуты
 });
 ```
+Где `scriptLink` это ссылка на скрипт, `scriptId` идентификатор - типы `string`.
 
 Загрузить скрипт https://example.com/script.js:
 ```javascript
@@ -115,11 +117,12 @@ _loadScript({src: 'https://example.com/script.js', id: 'google'});
 Поддерживается любое количество дополнительных атрибутов.
 ```javascript
 _loadIframe({
-  src: 'ссылка на iframe',
-  style: 'display: none;',
+  src: 'iframeLink',
+  style: 'iframeStyles',
   //...другие атрибуты
 });
 ```
+Где `iframeLink` это ссылка на iframe, `iframeStyles` стили - типы `string`.
 
 Загрузить Iframe https://example.com/window:
 ```javascript
@@ -131,23 +134,24 @@ _loadIframe({src: 'https://example.com/window', style: 'display: none;'});
 Поддерживается любое количество дополнительных атрибутов.
 ```javascript
 _loadLink({
-  src: 'ссылка на файл',
-  type: 'тип файла',
+  src: 'fileLink',
+  type: 'fileType',
   //...другие атрибуты
 });
 ```
+Где `fileLink` это ссылка на файл, `fileType` тип файла - типы `string`.
 
 Загрузить ссылку https://example.com/style.css:
 ```javascript
-_loadLink({src: 'https://example.com/style.ss', type: "text/css"});
+_loadLink({src: 'https://example.com/style.ss', type: 'text/css'});
 ```
 
 ### <a name="_global"></a>Безопасно получить любое свойство объекта window - _global
 ------
 ```javascript
-_global(string);
+_global(path);
 ```
-Где `string` это путь внутри объекта window.
+Где `path` это путь внутри объекта window - тип `string`.
 
 Получить значение window.settings.mobile_app:
 ```javascript
@@ -157,9 +161,9 @@ _global('settings.mobile_app');
 ### <a name="_domQuery"></a>Получить массив элементов по CSS-селектору - _domQuery
 ------
 ```javascript
-_domQuery(string);
+_domQuery(cssSelector);
 ```
-Где `string` CSS-селектор.
+Где `cssSelector` CSS-селектор - тип `string`.
 
 Получить значение элемента с id='logo':
 ```javascript
@@ -172,9 +176,9 @@ _domQuery('#logo');
 ### <a name="_dataLayer"></a>Безопасно получить переменную из GTM dataLayer - _dataLayer
 ------
 ```javascript
-_dataLayer(string);
+_dataLayer(path);
 ```
-Где `string` путь внутри объекта события _dataLayer.
+Где `path` путь внутри объекта события _dataLayer - тип `string`.
 
 Получить значение 'ecommerce.purchase' из dataLayer:
 ```javascript
@@ -184,11 +188,11 @@ _dataLayer('ecommerce.purchase');
 ### <a name="_fetch"></a>Забрать данные с удаленного сервера асинхронно - _fetch
 ------
 ```javascript
-return _fetch(string, function(result) {
+return _fetch(link, function(result) {
   return result;
 });
 ```
-Где `string` путь к серверу, и `result` данные в ответе сервера.
+Где `link` путь к серверу, и `result` данные в ответе сервера - типы `string`.
 
 Получить данные о корзине по ссылке '/ajax?cart':
 ```javascript
@@ -200,11 +204,11 @@ return _fetch('/ajax?cart', function(result) {
 ### <a name="_timeout"></a>Задержка перед тем как обработчик вернет результат - _timeout
 ------
 ```javascript
-return _timeout(number, function() {
+return _timeout(delay, function() {
   code
 });
 ```
-Где `number` длинна задержки в миллисекундах, и `code` код который должен воспроизвестись после задержки.
+Где `delay` (тип `number`) длинна задержки в миллисекундах, и `code` код который должен воспроизвестись после задержки.
 
 Отправить событие с задержкой 1500 миллисекунд:
 ```javascript
@@ -218,11 +222,12 @@ return _timeout(1500, function() {
 ### <a name="_retry"></a>Сделать несколько попыток вызвать функцию - _retry
 ------
 Функция принимает 3 аргумента, функцию которую надо вызывать, количество попыток, интервал между попытками.
-Вызывать функцию X каждые Y миллисекунды, если функция возвращает ошибку, повторить попытку Z раз:
+
 ```javascript
-_retry(X, Z, Y);
+_retry(callbackFunction, retryQuantity, retryInterval);
 ```
-> Аргументы Z и Y опциональные, по умолчанию интервал 1000 миллисекунд, число попыток - 5.
+Вызывать функцию `callbackFunction` каждые `retryInterval` миллисекунды, если функция возвращает ошибку, повторить попытку `retryQuantity` раз - типы `function`, `number`, `number` соответственно.
+> Аргументы retryQuantity и retryInterval опциональные, по умолчанию интервал 1000 миллисекунд, число попыток - 5.
 
 Возможный вариант использования:
 Внешняя библиотека загружается асинхронно, мы не знаем сколько времени потребуется для загрузки, поэтому чтобы избежать ошибок, мы будем использовать следующий код.
