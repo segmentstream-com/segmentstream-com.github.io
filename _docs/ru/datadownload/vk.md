@@ -1,6 +1,6 @@
 ---
 layout: page
-section: dataDownloadRU
+section: datadownloadRU
 title: "Vkontakte"
 order: 1
 ---
