@@ -19,14 +19,14 @@ order: 2
 ### <a name="0"></a>Введение
 ------
 Любое событие - это набор информации, который поступает в массив данных digitalData.events. Информация в массиве должна быть представлена в виде JavaScript объекта.
-Например, SegmentStream зарегистрирует событие с именем "Some event" в момент, когда будет выполнен следующий код:
+Например, SegmentStream зарегистрирует событие с именем "Some Event" в момент, когда будет выполнен следующий код:
 ```javascript
 digitalData.events.push({
-  name: 'Some event',
+  name: 'Some Event',
   value: 3000
 });
 ```
-Теперь SegmentStream может отправить информацию о событии "Some event" вместе со значением 3000 в любую систему, например в Google Analytics или Yandex Metrica.
+Теперь SegmentStream может отправить информацию о событии "Some Event" вместе со значением 3000 в любую систему, например в Google Analytics или Yandex Metrica.
 
 ### <a name="1"></a>Создание события
 ------
