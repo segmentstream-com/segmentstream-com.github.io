@@ -1,7 +1,7 @@
 ---
 layout: page
 section: integrationsRU
-title: "SegmentStream Streaming"
+title: "DDManager Streaming"
 order: 1
 ---
 
@@ -24,7 +24,7 @@ order: 1
 Чтобы настроить интеграцию с DDM Streaming:
 1. Создайте аккаунт в Google BigQuery и настройте права и роли.
 2. Авторизуйтесь на сайте [segmentstream.com](https://admin.segmentstream.com/) и перейдите к панели управления интеграциями
-3. Войдите на вкладку "Интеграции" и кликните по блоку с логотипом SegmentStream Streaming.
+3. Войдите на вкладку "Интеграции" и кликните по блоку с логотипом DDManager Streaming.
 4. В открывшейся панели - настройте интеграцию.
 
 ### <a name="1"></a>Настройка BigQuery
