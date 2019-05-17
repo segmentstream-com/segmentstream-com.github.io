@@ -1,25 +1,25 @@
 ---
 layout: page
-section: datadownloadRU
-title: "Google Ads"
+section: datasourcesRU
+title: "Facebook"
 order: 1
 ---
 
 >ВНИМАНИЕ! Для активации данного функционала необходимо включить и настроить интеграцию DDManager Streaming.
 
-### Импорт данных из Google Ads
+### Импорт данных из Facebook
 
 Подключение данного источника данных позволяет раз в 24 часа импортировать информацию о расходах за последние 7 дней в Google BigQuery.
 
-Данная интеграция доступна как для обычных рекламодателей, так и для рекламных агентств.
-
 ### Подключение и настройка
 
-![](/img/gl-a.1.png)
+![](/img/fb.1.png)
 
 Для того, чтобы включить этот источник данных, необходимо перейти в раздел "ЗАГРУЗКА ДАННЫХ → Автоматическая" (1), выбрать источник данных (2) и авторизоваться (3)
 
-![](/img/gl-a.2.png)
+### Настройка источника данных
+
+![](/img/fb.2.png)
 
 Укажите название (1).
 
@@ -35,15 +35,13 @@ order: 1
 
 ### Где взять ID рекламных кабинетов
 
-Авторизуйтесь в Google Ads с аккаунта, который имеет доступ к необходимой компании. В зависимости от того, сколько у вас аккаунтов создано скопируйте Customer ID. Если у вас более одного аккаунта, то вам нужно скопировать ID аккаунтов под цифрой 1. Если вы имеете в наличии только 1 аккаунт, то скопируйте ID под цифрой 2.
+Авторизуйтесь в Facebook с аккаунта, который имеет доступ к необходимой компании. На странице [https://business.facebook.com/select/](https://business.facebook.com/select/) выберите вашу компанию. В открывшемся окне вы увидите все ваши рекламные аккаунты. Для того, чтобы быстро скопировать ID - кликните по нему.
 
-Customer ID имеет следующий вид XXX-XXX-XXXX, где X - это цифра от 0 до 9.
-
-![](/img/gl-a.3.png)
+![](/img/fb.3.png)
 
 ### Куда попадают данные о расходах на рекламу
 
-Данные для этой интеграции будут записаны в таблицу с именем **googleAdsCosts_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}**
+Данные для этой интеграции будут записаны в таблицу с именем **facebookCosts_{ACCOUNT_ID}_{YYYYMMDD}**
 
 ### Структура таблицы
 
@@ -55,15 +53,6 @@ impressions | INTEGER | NULLABLE
 utmTerm | STRING | NULLABLE
 utmCampaign | STRING | NULLABLE
 utmContent | STRING | NULLABLE
-utmMedium | STRING | NULLABLE
-utmSource | STRING | NULLABLE
+utmMedium | STRING | REQUIRED
+utmSource | STRING | REQUIRED
 currency | STRING | NULLABLE
-
-### Поддерживаемые подстановки
-
-* lpurl
-* campaignid
-* adgroupid
-* creative
-* network
-* keyword

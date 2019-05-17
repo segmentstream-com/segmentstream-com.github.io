@@ -83,9 +83,9 @@ $(document).ready(function() {
         $(".drop-menu.ecommerceRU").toggle();
     });
 
-    $(".nav-header.datadownloadRU").click(function() {
+    $(".nav-header.datasourcesRU").click(function() {
         $(this).toggleClass("active");
-        $(".drop-menu.datadownloadRU").toggle();
+        $(".drop-menu.datasourcesRU").toggle();
     });
 
     $('#myBtn').click(function() {

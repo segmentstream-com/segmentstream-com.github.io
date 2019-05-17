@@ -1,6 +1,6 @@
 ---
 layout: page
-section: datadownloadRU
+section: datasourcesRU
 title: "Обзор"
 order: 0
 ---

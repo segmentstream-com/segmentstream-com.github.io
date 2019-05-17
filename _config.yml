@@ -27,7 +27,7 @@ sections: [
     ['digitaldataRU', 'Список переменных'],
     ['eventsRU', 'Список событий'],
     ['integrationsRU', 'Список интеграций'],
-    ['datadownloadRU', 'Автоматическая загрузка данных']
+    ['datasourcesRU', 'Автоматическая загрузка данных']
 ]
 
 # Keep as an empty string if served up at the root. If served up at a specific
