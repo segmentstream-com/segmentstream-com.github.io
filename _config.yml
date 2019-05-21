@@ -21,14 +21,7 @@ sections: [
     ['digitaldata', 'Variable list'],
     ['events', 'Events list'],
     ['integrations', 'Integration list'],
-    ['datasources', 'Automatic Data Import'],
-    ['analystRU', 'Аналитику'],
-    ['developerRU', 'Разработчику'],
-    ['ecommerceRU', 'Внедрение в ecommerce'],
-    ['digitaldataRU', 'Список переменных'],
-    ['eventsRU', 'Список событий'],
-    ['integrationsRU', 'Список интеграций'],
-    ['datasourcesRU', 'Автоматическая загрузка данных']
+    ['datasources', 'Automatic Data Import']
 ]
 
 # Keep as an empty string if served up at the root. If served up at a specific

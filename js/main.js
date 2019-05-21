@@ -19,8 +19,6 @@ $(document).ready(function() {
         $(".questionaire").find(".step2").show();
     });
 
-    //EN docs
-
     $(".nav-header.events").click(function() {
         $(this).toggleClass("active");
         $(".drop-menu.events").toggle();
@@ -54,43 +52,6 @@ $(document).ready(function() {
     $(".nav-header.datasources").click(function() {
         $(this).toggleClass("active");
         $(".drop-menu.datasources").toggle();
-    });
-
-    //RU docs
-
-    $(".nav-header.eventsRU").click(function() {
-        $(this).toggleClass("active");
-        $(".drop-menu.eventsRU").toggle();
-    });
-
-    $(".nav-header.analystRU").click(function() {
-        $(this).toggleClass("active");
-        $(".drop-menu.analystRU").toggle();
-    });
-
-    $(".nav-header.developerRU").click(function() {
-        $(this).toggleClass("active");
-        $(".drop-menu.developerRU").toggle();
-    });
-
-    $(".nav-header.integrationsRU").click(function() {
-        $(this).toggleClass("active");
-        $(".drop-menu.integrationsRU").toggle();
-    });
-
-    $(".nav-header.digitaldataRU").click(function() {
-        $(this).toggleClass("active");
-        $(".drop-menu.digitaldataRU").toggle();
-    });
-
-    $(".nav-header.ecommerceRU").click(function() {
-        $(this).toggleClass("active");
-        $(".drop-menu.ecommerceRU").toggle();
-    });
-
-    $(".nav-header.datasourcesRU").click(function() {
-        $(this).toggleClass("active");
-        $(".drop-menu.datasourcesRU").toggle();
     });
 
     $('#myBtn').click(function() {
