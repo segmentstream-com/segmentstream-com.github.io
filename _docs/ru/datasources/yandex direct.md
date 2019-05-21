@@ -43,7 +43,7 @@ order: 1
 
 (8) Utm параметры url для смарт-баннера, копируются из настроек рекламного кабинета Yandex.Direct: **Редактирование активных смарт-баннеров** → **Параметры в URL**.
 
-Пример: `utm_source=yandex&utm_medium=cpc&utm_campaign={campaign_id}*&utm_term={keyword}&utm_content={*hrase_id}`
+Пример: `utm_source=yandex&utm_medium=cpc&utm_campaign={campaign_id}&utm_term={keyword}&utm_content={phrase_id}`
 
 ## Настройка для рекламных агентств
 
