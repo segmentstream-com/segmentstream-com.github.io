@@ -6,26 +6,13 @@
         {% assign label = section[1] %}
         {% assign cat = cats | where:"name",attr | first %}
         {% assign things = cat.items | sort:"order" %}
-        {% if {{include.currenturl}} contains '/ru/' and {{attr}} contains 'RU' %}
             <li class="nav-header {{attr}} {% if {{include.currenturl}} contains {{category}} %} active {% endif %}">{{ label }}</li>
             {% for page in things %}
                 <li class="drop-menu {{attr}}{% if {{include.currenturl}} contains {{category}} %} active {% endif %} {% if page.url == {{include.currenturl}} %} current {% endif %}" data-order="{{ page.order }}">
                     <a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
                 </li>
             {% endfor %}
-        {% endif %}
-        {% unless {{include.currenturl}} contains '/ru/' %}
-        {% unless {{attr}} contains 'RU' %}
-            <li class="nav-header {{attr}} {% if {{include.currenturl}} contains {{category}} %} active {% endif %}">{{ label }}</li>
-            {% for page in things %}
-                <li class="drop-menu {{attr}}{% if {{include.currenturl}} contains {{category}} %} active {% endif %} {% if page.url == {{include.currenturl}} %} current {% endif %}" data-order="{{ page.order }}">
-                    <a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
-                </li>
-            {% endfor %}
-        {% endunless %}
-        {% endunless %}
     {% endfor %}
 <!-- List additional links. It is recommended to add a divider
     e.g. <li class="divider"></li> first to break up the content. -->
 </ul>
-
