@@ -51,6 +51,11 @@ $(document).ready(function() {
         $(".drop-menu.ecommerce").toggle();
     });
 
+    $(".nav-header.datasources").click(function() {
+        $(this).toggleClass("active");
+        $(".drop-menu.datasources").toggle();
+    });
+
     //RU docs
 
     $(".nav-header.eventsRU").click(function() {

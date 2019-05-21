@@ -21,6 +21,7 @@ sections: [
     ['digitaldata', 'Variable list'],
     ['events', 'Events list'],
     ['integrations', 'Integration list'],
+    ['datasources', 'Automatic Data Import'],
     ['analystRU', 'Аналитику'],
     ['developerRU', 'Разработчику'],
     ['ecommerceRU', 'Внедрение в ecommerce'],

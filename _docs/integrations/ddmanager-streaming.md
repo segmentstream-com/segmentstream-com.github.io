@@ -1,11 +1,11 @@
 ---
 layout: page
 section: integrations
-title: "Streaming"
+title: "DDManager Streaming"
 order: 1
 ---
 
-The built-in "Streaming" module allows you to collect raw data in Google BigQuery. After connecting the streaming module, SegmentStream starts sending all of your users behavior data to the BigQuery cloud data storage. The format of data storage completely corresponds to the DigitalData standard.
+The built-in "DDManager Streaming" module allows you to collect raw data in Google BigQuery. After connecting the streaming module, SegmentStream starts sending all of your users behavior data to the BigQuery cloud data storage. The format of data storage completely corresponds to the DigitalData standard.
 
 ### Page contents
 ------
