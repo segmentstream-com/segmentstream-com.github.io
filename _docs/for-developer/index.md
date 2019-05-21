@@ -38,14 +38,14 @@ The document will have "home" written in it if you are on the main page, "produc
 ------
 As it was noted above, the whole system is controlled by the program (library, script) SegmentStream. It is important to initialize the library in the correct place of the source code of your site. SegmentStream should be called on every page of the site.
 
-[Learn more about connecting](/for-developer/#snippet)
+[Learn more about connecting](/for-developer/snippet)
 
 ### <a name="2"></a>Events
 ------
 There is one drawer in the `digitalData` cabinet, which is called **events**. `digitalData.events` is an array, it can contain the same objects - events. Access to each event is carried out by the sequence number of its addition to the drawer, for example `digitalData.events[2]`. The event itself is an object that contains information about what happened.
 For example, when a page of a site is loaded, the `Viewed Page` event occurs. It is the very first event added to the array `digitalData.events`. <br />
 SegmentStream watches the array `digitalData.events` all the time. As soon as an event arrives in the array, SegmentStream enriches it with information from other object variables and sends it to connected marketing and analytics systems.
- - [Learn more about events](/for-developer/#events)
+ - [Learn more about events](/digitaldata/events)
  - [Creating events in the SegmentStream interface](/for-analyst/events)
 
 ### <a name="3"></a>Changes in digitalData without page reload
@@ -56,7 +56,7 @@ All these changes must be made using the changes method.
 
 > Although it is physically possible, do not modify the digitalData object without using the digitalData.changes [] method
 
-[Learn more about dynamically changing digitalData](/for-developer/#changes)
+[Learn more about dynamically changing digitalData](/digitaldata/changes)
 
 ### <a name="4"></a>Page HTML-markup
 ------
