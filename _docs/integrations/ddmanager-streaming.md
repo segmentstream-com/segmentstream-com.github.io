@@ -10,24 +10,24 @@ The built-in "DDManager Streaming" module allows you to collect raw data in Goog
 ### Page contents
 ------
 <ul class="page-navigation">
-  <li><a href="#0">Introduction</a></li>
-  <li><a href="#1">Setting up BigQuery</a></li>
-  <li><a href="#1_1">Google Cloud project ID</a></li>
-  <li><a href="#1_2">BigQuery dataset name</a></li>
-  <li><a href="#1_3">UTC offset</a></li>
-  <li><a href="#2">Custom dimensions</a></li>
-  <li><a href="#3">Custom metrics</a></li>
-  <li><a href="#4">Data schema</a></li>
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#settingUpBigQuery">Setting up BigQuery</a></li>
+  <li><a href="#googleCloudProjectID">Google Cloud project ID</a></li>
+  <li><a href="#bigQueryDatasetName">BigQuery dataset name</a></li>
+  <li><a href="#UTCOffset">UTC offset</a></li>
+  <li><a href="#customDimensions">Custom dimensions</a></li>
+  <li><a href="#customMetrics">Custom metrics</a></li>
+  <li><a href="#dataSchema">Data schema</a></li>
 </ul>
 
-### <a name="0"></a>Introduction
+### <a name="introduction"></a>Introduction
 Setting up the DDM Streaming integration:
 1. Create an account in Google BigQuery and configure the rights and roles.
 2. Log in to the [segmentstream.com](https://admin.segmentstream.com/) website and go to the integration management panel
 3. Enter the "Integration" tab and click on the block with the SegmentStream Streaming logo.
 4. In the panel that opens, configure the integration.
 
-### <a name="1"></a>Setting up BigQuery
+### <a name="settingUpBigQuery"></a>Setting up BigQuery
 ------
 1. Log in to Google with an account that has full access to BigQuery.
 2. Select a Google Cloud project or create a new one
@@ -45,25 +45,25 @@ Setting up the DDM Streaming integration:
 7. The "**Disconnect**" (3) button is needed to disconnect your Google account from SegmentStream. Data streaming will end after the disconnection, but the settings will be saved.
 ![](/img/integrations.ddmstreaming.20.png)
 
-### <a name="1_1"></a>Google Cloud project ID
+### <a name="googleCloudProjectID"></a>Google Cloud project ID
 Enter the Google Big Query project ID in the `Google Cloud project ID` field.
 The easiest way to find the project ID is on the [google cloud console main page](https://console.cloud.google.com/):
 1. Enter the console and select the required project from the drop-down list.
 2. Copy the Project ID from the corresponding `Project info` widget field
 ![](/img/integrations.ddmstreaming.1_2.png)
 
-### <a name="1_2"></a>BigQuery dataset name
+### <a name="bigQueryDatasetName"></a>BigQuery dataset name
 Type `ddmanager_streaming` into the BigQuery DataSet name.
 > We recommend using the `ddmanager_streaming` name. If you want the data to stream into another DataSet, specify its name instead of `ddmanager_streaming`. Use only Latin letters and underscores.
 
 
 
-### <a name="1_3"></a>UTC offset
+### <a name="UTCOffset"></a>UTC offset
 ------
 Select the time zone. For example, for all reports to be generated according to Moscow time, select "+03:00".
 
 
-### <a name="2"></a>Custom dimension
+### <a name="customDimensions"></a>Custom dimensions
 ------
 By default, DDMStreaming sends a certain set of variables to BigQuery. These variables are sufficient for most data analysis tasks. If you do not have enough variables, you can send custom variables along with each event.
 
@@ -83,7 +83,7 @@ In order to configure the transmission of custom dimensions (see screenshot belo
 
  ![](/img/integrations.ddmstreaming.1.png)
 
-### <a name="3"></a>Custom metrics
+### <a name="customMetrics"></a>Custom metrics
 ------
 Similarly to custom dimensions, SegmentStream can pass custom metrics.
 
@@ -99,7 +99,7 @@ In order to configure the transmission of custom metrics (see screenshot above):
  4. Specify the name of the variable in the right field
 
 
-### <a name="4"></a>Data schema
+### <a name="dataSchema"></a>Data schema
 ------
 
 Variable name | Data type | Comments

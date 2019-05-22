@@ -19,7 +19,7 @@ order: 1
 
 ![](/img/criteo_1.png)
 
-<a href="#0">Как создать API-аккаунт в Criteo</a>
+<a href="#APIAccountCriteo">Как создать API-аккаунт в Criteo</a>
 
 После авторизации нужно установить параметры источника данных.
 
@@ -56,7 +56,7 @@ utmSource | STRING | REQUIRED
 currency | STRING | NULLABLE
 
 
-## <a name="0"></a> Как создать API-аккаунт в Criteo
+## <a name="APIAccountCriteo"></a> Как создать API-аккаунт в Criteo
 
 1. Зайдите в свой аккаунт на [https://marketing.criteo.com](https://marketing.criteo.com/).
 2. Нажмите **Criteo Management Center** и выберите **Настройки Аккаунта**:

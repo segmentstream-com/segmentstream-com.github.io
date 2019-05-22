@@ -10,12 +10,12 @@ The array `digitalData.recommendation` contains `listing` objects  that describe
 ### Page contents
 ------
 <ul class="page-navigation">
-  <li><a href="#0">Introduction</a></li>
-  <li><a href="#1">What to do if the list of recommendations is formed by a third-party system?</a></li>
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#thirdPartySystems">What to do if the list of recommendations is formed by a third-party system?</a></li>
 </ul>
 
 
-### <a name="0"></a>Introduction
+### <a name="introduction"></a>Introduction
 ------
 The `digitalData.recommendation` array must be declared and filled in the source code of the page or after the AJAX-load of the list of recommendations.
 
@@ -45,7 +45,7 @@ window.digitalData = {
 
 [Detailed description of the `listing` object](/digitaldata/listing)
 
-### <a name="1"></a>What to do if the list of recommendations is formed by a third-party system?
+### <a name="thirdPartySystems"></a>What to do if the list of recommendations is formed by a third-party system?
 ------
 There are services that generate a list of recommendations on their side. After loading the page of your site, the service integrates the generated list into the code of your site. However, for the user, the integration list is loaded a little later than the main content of the page.
 

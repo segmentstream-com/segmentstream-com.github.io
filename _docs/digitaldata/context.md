@@ -10,17 +10,17 @@ The `digitalData.context` object contains variables that describe the environmen
 ### Page contents
 ------
 <ul class="page-navigation">
-  <li><a href="#0">Introduction</a></li>
-  <li><a href="#1">context.ip</a></li>
-  <li><a href="#2">context.userAgent</a></li>
-  <li><a href="#3">context.os</a></li>
-  <li><a href="#4">context.location</a></li>
-  <li><a href="#5">context.device</a></li>
-  <li><a href="#6">context.browser</a></li>
-  <li><a href="#7">context.campaign</a></li>
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#context.ip">context.ip</a></li>
+  <li><a href="#context.userAgent">context.userAgent</a></li>
+  <li><a href="#context.os">context.os</a></li>
+  <li><a href="#context.location">context.location</a></li>
+  <li><a href="#context.device">context.device</a></li>
+  <li><a href="#context.browser">context.browser</a></li>
+  <li><a href="#context.campaign">context.campaign</a></li>
 </ul>
 
-### <a name="0"></a>Introduction
+### <a name="introduction"></a>Introduction
 ------
 The `digitalData.context` object must be declared and filled in the source code of each page.
 
@@ -60,19 +60,19 @@ window.digitalData = {
 }
 ```
 
-### <a name="1"></a>context.ip
+### <a name="context.ip"></a>context.ip
 ------
 Data type: string.
 
 `context.ip` - **optional** variable which contains the user's ip-address
 
-### <a name="2"></a>context.userAgent
+### <a name="context.userAgent"></a>context.userAgent
 ------
 Data type: string. Filled automatically
 
 `context.userAgent` - contains information about the users browser and system
 
-### <a name="3"></a>context.os
+### <a name="context.os"></a>context.os
 ------
 Data type: object. Filled automatically
 
@@ -83,7 +83,7 @@ Path|Data Type|Description
 `context.os.name`|String|Name of the OS
 `context.os.version`|String|OS version
 
-### <a name="4"></a>context.location
+### <a name="context.location"></a>context.location
 ------
 Data type: object. Filled automatically
 
@@ -95,7 +95,7 @@ Path|Data Type|Description
 `context.location.country`|String|Country
 `context.location.region`|String|Region/State/County
 
-### <a name="5"></a>context.device
+### <a name="context.device"></a>context.device
 ------
 Data type: object. Filled automatically
 
@@ -107,7 +107,7 @@ Path|Data Type|Description
 `context.location.type`|String|Type of device: "desktop", "mobile", "tablet"
 `context.location.vendor`|String|Device manufacturer. Not relevant for desktops.
 
-### <a name="6"></a>context.browser
+### <a name="context.browser"></a>context.browser
 ------
 Data type: object. Filled automatically
 
@@ -119,7 +119,7 @@ Path|Data Type|Description
 `context.browser.name`|String|Browser name
 `context.browser.version`|String|Full information on the browser version
 
-### <a name="7"></a>context.campaign
+### <a name="context.campaign"></a>context.campaign
 ------
 Data type: object. Filled automatically
 

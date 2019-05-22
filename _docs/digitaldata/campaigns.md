@@ -10,18 +10,18 @@ The `digitalData.campaigns` array contains `campaign` objects, which describe in
 ### Page contents
 ------
 <ul class="page-navigation">
-  <li><a href="#0">Introduction</a></li>
-  <li><a href="#1">campaign.id</a></li>
-  <li><a href="#2">campaign.name</a></li>
-  <li><a href="#3">campaign.description</a></li>
-  <li><a href="#4">campaign.category</a></li>
-  <li><a href="#5">campaign.subcategory</a></li>
-  <li><a href="#6">campaign.design</a></li>
-  <li><a href="#7">campaign.position</a></li>
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#campaign.id">campaign.id</a></li>
+  <li><a href="#campaign.name">campaign.name</a></li>
+  <li><a href="#campaign.description">campaign.description</a></li>
+  <li><a href="#campaign.category">campaign.category</a></li>
+  <li><a href="#campaign.subcategory">campaign.subcategory</a></li>
+  <li><a href="#campaign.design">campaign.design</a></li>
+  <li><a href="#campaign.position">campaign.position</a></li>
 </ul>
 
 
-### <a name="0"></a>Introduction
+### <a name="introduction"></a>Introduction
 ------
 The `digitalData.campaigns` array must be declared and filled in the source code page for all the banners present on the page.
 >If the banner is in a carousel and it is not initially visible, the information about such banner should be present in the array `digitalData.campaigns`.
@@ -61,7 +61,7 @@ window.digitalData = {
 
 Below each variable of the `campaign` object is described in detail.
 
-### <a name="1"></a>campaign.id
+### <a name="campaign.id"></a>campaign.id
 ------
 Data type: string.
 
@@ -69,7 +69,7 @@ Data type: string.
 
 >The value of the variable `campaign.id` must be unique for each banner within a single page. If a banner is shown on multiple pages, the value of `campaign.id` can be repeated from page to page.
 
-### <a name="2"></a>campaign.name
+### <a name="campaign.name"></a>campaign.name
 ------
 Data type: string.
 
@@ -77,13 +77,13 @@ Data type: string.
 
 >The value of the variable `campaign.name` will appear in the GA Internal Promotions reports
 
-### <a name="3"></a>campaign.description
+### <a name="campaign.description"></a>campaign.description
 ------
 Data type: string.
 
 `campaign.name` - contains a brief description of the banner.
 
-### <a name="4"></a>campaign.category
+### <a name="campaign.category"></a>campaign.category
 ------
 Data type: string.
 
@@ -91,7 +91,7 @@ Data type: string.
 
 >This variable is needed to categorize your internal campaigns. If you place banners of partners or advertisers, you can pass the name of the company to the variable `campaign.category`.
 
-### <a name="5"></a>campaign.subcategory
+### <a name="campaign.subcategory"></a>campaign.subcategory
 ------
 Data type: string.
 
@@ -99,13 +99,13 @@ Data type: string.
 
 >This variable is needed to more accurately categorize your internal campaigns. This variable can contain the essence of the marketing campaign for which the banner was created: "Novelties", "Sale", "Product of the Day", etc.
 
-### <a name="6"></a>campaign.design
+### <a name="campaign.design"></a>campaign.design
 ------
 Data type: string.
 
 `campaign.design` - contains a short description of the banner's visual attributes, for example: 200x300, 240x120
 
-### <a name="7"></a>campaign.position
+### <a name="campaign.position"></a>campaign.position
 ------
 Data type: string.
 

@@ -11,25 +11,25 @@ Below is an example of filling the `digitalData` data layer on checkout pages. M
 ### Page contents
 ------
 <ul class="page-navigation">
-  <li><a href="#0">Introduction</a></li>
-  <li><a href="#1">page</a></li>
-  <li><a href="#2">website</a></li>
-  <li><a href="#3">user</a></li>
-  <li><a href="#4">cart</a></li>
-  <li><a href="#5">version</a></li>
-  <li><a href="#6">campaigns</a></li>
-  <li><a href="#7">recommendation</a></li>
-  <li><a href="#8">Whole object</a></li>
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#page">page</a></li>
+  <li><a href="#cart">cart</a></li>
+  <li><a href="#website">website</a></li>
+  <li><a href="#user">user</a></li>
+  <li><a href="#version">version</a></li>
+  <li><a href="#campaigns">campaigns</a></li>
+  <li><a href="#recommendation">recommendation</a></li>
+  <li><a href="#wholeObject">Whole object</a></li>
 </ul>
 
-### <a name="0"></a>Introduction
+### <a name="introduction"></a>Introduction
 ------
 On the page for registering an online store order, the following objects must be declared and filled in:
  - Required:  `page`, `website`, `user`, `cart`, `version`
 
 >As a rule, there are no recommendations and banner blocks on checkout pages.
 
-### <a name="1"></a>page
+### <a name="page"></a>page
 ------
 You need to declare and fill in only 2 variables in the `digitalData.page` object. All other variables will be automatically filled by the SegmentStream library.
 
@@ -49,7 +49,7 @@ Example:
   }
 ```
 
-### <a name="4"></a>cart
+### <a name="cart"></a>cart
 ------
 As the user completes checkout steps, the `digitalData.cart` object is enriched with new variables:
 `vouchers`, `voucherDiscount`, `shippingCost`, `shippingMethod`, `paymentMethod`.
@@ -100,7 +100,7 @@ window.digitalData = {
 }
 ```
 
-### <a name="2"></a>website
+### <a name="website"></a>website
 ------
 You need to declare and fill in only 6 variables in the `digitalData.website` object. The following 3 variables are required: `website.type`,` website.currency`, `website.environment`. The remaining variables depend on the characteristics of your site.
 
@@ -122,7 +122,7 @@ Example:
   }
 ```
 
-### <a name="3"></a>user
+### <a name="user"></a>user
 ------
 The composition of the `digitalData.user` object strongly depends on the requirements of the project. We recommend that you fill at least the following variables: `userId`, `user.email`, `user.isLoggedIn`, `user.firstName`, `user.isSubscribed`
 
@@ -147,7 +147,7 @@ window.digitalData = {
 }
 ```
 
-### <a name="5"></a>version
+### <a name="version"></a>version
 ------
 The `digitalData.version` variable must be declared and filled when loading each page of the site.
 
@@ -162,7 +162,7 @@ window.digitalData = {
 }
 ```
 
-### <a name="8"></a>Whole object
+### <a name="wholeObject"></a>Whole object
 ------
 В итоге, ваш код будет похож на:
 ```javascript
