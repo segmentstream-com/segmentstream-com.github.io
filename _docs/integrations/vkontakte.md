@@ -16,15 +16,15 @@ Vkontakte is a social network with a small set of advertising tools. Vkontakte i
 ### Page contents
 ------
 <ul class="page-navigation">
-  <li><a href="#0">Introduction</a></li>
-  <li><a href="#1">Vkontakte pixel ID</a></li>
-  <li><a href="#2">Custom events</a></li>
-  <li><a href="#3">Custom events (old version)</a></li>
-  <li><a href="#4">Default pricelist ID for dynamic retargeting</a></li>
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#vkontaktePixelID">Vkontakte pixel ID</a></li>
+  <li><a href="#customEvents">Custom events</a></li>
+  <li><a href="#customEventsOld">Custom events (old version)</a></li>
+  <li><a href="#defaultPricelistID">Default pricelist ID for dynamic retargeting</a></li>
 </ul>
 
 
-### <a name="0"></a>Introduction
+### <a name="introduction"></a>Introduction
 ------
 Using SegmentStream, you can fully integrate Vkontakte with your site.
 
@@ -40,7 +40,7 @@ To configure the Vkontakte integration:
 You can read more details about the settings below.
 
 
-### <a name="1"></a>Vkontakte pixel ID
+### <a name="vkontaktePixelID"></a>Vkontakte pixel ID
 ------
 You can find the Pixel ID in the section: Advertising > Targeting > Retargeting > Pixels.
 
@@ -49,7 +49,7 @@ You can find the Pixel ID in the section: Advertising > Targeting > Retargeting 
 
 Copy the ID and paste it into the "Vkontakte pixel ID" field of the integration settings window.
 
-### <a name="2"></a>Custom events
+### <a name="customEvents"></a>Custom events
 ------
 SegmentStream can pass any event to Vkontakte.
 To set up the transmission of an event you have to fill in two fields:
@@ -60,14 +60,14 @@ You can add an unlimited number of events.
 
 [Vkontakte guide on events](https://vk.com/support?act=home_ads&union_id=1602826263)
 
-### <a name="3"></a>Custom events (old version)
+### <a name="customEventsOld"></a>Custom events (old version)
 ------
 In the deprecated version of the API for each event in the VKontakte interface you need to create a special tracker.
 To set up the transmission of data to those trackers you have to fill in two fields:
 1. Left - The name of the event that is pushed to the `digitalData.events` array, for example: [Completed Transaction](/events/completed-transaction)
 2. Right - URL of the tracker from the VKontakte interface.
 
-### <a name="4"></a>Default pricelist ID for dynamic retargeting
+### <a name="defaultPricelistID"></a>Default pricelist ID for dynamic retargeting
 ------
 For the correct operation of the dynamic retargeting module, the following events are required:
 * [Viewed Page](/events/viewed-page)

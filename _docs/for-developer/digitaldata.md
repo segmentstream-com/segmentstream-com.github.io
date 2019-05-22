@@ -17,11 +17,11 @@ digitalData is a global JavaScript object. It must be declared as high as possib
 ### Page contents
 ------
 <ul class="page-navigation">
-  <li><a href="#0">Introduction</a></li>
-  <li><a href="#1">How to fill the object</a></li>
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#howToFill">How to fill the object</a></li>
 </ul>
 
-### <a name="0"></a>Introduction
+### <a name="introduction"></a>Introduction
 ------
 Let's analyze the structure of the object in more detail. The object consists of other objects and arrays. All these objects and arrays must be filled with information in accordance with the standard described in this documentation.
 
@@ -47,7 +47,7 @@ window.digitalData = {
 
 The detailed composition of each variable is discussed below.
 
-### <a name="1"></a>How to fill the object
+### <a name="howToFill"></a>How to fill the object
 ------
 digitalData can be represented as a structured description of the page that the visitor sees on the screen of his monitor. The composition of the digitalData object depends on the content of the page. Here are some examples:
  - The user loaded a product page and sees detailed information about the product: image, name, price, brand, etc. All this information should be contained in the object `digitalData.product`

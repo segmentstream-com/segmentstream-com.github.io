@@ -11,12 +11,12 @@ Events is one of the most important components of `digitalData`. All information
 ### Page contents
 ------
 <ul class="page-navigation">
-  <li><a href="#0">Introduction</a></li>
-  <li><a href="#1">Event creation</a></li>
-  <li><a href="#4">Event naming convention</a></li>
+  <li><a href="#intro">Introduction</a></li>
+  <li><a href="#eventCreation">Event creation</a></li>
+  <li><a href="#eventNaming">Event naming convention</a></li>
 </ul>
 
-### <a name="0"></a>Introduction
+### <a name="intro"></a>Introduction
 ------
 Any event is a set of information that enters the digitalData.events data array. The information in the array must be represented as a javaScript object.
 For example: SegmentStream will register an event with the name "Some Event" when the following code is executed:
@@ -28,7 +28,7 @@ digitalData.events.push({
 ```
 Now SegmentStream can send information about the event "Some Event" with the value 3000 to any system, for example, Google Analytics and Yandex Metrika.
 
-### <a name="1"></a>Event creation
+### <a name="eventCreation"></a>Event creation
 ------
 SegmentStream has 3 basic triggers:
 * Event
@@ -95,7 +95,7 @@ return {
 };
 ```
 
-### <a name="4"></a>Event naming convention
+### <a name="eventNaming"></a>Event naming convention
 ------
 Standard SegmentStream integrations work with a list of reserved events, for example: [Viewed Product Detail](/events/viewed-product-detail), [Viewed Checkout Step](/events/viewed-checkout-step), [Completed Transaction](/events/completed-transaction), etc.
 The complete list of reserved events is located in the side menu under "Events List". Use the event names listed in this list.

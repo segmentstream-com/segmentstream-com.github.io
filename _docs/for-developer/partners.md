@@ -15,19 +15,19 @@ In order to correctly monitor the interaction of site visitors with blocks of co
 ### Page contents
 ------
 <ul class="page-navigation">
-  <li><a href="#0">Introduction</a></li>
-  <li><a href="#1">Tracking an arbitrary event</a></li>
-  <li><a href="#2">Tracking product impressions in a list</a></li>
-  <li><a href="#3">Tracking product clicks in a list</a></li>
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#trackingArbitraryEvent">Tracking an arbitrary event</a></li>
+  <li><a href="#trackingProductImpressions">Tracking product impressions in a list</a></li>
+  <li><a href="#trackingProductClicks">Tracking product clicks in a list</a></li>
 </ul>
 
-### <a name="0"></a> Introduction
+### <a name="introduction"></a> Introduction
 ------
 The connected system gets access to the global `digitalData` object after its js-library is loaded. Now all events that occur with embedded content blocks must be pushed into the `digitalData.events` array. **SegmentStream** will intercept these events and send them to [Google Analytics](/integrations/google-analytics), [Yandex.Metrica](/integrations/yandex-metrica) or any other integration.
 
 Typical cases are described below.
 
-### <a name="1"></a> Tracking an arbitrary event
+### <a name="trackingArbitraryEvent"></a> Tracking an arbitrary event
 ------
 `name`, `source` are required variables for third-party system events. The following variables: `category`, `action`, `label`, `value`, `nonInteraction` are optional and are necessary for sending the corresponding parameters to Google Analytics.
 
@@ -44,7 +44,7 @@ digitalData.events.push({
 ```
 
 
-### <a name="2"></a> Tracking product impressions in a list
+### <a name="trackingProductImpressions"></a> Tracking product impressions in a list
 ------
 >The product impression event is semantic (reserved). Use the template below to correctly send information to Google Analytics.
 
@@ -99,7 +99,7 @@ where,
 * `product.unitSalePrice` -  Number, not a string. Price including discount. If there is no discount, unitPrice = unitSalePrice. Required field.
 * `product.variant` - Could contain the size, color or other extra feature
 
-### <a name="3"></a> Tracking product clicks in a list
+### <a name="trackingProductClicks"></a> Tracking product clicks in a list
 ------
 >The product click event is semantic (reserved). Use the template below to correctly send information to Google Analytics.
 

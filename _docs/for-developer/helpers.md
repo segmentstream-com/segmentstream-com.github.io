@@ -157,7 +157,7 @@ Get the value of window.settings.mobile_app:
 _global('settings.mobile_app');
 ```
 
-### <a name="_global"></a>Get an array of elements by CSS-selector - _global
+### <a name="_domQuery"></a>Get an array of elements by CSS-selector - _domQuery
 ------
 ```javascript
 _domQuery(cssSelector);

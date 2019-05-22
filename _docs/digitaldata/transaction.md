@@ -12,26 +12,26 @@ The `digitalData.transaction` object contains variables that describe the number
 ### Page contents
 ------
 <ul class="page-navigation">
-  <li><a href="#0">Introduction</a></li>
-  <li><a href="#1">transaction.orderId</a></li>
-  <li><a href="#2">transaction.isReturning</a></li>
-  <li><a href="#3">transaction.cartId</a></li>
-  <li><a href="#4">transaction.isFirst</a></li>
-  <li><a href="#4_1">transaction.contactInfo</a></li>
-  <li><a href="#5">transaction.currency</a></li>
-  <li><a href="#6">transaction.subtotal</a></li>
-  <li><a href="#7">transaction.total</a></li>
-  <li><a href="#8">transaction.lineItems</a></li>
-  <li><a href="#10">transaction.vouchers</a></li>
-  <li><a href="#11">transaction.voucherDiscount</a></li>
-  <li><a href="#12">transaction.shippingMethod</a></li>
-  <li><a href="#13">transaction.shippingCost</a></li>
-  <li><a href="#14">transaction.paymentMethod</a></li>
-  <li><a href="#15">transaction.tax</a></li>
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#transaction.orderId">transaction.orderId</a></li>
+  <li><a href="#transaction.isReturning">transaction.isReturning</a></li>
+  <li><a href="#transaction.cartId">transaction.cartId</a></li>
+  <li><a href="#transaction.isFirst">transaction.isFirst</a></li>
+  <li><a href="#transaction.contactInfo">transaction.contactInfo</a></li>
+  <li><a href="#transaction.currency">transaction.currency</a></li>
+  <li><a href="#transaction.subtotal">transaction.subtotal</a></li>
+  <li><a href="#transaction.total">transaction.total</a></li>
+  <li><a href="#transaction.lineItems">transaction.lineItems</a></li>
+  <li><a href="#transaction.vouchers">transaction.vouchers</a></li>
+  <li><a href="#transaction.voucherDiscount">transaction.voucherDiscount</a></li>
+  <li><a href="#transaction.shippingMethod">transaction.shippingMethod</a></li>
+  <li><a href="#transaction.shippingCost">transaction.shippingCost</a></li>
+  <li><a href="#transaction.paymentMethod">transaction.paymentMethod</a></li>
+  <li><a href="#transaction.tax">transaction.tax</a></li>
 </ul>
 
 
-### <a name="0"></a>Introduction
+### <a name="introduction"></a>Introduction
 ------
 The `digitalData.transaction` object must be declared and filled in the source code of the "Thank you for your purchase" page. The composition of the object almost completely coincides with the composition of the [`digitalData.cart`](/digitaldata/cart) object.
 
@@ -64,19 +64,19 @@ window.digitalData = {
 
 >If your site generates for each order confirmation page a unique URL like https://site.com/order?id=123456, make sure that when you load this URL from another browser, the transaction information is not added to the `digitalData` object
 
-### <a name="1"></a>transaction.orderId
+### <a name="transaction.orderId"></a>transaction.orderId
 ------
 Data type: string.
 
 `transaction.orderId` - **required** variable that contains the unique order ID.
 
-### <a name="2"></a>transaction.isReturning
+### <a name="transaction.isReturning"></a>transaction.isReturning
 ------
 Data type: boolean.
 
 `transaction.isReturning` - **required** variable that is equal to false if the user just made an order and sees the confirmation page for the first time. True - if the user made an order earlier, and now returned to re-view the order or track its status.
 
-### <a name="3"></a>transaction.cartId
+### <a name="transaction.cartId"></a>transaction.cartId
 ------
 Data type: number.
 
@@ -84,13 +84,13 @@ Data type: number.
 
 >The value of `digitalData.transaction.cartId` should be equal to the `digitalData.cart.id` variable on page before the 'Thank You' page.
 
-### <a name="4"></a>transaction.isFirst
+### <a name="transaction.isFirst"></a>transaction.isFirst
 ------
 Data type: boolean.
 
 `transaction.isFirst` - variable that is equal to true if the user has never bought before, and this is his first purchase. False, if he has purchased previously.
 
-### <a name="4_1"></a>transaction.contactInfo
+### <a name="transaction.contactInfo"></a>transaction.contactInfo
 ------
 Data type: object.
 
@@ -112,13 +112,13 @@ window.digitalData = {
 }
 ```
 
-### <a name="5"></a>transaction.currency
+### <a name="transaction.currency"></a>transaction.currency
 ------
 Data type: string.
 
 `transaction.currency` - **required** variable, which contains the basket currency in the ISO 4217 format (USD, EUR, USD).
 
-### <a name="6"></a>transaction.subtotal
+### <a name="transaction.subtotal"></a>transaction.subtotal
 ------
 Data type: number.
 
@@ -127,13 +127,13 @@ Data type: number.
 
 >Includes discounts applied to specific goods, for example seasonal discounts.
 
-### <a name="7"></a>transaction.total
+### <a name="transaction.total"></a>transaction.total
 ------
 Data type: number.
 
 `transaction.total` - **required** variable, which contains the total value of all goods added to the cart, including tax, discounts and shipping costs.
 
-### <a name="8"></a>transaction.lineItems
+### <a name="transaction.lineItems"></a>transaction.lineItems
 ------
 Data type: array of objects.
 
@@ -188,7 +188,7 @@ where,
  - **shippingMethod** - string. An optional variable. Typically, shippingMethod is defined for the whole basket, however, if it is possible to select different delivery methods for different products, this property can be used in the element of the array lineItems
  - **shippingCost** - number. An optional variable. Can be used in case the logic described for shippingMethod is applicable.
 
- ### <a name="10"></a>transaction.vouchers
+### <a name="transaction.vouchers"></a>transaction.vouchers
 ------
 Data type: string.
 
@@ -196,31 +196,31 @@ Data type: string.
 
 >If only one promotional code has been applied to the shopping cart, the variable will take the value of an array containing one string
 
-### <a name="11"></a>transaction.voucherDiscount
+### <a name="transaction.voucherDiscount"></a>transaction.voucherDiscount
 ------
 Data type: number.
 
 `transaction.voucherDiscount` - a variable that contains the total discount after applying all the promotional codes.
 
-### <a name="12"></a>transaction.shippingMethod
+### <a name="transaction.shippingMethod"></a>transaction.shippingMethod
 ------
 Data type: string.
 
 `transaction.shippingMethod` - a variable that contains the delivery method selected in the order process.
 
-### <a name="13"></a>transaction.shippingCost
+### <a name="shippingCost"></a>transaction.shippingCost
 ------
 Data type: number.
 
 `transaction.shippingCost` - a variable that contains the delivery cost for the selected method.
 
-### <a name="14"></a>transaction.paymentMethod
+### <a name="transaction.paymentMethod"></a>transaction.paymentMethod
 ------
 Data type: string.
 
 `transaction.paymentMethod` - a variable that contains the method of payment for the order.
 
-### <a name="15"></a>transaction.tax
+### <a name="transaction.tax"></a>transaction.tax
 ------
 Data type: number.
 

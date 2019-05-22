@@ -10,11 +10,11 @@ The `digitalData.wishlist` array contains `product` objects, which describe the 
 ### Page contents
 ------
 <ul class="page-navigation">
-  <li><a href="#0">Introduction</a></li>
+  <li><a href="#introduction">Introduction</a></li>
 </ul>
 
 
-### <a name="0"></a>Introduction
+### <a name="introduction"></a>Introduction
 ------
 The `digitalData.wishlist` array must be declared and filled in the source code of the page.
 

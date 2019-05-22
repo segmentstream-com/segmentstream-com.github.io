@@ -15,18 +15,19 @@ GdeSlon is an affiliate network that connects advertisers with web-masters. Segm
 ### Page contents
 ------
 <ul class="page-navigation">
-  <li><a href="#0">Introduction</a></li>
-  <li><a href="#1">Requirements</a></li>
-  <li><a href="#2">Merchant ID</a></li>
-  <li><a href="#2_1">Product feed has grouped products</a></li>
-  <li><a href="#3">Default action code</a></li>
-  <li><a href="#4">Name of the cookie that stores the affiliate id</a></li>
-  <li><a href="#5">Automatic cookie tracking</a></li>
-  <li><a href="#6">Activate deduplication</a></li>
-  <li><a href="#7">GdeSlon utm_source</a></li>
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#requirements">Requirements</a></li>
+  <li><a href="#merchantID">Merchant ID</a></li>
+  <li><a href="#productFeed">Product feed has grouped products</a></li>
+  <li><a href="#defaultActionCode">Default action code</a></li>
+  <li><a href="#nameOfTheCookie">Name of the cookie that stores the affiliate id</a></li>
+  <li><a href="#cookieTracking">Automatic cookie tracking</a></li>
+  <li><a href="#activateDeduplication">Activate deduplication</a></li>
+  <li><a href="#utm_source">GdeSlon utm_source</a></li>
+  <li><a href="#activateRetargeting">Activate retargeting</a></li>
 </ul>
 
-### <a name="0"></a>Introduction
+### <a name="introduction"></a>Introduction
 ------
 With the help of SegmentStream you can add the GdeSlon pixel on your website's 'Thank You' page, save the trafic source and partner id in the browser's cookies, and connect the GdeSlon retargeting module.
 
@@ -37,7 +38,7 @@ To configure your integration with GdeSlon:
 
 You will find a more detailed description of the settings below.
 
-### <a name="1"></a>Requirements
+### <a name="requirements"></a>Requirements
 ------
 Before you start setting up the integration in the SegmentStream panel, you need to register in the connected system and prepare all the necessary data:
   - Request a test link from your GdeSlon manager
@@ -55,11 +56,11 @@ Before you start setting up the integration in the SegmentStream panel, you need
  - If GdeSlon is already working on the website, you need to specify the name of the cookie in which the gdeslon_uid is stored by the developer or analyst. After the integration is enabled via SegmentStream, it will be necessary to disable the saving of cookies on the developers side.
  - You need to know with which traffic channels utm_medium deduplication will be configured. For example: with all or only with CPA or CPA and CPC.
 
-### <a name="2"></a>Merchant ID
+### <a name="merchantID"></a>Merchant ID
 ------
 The Merchant ID is a unique identifier for your online project and is issued by GdeSlon employees at your request.
 
-### <a name="2_1"></a>Product feed has grouped products
+### <a name="productFeed"></a>Product feed has grouped products
 ------
 GdeSlon receives information about products placed on the site through an XML feed.
 
@@ -71,7 +72,7 @@ For correct integration, GdeSlon should also receive information about the inter
  -If you do NOT use grouping of goods using the `item_group_id` xml-feed parameter - do not activate this setting.
   >In this case, the product id from your XML feed must match the `product.id` of the `digitalData` object.
 
-### <a name="3"></a>Default action code
+### <a name="defaultActionCode"></a>Default action code
 ------
 Depending on your arrangements with GdeSlon, you may have one or more action codes. For example, if you pay one price for the first purchase in your online store, and another for another purchase.
 
@@ -83,13 +84,13 @@ In the GdeSlon integration settings window, click on the Event Variables tab and
 Below is an example of setting different action codes depending on the visitor’s purchase number:
 ![](/img/integrations.gdeslon.1.png)
 
-### <a name="4"></a>Name of the cookie that stores the affiliate id
+### <a name="nameOfTheCookie"></a>Name of the cookie that stores the affiliate id
 ------
 Every webmaster has a unique identifier in the GdeSlon network. This identifier is present as a GET parameter in all advertising links leading to your site. To remember the webmaster who brought you a potential buyer, you need to save the webmaster ID in the cookie. The webmaster whose number will be in the cookie at the time of order will receive a reward.
 
 > If GdeSlon has already been integrated with your site before, we recommend that you specify the former name of the cookie in the settings so that the identifiers of partners who have previously led traffic to the site are not lost.
 
-### <a name="5"></a>Automatic cookie tracking
+### <a name="cookieTracking"></a>Automatic cookie tracking
 ------
 SegmentStream is able to automatically save the partner ID in a cookie for a set period.
 Turn on the "Automatic tracking cookie" switch, specify the storage time in days and the domain of the cookie.
@@ -98,7 +99,7 @@ Turn on the "Automatic tracking cookie" switch, specify the storage time in days
 
 > If you are already saving gdeslon_uid to a specific cookie, enter its name. After verification, ask the developer to disable the previous cookie filling.
 
-### <a name="6"></a>Activate deduplication
+### <a name="activateDeduplication"></a>Activate deduplication
 ------
 Deduplication or attribution is the rule according to which the value of the completed order is redistributed among all traffic sources that brought the user to the site before his purchase. In the case of partner networks, the 'last cookie wins' rule is most often used. This means that the last partner takes all the value.
 
@@ -111,12 +112,12 @@ If don't specify any utm_medium, then all redirects to links containing a utm_me
 
 > If you are working with several partner networks at the same time, we strongly recommend that you enable deduplication and specify the utm_medium links of other partner networks.
 
-### <a name="7"></a>GdeSlon partner links utm_source
+### <a name="utm_source"></a>GdeSlon partner links utm_source
 ------
 For deduplication and the accounting of partner rewards to work correctly it is necessary to specify the utm_source of the partner links. Confirm the value of this parameter with your GdeSlon manager.
 
 
-### <a name="8"></a>Activate retargeting
+### <a name="activateRetargeting"></a>Activate retargeting
 ------
 To enable GdeSlon retargeting, you need to enable the "Activate retargeting" toggle switch.
 

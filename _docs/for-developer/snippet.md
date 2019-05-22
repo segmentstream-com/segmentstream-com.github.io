@@ -11,12 +11,12 @@ In this section, you will learn how to connect SegmentStream to your site.
 ### Page contents
 ------
 <ul class="page-navigation">
-  <li><a href="#0">Introduction</a></li>
-  <li><a href="#1">Standard connection via remote CDN</a></li>
-  <li><a href="#2">Installing SegmentStream on your own CDN</a></li>
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#standardConnectionCDN">Standard connection via remote CDN</a></li>
+  <li><a href="#installingOnOwnCDN">Installing SegmentStream on your own CDN</a></li>
 </ul>
 
-### <a name="0"></a>Introduction
+### <a name="introduction"></a>Introduction
 ------
 For the correct operation of SegmentStream, when loading each page of the site, you need to call 2 files:
  1. https://cdn.segmentstream.com/project/`<project_id>`.js
@@ -29,7 +29,7 @@ The second file is the latest stable version of the SegmentStream library.
 
 Below we show the 2 ways of connecting the files to your site.
 
-### <a name="1"></a>Standard connection via remote CDN
+### <a name="standardConnectionCDN"></a>Standard connection via remote CDN
 ------
 To connect the SegmentStream via our CDN:
 
@@ -48,7 +48,7 @@ Array.prototype.slice.call(arguments);c.unshift(k);a.push(c);return a}};for(b=0;
 
 >The SegmentStream snippet should be declared after the global variable `window.digitalData` and the jquery plugin.
 
-### <a name="2"></a>Installing SegmentStream on your own CDN
+### <a name="installingOnOwnCDN"></a>Installing SegmentStream on your own CDN
 ------
 In this case, no adBlock systems can interrupt the loading of scripts located within your domain.
 To install SegmentStream on your CDN - you need to perform the following steps:

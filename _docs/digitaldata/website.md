@@ -10,17 +10,17 @@ The `digitalData.website` object contains variables that describe the site as a 
 ### Page contents
 ------
 <ul class="page-navigation">
-  <li><a href="#0">Introduction</a></li>
-  <li><a href="#1">website.region</a></li>
-  <li><a href="#2">website.regionId</a></li>
-  <li><a href="#3">website.type</a></li>
-  <li><a href="#4">website.language</a></li>
-  <li><a href="#5">website.currency</a></li>
-  <li><a href="#6">website.environment</a></li>
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#website.region">website.region</a></li>
+  <li><a href="#website.regionId">website.regionId</a></li>
+  <li><a href="#website.type">website.type</a></li>
+  <li><a href="#website.language">website.language</a></li>
+  <li><a href="#website.currency">website.currency</a></li>
+  <li><a href="#website.environment">website.environment</a></li>
 </ul>
 
 
-### <a name="0"></a>Introduction
+### <a name="introduction"></a>Introduction
 ------
 The `digitalData.page` object must be declared and filled in the source code of each page of the site.
 
@@ -42,15 +42,15 @@ Example:
   }
 ```
 
-### <a name="1"></a>website.region
+### <a name="website.region"></a>website.region
 ------
 `website.region` - contains the name of a city or region, for example, "London". The variable is declared and populated only if the site has the option of selecting a region.
 
-### <a name="2"></a>website.regionId
+### <a name="website.regionId"></a>website.regionId
 ------
 `website.regionId` - contains the unique identifier of a region, for example "77". A variable is declared and populated only if the site has the option of selecting a region.
 
-### <a name="3"></a>website.type
+### <a name="website.type"></a>website.type
 ------
 `website.type` - contains the type of the loaded website:
  - "mobile" - mobile version;
@@ -60,16 +60,16 @@ Example:
 
 >If the user loads the "desktop" version of the site on the mobile phone, the variable should still be set to "desktop".
 
-### <a name="4"></a>website.language
+### <a name="website.language"></a>website.language
 ------
 `website.language` - contains the user-selected language. Must be represented by an IETF-compatible string, for example 'en-US', 'en-GB', 'ru'. The EITF code begins with the ISO 639-1 language representation and is complemented by the region.
 
-### <a name="5"></a>website.currency
+### <a name="website.currency"></a>website.currency
 ------
 `website.currency` - contains the currency selected by the user in ISO 4217 format (USD, EUR, RUB).
 >If you can't select a currency on the site, pass it a default value.
 
-### <a name="6"></a>website.environment
+### <a name="website.environment"></a>website.environment
 ------
 `website.environment` - contains the name of the environment in which the site is downloaded, for example:
  - "development" - development environment,
