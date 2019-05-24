@@ -5,76 +5,72 @@ title: "Yandex.Direct"
 order: 1
 ---
 
->ВНИМАНИЕ! Для активации данного функционала необходимо включить и настроить интеграцию DDManager Streaming
+> Attention! The [Streaming](/integrations/ddmanager-streaming) integration has to be enabled to use this feature.
 
-## Импорт данных из Yandex.Direct
+## Importing data from Yandex.Direct
 
-После включения этого источника данных информация о расходах из рекламного кабинета Yandex.Direct будет выгружаться  в BigQuery каждые сутки.
+Connecting this data source allows you to import advertising costs information for the past 7 days into Google BigQuery once every 24 hours.
 
-Данная интеграция доступна как для обычных рекламодателей, так и для рекламных агентств.
+This integration is available for both ordinary advertisers and advertising agencies.
 
-## Подключение и настройка
+### Connecting and configuring
 
-Подключение источников данных подробно описано в [обзоре](https://docs.segmentstream.com/datasources/index).
-
-Для того, чтобы подключить источник данных, необходимо авторизоваться.
-
-![](/img/YD1.png)
-
-После авторизации нужно установить параметры источника данных
+The process of connecting data sources is described in detail in the [overview](https://docs.segmentstream.com/datasources/index).
 
 ![](/img/YD2.png)
 
-(1) Название источника данных. Отображается в интерфейсе в списке источников.
+After authorization you need to set the data source parameters.
 
-(2) Логин клиента. Будет использован как часть имени таблиц, чтобы при подключении нескольких источников данных типа Yandex.Direct можно было легко различить к какому относится таблица
+(1) The name of the data source. It is displayed in the interface in the list of sources.
 
-(3) Учитывать НДС. Если не выставить флажок, значения цен в отчёте будут без учёта НДС.
+(2) Customer login. It will be used as part of the table name so that when connecting multiple Yandex.Direct data sources, it can be easily distinguished as to which data source the table belongs to.
 
-(4) Источник данных принадлежит агенству. См. Настройка для рекламных агенств.
+(3) Take into account the VAT. If you do not check the box, the prices in the report will be exclusive of VAT.
 
-(5) Валюта счёта. Выберите валюту, в которой отображаются данные в рекламном кабинете.
+(4) The data source belongs to the agency. See Customization for advertising agencies.
 
-(6) Мультипликатор стоимости. Умножается на стоимость в финальном отчёте.
+(5) Account currency. Select the currency in which the data is displayed in the advertising account.
 
-Если вы используете для рекламы смарт-баннеры, необходимо заполнить параметры (7) и (8).
+(6) Value multiplier. Multiplied by the cost in the final report.
 
-(7) Идентификатор рекламной кампании смарт-баннера.
+If you use smart banners for advertising, you must fill in the parameters (7) and (8).
 
-(8) Utm параметры url для смарт-баннера, копируются из настроек рекламного кабинета Yandex.Direct: **Редактирование активных смарт-баннеров** → **Параметры в URL**.
+(7) Smart banner advertising campaign identifier.
 
-Пример: `utm_source=yandex&utm_medium=cpc&utm_campaign={campaign_id}&utm_term={keyword}&utm_content={phrase_id}`
+(8) Utm parameters of the url for the smart banner are copied from the settings of the Yandex.Direct advertising account: **Editing active smart banners** → **URL parameters**.
 
-## Настройка для рекламных агентств
+Example: `utm_source=yandex&utm_medium=cpc&utm_campaign={campaign_id}&utm_term={keyword}&utm_content={phrase_id}`
 
-При включении опции "Рекламное агенство" становятся доступны новые опции
+## Configuration for advertising agencies
+
+When the "Agency" option is enabled, new options become available.
 
 ![](/img/YD3.png)
 
-(1) Расходовать баллы агенства. Для извлечения отчётов будут использоваться баллы агенства. Баллы трансформируются в определённое количество запросов к API Yandex.Direct в единицу времени. Если опция включена, при запросах к API Yandex.Direct будут использованы баллы агентства, а не рекламодателя.
+(1) Spend agency points. Agency points will be used to retrieve reports. Points are transformed into a certain number of requests to the Yandex.Direct API per unit of time. If this option is enabled, when requesting the Yandex.Direct API, the points of the agency will be used, and not the advertiser.
 
-(2),(3) Yandex аккаунты ваших рекламодателей. Имена аккаунтов используются для авторизации и становятся частью таблиц в финальных отчётах.
+(2),(3) Yandex accounts of your advertisers. Account names are used for authorization and become part of the tables in the final reports.
 
 ---
 
-Чтобы сохранить и включить источник данных нажмите на "Save" (1)
+To save and enable the data source, click "Save" (1)
 
 ![](/img/YD4.png)
 
-При нажатии "Remove"(2) источних данных с опциями и авторизацией будет удалён.
+Clicking "Remove" (2) will delete the data source with its options and authorization.
 
-Кнопке "Enabled"/"Disabled"(3) служит для включения/выключения выгрузки источника данных.
+You can enable or disable the data source at any time (3).
 
-Кнопка "Disconnect" (4) предназначена для того, чтобы отозвать авторизационные данные. Настройки при этом сохраняются.
+The "Disconnect" button (4) is used to revoke the authorization data. The settings are saved.
 
 ---
 
-В результате работы источника данных,  в BigQuery будут созданы таблицы:
+After the data source runs, the following tables will be created in BigQuery:
 
-yandexDirectReport_{login}_{DATE} - полный отчёт, загруженный из Yandex.Direct
+yandexDirectReport_{login}_{DATE} - full report downloaded from Yandex.Direct
 
-yandexDirectAds_{login}_{DATE} - рекламные объявления, которые были показаны в данный день
+yandexDirectAds_{login}_{DATE} - advertisements that were shown on a given day
 
-yandexDirectCosts_{login}_{DATE} - отчёт, содержащий информацию о кликах, показах и стоимости в разрезе рекламных объявлений
+yandexDirectCosts_{login}_{DATE} - report containing information on clicks, impressions and cost in the context of advertisements
 
-Для рекламных агенств, количество таблиц будет кратно количеству подключённых рекламодателей.
+For advertising agencies, the number of tables will be a multiple of the number of advertisers connected.

@@ -5,47 +5,47 @@ title: "Google Ads"
 order: 1
 ---
 
->ВНИМАНИЕ! Для активации данного функционала необходимо включить и настроить интеграцию DDManager Streaming.
+> Attention! The [Streaming](/integrations/ddmanager-streaming) integration has to be enabled to use this feature.
 
-### Импорт данных из Google Ads
+### Importing data from Google Ads
 
-Подключение данного источника данных позволяет раз в 24 часа импортировать информацию о расходах за последние 7 дней в Google BigQuery.
+Connecting this data source allows you to import advertising costs information for the past 7 days into Google BigQuery once every 24 hours.
 
-Данная интеграция доступна как для обычных рекламодателей, так и для рекламных агентств.
+This integration is available for both ordinary advertisers and advertising agencies.
 
-### Подключение и настройка
+### Connecting and configuring
 
-![](/img/gl-a.1.png)
-
-Для того, чтобы включить этот источник данных, необходимо перейти в раздел "ЗАГРУЗКА ДАННЫХ → Автоматическая" (1), выбрать источник данных (2) и авторизоваться (3)
+The process of connecting data sources is described in detail in the [overview](https://docs.segmentstream.com/datasources/index).
 
 ![](/img/gl-a.2.png)
 
-Укажите название (1).
+After authorization you need to set the data source parameters.
 
-Для получения полной картины о расходах на рекламу, вам нужно добавить все используемые рекламные аккаунты (2) (смотрите пункт "Где взять ID рекламных кабинетов", чтобы узнать где взять ID рекламных аккаунтов).
+(1) The name of the data source. It is displayed in the interface in the list of sources.
 
-Укажите валюту (3), в которой осуществляются расчеты для рекламных кабинетов.
+For a full picture of advertising costs, you need to add all your active advertising accounts (2) (see the "How to Find Your Account ID" section to find out where to find the advertising account ID).
 
-Чтобы сохранить и включить источник данных нажмите на "Save" (4).
+(3) The currency in which you want to export the costs from the advertising accounts.
 
-Кнопка "Disconnect" (5) необходима для того, чтобы отозвать авторизационные данные. Настройки при этом сохраняются.
+To save and enable the data source, click "Save" (4).
 
-В любой момент вы можете включить или выключить интеграцию (6).
+The "Disconnect" button (5) is used to revoke the authorization data. The settings are saved.
 
-### Где взять ID рекламных кабинетов
+You can enable or disable the data source at any time (6).
 
-Авторизуйтесь в Google Ads с аккаунта, который имеет доступ к необходимой компании. В зависимости от того, сколько у вас аккаунтов создано скопируйте Customer ID. Если у вас более одного аккаунта, то вам нужно скопировать ID аккаунтов под цифрой 1. Если вы имеете в наличии только 1 аккаунт, то скопируйте ID под цифрой 2.
+### How to Find Your Account ID
 
-Customer ID имеет следующий вид XXX-XXX-XXXX, где X - это цифра от 0 до 9.
+Log in to Google Ads with an account that has access to the desired company. Depending on how many accounts you have created, copy the Customer ID. If you have more than one account, then you need to copy the account ID under the number 1. If you have only one account, then copy the ID under the number 2.
+
+Customer ID has the following format XXX-XXX-XXXX, where X - is a number from 0 t0 9.
 
 ![](/img/gl-a.3.png)
 
-### Куда попадают данные о расходах на рекламу
+### Where to get data on advertising costs
 
-Данные для этой интеграции будут записаны в таблицу с именем **googleAdsCosts_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}**
+The data for this data source will be written to a table named **googleAdsCosts_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}**
 
-### Структура таблицы
+### Table structure
 
 Field name|Type|Mode
 --- | --- | ---
@@ -59,7 +59,7 @@ utmMedium | STRING | NULLABLE
 utmSource | STRING | NULLABLE
 currency | STRING | NULLABLE
 
-### Поддерживаемые подстановки
+### Supported substitutions
 
 * lpurl
 * campaignid

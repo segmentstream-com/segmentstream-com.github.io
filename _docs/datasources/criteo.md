@@ -5,43 +5,43 @@ title: "Criteo"
 order: 1
 ---
 
-> ВНИМАНИЕ! Для активации данного функционала необходимо включить и настроить интеграцию DDManager Streaming
+> Attention! The [Streaming](/integrations/ddmanager-streaming) integration has to be enabled to use this feature.
 
-## Импорт данных из Criteo
+## Importing data from Criteo
 
-После включения этого источника данных информация о расходах из рекламного кабинета Criteo будет выгружаться  в BigQuery каждые сутки.
+After enabling this data source, advertising costs information from your Criteo advertising account will be uploaded to BigQuery every day.
 
-## Подключение и настройка
+## Connecting and configuring
 
-Подключение источников данных подробно описано в [обзоре](https://docs.segmentstream.com/datasources/index).
+The process of connecting data sources is described in detail in the [overview](https://docs.segmentstream.com/datasources/index).
 
-Для того, чтобы подключить источник данных, необходимо указать Client ID (1) и Client Secret (2).
+In order to connect the data source, you must specify the Client ID (1) and Client Secret (2).
 
 ![](/img/criteo_1.png)
 
-<a href="#APIAccountCriteo">Как создать API-аккаунт в Criteo</a>
+<a href="#APIAccountCriteo">How to create an API account in Criteo</a>
 
-После авторизации нужно установить параметры источника данных.
+After authorization you need to set the data source parameters.
 
 ![](/img/criteo_2.png)
 
-(1) Название источника данных. Отображается в интерфейсе в списке источников.
+(1) The name of the data source. It is displayed in the interface in the list of sources.
 
-(2) Валюта, в которой необходимо выгрузить стоимость из рекламных кабинетов.
+(2) The currency in which you want to export the costs from the advertising accounts.
 
-(3) Мультипликатор стоимости. Умножается на стоимость в финальном отчёте.
+(3) Value multiplier. Multiplied by the cost in the final report.
 
-(4) UTM source, который используется в настройках criteo.
+(4) UTM source, which is used in Criteo settings.
 
-(5) UTM medium, который используется в настройках criteo.
+(5) UTM medium, which is used in Criteo settings.
 
-Т.к. в Сriteo API нет возможности получить информацию о utm метках, вам необходимо настроить UTM campaigns вручную, для этого необходимо настроить соответствия между ID кампании (6) и её UTM campaign меткой (7).
+Because there is no possibility to get information about utm tags in the Сriteo API, you need to configure UTM campaigns manually, for this you need to input each campaign ID (6) and its corresponding UTM campaign tag (7).
 
-## Куда попадают данные о расходах на рекламу
+## Where to get data on advertising costs
 
-Данные для этого источника данных будут записаны в таблицу с именем **criteoCosts_{ADVERTISER_ID}_{YYYYMMDD}**
+The data for this data source will be written to a table named **criteoCosts_{ADVERTISER_ID}_{YYYYMMDD}**
 
-### Структура таблицы
+### Table structure
 
 Field name|Type|Mode
 --- | --- | ---
@@ -56,26 +56,25 @@ utmSource | STRING | REQUIRED
 currency | STRING | NULLABLE
 
 
-## <a name="APIAccountCriteo"></a> Как создать API-аккаунт в Criteo
+## <a name="APIAccountCriteo"></a>How to create an API account in Criteo
 
-1. Зайдите в свой аккаунт на [https://marketing.criteo.com](https://marketing.criteo.com/).
-2. Нажмите **Criteo Management Center** и выберите **Настройки Аккаунта**:
+1. Sign in to your account on [https://marketing.criteo.com](https://marketing.criteo.com/).
+2. Click **Criteo Management Center** and select **Account Settings**:
 
-    ![](/img/criteo_ru_1.png)
+    ![](/img/criteo_datasource_1.png)
 
-3. Перейдите к разделу **Пользователь API - REST API (новый)**. Нажмите **Создать Пользователя API**:
+3. Navigate to the **API Users — REST API (New)** section. Click **Create API User**:
 
-    ![](/img/criteo_ru_2.png)
+    ![](/img/criteo_datasource_2.png)
 
-4. Введите контактный email [developers@segmentstream.com](mailto:developers@segmentstream.com). 
-5. В поле **Выберите Роль** укажите **Только просмотр**. Нажмите **Добавить пользователя**:
+4. Enter [developers@segmentstream.com](mailto:developers@segmentstream.com) as a сontact email.  
+5. In the **Select a role** field, select **View Only**. Click **Add User**:
 
-    ![](/img/criteo_ru_3.png)
+    ![](/img/criteo_datasource_3.png)
 
-6. Появится экран с **ID клиента** и **Секретным кодом клиента** — это и есть ваш доступ, который нужно выдать SegmentStream для настройки настройки импорта данных из Criteo. **Важно:** Обязательно сохраните себе **Секретный код клиента**. Он выводится только один раз — на этом экране. После нажатия кнопки **Закрыть**, вы потеряете к нему доступ.
+6. A window displaying your **Client ID** and **Client Secret** will appear. These are the API user credentials that you need to enter in the SegmentStream admin panel to setup the Criteo data import. **Important**: Make sure you have saved the Client Secret code somewhere. It's displayed only once — on this window. After clicking **Close**, you won't be able to display it in any way.
 
-    ![](/img/criteo_ru_4.png)
+    ![](/img/criteo_datasource_4.png)
 
-7. Поставьте галочку рядом с **Я подтверждаю, что мои данные сохранены**.
-8. Нажмите **Закрыть**.
-9. Сообщите **ID клиента** и **Секретный код клиента** менеджеру SegmentStream.
+7. Check the **I confirm having stored my credentials** box.
+8. Click **Close**.

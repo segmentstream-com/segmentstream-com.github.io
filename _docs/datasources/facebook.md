@@ -5,45 +5,43 @@ title: "Facebook"
 order: 1
 ---
 
->ВНИМАНИЕ! Для активации данного функционала необходимо включить и настроить интеграцию DDManager Streaming.
+> Attention! The [Streaming](/integrations/ddmanager-streaming) integration has to be enabled to use this feature.
 
-### Импорт данных из Facebook
+### Importing data from Facebook
 
-Подключение данного источника данных позволяет раз в 24 часа импортировать информацию о расходах за последние 7 дней в Google BigQuery.
+Connecting this data source allows you to import advertising costs information for the past 7 days into Google BigQuery once every 24 hours.
 
-### Подключение и настройка
+### Connecting and configuring
 
-![](/img/fb.1.png)
-
-Для того, чтобы включить этот источник данных, необходимо перейти в раздел "ЗАГРУЗКА ДАННЫХ → Автоматическая" (1), выбрать источник данных (2) и авторизоваться (3)
-
-### Настройка источника данных
+The process of connecting data sources is described in detail in the [overview](https://docs.segmentstream.com/datasources/index).
 
 ![](/img/fb.2.png)
 
-Укажите название (1).
+After authorization you need to set the data source parameters.
 
-Для получения полной картины о расходах на рекламу, вам нужно добавить все используемые рекламные аккаунты (2) (смотрите пункт "Где взять ID рекламных кабинетов", чтобы узнать где взять ID рекламных аккаунтов).
+(1) The name of the data source. It is displayed in the interface in the list of sources.
 
-Укажите валюту (3), в которой осуществляются расчеты для рекламных кабинетов.
+For a full picture of advertising costs, you need to add all your active advertising accounts (2) (see the "How to Find Your Facebook Ad Account ID" section to find out where to find the advertising account ID).
 
-Чтобы сохранить и включить источник данных нажмите на "Save" (4).
+(3) The currency in which you want to export the costs from the advertising accounts.
 
-Кнопка "Disconnect" (5) необходима для того, чтобы отозвать авторизационные данные. Настройки при этом сохраняются.
+To save and enable the data source, click "Save" (4).
 
-В любой момент вы можете включить или выключить интеграцию (6).
+The "Disconnect" button (5) is used to revoke the authorization data. The settings are saved.
 
-### Где взять ID рекламных кабинетов
+You can enable or disable the data source at any time (6).
 
-Авторизуйтесь в Facebook с аккаунта, который имеет доступ к необходимой компании. На странице [https://business.facebook.com/select/](https://business.facebook.com/select/) выберите вашу компанию. В открывшемся окне вы увидите все ваши рекламные аккаунты. Для того, чтобы быстро скопировать ID - кликните по нему.
+### How to Find Your Facebook Ad Account ID
 
-![](/img/fb.3.png)
+Log in to Facebook with an account that has access to the required company. On the [https://business.facebook.com/select/](http://business.facebook.com/select/) page, select your company. In the window that opens, you will see all your advertising accounts. In order to quickly copy the ID - click on it.
 
-### Куда попадают данные о расходах на рекламу
+![](/img/facebook_get_id.png)
 
-Данные для этой интеграции будут записаны в таблицу с именем **facebookCosts_{ACCOUNT_ID}_{YYYYMMDD}**
+### Where to get data on advertising costs
 
-### Структура таблицы
+The data for this data source will be written to a table named **facebookCosts_{ACCOUNT_ID}_{YYYYMMDD}**
+
+### Table structure
 
 Field name|Type|Mode
 --- | --- | ---
