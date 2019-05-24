@@ -5,12 +5,12 @@ title: "Overview"
 order: 0
 ---
 
->ВНИМАНИЕ! Для активации данного функционала необходимо включить и настроить интеграцию DDManager Streaming.
+> Attention! The [Streaming](/integrations/ddmanager-streaming) integration has to be enabled to use this feature.
 
-### Подключение нового источника данных
+### Connecting a new data source
 
 ![](/img/adding_datasource_1.png)
 
-Для того, чтобы подключить новый источник данных, необходимо перейти в раздел "ЗАГРУЗКА ДАННЫХ → Автоматическая" (1), нажать на кнопку "Добавить" (2) выбрать тип источника данных из меню (3). Новый источник данных появится в списке источников (4).
+In order to connect a new data source, go to "DATA IMPORT → Automatic" (1), click on the "Add" button (2) and select the type of data source from menu (3). The new data source appears in the data source list (4).
 
-Далее надо следовать инструкциям настройки выбранного типа источника данных.
+Next, follow the instructions for configuring the selected data source type.
