@@ -166,3 +166,17 @@ FROM `<FULL_TABLE_NAME>`
 WHERE event.name = "<EVENT_NAME>"
 ```
 Don't forget to replace `<FULL_TABLE_NAME>` and `<EVENT_NAME>` with proper values.
+
+Not you know how to setup basic events tracking and in SegmentStream and send this event to the **Google BigQuery** integration.
+
+Similarly, you can connect any other integration, such as **Google Analytics** or **Facebook**. SegmentStream will automatically transform events in a proper format which each of these systems understand.
+
+For example, this is how click event from the previous step will look like in the **Google Analytics** interface:
+![Image shows how click event looks like in Google Analytics](/img/for-analyst/quickstart/click_event_ga.png)
+
+## Further reading about BigQuery data import
+
+* [How to automatically import data from advertising platforms](https://docs.segmentstream.com/datasources/index)
+* [How to manually upload costs data in CSV](https://docs.segmentstream.com/for-analyst/manual-imports)
+* How to import CRM/ERP data using JSON feeds
+* How to track server-side events and events from mobile apps
