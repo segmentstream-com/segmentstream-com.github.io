@@ -25,6 +25,7 @@ Array.prototype.slice.call(arguments);c.unshift(k);a.push(c);return a}};for(b=0;
 ```
 
 A lot of data can be collected by just doing the basic code installation:
+
 * Viewed pages
 * Traffic sources
 * Information about browser, screen
@@ -38,3 +39,22 @@ A lot of data can be collected by just doing the basic code installation:
 
 3. Make sure that data is collected in Chrome browser console:
 ![How data is collected in Chrome browser console](/img/for-analyst/quickstart/bigquery-collect-console.png)
+
+4. Go to the Google Cloud Platform and check whether the new `hits_YYYYMMDD` table was created in you Google BigQuery Console:
+![Image shows how hits table is created in Google BigQuery](/img/for-analyst/quickstart/bigquery_hits_table.png)
+Note, that there are actualy 2 hits tables were created: `hits` and `hits_YYYYMMDD`. First one is justa template that keeps the schema and used to create daily hits tables.
+
+5. Click on the `hits_YYYYMMDD` table and then on the "Query Table" button:
+![Image shows how to query BigQuery table](/img/for-analyst/quickstart/bigquery_query_table.png)
+  
+6. Run the following query in the Query editor:
+```sql
+SELECT hitId, event.name, context FROM `<FULL_TABLE_NAME>
+```
+
+Note, that you should use proper full table name which is automatically filled once you click "Query Table" button.
+
+1. If everything was set up properly you will see results about pageviews from your website:
+![Image shows query results about page views](/img/for-analyst/quickstart/bigquery_results_1.png)
+
+Great! Now you've set up a real-time collection of all pageviews on your website.
