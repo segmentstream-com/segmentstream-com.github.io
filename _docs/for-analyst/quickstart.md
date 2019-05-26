@@ -28,21 +28,21 @@ A lot of data can be collected by just doing the basic code installation:
 
 * Viewed pages
 * Traffic sources
-* Information about browser, screen
+* Information about the browser, ip, screen resolution
 * etc
 
 ## Connecting Google BigQuery data warehouse
 
 1. Follow [this guide](/integrations/google-bigquery) to setup **Google BigQuery** integration.
 
-2. Go to your website and visit few pages.
+2. Go to your website and visit a few pages.
 
-3. Make sure that data is collected in Chrome browser console:
+3. Make sure that data is collected in the Chrome browser console:
 ![How data is collected in Chrome browser console](/img/for-analyst/quickstart/bigquery-collect-console.png)
 
 4. Go to the Google Cloud Platform and check whether the new `hits_YYYYMMDD` table was created in you Google BigQuery Console:
 ![Image shows how hits table is created in Google BigQuery](/img/for-analyst/quickstart/bigquery_hits_table.png)
-Note, that there are actualy 2 hits tables were created: `hits` and `hits_YYYYMMDD`. First one is justa template that keeps the schema and used to create daily hits tables.
+Note, that there are actually 2 hits tables were created: `hits` and `hits_YYYYMMDD`. First one is just a template that keeps the schema and used to create daily hits tables.
 
 5. Click on the `hits_YYYYMMDD` table and then on the "Query Table" button:
 ![Image shows how to query BigQuery table](/img/for-analyst/quickstart/bigquery_query_table.png)
@@ -56,9 +56,9 @@ Note, that you should use proper full table name which is automatically filled o
 1. If everything was set up properly you will see results about pageviews from your website:
 ![Image shows query results about page views](/img/for-analyst/quickstart/bigquery_results_1.png)
 
-Great! Now you've set up a real-time collection of all pageviews on your website.
+Great! Now you've set up a real-time collection of all page views on your website.
 
-## Avanced events tracking
+## Advanced events tracking
 
 Let's imagine you have an e-commerce website and would like to track all user transactions. Of cause, this should be properly set up by developers but for the purpose of this quick guide let's send a "fake" transaction.
 
@@ -124,18 +124,18 @@ Again, don't forget to replace `<FULL_TABLE_NAME>` with your proper full table n
 
 Finally, let's try to set up tracking of a behavioral event, such as click.
 
-1. Firstly, you need to figure out the CSS selector of the element you would like to track. It can be easily done using the Google Chrome's console. In the example below, the CSS selector of the "Show more products" button is the `.moreProducts` because the element has a CSS class `morePoducts`.
-![Image shows how to find a css selector in Google Chrome console](/img/for-analyst/quickstart/click_css_selector_chrome_console.png)
-If you don't know how to figure out a CSS selector of a specific elements - ask your frontend developers.
+1. Firstly, you need to figure out the CSS selector of the element you would like to track. It can be easily done using Google Chrome's console. In the example below, the CSS selector of the "Show more products" button is the `.moreProducts` because the element has a CSS class `morePoducts`.
+![Image shows how to find a CSS selector in Google Chrome console](/img/for-analyst/quickstart/click_css_selector_chrome_console.png)
+If you don't know how to figure out a CSS selector of a specific element - ask your frontend developers.
 
 2. Now, go to the SegmentStream admin panel **Events** section and click **Add** button to add a new event as shown on the screen below:
 ![Image shows how to add a new click event in the admin panel](/img/for-analyst/quickstart/admin_panel_click_event_setup.png)
 
-3. Enter event name.
+3. Enter the event name.
 
 4. Select `Click` as a trigger.
 
-5. Enter proper CSS selector.
+5. Enter the proper CSS selector.
 
 6. Add event handler:
 ```js
@@ -148,7 +148,7 @@ return {
 
 7. Click **Save** to save the event.
 
-8. Click **Publish** to publish a new container (several mintes might be required for the changes to be propogated to the CDN server).
+8. Click **Publish** to publish a new container (up to several minutes might be required for the changes to be propagated to the CDN server).
 
 9. Reload your website's page, go back to the Google Chrome's browser console and check that your click handler is working properly:
 ![Image shows how to check whether click handler is working using Google Chrome console](/img/for-analyst/quickstart/click_event_debug.png)
