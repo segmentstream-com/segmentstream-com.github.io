@@ -1,6 +1,6 @@
 ---
 layout: page
-# section: analyst
+section: analyst
 title: "Quick Start Guide"
 date: 2019-05-26
 order: 0
@@ -36,4 +36,5 @@ A lot of data can be collected by just doing the basic code installation:
 
 2. Go to your website and visit few pages.
 
-3. Make sure that data is collected:
+3. Make sure that data is collected in Chrome browser console:
+![How data is collected in Chrome browser console](/img/for-analyst/quickstart/bigquery-collect-console.png)
