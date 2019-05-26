@@ -177,6 +177,6 @@ For example, this is how click event from the previous step will look like in th
 ## Further reading about BigQuery data import
 
 * [How to automatically import data from advertising platforms](https://docs.segmentstream.com/datasources/index)
-* [How to manually upload costs data in CSV](https://docs.segmentstream.com/for-analyst/manual-imports)
+* [How to manually upload costs data in CSV](https://docs.segmentstream.com/datasources/manual-imports)
 * How to import CRM/ERP data using JSON feeds
 * How to track server-side events and events from mobile apps

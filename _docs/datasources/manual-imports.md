@@ -1,9 +1,9 @@
 ---
 layout: page
-section: analyst
+section: datasources
 title: "CSV file upload"
 date: 2019-04-09 12:00:00
-order: 1
+order: 2
 ---
 > Attention! The [Google BigQuery](/integrations/google-bigquery) integration has to be enabled to use Data Import.
 
