@@ -5,7 +5,7 @@ title: "CSV file upload"
 date: 2019-04-09 12:00:00
 order: 0
 ---
-> Attention! The [Streaming](/integrations/ddmanager-streaming) integration has to be enabled to use Data Import.
+> Attention! The [Google BigQuery](/integrations/google-bigquery) integration has to be enabled to use Data Import.
 
 The CSV file upload functionality allows you to import cost data from CSV files to Google BigQuery.
 
@@ -37,13 +37,13 @@ date | Date in yyyy-mm-dd format
 
 Processing is automatic, it can take up to 24 hours, after which the data will appear in BigQuery.
 
-The contents of the files will be written to a table with the name `customCosts`, in the project and dataset configured in the DDManager Streaming integration settings.
+The contents of the files will be written to a table with the name `customCosts`, in the project and dataset configured in the **Google BigQuery** integration settings.
 
-The following steps have to be taken to view the DDManager Streaming integration current project and dataset:
+The following steps have to be taken to view the **Google BigQuery** integration current project and dataset:
 
 1. Choose your project
 2. Go to the Integrations section
-3. Select the DDManager Streaming integration
+3. Select the **Google BigQuery** integration
 
 ![](/img/manual.data.import.2.png)
 

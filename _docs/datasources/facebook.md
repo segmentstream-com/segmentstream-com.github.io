@@ -5,7 +5,7 @@ title: "Facebook"
 order: 1
 ---
 
-> Attention! The [Streaming](/integrations/ddmanager-streaming) integration has to be enabled to use this feature.
+> Attention! The [Google BigQuery](/integrations/google-bigquery) integration has to be enabled to use this feature.
 
 ### Importing data from Facebook
 

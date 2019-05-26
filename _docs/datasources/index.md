@@ -5,7 +5,7 @@ title: "Overview"
 order: 0
 ---
 
-> Attention! The [Streaming](/integrations/ddmanager-streaming) integration has to be enabled to use this feature.
+> Attention! The [Google BigQuery](/integrations/google-bigquery) integration has to be enabled to use this feature.
 
 ### Connecting a new data source
 
