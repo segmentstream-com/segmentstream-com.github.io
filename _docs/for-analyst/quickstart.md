@@ -49,12 +49,73 @@ Note, that there are actualy 2 hits tables were created: `hits` and `hits_YYYYMM
   
 6. Run the following query in the Query editor:
 ```sql
-SELECT hitId, event.name, context FROM `<FULL_TABLE_NAME>
+SELECT hitId, event.name, context FROM `<FULL_TABLE_NAME>`
 ```
-
 Note, that you should use proper full table name which is automatically filled once you click "Query Table" button.
 
 1. If everything was set up properly you will see results about pageviews from your website:
 ![Image shows query results about page views](/img/for-analyst/quickstart/bigquery_results_1.png)
 
 Great! Now you've set up a real-time collection of all pageviews on your website.
+
+## Avanced events tracking
+
+Let's imagine you have an e-commerce website and would like to track all user transactions. Of cause this should be properly set up by developers but for the purpose of this quick guide let's send a "fake" transaction.
+
+1. Open Chome browser console and copy-paste the following code:
+```js
+digitalData.events.push({
+  category: 'Ecommerce',
+  name: 'Completed Transaction',
+  transaction: {
+    orderId: "QA-123456",
+    currency: "USD",
+    subtotal: 310,
+    shippingCost: 10,
+    shippingMethod: "Delivery",
+    total: 320,
+    lineItems: [
+      {
+        product: {
+          id: "1234567890",
+          name: "Timberland shoes",
+          manufacturer: "Timberland",
+          category: ["Shoes","Boots"],
+          currency: "USD",
+          unitPrice: 150,
+          unitSalePrice: 110,
+          skuCode: "TBL6065RW",
+        },
+        quantity: 2,
+        subtotal: 220
+      },
+      {
+        product: {
+          id: "54563454",
+          name: "Nike shoes",
+          manufacturer: "Nike",
+          category: ["Shoes","Sport"],
+          currency: "USD",
+          unitPrice: 120,
+          unitSalePrice: 90,
+          skuCode: "TBL6065ZX",
+        },
+        quantity: 1,
+        subtotal: 90
+      }
+    ]
+  }
+});
+```
+![Image shows how to track transactions using Google Chrome's console](/img/for-analyst/quickstart/transaction-track.png)
+
+2. Go back to the Google BigQuery console, click on `hits_YYYYMMDD` table and again click on "Query Table" button. At this time let's select all tracked transactions using the following query:
+```sql
+SELECT event.transaction
+FROM `<FULL_TABLE_NAME>`
+WHERE event.name = "Completed Transaction"
+```
+Again, don't forget to replace `<FULL_TABLE_NAME>` with your proper full table name.
+
+3. You should observe similar results:
+4. ![Image shows query results about transactions](/img/for-analyst/quickstart/bigquery_results_2_transactions.png)
