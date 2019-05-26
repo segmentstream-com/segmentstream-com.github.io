@@ -60,7 +60,7 @@ Great! Now you've set up a real-time collection of all pageviews on your website
 
 ## Avanced events tracking
 
-Let's imagine you have an e-commerce website and would like to track all user transactions. Of cause this should be properly set up by developers but for the purpose of this quick guide let's send a "fake" transaction.
+Let's imagine you have an e-commerce website and would like to track all user transactions. Of cause, this should be properly set up by developers but for the purpose of this quick guide let's send a "fake" transaction.
 
 1. Open Chome browser console and copy-paste the following code:
 ```js
@@ -119,3 +119,50 @@ Again, don't forget to replace `<FULL_TABLE_NAME>` with your proper full table n
 
 3. You should observe similar results:
 4. ![Image shows query results about transactions](/img/for-analyst/quickstart/bigquery_results_2_transactions.png)
+
+## Behavioral events tracking
+
+Finally, let's try to set up tracking of a behavioral event, such as click.
+
+1. Firstly, you need to figure out the CSS selector of the element you would like to track. It can be easily done using the Google Chrome's console. In the example below, the CSS selector of the "Show more products" button is the `.moreProducts` because the element has a CSS class `morePoducts`.
+![Image shows how to find a css selector in Google Chrome console](/img/for-analyst/quickstart/click_css_selector_chrome_console.png)
+If you don't know how to figure out a CSS selector of a specific elements - ask your frontend developers.
+
+2. Now, go to the SegmentStream admin panel **Events** section and click **Add** button to add a new event as shown on the screen below:
+![Image shows how to add a new click event in the admin panel](/img/for-analyst/quickstart/admin_panel_click_event_setup.png)
+
+3. Enter event name.
+
+4. Select `Click` as a trigger.
+
+5. Enter proper CSS selector.
+
+6. Add event handler:
+```js
+return {
+  category: 'Behaviour'
+  name: 'Clicked Button', // use your event name
+  label: 'some label'
+}
+```
+
+7. Click **Save** to save the event.
+
+8. Click **Publish** to publish a new container (several mintes might be required for the changes to be propogated to the CDN server).
+
+9. Reload your website's page, go back to the Google Chrome's browser console and check that your click handler is working properly:
+![Image shows how to check whether click handler is working using Google Chrome console](/img/for-analyst/quickstart/click_event_debug.png)
+
+10.  Go to the Google BigQuery console and query information about your click event:
+```sql
+SELECT 
+  hitId,
+  event.name,
+  event.category,
+  event.label,
+  context,
+  receivedAt
+FROM `<FULL_TABLE_NAME>`
+WHERE event.name = "<EVENT_NAME>"
+```
+Don't forget to replace `<FULL_TABLE_NAME>` and `<EVENT_NAME>` with proper values.
