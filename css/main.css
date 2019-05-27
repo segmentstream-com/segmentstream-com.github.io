@@ -22,6 +22,7 @@ body {
 }
 
 #content {
+    overflow-wrap: break-word;
     max-width: 900px;
     padding-top: 28px;
     padding-left: 45px;

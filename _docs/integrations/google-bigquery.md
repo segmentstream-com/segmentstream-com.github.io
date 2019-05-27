@@ -1,17 +1,17 @@
 ---
 layout: page
 section: integrations
-title: "DDManager Streaming"
+title: "Google BigQuery"
 order: 1
 ---
 
-The built-in "DDManager Streaming" module allows you to collect raw data in Google BigQuery. After connecting the streaming module, SegmentStream starts sending all of your users behavior data to the BigQuery cloud data storage. The format of data storage completely corresponds to the DigitalData standard.
+The Google BigQuery integration allows you to collect raw data in your own Google BigQuery data warehouse. Once connected, SegmentStream starts sending all of your users behavior data to the BigQuery cloud data storage.
 
 ### Page contents
 ------
 <ul class="page-navigation">
   <li><a href="#introduction">Introduction</a></li>
-  <li><a href="#settingUpBigQuery">Setting up BigQuery</a></li>
+  <li><a href="#settingUpBigQuery">Setting up Google BigQuery</a></li>
   <li><a href="#googleCloudProjectID">Google Cloud project ID</a></li>
   <li><a href="#bigQueryDatasetName">BigQuery dataset name</a></li>
   <li><a href="#UTCOffset">UTC offset</a></li>
@@ -21,10 +21,10 @@ The built-in "DDManager Streaming" module allows you to collect raw data in Goog
 </ul>
 
 ### <a name="introduction"></a>Introduction
-Setting up the DDM Streaming integration:
+Setting up the Google BigQuery integration:
 1. Create an account in Google BigQuery and configure the rights and roles.
 2. Log in to the [segmentstream.com](https://admin.segmentstream.com/) website and go to the integration management panel
-3. Enter the "Integration" tab and click on the block with the SegmentStream Streaming logo.
+3. Go to the  "Integrations" section and select "Google BigQuery" integration.
 4. In the panel that opens, configure the integration.
 
 ### <a name="settingUpBigQuery"></a>Setting up BigQuery
@@ -53,8 +53,8 @@ The easiest way to find the project ID is on the [google cloud console main page
 ![](/img/integrations.ddmstreaming.1_2.png)
 
 ### <a name="bigQueryDatasetName"></a>BigQuery dataset name
-Type `ddmanager_streaming` into the BigQuery DataSet name.
-> We recommend using the `ddmanager_streaming` name. If you want the data to stream into another DataSet, specify its name instead of `ddmanager_streaming`. Use only Latin letters and underscores.
+Type `segmentstream` into the BigQuery DataSet name.
+> We recommend using the `segmentstream` name. If you want the data to stream into another DataSet, specify its name instead of `segmentstream`. Use only Latin letters and underscores.
 
 
 
@@ -65,7 +65,7 @@ Select the time zone. For example, for all reports to be generated according to 
 
 ### <a name="customDimensions"></a>Custom dimensions
 ------
-By default, DDMStreaming sends a certain set of variables to BigQuery. These variables are sufficient for most data analysis tasks. If you do not have enough variables, you can send custom variables along with each event.
+By default, SegmentStream sends a certain set of variables to the Google BigQuery. These variables are sufficient for most data analysis tasks. If you do not have enough variables, you can send custom variables along with each event.
 
 For example:
  - Send googleClientId to compare the data in BigQuery and Google Analytics,

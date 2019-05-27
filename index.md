@@ -8,7 +8,7 @@ title: "Documentation Index Page"
 **SegmentStream** is a universal solution that manages the flow of information between the site and a variety of analytics and marketing systems. These systems are able to receive information about certain events occurring on the site in a certain format. Every system needs different events:
 - For the Criteo retargeting system, it is important to know at what point the user visits the basket page, while for the OneSignal system it is not.
 - For Yandex.Metrica, it is important to get information about the product at the time of its removal from the basket, while it isn't important for Google Analytics
-- Data streaming systems record all events occurring on the site for further in-depth analysis.
+- Google BigQuery integration records all events occurring on the website for further in-depth analysis.
 
 SegmentStream is functioning with the help of the following:
 - **[DigitalData](http://docs.segmentstream.com/for-developer/)** is an open standard for presenting information on web pages. Technically, DigitalDataLayer is a simple JavaScript object in JSON format that contains structured information about a user, a page, and all events (pageviews, items, clicks, additions to cart, transactions, JavaScript errors, and more).

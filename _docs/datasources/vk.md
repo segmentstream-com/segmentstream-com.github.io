@@ -5,54 +5,53 @@ title: "Vkontakte"
 order: 1
 ---
 
->ВНИМАНИЕ! Для активации данного функционала необходимо включить и настроить интеграцию DDManager Streaming.
+> Attention! The [Google BigQuery](/integrations/google-bigquery) integration has to be enabled to use this feature.
 
-### Импорт данных из VK
+### Importing data from VK
 
-Подключение данного источника данных позволяет раз в 24 часа импортировать информацию о расходах за последние 7 дней в Google BigQuery.
+Connecting this data source allows you to import advertising costs information for the past 7 days into Google BigQuery once every 24 hours.
 
-Данная интеграция доступна как для обычных рекламодателей, так и для рекламных агентств.
+This integration is available for both ordinary advertisers and advertising agencies.
 
-### Подключение и настройка
+### Connecting and configuring
 
-![](/img/vk.1.png)
-
-Для того, чтобы включить этот источник данных, необходимо перейти в раздел "DATA IMPORTS → Automatic" (1), выбрать источник данных (2) и авторизоваться (3)
+The process of connecting data sources is described in detail in the [overview](https://docs.segmentstream.com/datasources/index).
 
 ![](/img/vk.2.png)
 
-Укажите название (1).
+After authorization you need to set the data source parameters.
 
-Данная интеграция имеет одну обязательную настройку “Account ID” (2), ниже вы можете узнать где взять данный параметр.
+(1) The name of the data source. It is displayed in the interface in the list of sources.
 
-> Рекламные агентства должны заполнить дополнительное поле “Client ID” (3), это id вашего клиента, данные которого необходимо выгружать. Ниже находится инструкция по получению данного параметра.
+This data source has one mandatory setting, “Account ID” (2), you can find out where to get this parameter below.
 
-Чтобы сохранить и включить источник данных нажмите на “Save” (4).
+> Advertising agencies must fill in the additional field “Client ID” (3), this is the id of your client whose data you need to upload. Below are the instructions for obtaining this parameter.
 
-Кнопка “Disconnect” (5) необходима для того, чтобы отозвать авторизационные данные. Настройки при этом сохраняются.
+To save and enable the data source, click "Save" (4).
 
-### Получение Account ID
+The "Disconnect" button (5) is used to revoke the authorization data. The settings are saved.
 
-Для того, чтобы узнать свой Account ID, необходимо авторизоваться в [vk.com](vk.com) под своим аккаунтом, который имеет доступ к необходимому рекламному кабинету.
+### Getting the Account ID
 
-Перейдите по ссылке [https://vk.com/ads?act=settings](https://vk.com/ads?act=settings) и скопируйте строку, которая указана на скриншоте ниже (1)
+In order to find out your Account ID, you must log in to [vk.com](vk.com) using your account, which has access to the necessary advertising account.
 
-![](/img/vk.3.png)
+Click on the link [https://vk.com/ads?act=settings](https://vk.com/ads?act=settings) and copy the line shown in the screenshot below (1)
 
-### Получение Client ID
+![](/img/vk_account_id.png)
 
-В рекламном кабинете [https://vk.com/ads?act=office](https://vk.com/ads?act=office) необходимо необходимо перейти в раздел "Центр клиентов" (1) и кликнуть нужному клиенту (2). В текущем URL будет находиться необходимое нам значение в параметре union_id.
+### Getting the Client ID
 
-Пример: https://vk.com/ads?act=office&union_id={client_id}
+In the advertising account [https://vk.com/ads?act=office](https://vk.com/ads?act=office), you need to go to the "Client Center" (1) and click on the desired client (2). The current URL will contain the value we need in the union_id parameter.
+
+Example: https://vk.com/ads?act=office&union_id={client_id}
 
 ![](/img/vk.4.png)
 
-### Куда попадают данные о расходах на рекламу
+### Where to get data on advertising costs
 
-Данные в BigQuery будут записаны в таблицу с именем **vkCosts_{CLIENT_ID}_ {DATE}**. И в **vkCosts_{ACCOUNT_ID}_ {DATE}** для обычных рекламодателей.
+The data for this data source will be written to a table named **vkCosts_{CLIENT_ID}_ {DATE}** for agencies and in **vkCosts_{ACCOUNT_ID}_ {DATE}** for ordinary advertisers.
 
-### Структура таблицы
-
+### Table structure
 
 Field name|Type|Mode
 --- | --- | ---

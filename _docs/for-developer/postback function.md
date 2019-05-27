@@ -160,7 +160,7 @@ integrations.Google Analytics.clientId |	STRING |	Google Analytics client ID sav
 ### Поддерживаемые интеграции
 
 * Google Analytics
-* DDManager Streaming
+* Google BigQuery
 
 ### Custom Dimension и Custom Metrics
 
