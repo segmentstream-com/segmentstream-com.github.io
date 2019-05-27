@@ -101,7 +101,10 @@ Data type: string.
 ------
 Data type: boolean.
 
-`user.isReturning` contains information about the number of visits to the site by the user. In case the user visits the site for the first time, the variable takes the value 'false'. In the opposite case, 'true'.
+`user.isReturning` contains information about previous visits. In case the user visits the site for the first time, the variable takes the value 'false'. In the opposite case, 'true'. The term visit defined by [session timeout](/for-analyst/settings#sessionLength)
+
+> SDK create and fill this variable automatically. Pleas do not trey to reinitialize this variable.
+
 
 ### <a name="user.isSubscribed"></a>user.isSubscribed
 ------
