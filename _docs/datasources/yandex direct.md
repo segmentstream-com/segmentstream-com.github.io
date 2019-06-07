@@ -23,21 +23,23 @@ After authorization you need to set the data source parameters.
 
 (1) The name of the data source. It is displayed in the interface in the list of sources.
 
-(2) Customer login. It will be used as part of the table name so that when connecting multiple Yandex.Direct data sources, it can be easily distinguished as to which data source the table belongs to.
+(2) Enable option for import normalized costs report
 
-(3) Take into account the VAT. If you do not check the box, the prices in the report will be exclusive of VAT.
+(3) Enable option for import campaign performance report
 
-(4) The data source belongs to the agency. See Customization for advertising agencies.
+(4) Take into account the VAT. If you do not check the box, the prices in the report will be exclusive of VAT.
 
-(5) Account currency. Select the currency in which the data is displayed in the advertising account.
+(5) The data source belongs to the agency. See Customization for advertising agencies.
 
-(6) Value multiplier. Multiplied by the cost in the final report.
+(6) Account currency. Select the currency in which the data is displayed in the advertising account.
+
+(7) Value multiplier. Multiplied by the cost in the final report.
 
 If you use smart banners for advertising, you must fill in the parameters (7) and (8).
 
-(7) Smart banner advertising campaign identifier.
+(8) Smart banner advertising campaign identifier.
 
-(8) Utm parameters of the url for the smart banner are copied from the settings of the Yandex.Direct advertising account: **Editing active smart banners** → **URL parameters**.
+(9) Utm parameters of the url for the smart banner are copied from the settings of the Yandex.Direct advertising account: **Editing active smart banners** → **URL parameters**.
 
 Example: `utm_source=yandex&utm_medium=cpc&utm_campaign={campaign_id}&utm_term={keyword}&utm_content={phrase_id}`
 
@@ -67,9 +69,7 @@ The "Disconnect" button (4) is used to revoke the authorization data. The settin
 
 After the data source runs, the following tables will be created in BigQuery:
 
-yandexDirectReport_{login}_{DATE} - full report downloaded from Yandex.Direct
-
-yandexDirectAds_{login}_{DATE} - advertisements that were shown on a given day
+yandexDirectCampaignPerformance_{login}_{DATE} - full campaign performance report downloaded from Yandex.Direct
 
 yandexDirectCosts_{login}_{DATE} - report containing information on clicks, impressions and cost in the context of advertisements
 
