@@ -23,11 +23,13 @@ After authorization you need to set the data source parameters.
 
 For a full picture of advertising costs, you need to add all your active advertising accounts (2) (see the "How to Find Your Facebook Ad Account ID" section to find out where to find the advertising account ID).
 
-(3) The currency in which you want to export the costs from the advertising accounts.
+**Import "Ads Insights" report** (3) - allows you to import statistics on costs, without normalizing the values ​​in the table.
 
-To save and enable the data source, click "Save" (4).
+**Import normalized costs report** (4) - imports normalized expense report.
 
-The "Disconnect" button (5) is used to revoke the authorization data. The settings are saved.
+To save and enable the data source, click "Save" (5).
+
+The "Disconnect" button (7) is used to revoke the authorization data. The settings are saved.
 
 You can enable or disable the data source at any time (6).
 
