@@ -32,9 +32,9 @@ After authorization you need to set the data source parameters.
 ### Where to get data on advertising costs
 
 
-The data for normalized costs report will be written to a table named **myTargetCosts_{USER_ID}_{YYYYMMDD}**
+The data for the normalized costs report will be written to a table named **myTargetCosts_{USER_ID}_{YYYYMMDD}**
 
-The data for banners statistics report will be written to a table named **myTargetCampaignStatistics_{USER_ID}_{YYYYMMDD}**
+The data for the banner statistics report will be written to a table named **myTargetCampaignStatistics_{USER_ID}_{YYYYMMDD}**
 
 ### Table structure
 
