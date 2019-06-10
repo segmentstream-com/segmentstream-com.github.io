@@ -43,9 +43,9 @@ Import "Campaign Performance" report (9) - enable/disable to import statistics o
 
 ## Where to get data on advertising costs
 
-The data for normalized costs report will be written to a table named **criteoCosts_{ADVERTISER_ID}_{YYYYMMDD}**
+The data for the normalized costs report will be written to a table named **criteoCosts_{ADVERTISER_ID}_{YYYYMMDD}**
 
-The data for "Campaign Performance" report will be written to a table named **criteoCampaignPerformance_{ADVERTISER_ID}_{YYYYMMDD}**
+The data for the "Campaign Performance" report will be written to a table named **criteoCampaignPerformance_{ADVERTISER_ID}_{YYYYMMDD}**
 
 ### Tables structure
 
