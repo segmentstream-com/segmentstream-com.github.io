@@ -84,24 +84,36 @@ The variable `page.breadcrumb` does not need to be filled on pages with `page.ty
 
 ### <a name="page.url"></a>page.url
 ------
-`page.url` contains the full url of the page. You do not need to declare and fill in this variable as it is done automatically by the SegmentStream library.
+`page.url` contains the full url of the page.SegmentStream library.
+
+> SDK creates and fills this variable automatically. Please do not try to reinitialize this variable.
 
 ### <a name="page.hash"></a>page.hash
 ------
-`page.hash` contains the url part after the # character. For example, for the URL http://website.com/wommen/dresses/mini/?sortBy=price#black `page.hash` is set to "#black". You do not need to declare and fill in this variable as it is done automatically by the SegmentStream library.
+`page.hash` contains the url part after the # character. For example, for the URL http://website.com/wommen/dresses/mini/?sortBy=price#black `page.hash` is set to "#black".
+
+> SDK creates and fills this variable automatically. Please do not try to reinitialize this variable.
 
 ### <a name="page.path"></a>page.path
 ------
-`page.path` contains the url part between the first and last slash after the domain. For example, for the URL http://website.com/wommen/dresses/mini/?sortBy=price#black `page.path` takes the value of "/women/dresses/mini/". You do not need to declare and fill in this variable as it is done automatically by the SegmentStream library.
+`page.path` contains the url part between the first and last slash after the domain. For example, for the URL http://website.com/wommen/dresses/mini/?sortBy=price#black `page.path` takes the value of "/women/dresses/mini/".
+
+> SDK creates and fills this variable automatically. Please do not try to reinitialize this variable.
 
 ### <a name="page.queryString"></a>page.queryString
 ------
-`page.queryString` contains the url part with GET parameters. For example, for the URL http://website.com/wommen/dresses/mini/?sortBy=price#black `page.queryString` takes the value of "?SortBy=price". You do not need to declare and fill in this variable as it is done automatically by the SegmentStream library.
+`page.queryString` contains the url part with GET parameters. For example, for the URL http://website.com/wommen/dresses/mini/?sortBy=price#black `page.queryString` takes the value of "?SortBy=price".
+
+> SDK creates and fills this variable automatically. Please do not try to reinitialize this variable.
 
 ### <a name="page.referrer"></a>page.referrer
 ------
-`page.referrer` contains the url of the previous page. The page from which the link or redirect to the current page occurred. The value corresponds to the content of the global js-variable `document.referrer`. You do not need to declare and fill in this variable as it is done automatically by the SegmentStream library.
+`page.referrer` contains the url of the previous page. The page from which the link or redirect to the current page occurred. The value corresponds to the content of the global js-variable `document.referrer`.
+
+> SDK creates and fills this variable automatically. Please do not try to reinitialize this variable.
 
 ### <a name="page.title"></a>page.title
 ------
-`page.title` contains the value of the meta tag <title>Page title</title>. You do not need to declare and fill in this variable as it is done automatically by the SegmentStream library.
+`page.title` contains the value of the meta tag <title>Page title</title>.
+
+> SDK creates and fills this variable automatically. Please do not try to reinitialize this variable.
