@@ -68,15 +68,20 @@ Data type: string.
 
 ### <a name="context.userAgent"></a>context.userAgent
 ------
-Data type: string. Filled automatically
+Data type: string.
 
 `context.userAgent` - contains information about the users browser and system
 
+> SDK creates and fills this variable automatically. Please do not try to reinitialize this variable.
+
 ### <a name="context.os"></a>context.os
 ------
-Data type: object. Filled automatically
+Data type: object.
 
 `context.os` - Contains an object which describes the users operating system
+
+> SDK creates and fills this variable automatically. Please do not try to reinitialize this variable.
+
 
 Path|Data Type|Description
 ---|---|---
@@ -85,9 +90,11 @@ Path|Data Type|Description
 
 ### <a name="context.location"></a>context.location
 ------
-Data type: object. Filled automatically
+Data type: object.
 
 `context.location` - contains an object which describes the users location.
+
+> SDK creates and fills this variable automatically. Please do not try to reinitialize this variable.
 
 Path|Data Type|Description
 ---|---|---
@@ -97,9 +104,11 @@ Path|Data Type|Description
 
 ### <a name="context.device"></a>context.device
 ------
-Data type: object. Filled automatically
+Data type: object.
 
 `context.device` - contains an object which describes the users device.
+
+> SDK creates and fills this variable automatically. Please do not try to reinitialize this variable.
 
 Path|Data Type|Description
 ---|---|---
@@ -109,9 +118,11 @@ Path|Data Type|Description
 
 ### <a name="context.browser"></a>context.browser
 ------
-Data type: object. Filled automatically
+Data type: object.
 
 `context.browser` - contains an object which describes the users browser.
+
+> SDK creates and fills this variable automatically. Please do not try to reinitialize this variable.
 
 Path|Data Type|Description
 ---|---|---
@@ -121,11 +132,13 @@ Path|Data Type|Description
 
 ### <a name="context.campaign"></a>context.campaign
 ------
-Data type: object. Filled automatically
+Data type: object.
 
 `context.campaign` - contains an object that describes the source of the visit, including the channel, the name of the advertising campaign and other data.
 
 >SegmentStream recognizes utm_marks from the URL of the loaded page, forms the object `digital.context.campaign` and stores this information in the site visitor's browser localStorage for 90 days or until a "Completed Transaction" event has occurred.
+
+> SDK creates and fills this variable automatically. Please do not try to reinitialize this variable.
 
 Path|Data Type|Description
 ---|---|---
