@@ -12,6 +12,7 @@ The `digitalData.user` object contains the variables that describe the visitor o
 <ul class="page-navigation">
   <li><a href="#introduction">Introduction</a></li>
   <li><a href="#user.userId">user.userId</a></li>
+  <li><a href="#user.anonymousId">user.anonymousId</a></li>
   <li><a href="#user.email">user.email</a></li>
   <li><a href="#user.phone">user.phone</a></li>
   <li><a href="#user.isLoggedIn">user.isLoggedIn</a></li>
@@ -67,6 +68,14 @@ window.digitalData = {
 Data type: string.
 
 `user.userId` - a reserved variable that contains the primary identifier of the site visitor in your database. A visitor can have only 1 userId.
+
+### <a name="user.anonymousId"></a>user.anonymousId
+------
+Data type: string.
+
+`user.anonymousId` - a reserved variable that contains a unique browser identifier.
+
+> SDK creates and fills this variable automatically. Please do not try to reinitialize this variable.
 
 ### <a name="user.email"></a>user.email
 ------
