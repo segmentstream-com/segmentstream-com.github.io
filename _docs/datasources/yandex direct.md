@@ -9,7 +9,7 @@ order: 4
 
 ## Importing data from Yandex.Direct
 
-Connecting this data source allows you to import advertising costs information for the past 7 days into Google BigQuery once every 24 hours.
+Connecting this data source allows you to import advertising costs information into Google BigQuery once every 24 hours.
 
 This integration is available for both ordinary advertisers and advertising agencies.
 
@@ -41,7 +41,11 @@ If you use smart banners for advertising, you must fill in the parameters (7) an
 
 (9) Utm parameters of the url for the smart banner are copied from the settings of the Yandex.Direct advertising account: **Editing active smart banners** → **URL parameters**.
 
-Example: `utm_source=yandex&utm_medium=cpc&utm_campaign={campaign_id}&utm_term={keyword}&utm_content={phrase_id}`
+Example: `utm_source=yandex&utm_medium=cpc&utm_campaign={campaign_id}&utm_term={ad_id}&utm_content={gbid}`
+
+Notes:
+- You must fill the url params for all smart banners.
+- Using any of the `keyword`, `phrase_id`, `retargeting_id`, `adtarget_name`, `adtarget_id` substitution params in smart banners will cause the loss of `Impressions` data for all smart banner campaigns.
 
 ## Configuration for advertising agencies
 
@@ -74,3 +78,26 @@ yandexDirectCampaignPerformance_{login}_{DATE} - full campaign performance repor
 yandexDirectCosts_{login}_{DATE} - report containing information on clicks, impressions and cost in the context of advertisements
 
 For advertising agencies, the number of tables will be a multiple of the number of advertisers connected.
+
+## Substitution params
+
+You can use Yandex.Direct's dynamic parameters in ad urls and smart banners. List of supported substitutions:
+- `ad_id`
+- `banner_id`
+- `addphrases`
+- `campaign_id`
+- `device_type`
+- `gbid`
+- `keyword`
+- `phrase_id`
+- `retargeting_id`
+- `coef_goal_context_id`
+- `position_type`
+- `source`
+- `region_name`
+- `region_id`
+- `source_type`
+- `adtarget_name`
+- `adtarget_id`
+
+Read more about dynamic parameters: https://yandex.ru/support/direct/statistics/url-tags.html?lang=en
