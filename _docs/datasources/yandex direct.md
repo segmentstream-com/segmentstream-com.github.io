@@ -45,7 +45,7 @@ Example: `utm_source=yandex&utm_medium=cpc&utm_campaign={campaign_id}&utm_term={
 
 Notes:
 - You must fill the url params for all smart banners.
-- Using any of the `keyword`, `phrase_id`, `retargeting_id`, `adtarget_name`, `adtarget_id` substitution params in smart banners, will cause the loss of the `Impressions` for all smart banner campaigns.
+- Using any of the `keyword`, `phrase_id`, `retargeting_id`, `adtarget_name`, `adtarget_id` substitution params in smart banners will cause the loss of `Impressions` data for all smart banner campaigns.
 
 ## Configuration for advertising agencies
 
