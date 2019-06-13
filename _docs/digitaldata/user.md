@@ -67,13 +67,15 @@ window.digitalData = {
 ------
 Data type: string.
 
-`user.userId` - a reserved variable that contains the primary identifier of the site visitor in your database. A visitor can have only 1 userId.
+`user.userId` - a reserved variable that contains the primary identifier of the site visitor in your database, thus can only be used if your site has its own authentication system. A visitor can have only 1 userId.
 
 ### <a name="user.anonymousId"></a>user.anonymousId
 ------
 Data type: string.
 
 `user.anonymousId` - a reserved variable that contains a unique browser identifier.
+
+Using this variable allows you to idenfity unique users across browsing sessions, but it will not enable you to identify users across different browsers or devices. If you need to track users across any devices they use you have to use the [`user.userId`](#user.userId) variable.
 
 > SDK creates and fills this variable automatically. Please do not try to reinitialize this variable.
 

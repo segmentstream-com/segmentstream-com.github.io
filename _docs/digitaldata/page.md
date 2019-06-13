@@ -84,13 +84,13 @@ The variable `page.breadcrumb` does not need to be filled on pages with `page.ty
 
 ### <a name="page.url"></a>page.url
 ------
-`page.url` contains the full url of the page.SegmentStream library.
+`page.url` contains the full url of the page.
 
 > SDK creates and fills this variable automatically. Please do not try to reinitialize this variable.
 
 ### <a name="page.hash"></a>page.hash
 ------
-`page.hash` contains the url part after the # character. For example, for the URL http://website.com/wommen/dresses/mini/?sortBy=price#black `page.hash` is set to "#black".
+`page.hash` contains the part of the url beginning from the # character. For example, for the URL http://website.com/wommen/dresses/mini/?sortBy=price#black `page.hash` is set to "#black".
 
 > SDK creates and fills this variable automatically. Please do not try to reinitialize this variable.
 
@@ -108,7 +108,11 @@ The variable `page.breadcrumb` does not need to be filled on pages with `page.ty
 
 ### <a name="page.referrer"></a>page.referrer
 ------
-`page.referrer` contains the url of the previous page. The page from which the link or redirect to the current page occurred. The value corresponds to the content of the global js-variable `document.referrer`.
+`page.referrer` contains the url of the page from which the link or redirect to the current page occurred.
+
+Please note that this isn't always the case, for example when redirecting to a site through a search engine results page, the user is usually put through an intermediate page which will not contain data about the users search queries(for privacy reasons), therefore the value of the `page.referrer` variable will not be equal to the page that the user actually used to visit the site.
+
+The value corresponds to the content of the global js-variable `document.referrer`.
 
 > SDK creates and fills this variable automatically. Please do not try to reinitialize this variable.
 
