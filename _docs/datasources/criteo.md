@@ -9,7 +9,7 @@ order: 5
 
 ## Importing data from Criteo
 
-After enabling this data source, advertising costs information from your Criteo advertising account will be uploaded to BigQuery every day.
+After enabling this data source, Criteo advertising costs information will be uploaded to BigQuery once every 24 hours.
 
 ## Connecting and configuring
 

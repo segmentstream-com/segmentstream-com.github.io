@@ -9,7 +9,7 @@ order: 1
 
 ### Importing data from Facebook
 
-Connecting this data source allows you to import advertising costs information for the past 7 days into Google BigQuery once every 24 hours.
+After enabling this data source, Facebook advertising costs information for the past 7 days will be uploaded to Google BigQuery once every 24 hours.
 
 ### Connecting and configuring
 

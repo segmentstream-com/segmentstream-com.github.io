@@ -9,7 +9,7 @@ order: 2
 
 ### Importing data from Google Ads
 
-Connecting this data source allows you to import advertising costs information for the past 7 days into Google BigQuery once every 24 hours.
+After enabling this data source, Google Ads advertising costs information for the past 7 days will be uploaded to BigQuery once every 24 hours.
 
 This integration is available for both ordinary advertisers and advertising agencies.
 

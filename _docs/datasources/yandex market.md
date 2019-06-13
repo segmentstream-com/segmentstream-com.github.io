@@ -9,7 +9,7 @@ order: 8
 
 ## Importing data from Yandex.Market
 
-Connecting this data source allows you to import campaigns statistics information into Google BigQuery once every 24 hours.
+After enabling this data source, campaign statistics information will be uploaded to BigQuery once every 24 hours.
 
 ### Connecting and configuring
 
@@ -25,7 +25,7 @@ After authorization you need to set the data source parameters.
 
 (3) Click Add if need to add shop.
 
-(4) Enable option for import campaign statistics report. 
+(4) Enable option for import campaign statistics report.
 
 ---
 
