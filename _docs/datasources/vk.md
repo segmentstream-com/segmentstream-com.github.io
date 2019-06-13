@@ -9,7 +9,7 @@ order: 3
 
 ### Importing data from VK
 
-Connecting this data source allows you to import advertising costs information for the past 7 days into Google BigQuery once every 24 hours.
+After enabling this data source, VK advertising costs information will be uploaded to BigQuery once every 24 hours.
 
 This integration is available for both ordinary advertisers and advertising agencies.
 

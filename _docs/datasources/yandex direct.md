@@ -9,7 +9,7 @@ order: 4
 
 ## Importing data from Yandex.Direct
 
-Connecting this data source allows you to import advertising costs information into Google BigQuery once every 24 hours.
+After enabling this data source, Yandex.Direct advertising costs information will be uploaded to BigQuery once every 24 hours.
 
 This integration is available for both ordinary advertisers and advertising agencies.
 

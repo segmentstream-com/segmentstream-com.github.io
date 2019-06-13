@@ -9,7 +9,7 @@ order: 9
 
 ### Importing data from myTarget
 
-After enabling this data source, advertising costs information from your myTarget advertising account will be uploaded to BigQuery every day.
+After enabling this data source, myTarget advertising costs information will be uploaded to Google BigQuery once every 24 hours.
 
 ### Connecting and configuring
 

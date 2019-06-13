@@ -9,7 +9,7 @@ order: 10
 
 ### Importing data from Recreativ
 
-Connecting this data source allows you to import advertising costs information for the previous day into Google BigQuery once every 24 hours.
+After enabling this data source, Recreativ advertising costs information for the previous day will be uploaded to Google BigQuery once every 24 hours.
 
 ### Connecting and configuring
 
