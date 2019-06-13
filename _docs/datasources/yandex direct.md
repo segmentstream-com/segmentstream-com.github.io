@@ -101,3 +101,46 @@ You can use Yandex.Direct's dynamic parameters in ad urls and smart banners. Lis
 - `adtarget_id`
 
 Read more about dynamic parameters: https://yandex.ru/support/direct/statistics/url-tags.html?lang=en
+
+
+## Tables structure
+
+**yandexDirectCosts**
+
+Field name|Type|Mode
+--- | --- | ---
+cost | FLOAT | REQUIRED
+clicks | INTEGER | NULLABLE
+impressions | INTEGER | NULLABLE
+utmTerm | STRING | NULLABLE
+utmCampaign | STRING | NULLABLE
+utmContent | STRING | NULLABLE
+utmMedium | STRING | REQUIRED
+utmSource | STRING | REQUIRED
+currency | STRING | NULLABLE
+
+**yandexDirectCampaignPerformance**
+
+Field name|Type|Mode
+--- | --- | ---
+CampaignType | STRING | NULLABLE
+MatchType | STRING | NULLABLE
+Criterion | STRING | NULLABLE
+Device | STRING | NULLABLE
+Clicks | INTEGER | NULLABLE
+Impressions | INTEGER | NULLABLE
+Cost | INTEGER | NULLABLE
+Placement | STRING | NULLABLE
+CriterionType | STRING | NULLABLE
+AdGroupId | INTEGER | NULLABLE
+Date | DATE | NULLABLE
+CampaignId | INTEGER | NULLABLE
+CampaignName | STRING | NULLABLE
+AdId | INTEGER | NULLABLE
+AdNetworkType | STRING | NULLABLE
+CriterionId | INTEGER | NULLABLE
+AvgImpressionPosition | STRING | NULLABLE
+MobilePlatform | STRING | NULLABLE
+AdGroupName | STRING | NULLABLE
+AvgClickPosition | STRING | NULLABLE
+Gender | STRING | NULLABLE
