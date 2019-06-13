@@ -100,7 +100,7 @@ You can use Yandex.Direct's dynamic parameters in ad urls and smart banners. Lis
 - `adtarget_name`
 - `adtarget_id`
 
-Read more about dynamic parameters: https://yandex.ru/support/direct/statistics/url-tags.html?lang=en
+Read more about dynamic parameters: [https://yandex.ru/support/direct/statistics/url-tags.html](https://yandex.ru/support/direct/statistics/url-tags.html?lang=en)
 
 
 ## Tables structure
