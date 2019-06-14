@@ -90,7 +90,7 @@ The variable `page.breadcrumb` does not need to be filled on pages with `page.ty
 
 ### <a name="page.hash"></a>page.hash
 ------
-`page.hash` contains the part of the url beginning from the # character. For example, for the URL http://website.com/wommen/dresses/mini/?sortBy=price#black `page.hash` is set to "#black".
+`page.hash` contains the part of the url beginning from the `#` character. For example, for the URL http://website.com/wommen/dresses/mini/?sortBy=price#black `page.hash` is set to "#black".
 
 > SDK creates and fills this variable automatically. Please do not try to reinitialize this variable.
 
@@ -110,7 +110,7 @@ The variable `page.breadcrumb` does not need to be filled on pages with `page.ty
 ------
 `page.referrer` contains the url of the page from which the link or redirect to the current page occurred.
 
-Please note that this isn't always the case, for example when redirecting to a site through a search engine results page, the user is usually put through an intermediate page which will not contain data about the users search queries(for privacy reasons), therefore the value of the `page.referrer` variable will not be equal to the page that the user actually used to visit the site.
+Please note that this isn't always the case, for example when redirecting to a site through a search engine results page, the user is usually put through an intermediate page which will not contain data about the users search queries(for privacy reasons), therefore the value of the `page.referrer` variable may not be equal to the page that the user actually used to visit the site.
 
 The value corresponds to the content of the global js-variable `document.referrer`.
 
