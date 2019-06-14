@@ -2,14 +2,14 @@
 layout: page
 section: datasources
 title: "Vkontakte"
-order: 1
+order: 3
 ---
 
 > Attention! The [Google BigQuery](/integrations/google-bigquery) integration has to be enabled to use this feature.
 
 ### Importing data from VK
 
-Connecting this data source allows you to import advertising costs information for the past 7 days into Google BigQuery once every 24 hours.
+After enabling this data source, VK advertising costs information will be uploaded to BigQuery once every 24 hours.
 
 This integration is available for both ordinary advertisers and advertising agencies.
 
@@ -27,9 +27,13 @@ This data source has one mandatory setting, “Account ID” (2), you can find o
 
 > Advertising agencies must fill in the additional field “Client ID” (3), this is the id of your client whose data you need to upload. Below are the instructions for obtaining this parameter.
 
-To save and enable the data source, click "Save" (4).
+**Import ads statistics report** (4) - allows you to import statistics on costs, without normalizing the values ​​in the table.
 
-The "Disconnect" button (5) is used to revoke the authorization data. The settings are saved.
+**Import normalized costs report** (5) - imports normalized expense report.
+
+To save and enable the data source, click "Save" (6).
+
+The "Disconnect" button (7) is used to revoke the authorization data. The settings are saved.
 
 ### Getting the Account ID
 

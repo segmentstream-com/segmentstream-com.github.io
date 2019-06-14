@@ -27,7 +27,7 @@ Below is an example of a script that sends a user's Email when a "Subscribed" ev
 
 ![](/img/scripts.1.png)
 
-**Скрипт**
+### Script
 ```javascript
 jQuery.ajax({
   url: 'https://example.com/handler/',
@@ -43,8 +43,12 @@ In this field you have to enter the name of the event after which you want the s
 
 ### <a name="helperFunctions"></a>Helper functions
 ------
-When creating scripts, it is useful to use a set of built-in functions that greatly simplify and shorten the code of the executed functions. The list of helper functions is described in the [events](/for-analyst/events#3) page.
+When creating scripts, it is useful to use a set of built-in functions that greatly simplify and shorten the code of the executed functions. The list of helper functions is described in the [helper functions](/for-developer/helpers) page.
 
-### <a name="scriptTesting"></a>Тестирование скриптов
+### Run after page loaded
 ------
-The process of testing scripts is described in the [Variables section](/for-analyst/variables#5). The process is identical.
+You can load script after page load.
+
+### <a name="scriptTesting"></a>Script Testing
+------
+The process of testing scripts is described in the [Variables section](/for-analyst/variables#variableTesting). The process is identical.

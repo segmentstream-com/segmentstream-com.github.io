@@ -2,14 +2,14 @@
 layout: page
 section: datasources
 title: "Google Ads"
-order: 1
+order: 2
 ---
 
 > Attention! The [Google BigQuery](/integrations/google-bigquery) integration has to be enabled to use this feature.
 
 ### Importing data from Google Ads
 
-Connecting this data source allows you to import advertising costs information for the past 7 days into Google BigQuery once every 24 hours.
+After enabling this data source, Google Ads advertising costs information for the past 7 days will be uploaded to BigQuery once every 24 hours.
 
 This integration is available for both ordinary advertisers and advertising agencies.
 
@@ -25,11 +25,13 @@ After authorization you need to set the data source parameters.
 
 For a full picture of advertising costs, you need to add all your active advertising accounts (2) (see the "How to Find Your Account ID" section to find out where to find the advertising account ID).
 
-(3) The currency in which you want to export the costs from the advertising accounts.
+**Import "Keyword Performance" report** (3) - allows you to import statistics on costs, without normalizing the values ​​in the table.
 
-To save and enable the data source, click "Save" (4).
+**Import normalized costs report** (4) - imports normalized expense report.
 
-The "Disconnect" button (5) is used to revoke the authorization data. The settings are saved.
+To save and enable the data source, click "Save" (5).
+
+The "Disconnect" button (7) is used to revoke the authorization data. The settings are saved.
 
 You can enable or disable the data source at any time (6).
 

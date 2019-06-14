@@ -12,9 +12,11 @@ The `digitalData.user` object contains the variables that describe the visitor o
 <ul class="page-navigation">
   <li><a href="#introduction">Introduction</a></li>
   <li><a href="#user.userId">user.userId</a></li>
+  <li><a href="#user.anonymousId">user.anonymousId</a></li>
   <li><a href="#user.email">user.email</a></li>
   <li><a href="#user.phone">user.phone</a></li>
   <li><a href="#user.isLoggedIn">user.isLoggedIn</a></li>
+  <li><a href="#user.everLoggedIn">user.everLoggedIn</a></li>
   <li><a href="#user.firstName">user.firstName</a></li>
   <li><a href="#user.lastName">user.lastName</a></li>
   <li><a href="#user.isReturning">user.isReturning</a></li>
@@ -65,7 +67,17 @@ window.digitalData = {
 ------
 Data type: string.
 
-`user.userId` - a reserved variable that contains the primary identifier of the site visitor in your database. A visitor can have only 1 userId.
+`user.userId` - a reserved variable that contains the primary identifier of the site visitor in your database, thus can only be used if your site has its own authentication system. A visitor can have only 1 userId.
+
+### <a name="user.anonymousId"></a>user.anonymousId
+------
+Data type: string.
+
+`user.anonymousId` - a reserved variable that contains a unique browser identifier.
+
+Using this variable allows you to idenfity unique users across browsing sessions, but it will not enable you to identify users across different browsers or devices. If you need to track users across any devices they use you have to use the [`user.userId`](#user.userId) variable.
+
+> SDK creates and fills this variable automatically. Please do not try to reinitialize this variable.
 
 ### <a name="user.email"></a>user.email
 ------
@@ -85,6 +97,14 @@ Data type: boolean.
 
 `user.isLoggedIn` - reserved variable that contains the authorization status of the visitor. If the visitor is logged in, the variable `user.isLoggedIn` becomes 'true'. Otherwise, 'false'.
 
+### <a name="user.everLoggedIn"></a>user.everLoggedIn
+------
+Data type: boolean.
+
+`user.everLoggedIn` - reserved variable that describes if the user has ever been authorized.
+
+> SDK creates and fills this variable automatically. Please do not try to reinitialize this variable.
+
 ### <a name="user.firstName"></a>user.firstName
 ------
 Data type: string.
@@ -101,10 +121,9 @@ Data type: string.
 ------
 Data type: boolean.
 
-`user.isReturning` contains information about previous visits. In case the user visits the site for the first time, the variable takes the value 'false'. In the opposite case, 'true'. The term visit defined by [session timeout](/for-analyst/settings#sessionLength)
+`user.isReturning` contains information about the fact that the user has previously visited the website. In case the user visits the site for the first time, the variable takes the value 'false', in the opposite case, 'true'. The term visit is defined by the [session timeout](/for-analyst/settings#sessionLength).
 
-> SDK creates and fills this variable automatically. Pleas do not try to reinitialize this variable.
-
+> SDK creates and fills this variable automatically. Please do not try to reinitialize this variable.
 
 ### <a name="user.isSubscribed"></a>user.isSubscribed
 ------
