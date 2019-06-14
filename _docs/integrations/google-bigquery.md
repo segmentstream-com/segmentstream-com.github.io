@@ -180,7 +180,7 @@ Variable name | Data type | Comments
 `event.cart.shippingCost`|`FLOAT`|Price
 `event.cart.subtotal`|`FLOAT`|The total cost of the cart, not including shipping and discounts applied to the cart.
 `event.cart.total`|`FLOAT`|The total cost of the cart, including shipping and discounts applied to the cart.
-`event.cart.vouchers`|`STRING`|A list of the identifiers of the discounts applied, separated by a comma
+`event.cart.voucher`|`STRING`|A list of the identifiers of the discounts applied, separated by a comma
 `event.category`|`STRING`|Event category
 `event.customDimensions`|`RECORD`|Array of custom dimensions
 `event.customDimensions.name`|`STRING`|Custom dimension name
@@ -270,7 +270,7 @@ Variable name | Data type | Comments
 `event.transaction.shippingCost`|`FLOAT`|Delivery price
 `event.transaction.subtotal`|`FLOAT`|The total cost of the cart, not including shipping and discounts applied to the cart.
 `event.transaction.total`|`FLOAT`|The total cost of the cart, including shipping and discounts applied to the cart.
-`event.transaction.vouchers`|`STRING`|A list of the identifiers of the discounts applied, separated by a comma
+`event.transaction.voucher`|`STRING`|A list of the identifiers of the discounts applied, separated by a comma
 `website`|`RECORD`|Global information about the website's pages
 `website.currency`|`STRING`|Currency of prices on the website
 `website.environment`|`STRING`|The name of the environment for which the Digital Data Layer was created
