@@ -31,15 +31,13 @@ After authorization you need to set the data source parameters.
 
 (5) The data source belongs to the agency. See Customization for advertising agencies.
 
-(6) Account currency. Select the currency in which the data is displayed in the advertising account.
-
-(7) Value multiplier. Multiplied by the cost in the final report.
+(6) Value multiplier. Multiplied by the cost in the final report.
 
 If you use smart banners for advertising, you must fill in the parameters (7) and (8).
 
-(8) Smart banner advertising campaign identifier.
+(7) Smart banner advertising campaign identifier.
 
-(9) Utm parameters of the url for the smart banner are copied from the settings of the Yandex.Direct advertising account: **Editing active smart banners** → **URL parameters**.
+(8) Utm parameters of the url for the smart banner are copied from the settings of the Yandex.Direct advertising account: **Editing active smart banners** → **URL parameters**.
 
 Example: `utm_source=yandex&utm_medium=cpc&utm_campaign={campaign_id}&utm_term={ad_id}&utm_content={gbid}`
 
@@ -117,7 +115,6 @@ utmCampaign | STRING | NULLABLE
 utmContent | STRING | NULLABLE
 utmMedium | STRING | REQUIRED
 utmSource | STRING | REQUIRED
-currency | STRING | NULLABLE
 
 **yandexDirectCampaignPerformance**
 
