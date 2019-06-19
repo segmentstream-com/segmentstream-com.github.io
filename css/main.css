@@ -104,15 +104,15 @@ code {
 }
 
 #navigation .current a {
-    color: #167dd8;
+    color: #4d6dd3;
     background: #f8f8f8;
-    border-left: 3px solid #167dd8;
+    border-left: 3px solid #4d6dd3;
 }
 
 #navigation .current a:hover {
-    color: #167dd8;
+    color: #4d6dd3;
     background: #f8f8f8;
-    border-left: 3px solid #167dd8;
+    border-left: 3px solid #4d6dd3;
 }
 
 .nav-header {
@@ -191,7 +191,7 @@ td, th {
 }
 
 h1 {
-    color: #406dfb;
+    color: #4d6dd3;
     font-size: 32px
 }
 
@@ -205,7 +205,7 @@ h4 {
 }
 
 h4[id] {
-    color: #406dfb;
+    color: #4d6dd3;
 }
 
 blockquote p {
@@ -217,7 +217,7 @@ blockquote p {
 }
 
 #content a {
-    color: #167dd8;
+    color: #4d6dd3;
 }
 
 a:hover {
@@ -283,13 +283,13 @@ ol:before {
 #button-auth {
     color: #fff;
     border-radius: 3px;
-    background-color: #406dfb;
+    background-color: #4d6dd3;
     padding: 8px 45px 7px;
 }
 
 #button-auth:hover {
-    color: #406dfb;
-    border: 1px solid #406dfb;
+    color: #4d6dd3;
+    border: 1px solid #4d6dd3;
     border-radius: 3px;
     background-color: transparent;
 }
@@ -302,7 +302,7 @@ ol:before {
 }
 
 blockquote {
-    border-left: 4px solid #406dfb;
+    border-left: 4px solid #4d6dd3;
     font-size: 16px;
     line-height: 22px;
     padding: 10px 10px -24px 10px;
@@ -349,9 +349,9 @@ blockquote {
 }
 
 .button-questionaire:hover, .button-questionaire:focus  {
-    border: solid 1px #406dfb;
+    border: solid 1px #4d6dd3;
     text-decoration: none;
-    color: #406dfb;
+    color: #4d6dd3;
     cursor: pointer;
 }
 
@@ -376,7 +376,7 @@ blockquote {
 }
 
 #myBtn:hover, #myBtn:active, #myBtn:focus {
-    background-color: #406dfb;
+    background-color: #4d6dd3;
     border: none;
     outline: none;
 }
@@ -568,7 +568,7 @@ blockquote {
     }
 
     #navigation .side-nav li a:hover {
-        color: #406dfb;
+        color: #4d6dd3;
         text-decoration: none;
     }
 
