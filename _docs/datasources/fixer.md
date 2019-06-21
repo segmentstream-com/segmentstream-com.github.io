@@ -9,7 +9,7 @@ order: 11
 
 ### Importing data from Fixer
 
-After enabling [Fixer](http://fixer.io) data source allows importing exchange rates information into Google BigQuery once every 24 hours.
+After enabling the [Fixer](http://fixer.io) data source, exchange rates information will be uploaded to BigQuery once every 24 hours.
 
 ### Connecting and configuring
 
@@ -17,7 +17,7 @@ The process of connecting data sources is described in detail in the [overview](
 
 ![](/img/fixer1.png)
 
-In order to connect a new data source, go to "DATA IMPORT → Automatic" (1), select the type of data source from menu (2) and enter the API token from the Fixer personal account [https://fixer.io/dashboard](https://fixer.io/dashboard) (3)
+In order to connect a new data source, go to "DATA IMPORT → Automatic" (1), select the type of data source from the menu (2) and enter the API token from your Fixer personal account [https://fixer.io/dashboard](https://fixer.io/dashboard) (3)
 
 ![](/img/fixer2.png)
 
@@ -25,9 +25,11 @@ In order to connect a new data source, go to "DATA IMPORT → Automatic" (1), se
 
 ![](/img/fixer3.png)
 
-This data source has two setting - Title (1) and Base currency (2)
+After authorization you need to set the data source parameters.
 
-Относительно выбранной базовой валюты будет рассчитан коэффициент, умножив на который, вы сможете конвертировать значения из другой валюты.
+(1) The name of the data source. It is displayed in the interface in the list of sources.
+
+(2) The Base currency, which is the currency to which the exported exchange rates are relative to.
 
 To save and enable the data source, click "Save" (3).
 
@@ -35,7 +37,7 @@ The "Disconnect" button (4) is used to revoke the authorization data. The settin
 
 You can enable or disable the data source at any time (5).
 
-### Where to get data on advertising costs
+### Where to get data on exchange rates
 
 The data for this data source will be written to a table named **fixerExchangeRates_{BASE_CURRENCY}_{YYYYMMDD}**
 
