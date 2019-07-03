@@ -32,6 +32,8 @@ clicks | Click quantity
 impressions | Impression quantity
 date | Date in yyyy-mm-dd format
 
+>Please note that only the last 50 uploaded files are displayed in the table.
+
 ### File processing
 ------
 
