@@ -25,7 +25,11 @@ After authorization you need to set the data source parameters.
 
 (3) Click Add if need to add shop.
 
-(4) Enable option for import campaign statistics report.
+(4) Enable option for import normalized costs report.
+
+(5) If normalized costs report enabled, you can select billing currency of report.
+
+(6) Enable option for import offers statistics report.
 
 ---
 
@@ -43,7 +47,9 @@ The "Disconnect" button (4) is used to revoke the authorization data. The settin
 
 After the data source runs, the following tables will be created in BigQuery:
 
-yandexMarketCampaignStatistics_{shop_id}_{DATE} - report containing information by campaigns offers (clicks, spending), see table structure bellow.
+yandexMarketCampaignStatistics_{shop_id}_{DATE} - report containing information by shop offers (clicks, spending), see table structure bellow.
+
+yandexMarketCosts_{shop_id}_{DATE} - report containing information on clicks, impressions and cost of the shop offers
 
 
 ### Table structure for yandexMarketCampaignStatistics
@@ -54,3 +60,17 @@ offer_id | STRING | REQUIRED
 spending | FLOAT | REQUIRED
 clicks | INTEGER | REQUIRED
 campaign_name | STRING | REQUIRED
+
+
+### Table structure for yandexMarketCosts
+
+Field name|Type|Mode
+--- | --- | ---
+cost | FLOAT | REQUIRED
+clicks | INTEGER | NULLABLE
+impressions | INTEGER | NULLABLE
+utmTerm | STRING | NULLABLE
+utmCampaign | STRING | NULLABLE
+utmContent | STRING | NULLABLE
+utmMedium | STRING | REQUIRED
+utmSource | STRING | REQUIRED
