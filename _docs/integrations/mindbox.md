@@ -5,95 +5,97 @@ title: "Mindbox"
 order: 1
 ---
 
-В данном разделе вы узнаете:
-* Как подключить или отключить Mindbox на вашем сайте.
-* Как передать кастомные параметры и события в Mindbox.
+In this section, you will learn:
+* How to enable or disable Mindbox on your site.
+* How to send custom parameters and events to Mindbox.
 
-Mindbox - платформа автоматизации прямых коммуникаций с клиентами: email, push, sms, мессенджеры. SegmentStream позволяет отправлять данные о поведении ваших пользователей в [Mindbox](https://mindbox.ru).
+Mindbox is a platform for automated direct communication with clients: email, push, sms, instant messengers. SegmentStream allows you to send data about the behavior of your users to [Mindbox](https://mindbox.ru).
 
-### Навигация по странице
+### Page contents
 ------
 <ul class="page-navigation">
-  <li><a href="#0">Введение</a></li>
-  <li><a href="#0_1">Условия для подключения</a></li>
-  <li><a href="#1">Идентификатор точки доступа</a></li>
-  <li><a href="#2">Переменные пользователя</a></li>
-  <li><a href="#3">Переменные заказа</a></li>
-  <li><a href="#4">Переменные товара</a></li>
-  <li><a href="#5">Мэппинг операций</a></li>
-  <li><a href="#6">Идентификаторы потребителя</a></li>
-  <li><a href="#7">Идентификаторы товара</a></li>
-  <li><a href="#8">Идентификаторы SKU товара</a></li>
-  <li><a href="#9">Идентификаторы товарной категории</a></li>
-  <li><a href="#10">Идентификаторы зон</a></li>
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#Requirements">Requirements</a></li>
+  <li><a href="#EndpointID">Endpoint ID</a></li>
+  <li><a href="#UserVariables">User Variables</a></li>
+  <li><a href="#OrderVariables">Order Variables</a></li>
+  <li><a href="#ProductVariables">Product Variables</a></li>
+  <li><a href="#OperationMapping">Operation Mapping</a></li>
+  <li><a href="#CustomerIDmapping">Customer IDs mapping</a></li>
+  <li><a href="#ProductIDmapping">Product IDs mapping</a></li>
+  <li><a href="#ProductSKUIDmapping">Product SKU IDs mapping</a></li>
+  <li><a href="#ProductCategoryIDmapping">Product category IDs mapping</a></li>
+  <li><a href="#AreaIDmapping">Area IDs mapping</a></li>
+  <li><a href="#OrderIDmapping">Order IDs mapping</a></li>
 </ul>
 
-### <a name="0"></a>Введение
+### <a name="introduction"></a>Introduction
 ------
-С помощью SegmentStream можно полностью интегрировать Mindbox с вашим сайтом.
+With SegmentStream, you can fully integrate Mindbox with your site.
 
-Чтобы настроить интеграцию с Mindbox:
-1. Авторизуйтесь на сайте [segmentstream.com](https://admin.segmentstream.com/) и перейдите к панели управления интеграциями
-2. Войдите на вкладку "Интеграции" и кликните по блоку с логотипом Mindbox.
-3. В открывшейся панели - настройте интеграцию.
-![](/img/integrations.mindbox.01.png)
+To set up integration with Mindbox:
+1. Log in to [segmentstream.com](https://admin.segmentstream.com/)
+2. Go to the "Integration" tab and click on the block with the Mindbox logo.
+3. In the panel that opens, configure the integration.
+![](/img/integrations.mindbox.integrationpanel.png)
 <br />
-Подробнее о настройках вы можете прочитать ниже.
+Read below for more information about the integration settings.
 
->Mindbox API V2 больше не поддерживается разработчиками. Ниже идет описание настройки интеграции сайта с Mindbox API V3.
+> Mindbox API V2 is no longer supported by developers. Below is a description on how to integrate the site with Mindbox API V3.
 
-### <a name="0_1"></a>Условия для подключения
+### <a name="Requirements"></a>Requirements
 ------
-Перед тем, как приступить к настройке интеграции в панели SegmentStream необходимо зарегистрироваться в подключаемой системе и подготовить все необходимые данные:
-- Запросить у менеджера Mindbox ТЗ на интеграцию
-- Запросите у менеджера системное поле `endpointId`. Менеджер mindbox может сказать, что это поле не нужно или устарело. Что делать в этом случае описано в
+Before setting up the integration in the SegmentStream panel, you need to register in the connected system and prepare all the necessary data:
+- Request the technical specification for the integration from your Mindbox manager.
+- Ask the manager for the `endpointId` system field. The mindbox manager might say that this field is not needed or is out of date.
 
-### <a name="1"></a>Идентификатор точки доступа
+### <a name="EndpointID"></a>EndpointID
 ------
-Идентификатор точки доступа - это системное поле `endpointId` в сниппете инициализации. Его можно узнать у представителей Mindbox.<br/>
-[Справка Mindbox по вызову основного трекера](https://developers.mindbox.ru/docs/%D1%82%D1%80%D0%B5%D0%BA%D0%B5%D1%80)
+This is the `endpointId` system field in the initialization snippet. You can get it from Mindbox. <br/>
+[Mindbox documentation on calling the main tracker](https://developers.mindbox.ru/docs/%D1%82%D1%80%D0%B5%D0%BA%D0%B5%D1%80)
 
-> Если в вашем ТЗ отсутствует поле `endpointId`, то библиотека mindbox определяет точку доступа по домену автоматически. В этом случае оставьте поле пустым.
+> If there is no `endpointId` field in your technical specification, then the mindbox library determines the access point by domain automatically. In this case, leave the field blank.
 
-### <a name="2"></a>Переменные пользователя
+### <a name="UserVariables"></a>User Variables
 ------
-Переменные пользователя - это набор характеристик, которые описывают пользователя: имя, фамилия, телефон, адрес электронной почты и так далее. В ТЗ от mindbox в объекте `data.customer` описаны названия переменных, которые нужны для интеграции, например: `lastName`, `firstName`, `mobilePhone`...
+User variables are a set of characteristics that describe a user: first name, last name, telephone number, email address, and so on. In the Mindbox specification, the `data.customer` object describes the names of variables that are needed for the integration, for example: `lastName`, `firstName`, `mobilePhone`...
 
-В данной настройке вам нужно в левой части указать имя переменной из ТЗ Mindbox, в правой - имя переменной в digitalData.
+In the left part of this setting you need to specify the Mindbox variable name and in the right part - the variable name in digitalData.
 
-![](/img/integrations.mindbox.2.png)
+![](/img/integrations.mindbox.userVariables.png)
 
-### <a name="3"></a>Переменные заказа
+### <a name="OrderVariables"></a>Order Variables
 ------
-В разработке...
+Order variables are a custom set of characteristics that you can set to describe an order. They are passed into the `data.order.customFields` object described in the Mindbox specification.
 
-### <a name="4"></a>Переменные товара
+### <a name="ProductVariables"></a>Product Variables
 ------
-Переменные товара - это набор характеристик, которые описывают товары на сайте: цена, название, размер, цвет и так далее. По умолчанию SegmentStream передает: идентификатор товаров, цена, количество единиц, добавленных в корзину.
+Product variables are a set of characteristics that describe products on the site: price, name, size, color, and so on. By default, SegmentStream sends: product ID, price, number of units added to the cart.
 
-В случае, если необходимо передать дополнительные параметры вам нужно сделать настройку соответствия: слева - имя переменной Mindbox, справа - имя переменной digitalData.
+In case you need to pass additional parameters, you need to fill the product variable setting: on the left - the name of the Mindbox variable, on the right - the name of the digitalData variable.
 
->Так как объект 'product' встречается во многих местах объекта 'digitalData': `digitalData.product`, `digitalData.cart.lineItems[]`, `digitalData.transaction.lineItems[]` и других, в настройке используйте только имя переменной без полного пути до нее. SegmentStream сам поймет в какой ситуацию из какого места брать информацию о товаре.
+> Since the 'product' object is found in many places of the 'digitalData' object: `digitalData.product`, `digitalData.cart.lineItems[]`, `digitalData.transaction.lineItems[]` and others, use only the variable name in the setting without full path to it. SegmentStream itself will understand in what situation from which place to retrieve information about the product.
 
-### <a name="5"></a>Мэппинг операций
+### <a name="OperationMapping"></a>Operation Mapping
 ------
-Любая информация попадает в Mindbox в виде событий. К сожалению, в системе Mindbox нет зарезервированных имен для определенных событий, поэтому необходимо настроить правила соответствия, например: операция mindbox 'EnterSite' соответствует событию 'Logged In'.
+Information is passed to Mindbox in the form of events. As there are no reserved names for certain events in the Mindbox system, you need to set up the operation mapping manualy, for example: the mindbox 'EnterSite' operation corresponds to the 'Logged In' event.
 
-Список названий необходимых операций есть в ТЗ Mindbox.
+The list of names of necessary operations should be in the Mindbox specification sent to you by your Mindbox manager.
 
-![](/img/integrations.mindbox.3.png)
+![](/img/integrations.mindbox.operationMapping.png)
 
-### <a name="6"></a>Идентификаторы потребителя
+### <a name="CustomerIDmapping"></a>Customer IDs mapping
 ------
-В зависимости от особенностей ТЗ от Mindbox у каждого посетителя сайта может быть один или несколько идентификаторов.
-Идентификаторы потребителя можно найти в ТЗ mindbox:
+Depending on the characteristics of the Mindbox specification, each site visitor may have one or more identifiers.
+Customer identifiers can be found in the Mindbox specification:
+
 ```javaScript
 mindbox('async', {
-  operation: '<Название операции>',
+  operation: '<operation name>',
   data: {
     customer: {
       ids: {
-      	<Идентификатор>: '<Значение идентификатора>',
+      	<identifier>: '<identifier value>',
       },
       ...
     },
@@ -101,20 +103,105 @@ mindbox('async', {
   }
 );
 ```
-. Имя ключа необходимо указать в настройках интеграции. В соответствующем поле укажите из какой переменной `digitalData` необходимо забрать идентификатор. В большинстве случаев - это будет `digitalData.user.userId`.
+The key name must be specified in the integration settings. In the appropriate field, specify from which `digitalData` variable the identifier should be retrieved from. In most cases, it will be `digitalData.user.userId`.
 
-### <a name="7"></a>Идентификаторы товара
+### <a name="ProductIDmapping"></a>Product IDs mapping
 ------
-В разработке...
+Depending on the characteristics of the Mindbox specification, each product on the website may have one or more identifiers.
+Product identifiers can be found in the Mindbox specification:
 
-### <a name="8"></a>Идентификаторы SKU товара
-------
-В разработке...
+```javaScript
+mindbox('async', {
+  operation: '<Operation name>',
+  data: {
+    customer: {
+      ids: {
+      	<Identifier>: '<Identifier value>',
+      },
+    },
+    productList: [
+      {
+        product: {
+          ids: {
+            <Identifier>: '<Product identifier value>'
+          },
+          sku: {
+            ids: {
+              <Identifier>: '<Product SKU identifier value>'
+            }
+          }
+        },
+        count: <Selected product quantity>,
+        price: <Total price>
+      }
+      ...
+    ]
+  }
+});
+```
+The key name must be specified in the integration settings. In the appropriate field, specify from which `digitalData` variable the identifier should be retrieved from. In most cases, it will be `digitalData.product.id`.
 
-### <a name="9"></a>Идентификаторы товарной категории
+### <a name="ProductSKUIDmapping"></a>Product SKU IDs mapping
 ------
-В разработке...
+The key name must be specified in the integration settings as in the [Product IDs Mapping](#ProductIDmapping) setting. In the appropriate field, specify from which `digitalData` variable the identifier should be retrieved from. In most cases, it will be `digitalData.product.skuCode`.
 
-### <a name="10"></a>Идентификаторы зон
+### <a name="ProductCategoryIDmapping"></a>Product Category IDs mapping
 ------
-В разработке...
+Depending on the characteristics of the Mindbox specification, each category on the website may have one or more identifiers.
+Category identifiers can be found in the Mindbox specification:
+
+```javaScript
+mindbox('async', {
+  operation: '<Operation name>',
+  data: {
+    productCategory: {
+      ids: {
+        <Identifier>: '<Category identifier value>'
+      }
+    }
+  }
+});
+```
+The key name must be specified in the integration settings. In the appropriate field, specify from which `digitalData` variable the identifier should be retrieved from. In most cases, it will be `digitalData.listing.categoryId`.
+
+### <a name="AreaIDmapping"></a>Area IDs mapping
+------
+Depending on the characteristics of the Mindbox specification, the region set by a user on the website may have one or more identifiers.
+Region identifiers can be found in the Mindbox specification:
+
+```javaScript
+mindbox('async', {
+  operation: '<Operation name>',
+  data: {
+    customer: {
+      area: {
+        ids: {
+          <Identifier>: '<Region identifier value>'
+        }
+      }
+    }
+  }
+});
+```
+The key name must be specified in the integration settings. In the appropriate field, specify from which `digitalData` variable the identifier should be retrieved from. In most cases, it will be `digitalData.website.regionId`.
+
+### <a name="OrderIDmapping"></a>Order IDs mapping
+------
+Depending on the characteristics of the Mindbox specification, the order on the website may have one or more identifiers.
+Region identifiers can be found in the Mindbox specification:
+
+```javaScript
+mindbox("async", {
+  operation: '<Operation name>',
+  data: {
+    "order": {
+      //...other order data
+      "ids": {
+        <Identifier>: '<Order identifier value>'
+      }
+    }
+  },
+});
+```
+
+The key name must be specified in the integration settings. In the appropriate field, specify from which `digitalData` variable the identifier should be retrieved from. In most cases, it will be `digitalData.transaction.orderId`.
