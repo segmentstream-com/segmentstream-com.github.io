@@ -32,12 +32,14 @@ https://track.segmentstream.com/track
 
 Название|Тип данных|Описание
 --- | --- | ---
-hitId |	STRING |	Идентификатор хита (uuid v1)
-sentAt |	TIMESTAMP |	Время отправки события c клиента (UTC, зависит от времени, установленного на компьютере) ISO 8601
+hitId |	STRING |	Идентификатор хита (uuid v1). Обязательно!
+sentAt |	TIMESTAMP |	Время отправки события c клиента (UTC, зависит от времени, установленного на компьютере) ISO 8601.  Обязательно!
 event |	RECORD |	Информация о событии
 event.category |	STRING |	Категория события
 event.name |	STRING |	Имя события
 event.source |	STRING |	Источник события
+event.label |	STRING |	Метка события
+event.value |	NUMBER |	Значение события. Не должно быть отрицательным
 event.user |	RECORD |	Информация о пользователе
 event.user.emailHash |	STRING |	Хэш электронного адреса пользователя (sha256)
 event.user.userId |	STRING |	Идентификатор авторизованного пользователя
@@ -153,14 +155,17 @@ integrations.Google Analytics.clientId |	STRING |	Google Analytics client ID sav
 }
 ```
 
-### Поддерживаемые события
+### Поддерживаемые семантические события
 
 * Completed Transaction
+
+> Все остальные отправятся как Custom Events
 
 ### Поддерживаемые интеграции
 
 * Google Analytics
 * Google BigQuery
+* OWOX BI Streaming
 
 ### Custom Dimension и Custom Metrics
 
