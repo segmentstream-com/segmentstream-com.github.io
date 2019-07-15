@@ -39,7 +39,7 @@ event.category |	STRING |	Категория события
 event.name |	STRING |	Имя события
 event.source |	STRING |	Источник события
 event.label |	STRING |	Метка события
-event.value |	NUMBER |	Значение события. Не должно быть отрицательным
+event.value |	INTEGER |	Значение события. Не должно быть отрицательным
 event.user |	RECORD |	Информация о пользователе
 event.user.emailHash |	STRING |	Хэш электронного адреса пользователя (sha256)
 event.user.userId |	STRING |	Идентификатор авторизованного пользователя
