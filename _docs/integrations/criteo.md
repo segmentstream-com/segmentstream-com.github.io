@@ -73,11 +73,9 @@ For correct integration, Criteo should also receive information about the intera
 
 [More about product groups](https://support.google.com/merchants/answer/6324507)
 
--If you use grouping of goods using the `item_group_id` xml-feed parameter - be sure to activate this setting.
-  >In this case, the product id from your XML feed must match the `product.skuCode` of the `digitalData` object. Be sure to fill `product.skuCode` and `product.id` in each `product`.
+Activate this setting the product id from your XML feed matchs the `product.skuCode` of the `digitalData` object. Be sure to fill `product.skuCode` and `product.id` in each `product`.
 
- -If you do NOT use grouping of goods using the `item_group_id` xml-feed parameter - do not activate this setting.
-  >In this case, the product id from your XML feed must match the `product.id` of the `digitalData` object.
+Do not activate this setting if the product id from your XML feed matches the `product.id` of the `digitalData` object.
 
 ### <a name="userSegment"></a>User segment
 ------
