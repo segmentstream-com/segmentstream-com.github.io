@@ -103,7 +103,8 @@ To install support for data protection regulations you need to do the following:
 1. Make sure the site has the latest version of [SegmentStream snippet](/en/for-developer/snippet).
 2. Select a policy in the project settings at [https://admin.segmentstream.com/](http: //admin.segmentstream.com/) (see the screenshot in the introduction section).
 3. Add a handler after the snippet to change the user's consent status to the processing of their data:
-```
+
+```html
 ddManager.on('ready', function() {
   // the consent variable contains the
   // user's consent status on data processing:
