@@ -18,9 +18,9 @@ Vkontakte is a social network with a small set of advertising tools. Vkontakte i
 <ul class="page-navigation">
   <li><a href="#introduction">Introduction</a></li>
   <li><a href="#vkontaktePixelID">Vkontakte pixel ID</a></li>
+  <li><a href="#pricelistID">Default pricelist ID for dynamic retargeting</a></li>
   <li><a href="#customEvents">Custom events</a></li>
   <li><a href="#customEventsOld">Custom events (old version)</a></li>
-  <li><a href="#defaultPricelistID">Default pricelist ID for dynamic retargeting</a></li>
 </ul>
 
 
@@ -35,19 +35,53 @@ To configure the Vkontakte integration:
 2. Click on the "Integration" tab and click on the block with the Vkontakte logo.
 3. In the panel that opens, configure the integration.
 
-![](/img/integrations.vkontakte.1.png)
+![](/img/integrations.vkontakte.settings.png)
 
 You can read more details about the settings below.
 
-
 ### <a name="vkontaktePixelID"></a>Vkontakte pixel ID
 ------
+The Vkontakte SegmentStream integration allows you to connect any number of Pixel IDs you need.
+
 You can find the Pixel ID in the section: Advertising > Targeting > Retargeting > Pixels.
 
 ![](/img/integrations.vkontakte.2.png)
 ![](/img/integrations.vkontakte.3.png)
 
 Copy the ID and paste it into the "Vkontakte pixel ID" field of the integration settings window.
+
+### <a name="pricelistID"></a>Pricelist ID for dynamic retargeting
+------
+
+For the correct operation of the system, you must specify the price-list identifier for each connected pixel. It can be set as a constant or dynamic parameter. Set the value as 1 if the prices on your site do not vary from region to region.
+
+If the prices depend on the region, there are several ways to pass the price list id:
+1. It can be passed as a digitalData parameter, in the case that the value of `digitalData.website.regionId` corresponds to the needed price list ID, the following setting should be used.
+![](/img/integrations.vkontakte.digitalDataPricelist.png)
+2. It can be passed as an event parameter, if your event contains a parameter that is equal to the needed price list, the following setting should be used.
+![](/img/integrations.vkontakte.eventPricelist.png)
+3. If you don't have the price-list identifier in the digitalData, but have data that can be translated into the necessary price list IDs, you will have make an additional setting in the "Event variables" tab:
+ - Write `priceListId` in the "variable name" field
+ - Leave the "Event Name" field blank. This means that for any event a non-standard price list will be used
+ - In the "Event handler" field write a function that, depending on the region of the user, returns the corresponding value of the price list.
+ - Click "Save"
+
+ ![](/img/integrations.vkontakte.customPricelist.png)
+
+For the correct operation of the dynamic retargeting module, the following events are required:
+* [Viewed Page](/events/viewed-page)
+* [Viewed Product Detail](/events/viewed-product-detail)
+* [Viewed Product Listing](/events/viewed-product-listing)
+* [Searched Products](/events/searched-products)
+* [Added Product](/events/added-product)
+* [Added Product to Wishlist](/events/added-product-to-wishlist)
+* [Removed Product](/events/removed-product)
+* [Removed Product from Wishlist](/events/removed-product-from-wishlist)
+* [Started Order](/events/started-order) (optional)
+* [Added Payment Info](/events/added-payment-info) (optional)
+* [Completed Transaction](/events/completed-transaction)
+
+>Dynamic retargeting only works with the new version of the pixel.
 
 ### <a name="customEvents"></a>Custom events
 ------
@@ -66,30 +100,3 @@ In the deprecated version of the API for each event in the VKontakte interface y
 To set up the transmission of data to those trackers you have to fill in two fields:
 1. Left - The name of the event that is pushed to the `digitalData.events` array, for example: [Completed Transaction](/events/completed-transaction)
 2. Right - URL of the tracker from the VKontakte interface.
-
-### <a name="defaultPricelistID"></a>Default pricelist ID for dynamic retargeting
-------
-For the correct operation of the dynamic retargeting module, the following events are required:
-* [Viewed Page](/events/viewed-page)
-* [Viewed Product Detail](/events/viewed-product-detail)
-* [Viewed Product Listing](/events/viewed-product-listing)
-* [Searched Products](/events/searched-products)
-* [Added Product](/events/added-product)
-* [Added Product to Wishlist](/events/added-product-to-wishlist)
-* [Removed Product](/events/removed-product)
-* [Removed Product from Wishlist](/events/removed-product-from-wishlist)
-* [Started Order](/events/started-order) (не обязательно)
-* [Added Payment Info](/events/added-payment-info) (не обязательно)
-* [Completed Transaction](/events/completed-transaction)
-
->Dynamic retargeting only works with the new version of the pixel.
-
-For the correct operation of the system, you must specify the price-list identifier. Set the value as 1 if the prices on your site do not vary from region to region.
-
-If the prices depend on the region, make an additional setting in the "Event variables" tab:
- - Write `priceListId` in the "variable name" field
- - Leave the "Event Name" field blank. This means that for any event a non-standard price list will be used
- - In the "Event handler" field write a function that, depending on the region of the user, returns the corresponding value of the price list.
- - Click "Save"
-
- ![](/img/integrations.vkontakte.4.png)
