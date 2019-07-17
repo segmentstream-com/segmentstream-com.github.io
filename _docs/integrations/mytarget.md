@@ -67,11 +67,9 @@ For correct integration, myTarget should also receive information about the inte
 
 [More about product groups](https://target.my.com/adv/help/dynamic_remarketing/)
 
--If you use grouping of goods using the `item_group_id` xml-feed parameter - be sure to activate this setting.
-  >In this case, the product id from your XML feed must match the `product.skuCode` of the `digitalData` object. Be sure to fill `product.skuCode` and `product.id` in each `product`.
+  >Activate this setting if the offer id from your XML feed matches the `product.skuCode` of the `digitalData` object. Be sure to fill `product.skuCode` and `product.id` in each `product`.
 
- -If you do NOT use grouping of goods using the `item_group_id` xml-feed parameter - do not activate this setting.
-  >In this case, the product id from your XML feed must match the `product.id` of the `digitalData` object.
+  >Do not activate this setting if the offer id from your XML feed matches the `product.id` of the `digitalData` object.
 
 ### <a name="pricelistNumber"></a>Pricelist number
 ------
