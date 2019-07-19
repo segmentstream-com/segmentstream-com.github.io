@@ -53,17 +53,18 @@ Copy the ID and paste it into the "Vkontakte pixel ID" field of the integration 
 ### <a name="pricelistID"></a>Pricelist ID for dynamic retargeting
 ------
 
-For the correct operation of the system, you must specify the price-list identifier for each connected pixel. It can be set as a constant or dynamic parameter. Set the value as 1 if the prices on your site do not vary from region to region.
-
-If the prices depend on the region, there are several ways to pass the price list id:
-1. It can be passed as a digitalData parameter, in the case that the value of `digitalData.website.regionId` corresponds to the needed price list ID, the following setting should be used.
+For the correct operation of the system, you must specify the pricelist identifier for each connected pixel. It can be set as a constant or dynamic parameter. Set the value as 1 if the prices on your site do not vary from region to region.
+By setting a constant pricelist id for a pixel as in the screenshot below, the same value will always be passed regardless of region and other user attributes.
+![](/img/integrations.vkontakte.constantPricelist.png)
+If the prices depend on the region, there are several ways to pass the pricelist id:
+1. It can be passed as a digitalData parameter, in the case that the value of `digitalData.website.regionId` corresponds to the needed pricelist ID, the following setting should be used.
 ![](/img/integrations.vkontakte.digitalDataPricelist.png)
-2. It can be passed as an event parameter, if your event contains a parameter that is equal to the needed price list, the following setting should be used.
+2. It can be passed as an event parameter, if your event contains a parameter that is equal to the needed pricelist, the following setting should be used.
 ![](/img/integrations.vkontakte.eventPricelist.png)
-3. If you don't have the price-list identifier in the digitalData, but have data that can be translated into the necessary price list IDs, you will have make an additional setting in the "Event variables" tab:
+3. If you don't have the pricelist identifier in the digitalData, but have data that can be translated into the necessary pricelist IDs, you need to setup an additional setting in the "Event variables" tab:
  - Write `priceListId` in the "variable name" field
- - Leave the "Event Name" field blank. This means that for any event a non-standard price list will be used
- - In the "Event handler" field write a function that, depending on the region of the user, returns the corresponding value of the price list.
+ - Leave the "Event Name" field blank. This means that for any event a non-standard pricelist will be used
+ - In the "Event handler" field write a function that, depending on the region of the user, returns the corresponding value of the pricelist.
  - Click "Save"
 
  ![](/img/integrations.vkontakte.customPricelist.png)
