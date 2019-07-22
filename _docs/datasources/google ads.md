@@ -100,6 +100,10 @@ AdGroupName | STRING | REQUIRED
 CampaignId | INTEGER | REQUIRED
 CampaignName | STRING | REQUIRED
 AccountDescriptiveName | STRING | REQUIRED
+Conversions | FLOAT | REQUIRED
+AllConversions | FLOAT | REQUIRED
+FirstPositionCpc | STRING | REQUIRED
+FirstPageCpc | STRING | REQUIRED
 
 ### "Audience Performance" report table structure
 
@@ -117,6 +121,8 @@ AdGroupName | STRING | REQUIRED
 CampaignId | INTEGER | REQUIRED
 CampaignName | STRING | REQUIRED
 AccountDescriptiveName | STRING | REQUIRED
+Conversions | FLOAT | REQUIRED
+AllConversions | FLOAT | REQUIRED
 
 ### "Criteria Performance" report table structure
 
@@ -136,6 +142,10 @@ Id | INTEGER | REQUIRED
 BidModifier | FLOAT | REQUIRED
 Device | STRING | REQUIRED
 CriteriaType | STRING | REQUIRED
+Conversions | FLOAT | REQUIRED
+AllConversions | FLOAT | REQUIRED
+FirstPositionCpc | STRING | REQUIRED
+FirstPageCpc | STRING | REQUIRED
 
 ### "Placement Performance" report table structure
 
@@ -151,6 +161,8 @@ AdGroupName | STRING | REQUIRED
 CampaignId | INTEGER | REQUIRED
 CampaignName | STRING | REQUIRED
 AccountDescriptiveName | STRING | REQUIRED
+Conversions | FLOAT | REQUIRED
+AllConversions | FLOAT | REQUIRED
 
 ### "Click Performance" report table structure
 
@@ -191,6 +203,8 @@ AccountDescriptiveName | STRING | REQUIRED
 AdNetworkType1 | STRING | REQUIRED
 Device | STRING | REQUIRED
 AdvertisingChannelSubType | STRING | REQUIRED
+Conversions | FLOAT | REQUIRED
+AllConversions | FLOAT | REQUIRED
 
 ### "Ad Performance" report table structure
 
@@ -216,6 +230,8 @@ Date | DATE | REQUIRED
 AdType | STRING | REQUIRED
 CreativeFinalUrls | STRING | REQUIRED
 CreativeTrackingUrlTemplate | STRING | REQUIRED
+Conversions | FLOAT | REQUIRED
+AllConversions | FLOAT | REQUIRED
 
 ### Supported substitutions
 
