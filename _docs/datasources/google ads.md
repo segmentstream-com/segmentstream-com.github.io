@@ -25,15 +25,21 @@ After authorization you need to set the data source parameters.
 
 For a full picture of advertising costs, you need to add all your active advertising accounts (2) (see the "How to Find Your Account ID" section to find out where to find the advertising account ID).
 
-**Import "Keyword Performance" report** (3) - allows you to import "Keyword Performance" report, without normalizing the values ​​in the table.
-**Import "Audience Performance" report** (4) - allows you to import "Audience Performance" report, without normalizing the values ​​in the table.
-**Import "Criteria Performance" report** (5) - allows you to import "Criteria Performance" report, without normalizing the values ​​in the table.
-**Import "Placement Performance" report** (6) - allows you to import "Placement Performance" report, without normalizing the values ​​in the table.
-**Import "Click Performance" report** (7) - allows you to import "Click Performance" report, without normalizing the values ​​in the table.
-**Import "Campaign Performance" report** (8) - allows you to import "Campaign Performance" report, without normalizing the values ​​in the table.
-**Import "Ad Performance" report** (9) - allows you to import "Ad Performance" report, without normalizing the values ​​in the table.
+**Import "Keyword Performance" report** (3) - enable "Keyword Performance" report import, without normalizing the values ​​in the table.
 
-**Import normalized costs report** (10) - imports normalized expense report.
+**Import "Audience Performance" report** (4) - enable "Audience Performance" report import, without normalizing the values ​​in the table.
+
+**Import "Criteria Performance" report** (5) - enable "Criteria Performance" report import, without normalizing the values ​​in the table.
+
+**Import "Placement Performance" report** (6) - enable "Placement Performance" report import, without normalizing the values ​​in the table.
+
+**Import "Click Performance" report** (7) - enable "Click Performance" report import, without normalizing the values ​​in the table.
+
+**Import "Campaign Performance" report** (8) - enable "Campaign Performance" report import, without normalizing the values ​​in the table.
+
+**Import "Ad Performance" report** (9) - enable "Ad Performance" report import, without normalizing the values ​​in the table.
+
+**Import normalized costs report** (10) - imports normalized expenses report.
 
 To save and enable the data source, click "Save" (11).
 
@@ -51,14 +57,14 @@ Customer ID has the following format XXX-XXX-XXXX, where X - is a number from 0 
 
 ### Where to get data on advertising costs
 
-- **googleAdsCosts_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}** - the data for normalized costs
-- **googleAdsKeywordsPerformance_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}** -  the data for "Keyword Performance" report
-- **googleAdsAudiencePerformance_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}** -  the data for "Audience Performance" report
-- **googleAdsCriteriaPerformance_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}** -  the data for "Criteria Performance" report
-- **googleAdsPlacementPerformance_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}** -  the data for "Placement Performance" report
-- **googleAdsClickPerformance_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}** -  the data for "Click Performance" report
-- **googleAdsCampaignPerformance_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}** -  the data for "Campaign Performance" report
-- **googleAdsAdPerformance_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}** -  the data for "Ad Performance" report
+- **googleAdsCosts_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}** - data for normalized costs
+- **googleAdsKeywordsPerformance_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}** - data for "Keyword Performance" report
+- **googleAdsAudiencePerformance_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}** - data for "Audience Performance" report
+- **googleAdsCriteriaPerformance_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}** - data for "Criteria Performance" report
+- **googleAdsPlacementPerformance_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}** - data for "Placement Performance" report
+- **googleAdsClickPerformance_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}** - data for "Click Performance" report
+- **googleAdsCampaignPerformance_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}** - data for "Campaign Performance" report
+- **googleAdsAdPerformance_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}** - data for "Ad Performance" report
 
 
 
