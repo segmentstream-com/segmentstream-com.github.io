@@ -25,29 +25,44 @@ After authorization you need to set the data source parameters.
 
 For a full picture of advertising costs, you need to add all your active advertising accounts (2) (see the "How to Find Your Account ID" section to find out where to find the advertising account ID).
 
-**Import "Keyword Performance" report** (3) - allows you to import statistics on costs, without normalizing the values ​​in the table.
+**Import "Keyword Performance" report** (3) - allows you to import "Keyword Performance" report, without normalizing the values ​​in the table.
+**Import "Audience Performance" report** (4) - allows you to import "Audience Performance" report, without normalizing the values ​​in the table.
+**Import "Criteria Performance" report** (5) - allows you to import "Criteria Performance" report, without normalizing the values ​​in the table.
+**Import "Placement Performance" report** (6) - allows you to import "Placement Performance" report, without normalizing the values ​​in the table.
+**Import "Click Performance" report** (7) - allows you to import "Click Performance" report, without normalizing the values ​​in the table.
+**Import "Campaign Performance" report** (8) - allows you to import "Campaign Performance" report, without normalizing the values ​​in the table.
+**Import "Ad Performance" report** (9) - allows you to import "Ad Performance" report, without normalizing the values ​​in the table.
 
-**Import normalized costs report** (4) - imports normalized expense report.
+**Import normalized costs report** (10) - imports normalized expense report.
 
-To save and enable the data source, click "Save" (5).
+To save and enable the data source, click "Save" (11).
 
-The "Disconnect" button (7) is used to revoke the authorization data. The settings are saved.
+The "Disconnect" button (13) is used to revoke the authorization data. The settings are saved.
 
-You can enable or disable the data source at any time (6).
+You can enable or disable the data source at any time (12).
 
 ### How to Find Your Account ID
 
 Log in to Google Ads with an account that has access to the desired company. Depending on how many accounts you have created, copy the Customer ID. If you have more than one account, then you need to copy the account ID under the number 1. If you have only one account, then copy the ID under the number 2.
 
-Customer ID has the following format XXX-XXX-XXXX, where X - is a number from 0 t0 9.
+Customer ID has the following format XXX-XXX-XXXX, where X - is a number from 0 to 9.
 
 ![](/img/gl-a.3.png)
 
 ### Where to get data on advertising costs
 
-The data for this data source will be written to a table named **googleAdsCosts_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}**
+- **googleAdsCosts_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}** - the data for normalized costs
+- **googleAdsKeywordsPerformance_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}** -  the data for "Keyword Performance" report
+- **googleAdsAudiencePerformance_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}** -  the data for "Audience Performance" report
+- **googleAdsCriteriaPerformance_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}** -  the data for "Criteria Performance" report
+- **googleAdsPlacementPerformance_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}** -  the data for "Placement Performance" report
+- **googleAdsClickPerformance_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}** -  the data for "Click Performance" report
+- **googleAdsCampaignPerformance_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}** -  the data for "Campaign Performance" report
+- **googleAdsAdPerformance_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}** -  the data for "Ad Performance" report
 
-### Table structure
+
+
+### Normalized costs table structure
 
 Field name|Type|Mode
 --- | --- | ---
@@ -60,6 +75,141 @@ utmContent | STRING | NULLABLE
 utmMedium | STRING | NULLABLE
 utmSource | STRING | NULLABLE
 currency | STRING | NULLABLE
+
+### "Keyword Performance" report table structure
+
+Field name|Type|Mode
+--- | --- | ---
+Cost | INTEGER | REQUIRED
+Impressions | INTEGER | REQUIRED
+Clicks | INTEGER | REQUIRED
+ConversionRate | FLOAT | REQUIRED
+CpcBid | INTEGER | REQUIRED
+KeywordMatchType | STRING | REQUIRED
+Status | STRING | REQUIRED
+Id | INTEGER | REQUIRED
+Criteria | STRING | REQUIRED
+AdGroupId | INTEGER | REQUIRED
+AdGroupName | STRING | REQUIRED
+CampaignId | INTEGER | REQUIRED
+CampaignName | STRING | REQUIRED
+AccountDescriptiveName | STRING | REQUIRED
+
+### "Audience Performance" report table structure
+
+Field name|Type|Mode
+--- | --- | ---
+Cost | INTEGER | REQUIRED
+Impressions | INTEGER | REQUIRED
+Clicks | INTEGER | REQUIRED
+ConversionRate | FLOAT | REQUIRED
+CpcBid | INTEGER | REQUIRED
+Criteria | STRING | REQUIRED
+ClickType | STRING | REQUIRED
+AdGroupId | INTEGER | REQUIRED
+AdGroupName | STRING | REQUIRED
+CampaignId | INTEGER | REQUIRED
+CampaignName | STRING | REQUIRED
+AccountDescriptiveName | STRING | REQUIRED
+
+### "Criteria Performance" report table structure
+
+Field name|Type|Mode
+--- | --- | ---
+Cost | INTEGER | REQUIRED
+Impressions | INTEGER | REQUIRED
+Clicks | INTEGER | REQUIRED
+CampaignId | INTEGER | REQUIRED
+AdGroupId | INTEGER | REQUIRED
+AccountDescriptiveName | STRING | REQUIRED
+ClickType | STRING | REQUIRED
+CpcBid | INTEGER | REQUIRED
+Criteria | STRING | REQUIRED
+AdNetworkType1 | STRING | REQUIRED
+Id | INTEGER | REQUIRED
+BidModifier | FLOAT | REQUIRED
+Device | STRING | REQUIRED
+CriteriaType | STRING | REQUIRED
+
+### "Placement Performance" report table structure
+
+Field name|Type|Mode
+--- | --- | ---
+Cost | INTEGER | REQUIRED
+Impressions | INTEGER | REQUIRED
+Clicks | INTEGER | REQUIRED
+ConversionRate | FLOAT | REQUIRED
+Criteria | STRING | REQUIRED
+AdGroupId | INTEGER | REQUIRED
+AdGroupName | STRING | REQUIRED
+CampaignId | INTEGER | REQUIRED
+CampaignName | STRING | REQUIRED
+AccountDescriptiveName | STRING | REQUIRED
+
+### "Click Performance" report table structure
+
+Field name|Type|Mode
+--- | --- | ---
+GclId | STRING | REQUIRED
+Page | INTEGER | REQUIRED
+Slot | STRING | REQUIRED
+Device | STRING | REQUIRED
+AoiCityCriteriaId | INTEGER | REQUIRED
+AoiCountryCriteriaId | INTEGER | REQUIRED
+AoiRegionCriteriaId | INTEGER | REQUIRED
+LopCityCriteriaId | INTEGER | REQUIRED
+LopCountryCriteriaId | INTEGER | REQUIRED
+LopRegionCriteriaId | INTEGER | REQUIRED
+AdNetworkType1 | STRING | REQUIRED
+AdNetworkType2 | STRING | REQUIRED
+CreativeId | INTEGER | REQUIRED
+CriteriaId | INTEGER | REQUIRED
+CriteriaParameters | STRING | REQUIRED
+AdGroupId | INTEGER | REQUIRED
+AdGroupName | STRING | REQUIRED
+CampaignId | INTEGER | REQUIRED
+CampaignName | STRING | REQUIRED
+AccountDescriptiveName | STRING | REQUIRED
+
+### "Campaign Performance" report table structure
+
+Field name|Type|Mode
+--- | --- | ---
+Cost | INTEGER | REQUIRED
+Impressions | INTEGER | REQUIRED
+Clicks | INTEGER | REQUIRED
+ClickType | STRING | REQUIRED
+CampaignId | INTEGER | REQUIRED
+CampaignName | STRING | REQUIRED
+AccountDescriptiveName | STRING | REQUIRED
+AdNetworkType1 | STRING | REQUIRED
+Device | STRING | REQUIRED
+AdvertisingChannelSubType | STRING | REQUIRED
+
+### "Ad Performance" report table structure
+
+Field name|Type|Mode
+--- | --- | ---
+Cost | INTEGER | REQUIRED
+Impressions | INTEGER | REQUIRED
+Clicks | INTEGER | REQUIRED
+ConversionRate | FLOAT | REQUIRED
+AdGroupId | INTEGER | REQUIRED
+AdGroupName | STRING | REQUIRED
+CampaignId | INTEGER | REQUIRED
+CampaignName | STRING | REQUIRED
+Id | INTEGER | REQUIRED
+Device | STRING | REQUIRED
+ClickType | STRING | REQUIRED
+AdNetworkType2 | STRING | REQUIRED
+CriterionId | INTEGER | REQUIRED
+CriterionType | STRING | REQUIRED
+ImageCreativeName | STRING | REQUIRED
+AccountCurrencyCode | STRING | REQUIRED
+Date | DATE | REQUIRED
+AdType | STRING | REQUIRED
+CreativeFinalUrls | STRING | REQUIRED
+CreativeTrackingUrlTemplate | STRING | REQUIRED
 
 ### Supported substitutions
 
