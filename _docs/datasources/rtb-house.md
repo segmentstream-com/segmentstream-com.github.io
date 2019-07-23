@@ -26,9 +26,9 @@ After authorization you need to set the data source parameters.
 
 (1) The name of the data source. It is displayed in the interface in the list of sources.
 
-**Import normalized costs report** (2) - enable/disable to import normalized costs report.
+**Import normalized costs report** (2) - enable import normalized costs report.
 
-**Import Advertisers statistics report** (3) - enable/disable to import advertisers statistics report.
+**Import Advertisers statistics report** (3) - enable import advertisers statistics report.
 
 To save and enable the data source, click "Save" (4).
 
