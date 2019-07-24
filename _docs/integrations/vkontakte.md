@@ -18,6 +18,7 @@ Vkontakte is a social network with a small set of advertising tools. Vkontakte i
 <ul class="page-navigation">
   <li><a href="#introduction">Introduction</a></li>
   <li><a href="#vkontaktePixelID">Vkontakte pixel ID</a></li>
+  <li><a href="#productFeed">Product feed has grouped products</a></li>
   <li><a href="#pricelistID">Default pricelist ID for dynamic retargeting</a></li>
   <li><a href="#customEvents">Custom events</a></li>
   <li><a href="#customEventsOld">Custom events (old version)</a></li>
@@ -49,6 +50,23 @@ You can find the Pixel ID in the section: Advertising > Targeting > Retargeting 
 ![](/img/integrations.vkontakte.3.png)
 
 Copy the ID and paste it into the "Vkontakte pixel ID" field of the integration settings window.
+
+### <a name="productFeed"></a>Product feed has grouped products
+------
+Vkontakte receives information about products placed on the site through an XML feed. With a certain interval, the Vkontakte robot downloads a feed from your server. This feed contains information about all products on the site.
+
+[Learn more about the feed format.](https://support.google.com/merchants/answer/7052112)
+
+For correct integration, Vkontakte should also receive information about the interaction of users with products on the site - views, additions to the shopping cart, purchases, etc. The system must correctly match what it sees in the incoming events with the XML feed.
+
+[More about product groups](https://support.google.com/merchants/answer/6324507)
+
+-If you use grouping of goods using the `item_group_id` xml-feed parameter - be sure to activate this setting.
+  >In this case, the product id from your XML feed must match the `product.skuCode` of the `digitalData` object. Be sure to fill `product.skuCode` and `product.id` in each `product`.
+
+ -If you do NOT use grouping of goods using the `item_group_id` xml-feed parameter - do not activate this setting.
+  >In this case, the product id from your XML feed must match the `product.id` of the `digitalData` object.
+
 
 ### <a name="pricelistID"></a>Pricelist ID for dynamic retargeting
 ------
