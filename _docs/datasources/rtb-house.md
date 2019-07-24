@@ -26,9 +26,9 @@ After authorization you need to set the data source parameters.
 
 (1) The name of the data source. It is displayed in the interface in the list of sources.
 
-**Import normalized costs report** (2) - enable import normalized costs report.
+**Import normalized costs report** (2) - enable normalized costs report import.
 
-**Import Advertisers statistics report** (3) - enable import advertisers statistics report.
+**Import Advertisers statistics report** (3) - enable advertisers statistics report import.
 
 To save and enable the data source, click "Save" (4).
 
@@ -38,10 +38,8 @@ You can enable or disable the data source at any time (5).
 
 ### Where to get data on advertising costs
 
-The data for this data source will be written to a table named **rtbHouseCosts_{USER_LOGIN}_{YYYYMMDD}**.
-
-The data for the advertisers statistics report will be written to a table named **rtbHouseCategoryStatsReport_{USER_LOGIN}_{YYYYMMDD}**.
-
+- **rtbHouseCosts_{USER_LOGIN}_{YYYYMMDD}** - data for normalized costs
+- **rtbHouseCategoryStatsReport_{USER_LOGIN}_{YYYYMMDD}** - data for advertisers statistics report
 
 ### Table structure
 
