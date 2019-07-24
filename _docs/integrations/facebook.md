@@ -21,6 +21,7 @@ Facebook is a social network with a large set of advertising tools. Facebook sho
   <li><a href="#productFeed">Product feed has grouped products</a></li>
   <li><a href="#costOfGoods">Pass the cost of goods to the event value parameter</a></li>
   <li><a href="#customEvents">Custom events</a></li>
+  <li><a href="#eventParameters">Event parameters</a></li>
   <li><a href="#checkingIntegrationCorrectness">Checking the correctness of the integration setup</a></li>
 </ul>
 
@@ -34,7 +35,7 @@ To configure the Facebook integration:
 1. Log in to the [segmentstream.com](https://admin.segmentstream.com/) website and go to the integration management panel
 2. Go to the "Integration" tab and click on the block with the Facebook logo.
 3. In the opened panel - configure the integration.
-![](/img/integrations.facebook.1.png)
+![](/img/integrations.facebook.settings.png)
 
 You can read more details about the settings below.
 
@@ -86,6 +87,25 @@ To configure the transfer of custom events, fill in 2 fields:
 > You can choose the name of the event in Facebook at your discretion, but we recommend that you adhere to Facebook's naming rules. Facebook uses the CamelCase format.
 
 You can add an unlimited number of custom events
+
+### <a name="eventParameters"></a>Event parameters
+------
+SegmentStream can send custom parameters along with events, which can be used to define any custom audiences you create, as it is described in the Facebook [documentation](https://developers.facebook.com/docs/facebook-pixel/implementation/conversion-tracking#parameters).
+
+To configure the transfer of event parameters, fill in 3 fields:
+1. Left - Enter the name of the parameter that you want to pass data to. Should not contain any spaces.
+2. Center - Specify the data source:
+ - **DigitalData**. Any variable that is present in the digitalData object
+ - **Event**. Any variable of any event that is pushed to the `digitalData.events` array
+3. Right - Specify the name of the variable in the right field
+
+Below are two examples of usage:
+- If you want to pass a `promotion` parameter to Facebook that gets its value from the `sharePromotion` variable of an event:
+![](/img/integrations.facebook.exampleEventParameter.png)
+- If you want to pass a `websiteDesign` parameter to Facebook that gets its value from the `website.design` variable of the digitalData object:
+![](/img/integrations.facebook.exampleDigitalDataParameter.png)
+
+You can add an unlimited number of event parameters, and they will be passed to all events sent to Facebook.
 
 ### <a name="checkingIntegrationCorrectness"></a>Checking the correctness of the integration setup
 ------
