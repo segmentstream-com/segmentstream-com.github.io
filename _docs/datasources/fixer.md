@@ -39,7 +39,7 @@ You can enable or disable the data source at any time (5).
 
 ### Where to get data on exchange rates
 
-The data for this data source will be written to a table named **fixerExchangeRates_{BASE_CURRENCY}_{YYYYMMDD}**
+- **fixerExchangeRates_{BASE_CURRENCY}_{YYYYMMDD}** - data on exchange rates
 
 ### Table structure
 

@@ -15,7 +15,7 @@ After enabling this data source, myTarget advertising costs information will be 
 
 The process of connecting data sources is described in detail in the [overview](https://docs.segmentstream.com/datasources/index).
 
-![](/img/mt_1.png)
+![](/img/datasources.mytarget.settings.png)
 
 After authorization you need to set the data source parameters.
 
@@ -23,18 +23,15 @@ After authorization you need to set the data source parameters.
 
 (2) Value multiplier. Multiplied by the cost in the final report.
 
+(3) **Import normalized costs report** - enable normalized costs report import.
 
-**Import normalized costs report** (3) - enable/disable to import normalized costs report.
-
-**Import banners statistics** (4) - enable/disable to import banners statistics costs, without normalizing the values ​​in the table.
+(4) **Import banner statistics report** - enable banner statistics costs report import, without normalizing the values ​​in the table.
 
 
 ### Where to get data on advertising costs
 
-
-The data for the normalized costs report will be written to a table named **myTargetCosts_{USER_ID}_{YYYYMMDD}**
-
-The data for the banner statistics report will be written to a table named **myTargetCampaignStatistics_{USER_ID}_{YYYYMMDD}**
+- **myTargetCosts_{USER_ID}_{YYYYMMDD}** - data for normalized costs
+- **myTargetCampaignStatistics_{USER_ID}_{YYYYMMDD}** - data for banner statistics report
 
 ### Table structure
 

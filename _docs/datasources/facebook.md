@@ -23,9 +23,9 @@ After authorization you need to set the data source parameters.
 
 For a full picture of advertising costs, you need to add all your active advertising accounts (2) (see the "How to Find Your Facebook Ad Account ID" section to find out where to find the advertising account ID).
 
-**Import "Ads Insights" report** (3) - allows you to import statistics on costs, without normalizing the values ​​in the table.
+**Import "Ads Insights" report** (3) - enable costs report import, without normalizing the values ​​in the table.
 
-**Import normalized costs report** (4) - imports normalized expense report.
+**Import normalized costs report** (4) - enable normalized costs report import.
 
 To save and enable the data source, click "Save" (5).
 
@@ -41,7 +41,8 @@ Log in to Facebook with an account that has access to the required company. On t
 
 ### Where to get data on advertising costs
 
-The data for this data source will be written to a table named **facebookCosts_{ACCOUNT_ID}_{YYYYMMDD}**
+- **facebookCosts_{ACCOUNT_ID}_{YYYYMMDD}** - data for normalized costs
+- **facebookCampaignStatistics_{ACCOUNT_ID}_{YYYYMMDD}** - data for "Ads Insights" report
 
 ### Table structure
 

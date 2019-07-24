@@ -37,15 +37,14 @@ After authorization you need to set the data source parameters.
 
 Because there is no possibility to get information about utm tags in the Сriteo API, you need to configure UTM campaigns manually, for this you need to input each campaign ID (6) and its corresponding UTM campaign tag (7).
 
-Import normalized costs report (8) - enable/disable to import normalized costs report.
+**Import normalized costs report** (8) - enable normalized costs report import.
 
-Import "Campaign Performance" report (9) - enable/disable to import statistics on costs, without normalizing the values ​​in the table.
+**Import "Campaign Performance" report** (9) - enable costs report import, without normalizing the values ​​in the table.
 
 ## Where to get data on advertising costs
 
-The data for the normalized costs report will be written to a table named **criteoCosts_{ADVERTISER_ID}_{YYYYMMDD}**
-
-The data for the "Campaign Performance" report will be written to a table named **criteoCampaignPerformance_{ADVERTISER_ID}_{YYYYMMDD}**
+- **criteoCosts_{ADVERTISER_ID}_{YYYYMMDD}** - data for normalized costs
+- **criteoCampaignPerformance_{ADVERTISER_ID}_{YYYYMMDD}** - data for "Campaign Performance" report
 
 ### Tables structure
 

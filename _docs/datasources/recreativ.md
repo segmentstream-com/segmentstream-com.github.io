@@ -34,7 +34,7 @@ You can enable or disable the data source at any time (3).
 
 ### Where to get data on advertising costs
 
-The data for this data source will be written to a table named **recreativCampaignStatistics_{ADVERTISER_ID}_{YYYYMMDD}**
+- **recreativCampaignStatistics_{ADVERTISER_ID}_{YYYYMMDD}** - data for advertising costs
 
 ### Table structure
 

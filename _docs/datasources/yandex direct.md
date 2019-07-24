@@ -23,9 +23,9 @@ After authorization you need to set the data source parameters.
 
 (1) The name of the data source. It is displayed in the interface in the list of sources.
 
-(2) Enable option for import normalized costs report
+(2) **Import normalized costs report**  - enable normalized costs report import.
 
-(3) Enable option for import campaign performance report
+(3) **Import campaign performance report** - enable campaign performance report import, without normalizing the values ​​in the table.
 
 (4) Take into account the VAT. If you do not check the box, the prices in the report will be exclusive of VAT.
 
@@ -67,13 +67,10 @@ You can enable or disable the data source at any time (3).
 
 The "Disconnect" button (4) is used to revoke the authorization data. The settings are saved.
 
----
+## Where to get data on advertising costs
 
-After the data source runs, the following tables will be created in BigQuery:
-
-yandexDirectCampaignPerformance_{login}_{DATE} - full campaign performance report downloaded from Yandex.Direct
-
-yandexDirectCosts_{login}_{DATE} - report containing information on clicks, impressions and cost in the context of advertisements
+- **yandexDirectCampaignPerformance_{login}_{DATE}** - data for full campaign performance report downloaded from Yandex.Direct
+- **yandexDirectCosts_{login}_{DATE}** - data for report containing information on clicks, impressions and cost in the context of advertisements
 
 For advertising agencies, the number of tables will be a multiple of the number of advertisers connected.
 

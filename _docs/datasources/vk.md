@@ -27,9 +27,9 @@ This data source has one mandatory setting, “Account ID” (2), you can find o
 
 > Advertising agencies must fill in the additional field “Client ID” (3), this is the id of your client whose data you need to upload. Below are the instructions for obtaining this parameter.
 
-**Import ads statistics report** (4) - allows you to import statistics on costs, without normalizing the values ​​in the table.
+**Import ads statistics report** (4) - enable banner statistics costs report import, without normalizing the values ​​in the table.
 
-**Import normalized costs report** (5) - imports normalized expense report.
+**Import normalized costs report** (5) - enable normalized costs report import.
 
 To save and enable the data source, click "Save" (6).
 
@@ -53,7 +53,10 @@ Example: https://vk.com/ads?act=office&union_id={client_id}
 
 ### Where to get data on advertising costs
 
-The data for this data source will be written to a table named **vkCosts_{CLIENT_ID}_ {DATE}** for agencies and in **vkCosts_{ACCOUNT_ID}_ {DATE}** for ordinary advertisers.
+- **vkCosts_{CLIENT_ID}_ {DATE}** - data for agencies normalized costs report
+- **vkCosts_{ACCOUNT_ID}_ {DATE}** - data for advertisers normalized costs report
+- **vkCampaignStatistics_{CLIENT_ID}_ {DATE}** - data for agencies ads statistics report
+- **vkCampaignStatistics_{ACCOUNT_ID}_ {DATE}** - data for advertisers ads statistics report
 
 ### Table structure
 
