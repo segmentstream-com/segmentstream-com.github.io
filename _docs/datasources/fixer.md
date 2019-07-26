@@ -37,9 +37,9 @@ The "Disconnect" button (4) is used to revoke the authorization data. The settin
 
 You can enable or disable the data source at any time (5).
 
-### Where to get data on exchange rates
+### Where to get data for exchange rates
 
-- **fixerExchangeRates_{BASE_CURRENCY}_{YYYYMMDD}** - data on exchange rates
+- **fixerExchangeRates_{BASE_CURRENCY}_{YYYYMMDD}** - data for exchange rates
 
 ### Table structure
 
