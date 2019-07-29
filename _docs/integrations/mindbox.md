@@ -17,6 +17,7 @@ Mindbox is a platform for automated direct communication with clients: email, pu
   <li><a href="#introduction">Introduction</a></li>
   <li><a href="#Requirements">Requirements</a></li>
   <li><a href="#EndpointID">Endpoint ID</a></li>
+  <li><a href="#WebPush">Web push</a></li>
   <li><a href="#UserVariables">User Variables</a></li>
   <li><a href="#OrderVariables">Order Variables</a></li>
   <li><a href="#ProductVariables">Product Variables</a></li>
@@ -55,6 +56,17 @@ This is the `endpointId` system field in the initialization snippet. You can get
 [Mindbox documentation on calling the main tracker](https://developers.mindbox.ru/docs/%D1%82%D1%80%D0%B5%D0%BA%D0%B5%D1%80)
 
 > If there is no `endpointId` field in your technical specification, then the mindbox library determines the access point by domain automatically. In this case, leave the field blank.
+
+### <a name="WebPush"></a>Web push
+------
+For Web push notifications to work several steps have to be completed, they are described in detail below. For more details you can see the [Mindbox Webpush documentation](https://docs.google.com/document/d/1TzJLJRpTOhD1GNPhB6ANlpwTLgggCSJEWLzKi-pa7GU/edit#heading=h.432hw3hw9ey8).
+![](/img/integrations.mindbox.push.png)
+
+- By toggling the (1) 'Web push' option, you enable the Mindbox Webpush module and load the manifest file.
+- Incase the 'Serviceworker' file isn't in the root of your website as recommended in the Mindbox documentation, you can enable the (2) 'Custom ServiceWorker path' option, which will allow you to enter a custom path for the file in the (3) 'ServiceWorker path' field.
+- The (4) 'Push subscription trigger event' field contains the name of the event that activates the push notification subscription pop-up.
+- The (5) Webpush sender ID field should contain your Firebase messaging Sender Id, which you can get from your Mindbox manager.
+
 
 ### <a name="UserVariables"></a>User Variables
 ------
