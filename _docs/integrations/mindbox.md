@@ -63,10 +63,27 @@ For Web push notifications to work several steps have to be completed, they are 
 ![](/img/integrations.mindbox.push.png)
 
 - By toggling the (1) 'Web push' option, you enable the Mindbox Webpush module and load the manifest file.
-- Incase the 'Serviceworker' file isn't in the root of your website as recommended in the Mindbox documentation, you can enable the (2) 'Custom ServiceWorker path' option, which will allow you to enter a custom path for the file in the (3) 'ServiceWorker path' field.
+- In case the 'Serviceworker' file isn't in the root of your website as recommended in the Mindbox documentation, you can enable the (2) 'Custom ServiceWorker path' option, which will allow you to enter a custom path for the file in the (3) 'ServiceWorker path' field.
 - The (4) 'Push subscription trigger event' field contains the name of the event that activates the push notification subscription pop-up.
 - The (5) Webpush sender ID field should contain your Firebase messaging Sender Id, which you can get from your Mindbox manager.
 
+> Please note! The service worker file must be registered at the root directory of your website.
+
+> If you don’t want to register it at the root directory, you must set a scope config when registering the service worker. See the example below:
+
+```
+navigator.serviceWorker.register('/assets/service-worker.js', { scope: '/' })
+  .then(function() {
+    return navigator.serviceWorker.ready;
+  })
+  .then(function(registration) {
+    console.log(registration); // service worker is ready and working...
+  });
+```
+
+> Finally, you must add a Service-Worker-Allowed header to the server which serves the service worker file. Otherwise, the browser will block your registration for security reasons.
+`Service-Worker-Allowed: ‘/’`
+*Note that the header’s value is the same as the scope’s value.*
 
 ### <a name="UserVariables"></a>User Variables
 ------
