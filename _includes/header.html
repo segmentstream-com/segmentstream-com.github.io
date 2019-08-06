@@ -1,15 +1,30 @@
 <div class="row">
-    <div class="col-sm-3 col-xs-12">
+    <div class="col-sm-4 col-xs-12">
         <div id="menu-toggle"></div>
+        <div id="search-toggle"></div>
         <a target="_blank" href="https://admin.segmentstream.com/"><div id="login-button"></div></a>
         <a class="brand" href="{{ site.baseurl }}/"><img src="/img/segmentstream-logo.png" height="47" alt={{ site.title }}
                 class="ddm-logo">
         </a>
         {% if site.subtitle %}<small>{{ site.subtitle }}</small>{% endif %}
+        <div class="searchForm">
+            <form id="searchForm">
+                <input type="text" placeholder="Search" id="searchField" autocomplete="off" />
+                <div id="leftIcon"></div>
+                <div id="searchIcon"></div>
+                <div id="clearIcon"></div>
+            </form>
+        </div>
+        <div class="searchHints"></div>
     </div>
 
-    <div class="col-sm-offset-5 col-sm-4 authorization">
+    <div class="col-sm-offset-4 col-sm-4 authorization">
         <ul class="top-nav">
+
+            <span data-hint="Search">
+                <a href="#" class="icon ion-ios-search" id="search"></a>
+            </span>
+
             <li>
                 <a id="button-auth" target="_blank" href="https://admin.segmentstream.com/">
                     Login
