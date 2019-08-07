@@ -117,17 +117,37 @@ function loadSearch(){
     $('.searchForm').toggleClass('show');
   });
 
+  function preparePreview(entry, searchInput) {
+    var summary = entry.summary || ''
+    var previewIndex = summary.indexOf(searchInput);
+    var previewStart = previewIndex > 15 ? 15 : previewIndex;
+    var preview = summary.replace(/-/g, ' ').substr(previewIndex - previewStart, 40);
+    var previewPrefix = previewIndex > previewStart ? '...' : '';
+    var previewSuffix = summary.length > previewIndex + searchInput.length ? '...' : '';
+    // show preview only if search query is included (search engine has an algorythm which might suggest pages that don't include query)
+    if (preview.indexOf(searchInput.replace(/-/g, ' ')) > -1) {
+      return previewPrefix + preview + previewSuffix;
+    }
+  }
+
   $('#searchForm').on('keyup', function(e){
     var code = (e.keyCode ? e.keyCode : e.which);
-    results = idx.search($('#searchField').val());
+    var searchInput = $('#searchField').val().replace(/\s/g, '-').toLowerCase();
+    results = idx.search(searchInput);
     $('.searchHints').html('');
     $('.searchHints').append('<ul class="searchResults"></ul>');
     if (results.length > 0) {
       $.each(results, function(index, result){
-        entry = window.searchData[result.ref];
+        var entry = window.searchData[result.ref];
+        if (searchInput.length > 2) {
+          var preview = preparePreview(entry, searchInput);
+        }
         $('.searchHints').show();
         $('#searchForm').addClass('extended');
         $('.searchResults').append('<li><a href="' + entry.url + '">' + entry.title + '</li>')
+        if (preview) {
+          $('.searchResults').append('<li class="search-preview"><a href="' + entry.url + '">' + preview + '</li>')
+        }
       })
     } else {
       $('.searchHints').hide();
