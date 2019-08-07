@@ -618,7 +618,7 @@ blockquote {
 .searchHints {
     display: none;
     position: absolute;
-    width: 280px;
+    width: 300px;
     top: 52px;
     left: 100%;
     background: #fff;
@@ -642,6 +642,11 @@ blockquote {
 
 .searchResults li:hover {
     background: #f8f8f8;
+}
+
+.searchResults .search-preview a {
+    color: #a1a1a1;
+    font-size: 12px;
 }
 
 #searchForm input {
