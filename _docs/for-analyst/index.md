@@ -6,7 +6,7 @@ date: 2017-06-05 12:00:00
 order: 0
 ---
 
-The SegmentStream panel allows you to control the flow of data between the site and third-party systems in case [the `digitalData` data layer is installed on the site](/for-developer/). Flow control is performed using six entities: Variables, Events, Integrations, Priorities, Scripts, Manual Data Import. Accordingly, the system interface is divided into 6 main sections, which can be accessed via tabs at the side of the interface.
+The SegmentStream panel allows you to control the flow of data between the site and third-party systems in case [the `digitalData` data layer is installed on the site](/for-developer/). Flow control is performed using six entities: Variables, Events, Integrations, Priorities, Scripts, Data Sources. Accordingly, the system interface is divided into 6 main sections, which can be accessed via tabs at the side of the interface.
 
 ![](/img/overview.11.png)
 
@@ -39,12 +39,7 @@ Priorities is the SegmentStream module which allows you to manage the queue in w
 The "Scripts" module makes it possible to execute any JavaScript code after a certain trigger. We recommend using the "Scripts" module only if your task can not solved by the functionality of "Integrations", "Events" and "Variables". <br />
 [More about scripts](/for-analyst/scripts)
 
-### 6. Automatic Data Import
+### 6. Data Sources
 ------
 The data sources functionality allows you to import cost data from integrations to Google BigQuery.<br />
 [More about data sources](/datasources/index)
-
-### 7. Manual Data Import
-------
-The CSV file upload functionality allows you to import cost data from CSV files to Google BigQuery.<br />
-[More about CSV file upload](/for-analyst/manual-imports)
