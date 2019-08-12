@@ -38,7 +38,7 @@ digitalData.events.push({
   action: '<Event action>',
   label: '<Event label>',
   value: '<Event value>',   //Number, not a string
-  nonInteraction: true,     //If this variable isn't declared onInteraction: false will be passed by default
+  nonInteraction: true,     //If this variable isn't declared nonInteraction: false will be passed by default
   source: '<Partner>'       //Name of the system that pushed the event to digitalData.events
 });
 ```
