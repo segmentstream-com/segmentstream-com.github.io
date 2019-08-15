@@ -7,6 +7,7 @@ order: 1
 
 In this section, you will learn:
 * How to enable or disable Mindbox on your site.
+* How to set up Mindbox push notifications.
 * How to send custom parameters and events to Mindbox.
 
 Mindbox is a platform for automated direct communication with clients: email, push, sms, instant messengers. SegmentStream allows you to send data about the behavior of your users to [Mindbox](https://mindbox.ru).
@@ -62,10 +63,11 @@ This is the `endpointId` system field in the initialization snippet. You can get
 For Web push notifications to work several steps have to be completed, they are described in detail below. For more details you can see the [Mindbox Webpush documentation](https://docs.google.com/document/d/1TzJLJRpTOhD1GNPhB6ANlpwTLgggCSJEWLzKi-pa7GU/edit#heading=h.432hw3hw9ey8).
 ![](/img/integrations.mindbox.push.png)
 
-- By toggling the (1) 'Web push' option, you enable the Mindbox Webpush module and load the manifest file.
-- In case the 'Serviceworker' file isn't in the root of your website as recommended in the Mindbox documentation, you can enable the (2) 'Custom ServiceWorker path' option, which will allow you to enter a custom path for the file in the (3) 'ServiceWorker path' field.
-- The (4) 'Push subscription trigger event' field contains the name of the event that activates the push notification subscription pop-up.
-- The (5) Webpush sender ID field should contain your Firebase messaging Sender Id, which you can get from your Mindbox manager.
+- By toggling the (1) 'Web push' option, you enable the Mindbox Webpush module.
+- Enabling the (2) 'Include default manifest.json' setting will load the default [Mindbox manifest.json file](https://developers.mindbox.ru/page/webpush#section-2-%D0%BF%D0%BE%D0%B4%D0%BA%D0%BB%D1%8E%D1%87%D0%B8%D1%82%D0%B5-%D0%BC%D0%B0%D0%BD%D0%B8%D1%84%D0%B5%D1%81%D1%82). This setting should be disabled if your website has it's own manifest.json file.
+- In case the 'Serviceworker' file isn't in the root of your website as recommended in the Mindbox documentation, you can enable the (3) 'Custom ServiceWorker path' option, which will allow you to enter a custom path for the file in the (4) 'ServiceWorker path' field.
+- The (5) 'Push subscription trigger event' field contains the name of the event that activates the push notification subscription pop-up.
+- The (6) Webpush sender ID field should contain your Firebase messaging Sender Id, which you can get from your Mindbox manager.
 
 > Please note! The service worker file must be registered at the root directory of your website.
 
