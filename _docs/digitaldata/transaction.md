@@ -20,6 +20,7 @@ The `digitalData.transaction` object contains variables that describe the number
   <li><a href="#transaction.contactInfo">transaction.contactInfo</a></li>
   <li><a href="#transaction.currency">transaction.currency</a></li>
   <li><a href="#transaction.subtotal">transaction.subtotal</a></li>
+  <li><a href="#transaction.status">transaction.status</a></li>
   <li><a href="#transaction.total">transaction.total</a></li>
   <li><a href="#transaction.lineItems">transaction.lineItems</a></li>
   <li><a href="#transaction.vouchers">transaction.vouchers</a></li>
@@ -126,6 +127,12 @@ Data type: number.
 `transaction.subtotal` does not account for the shipping price and the discounts applied to the basket
 
 >Includes discounts applied to specific goods, for example seasonal discounts.
+
+### <a name="transaction.status"></a>transaction.status
+------
+Data type: string.
+
+`transaction.status` - variable, which contains the transaction status.
 
 ### <a name="transaction.total"></a>transaction.total
 ------

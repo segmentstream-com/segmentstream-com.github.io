@@ -56,6 +56,7 @@ event.user.anonymousId |	STRING |	Anonymous client Id
 event.transaction |	RECORD |	Transaction information
 event.transaction.total |	FLOAT |	The total cost of the cart, including shipping and discounts applied to the cart.
 event.transaction.subtotal |	FLOAT |	The total cost of the cart, not including shipping and discounts applied to the cart.
+event.transaction.status | STRING | Status for transaction
 event.transaction.currency |	STRING |	Currency of the transaction
 event.transaction.voucher |	STRING |	A list of the identifiers of the discounts applied, separated by a comma
 event.transaction.voucherDiscount |	STRING |	Size of applied discount
@@ -76,6 +77,7 @@ event.transaction.lineItems.product.categoryId |	STRING |	Listing category ident
 event.transaction.lineItems.product.manufacturer |	STRING |	Manufacturer of the product in the cart
 event.transaction.lineItems.product.skuCode |	STRING |	Stock Keeping Unit - identifier of product variation of the product in the cart
 event.transaction.lineItems.product.stock |	INTEGER |	Remaining product units
+event.nonInteraction | BOOLEAN | Is event passed without interaction with user
 event.website |	RECORD |	Global information about the website's pages
 event.website.region |	STRING |	The name of the city where the user selected store is located
 event.website.regionId |	STRING |	City identifier
@@ -96,6 +98,7 @@ Example:
   "event": {
     "category": "Ecommerce",
     "name": "Completed Transaction",
+    "nonInteraction": true,
     "source": "CRM",
     "user": {
       "emailHash": "eff8c37862c7a2f0019448289bdd0869c30ae7f07060e4be9d",
@@ -107,6 +110,7 @@ Example:
       "subtotal": 3029,
       "currency": "USD",
       "voucher": "",
+      "status": "started",
       "voucherDiscount": 0,
       "shippingCost": 0,
       "paymentMethod": "Online",
@@ -168,6 +172,7 @@ Example:
 ### <a name="supportedSemanticEvents"></a>Supported semantic events
 
 * Completed Transaction
+* Updated Transaction
 
 > Other events are sent as Custom Events
 
