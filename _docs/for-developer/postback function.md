@@ -77,7 +77,7 @@ event.transaction.lineItems.product.categoryId |	STRING |	Listing category ident
 event.transaction.lineItems.product.manufacturer |	STRING |	Manufacturer of the product in the cart
 event.transaction.lineItems.product.skuCode |	STRING |	Stock Keeping Unit - identifier of product variation of the product in the cart
 event.transaction.lineItems.product.stock |	INTEGER |	Remaining product units
-event.nonInteraction | BOOLEAN | Is event passed without interaction with user
+event.nonInteraction | BOOLEAN | Event passed without user interaction
 event.website |	RECORD |	Global information about the website's pages
 event.website.region |	STRING |	The name of the city where the user selected store is located
 event.website.regionId |	STRING |	City identifier
