@@ -22,6 +22,7 @@ Example:
 digitalData.events.push({
   category: 'Ecommerce',
   name: 'Completed Transaction',
+  nonInteraction: false,
   transaction: {
     orderId: "QA-123456",
     currency: "RUB",
@@ -30,7 +31,6 @@ digitalData.events.push({
     shippingCost: 1000,
     shippingMethod: "Delivery",
     total: 26000,
-    nonInteraction: false,
     lineItems: [
       {
         product: {
@@ -64,6 +64,7 @@ if (
   return {
     category: 'Ecommerce',
     name: 'Completed Transaction',
+    nonInteraction: false,
     transaction: _digitalData('transaction')
   };
 }
