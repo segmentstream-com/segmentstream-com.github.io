@@ -80,6 +80,18 @@ To learn how to create price lists and set up dynamic retargeting campaigns visi
 ------
 myTarget goals help you segment users that have performed certain actions on your site. Using this setting you can set digitalData event names to the corresponding myTarget goal names that you have set up in the myTarget admin panel.
 
+You can set custom values for each goal by adding a `value` variable to the relative digitalData events, for example, if you have to pass a value of 10 to the goal `newSubscription` that is reached when a user subscribes to a newsletter, you have to set up the goal mapping in the setting and add the variable to your `Subscribed` event, as shown below:
+![](/img/integrations.mytarget.goalsMapping.png)
+```javascript
+window.digitalData.events.push({
+  name: 'Subscribed',
+  user: {
+    email: 'test@mail.com'
+  },
+  value: 10
+})
+```
+
 To learn how to create goals in the myTarget admin panel visit the [myTarget documentation goals guide](https://target.my.com/adv/help/creating_counter_and_goals/#creating_goals)
 
 ### <a name="correctnessIntegrationSetup"></a>Checking the correctness of the integration setup
