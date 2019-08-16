@@ -56,7 +56,7 @@ event.user.anonymousId |	STRING |	Anonymous client Id
 event.transaction |	RECORD |	Transaction information
 event.transaction.total |	FLOAT |	The total cost of the cart, including shipping and discounts applied to the cart.
 event.transaction.subtotal |	FLOAT |	The total cost of the cart, not including shipping and discounts applied to the cart.
-event.transaction.status | STRING | Status for transaction
+event.transaction.status | STRING | Status of the transaction
 event.transaction.currency |	STRING |	Currency of the transaction
 event.transaction.voucher |	STRING |	A list of the identifiers of the discounts applied, separated by a comma
 event.transaction.voucherDiscount |	STRING |	Size of applied discount
