@@ -26,9 +26,11 @@ digitalData.events.push({
     orderId: "QA-123456",
     currency: "RUB",
     subtotal: 25000,
+    status: "started",
     shippingCost: 1000,
     shippingMethod: "Delivery",
     total: 26000,
+    nonInteraction: false,
     lineItems: [
       {
         product: {
