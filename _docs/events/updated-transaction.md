@@ -5,7 +5,7 @@ title: "Updated Transaction"
 order: 3
 ---
 
-The `Updated Transaction` event should be pushed to the `digitalData.events` array when transaction data changed, e.g. user pay the bill, order delivered, canceled etc.
+The `Updated Transaction` event should be pushed to the `digitalData.events` array when transaction data has changed, e.g. user paid the bill, order was delivered/canceled etc.
 
 
 Code example:
