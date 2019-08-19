@@ -40,6 +40,7 @@ if(_digitalData('user.abGroup') === 1) {
       variationName: "New recommendation algorithm"
     },
     nonInteraction: true,   // If this variable isn't declared nonInteraction: false will be passed by default
+    label: 'Example label value 1' // The value of the label variable will be passed to GA
   };
 } else {
   return {
@@ -51,6 +52,7 @@ if(_digitalData('user.abGroup') === 1) {
       variationName: "Old recommendation algorithm"
     },
     nonInteraction: true,   // If this variable isn't declared nonInteraction: false will be passed by default
+    label: 'Example label value 2' // The value of the label variable will be passed to GA
   };
 }
 ```
