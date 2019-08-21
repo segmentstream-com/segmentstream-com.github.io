@@ -172,7 +172,7 @@ Example:
 ### <a name="supportedSemanticEvents"></a>Supported semantic events
 
 * Completed Transaction
-* Updated Transaction
+* Updated Transaction - Only for Google BigQuery integration
 
 > Other events are sent as Custom Events
 
