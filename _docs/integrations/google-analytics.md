@@ -37,6 +37,7 @@ SegmentStream makes it easy to send data about your users' behavior to [Google A
   <li><a href="#dimensions">Dimensions</a></li>
   <li><a href="#contentGroups">Content groups</a></li>
   <li><a href="#namespace">Namespace</a></li>
+  <li><a href="#serverSide">Server Side</a></li>
   <!-- <li><a href="#checkoutOptions">Checkout options</a></li> -->
 </ul>
 
@@ -241,6 +242,72 @@ The analytics.js library allows you to create not one but several counters on th
 We recommend that you specify a unique value, for example `ss`.
 
 [Google on Working with multiple trackers](https://developers.google.com/analytics/devguides/collection/analyticsjs/creating-trackers?hl=en#working_with_multiple_trackers)
+
+### <a name="serverSide"></a>Server Side
+------
+When you track an event with the **[HTTP API](https://link_to_docs.com)** we will send it along to the Google Analytics REST API using [Measurement Protocol](https://developers.google.com/analytics/devguides/collection/protocol/v1/devguidehttps://developers.google.com/analytics/devguides/collection/protocol/v1/devguide).
+
+### Combining Server-side and Client-side Events
+
+Google Analytics uses cookies to keep track of visitors and their sessions while visiting your website. The cookie data is stored in the visitor’s browser, and is sent along to Google Analytics every time a new event occurs. This allows Google Analytics to show a single unique visitor between multiple page reloads.
+
+Your servers also have access to this cookie, so they can re-use it when you send server-side events to SegmentStream. If you don’t use the existing cookie SegmentStream has to create a new one to make the server-side request to Google Analytics. When we create a new cookie the client-side and server-side events from the same user will look like two distinct visitors in Google Analytics.
+
+If you want to use server-side Google Analytics you need to p**ass your Google Analytics cookies to SegmentStream**.
+
+### Passing Cookies from Universal Analytics
+
+Universal Analytics (analytics.js) uses the [`clientId`](https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage#analyticsjs) to keep track of unique visitors.
+
+*A Google Analytics Universal cookie will look like this:*
+`_ga=GA1.2.1033501218.1368477899;`
+
+The `clientId` is this part: `1033501218.1368477899`
+
+You can double check that it’s your `clientId` by running this script in your javascript console:
+
+```javascript
+ga(function (tracker) {
+    var clientId = tracker.get('clientId');
+    console.log('My GA universal client ID is: ' + clientId);
+});
+```
+
+If you want our server-side destination to use your user’s `clientId`, pass it to SegmentStream in the `integrations['Google Analytics'].clientId` object. You must pass this value manually on every call as we do not store this value for you. If you do not pass this through, we look for the `user.userId` or `user.anonymousId` value and set it as the `cid`.
+
+*Here’s an example:*
+
+```json
+{
+  "hitId": "4c59d330-35c7-11e9-8f27-8d1d7d4690e7",
+  "sentAt": "2019-02-21T10:56:10.723Z",
+  "event": {
+    "category": "Ecommerce",
+    "name": "Completed Transaction",
+    "label": "some label",
+    "user": {
+      "anonymousId": "80ddb140-35c6-11e9-bd56-eb1c05e6de18",
+      "emailHash": "eff8c37862c7a2f0019448289bdd0869c30ae7f07060e4be9d",
+      "userId": "u2783187492"
+    },
+    "transaction": {
+      "orderId": "543234",
+      "lineItems": [ ... ],
+      "total": 240,
+      "currency": "USD"
+    },
+    "nonIntegraction": false
+  },
+  "context": {
+    "ip": "123.22.334.55"
+  },
+  "integrations": {
+    "Google Analytics": {
+      "clientId": "1033501218.1368477899"
+    }
+  }
+}
+```
 
 <!-- ### <a name="checkoutOptions"></a>Checkout options
 ------
