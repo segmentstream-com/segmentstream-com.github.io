@@ -8,7 +8,8 @@ order: 6
 
 Each action is known as an event. Each event has a **name**, like **Registered** or **Completed Transaction**, and other properties and objects, for example, a **Registered** event might have objects like `user` while **Completed Transaction** might have both `user` and `transaction` objects.
 
-All events also may have other properties, such as `label`, `category`, `value`, `nonInteraction`, etc. The full list of common event properties can be found [here](https://doc_link.com).
+All events also may have other properties, such as `label`, `category`, `value`, `nonInteraction`, etc.
+<!-- The full list of common event properties can be found [here](https://doc_link.com). -->
 
 Here’s the payload of a typical event call that can be sent to the SegmentStream server using the HTTP (more info about HTTP requests can be found [here](/for-developer/http-api)):
 

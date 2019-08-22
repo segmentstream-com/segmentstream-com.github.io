@@ -21,7 +21,7 @@ order: 6
 ------
 The SegmentStream HTTP Tracking API lets you record analytics data from any website or application. The requests hit our servers, and we route your data to any destination you want!
 
-We have a native [JavaScript SDK](link to JS SDK docs) which is built for high-performance client-side tracking and is open-source. But sometimes you may want to send to the HTTP API directly—that’s what this reference is for.
+We have a native [JavaScript SDK](https://github.com/segmentstream/digital-data-manager) which is built for high-performance client-side tracking and is open-source. But sometimes you may want to send to the HTTP API directly—that’s what this reference is for.
 
 ### <a name="headers"></a>Headers
 ------
