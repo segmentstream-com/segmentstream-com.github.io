@@ -87,7 +87,7 @@ context |	RECORD |	Information on the context of the event
 context.ip |	STRING |	User's IP address
 integrations |	RECORD |	Additional integration parameters
 integrations.Google Analytics |	RECORD |	Google Analytics integration parameters
-integrations.Google Analytics.clientId |	STRING |	Google Analytics client ID saved in cookie (gclid)
+integrations.Google Analytics.clientId |	STRING |	Google Analytics client ID saved in cookie (_ga)
 
 Example:
 
@@ -155,7 +155,27 @@ Example:
       "regionId": "8113",
       "environment": "production",
       "currency": "USD"
-    }
+    },
+    "customMetrics": [
+      {
+        "name": "viewedProductOutOfStockCount",
+        "value": 5
+      },
+      {
+        "name": "viewedEmptyProductListingCount",
+        "value": 1
+      }
+    ],
+    "customDimensions": [
+      {
+        "name": "isMobileApp",
+        "value": "false"
+      },
+      {
+        "name": "userTestGroup",
+        "value": "7"
+      }
+    ]
   },
   "context": {
     "ip": "123.22.334.55"
