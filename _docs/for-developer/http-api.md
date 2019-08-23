@@ -78,7 +78,7 @@ To get started, we recommend tracking just a few important events. You can alway
       "firstName": "John",
       "lastName": "Doe"
     },
-    "nonIntegraction": false
+    "nonInteraction": false
   },
   "context": {
     "ip": "123.22.334.55"
