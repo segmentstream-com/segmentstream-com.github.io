@@ -245,7 +245,7 @@ We recommend that you specify a unique value, for example `ss`.
 
 ### <a name="serverSide"></a>Server Side
 ------
-When you track an event with the **[HTTP API](https://link_to_docs.com)** we will send it along to the Google Analytics REST API using [Measurement Protocol](https://developers.google.com/analytics/devguides/collection/protocol/v1/devguidehttps://developers.google.com/analytics/devguides/collection/protocol/v1/devguide).
+When you track an event with the **[HTTP API](/for-developer/http-api)** we will send it along to the Google Analytics REST API using [Measurement Protocol](https://developers.google.com/analytics/devguides/collection/protocol/v1/devguidehttps://developers.google.com/analytics/devguides/collection/protocol/v1/devguide).
 
 ### Combining Server-side and Client-side Events
 
