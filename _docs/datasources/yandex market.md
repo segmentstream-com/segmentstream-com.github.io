@@ -21,15 +21,17 @@ After authorization you need to set the data source parameters.
 
 (1) The name of the data source. It is displayed in the interface in the list of sources.
 
-(2) Shops names to import data from them. Shop names are identical as in Yandex.Market UI.
+(2) **All shops** if enabled, data will be imported from all available shops on account, otherwise data will be imported only from shops in **Shop names** list.
 
-(3) Click Add if need to add shop.
+(3) Shops names to import data from them. Shop names are identical as in Yandex.Market UI.
 
-(4) **Import normalized costs report**  - enable normalized costs report import.
+(4) Click Add if need to add shop.
 
-(5) If normalized costs report enabled, you can select billing currency of report.
+(5) **Import normalized costs report**  - enable normalized costs report import.
 
-(6) **Import offer statistics report**  - enable offer statistics report import.
+(6) If normalized costs report enabled, you can select billing currency of report.
+
+(7) **Import offer statistics report**  - enable offer statistics report import.
 
 ---
 
