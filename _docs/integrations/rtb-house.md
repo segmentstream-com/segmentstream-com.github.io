@@ -18,6 +18,7 @@ RTB House is a dynamic retargeting system. SegmentStream allows you to send data
   <li><a href="#introduction">Introduction</a></li>
   <li><a href="#requiredEventsAndVariables">Required events and variables</a></li>
   <li><a href="#accountKey">Account key</a></li>
+  <li><a href="#crossDevice">Cross-Device tracking</a></li>
   <li><a href="#userSegment">User segment</a></li>
   <li><a href="#useCustomDeduplication">Use custom deduplication</a></li>
   <li><a href="#correctnessOfIntegrationSetup">Checking the correctness of the integration setup</a></li>
@@ -38,7 +39,7 @@ You can read more details about the settings below.
 ------
 For the correct operation of the integration of your site with RTB House - you must configure the filling of certain events in the `digitalData.events` array. The list of events is as follows:
 
-**Обязательные события**
+**Required events**
 * [Viewed Page](/events/viewed-page)
 * [Viewed Product Detail](/events/viewed-product-detail)
 * [Viewed Product Listing](/events/viewed-product-listing)
@@ -57,6 +58,10 @@ It is also necessary to configure the filling of certain variables of the `digit
 ### <a name="accountKey"></a>Account key
 ------
 The ID of your account can be checked with your RTB House account manager
+
+### <a name="crossDevice"></a>Cross-Device tracking
+------
+If the [`digitalData.user.email`](/digitaldata/user#user.email) variable is filled, then we will automaticaly send a `uid` matching the sha256 hash of that email.
 
 ### <a name="userSegment"></a>User segment
 ------
