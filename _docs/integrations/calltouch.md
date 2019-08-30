@@ -29,9 +29,7 @@ For the correct integration of your site with Calltouch:
 
 ### <a name="introduction"></a>Introduction
 ------
-With the help of SegmentStream, you can integrate Calltouch with your site:
-[Calltouch integration guide](https://support.calltouch.ru/hc/ru/articles/115002056965-%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D0%B0-%D0%BE%D1%82%D1%81%D0%BB%D0%B5%D0%B6%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F-Calltouch)
-To configure integration with Calltouch:
+With the help of SegmentStream, you can integrate Calltouch with your site. To configure the Calltouch integration:
 1. Log in on the [segmentstream.com](https://admin.segmentstream.com/) website and go to the integration management panel
 2. Click on the "Integration" tab and click on the block with the Calltouch logo.
 3. In the panel that opens, configure the integration.
@@ -41,7 +39,7 @@ You can read more details about the settings below.
 
 ### <a name="websiteId"></a>Website ID
 ------
-Website ID is the unique identifier of your website, it can be obtained by copying it from the field with the tracking script found inside your Calltouch account, or by contacting support at info@calltouch.net.
+Website ID is the unique identifier of your website, it can be obtained by copying it from the field with the tracking script found inside your Calltouch account, or by contacting support at info@calltouch.net. For more information see the [Calltouch integration guide](https://support.calltouch.ru/hc/ru/articles/115002056965-%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D0%B0-%D0%BE%D1%82%D1%81%D0%BB%D0%B5%D0%B6%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F-Calltouch).
 ![](/img/integrations.calltouch.websiteId.png)
 
 ### <a name="customParameters"></a>Custom parameters
