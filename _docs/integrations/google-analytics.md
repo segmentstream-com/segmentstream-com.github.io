@@ -275,7 +275,9 @@ ga(function (tracker) {
 
 If you want our server-side destination to use your user’s `clientId`, pass it to SegmentStream in the `integrations['Google Analytics'].clientId` object. You must pass this value manually on every call as we do not store this value for you. If you do not pass this through, we look for the `user.userId` or `user.anonymousId` value and set it as the `cid`.
 
-*Here’s an example:*
+*Here’s an examples:*
+
+### Completed Transaction ~> ('ec:setAction', 'purchase')
 
 ```json
 {
@@ -296,7 +298,7 @@ If you want our server-side destination to use your user’s `clientId`, pass i
       "total": 240,
       "currency": "USD"
     },
-    "nonIntegraction": false
+    "nonInteraction": false
   },
   "context": {
     "ip": "123.22.334.55"
@@ -307,6 +309,40 @@ If you want our server-side destination to use your user’s `clientId`, pass i
     }
   }
 }
+
+### Refunded Transaction ~> ('ec:setAction', 'refund')
+
+```json
+{
+  "hitId": "4c59d330-35c7-11e9-8f27-8d1d7d4690e7",
+  "sentAt": "2019-02-21T10:56:10.723Z",
+  "event": {
+    "category": "Ecommerce",
+    "name": "Refunded Transaction",
+    "label": "some label",
+    "user": {
+      "anonymousId": "80ddb140-35c6-11e9-bd56-eb1c05e6de18",
+      "emailHash": "eff8c37862c7a2f0019448289bdd0869c30ae7f07060e4be9d",
+      "userId": "u2783187492"
+    },
+    "transaction": {
+      "orderId": "543234",
+      "lineItems": [ ... ],
+      "total": 240,
+      "currency": "USD"
+    },
+    "nonInteraction": true
+  },
+  "context": {
+    "ip": "123.22.334.55"
+  },
+  "integrations": {
+    "Google Analytics": {
+      "clientId": "1033501218.1368477899"
+    }
+  }
+}
+
 ```
 
 <!-- ### <a name="checkoutOptions"></a>Checkout options
