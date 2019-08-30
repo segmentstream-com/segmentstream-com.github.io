@@ -275,7 +275,7 @@ ga(function (tracker) {
 
 If you want our server-side destination to use your user’s `clientId`, pass it to SegmentStream in the `integrations['Google Analytics'].clientId` object. You must pass this value manually on every call as we do not store this value for you. If you do not pass this through, we look for the `user.userId` or `user.anonymousId` value and set it as the `cid`.
 
-*Here’s an examples:*
+*Here’s an example:*
 
 ### Completed Transaction ~> ('ec:setAction', 'purchase')
 
@@ -309,6 +309,8 @@ If you want our server-side destination to use your user’s `clientId`, pass i
     }
   }
 }
+
+```
 
 ### Refunded Transaction ~> ('ec:setAction', 'refund')
 
