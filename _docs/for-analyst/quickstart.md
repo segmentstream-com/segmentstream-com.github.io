@@ -12,7 +12,7 @@ The SegmentStream container snippet is a small piece of JavaScript code that you
 
 To implement SegmentStream on your website:
 
-Copy the following JavaScript and paste it as close to the opening <head> tag as possible on every page of your website, replacing `<PROJECT_ID>` with your project ID:
+Copy the following JavaScript and paste it as close to the opening <head> tag as possible on every page of your website, replacing `<PROJECT_ID>` with your project ID, or open the ["Project Info"](/for-analyst/project-info) menu in the desired project's admin panel, and copy the prepared code.
 
 ```html
 <!-- SegmentStream snippet -->
@@ -46,7 +46,7 @@ Note, that there are actually 2 hits tables were created: `hits` and `hits_YYYYM
 
 5. Click on the `hits_YYYYMMDD` table and then on the "Query Table" button:
 ![Image shows how to query BigQuery table](/img/for-analyst/quickstart/bigquery_query_table.png)
-  
+
 6. Run the following query in the Query editor:
 ```sql
 SELECT hitId, event.name, context FROM `<FULL_TABLE_NAME>`
@@ -155,7 +155,7 @@ return {
 
 10.  Go to the Google BigQuery console and query information about your click event:
 ```sql
-SELECT 
+SELECT
   hitId,
   event.name,
   event.category,

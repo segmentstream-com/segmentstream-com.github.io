@@ -28,7 +28,9 @@ We have a native [JavaScript SDK](https://github.com/segmentstream/digital-data
 
 ### Authorizing
 
-Each request must be authorized with API Token.
+Each request must be authorized with an API Token.
+
+Each project's API token can be found in the ["Project Info"](/for-analyst/project-info) menu in the admin panel.
 
 Authentication uses HTTP Basic Auth, which involves a ‘username:password’ that is base64 encoded and prepended with the string ‘Basic ‘.
 

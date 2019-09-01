@@ -1,7 +1,7 @@
 ---
 layout: page
 section: analyst
-title: "Project settings"
+title: "Tracking settings"
 date: 2017-08-25 15:00:00
 order: 1
 ---
@@ -27,7 +27,7 @@ Depending on the architecture of your website, the project settings may differ. 
 ------
 How to adjust the settings:
 1. Log in to the site [segmentstream.com](https://admin.segmentstream.com/)
-2. Click on the "Settings" link in the upper right corner of the window.
+2. Click on the "Tracking Settings" link in the upper right corner of the window.
 3. Adjust the settings according to the documentation below
 4. Publish the project.
 
