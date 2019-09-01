@@ -22,7 +22,7 @@ For the correct operation of SegmentStream, when loading each page of the site, 
  1. https://cdn.segmentstream.com/project/`<project_id>`.js
  2. https://cdn.segmentstream.com/sdk/segmentstream.min.js
 
-You should contact the SegmentStream team to receive your `<project_id>`.
+The `<project_id>` can be found in the ["Project Info"](/for-analyst/project-info) menu in the admin panel of each project.
 
 The first file contains information about the settings that the analyst made in the control panel [https://admin.segmentstream.com](https://admin.segmentstream.com). You can read more about the features in the [analysts section](/for-analyst/index).<br/>
 The second file is the latest stable version of the SegmentStream library.
