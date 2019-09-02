@@ -7,8 +7,8 @@ order: 2
 The `Updated Cart` event must be pushed to the `digitalData.events` array whenever the cart contents are modified, such as: adding/removing products, changing the quantity of products in the cart, emptying the cart.
 
 #### From the site code / when using AJAX
-When user update cart, the website should send 'Updated Cart' event.
-Note, that the cart object in event must be a full state cart, not only object, that was added.
+When the user update cart, the website should send 'Updated Cart' event.
+Note, that the cart object in the event must be a full state cart, not only object, that was added.
 
 For example if we have a cart with content:
 
