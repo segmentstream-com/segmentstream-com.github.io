@@ -73,7 +73,7 @@ Example:
  - Sales Listing - list of products on sale
  - Trend Listing - list of trending products
 
-> The values of the variables `page.category` and `page.type` are convenient for use in [Google Analytics content groups](/integrations /google-analytics#13)
+> The values of the variables `page.category` and `page.type` are convenient for use in [Google Analytics content groups](/integrations/google-analytics#13)
 
 ### <a name="page.breadcrumb"></a>page.breadcrumb
 ------
