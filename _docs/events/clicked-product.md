@@ -22,7 +22,7 @@ digitalData.events.push({
 #### From the SegmentStream interface
 **Trigger**: `click`,
 
-**CSS selector**: `.ddl_campaign_link`
+**CSS selector**: `.ddl_product_link`
 
 **Event handler**:
 
