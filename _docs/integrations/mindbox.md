@@ -60,7 +60,7 @@ This is the `endpointId` system field in the initialization snippet. You can get
 
 ### <a name="WebPush"></a>Web push
 ------
-For Web push notifications to work several steps have to be completed, they are described in detail below. For more details you can see the [Mindbox Webpush documentation](https://docs.google.com/document/d/1TzJLJRpTOhD1GNPhB6ANlpwTLgggCSJEWLzKi-pa7GU/edit#heading=h.432hw3hw9ey8).
+For Web push notifications to work several steps have to be completed, they are described in detail below. For more details you can see the [Mindbox Webpush documentation](https://developers.mindbox.ru/page/webpush).
 ![](/img/integrations.mindbox.push.png)
 
 - By toggling the (1) 'Web push' option, you enable the Mindbox Webpush module.
