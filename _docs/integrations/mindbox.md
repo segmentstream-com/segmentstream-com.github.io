@@ -65,9 +65,9 @@ For Web push notifications to work several steps have to be completed, they are 
 
 - By toggling the (1) 'Web push' option, you enable the Mindbox Webpush module.
 - Enabling the (2) 'Include default manifest.json' setting will load the default [Mindbox manifest.json file](https://developers.mindbox.ru/page/webpush#section-2-%D0%BF%D0%BE%D0%B4%D0%BA%D0%BB%D1%8E%D1%87%D0%B8%D1%82%D0%B5-%D0%BC%D0%B0%D0%BD%D0%B8%D1%84%D0%B5%D1%81%D1%82). This setting should be disabled if your website has it's own manifest.json file.
-- In case the 'Serviceworker' file isn't in the root of your website as recommended in the Mindbox documentation, you can enable the (3) 'Custom ServiceWorker path' option, which will allow you to enter a custom path for the file in the (4) 'ServiceWorker path' field.
-- The (5) 'Push subscription trigger event' field contains the name of the event that activates the push notification subscription pop-up.
-- The (6) Webpush sender ID field should contain your Firebase messaging Sender Id, which you can get from your Mindbox manager.
+- In case the 'Serviceworker' file isn't in the root of your website as recommended in the Mindbox documentation, you can enable the (3) 'Custom ServiceWorker path' option, which will allow you to enter a custom path for the file in the (4) 'ServiceWorker path' field, and set the 'ServiceWorker scope' (5) setting, if recommended by your Mindbox manager.
+- The (6) 'Push subscription trigger event' field contains the name of the event that activates the push notification subscription pop-up.
+- The (7) Webpush sender ID field should contain your Firebase messaging Sender Id, which you can get from your Mindbox manager.
 
 > Please note! The service worker file must be registered at the root directory of your website.
 
