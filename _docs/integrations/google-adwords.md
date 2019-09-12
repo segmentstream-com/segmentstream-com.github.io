@@ -6,10 +6,10 @@ order: 1
 ---
 
 In this section you will learn:
-* How to connect Google Adwords dynamic remarketing.
+* How to connect Google Ads dynamic remarketing.
 * How to check the correctness of the integration setup.
 
-The Google Adwords dynamic remarketing module allows you to display ads with products that users are interested in.
+The Google Ads dynamic remarketing module allows you to display ads with products that users are interested in.
 
 ### Page contents
 ------
@@ -24,13 +24,13 @@ The Google Adwords dynamic remarketing module allows you to display ads with pro
 
 ### <a name="introduction"></a>Introduction
 ------
-With the help of SegmentStream, you can fully integrate the Google Adwords Dynamic Remarketing Module with your site.
+With the help of SegmentStream, you can fully integrate the Google Ads Dynamic Remarketing Module with your site.
 
 [Google integration guide](https://support.google.com/tagmanager/answer/6106009?hl=en#OneTagPerFunnel)
 
-To configure the Adwords integration:
+To configure the Google Ads integration:
 1. Log in to the [segmentstream.com](https://admin.segmentstream.com/) website and go to the integration management panel
-2. Go to the "Integration" tab and click on the block with the Adwords logo.
+2. Go to the "Integration" tab and click on the block with the Google Ads logo.
 3. In the opened panel - configure the integration.
 ![](/img/integrations.googleadwords.1.png)
 <br />
@@ -38,7 +38,7 @@ You can read more details about the settings below.
 
 ### <a name="requiredEvents"></a>Required events
 ------
-For the correct operation of the Adwords integration you must configure the filling of certain events in the `digitalData.events` array. The list of events is as follows:
+For the correct operation of the Google Ads integration you must configure the filling of certain events in the `digitalData.events` array. The list of events is as follows:
 
 **Required events**
 * [Viewed Page](/events/viewed-page)
@@ -58,11 +58,11 @@ It is also necessary to configure the filling of certain variables of the `digit
 
 ### <a name="sdkVersion"></a>SDK version
 ------
-Use the 'gtag.js' version if you are connecting Google Adwords to your website for the first time.
+Use the 'gtag.js' version if you are connecting Google Ads to your website for the first time.
 
 ### <a name="conversionID"></a>Conversion ID
 ------
-You can find the conversion tracking ID in the Google Adwords system interface.
+You can find the conversion tracking ID in the Google Ads system interface.
 
 ### <a name="businessType"></a>Business type
 ------
