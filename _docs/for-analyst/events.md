@@ -34,6 +34,11 @@ SegmentStream has 3 basic triggers:
 * Event
 * Click
 * Impression
+* Scroll
+* Active time on page
+* Active time on site
+* Time on page
+* Time on site
 
 > Important! The default SegmentStream client library always sends a built-in Viewed Page event after loading. This event can be disabled by turning off the [Automatic sending of the Viewed Page event](/for-analyst/settings#sendViewedPageEvent) option in the project settings.
 
@@ -95,9 +100,34 @@ return {
 };
 ```
 
+**Example 4: `Scrolled Full Page` Event**
+
+A custom event checking how much of the page has been scrolled through. It can only be triggered once per page, when the set scroll depth is reached.
+The example below shows how to track when a page has been fully scrolled through.
+
+![](/img/events.scroll.png)
+
+**Example 5: `Spent Active Time on Page: 30s` Event**
+
+A custom event checking how active time has been spent on the page.
+The example below shows how to track when 30 active seconds have been spent on the page.
+Changing the 'Trigger' input to 'Active time on site' will track all the active time in the visitors session.
+
+![](/img/events.active.png)
+
+**Example 6: `Spent Time on Site: 180s` Event**
+
+A custom event checking how much time has been spent on the website.
+The example below shows how to track when 3 minutes have been spent on the website.
+Changing the 'Trigger' input to 'Time on page' will track the time spent on a page.
+
+![](/img/events.time.png)
+
 ### <a name="eventNaming"></a>Event naming convention
 ------
 Standard SegmentStream integrations work with a list of reserved events, for example: [Viewed Product Detail](/events/viewed-product-detail), [Viewed Checkout Step](/events/viewed-checkout-step), [Completed Transaction](/events/completed-transaction), etc.
 The complete list of reserved events is located in the side menu under "Events List". Use the event names listed in this list.
 
 If you need to add an event that is not in the reserved list - use our [event naming convention](/for-developer/naming).
+
+
