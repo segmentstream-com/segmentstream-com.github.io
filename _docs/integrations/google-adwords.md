@@ -45,7 +45,7 @@ For the correct operation of the Adwords integration you must configure the fill
 * [Viewed Product Detail](/events/viewed-product-detail)
 * [Viewed Product Listing](/events/viewed-product-listing)
 * [Searched Products](/events/searched-products)
-* [Viewed Cart](/events/searched-products)
+* [Viewed Cart](/events/viewed-cart)
 * [Completed Transaction](/events/completed-transaction)
 
 It is also necessary to configure the filling of certain variables of the `digitalData` object. A list of some variables is given below:
@@ -55,6 +55,10 @@ It is also necessary to configure the filling of certain variables of the `digit
 * and others
 
 > We strongly recommend that you configure the filling of all variables in the `digitalData` object (not just those described above), in accordance with the [documentation](/for-developer/).
+
+### <a name="sdkVersion"></a>SDK version
+------
+Use the 'gtag.js' version if you are connecting Google Adwords to your website for the first time.
 
 ### <a name="conversionID"></a>Conversion ID
 ------
@@ -88,5 +92,5 @@ For correct integration, Google should also receive information about the intera
 
 ### <a name="correctnessOfTheIntegrationSetup"></a>Checking the correctness of the integration setup
 ------
-After configuring the integration in the SegmentStream interface, but before PUBLICATION - go to the site in test_mode, [go through the conversion funnel and check for errors](/for-analyst/integrations#2).
+After configuring the integration in the SegmentStream interface, but before PUBLICATION - go to the site in test_mode, [go through the conversion funnel and check for errors](/for-analyst/integrations#testing).
 If there are no errors - publish the current version.
