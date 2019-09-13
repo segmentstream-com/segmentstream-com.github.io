@@ -39,6 +39,8 @@ return {
 };
 ```
 
+> Please note! When the "Click" trigger is selected an additional "Follow link defined in "href" after event" option appears. Enabling it will add a 500ms delay between the click on the link and the redirect, so that the tracked event has enough time to be sent to all integrations.
+
 #### Required by the following integrations:
 * Google Analytics (Enhanced Ecommerce)
 * Retail Rocket
