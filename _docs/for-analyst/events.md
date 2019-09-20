@@ -30,7 +30,7 @@ Now SegmentStream can send information about the event "Some Event" with the val
 
 ### <a name="eventCreation"></a>Event creation
 ------
-SegmentStream has 3 basic triggers:
+SegmentStream has 8 basic triggers:
 * Event
 * Click
 * Impression
