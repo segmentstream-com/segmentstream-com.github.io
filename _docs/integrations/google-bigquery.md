@@ -36,6 +36,7 @@ Setting up the Google BigQuery integration:
 ![](/img/integrations.ddmstreaming.3.png)
 ![](/img/integrations.ddmstreaming.4.png)
 ![](/img/integrations.ddmstreaming.5.png)
+3. Login to your project's SegmentStream admin panel, and in the “Integrations” section, select the “Google BigQuery” integration.
 4. Click “Authenticate with Google” and follow the instructions. After successful authorization the integration setup form will appear.
 ![](/img/integrations.ddmstreaming.19.png)
 5. Enter your **Google Cloud Project ID** (1), you can get in on **step 2**
