@@ -56,6 +56,9 @@ You can find the Facebook Pixel ID in the facebook section: Managing Advertising
 
 Copy the ID and paste it into the "Pixel Facebook ID" field of the integration settings window.
 
+>Multiple Facebook pixels can be connected by entering their IDs separated by a coma. For example, in the screenshot below the pixels '111' and '222' are connected.
+![](/img/integrations.facebook.multipixel.png)
+
 ### <a name="productFeed"></a>Product feed has grouped products
 ------
 Facebook receives information about products placed on the site through an XML feed. With a certain interval, the Facebook robot downloads a feed from your server. This feed contains information about all products on the site.
