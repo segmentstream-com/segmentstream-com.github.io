@@ -51,7 +51,7 @@ Based on these triggers and data from digitalData, you can create new events.
 
 Most marketing systems require information about your online store's product page views. To send the information about the viewed product to any integration, you need to configure the Viewed Product Detail event. This event occurs when the user loads a product page, or in the digitalData language: The Viewed Page event has occurred while the variable digitalData.page.type is equal to 'product' (the type of page on which the user is located is a product page).
 
-![](/img/events.2.png)
+![](/img/events.viewedProductDetail.png)
 
 ```javascript
 if (_digitalData('page.type') === 'product') {
@@ -71,7 +71,7 @@ For tracking CTR and other indicators of the effectiveness of internal campaigns
 
 > Please note! When the "Click" trigger is selected an additional "Follow link defined in "href" after event" option appears. Enabling it will add a 500ms delay between the click on the link and the redirect, so that the tracked event has enough time to be sent to all integrations.
 
-![](/img/events.3.png)
+![](/img/events.clickedCampaign.png)
 
 ```javascript
 var campaignId = element.getAttribute('data-campaign-id');
@@ -87,7 +87,7 @@ return {
 In conjunction with clicks on banners, you need to track banner impressions. The built-in "Impression" trigger works only when 75% of the monitored page element is in the site visitor's browser field of view. The CSS selector for the tracked element is specified in the corresponding event setting field.
 > Important! If you selected "Impression" as the trigger in the campaign setup, in the "Function that returns an event object" field, you can refer to the "elements" variable. Elements is an array of DOM objects whose CSS selector you specified.
 
-![](/img/events.4.png)
+![](/img/events.viewedCampaign.png)
 
 ```javascript
 var viewedCampaigns = [];
@@ -105,13 +105,13 @@ return {
 **Example 4: `Scrolled Full Page` Event**
 
 A custom event checking how much of the page has been scrolled through. It can only be triggered once per page, when the set scroll depth is reached.
-The example below shows how to track when a page has been fully scrolled through.
+The example below shows how to track when the third of a page's length has been scrolled through.
 
 ![](/img/events.scroll.png)
 
 **Example 5: `Spent Active Time on Page: 30s` Event**
 
-A custom event checking how active time has been spent on the page.
+A custom event checking how much active time has been spent on the page.
 The example below shows how to track when 30 active seconds have been spent on the page.
 Changing the 'Trigger' input to 'Active time on site' will track all the active time in the visitors session.
 
