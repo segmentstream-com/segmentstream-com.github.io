@@ -102,10 +102,10 @@ return {
 };
 ```
 
-**Example 4: `Scrolled Full Page` Event**
+**Example 4: `Scrolled Page` Event**
 
-A custom event checking how much of the page has been scrolled through. It can only be triggered once per page, when the set scroll depth is reached.
-The example below shows how to track when the third of a page's length has been scrolled through.
+A custom event checking how much of the page has been scrolled through. It can be triggered once per page, for each of the set comma separated scroll depths is reached.
+The example below shows how to track when 30, 40, and 100 percent of a page's length has been scrolled through.
 
 ![](/img/events.scroll.png)
 
