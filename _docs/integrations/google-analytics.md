@@ -88,7 +88,7 @@ ga('send', {
   eventCategory: 'UX',
   eventAction: 'Clicked Button',
   eventLabel: 'Green',
-  eventLabel: 10,
+  eventValue: 10,
   nonInteraction: true
 });
 ```
