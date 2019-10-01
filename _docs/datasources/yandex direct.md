@@ -81,6 +81,8 @@ You can use Yandex.Direct's dynamic parameters in ad urls and smart banners. Lis
 - `banner_id`
 - `addphrases`
 - `campaign_id`
+- `campaign_name`
+- `campaign_type`
 - `device_type`
 - `gbid`
 - `keyword`
@@ -94,6 +96,7 @@ You can use Yandex.Direct's dynamic parameters in ad urls and smart banners. Lis
 - `source_type`
 - `adtarget_name`
 - `adtarget_id`
+- `position`
 
 Read more about dynamic parameters: [https://yandex.ru/support/direct/statistics/url-tags.html](https://yandex.ru/support/direct/statistics/url-tags.html?lang=en)
 

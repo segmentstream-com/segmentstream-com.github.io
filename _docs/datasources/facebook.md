@@ -57,3 +57,13 @@ utmContent | STRING | NULLABLE
 utmMedium | STRING | REQUIRED
 utmSource | STRING | REQUIRED
 currency | STRING | NULLABLE
+
+### Supported substitutions
+
+- `{{campaign.id}}`
+- `{{adset.id}}`
+- `{{ad.id}}`
+- `{{campaign.name}}`
+- `{{adset.name}}`
+- `{{ad.name}}`
+- `{{site_source_name}}`

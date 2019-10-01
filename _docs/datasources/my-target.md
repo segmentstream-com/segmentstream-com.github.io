@@ -59,3 +59,10 @@ clicks | INTEGER | REQUIRED
 banner_id | INTEGER | REQUIRED
 campaign_id | INTEGER | REQUIRED
 campaign_name | STRING | REQUIRED
+
+### Supported substitutions
+
+- `{advertiser_id}`
+- `{campaign_id}`
+- `{campaign_name}`
+- `{banner_id}`
