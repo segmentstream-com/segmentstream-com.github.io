@@ -20,6 +20,8 @@ order: 1
 The "Project Members" menu allows you to add users to any project you have administrator access to.
 Users that you invite to your project do not have the ability to invite other users.
 
+![](/img/project-members-location.png)
+
 ![](/img/project-members.png)
 
 ### <a name="invitingMembers"></a>Inviting members
