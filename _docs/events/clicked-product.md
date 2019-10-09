@@ -6,15 +6,35 @@ order: 2
 ---
 The `Clicked Product` event must be pushed to the `digitalData.events` array when a user clicks on a product link in a products list.
 
-> Important! The product's links must be marked by the `ddl_product_link` class, or by the `ddl_product_link_js` class if the links open a 'Quick View' popup of the product. The links should also have the `data-product-id` data attribute. For more information, see the HTML page layout section.
+> Important! The product links must contain the following attributes:
+- `class` - element class `segmentstream_product_link` (Any class name can be used, but it should be identical on all pages, and unique to the product link elements)
+- `data-list-id` - [list id](https://docs.segmentstream.com/digitaldata/listing#listing.listId). Required parameter.
+- `data-list-name` - [list name](https://docs.segmentstream.com/digitaldata/listing#listing.listName). Required parameter.
+- `data-product-id` - [product id](https://docs.segmentstream.com/digitaldata/product#product.id). Required parameter.
+- `data-product-skuCode` - [product sku](https://docs.segmentstream.com/digitaldata/product#product.skuCode). Required parameter.
+- `data-product-name` - [product name](https://docs.segmentstream.com/digitaldata/product#product.name). Required parameter.
+- `data-product-unitPrice` - [full product price](https://docs.segmentstream.com/digitaldata/product#product.unitPrice). Required parameter.
+- `data-product-unitSalePrice` -  [discounted product price](https://docs.segmentstream.com/digitaldata/product#product.unitSalePrice). Required parameter.
+- `data-product-currency` - [product currency](https://docs.segmentstream.com/digitaldata/product#product.currency). Required parameter.
+- `data-product-category` - [product category](https://docs.segmentstream.com/digitaldata/product#product.category). Required parameter.
 
 #### From the site code / when using AJAX
 ```javascript
 digitalData.events.push({
   name: 'Clicked Product',
+  category: 'Ecommerce',
   listItem: {
-    product: productId,
-    listId: listId
+    listId: 'popular2019',
+    listName: 'Popular Items',
+    product: {
+      id: '123',
+      skuCode: '123xyz',
+      name: 'Socks',
+      unitPrice: 10,
+      unitSalePrice: 6,
+      currency: 'USD',
+      category: ['Accessories', 'Socks']
+    }
   }
 });
 ```
@@ -22,19 +42,26 @@ digitalData.events.push({
 #### From the SegmentStream interface
 **Trigger**: `click`,
 
-**CSS selector**: `.ddl_product_link`
+**CSS selector**: `.segmentstream_product_link`
 
 **Event handler**:
 
 ```javascript
-var productId = element.getAttribute('data-product-id');
-var listId = element.getAttribute('data-list-id');
 return {
   name: 'Clicked Product',
   category: 'Ecommerce',
   listItem: {
-    product: productId,
-    listId: listId
+    listId: element.getAttribute('data-list-id'),
+    listName: element.getAttribute('data-list-name'),
+    product: {
+      id: element.getAttribute('data-product-id'),
+      skuCode: element.getAttribute('data-product-skuCode'),
+      name: element.getAttribute('data-product-name'),
+      unitPrice: element.getAttribute('data-product-unitPrice'),
+      unitSalePrice: element.getAttribute('data-product-unitSalePrice'),
+      currency: element.getAttribute('data-product-currency'),
+      category: JSON.parse(element.getAttribute('data-product-category'))
+    }
   }
 };
 ```
