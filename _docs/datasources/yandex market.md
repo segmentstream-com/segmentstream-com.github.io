@@ -29,9 +29,11 @@ After authorization you need to set the data source parameters.
 
 (5) **Import normalized costs report**  - enable normalized costs report import.
 
-(6) If normalized costs report enabled, you can select billing currency of report.
+(6) If the normalized costs report is enabled, you can select the billing currency of the report.
 
-(7) **Import offer statistics report**  - enable offer statistics report import.
+(7) If the normalized costs report is enabled, you can set the value multiplier. Multiplied by the cost in the report.
+
+(8) **Import offer statistics report**  - enable offer statistics report import.
 
 ---
 
