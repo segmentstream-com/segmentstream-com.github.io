@@ -97,7 +97,7 @@ Key | Data type | Description
 user.anonymousId (optional/required) |	STRING |	A pseudo-unique substitute for a User ID, for cases when you don’t have an absolutely unique identifier. A userId or an anonymousId is required.
 user.userId (optional/required) |	STRING |	Unique identifier for the user in your database, a userId or an anonymousId is required.
 hitId (optional) |	STRING |	The unique ID of the request. Used for deduplication.
-sentAt (optional) |	DATE |	Timestamp when the message itself took place, defaulted to the current time by the Segment Tracking API. It is a ISO-8601 date string, If the event just happened, leave it out and we’ll use the server’s time. If you’re importing data from the past, make sure you to provide a timestamp.
+sentAt (required) |	DATE |	Timestamp when the message itself took place, defaulted to the current time by the Segment Tracking API. It is a ISO-8601 date string, If the event just happened, leave it out and we’ll use the server’s time. If you’re importing data from the past, make sure you to provide a timestamp.
 context (optional) |	OBJECT |	Dictionary of extra information that provides useful context about a message, but is not directly related to the API call like ip address or locale. See the Context field docs for more detail
 event (required) |	OBJECT |	Action that a user has performed. Free-form dictionary of properties of the event, like name, label, user, product, etc. You can find proper fields for each event type <HERE>
 integrations (optional) |	OBJECT |	Dictionary of different integrations and specific options for this integration. See more details in the description of each integration.
