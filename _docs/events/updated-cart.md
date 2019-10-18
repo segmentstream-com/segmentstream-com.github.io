@@ -80,7 +80,32 @@ digitalData.events.push({
 })
 ```
 
-The SegmentStream SDK calculates the differences between the `digitalData.cart` object and the `cart` object inside the `Updated Cart` event, checks which products have been added or removed, and triggers the corresponding [`Added Product`](/events/added-product)/[`Removed Product`](/events/removed-product)  events.
+Since [`version 1.1.3`](/digitaldata/standard-version), the SegmentStream SDK calculates the differences between the `digitalData.cart` object and the `cart` object inside the `Updated Cart` event, checks which products have been added or removed, and triggers the corresponding [`Added Product`](/events/added-product)/[`Removed Product`](/events/removed-product) events.
+
+For example, the code above will trigger the following event:
+
+
+```javascript
+{
+  category: 'Ecommerce',
+  name: 'Added Product',
+  product: {
+    id: "1234567890",
+    url: "http://website.com/product.html",
+    imageUrl: "http://website.com/image.png",
+    thumbnailUrl: "http://website.com/image_thumb.png",
+    name: "Big Boots",
+    description: "Product description",
+    manufacturer: "Timberland",
+    category: ["Footwear","Boots"],
+    currency: "GBP",
+    unitPrice: 60,
+    unitSalePrice: 50,
+    skuCode: "TBL6065RW"
+  },
+  quantity: 1
+})
+```
 
 If your [digitalData version](/digitaldata/standard-version) is '1.1.3' or higher, avoid of calling `digitalData.changes.push` to dynamically update the contents of the digitalData.cart object, and use `Updated Cart` instead.
 
