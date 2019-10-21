@@ -68,18 +68,13 @@ Enabling this toggle switch will activate the Flocktory Precheckout module. You 
 
 ### <a name="enableExchange"></a>Enable Exchange
 ------
-To activate the Flocktory Exchange module you have to enable the toggle switch, activate the Postcheckout module, and integrate a line of HTML code on all pages where you want to display Flocktory Exchange banners.
-
-HTML code example:
-```html
-<div class="i-flocktory" data-fl-action="exchange" data-fl-spot="some_spot" data-fl-user-name="Ivan Ivanov" data-fl-user-email="ivan@gmail.com"></div>
-```
+The Flocktory Exchange module is enabled by the toggle switch.
 
 You can read about it in detail on the [Flocktory documentation page](https://flocktory.github.io/en/integration/exchange/)
 
 ### <a name="exchangeTriggerEvent"></a>Exchange trigger event
 ------
-By default, the Exchange banner is triggered when the `Completed Transaction` is pushed to the `digitalData.events` array. Fill this field with the name of the event that you want to trigger the Exchange banner.
+By default, the Exchange banner is triggered when the `Completed Transaction` event is pushed to the `digitalData.events` array. Fill this field with the name of the event that you want to trigger the Exchange banner.
 
 This feature is usually used in scenarios where a website sends the `Completed Transaction` event right before redirecting to an online payment system, therefore leaving no chance for the Exchange banner to be viewed. To overcome this, a separate event has to be created, which is triggered when the user is redirected back from the payment system to the 'Thank You' page, for example `Viewed Thank You Page`.
 
