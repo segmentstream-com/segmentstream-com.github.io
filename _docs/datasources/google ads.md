@@ -236,8 +236,14 @@ AllConversions | FLOAT | REQUIRED
 ### Supported substitutions
 
 * lpurl
+* gclid
 * campaignid
 * adgroupid
 * creative
 * network
 * keyword
+* loc_interest_ms
+* loc_physical_ms
+* matchtype
+* device
+* targetid
