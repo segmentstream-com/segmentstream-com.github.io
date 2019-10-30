@@ -78,5 +78,5 @@ If you use "own deduplication", SegmentStream will remember the source (the valu
 
 ### <a name="correctnessOfIntegrationSetup"></a>Checking the correctness of the integration setup
 ------
-After configuring the integration in the SegmentStream interface, but before PUBLICATION - go to the site in test_mode, [go through the conversion funnel and check for errors](/for-analyst/integrations#2).
+After configuring the integration in the SegmentStream interface, but before PUBLICATION - go to the site in test_mode, [go through the conversion funnel and check for errors](/for-analyst/integrations#testing).
 If there are no errors - publish the current version.

@@ -83,7 +83,7 @@ SegmentStream will try to load integrations from the "After site loading" block 
 
 ### <a name="trackValidationErrors"></a> Tracking validation errors
 ------
-SegmentStream has a built-in [integration error tracking module](/for-analyst/integrations#2). This module displays information about all the data sent to third-party systems in the developer console. If you enable the tracking of validation errors, whenever an integration error occurs with any of the site visitors, SegmentStream will automatically add this event to the array `digitalData.events`. Now this event can be sent to any statistics system for further analysis of the causes of the error.
+SegmentStream has a built-in [integration error tracking module](/for-analyst/integrations#testing). This module displays information about all the data sent to third-party systems in the developer console. If you enable the tracking of validation errors, whenever an integration error occurs with any of the site visitors, SegmentStream will automatically add this event to the array `digitalData.events`. Now this event can be sent to any statistics system for further analysis of the causes of the error.
 
 If you have set up the [Google Analytics](/integrations/google-analytics) integration, you can find information about validation errors in the event reports.
 
