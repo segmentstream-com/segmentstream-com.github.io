@@ -11,13 +11,13 @@ Flocktory is a complete marketing platform. SegmentStream allows you to send dat
 ------
 <ul class="page-navigation">
   <li><a href="#introduction">Introduction</a></li>
-  <li><a href="#requiredEventsAndVariables">Required events and variables</a></li>
-  <li><a href="#WebsiteID">Website ID</a></li>
-  <li><a href="#enablePostcheckout">Enable Postcheckout</a></li>
-  <li><a href="#enablePrecheckout">Enable Precheckout</a></li>
-  <li><a href="#enableExchange">Enable Exchange</a></li>
-  <li><a href="#exchangeTriggerEvent">Exchange trigger event</a></li>
-  <li><a href="#exchangeSpot">Setting an exchange spot</a></li>
+  <li><a href="#required-events-and-variables">Required events and variables</a></li>
+  <li><a href="#website-id">Website ID</a></li>
+  <li><a href="#enable-postcheckout">Enable Postcheckout</a></li>
+  <li><a href="#enable-precheckout">Enable Precheckout</a></li>
+  <li><a href="#enable-exchange">Enable Exchange</a></li>
+  <li><a href="#exchange-trigger-events">Exchange trigger event</a></li>
+  <li><a href="#exchange-spot">Setting an exchange spot</a></li>
 </ul>
 
 ### <a name="introduction"></a>Introduction
@@ -30,7 +30,7 @@ To set up integration with Flocktory:
 3. In the panel that opens, configure the integration.
 ![](/img/integrations.flocktory.settings.png)
 
-### <a name="requiredEventsAndVariables"></a>Required events and variables
+### <a name="required-events-and-variables"></a>Required events and variables
 ------
 For the correct integration of your site with Flocktory - you need to configure the transfer of events in the `digitalData.events` array.
 The list of events is as follows:
@@ -52,33 +52,33 @@ The list of events is as follows:
 * [transaction](/digitaldata/transaction)
 * [user](/digitaldata/user)
 
-### <a name="WebsiteID"></a>Website ID
+### <a name="website-id"></a>Website ID
 ------
 By entering your Flocktory website ID in this field you enable the main Flocktory integration. You can read about it in detail on the [Flocktory documentation page](https://flocktory.github.io/en/integration/general/)
 
 >You can find your website's ID in your Flocktory admin panel – or request the ID from your Flocktory account manager.
 
-### <a name="enablePostcheckout"></a>Enable Postcheckout
+### <a name="enable-postcheckout"></a>Enable Postcheckout
 ------
 Enabling this toggle switch will activate the Flocktory Postcheckout module. You can read about it in detail on the [Flocktory documentation page](https://flocktory.github.io/en/integration/postcheckout/)
 
-### <a name="enablePrecheckout"></a>Enable Precheckout
+### <a name="enable-precheckout"></a>Enable Precheckout
 ------
 Enabling this toggle switch will activate the Flocktory Precheckout module. You can read about it in detail on the [Flocktory documentation page](https://flocktory.github.io/en/integration/precheckout/)
 
-### <a name="enableExchange"></a>Enable Exchange
+### <a name="enable-exchange"></a>Enable Exchange
 ------
 The Flocktory Exchange module is enabled by the toggle switch.
 
 You can read about it in detail on the [Flocktory documentation page](https://flocktory.github.io/en/integration/exchange/)
 
-### <a name="exchangeTriggerEvent"></a>Exchange trigger event
+### <a name="exchange-trigger-events"></a>Exchange trigger event
 ------
 By default, the Exchange banner is triggered when the `Completed Transaction` event is pushed to the `digitalData.events` array. Fill this field with the name of the event that you want to trigger the Exchange banner.
 
 This feature is usually used in scenarios where a website sends the `Completed Transaction` event right before redirecting to an online payment system, therefore leaving no chance for the Exchange banner to be viewed. To overcome this, a separate event has to be created, which is triggered when the user is redirected back from the payment system to the 'Thank You' page, for example `Viewed Thank You Page`.
 
-### <a name="exchangeSpot"></a>Setting an exchange spot
+### <a name="exchange-spot"></a>Setting an exchange spot
 ------
 Spot is an optional parameter that serves as an internal filter for Flocktory campaigns.
 It should be used if you have different “thank you” pages and want to show different campaigns on each one.
