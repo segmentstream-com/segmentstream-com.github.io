@@ -62,7 +62,7 @@ Use the 'gtag.js' version if you are connecting Google Ads to your website for t
 
 ### <a name="conversionID"></a>Conversion ID
 ------
-You can find the conversion tracking ID in the Google Ads system interface. Add the "AW-" prefix to the ID when using the gtag.js SDK.
+You can find the conversion tracking ID in the Google Ads system interface.
 
 ### <a name="businessType"></a>Business type
 ------
