@@ -66,6 +66,20 @@ Customer ID has the following format XXX-XXX-XXXX, where X - is a number from 0 
 - **googleAdsCampaignPerformance_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}** - data for "Campaign Performance" report
 - **googleAdsAdPerformance_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}** - data for "Ad Performance" report
 
+### Supported substitutions
+
+* lpurl
+* gclid
+* campaignid
+* adgroupid
+* creative
+* network
+* keyword
+* loc_interest_ms
+* loc_physical_ms
+* matchtype
+* device
+* targetid
 
 
 ### Normalized costs table structure
@@ -232,18 +246,3 @@ CreativeFinalUrls | STRING | REQUIRED
 CreativeTrackingUrlTemplate | STRING | REQUIRED
 Conversions | FLOAT | REQUIRED
 AllConversions | FLOAT | REQUIRED
-
-### Supported substitutions
-
-* lpurl
-* gclid
-* campaignid
-* adgroupid
-* creative
-* network
-* keyword
-* loc_interest_ms
-* loc_physical_ms
-* matchtype
-* device
-* targetid
