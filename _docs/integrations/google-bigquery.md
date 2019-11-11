@@ -48,6 +48,9 @@ Setting up the Google BigQuery integration:
 
 ### <a name="googleCloudProjectID"></a>Google Cloud project ID
 Enter the Google Big Query project ID in the `Google Cloud project ID` field.
+
+>Please note that BigQuery project billing must be set up in order to load data using the SegmentStream Data Import features. Free BQ projects (including Sandbox) don't support some services which are required for SegmentStream Data Import.
+
 The easiest way to find the project ID is on the [google cloud console main page](https://console.cloud.google.com/):
 1. Enter the console and select the required project from the drop-down list.
 2. Copy the Project ID from the corresponding `Project info` widget field

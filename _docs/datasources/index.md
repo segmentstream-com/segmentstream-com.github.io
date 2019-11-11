@@ -7,6 +7,8 @@ order: 0
 
 > Attention! The [Google BigQuery](/integrations/google-bigquery) integration has to be enabled to use this feature.
 
+> BigQuery project billing must be set up in order to load data using the SegmentStream Data Import features. Free BQ projects (including Sandbox) don't support some services which are required for SegmentStream Data Import.
+
 ### Connecting a new data source
 
 ![](/img/adding_datasource_1.png)
