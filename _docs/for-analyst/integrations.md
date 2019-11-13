@@ -61,8 +61,11 @@ If before in Google Adwords the following value of the productId variable would 
 ------
 Testing is necessary after setting up an integration. This can be done in **test_mode** mode.
 
-> To activate test_mode you should load any page of your website with the `?segmentstream_test_mode=1` GET-parameter, for example: [http://shop1.driveback.ru/?segmentstream_test_mode=1](http://shop1.driveback.ru/?segmentstream_test_mode=1).
-<br>If the version of the snippet on your site is less than `2.0.0`, then instead `?segmentstream_test_mode=1` must be used `?ddm_test_mode=1`.
+> To activate test_mode you should load any page of your website with the `?segmentstream_test_mode=1` GET-parameter, for example: [http://demo.segmentstream.com/?segmentstream_test_mode=1](http://demo.segmentstream.com/?segmentstream_test_mode=1).
+> ![](/img/integrations.testmode.png)
+> Once test_mode is activated, an icon will appear on the bottom-right of the website.
+> To disable test_mode, click on the power button as shown in the picture, and reload the page.
+<br>If the version of the snippet on your site is less than `2.0.0`, then instead of `?segmentstream_test_mode=1`, `?ddm_test_mode=1` must be used.
 
 Open the console (right mouse button -> View page code). In the console, you will see a sequence of events sent to the connected integrations. Along with the events, you will see all the variables that are sent in each integration. There are 3 indicators:
 1. If everything is set up correctly, all variables under the integration will be written in green
