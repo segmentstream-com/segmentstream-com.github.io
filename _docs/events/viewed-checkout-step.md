@@ -74,6 +74,7 @@ if (_digitalData('page.type') === 'checkout' || _digitalData('page.type') === 'c
 ```
 
 #### Required by the following integrations:
+* Google Analytics (Enchanced Ecommerce plugin)
 * [Facebook](/integrations/facebook)
 * RTB House
 * Segmento

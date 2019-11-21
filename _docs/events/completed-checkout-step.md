@@ -47,5 +47,5 @@ if (checkoutSteps.indexOf(checkoutStep) !== -1) {
 };
 ```
 
-#### Required by the following integrations:
+#### Optional for the following integrations:
 * Google Analytics (Enhanced Ecommerce)
