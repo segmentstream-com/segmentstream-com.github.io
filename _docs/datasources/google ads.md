@@ -39,19 +39,37 @@ For a full picture of advertising costs, you need to add all your active adverti
 
 **Import "Ad Performance" report** (9) - enable "Ad Performance" report import, without normalizing the values ​​in the table.
 
-**Import normalized costs report** (10) - imports normalized expenses report.
+**Import "ManagedCustomers" dictionary** (10) - enable "ManagedCustomers" dictionary import.
 
-To save and enable the data source, click "Save" (11).
+**Import "UserInterest" dictionary** (11) - enable "UserInterest" dictionary import.
 
-The "Disconnect" button (13) is used to revoke the authorization data. The settings are saved.
+**Import "AdwordsUserList" dictionary** (12) - enable "AdwordsUserList" dictionary import.
 
-You can enable or disable the data source at any time (12).
+**Import normalized costs report** (13) - imports normalized expenses report.
+
+To save and enable the data source, click "Save" (14).
+
+The "Disconnect" button (16) is used to revoke the authorization data. The settings are saved.
+
+You can enable or disable the data source at any time (15).
 
 ### How to Find Your Account ID
 
 Log in to Google Ads with an account that has access to the desired company. Depending on how many accounts you have created, copy the Customer ID. If you have more than one account, then you need to copy the account ID under the number 1. If you have only one account, then copy the ID under the number 2.
 
 Customer ID has the following format XXX-XXX-XXXX, where X - is a number from 0 to 9.
+
+### What Customer ID to add
+
+The following list shows the Customer IDs linked to particular Google Ads manager accounts:
+
+- 1234 — manager account
+  - 1111 — Customer ID
+  - 2222 — Customer ID
+  - 3333 — Customer ID
+  - 4444 — Customer ID
+
+> If you want to download reports for all managed accounts (ex. 1111, 2222, 3333, 4444), specify the manager account (ex. 1234). SegmentStream will do everything by itself.
 
 ![](/img/gl-a.3.png)
 
