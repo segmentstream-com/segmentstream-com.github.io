@@ -23,35 +23,38 @@ After authorization you need to set the data source parameters.
 
 (1) The name of the data source. It is displayed in the interface in the list of sources.
 
-For a full picture of advertising costs, you need to add all your active advertising accounts (2) (see the "How to Find Your Account ID" section to find out where to find the advertising account ID).
+(2) Value multiplier. Multiplied by the cost in the final report.
 
-**Import "Keyword Performance" report** (3) - enable "Keyword Performance" report import, without normalizing the values ​​in the table.
+For a full picture of advertising costs, you need to add all your active advertising accounts (3) (see the "How to Find Your Account ID" section to find out where to find the advertising account ID).
 
-**Import "Audience Performance" report** (4) - enable "Audience Performance" report import, without normalizing the values ​​in the table.
+**Import "Keyword Performance" report** (4) - enable "Keyword Performance" report import, without normalizing the values ​​in the table.
 
-**Import "Criteria Performance" report** (5) - enable "Criteria Performance" report import, without normalizing the values ​​in the table.
+**Import "Audience Performance" report** (5) - enable "Audience Performance" report import, without normalizing the values ​​in the table.
 
-**Import "Placement Performance" report** (6) - enable "Placement Performance" report import, without normalizing the values ​​in the table.
+**Import "Criteria Performance" report** (6) - enable "Criteria Performance" report import, without normalizing the values ​​in the table.
 
-**Import "Click Performance" report** (7) - enable "Click Performance" report import, without normalizing the values ​​in the table.
+**Import "Placement Performance" report** (7) - enable "Placement Performance" report import, without normalizing the values ​​in the table.
 
-**Import "Campaign Performance" report** (8) - enable "Campaign Performance" report import, without normalizing the values ​​in the table.
+**Import "Click Performance" report** (8) - enable "Click Performance" report import, without normalizing the values ​​in the table.
 
-**Import "Ad Performance" report** (9) - enable "Ad Performance" report import, without normalizing the values ​​in the table.
+**Import "Campaign Performance" report** (9) - enable "Campaign Performance" report import, without normalizing the values ​​in the table.
 
-**Import "ManagedCustomers" dictionary** (10) - enable "ManagedCustomers" dictionary import.
+**Import "Ad Performance" report** (10) - enable "Ad Performance" report import, without normalizing the values ​​in the table.
 
-**Import "UserInterest" dictionary** (11) - enable "UserInterest" dictionary import.
+**Import normalized costs report** (11) - imports normalized expenses report.
 
-**Import "AdwordsUserList" dictionary** (12) - enable "AdwordsUserList" dictionary import.
+**Import "ManagedCustomers" dictionary** (12) - enable "ManagedCustomers" dictionary import.
 
-**Import normalized costs report** (13) - imports normalized expenses report.
+**Import "UserInterest" dictionary** (13) - enable "UserInterest" dictionary import.
 
-To save and enable the data source, click "Save" (14).
+**Import "AdwordsUserList" dictionary** (14) - enable "AdwordsUserList" dictionary import.
 
-The "Disconnect" button (16) is used to revoke the authorization data. The settings are saved.
 
-You can enable or disable the data source at any time (15).
+To save and enable the data source, click "Save" (15).
+
+The "Disconnect" button (17) is used to revoke the authorization data. The settings are saved.
+
+You can enable or disable the data source at any time (16).
 
 ### How to Find Your Account ID
 
@@ -83,6 +86,12 @@ The following list shows the Customer IDs linked to particular Google Ads manage
 - **googleAdsClickPerformance_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}** - data for "Click Performance" report
 - **googleAdsCampaignPerformance_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}** - data for "Campaign Performance" report
 - **googleAdsAdPerformance_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}** - data for "Ad Performance" report
+
+### Where to get dictionary data
+
+- **googleAdsManagedCustomersDict_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}** - data for "ManagedCustomers" dictionary
+- **googleAdsUserInterestDict_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}** - data for "UserInterest" dictionary
+- **googleAdsAdwordsUserListDict_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}** - data for "AdwordsUserList" dictionary
 
 ### Supported substitutions
 
@@ -263,4 +272,24 @@ AdType | STRING | REQUIRED
 CreativeFinalUrls | STRING | REQUIRED
 CreativeTrackingUrlTemplate | STRING | REQUIRED
 Conversions | FLOAT | REQUIRED
-AllConversions | FLOAT | REQUIRED
+AllConversions | FLOAT | REQUIRED	
+
+### "ManagedCustomers" dictionary table structure
+Field name|Type|Mode
+--- | --- | ---
+CustomerId | STRING | REQUIRED
+Name | STRING | REQUIRED
+Currency | STRING | REQUIRED
+Labels | STRING | NULLABLE
+
+### "UserInterest" dictionary table structure
+Field name|Type|Mode
+--- | --- | ---
+UserInterestId | INTEGER | REQUIRED
+UserInterestName | STRING | REQUIRED
+
+### "AdwordsUserList" dictionary table structure
+Field name|Type|Mode
+--- | --- | ---
+Id | INTEGER | REQUIRED
+Name | STRING | REQUIRED
