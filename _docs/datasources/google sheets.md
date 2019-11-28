@@ -50,6 +50,8 @@ impressions | Impressions count
 clicks | Clicks count
 cost | Cost count
 
+You can use our [spreadsheet template](https://docs.google.com/spreadsheets/d/1578IL_rRoZHC7bPnba2rWsIr11KZaXkkJ3KthrrOMPc/edit#gid=0) as reference.
+
 ### Where to get data on custom costs
 
 Custom costs from Google Sheets will be uploaded to **customCosts_{ID}** table.
