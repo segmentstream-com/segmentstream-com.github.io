@@ -45,6 +45,17 @@ Notes:
 - You must fill the url params for all smart banners.
 - Using any of the `keyword`, `phrase_id`, `retargeting_id`, `adtarget_name`, `adtarget_id` substitution params in smart banners will cause the loss of `Impressions` data for all smart banner campaigns.
 
+(9) Media context banner advertising campaign identifier.
+
+(10) Utm parameters of the url for the media context banner are copied from the settings of the Yandex.Direct advertising account: **Editing active banners** → **Link to site**.
+
+Example: `utm_source=yandex&utm_medium=cpc&utm_campaign={campaign_id}&utm_term={ad_id}&utm_content={gbid}`
+
+![](/img/YD.contextBannerSetting.png)
+
+Notes:
+- You must fill the url params for all media context banners.
+
 ## Configuration for advertising agencies
 
 When the "Agency" option is enabled, new options become available.
