@@ -23,7 +23,7 @@ Ensure that the radio button (1) is enabled. Copy the Site ID (2) and token (3).
 
 The process of connecting data sources is described in detail in the [overview](https://docs.segmentstream.com/datasources/index).
 
-For authorization put API token (1) from previous step and click "Save" (2) 
+For authorization insert the API token (1) from the previous step and click "Save" (2) 
 
 ![](/img/calltouch_3.png)
 
