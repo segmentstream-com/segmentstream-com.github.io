@@ -13,7 +13,7 @@ After enabling this data source, Calltouch calls history will be uploaded to Big
 
 ### Connecting and configuring
 
-To enable API access in Calltouch dashboard, go to project, click "Интеграции" (1) > "API и Webhooks" (2)
+To enable API access to the Calltouch dashboard, go to your project, and click "Интеграции" (1) > "API и Webhooks" (2)
 
 ![](/img/calltouch_1.png)
 
