@@ -17,7 +17,7 @@ To enable API access in Calltouch dashboard, go to project, click "Интегр�
 
 ![](/img/calltouch_1.png)
 
-Ensure that radio button (1) is enabled. Copy Site ID (2) and token (3). If token not created yet, click "Обновить" button (4) to create it.
+Ensure that the radio button (1) is enabled. Copy the Site ID (2) and token (3). If the token hasn't been created yet, click the "Обновить" button (4) to create it.
 
 ![](/img/calltouch_2.png)
 
