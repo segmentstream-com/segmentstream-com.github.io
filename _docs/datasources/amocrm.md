@@ -19,20 +19,28 @@ The process of connecting data sources is described in detail in the [overview](
 
 After authorization you need to set the data source parameters.
 
-(1) The name of the data source. It is displayed in the interface in the list of sources.
+### Options description
 
-(2) Should be filled with the name of your project as it appears in the amoCRM panel url, i.e. https://projectName.amocrm.ru/
+**Title**
+The name of the data source. It is displayed in the interface in the list of sources.
 
-(3) **Allow PII data import** - enable import of personal data.
+**AmoCRM subdomain**
+Should be filled with the name of your project as it appears in the amoCRM panel url, i.e. https://projectName.amocrm.ru/
 
-(4) **Import leads** - enable import of lead data.
+**Allow PII data import**
+Enable import of personal data.
 
-(5) **Import customers** - enable import of customer data.
+**Import leads**
+Enable import of lead data.
 
-(6) **Import transactions** - enable import of transaction data.
+**Import customers**
+Enable import of customer data.
 
-To save and enable the data source, click "Save" (9).
+**Import transactions**
+Enable import of transaction data.
 
-The "Disconnect" button (8) is used to revoke the authorization data. The settings are saved.
+To save and enable the data source, click **Save**.
 
-You can enable or disable the data source at any time (7).
+The **Disconnect** button is used to revoke the authorization data. The settings are saved.
+
+You can enable or disable the data source at any time by using the switch on the top right.

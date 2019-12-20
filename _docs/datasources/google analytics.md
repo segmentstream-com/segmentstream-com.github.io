@@ -36,6 +36,7 @@ Input the dimensions that you want to import, for example:
 - ga:transactionId
 - ga:dimensionXX (for example for clientId)
 - ga:dimensionXX (for example for sessionId)
+
 A maximum of 7 dimensions can be imported.
 
 **Metrics**
@@ -44,6 +45,7 @@ Input the metrics that you want to import, for example:
 - ga:transaction
 - ga:transactionRevenue
 - ga:goalXXCompletions
+
 A maximum of 10 metrics can be imported.
 
 >**Please note!** Not all dimensions and metrics can be queried together, we recommend using the [Dimensions & Metrics Explorer](https://ga-dev-tools.appspot.com/dimensions-metrics-explorer/) to make sure that the settings used are valid.
