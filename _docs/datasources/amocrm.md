@@ -45,7 +45,7 @@ After authorization you need to set the data source parameters.
 The name of the data source. It is displayed in the interface in the list of sources.
 
 ### <a name="amocrm-subdomain"></a>AmoCRM subdomain
-Should be filled with the name of your project as it appears in the amoCRM panel url, i.e. https://projectName.amocrm.ru/
+Should be filled with the name of your project as it appears in the amoCRM panel url, i.e. https://project.amocrm.ru/
 
 ### <a name="allow-pii-data-import"></a>Allow PII data import
 If this option is disabled, SegmentStream will strip all PII data from all reports.
