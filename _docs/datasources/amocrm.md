@@ -48,7 +48,7 @@ The name of the data source. It is displayed in the interface in the list of sou
 Should be filled with the name of your project as it appears in the amoCRM panel url, i.e. https://projectName.amocrm.ru/
 
 ### <a name="allow-pii-data-import"></a>Allow PII data import
-Enable import of personal data.
+If this option is disabled, SegmentStream will strip all PII data from all reports.
 
 ### <a name="import-leads"></a>Import leads
 Enable import of lead data.
