@@ -18,9 +18,9 @@ In this section you will learn:
   <li><a href="#options-description">Options description</a></li>
   <li><a href="#title">Title</a></li>
   <li><a href="#view-id">View ID</a></li>
+  <li><a href="#destination-table-name">Destination table name</a></li>
   <li><a href="#dimensions">Dimensions</a></li>
   <li><a href="#metrics">Metrics</a></li>
-  <li><a href="#destination-table-name">Destination table name</a></li>
   <li><a href="#saving-disconnecting-disabling">Saving, Disconnecting, Disabling data source</a></li>
 </ul>
 
@@ -46,6 +46,9 @@ The name of the data source. It is displayed in the interface in the list of sou
 ### <a name="view-id"></a>View ID
 View ID of your Google Analytics account.
 
+### <a name="destination-table-name"></a>Destination table name
+The name of the table in BigQuery to which the imported data will be written.
+
 ### <a name="dimensions"></a>Dimensions
 Input the dimensions that you want to import, for example:
 - ga:sourceMedium
@@ -70,10 +73,6 @@ Input the metrics that you want to import, for example:
 A maximum of 10 metrics can be imported.
 
 >**Please note!** Not all dimensions and metrics can be queried together, we recommend using the [Dimensions & Metrics Explorer](https://ga-dev-tools.appspot.com/dimensions-metrics-explorer/) to make sure that the settings used are valid.
-
-### <a name="destination-table-name"></a>Destination table name
-The name of the table in BigQuery to which the imported data will be written.
-
 
 ### <a name="saving-disconnecting-disabling"></a>Saving, Disconnecting, Disabling data source
 To save and enable the data source, click **Save**.
