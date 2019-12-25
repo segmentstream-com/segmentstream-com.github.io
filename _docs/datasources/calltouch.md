@@ -35,18 +35,11 @@ After authorization you need to set the data source parameters.
 
 (2) Website ID from Calltouch dashboard.
 
-(3) Call export type indicates which calls should be exported.
+To save and enable the data source, click "Save" (3).
 
-It can be one of the following values:
-- All calls - Import all calls
-- Unique calls - Import only unique calls
-- Repeated calls - Import only non-unique calls
+The "Disconnect" button (5) is used to revoke the authorization data. The settings are saved.
 
-To save and enable the data source, click "Save" (4).
-
-The "Disconnect" button (6) is used to revoke the authorization data. The settings are saved.
-
-You can enable or disable the data source at any time (5).
+You can enable or disable the data source at any time (4).
 
 ### Where to get data on Calltouch calls
 
