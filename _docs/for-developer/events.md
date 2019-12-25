@@ -28,7 +28,7 @@ Here’s the payload of a typical event call that can be sent to the SegmentSt
       "firstName": "John",
       "lastName": "Doe"
     },
-    "nonIntegraction": false
+    "nonInteraction": false
   },
   "context": {
     "ip": "123.22.334.55"
