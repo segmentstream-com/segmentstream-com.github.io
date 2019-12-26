@@ -51,17 +51,19 @@ The name of the table in BigQuery to which the imported data will be written.
 
 ### <a name="dimensions"></a>Dimensions
 Input the dimensions that you want to import, for example:
+- ga:clientId (this option not documented in official GA docs)
 - ga:sourceMedium
 - ga:campaign
 - ga:keyword
 - ga:adContent
 - ga:transactionId
-- ga:dimensionXX (for example for clientId)
 - ga:dimensionXX (for example for sessionId)
 
 A maximum of 7 dimensions can be imported.
 
 >**Please note!** Not all dimensions and metrics can be queried together, we recommend using the [Dimensions & Metrics Explorer](https://ga-dev-tools.appspot.com/dimensions-metrics-explorer/) to make sure that the settings used are valid.
+
+>Do not pass Google clientId to custom dimension. In API v4 **ga:clientId** natively available.
 
 ### <a name="metrics"></a>Metrics
 Input the metrics that you want to import, for example:
