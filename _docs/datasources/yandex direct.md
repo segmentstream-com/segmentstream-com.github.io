@@ -149,3 +149,5 @@ CriterionId | INTEGER | NULLABLE
 MobilePlatform | STRING | NULLABLE
 AdGroupName | STRING | NULLABLE
 Gender | STRING | NULLABLE
+LocationOfPresenceId | STRING | NULLABLE
+LocationOfPresenceName | STRING | NULLABLE
