@@ -5,64 +5,114 @@ title: "Google Ads"
 order: 2
 ---
 
+In this section you will learn:
+* How to connect Google Ads data import.
+
 > Attention! The [Google BigQuery](/integrations/google-bigquery) integration has to be enabled to use this feature.
 
-### Importing data from Google Ads
+### Page contents
+------
+<ul class="page-navigation">
+  <li><a href="#importing-data">Importing data from Google Ads</a></li>
+  <li><a href="#connecting-and-configuring">Connecting and configuring</a></li>
+  <li><a href="#options-description">Options description</a></li>
+  <li><a href="#display-name">Display name</a></li>
+  <li><a href="#cost-multiplier">Cost multiplier</a></li>
+  <li><a href="#customer-ids">Customer ID(s)</a></li>
+  <li><a href="#keyword-performance-report">Import "Keyword Performance" report</a></li>
+  <li><a href="#audience-performance-report">Import "Audience Performance" report</a></li>
+  <li><a href="#criteria-performance-report">Import "Criteria Performance" report</a></li>
+  <li><a href="#placement-performance-report">Import "Placement Performance" report</a></li>
+  <li><a href="#click-performance-report">Import "Click Performance" report</a></li>
+  <li><a href="#campaign-performance-report">Import "Campaign Performance" report</a></li>
+  <li><a href="#ad-performance-report">Import "Ad Performance" report</a></li>
+  <li><a href="#normalized-costs-report">Import normalized costs report</a></li>
+  <li><a href="#managed-customers-dictionary">Import "Managed Customers" dictionary</a></li>
+  <li><a href="#user-interest-dictionary">Import "User Interest" dictionary</a></li>
+  <li><a href="#adwords-user-list-dictionary">Import "Adwords User List" dictionary</a></li>
+  <li><a href="#saving-disconnecting-disabling">Saving, Disconnecting, Disabling data source</a></li>
+  <li><a href="#how-to-find-your-account-id">How to Find Your Account ID</a></li>
+  <li><a href="#what-customer-id-to-add">What Customer ID to add</a></li>
+  <li><a href="#where-to-get-data-on-advertising-costs">Where to get data on advertising costs</a></li>
+  <li><a href="#where-to-get-dictionary-data">Where to get dictionary data</a></li>
+  <li><a href="#supported-substitutions">Supported substitutions</a></li>
+  <li><a href="#table-structures">Table structures</a></li>
+</ul>
+
+### <a name="importing-data"></a>Importing data from Google Ads
+------
 
 After enabling this data source, Google Ads advertising costs information for the past 7 days will be uploaded to BigQuery once every 24 hours.
 
 This integration is available for both ordinary advertisers and advertising agencies.
 
-### Connecting and configuring
+### <a name="connecting-and-configuring"></a>Connecting and configuring
+------
 
 The process of connecting data sources is described in detail in the [overview](https://docs.segmentstream.com/datasources/index).
 
-![](/img/gl-a.2.png)
-
 After authorization you need to set the data source parameters.
 
-(1) The name of the data source. It is displayed in the interface in the list of sources.
+### <a name="options-description"></a>Options description
+------
+![](/img/gl-a.4.png)
 
-(2) Value multiplier. Multiplied by the cost in the final report.
+### <a name="display-name"></a>Display name
+The name of the data source. It is displayed in the interface in the list of sources.
 
-For a full picture of advertising costs, you need to add all your active advertising accounts (3) (see the "How to Find Your Account ID" section to find out where to find the advertising account ID).
+### <a name="cost-multiplier"></a>Cost multiplier
+Value multiplier. Multiplied by the cost in the final report.
 
-**Import "Keyword Performance" report** (4) - enable "Keyword Performance" report import, without normalizing the values ​​in the table.
+### <a name="customer-ids"></a>Customer ID(s)
+For a full picture of advertising costs, you need to add all your active advertising accounts (see the <a href="#how-to-find-your-account-id">"How to Find Your Account ID"<a/> section to find out where to find the advertising account ID).
 
-**Import "Audience Performance" report** (5) - enable "Audience Performance" report import, without normalizing the values ​​in the table.
+### <a name="keyword-performance-report"></a>Import "Keyword Performance" report
+Enable "Keyword Performance" report import, without normalizing the values ​​in the table.
 
-**Import "Criteria Performance" report** (6) - enable "Criteria Performance" report import, without normalizing the values ​​in the table.
+### <a name="audience-performance-report"></a>Import "Audience Performance" report
+Enable "Audience Performance" report import, without normalizing the values ​​in the table.
 
-**Import "Placement Performance" report** (7) - enable "Placement Performance" report import, without normalizing the values ​​in the table.
+### <a name="criteria-performance-report"></a>Import "Criteria Performance" report
+Enable "Criteria Performance" report import, without normalizing the values ​​in the table.
 
-**Import "Click Performance" report** (8) - enable "Click Performance" report import, without normalizing the values ​​in the table.
+### <a name="placement-performance-report"></a>Import "Placement Performance" report
+Enable "Placement Performance" report import, without normalizing the values ​​in the table.
 
-**Import "Campaign Performance" report** (9) - enable "Campaign Performance" report import, without normalizing the values ​​in the table.
+### <a name="click-performance-report"></a>Import "Click Performance" report
+Enable "Click Performance" report import, without normalizing the values ​​in the table.
 
-**Import "Ad Performance" report** (10) - enable "Ad Performance" report import, without normalizing the values ​​in the table.
+### <a name="campaign-performance-report"></a>Import "Campaign Performance" report
+Enable "Campaign Performance" report import, without normalizing the values ​​in the table.
 
-**Import normalized costs report** (11) - imports normalized expenses report.
+### <a name="ad-performance-report"></a>Import "Ad Performance" report
+Enable "Ad Performance" report import, without normalizing the values ​​in the table.
 
-**Import "ManagedCustomers" dictionary** (12) - enable "ManagedCustomers" dictionary import.
+### <a name="normalized-costs-report"></a>Import normalized costs report
+Imports normalized expenses report.
 
-**Import "UserInterest" dictionary** (13) - enable "UserInterest" dictionary import.
+### <a name="managed-customers-dictionary"></a>Import "Managed Customers" dictionary
+Enable "Managed Customers" dictionary import.
 
-**Import "AdwordsUserList" dictionary** (14) - enable "AdwordsUserList" dictionary import.
+### <a name="user-interest-dictionary"></a>Import "User Interest" dictionary
+Enable "User Interest" dictionary import.
 
+### <a name="adwords-user-list-dictionary"></a>Import "Adwords User List" dictionary
+Enable "Adwords User List" dictionary import.
 
-To save and enable the data source, click "Save" (15).
+### <a name="saving-disconnecting-disabling"></a>Saving, Disconnecting, Disabling data source
+To save and enable the data source, click **Save**.
 
-The "Disconnect" button (17) is used to revoke the authorization data. The settings are saved.
+The **Disconnect** button is used to revoke the authorization data. The settings are saved.
 
-You can enable or disable the data source at any time (16).
+You can enable or disable the data source at any time by using the switch on the top right.
 
-### How to Find Your Account ID
+### <a name="how-to-find-your-accound-id"></a>How to Find Your Account ID
 
 Log in to Google Ads with an account that has access to the desired company. Depending on how many accounts you have created, copy the Customer ID. If you have more than one account, then you need to copy the account ID under the number 1. If you have only one account, then copy the ID under the number 2.
 
 Customer ID has the following format XXX-XXX-XXXX, where X - is a number from 0 to 9.
 
-### What Customer ID to add
+### <a name="what-customer-id-to-add"></a>What Customer ID to add
 
 The following list shows the Customer IDs linked to particular Google Ads manager accounts:
 
@@ -76,7 +126,7 @@ The following list shows the Customer IDs linked to particular Google Ads manage
 
 ![](/img/gl-a.3.png)
 
-### Where to get data on advertising costs
+### <a name="where-to-get-data-on-advertising-costs"></a>Where to get data on advertising costs
 
 - **googleAdsCosts_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}** - data for normalized costs
 - **googleAdsKeywordsPerformance_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}** - data for "Keyword Performance" report
@@ -87,13 +137,13 @@ The following list shows the Customer IDs linked to particular Google Ads manage
 - **googleAdsCampaignPerformance_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}** - data for "Campaign Performance" report
 - **googleAdsAdPerformance_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}** - data for "Ad Performance" report
 
-### Where to get dictionary data
+### <a name="where-to-get-dictionary-data"></a>Where to get dictionary data
 
-- **googleAdsManagedCustomersDict_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}** - data for "ManagedCustomers" dictionary
-- **googleAdsUserInterestDict_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}** - data for "UserInterest" dictionary
-- **googleAdsAdwordsUserListDict_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}** - data for "AdwordsUserList" dictionary
+- **googleAdsManagedCustomersDict_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}** - data for "Managed Customers" dictionary
+- **googleAdsUserInterestDict_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}** - data for "User Interest" dictionary
+- **googleAdsAdwordsUserListDict_{NORMALIZED_CUSTOMER_ID}_{YYYYMMDD}** - data for "Adwords User List" dictionary
 
-### Supported substitutions
+### <a name="supported-substitutions"></a>Supported substitutions
 
 * lpurl
 * gclid
@@ -108,6 +158,8 @@ The following list shows the Customer IDs linked to particular Google Ads manage
 * device
 * targetid
 
+### <a name="table-structures"></a>Table structures
+------
 
 ### Normalized costs table structure
 
@@ -272,9 +324,9 @@ AdType | STRING | REQUIRED
 CreativeFinalUrls | STRING | REQUIRED
 CreativeTrackingUrlTemplate | STRING | REQUIRED
 Conversions | FLOAT | REQUIRED
-AllConversions | FLOAT | REQUIRED	
+AllConversions | FLOAT | REQUIRED
 
-### "ManagedCustomers" dictionary table structure
+### "Managed Customers" dictionary table structure
 Field name|Type|Mode
 --- | --- | ---
 CustomerId | STRING | REQUIRED
@@ -282,13 +334,13 @@ Name | STRING | REQUIRED
 Currency | STRING | REQUIRED
 Labels | STRING | NULLABLE
 
-### "UserInterest" dictionary table structure
+### "User Interest" dictionary table structure
 Field name|Type|Mode
 --- | --- | ---
 UserInterestId | INTEGER | REQUIRED
 UserInterestName | STRING | REQUIRED
 
-### "AdwordsUserList" dictionary table structure
+### "Adwords User List" dictionary table structure
 Field name|Type|Mode
 --- | --- | ---
 Id | INTEGER | REQUIRED
