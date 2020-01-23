@@ -197,7 +197,7 @@ where,
 
 ### <a name="transaction.vouchers"></a>transaction.vouchers
 ------
-Data type: string.
+Data type: array.
 
 `transaction.vouchers` - a variable that contains an array of promotional codes applied to the shopping cart.
 
