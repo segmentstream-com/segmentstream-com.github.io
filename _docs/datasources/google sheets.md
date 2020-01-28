@@ -5,69 +5,75 @@ title: "Google Sheets"
 order: 1
 ---
 
+In this section you will learn:
+* How to connect Google Sheets data import.
+
 > Attention! The [Google BigQuery](/integrations/google-bigquery) integration has to be enabled to use this feature.
 
-### Importing custom costs from Google Sheets
+### Page contents
+------
+<ul class="page-navigation">
+  <li><a href="#importing-data">Importing data from Google Sheets</a></li>
+  <li><a href="#connecting-and-configuring">Connecting and configuring</a></li>
+  <li><a href="#options-description">Options description</a></li>
+  <li><a href="#display-name">Display name</a></li>
+  <li><a href="#google-spreadsheet-url">Google Spreadsheet URL</a></li>
+  <li><a href="#range">Range</a></li>
+  <li><a href="#column-types">Column types</a></li>
+  <li><a href="#destination-table-name">Destination table name</a></li>
+  <li><a href="#saving-disconnecting-disabling">Saving, Disconnecting, Disabling data source</a></li>
+</ul>
 
-After enabling this data source, Google Sheets costs information will be uploaded to BigQuery once every 24 hours.
+### <a name="importing-data"></a>Importing data from Google Sheets
+------
 
-### Connecting and configuring
+After enabling this data source, Google Sheets data will be uploaded to BigQuery once every 24 hours.
 
-The process of connecting data sources is described in detail in the [overview](https://docs.segmentstream.com/datasources/index).
+### <a name="connecting-and-configuring"></a>Connecting and configuring
+------
 
-![](/img/google-sheets-1.png)
+The process of connecting data sources is described in detail in the [overview](/datasources/index).
 
 After authorization you need to set the data source parameters.
 
-(1) The name of the data source. It is displayed in the interface in the list of sources.
+### <a name="options-description"></a>Options description
+------
+![](/img/google-sheets-1.png)
 
-(2) Link to to google spreadsheet. Just copy-paste it from browser URL of spreadsheet table.
+### <a name="display-name"></a>Display name
+The name of the data source. It is displayed in the interface in the list of sources.
 
-To save and enable the data source, click "Save" (3).
+### <a name="google-spreadsheet-url"></a>Google Spreadsheet URL
+Link to to Google Spreadsheet.
 
-The "Disconnect" button (5) is used to revoke the authorization data. The settings are saved.
+Just copy-paste it from the browser address bar of the spreadsheet table.
 
-You can enable or disable the data source at any time (4).
+If you want load data from specific sheet, select it before copying URL.
 
-### Required Google spreadsheet structure
+> Notice! If range not specified, first row of the sheet will be used for field names.
 
-To import a Google spreadsheet, you must use the following table structure:
+> Notice! Field names must contain only letters, numbers, and underscores, start with a letter or underscore, and be at most 128 characters long.
 
-![](/img/google-sheets-2.png)
+### <a name="range"></a>Range
+If you want to load data only from a specific range, type it here using A1 notation.
 
-Column order is important.
+> Notice! First row of range will be used for field names.
 
-Field name|Description
---- | ---
-date | Date in YYYY-MM-DD format
-currency | Currency of report
-utmMedium | UTM medium
-utmSource | UTM source
-utmCampaign | UTM campaign
-utmTerm | UTM term
-utmContent | UTM content
-impressions | Impressions count
-clicks | Clicks count
-cost | Cost count
+### <a name="column-types"></a>Column types
+Optionally you can specify column types.
 
-You can use our [spreadsheet template](https://docs.google.com/spreadsheets/d/1578IL_rRoZHC7bPnba2rWsIr11KZaXkkJ3KthrrOMPc/edit#gid=0) as reference.
+The screenshot above displays an example of a Google spreadsheet costs data import setup.
 
-### Where to get data on custom costs
+If column types are not specified, STRING type will be used by default.
 
-Custom costs from Google Sheets will be uploaded to **customCosts_{ID}** table.
+### <a name="destination-table-name"></a>Destination table name
+The name of the table in BigQuery to which the imported data will be written.
 
 Old data will be overwritten. 
 
-### Custom costs table structure
+### <a name="saving-disconnecting-disabling"></a>Saving, Disconnecting, Disabling data source
+To save and enable the data source, click **Save**.
 
-Field name|Type|Mode
---- | --- | ---
-cost | FLOAT | REQUIRED
-clicks | INTEGER | NULLABLE
-impressions | INTEGER | NULLABLE
-utmTerm | STRING | NULLABLE
-utmCampaign | STRING | NULLABLE
-utmContent | STRING | NULLABLE
-utmMedium | STRING | NULLABLE
-utmSource | STRING | NULLABLE
-currency | STRING | NULLABLE
+The **Disconnect** button is used to revoke the authorization data. The settings are saved.
+
+You can enable or disable the data source at any time by using the switch on the top right.
