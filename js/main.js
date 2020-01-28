@@ -172,7 +172,7 @@ function loadSearch(){
             <div class="resultCat digitalDataResults">Variable list<ul></ul></div>\
             <div class="resultCat eventResults">Events list<ul></ul></div>\
             <div class="resultCat integrationResults">Integration list<ul></ul></div>\
-            <div class="resultCat dataSourcesResults">Automatic Data Import<ul></ul></div>\
+            <div class="resultCat dataSourcesResults">Data Sources<ul></ul></div>\
         </div>'
     )
 
