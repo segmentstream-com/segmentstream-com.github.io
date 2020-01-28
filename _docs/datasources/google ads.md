@@ -2,6 +2,7 @@
 layout: page
 section: datasources
 title: "Google Ads"
+order: 1
 ---
 
 In this section you will learn:

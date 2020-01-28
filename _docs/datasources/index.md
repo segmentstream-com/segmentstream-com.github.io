@@ -2,7 +2,7 @@
 layout: page
 section: datasources
 title: "Overview"
-order: 1
+order: 0
 ---
 
 > Attention! The [Google BigQuery](/integrations/google-bigquery) integration has to be enabled to use this feature.
