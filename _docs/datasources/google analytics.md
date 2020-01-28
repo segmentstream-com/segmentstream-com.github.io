@@ -2,7 +2,6 @@
 layout: page
 section: datasources
 title: "Google Analytics"
-order: 2
 ---
 
 In this section you will learn:
