@@ -2,7 +2,6 @@
 layout: page
 section: datasources
 title: "Facebook"
-order: 1
 ---
 
 > Attention! The [Google BigQuery](/integrations/google-bigquery) integration has to be enabled to use this feature.
