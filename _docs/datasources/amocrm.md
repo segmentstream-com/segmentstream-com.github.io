@@ -56,4 +56,4 @@ The **Disconnect** button is used to revoke the authorization data. The settings
 You can enable or disable the data source at any time by using the switch on the top right.
 
 ### <a name="where-to-get-leads-data"></a>Where to get leads data
-- **amoCrmLeads_{AMOCRM_SUBDOMAIN}_{YYYYMMDD}** - data for updated "Leads"
+- **amoCrmLeads_{SUBDOMAIN}_{YYYYMMDD}** - data for updated "Leads"
