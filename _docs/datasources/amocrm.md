@@ -43,7 +43,7 @@ After authorization you need to set the data source parameters.
 The name of the data source. It is displayed in the interface in the list of sources.
 
 ### <a name="import-leads"></a>Import leads
-Enable import of lead data. If this option enabled, updated leads for the previous day will be uploaded.
+Enable import of leads data. If this option enabled, updated leads for the previous day will be uploaded.
 
 ### <a name="leads-custom-fields"></a>Leads custom fields
 The leads amoCRM custom fields to import.
@@ -57,3 +57,30 @@ You can enable or disable the data source at any time by using the switch on the
 
 ### <a name="where-to-get-leads-data"></a>Where to get leads data
 - **amoCrmLeads_{SUBDOMAIN}_{YYYYMMDD}** - data for updated "Leads"
+
+### "amoCrmLeads" table structure
+Field name | Type | Mode
+--- | --- | ---
+id | INTEGER | NULLABLE
+name | STRING  | NULLABLE
+responsible_user_id | INTEGER | NULLABLE
+created_by | INTEGER | NULLABLE
+created_at | INTEGER | NULLABLE
+updated_at | INTEGER | NULLABLE
+account_id | INTEGER | NULLABLE
+pipeline_id | INTEGER | NULLABLE
+status_id | INTEGER | NULLABLE
+updated_by | INTEGER | NULLABLE
+is_deleted | BOOLEAN | NULLABLE
+group_id | INTEGER | NULLABLE
+closed_at | INTEGER | NULLABLE
+closest_task_at | INTEGER | NULLABLE
+sale | INTEGER | NULLABLE
+loss_reason_id | INTEGER | NULLABLE
+custom_fields | RECORD  | REPEATED
+custom_fields.id | INTEGER | NULLABLE
+custom_fields.name | STRING  | NULLABLE
+custom_fields.is_system | BOOLEAN | NULLABLE
+custom_fields.values | RECORD  | REPEATED
+custom_fields.values.value | STRING  | NULLABLE
+custom_fields.values.enum | INTEGER | NULLABLE
