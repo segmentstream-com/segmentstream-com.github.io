@@ -73,7 +73,7 @@ Detailed object descriptions:
  - [recommendation](/digitaldata/recommendation)
  - [campaigns](/digitaldata/campaigns)
  - [context](/digitaldata/context)
- - [changes](/digitaldata/#changes)
+ - [changes](/digitaldata/changes)
  - [events](/digitaldata/events)
 
 More detailed description of the composition of digitalData for **typical pages of an online store**:
@@ -83,7 +83,7 @@ More detailed description of the composition of digitalData for **typical pages 
  - [Product page](/ecommerce/product)
  - [Cart](/ecommerce/cart)
  - [Checkout pages](/ecommerce/checkout)
- - [Thank you page](/ecommerce/confirmation)
+ - [Thank you page](/ecommerce/transaction)
  - [Content page](/ecommerce/content)
 
  >If your website is not an online store, you can still use the SegmentStream. We will help you prepare a data schema (the structure of the digitalData object) specifically for your project.
