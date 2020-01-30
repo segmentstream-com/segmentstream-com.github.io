@@ -21,6 +21,7 @@ In this section you will learn:
   <li><a href="#orders-import">Orders import</a></li>
   <li><a href="#saving-disconnecting-disabling">Saving, Disconnecting, Disabling data source</a></li>
   <li><a href="#where-to-get-orders-data">Where to get orders data</a></li>
+  <li><a href="#table-structures">Table structures</a></li>
 </ul>
 
 ### <a name="importing-data"></a>Importing data from retailCRM
@@ -58,3 +59,65 @@ You can enable or disable the data source at any time by using the switch on the
 
 ### <a name="where-to-get-orders-data"></a>Where to get orders data
 - **retailCrmOrders{SUBDOMAIN}_{YYYYMMDD}** - data for updated "Orders"
+
+### <a name="table-structures"></a>Table structures
+------
+
+### retailCrmOrders table structure
+
+Field name | Type | Mode
+--- | --- | ---
+summ | FLOAT | NULLABLE
+id | INTEGER | NULLABLE
+number | STRING | NULLABLE
+externalId | STRING | NULLABLE
+orderType | STRING | NULLABLE
+orderMethod | STRING | NULLABLE
+countryIso | STRING | NULLABLE
+createdAt | DATETIME | NULLABLE
+statusUpdatedAt | DATETIME | NULLABLE
+totalSumm | FLOAT | NULLABLE
+prepaySum | FLOAT | NULLABLE
+purchaseSumm | FLOAT | NULLABLE
+site | STRING | NULLABLE
+status | STRING | NULLABLE
+fromApi | BOOLEAN | NULLABLE
+shipped | BOOLEAN | NULLABLE
+clientId | STRING | NULLABLE
+customer | RECORD | NULLABLE
+customer.id | INTEGER | NULLABLE	
+customer.externalId | STRING | NULLABLE
+customer.site | STRING | NULLABLE
+customer.personalDiscount | FLOAT | NULLABLE
+customer.marginSumm | FLOAT | NULLABLE
+customer.totalSumm | FLOAT | NULLABLE
+customer.averageSumm | FLOAT | NULLABLE
+customer.ordersCount | INTEGER | NULLABLE
+customer.costSumm | FLOAT | NULLABLE
+customer.firstClientId | STRING | NULLABLE
+customer.lastClientId | STRING | NULLABLE
+customer.source | RECORD | NULLABLE
+customer.source.source | STRING | NULLABLE
+customer.source.medium | STRING | NULLABLE
+customer.source.campaign | STRING | NULLABLE
+customer.source.keyword | STRING | NULLABLE
+customer.source.content | STRING | NULLABLE
+delivery | RECORD | NULLABLE
+delivery.cost | FLOAT | NULLABLE
+delivery.netCost | FLOAT | NULLABLE
+source | RECORD | NULLABLE
+source.source | STRING | NULLABLE
+source.medium | STRING | NULLABLE
+source.campaign | STRING | NULLABLE
+source.keyword | STRING | NULLABLE
+source.content | STRING | NULLABLE
+items | RECORD | REPEATED
+items.id | INTEGER | NULLABLE
+items.initialPrice | FLOAT | NULLABLE
+items.discountTotal | FLOAT | NULLABLE
+items.vatRate | FLOAT | NULLABLE
+items.createdAt | DATETIME | NULLABLE
+items.quantity | INTEGER | NULLABLE
+items.status | STRING | NULLABLE
+items.purchasePrice | FLOAT | NULLABLE
+items.isCanceled | BOOLEAN | NULLABLE
