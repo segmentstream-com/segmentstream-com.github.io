@@ -21,6 +21,7 @@ In this section you will learn:
   <li><a href="#orders-import">Orders import</a></li>
   <li><a href="#saving-disconnecting-disabling">Saving, Disconnecting, Disabling data source</a></li>
   <li><a href="#where-to-get-orders-data">Where to get orders data</a></li>
+  <li><a href="#table-structure">Table structure</a></li>
 </ul>
 
 ### <a name="importing-data"></a>Importing data from retailCRM
@@ -59,7 +60,10 @@ You can enable or disable the data source at any time by using the switch on the
 ### <a name="where-to-get-orders-data"></a>Where to get orders data
 - **retailCrmOrders{SUBDOMAIN}_{YYYYMMDD}** - data for updated "Orders"
 
-### "retailCrmOrders" table structure
+### <a name="table-structure"></a>Table structure
+
+**retailCrmOrders**
+
 Field name | Type | Mode
 --- | --- | ---
 summ | FLOAT | NULLABLE
