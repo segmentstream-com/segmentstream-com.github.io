@@ -21,6 +21,7 @@ In this section you will learn:
   <li><a href="#leads-custom-fields">Leads custom fields</a></li>
   <li><a href="#saving-disconnecting-disabling">Saving, Disconnecting, Disabling data source</a></li>
   <li><a href="#where-to-get-leads-data">Where to get leads data</a></li>
+  <li><a href="#table-structure">Table structure</a></li>
 </ul>
 
 ### <a name="importing-data"></a>Importing data from amoCRM
@@ -58,7 +59,10 @@ You can enable or disable the data source at any time by using the switch on the
 ### <a name="where-to-get-leads-data"></a>Where to get leads data
 - **amoCrmLeads_{SUBDOMAIN}_{YYYYMMDD}** - data for updated "Leads"
 
-### "amoCrmLeads" table structure
+### <a name="table-structure"></a>Table structure
+
+**amoCrmLeads**
+
 Field name | Type | Mode
 --- | --- | ---
 id | INTEGER | NULLABLE
