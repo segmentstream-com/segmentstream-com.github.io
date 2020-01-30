@@ -58,7 +58,7 @@ The **Disconnect** button is used to revoke the authorization data. The settings
 You can enable or disable the data source at any time by using the switch on the top right.
 
 ### <a name="where-to-get-orders-data"></a>Where to get orders data
-- **retailCrmOrders{SUBDOMAIN}_{YYYYMMDD}** - data for updated "Orders"
+- **retailCrmOrders_{SUBDOMAIN}_{YYYYMMDD}** - data for updated "Orders"
 
 ### <a name="table-structures"></a>Table structures
 ------
