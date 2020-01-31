@@ -19,6 +19,7 @@ In this section you will learn:
   <li><a href="#display-name">Display name</a></li>
   <li><a href="#import-leads">Import leads</a></li>
   <li><a href="#leads-custom-fields">Leads custom fields</a></li>
+  <li><a href="#import-lead-name">Import lead name</a></li>
   <li><a href="#saving-disconnecting-disabling">Saving, Disconnecting, Disabling data source</a></li>
   <li><a href="#where-to-get-leads-data">Where to get leads data</a></li>
   <li><a href="#table-structures">Table structures</a></li>
@@ -49,6 +50,10 @@ Enable import of leads data. If this option enabled, updated leads for the previ
 ### <a name="leads-custom-fields"></a>Leads custom fields
 The leads amoCRM custom fields to import.
 
+### <a name="import-lead-name"></a>Import lead name
+Indicates whether or not to download leads names.
+It's necessary for cases when the leads names contain sensitive information.
+
 ### <a name="saving-disconnecting-disabling"></a>Saving, Disconnecting, Disabling data source
 To save and enable the data source, click **Save**.
 
@@ -75,6 +80,7 @@ updated_at | INTEGER | NULLABLE
 account_id | INTEGER | NULLABLE
 pipeline_id | INTEGER | NULLABLE
 status_id | INTEGER | NULLABLE
+status_name | STRING | NULLABLE
 updated_by | INTEGER | NULLABLE
 is_deleted | BOOLEAN | NULLABLE
 group_id | INTEGER | NULLABLE
