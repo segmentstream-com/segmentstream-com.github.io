@@ -19,7 +19,7 @@ RTB House is a dynamic retargeting system. SegmentStream allows you to send data
   <li><a href="#requiredEventsAndVariables">Required events and variables</a></li>
   <li><a href="#accountKey">Account key</a></li>
   <li><a href="#crossDevice">Cross-Device tracking</a></li>
-  <li><a href="#userSegment">User segment</a></li>
+  <li><a href="#customTags">Custom tags</a></li>
   <li><a href="#useCustomDeduplication">Use custom deduplication</a></li>
   <li><a href="#correctnessOfIntegrationSetup">Checking the correctness of the integration setup</a></li>
 </ul>
@@ -63,11 +63,25 @@ The ID of your account can be checked with your RTB House account manager
 ------
 If the [`digitalData.user.email`](/digitaldata/user#user.email) variable is filled, then we will automaticaly send a `uid` matching the sha256 hash of that email.
 
-### <a name="userSegment"></a>User segment
+### <a name="customTags"></a>Custom tags
 ------
-RTB House allows you to send user segments with each event. For example, if you want to completely disable retargeting for a specific segment of users - you need to create a numeric variable in the `digitalData` object and insert its address into the integration configuration field.
-For example, for all users on which you want to disable retargeting, you pass the value 1 to the variable `digitalData.user.segment.rtbSegment`. For the rest, 0.
-For more information about creating variables, see [variables](/for-analyst/variables).
+RTB House allows you to send several custom tags with each event, which can contain the users segments or any other variables.
+To configure the transfer of a custom tag, you have to fill in 3 fields:
+1. Left - Enter the name of the custom tag that you want to pass data to.
+2. Center - Specify the data source:
+ - **DigitalData**. Any variable that is present in the digitalData object
+ - **Event**. Any variable of any event that is pushed to the `digitalData.events` array
+3. Right - Specify the name or the value of the variable in the right field.
+
+For example:
+1. If you want to completely disable retargeting for a specific segment of users - you need to create a numeric variable in the `digitalData` object and insert its address into the integration configuration field.
+For example, for all users on which you want to disable retargeting, you pass the value 1 to the variable `digitalData.user.segment`, and for the rest, 0. For more information about creating variables, see [variables](/for-analyst/variables).
+In the left field of the setting input `user` as a tag name, in the center drop-down select `DigitalData` and in the right field input `user.segment`, as illustrated in the screenshot below.
+2. If you want to pass the value of the `subscription` parameter of an event to a tag named `subscription`, in the left field of the setting input `subscription` as a tag name, in the center drop-down select `Event` and in the right field input `subscription`, as illustrated in the screenshot below.
+
+![](/img/integrations.rtb.settings2.png)
+
+
 
 ### <a name="useCustomDeduplication"></a>Use custom deduplication
 ------
