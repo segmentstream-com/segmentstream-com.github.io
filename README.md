@@ -20,7 +20,7 @@ For example, if you want to make changes in the page describing the product obje
 
 8. To upload your changes to GitHub you have to click on the cloud icon and select origin tin the remote list. [pic](http://take.ms/CrIGU)
 
-9. Go to the repositories GitHub page where you should see the "Your recently pushed branches" list. Click on the "Compare & pull request" button. [pic](http://take.ms/eUpUX)
+9. Go to the GitHub page of the repository, where you should see the "Your recently pushed branches" list. Click on the "Compare & pull request" button. [pic](http://take.ms/eUpUX)
 
 10. You will be redirected to a page where you can write an additional comment to the changes you made, click on the "Reviewers" button on the right and select the users who you want the changes to be reviewed by, and finally click "Create pull request".
 
