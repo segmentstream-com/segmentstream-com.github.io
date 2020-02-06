@@ -1,42 +1,41 @@
 
+## How to edit documentation
 
-## Как вводить изменения в документацию
+1. Open `Terminal` and navigate to the folder where you want the local repository files to be stored. For example `cd Desktop/{folder name}`.
 
-1. Открываете `Terminal` и переходите в папку где вы хотите чтобы у вас хранились локальные файлы репозитория. Пример команды `cd Desktop/{название папки}`
+2. Clone the repository by executing `git clone git@github.com:segmentstream-com/segmentstream-com.github.io.git` in the terminal.
 
-2. Клонируете репозиторию вводя в terminal `git clone git@github.com:segmentstream-com/segmentstream-com.github.io.git`
+3. Open your IDE, (for example [Visual Studio Code](https://code.visualstudio.com/)) and open the folder that you've cloned in the previous step.
 
-3. Открываете IDE, (советую [Visual Studio Code](https://code.visualstudio.com/)) и открываете папку которую клонировали во втором шаге.
+4. Press `Command + Shift + P` and select Create Branch in the list.
+The name of the branch should describe the changes that you want to make in the following format `feature/{description}`. For example: `feature/fix-ecommerce-checkout-page-typos`
+Separate branches should be created for every unrelated change.
+For example, if you want to make changes in the page describing the product object, and in another page describing the user object, you should create two separate branched.
 
-4. Нажимаете на клавиатуре `Command + Shift + P` и выбираете в списке Create Branch.
-Название Branch должно описывать описывать что в нем будет изменено, в формате `feature/{описание}`. Пример: `feature/fix-ecommerce-checkout-typos`
-Branch надо создавать отдельный для больших изменений которые не касаются друг-друга.
-Например если вы решили обновить описание объекта product и описание объекта user, то это надо делать в отдельных Branch.
+5. All the files that you have to edit are inside the `_docs` folder. [pic](http://take.ms/BvXcF)
 
-5. Все файлы которые вам надо редактировать находятся в папке `_docs` [скрин](http://take.ms/BvXcF)
+6. After editing a file switch to the Source Control tag, there you can see all the filed that you've edited in the current branch. [pic](http://take.ms/PAkrD)
 
-6. После редактирования файла вы его сохраняете и переходите в тэб Source Control, тут видны файлы которые в которые вы внесли изменения в этой ветке. [скрин](http://take.ms/PAkrD)
+7. Here you have to type a detailed description of what was edited in your branch, click on the checkmark, and click yes in the dialog box. [pic](http://take.ms/IpS7EB)
 
-7. Тут надо написать более подробное описание того что было сделано в ветке, нажать на галочку, и потом Yes [скрин](http://take.ms/IpS7EB)
+8. To upload your changes to GitHub you have to click on the cloud icon and select origin tin the remote list. [pic](http://take.ms/CrIGU)
 
-8. Чтобы ваши изменения загрузились в гитхаб надо нажать на облачко и в списке remote выбрать origin [скрин](http://take.ms/CrIGU)
+9. Go to the repositories GitHub page where you should see the "Your recently pushed branches" list. Click on the "Compare & pull request" button. [pic](http://take.ms/eUpUX)
 
-9. Далее надо перейти на страницу репозитория GitHub и там вы должны увидеть такой тэб с названием вашей ветки где надо нажать на зеленую кнопку [скрин](http://take.ms/eUpUX)
+10. You will be redirected to a page where you can write an additional comment to the changes you made, click on the "Reviewers" button on the right and select the users who you want the changes to be reviewed by, and finally click "Create pull request".
 
-10. Вас переведет на страницу где надо добавить дополнительный комментарий к вашим изменениям, выбрать пользователя у которого вы просите модерацию, и наконец отправить запрос [скрин](http://take.ms/QtxOT)
+11. At this point the users whose review you have requested will receive an email notification. Once they review and approve the changes they can merge the changes to the master branch, which will automatically deploy the changes to the documentation website.
 
-11. После этого Олегу придет оповещение на почту что его попросили модерировать изменения. Он сам их сможет слить в основную ветку, с которой все подгрузится на сайт документации.
+12. To create new changes you have to switch to the master branch by clicking the branch name in the lower left corner, and select master in the branch list - [pic](http://take.ms/KYIsa). Next you have to synchronize your master branch with the GitHub master branch by clicking on the circular arrows [pic](http://take.ms/1URHX). Now you can create a new branch as described in step 4.
 
-12. Для создания новых изменений надо переключить ветку на `master` нажимая на нижный левый угол, и потом на master [скрин](http://take.ms/KYIsa). Потом надо синхронизировать ветку master с веткой master на GitHub кликая на круглые стрелочки [скрин](http://take.ms/1URHX). После этого уже можно создавать новую ветку как описано в шаге 4.
+## How to load the documentation locally.
 
-## Как запускать документацию локально
-
-Надо в терминале в корневой папке документации запустить команду:
+Execute the following command in the root documentation folder:
 `bundle exec jekyll server`
 
 ## Tips
 
-Сайт пользуется языком Markdown, если надо посмотреть как ваши изменения будут выглядеть в лайве надо нажать `Command + Shift + V`, описание языка ниже
+The documentation is using the Markdown language, to get a preview of your changes press `Command + Shift + V`.
 
 ### Markdown
 
