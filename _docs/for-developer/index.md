@@ -65,3 +65,15 @@ SegmentStream is able to monitor user's interactions with website content. When 
 For everything to work correctly, you need to add special classes and data-attributes to the tracked elements.
 
 [Learn more about the HTML-markup of tracked elements](/for-developer/#markup)
+
+### <a name="supportedBrowsers"></a>Supported browsers
+-----------------------
+We test our SDK on the following browsers and it's garanteed to work on them and more modern browsers:
+- IE 9
+- IE 11
+- Chrome 79
+- Edge 13
+- Chrome for Android 39
+- Safari for iOS 10
+- Safari 8
+- Firefox 56
