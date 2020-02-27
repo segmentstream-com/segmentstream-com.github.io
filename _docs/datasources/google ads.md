@@ -327,6 +327,7 @@ Conversions | FLOAT | REQUIRED
 AllConversions | FLOAT | REQUIRED
 
 ### "Managed Customers" dictionary table structure
+
 Field name|Type|Mode
 --- | --- | ---
 CustomerId | STRING | REQUIRED
@@ -335,12 +336,14 @@ Currency | STRING | REQUIRED
 Labels | STRING | NULLABLE
 
 ### "User Interest" dictionary table structure
+
 Field name|Type|Mode
 --- | --- | ---
 UserInterestId | INTEGER | REQUIRED
 UserInterestName | STRING | REQUIRED
 
 ### "Adwords User List" dictionary table structure
+
 Field name|Type|Mode
 --- | --- | ---
 Id | INTEGER | REQUIRED
