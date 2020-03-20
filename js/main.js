@@ -54,6 +54,11 @@ $(document).ready(function() {
         $(".drop-menu.datasources").toggle();
     });
 
+    $(".nav-header.datadestinations").click(function() {
+        $(this).toggleClass("active");
+        $(".drop-menu.datadestinations").toggle();
+    });
+
     $('#myBtn').click(function() {
         $("html, body").animate({ scrollTop: 0 }, "fast");
     });

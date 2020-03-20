@@ -21,7 +21,8 @@ sections: [
     ['digitaldata', 'Variable list'],
     ['events', 'Events list'],
     ['integrations', 'Integration list'],
-    ['datasources', 'Data Sources']
+    ['datasources', 'Data Sources'],
+    ['datadestinations', 'Data Destinations']
 ]
 
 # Keep as an empty string if served up at the root. If served up at a specific
