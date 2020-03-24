@@ -1,7 +1,7 @@
 ---
 layout: page
 section: datadestinations
-title: "Google Analytics Costs"
+title: "Google Analytics"
 order: 1
 ---
 
@@ -25,7 +25,7 @@ After enabling export you would be able to see cost data in Google Analytics Acq
   <li><a href="#tracking-id">Tracking ID</a></li>
   <li><a href="#data-set-type">Data Set Type</a></li>
   <li><a href="#data-set-id">Data Set ID</a></li>
-  <li><a href="#saving-disconnecting-disabling">Saving, Disconnecting, Disabling data source</a></li>
+  <li><a href="#saving-disconnecting-disabling">Saving, Disconnecting, Disabling data destination</a></li>
   <li><a href="#where-to-get-leads-data">Where to get leads data</a></li>
   <li><a href="#table-structures">Table structures</a></li>
 </ul>
@@ -33,7 +33,7 @@ After enabling export you would be able to see cost data in Google Analytics Acq
 ### <a name="importing-data"></a>Importing data from costs table in BigQuery
 ------
 
-After enabling this data destination, costs data will be uploaded from allCosts (costsFinal) table in BigQuery to Google Analytics once every 24 hours.
+After enabling this data destination, costs data will be uploaded from allCosts table in BigQuery to Google Analytics once every 24 hours.
 
 ### <a name="connecting-and-configuring"></a>Connecting and configuring
 ------
@@ -63,7 +63,8 @@ After enabling this data destination, costs data will be uploaded from allCosts 
 Read more in [Google Analytics documentation on Data Import](https://support.google.com/analytics/answer/3191589?hl=en#summary_data_import)
 
 #### <a name="data-destination-setup"></a>Setting up Data Destination in SegmentStream
-The process of connecting data destinations is similar to [connecting data sources](/datasources/index).
+
+The process of connecting data destinations is described in detail in the [overview](https://docs.segmentstream.com/datadestinations/index).
 
 After authorization you need to set the data destinations parameters:
 
