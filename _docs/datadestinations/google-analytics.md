@@ -70,7 +70,7 @@ After authorization you need to set the data destinations parameters:
 
 
 #### <a name="options-description"></a>Options description
-![](/img/datadestination.ga.1.png)
+<img src="/img/datadestination.ga.1.png" style="width: 400px">
 
 #### <a name="display-name"></a>Display name
 The name of the data destination. It is displayed in the interface in the list of destinations.
@@ -118,6 +118,3 @@ Open Data Set that you've set up on Data Import page in Google Analytics (Admin 
 Check Status field: Status should be "Completed" if set up correctly
 
 ![](/img/datadestination.ga.3.png)
-
-
-
