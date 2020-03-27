@@ -31,7 +31,7 @@ In this section you will learn:
 
 After enabling this data source, data from Google Sheets will be uploaded to BigQuery once every 24 hours.
 
-### <a name="data-requirements></a>⚠️ Data requirements:
+### <a name="data-requirements"></a>⚠️ Data requirements:
 ------
 - You can only import data formatted as simple table. That means that chosen range should have at least two rows:
 one header row and one or more data rows.
