@@ -44,10 +44,16 @@ The name of the data source. It is displayed in the interface in the list of sou
 
 ### <a name="account-id"></a>Account ID
 Unique ID of your account in Microsoft Advertising.
-You can find it in ERROR
+To find it log in your Microsoft Advertising account and find parameter "aid" in URL:
+![](/img/datasources.microsoft-ads.2.png)
+You should copy number after symbol "=" and before leading "&"
 
 ### <a name="customer-id"></a>Customer ID
 The ID of the customer that owns this Microsoft Advertising account.
+To find it log in your Microsoft Advertising account and find parameter "cid" in URL:
+![](/img/datasources.microsoft-ads.3.png)
+You should copy number after symbol "=" and before leading "&"
+
 
 ### <a name="import-reports"></a>Import reports
 Enables import of raw report data from Microsoft Advertising to BigQuery
