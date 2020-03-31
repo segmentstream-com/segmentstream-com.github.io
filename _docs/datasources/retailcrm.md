@@ -19,6 +19,7 @@ In this section you will learn:
   <li><a href="#display-name">Display name</a></li>
   <li><a href="#retailcrm-subdomain">retailCRM subdomain</a></li>
   <li><a href="#orders-import">Orders import</a></li>
+  <li><a href="#order-custom-fields">Order custom fields</a></li>
   <li><a href="#saving-disconnecting-disabling">Saving, Disconnecting, Disabling data source</a></li>
   <li><a href="#where-to-get-orders-data">Where to get orders data</a></li>
   <li><a href="#table-structures">Table structures</a></li>
@@ -49,6 +50,9 @@ Should be filled with the first part of your CRM address. For example, if your C
 
 ### <a name="orders-import"></a>Orders import
 Enable import of orders data. If this option enabled, updated orders for the previous day will be uploaded.
+
+### <a name="order-custom-fields"></a>Order custom fields
+The list of symbolic codes of order custom fields to import. 
 
 ### <a name="saving-disconnecting-disabling"></a>Saving, Disconnecting, Disabling data source
 To save and enable the data source, click **Save**.
@@ -121,3 +125,20 @@ items.quantity | INTEGER | NULLABLE
 items.status | STRING | NULLABLE
 items.purchasePrice | FLOAT | NULLABLE
 items.isCanceled | BOOLEAN | NULLABLE
+customFields | RECORD | REPEATED	
+customFields.name | STRING | NULLABLE	
+customFields.code | STRING | NULLABLE	
+customFields.type | STRING | NULLABLE	
+customFields.value | RECORD | NULLABLE	
+customFields.value.string | STRING | NULLABLE	
+customFields.value.text | STRING | NULLABLE	
+customFields.value.integer | INTEGER | NULLABLE	
+customFields.value.numeric | FLOAT | NULLABLE	
+customFields.value.boolean | BOOLEAN | NULLABLE	
+customFields.value.date | DATE | NULLABLE	
+customFields.value.email | STRING | NULLABLE	
+customFields.value.dictionary | RECORD | NULLABLE	
+customFields.value.dictionary.name | STRING | NULLABLE	
+customFields.value.dictionary.element | RECORD | NULLABLE	
+customFields.value.dictionary.element.name | STRING | NULLABLE	
+customFields.value.dictionary.element.code | STRING | NULLABLE	
