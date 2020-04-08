@@ -2,7 +2,7 @@
     {% for doc in site.docs %}
         {% if doc.section == include.section %}
             <li>
-            {{doc.title}}
+                {% if doc.navigation_title %}{{ doc.navigation_title }}{% else %}{{doc.title}}{% endif %}
             </li>
         {% endif %}
     {% endfor %}

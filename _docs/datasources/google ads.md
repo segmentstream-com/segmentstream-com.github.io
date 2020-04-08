@@ -1,6 +1,7 @@
 ---
 layout: page
 section: datasources
+navigation_title: "Google Ads"
 title: "Google Ads data source"
 order: 1
 ---
