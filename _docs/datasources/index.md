@@ -32,6 +32,6 @@ Besides default reports import, SegmentStream allows to apply additional transfo
 
 This might be very handy if you need to stitch cost data with website sessions or [send cost data into Google Analytics](!/datadestinations/google-analytics).
 
-To enable this transformation use switch on **"Import cost data grouped by UTM"** setting.
+To enable this transformation use **"Import cost data grouped by UTM"** setting.
 
 Each data source might have a unique set of settings to make this transformation possible. You can find more info in the documentation of the specific data source.
