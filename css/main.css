@@ -178,10 +178,11 @@ table {
   margin-bottom: 30px;
   border: 1px solid #e5e5e5;
   border-collapse: collapse;
+  width: 100%
 }
 
 td, th {
-  padding: .25rem .5rem;
+  padding: .5rem 1.5rem;
   border: 1px solid #e5e5e5;
 }
 
