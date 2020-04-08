@@ -1,7 +1,7 @@
 ---
 layout: page
 section: datasources
-title: "Google Ads"
+title: "Google Ads data source"
 order: 1
 ---
 
@@ -23,8 +23,6 @@ order: 1
   <li><a href="#additional-transformation-settings">Additional transformation settings</a></li>
 </ul>
 
-# Google Ads data source
-
 Google Ads is an online advertising service developed by Google. With Google Ads, you can take advantage of online advertising to improve your internet marketing effectiveness. [Visit Website ▸](https://ads.google.com/home/)
 
 This document was last updated on April 8, 2020. If you notice any gaps, outdated information or simply want to leave some feedback to help us improve our documentation, please [let us know](https://support.segmentstream.com/hc/en-us/requests/new)!
@@ -43,7 +41,7 @@ SegmentStream allows to import the following reports from Google Ads.
 
 ### <a name="keyword-performance-report"></a>Keyword performance
 
-https://developers.google.com/adwords/api/docs/appendix/reports/keywords-performance-report
+[https://developers.google.com/adwords/api/docs/appendix/reports/keywords-performance-report](https://developers.google.com/adwords/api/docs/appendix/reports/keywords-performance-report)
 
 #### Table name
 **`googleAdsKeywordsPerformance_{CUSTOMER_ID}_{YYYYMMDD}`**
@@ -72,7 +70,7 @@ FirstPageCpc | STRING | REQUIRED
 
 ### <a name="audience-performance-report"></a>Audience performance
 
-https://developers.google.com/adwords/api/docs/appendix/reports#audience
+[https://developers.google.com/adwords/api/docs/appendix/reports#audience](https://developers.google.com/adwords/api/docs/appendix/reports#audience)
 
 #### Table name
 
@@ -99,11 +97,13 @@ AllConversions | FLOAT | REQUIRED
 
 ### <a name="criteria-performance-report"></a>Criteria performance
 
-https://developers.google.com/adwords/api/docs/appendix/reports#criteria
+[https://developers.google.com/adwords/api/docs/appendix/reports#criteria](https://developers.google.com/adwords/api/docs/appendix/reports#criteria)
 
 #### Table name
 
 **`googleAdsCriteriaPerformance_{CUSTOMER_ID}_{YYYYMMDD}`**
+
+#### Table schema
 
 Field name|Type|Mode
 --- | --- | ---
@@ -126,11 +126,9 @@ AllConversions | FLOAT | REQUIRED
 FirstPositionCpc | STRING | REQUIRED
 FirstPageCpc | STRING | REQUIRED
 
-#### Table schema
-
 ### <a name="placement-performance-report"></a>Placement performance
 
-https://developers.google.com/adwords/api/docs/appendix/reports#placement
+[https://developers.google.com/adwords/api/docs/appendix/reports#placement](https://developers.google.com/adwords/api/docs/appendix/reports#placement)
 
 #### Table name
 
@@ -155,7 +153,7 @@ AllConversions | FLOAT | REQUIRED
 
 ### <a name="click-performance-report"></a>Click performance
 
-https://developers.google.com/adwords/api/docs/appendix/reports#click
+[https://developers.google.com/adwords/api/docs/appendix/reports#click](https://developers.google.com/adwords/api/docs/appendix/reports#click)
 
 #### Table name
 
@@ -188,7 +186,7 @@ AccountDescriptiveName | STRING | REQUIRED
 
 ### <a name="campaign-performance-report"></a>Campaign performance
 
-https://developers.google.com/adwords/api/docs/appendix/reports#campaign
+[https://developers.google.com/adwords/api/docs/appendix/reports#campaign](https://developers.google.com/adwords/api/docs/appendix/reports#campaign)
 
 #### Table name
 
@@ -213,7 +211,7 @@ AllConversions | FLOAT | REQUIRED
 
 ### <a name="ad-performance-report"></a>Ad performance
 
-https://developers.google.com/adwords/api/docs/appendix/reports#ad
+[https://developers.google.com/adwords/api/docs/appendix/reports#ad](https://developers.google.com/adwords/api/docs/appendix/reports#ad)
 
 #### Table name
 
@@ -268,10 +266,10 @@ To enable this transformation use **"Import cost data grouped by UTM"** setting.
 -->
 
 Once enabled, a new table with cost data grouped by UTM will appear in your data warehouse.
-### Table name
+#### Table name
 **`googleAdsCosts_{CUSTOMER_ID}_{YYYYMMDD}`**
 
-### Table schema
+#### Table schema
 Field name|Type|Mode
 --- | --- | ---
 date | DATE | REQUIRED
