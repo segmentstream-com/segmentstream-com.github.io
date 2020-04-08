@@ -272,6 +272,7 @@ Once enabled, a new table with cost data grouped by UTM will appear in your data
 **`googleAdsCosts_{CUSTOMER_ID}_{YYYYMMDD}`**
 
 #### Table schema
+
 Field name|Type|Mode
 --- | --- | ---
 date | DATE | REQUIRED
