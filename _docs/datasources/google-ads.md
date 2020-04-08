@@ -291,8 +291,9 @@ currency | STRING | NULLABLE
 By default Google Ads allows to use a lot of [dynamic URL tagging parameters](https://support.google.com/google-ads/answer/6305348) to track campains.
 
 SegmentStream supports the following parameters.
+
 Name|Description
---- | --- 
+--- | ---
 `{lpurl}` | The final URL. It will be escaped unless you put {lpurl} at the beginning of your tracking template. If {lpurl} isn't at the beginning of your tracking template, it escapes the characters ?, =, ", #, \t, ' and [space]. <br/><br/>**Example**<br/>Final URL: http://example.com<br/>Tracking template: {lpurl}?matchtype={matchtype}<br/>Landing page URL:<br/> http://example.com?matchtype={matchtype}
 `{gclid}` | The Google click identifier of a click that comes from your ad.
 `{campaignid}` | The campaign ID. (Use this when you've set up your tracking info at account level and want to know which campaign served your ad).
