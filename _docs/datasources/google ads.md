@@ -47,6 +47,7 @@ SegmentStream allows to import the following reports from Google Ads.
 **`googleAdsKeywordsPerformance_{CUSTOMER_ID}_{YYYYMMDD}`**
 
 #### Table schema
+
 Field name|Type|Mode
 --- | --- | ---
 Cost | INTEGER | REQUIRED
