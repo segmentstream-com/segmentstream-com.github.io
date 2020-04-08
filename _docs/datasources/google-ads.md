@@ -262,12 +262,8 @@ Enable "Adwords User List" dictionary import.
 
 You can read more about additional transformation to group cost data by UTM [here](/datasources/#additional-transformation-settings).
 
-To enable this transformation use **"Import cost data grouped by UTM"** setting.
-<!-- image should be here 
-![Screenshot: Import cost data grouped by UTM]()
--->
+To enable this transformation use **"Import cost data grouped by UTM"** setting. Once enabled, a new table with cost data grouped by UTM will appear in your data warehouse.
 
-Once enabled, a new table with cost data grouped by UTM will appear in your data warehouse.
 #### Table name
 **`googleAdsCosts_{CUSTOMER_ID}_{YYYYMMDD}`**
 
