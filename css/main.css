@@ -175,7 +175,7 @@ body.rtl ul, body.rtl ol {
 }
 
 table {
-  margin-bottom: 2rem;
+  margin-bottom: 30px;
   border: 1px solid #e5e5e5;
   border-collapse: collapse;
 }
