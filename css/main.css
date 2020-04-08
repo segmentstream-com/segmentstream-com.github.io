@@ -33,11 +33,15 @@ body {
     padding: 10px 10px 10px 22px;
 }
 
-.page-navigation li{
+.page-navigation ul {
+    padding-left: 20px;
+}
+
+.page-navigation li {
     list-style-type: none;
 }
 
-.page-navigation li a{
+.page-navigation li a {
     font-size: 14px;
 }
 
