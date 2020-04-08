@@ -33,7 +33,7 @@ This document was last updated on April 8, 2020. If you notice any gaps, outdate
 1. Inside the admin panel go to **Google BigQuery ▸ Data Sources** page and click **Add data source**.
 2. Choose **Google Ads** from the list.
 3. Click **Authenticate with Google** and go through the authentication flow.
-4. Select Google Ads account by defining proper Customer ID(s). [How to find your Google Ads customer customer ID ▸](https://support.google.com/google-ads/answer/1704344?hl=en-GB)
+4. Select Google Ads account by defining proper Customer ID(s). [How to find your Google Ads customer ID ▸](https://support.google.com/google-ads/answer/1704344?hl=en-GB)
 5. Enable required reports.
 
 ## <a name="reports"></a>Available reports
