@@ -6,6 +6,8 @@ title: "Google Ads data source"
 order: 1
 ---
 
+This document was last updated on April 8, 2020. If you notice any gaps, outdated information or simply want to leave some feedback to help us improve our documentation, please [let us know](https://support.segmentstream.com/hc/en-us/requests/new){:target="_blank"}!
+
 <ul class="page-navigation">
   <li><a href="#getting-started">Getting started</a></li>
   <li>
@@ -24,11 +26,9 @@ order: 1
   <li><a href="#additional-transformation-settings">Additional transformation settings</a></li>
 </ul>
 
-Google Ads is an online advertising service developed by Google. With Google Ads, you can take advantage of online advertising to improve your internet marketing effectiveness. [Visit Website ▸](https://ads.google.com/home/)
+Google Ads is an online advertising service developed by Google. With Google Ads, you can take advantage of online advertising to improve your internet marketing effectiveness. [Visit Website ▸](https://ads.google.com/home/){:target="_blank"}
 
-This document was last updated on April 8, 2020. If you notice any gaps, outdated information or simply want to leave some feedback to help us improve our documentation, please [let us know](https://support.segmentstream.com/hc/en-us/requests/new)!
-
-### <a name="connecting-and-configuring"></a>Getting started
+## <a name="connecting-and-configuring"></a>Getting started
 
 1. Inside the admin panel go to **Google BigQuery ▸ Data Sources** page and click **Add data source**.
 2. Choose **Google Ads** from the list.
