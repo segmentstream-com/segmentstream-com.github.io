@@ -271,8 +271,8 @@ To enable this transformation use **"Import cost data grouped by UTM"** setting.
 
 Field name|Type|Mode
 --- | --- | ---
-date | DATE | REQUIRED
-system | DATE | REQUIRED
+date | DATE | NULLABLE
+account | STRING | NULLABLE
 utmSource | STRING | NULLABLE
 utmMedium | STRING | NULLABLE
 utmCampaign | STRING | NULLABLE
