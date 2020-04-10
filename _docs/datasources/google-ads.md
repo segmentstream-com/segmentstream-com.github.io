@@ -33,7 +33,7 @@ Google Ads is an online advertising service developed by Google. With Google Ads
 1. Inside the admin panel go to **Google BigQuery ▸ Data Sources** page and click **Add data source**.
 2. Choose **Google Ads** from the list.
 3. Click **Authenticate with Google** and go through the authentication flow.
-4. Select Google Ads account by defining proper Customer ID(s). [How to find your Google Ads customer ID ▸](https://support.google.com/google-ads/answer/1704344?hl=en-GB)
+4. Select Google Ads account by defining proper Customer ID(s). [How to find your Google Ads customer ID ▸](https://support.google.com/google-ads/answer/1704344?hl=en-GB){:target="_blank"}
 5. Enable required reports.
 
 ## <a name="reports"></a>Available reports
@@ -42,7 +42,7 @@ SegmentStream allows to import the following reports from Google Ads.
 
 ### <a name="keyword-performance-report"></a>Keyword performance
 
-[https://developers.google.com/adwords/api/docs/appendix/reports/keywords-performance-report](https://developers.google.com/adwords/api/docs/appendix/reports/keywords-performance-report)
+[https://developers.google.com/adwords/api/docs/appendix/reports/keywords-performance-report](https://developers.google.com/adwords/api/docs/appendix/reports/keywords-performance-report){:target="_blank"}
 
 #### Table name
 **`googleAdsKeywordsPerformance_{CUSTOMER_ID}_{YYYYMMDD}`**
@@ -72,7 +72,7 @@ FirstPageCpc | STRING | REQUIRED
 
 ### <a name="audience-performance-report"></a>Audience performance
 
-[https://developers.google.com/adwords/api/docs/appendix/reports#audience](https://developers.google.com/adwords/api/docs/appendix/reports#audience)
+[https://developers.google.com/adwords/api/docs/appendix/reports#audience](https://developers.google.com/adwords/api/docs/appendix/reports#audience){:target="_blank"}
 
 #### Table name
 
@@ -99,7 +99,7 @@ AllConversions | FLOAT | REQUIRED
 
 ### <a name="criteria-performance-report"></a>Criteria performance
 
-[https://developers.google.com/adwords/api/docs/appendix/reports#criteria](https://developers.google.com/adwords/api/docs/appendix/reports#criteria)
+[https://developers.google.com/adwords/api/docs/appendix/reports#criteria](https://developers.google.com/adwords/api/docs/appendix/reports#criteria){:target="_blank"}
 
 #### Table name
 
@@ -130,7 +130,7 @@ FirstPageCpc | STRING | REQUIRED
 
 ### <a name="placement-performance-report"></a>Placement performance
 
-[https://developers.google.com/adwords/api/docs/appendix/reports#placement](https://developers.google.com/adwords/api/docs/appendix/reports#placement)
+[https://developers.google.com/adwords/api/docs/appendix/reports#placement](https://developers.google.com/adwords/api/docs/appendix/reports#placement){:target="_blank"}
 
 #### Table name
 
@@ -155,7 +155,7 @@ AllConversions | FLOAT | REQUIRED
 
 ### <a name="click-performance-report"></a>Click performance
 
-[https://developers.google.com/adwords/api/docs/appendix/reports#click](https://developers.google.com/adwords/api/docs/appendix/reports#click)
+[https://developers.google.com/adwords/api/docs/appendix/reports#click](https://developers.google.com/adwords/api/docs/appendix/reports#click){:target="_blank"}
 
 #### Table name
 
@@ -188,7 +188,7 @@ AccountDescriptiveName | STRING | REQUIRED
 
 ### <a name="campaign-performance-report"></a>Campaign performance
 
-[https://developers.google.com/adwords/api/docs/appendix/reports#campaign](https://developers.google.com/adwords/api/docs/appendix/reports#campaign)
+[https://developers.google.com/adwords/api/docs/appendix/reports#campaign](https://developers.google.com/adwords/api/docs/appendix/reports#campaign){:target="_blank"}
 
 #### Table name
 
@@ -213,7 +213,7 @@ AllConversions | FLOAT | REQUIRED
 
 ### <a name="ad-performance-report"></a>Ad performance
 
-[https://developers.google.com/adwords/api/docs/appendix/reports#ad](https://developers.google.com/adwords/api/docs/appendix/reports#ad)
+[https://developers.google.com/adwords/api/docs/appendix/reports#ad](https://developers.google.com/adwords/api/docs/appendix/reports#ad){:target="_blank"}
 
 #### Table name
 
@@ -260,7 +260,7 @@ Enable "Adwords User List" dictionary import.
 
 ## <a name="additional-transformation-settings"></a>Additional transformation settings
 
-You can read more about additional transformation to group cost data by UTM [here](/datasources/#additional-transformation-settings).
+You can read more about additional transformation to group cost data by UTM [here](/datasources/#additional-transformation-settings){:target="_blank"}.
 
 To enable this transformation use **"Import cost data grouped by UTM"** setting. Once enabled, a new table with cost data grouped by UTM will appear in your data warehouse.
 
@@ -285,13 +285,13 @@ currency | STRING | NULLABLE
 
 ### <a name="supported-substitutions"></a>Supported dynamic URL parameters
 
-By default Google Ads allows to use a lot of [dynamic URL tagging parameters](https://support.google.com/google-ads/answer/6305348) to track campains.
+By default Google Ads allows to use a lot of [dynamic URL tagging parameters](https://support.google.com/google-ads/answer/6305348){:target="_blank"} to track campains.
 
 SegmentStream supports the following parameters.
 
 Name|Description
 --- | ---
-`{lpurl}` | The final URL. It will be escaped unless you put {lpurl} at the beginning of your tracking template. If {lpurl} isn't at the beginning of your tracking template, it escapes the characters ?, =, ", #, \t, ' and [space]. <br/><br/>**Example**<br/>Final URL: http://example.com<br/>Tracking template: {lpurl}?matchtype={matchtype}<br/>Landing page URL:<br/> http://example.com?matchtype={matchtype}
+`{lpurl}` | The final URL. It will be escaped unless you put {lpurl} at the beginning of your tracking template. If {lpurl} isn't at the beginning of your tracking template, it escapes the characters ?, =, ", #, \t, ' and [space]. <br/><br/>**Example**<br/>Final URL: http://example.com<br/>Tracking template:<br/>{lpurl}?matchtype={matchtype}<br/>Landing page URL:<br/> http://example.com?matchtype={matchtype}
 `{gclid}` | The Google click identifier of a click that comes from your ad.
 `{campaignid}` | The campaign ID. (Use this when you've set up your tracking info at account level and want to know which campaign served your ad).
 `{adgroupid}` | The ad group ID. (Use this when you've set up your tracking info at the account or campaign level and want to know which ad group served your ad),
