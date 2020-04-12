@@ -19,8 +19,8 @@ sections: [
     ['datadestinations', 'Data Destinations']
     ['analyst', 'Analyst'],
     ['developer', 'Developer'],
-    ['ecommerce', 'Ecommerce integration'],
-    ['digitaldata', 'Tracking Variables'],
+    ['ecommerce', 'DigitalData for Ecommerce'],
+    ['digitaldata', 'DatalData Variables'],
     ['events', 'Tracking Events'],
     ['integrations', 'Tracking Integrations'],
 ]
