@@ -1,9 +1,9 @@
 ---
 layout: page
-section: analyst
-title: "Events"
+section: javascript-sdk
+title: "Admin panel: Events"
 date: 2013-06-05 12:00:00
-order: 2
+order: 90
 ---
 
 Events is one of the most important components of `digitalData`. All information is sent to analytics and marketing systems in the form of events. Below, you will find a detailed description on how to create and manage events in the SegmentStream interface.

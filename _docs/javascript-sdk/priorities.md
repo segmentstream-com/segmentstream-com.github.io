@@ -1,9 +1,9 @@
 ---
 layout: page
-section: analyst
-title: "Priorities"
+section: javascript-sdk
+title: "Admin panel: Priorities"
 date: 2017-08-15 12:00:00
-order: 6
+order: 96
 ---
 
 **Priorities** is the SegmentStream module, which allows you to manage the queue at which integrations load. Priorities will help you increase your website's load speed.

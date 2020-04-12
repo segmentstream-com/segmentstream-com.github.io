@@ -17,7 +17,6 @@ navigation: 1
 sections: [
     ['datasources', 'Data Sources'],
     ['datadestinations', 'Data Destinations'],
-    ['analyst', 'Analyst'],
     ['developer', 'Developer'],
     ['javascript-sdk', 'JavaScript SDK'],
     ['http-api', 'HTTP API'],

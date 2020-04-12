@@ -1,9 +1,9 @@
 ---
 layout: page
-section: analyst
-title: "Scripts"
+section: javascript-sdk
+title: "Admin panel: Scripts"
 date: 2017-08-11 17:32:00
-order: 5
+order: 97
 ---
 
 The "Scripts" module makes it possible to execute any JavaScript code after the trigger is fired. We recommend using the "Scripts" module only if your task can not solved by the functionality of "Integrations", "Events" and "Variables".

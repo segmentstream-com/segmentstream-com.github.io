@@ -1,9 +1,9 @@
 ---
 layout: page
-section: analyst
-title: "Tracking settings"
+section: javascript-sdk
+title: "Admin panel: Tracking settings"
 date: 2017-08-25 15:00:00
-order: 1
+order: 99
 ---
 
 Depending on the architecture of your website, the project settings may differ. If your site is built on AJAX technology, different sections of the site are located on different subdomains, and in some other cases you need to tweak the settings.

@@ -1,9 +1,9 @@
 ---
 layout: page
-section: analyst
-title: "Integrations"
+section: javascript-sdk
+title: "Admin panel: Integrations"
 date: 2013-06-05 12:00:00
-order: 2
+order: 95
 ---
 
 Each integration is a connector between `digitalData` and a third-party system. An integration can listen to all events added to the array `digitalData.events`, and also convert events into a format required for a third-party system. If an event is necessary for a system, **SegmentStream** sends it.

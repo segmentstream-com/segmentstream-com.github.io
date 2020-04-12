@@ -1,9 +1,9 @@
 ---
 layout: page
-section: analyst
-title: "Variables"
+section: javascript-sdk
+title: "Admin panel: Variables"
 date: 2013-06-05 12:00:00
-order: 4
+order: 85
 ---
 
 The **"Variables"** module allows you to create new data based on the data in the `digitalData` object. This module solves a wide range of tasks: from converting one data format to another, to creating a new variables in `digitalData` based on data received from third-party systems.
