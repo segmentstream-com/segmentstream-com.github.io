@@ -20,7 +20,6 @@ $(document).ready(function() {
     });
 
     $(".nav-header").click(function() {
-      debugger;
       $(this).toggleClass("active");
       $("#drop-menu-" + $(this).data('section-id')).toggle();
     });

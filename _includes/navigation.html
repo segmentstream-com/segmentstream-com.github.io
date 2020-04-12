@@ -4,7 +4,7 @@
         {% assign sectionId = section[0] %}
         {% assign category = section[0] | remove: 'RU' %}
         {% assign label = section[1] %}
-        {% assign cat = cats | where:"name",attr | first %}
+        {% assign cat = cats | where:"name",sectionId | first %}
         {% assign things = cat.items | sort:"order" %}
             <li data-section-id="{{sectionId}}" class="nav-header{% if {{include.currenturl}} contains {{category}} %} active {% endif %}">{{ label }}</li>
             {% for page in things %}
