@@ -1,14 +1,14 @@
 <ul class="nav nav-list" >
     {% assign cats = site.docs | group_by:"section" %}
     {% for section in site.sections %}
-        {% assign attr = section[0] %}
+        {% assign sectionId = section[0] %}
         {% assign category = section[0] | remove: 'RU' %}
         {% assign label = section[1] %}
         {% assign cat = cats | where:"name",attr | first %}
         {% assign things = cat.items | sort:"order" %}
-            <li class="nav-header {{attr}} {% if {{include.currenturl}} contains {{category}} %} active {% endif %}">{{ label }}</li>
+            <li data-section-id="{{sectionId}}" class="nav-header{% if {{include.currenturl}} contains {{category}} %} active {% endif %}">{{ label }}</li>
             {% for page in things %}
-                <li class="drop-menu {{attr}}{% if {{include.currenturl}} contains {{category}} %} active {% endif %} {% if page.url == {{include.currenturl}} %} current {% endif %}" data-order="{{ page.order }}">
+                <li id="drop-menu-{{sectionId}}" class="drop-menu{% if {{include.currenturl}} contains {{category}} %} active {% endif %} {% if page.url == {{include.currenturl}} %} current {% endif %}" data-order="{{ page.order }}">
                     <a href="{{ site.baseurl }}{{ page.url }}">{% if page.navigation_title %}{{ page.navigation_title }}{% else %}{{page.title}}{% endif %}</a>
                 </li>
             {% endfor %}
