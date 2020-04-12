@@ -1,7 +1,7 @@
 ---
 layout: page
 section: javascript-sdk
-title: "Deploy on own CDN"
+title: "Deploy to own CDN"
 date: 2017-09-15 18:15:00
 order: 3
 ---
