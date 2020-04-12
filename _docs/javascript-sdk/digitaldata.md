@@ -1,6 +1,6 @@
 ---
 layout: page
-section: developer
+section: javascript-sdk
 navigation_title: "DigitalData object"
 title: "Global window.digitalData object (Data Layer)"
 date: 2017-06-05 12:00:00
