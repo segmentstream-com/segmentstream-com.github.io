@@ -25,46 +25,6 @@ $(document).ready(function() {
       $("#drop-menu-" + $(this).data('section-id')).toggle();
     });
 
-    // $(".nav-header.events").click(function() {
-    //     $(this).toggleClass("active");
-    //     $(".drop-menu.events").toggle();
-    // });
-
-    // $(".nav-header.analyst").click(function() {
-    //     $(this).toggleClass("active");
-    //     $(".drop-menu.analyst").toggle();
-    // });
-
-    // $(".nav-header.developer").click(function() {
-    //     $(this).toggleClass("active");
-    //     $(".drop-menu.developer").toggle();
-    // });
-
-    // $(".nav-header.integrations").click(function() {
-    //     $(this).toggleClass("active");
-    //     $(".drop-menu.integrations").toggle();
-    // });
-
-    // $(".nav-header.digitaldata").click(function() {
-    //     $(this).toggleClass("active");
-    //     $(".drop-menu.digitaldata").toggle();
-    // });
-
-    // $(".nav-header.ecommerce").click(function() {
-    //     $(this).toggleClass("active");
-    //     $(".drop-menu.ecommerce").toggle();
-    // });
-
-    // $(".nav-header.datasources").click(function() {
-    //     $(this).toggleClass("active");
-    //     $(".drop-menu.datasources").toggle();
-    // });
-
-    // $(".nav-header.datadestinations").click(function() {
-    //     $(this).toggleClass("active");
-    //     $(".drop-menu.datadestinations").toggle();
-    // });
-
     $('#myBtn').click(function() {
         $("html, body").animate({ scrollTop: 0 }, "fast");
     });
