@@ -3,7 +3,7 @@ layout: page
 section: datasources
 navigation_title: "Google Ads"
 title: "Google Ads data source"
-date: April 8, 2020
+date: 2020-04-08
 order: 1
 ---
 
