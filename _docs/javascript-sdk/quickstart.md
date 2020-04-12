@@ -1,6 +1,6 @@
 ---
 layout: page
-section: analyst
+section: javascript-sdk
 title: "Quick Start Guide"
 date: 2019-05-26
 order: 0

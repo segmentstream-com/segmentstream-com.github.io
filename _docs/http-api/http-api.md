@@ -1,7 +1,7 @@
 ---
 layout: page
-section: developer
-title: "HTTP API"
+section: http-api
+title: "HTTP API overview"
 date: 2019-05-21 19:00:00
 order: 6
 ---
@@ -30,7 +30,8 @@ We have a native [JavaScript SDK](https://github.com/segmentstream/digital-data
 
 Each request must be authorized with an API Token.
 
-Each project's API token can be found in the ["Project Info"](/for-analyst/project-info) menu in the admin panel.
+Each project's API token can be found in the **Project Info** menu in the admin panel:
+![](/img/project-info.png)
 
 Authentication uses HTTP Basic Auth, which involves a ‘username:password’ that is base64 encoded and prepended with the string ‘Basic ‘.
 

@@ -19,6 +19,8 @@ sections: [
     ['datadestinations', 'Data Destinations'],
     ['analyst', 'Analyst'],
     ['developer', 'Developer'],
+    ['javascript-sdk', 'JavaScript SDK'],
+    ['http-api', 'HTTP API'],
     ['ecommerce', 'DigitalData for Ecommerce'],
     ['digitaldata', 'DatalData Variables'],
     ['events', 'Tracking Events'],
