@@ -3,10 +3,9 @@ layout: page
 section: datasources
 navigation_title: "Google Ads"
 title: "Google Ads data source"
+date: April 8, 2020
 order: 1
 ---
-
-This document was last updated on April 8, 2020. If you notice any gaps, outdated information or simply want to leave some feedback to help us improve our documentation, please [let us know](https://support.segmentstream.com/hc/en-us/requests/new){:target="_blank"}!
 
 <ul class="page-navigation">
   <li><a href="#getting-started">Getting started</a></li>
