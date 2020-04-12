@@ -15,14 +15,14 @@ navigation: 1
 
 # Default categories (in order) to appear in the navigation
 sections: [
+    ['datasources', 'Data Sources'],
+    ['datadestinations', 'Data Destinations']
     ['analyst', 'Analyst'],
     ['developer', 'Developer'],
     ['ecommerce', 'Ecommerce integration'],
-    ['digitaldata', 'Variable list'],
-    ['events', 'Events list'],
-    ['integrations', 'Integration list'],
-    ['datasources', 'Data Sources'],
-    ['datadestinations', 'Data Destinations']
+    ['digitaldata', 'Tracking Variables'],
+    ['events', 'Tracking Events'],
+    ['integrations', 'Tracking Integrations'],
 ]
 
 # Keep as an empty string if served up at the root. If served up at a specific
