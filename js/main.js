@@ -21,7 +21,7 @@ $(document).ready(function() {
 
     $(".nav-header").click(function() {
       $(this).toggleClass("active");
-      $("#drop-menu-" + $(this).data('section-id')).toggle();
+      $(".drop-menu." + $(this).data('section-id')).toggle();
     });
 
     $('#myBtn').click(function() {
