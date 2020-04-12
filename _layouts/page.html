@@ -8,10 +8,12 @@ layout: default
     </h1>
 </div>
 
+{% if page.date %}
 <p>
-This document was last updated on April 8, 2020. If you notice any gaps, 
+This document was last updated on {page.date}. If you notice any gaps, 
 outdated information or simply want to leave some feedback to help us improve our documentation, 
 please <a href="https://support.segmentstream.com/hc/en-us/requests/new" taget="_blank">let us know</a>!
 </p>
+{% endif %}
 
 {{ content }}
