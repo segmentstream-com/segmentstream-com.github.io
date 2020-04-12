@@ -1,7 +1,7 @@
 ---
 layout: page
 section: javascript-sdk
-title: "Quick Start Guide"
+title: "Quick Start guide"
 date: 2019-05-26
 order: 0
 ---
