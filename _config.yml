@@ -17,13 +17,12 @@ navigation: 1
 sections: [
     ['datasources', 'Data Sources'],
     ['datadestinations', 'Data Destinations'],
-    ['developer', 'Developer'],
     ['javascript-sdk', 'JavaScript SDK'],
-    ['http-api', 'HTTP API'],
     ['ecommerce', 'DigitalData for Ecommerce'],
     ['digitaldata', 'DatalData Variables'],
     ['events', 'Tracking Events'],
-    ['integrations', 'Tracking Integrations']
+    ['integrations', 'Tracking Integrations'],
+    ['http-api', 'HTTP API']
 ]
 
 # Keep as an empty string if served up at the root. If served up at a specific

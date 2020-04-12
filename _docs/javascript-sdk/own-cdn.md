@@ -3,7 +3,7 @@ layout: page
 section: javascript-sdk
 title: "Deploy to own CDN"
 date: 2017-09-15 18:15:00
-order: 100
+order: 150
 ---
 
 In this section, you will learn how to deploy SegmnetStream SDK to own CDN.

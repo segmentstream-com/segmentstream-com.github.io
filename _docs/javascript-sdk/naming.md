@@ -1,9 +1,9 @@
 ---
 layout: page
-section: developer
+section: javascript-sdk
 title: "Event and variable naming conventions"
 date: 2017-06-05 12:00:00
-order: 3
+order: 120
 ---
 
 In this section you will learn:

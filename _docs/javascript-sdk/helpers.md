@@ -1,13 +1,13 @@
 ---
 layout: page
-section: developer
-title: "Helper functions"
+section: javascript-sdk
+title: "Admin panel helpers"
 date: 2017-06-05 12:00:00
-order: 5
+order: 105
 ---
 
 Helper functions help you write code faster and with fewer errors, plus, they make your code more readable.
-They can be used in the setup of variables, events, and scripts.
+They can be used **only inside the admin panel** to setup of variable, event, and script handlers.
 
 ### Page contents
 ------
