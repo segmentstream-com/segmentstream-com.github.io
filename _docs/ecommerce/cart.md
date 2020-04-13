@@ -2,11 +2,9 @@
 layout: page
 section: ecommerce
 title: "Cart"
-date: 2018-02-09 12:00:00
+date: 2020-04-13
 order: 5
 ---
-
-The following is an example of filling the `digitalData` data layer for the cart page.
 
 <ul class="page-navigation">
   <li><a href="#introduction">Introduction</a></li>
@@ -213,9 +211,9 @@ window.digitalData = {
 }
 
 /**
- * SegmentStream JavaScript SDK snippet
- * should be placed after the digitialData object
+ * SegmentStream JavaScript SDK snippet should be
+ * placed after the digitialData object definition
  */
 ```
 
->For convenience, we did not list the repeating elements of the recommendations, items, campaigns, lineItems arrays but left just one example in each.
+>For convenience, we did not list the repeating elements of the `items` and `lineItems` arrays.

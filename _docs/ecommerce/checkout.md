@@ -217,9 +217,9 @@ window.digitalData = {
 }
 
 /**
- * SegmentStream JavaScript SDK snippet
- * should be placed after the digitialData object
+ * SegmentStream JavaScript SDK snippet should be
+ * placed after the digitialData object definition
  */
 ```
 
->For convenience, we did not list the repeating elements of the recommendations, items, campaigns, lineItems arrays but left just one example in each.
+>For convenience, we did not list the repeating elements of the `items` and `lineItems` arrays.
