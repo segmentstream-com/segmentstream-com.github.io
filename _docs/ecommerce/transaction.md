@@ -24,7 +24,9 @@ order: 7
 
 ### <a name="introduction"></a>Introduction
 ------
-On the 'Thank you' page, the following objects must be declared and filled: `transaction`, `page`, `website`, `user`, `cart`, `version`
+The "Thank you" page is the page displayed to customers immediately after they successfully purchased their items.
+
+On the purchase complete page, the following objects must be declared and filled: `transaction`, `page`, `website`, `user`, `cart`, `version`.
 
 ## <a name="required-variables"></a>Required variables
 ------

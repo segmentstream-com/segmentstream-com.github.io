@@ -23,7 +23,9 @@ order: 1
 
 ## <a name="introduction"></a>Introduction
 ------
-On the homepage of the online store the following objects must be declared and filled: `page`, `website`, `user`, `cart`, `version`
+The home page is typically a generic page that does not have a specific product or product category associated to it.
+
+On the homepage of the online store the following objects must be declared and filled: `page`, `website`, `user`, `cart`, `version`.
 
 ## <a name="required-variables"></a>Required variables
 ------

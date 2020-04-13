@@ -24,6 +24,8 @@ order: 3
 
 ## <a name="introduction"></a>Introduction
 ------
+The search page displays the results of a keyword search performed by the customer.
+
 On the search result pages of the online store, the following objects must be declared and filled: `listing`, `page`, `website`, `user`, `cart`, `version`.
 
 ## <a name="required-variables"></a>Required variables

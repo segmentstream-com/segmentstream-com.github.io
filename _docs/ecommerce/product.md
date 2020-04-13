@@ -24,7 +24,9 @@ order: 4
 
 ### <a name="introduction"></a>Introduction
 ------
-On the product detail of the online store, the following objects must be declared and filled: `product`, `page`, `website`, `user`, `cart`, `version`
+A product page is typically any page that shows detailed product information for a single product.
+
+On the product detail of the online store, the following objects must be declared and filled: `product`, `page`, `website`, `user`, `cart`, `version`.
 
 ## <a name="required-variables"></a>Required variables
 ------
