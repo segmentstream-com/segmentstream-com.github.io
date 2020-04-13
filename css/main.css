@@ -444,7 +444,7 @@ blockquote {
         position: absolute;
         background: #fff;
         z-index: 1000;
-        width: 250px
+        width: 100%;
     }
 
     #content {
