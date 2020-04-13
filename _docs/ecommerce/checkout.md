@@ -8,6 +8,7 @@ order: 6
 
 <ul class="page-navigation">
   <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#required-variables">Required variables</a></li>
   <ul>
     <li><a href="#page">page</a></li>
     <li><a href="#cart">cart</a></li>
@@ -20,7 +21,7 @@ order: 6
   <li><a href="#example">Example</a></li>
 </ul>
 
-### <a name="introduction"></a>Introduction
+## <a name="introduction"></a>Introduction
 ------
 The checkout page typically contains forms user needs to fill in ourder to make a purchase. Example checkout pages:
 * Payment details page
@@ -28,6 +29,9 @@ The checkout page typically contains forms user needs to fill in ourder to make 
 * etc
 
 The following properties must be defined for the checkout pages of the online store: `page`, `website`, `user`, `cart`, `version`.
+
+## <a name="required-variables"></a>Required variables
+------
 
 ### <a name="page"></a>page
 

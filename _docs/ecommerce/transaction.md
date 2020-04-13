@@ -2,20 +2,23 @@
 layout: page
 section: ecommerce
 title: "'Thank You' page"
-date: 2018-02-09 12:00:00
+date: 2020-04-13
 order: 7
 ---
 
 <ul class="page-navigation">
   <li><a href="#introduction">Introduction</a></li>
-  <li><a href="#page">page</a></li>
-  <li><a href="#transaction">transaction</a></li>
-  <li><a href="#cart">cart</a></li>
-  <li><a href="#website">website</a></li>
-  <li><a href="#user">user</a></li>
-  <li><a href="#version">version</a></li>
-  <li><a href="#campaigns">campaigns</a></li>
-  <li><a href="#recommendation">recommendation</a></li>
+  <li><a href="#required-variables">Required variables</a></li>
+  <ul>
+    <li><a href="#page">page</a></li>
+    <li><a href="#transaction">transaction</a></li>
+    <li><a href="#cart">cart</a></li>
+    <li><a href="#website">website</a></li>
+    <li><a href="#user">user</a></li>
+    <li><a href="#version">version</a></li>
+    <li><a href="#campaigns">campaigns</a></li>
+    <li><a href="#recommendation">recommendation</a></li>
+  </ul>
   <li><a href="#example">Example</a></li>
 </ul>
 
@@ -23,8 +26,10 @@ order: 7
 ------
 On the 'Thank you' page, the following objects must be declared and filled: `transaction`, `page`, `website`, `user`, `cart`, `version`
 
-### <a name="page"></a>page
+## <a name="required-variables"></a>Required variables
 ------
+
+### <a name="page"></a>page
 You need to define only 2 variables in the `digitalData.page` object. All other variables are either optional or will be automatically filled by the SegmentStream library.
 
 [More about the **page** object](/digitaldata/page)
@@ -42,7 +47,6 @@ Example:
 ```
 
 ### <a name="transaction"></a>transaction
-------
 The `digitalData.transaction` object must be declared and filled on the 'Thank you' page.
 
 [More about the **transaction** object](/digitaldata/transaction)
@@ -93,7 +97,6 @@ window.digitalData = {
 ```
 
 ### <a name="cart"></a>cart
-------
 On the 'Thank You' page the `digitalData.cart` object must describe an empty cart
 
 Example:
@@ -111,7 +114,6 @@ window.digitalData = {
 ```
 
 ### <a name="website"></a>website
-------
 You need to declare and fill in only 6 variables in the `digitalData.website` object. The following 3 variables are required: `website.type`,` website.currency`, `website.environment`. The remaining variables depend on the characteristics of your site.
 
 [More about the **website** object](/digitaldata/website)
@@ -133,7 +135,6 @@ Example:
 ```
 
 ### <a name="user"></a>user
-------
 The composition of the `digitalData.user` object strongly depends on the requirements of the project. We recommend that you fill at least the following variables: `userId`, `user.email`, `user.isLoggedIn`, `user.firstName`, `user.isSubscribed`
 
 >If you do not have information about a particular property of a visitor, do not declare the variable. For example: you do not know if the visitor is subscribed to the email-list.
@@ -158,7 +159,6 @@ window.digitalData = {
 ```
 
 ### <a name="version"></a>version
-------
 The `digitalData.version` variable must be declared and filled when loading each page of the site.
 
 [More about the **version** variable](/digitaldata/standard-version)

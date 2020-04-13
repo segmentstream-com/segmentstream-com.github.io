@@ -8,6 +8,7 @@ order: 8
 
 <ul class="page-navigation">
   <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#required-variables">Required variables</a></li>
   <ul> 
     <li><a href="#page">page</a></li>
     <li><a href="#cart">cart</a></li>
@@ -20,11 +21,14 @@ order: 8
   <li><a href="#example">Example</a></li>
 </ul>
 
-### <a name="introduction"></a>Introduction
+## <a name="introduction"></a>Introduction
 ------
 Content pages are pages such as "About Us" page, blog pages, a page containing all the brands the store sells etc.
 
 On content pages, the following objects must be defined: `page`, `website`, `user`, `cart`, `version`.
+
+## <a name="required-variables"></a>Required variables
+------
 
 ### <a name="page"></a>page
 You need to define only 2 variables in the `digitalData.page` object. All other variables are either optional or will be automatically filled by the SegmentStream library.
