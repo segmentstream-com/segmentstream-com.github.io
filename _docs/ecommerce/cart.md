@@ -13,7 +13,7 @@ The following is an example of filling the `digitalData` data layer for the cart
 <ul class="page-navigation">
   <li><a href="#introduction">Introduction</a></li>
   <li><a href="#required-variables">Required variables</a></li>
-    <ul class="page-navigation">
+    <ul>
       <li><a href="#page">page</a></li>
       <li><a href="#cart">cart</a></li>
       <li><a href="#website">website</a></li>
@@ -30,6 +30,7 @@ The following is an example of filling the `digitalData` data layer for the cart
 The following properties must be declared and filled on the cart page of the online store: `page`, `website`, `user`, `cart`, `version`
 
 ## <a name="required-variables"></a>Required variables
+------
 
 ### <a name="page"></a>page
 
@@ -156,6 +157,7 @@ window.digitalData = {
 ```
 
 ### <a name="wholeObject"></a>Whole object
+------
 
 In the end, your code will be similar to:
 ```javascript
