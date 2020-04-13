@@ -15,8 +15,6 @@ order: 8
     <li><a href="#website">website</a></li>
     <li><a href="#user">user</a></li>
     <li><a href="#version">version</a></li>
-    <li><a href="#campaigns">campaigns</a></li>
-    <li><a href="#recommendation">recommendation</a></li>
   </ul>
   <li><a href="#example">Example</a></li>
 </ul>
