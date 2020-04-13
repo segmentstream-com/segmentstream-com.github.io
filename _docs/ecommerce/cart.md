@@ -156,7 +156,6 @@ window.digitalData = {
 
 ## <a name="example"></a>Example
 ------
-
 In the end, your code will be similar to:
 ```javascript
 window.digitalData = {

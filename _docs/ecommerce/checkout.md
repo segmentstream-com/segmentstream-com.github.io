@@ -2,7 +2,7 @@
 layout: page
 section: ecommerce
 title: "Checkout page"
-date: 2018-02-09 12:00:00
+date: 2020-04-13
 order: 6
 ---
 
@@ -163,7 +163,7 @@ window.digitalData = {
 ```
 
 ## <a name="example"></a>Example
-
+------
 In the end, your code will be similar to:
 ```javascript
 window.digitalData = {

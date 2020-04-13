@@ -2,32 +2,31 @@
 layout: page
 section: ecommerce
 title: "Content page"
-date: 2018-02-09 12:00:00
+date: 2020-04-13
 order: 8
 ---
 
-Below is an example of filling the `digitalData` data layer on content pages.
-
->Content pages are pages such as "About Us" page, blog pages, a page containing all the brands the store sells etc.
-
 <ul class="page-navigation">
   <li><a href="#introduction">Introduction</a></li>
-  <li><a href="#page">page</a></li>
-  <li><a href="#cart">cart</a></li>
-  <li><a href="#website">website</a></li>
-  <li><a href="#user">user</a></li>
-  <li><a href="#version">version</a></li>
-  <li><a href="#campaigns">campaigns</a></li>
-  <li><a href="#recommendation">recommendation</a></li>
+  <ul> 
+    <li><a href="#page">page</a></li>
+    <li><a href="#cart">cart</a></li>
+    <li><a href="#website">website</a></li>
+    <li><a href="#user">user</a></li>
+    <li><a href="#version">version</a></li>
+    <li><a href="#campaigns">campaigns</a></li>
+    <li><a href="#recommendation">recommendation</a></li>
+  </ul>
   <li><a href="#example">Example</a></li>
 </ul>
 
 ### <a name="introduction"></a>Introduction
 ------
-On content pages, the following objects must be declared and filled: `page`, `website`, `user`, `cart`, `version`
+Content pages are pages such as "About Us" page, blog pages, a page containing all the brands the store sells etc.
+
+On content pages, the following objects must be defined: `page`, `website`, `user`, `cart`, `version`.
 
 ### <a name="page"></a>page
-------
 You need to define only 2 variables in the `digitalData.page` object. All other variables are either optional or will be automatically filled by the SegmentStream library.
 
 [More about the **page** object](/digitaldata/page)
@@ -45,7 +44,6 @@ Example:
 ```
 
 ### <a name="website"></a>website
-------
 You need to declare and fill in only 6 variables in the `digitalData.website` object. The following 3 variables are required: `website.type`,` website.currency`, `website.environment`. The remaining variables depend on the characteristics of your site.
 
 [More about the **website** object](/digitaldata/website)
@@ -67,7 +65,6 @@ Example:
 ```
 
 ### <a name="user"></a>user
-------
 The composition of the `digitalData.user` object strongly depends on the requirements of the project. We recommend that you fill at least the following variables: `userId`, `user.email`, `user.isLoggedIn`, `user.firstName`, `user.isSubscribed`
 
 >If you do not have information about a particular property of a visitor, do not declare the variable. For example: you do not know if the visitor is subscribed to the email-list.
@@ -92,7 +89,6 @@ window.digitalData = {
 ```
 
 ### <a name="cart"></a>cart
-------
 The `digitalData.cart` object must be declared and filled when loading each page of the site.
 
 If the user's cart is empty fill the object as described in the [cart object description](/digitaldata/cart#0)
@@ -136,7 +132,6 @@ window.digitalData = {
 ```
 
 ### <a name="version"></a>version
-------
 The `digitalData.version` variable must be declared and filled when loading each page of the site.
 
 [More about the **version** variable](/digitaldata/standard-version)
