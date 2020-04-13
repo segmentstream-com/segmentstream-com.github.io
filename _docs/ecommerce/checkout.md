@@ -1,37 +1,39 @@
 ---
 layout: page
 section: ecommerce
-title: "Checkout process page"
+title: "Checkout page"
 date: 2018-02-09 12:00:00
 order: 6
 ---
 
-Below is an example of filling the `digitalData` data layer on checkout pages. Most often this is a set of pages representing a funnel between the basket page and the "Thank you for your purchase" page.
-
 <ul class="page-navigation">
   <li><a href="#introduction">Introduction</a></li>
-  <li><a href="#page">page</a></li>
-  <li><a href="#cart">cart</a></li>
-  <li><a href="#website">website</a></li>
-  <li><a href="#user">user</a></li>
-  <li><a href="#version">version</a></li>
-  <li><a href="#campaigns">campaigns</a></li>
-  <li><a href="#recommendation">recommendation</a></li>
+  <ul>
+    <li><a href="#page">page</a></li>
+    <li><a href="#cart">cart</a></li>
+    <li><a href="#website">website</a></li>
+    <li><a href="#user">user</a></li>
+    <li><a href="#version">version</a></li>
+    <li><a href="#campaigns">campaigns</a></li>
+    <li><a href="#recommendation">recommendation</a></li>
+  </ul>
   <li><a href="#example">Example</a></li>
 </ul>
 
 ### <a name="introduction"></a>Introduction
 ------
-On the page for registering an online store order, the following objects must be declared and filled in:
- - Required:  `page`, `website`, `user`, `cart`, `version`
+The checkout page typically contains forms user needs to fill in ourder to make a purchase. Example checkout pages:
+* Payment details page
+* Shopping details page
+* etc
 
->As a rule, there are no recommendations and banner blocks on checkout pages.
+The following properties must be defined for the checkout pages of the online store: `page`, `website`, `user`, `cart`, `version`.
 
 ### <a name="page"></a>page
-------
-You need to declare and fill in only 2 variables in the `digitalData.page` object. All other variables are either optional or will be automatically filled by the SegmentStream library.
 
->Usually the checkout step is divided into several steps. We recommend filling the `page.category` variable with words that best describe each step: 'Authorization', 'Delivery', 'Payment', 'Order Review'.
+You need to define only `page.type` variable in the `digitalData.page` object. All other variables are either optional or will be automatically filled by the SegmentStream library.
+
+>Usually the checkout step is divided into several steps. We recommend filling the `page.category` variable with words that best describe each step: 'Authorization', 'Shipping', 'Payment', 'Order Review'.
 
 [More about the **page** object](/digitaldata/page)
 
@@ -41,14 +43,14 @@ Example:
     ...,
     page: {
       type: 'checkout',
-      category: 'Delivery' //Value depends on the checkout step
+      category: 'Shipping' //Value depends on the checkout step
     },
     ...
   }
 ```
 
 ### <a name="cart"></a>cart
-------
+
 As the user completes checkout steps, the `digitalData.cart` object is enriched with new variables:
 `vouchers`, `voucherDiscount`, `shippingCost`, `shippingMethod`, `paymentMethod`.
 
@@ -67,7 +69,7 @@ window.digitalData = {
     ],
     voucherDiscount: 20,
     shippingCost: 5,
-    shippingMethod: "Delivery",
+    shippingMethod: "DHL",
     currency: "GBP",
     subtotal: 100,
     total: 85,
@@ -99,7 +101,7 @@ window.digitalData = {
 ```
 
 ### <a name="website"></a>website
-------
+
 You need to declare and fill in only 6 variables in the `digitalData.website` object. The following 3 variables are required: `website.type`,` website.currency`, `website.environment`. The remaining variables depend on the characteristics of your site.
 
 [More about the **website** object](/digitaldata/website)
@@ -121,7 +123,7 @@ Example:
 ```
 
 ### <a name="user"></a>user
-------
+
 The composition of the `digitalData.user` object strongly depends on the requirements of the project. We recommend that you fill at least the following variables: `userId`, `user.email`, `user.isLoggedIn`, `user.firstName`, `user.isSubscribed`
 
 >If you do not have information about a particular property of a visitor, do not declare the variable. For example: you do not know if the visitor is subscribed to the email-list. **Correct**: do not declare the variable `digitalData.user.isSubscribed`, **Wrong**: declare a variable and assign it a value of FALSE.
@@ -146,7 +148,7 @@ window.digitalData = {
 ```
 
 ### <a name="version"></a>version
-------
+
 The `digitalData.version` variable must be declared and filled when loading each page of the site.
 
 [More about the **version** variable](/digitaldata/standard-version)
@@ -161,8 +163,8 @@ window.digitalData = {
 ```
 
 ## <a name="example"></a>Example
-------
-В итоге, ваш код будет похож на:
+
+In the end, your code will be similar to:
 ```javascript
 window.digitalData = {
   page: {
@@ -188,7 +190,7 @@ window.digitalData = {
     ],
     voucherDiscount: 20,
     shippingCost: 5,
-    shippingMethod: "Delivery",
+    shippingMethod: "DHL",
     currency: "GBP",
     subtotal: 100,
     total: 85,

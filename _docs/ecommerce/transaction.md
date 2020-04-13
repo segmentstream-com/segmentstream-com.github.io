@@ -25,7 +25,7 @@ On the 'Thank you' page, the following objects must be declared and filled: `tra
 
 ### <a name="page"></a>page
 ------
-You need to declare and fill in only 2 variables in the `digitalData.page` object. All other variables are either optional or will be automatically filled by the SegmentStream library.
+You need to define only 2 variables in the `digitalData.page` object. All other variables are either optional or will be automatically filled by the SegmentStream library.
 
 [More about the **page** object](/digitaldata/page)
 

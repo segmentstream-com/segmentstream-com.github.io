@@ -26,7 +26,7 @@ order: 5
 
 The cart page typically displays the items in a shopper’s cart.
 
-The following properties must be declared and filled on the cart page of the online store: `page`, `website`, `user`, `cart`, `version`.
+The following properties must be definedon the cart page of the online store: `page`, `website`, `user`, `cart`, `version`.
 
 ## <a name="required-variables"></a>Required variables
 ------
