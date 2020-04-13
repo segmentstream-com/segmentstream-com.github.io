@@ -1,7 +1,7 @@
 ---
 layout: page
 section: ecommerce
-title: "Cart"
+title: "Cart page"
 date: 2020-04-13
 order: 5
 ---

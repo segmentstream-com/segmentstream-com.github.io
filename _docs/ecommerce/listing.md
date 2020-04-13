@@ -1,7 +1,7 @@
 ---
 layout: page
 section: ecommerce
-title: "Product listing"
+title: "Product listing page"
 date: 2020-04-13
 order: 2
 ---

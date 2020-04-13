@@ -9,10 +9,10 @@ order: 0
 Most online stores have a similar set of page templates, events and funnels. Therefore, the process of integration of the digitalData object is similar for all ecommerce projects. In this section, we will analyze the composition of the `window.digitalData` object for all typical pages of the online store:
 
  - [Home page](/ecommerce/main-page)
- - [Product listing](/ecommerce/listing)
- - [Search results](/ecommerce/search)
+ - [Product listing page](/ecommerce/listing)
+ - [Search results page](/ecommerce/search)
  - [Product page](/ecommerce/product)
- - [Cart](/ecommerce/cart)
+ - [Cart page](/ecommerce/cart)
  - [Checkout page](/ecommerce/checkout)
  - ["Thank You" page](/ecommerce/transaction)
  - [Content page](/ecommerce/content)

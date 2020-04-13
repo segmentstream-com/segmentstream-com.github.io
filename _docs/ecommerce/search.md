@@ -1,7 +1,7 @@
 ---
 layout: page
 section: ecommerce
-title: "Search results"
+title: "Search results page"
 date: 2020-04-13
 order: 3
 ---

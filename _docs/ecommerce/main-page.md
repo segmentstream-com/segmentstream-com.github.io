@@ -1,7 +1,7 @@
 ---
 layout: page
 section: ecommerce
-title: "Homepage"
+title: "Home page"
 date: 2020-04-13
 order: 1
 ---
