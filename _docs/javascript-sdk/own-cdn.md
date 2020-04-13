@@ -22,7 +22,7 @@ Array.prototype.slice.call(arguments);c.unshift(k);a.push(c);return a}};for(b=0;
 </script>
 <!-- //SegmentStream snippet -->
 ```
->The SegmentStream snippet should be declared after the global variable `window.digitalData` and the jquery plugin.
+>The SegmentStream snippet should bedeclared after the global variable `window.digitalData` and the jquery plugin.
 
 2. Every 5 minutes, you need to check the md5 hash of the two files. If the files have changed - you need to download a new version of the file and update its local version.
 The latest version of the initialization script:

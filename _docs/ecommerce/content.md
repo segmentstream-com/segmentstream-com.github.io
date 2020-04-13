@@ -10,8 +10,6 @@ Below is an example of filling the `digitalData` data layer on content pages.
 
 >Content pages are pages such as "About Us" page, blog pages, a page containing all the brands the store sells etc.
 
-### Page content
-------
 <ul class="page-navigation">
   <li><a href="#introduction">Introduction</a></li>
   <li><a href="#page">page</a></li>
@@ -208,7 +206,10 @@ window.digitalData = {
   },
   version: '1.1.3'
 }
-/* Here you should place the snippet of the initialization of the SegmentStream library */
+/**
+* SegmentStream JavaScript SDK snippet
+* should be placed after the digitialData object
+*/
 ```
 
 >For convenience, we did not list the repeating elements of the recommendations, items, campaigns, lineItems arrays but left just one example in each.

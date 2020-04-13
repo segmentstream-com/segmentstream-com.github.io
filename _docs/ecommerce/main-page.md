@@ -8,8 +8,6 @@ order: 1
 
 Below is an example of filling the `digitalData` data layer for the homepage of the online store.
 
-### Page contents
-------
 <ul class="page-navigation">
   <li><a href="#introduction">Introduction</a></li>
   <li><a href="#page">page</a></li>
@@ -207,7 +205,10 @@ window.digitalData = {
   },
   version: '1.1.3'
 }
-/* Here you should place the snippet of the initialization of the SegmentStream library */
+/**
+* SegmentStream JavaScript SDK snippet
+* should be placed after the digitialData object
+*/
 ```
 
 >For convenience, we did not list the repeating elements of the recommendations, items, campaigns, lineItems arrays but left just one example in each.
