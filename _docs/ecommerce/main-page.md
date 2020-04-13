@@ -24,9 +24,7 @@ Below is an example of filling the `digitalData` data layer for the homepage of 
 
 ### <a name="introduction"></a>Introduction
 ------
-On the homepage of the online store the following objects must be declared and filled:
- - Required:  `page`, `website`, `user`, `cart`, `version`
- - Optional (depends on page content): `campaigns` ,`recommendation`
+On the homepage of the online store the following objects must be declared and filled: `page`, `website`, `user`, `cart`, `version`
 
 
 ### <a name="page"></a>page
@@ -153,75 +151,6 @@ window.digitalData = {
 }
 ```
 
-## Optional properties
-
-### <a name="campaigns"></a>campaigns
-------
-The `digitalData.campaigns` array must be declared and filled if the page you are loading has banners whose effectiveness you plan to track.
-
-[More about the **campaigns** array](/digitaldata/campaigns)
-
-Example:
-```javascript
-window.digitalData = {
-  ...,
-  campaigns: [
-    ...,
-    {
-      id: "PROMO124",
-      name: "SS18 SALE",
-      description: "1500 models for sale",
-      category: "Banner",
-      subcategory: "Sales",
-      design: "600x120",
-      position: "left"
-    },
-    ...
-  ],
-  ...
-}
-```
-
-### <a name="recommendation"></a>recommendation
-------
-The `digitalData.recommendation` array must be declared and filled if there is at least 1 list of products on the loaded page.
-
-[More about the **recommendation** array](/digitaldata/recommendation)
-
-Example:
-```javascript
-window.digitalData = {
-  ...,
-  recommendation: [
-    ...,
-    {
-      listName: "Recently viewed products",
-      listId: "recentlyViewed",
-      items: [
-        ...,
-        {
-          id: "1234567890",
-          url: "http://website.com/product.html",
-          imageUrl: "http://website.com/image.png",
-          thumbnailUrl: "http://website.com/image_thumb.png",
-          name: "Big Boots",
-          description: "Product description",
-          manufacturer: "Timberland",
-          category: ["Footwear","Boots"],
-          currency: "GBP",
-          unitPrice: 60,
-          unitSalePrice: 50,
-          skuCode: "TBL6065RW"
-        },
-        ...
-      ]
-    },
-    ...
-  ],
-  ...
-}
-```
-
 ### <a name="wholeObject"></a>Whole object
 ------
 In the end, your code will be similar to:
@@ -276,40 +205,7 @@ window.digitalData = {
       }
     ]
   },
-  version: '1.1.3',
-  campaigns: [
-    {
-      id: "PROMO124",
-      name: "SS18 SALE",
-      description: "1500 models for sale",
-      category: "Banner",
-      subcategory: "Sales",
-      design: "600x120",
-      position: "left"
-    }
-  ],
-  recommendation: [
-    {
-      listName: "Recently viewed products",
-      listId: "recentlyViewed",
-      items: [
-        {
-          id: "1234567890",
-          url: "http://website.com/product.html",
-          imageUrl: "http://website.com/image.png",
-          thumbnailUrl: "http://website.com/image_thumb.png",
-          name: "Big Boots",
-          description: "Product description",
-          manufacturer: "Timberland",
-          category: ["Footwear","Boots"],
-          currency: "GBP",
-          unitPrice: 60,
-          unitSalePrice: 50,
-          skuCode: "TBL6065RW"
-        }
-      ]
-    },
-  ]
+  version: '1.1.3'
 }
 /* Here you should place the snippet of the initialization of the SegmentStream library */
 ```
