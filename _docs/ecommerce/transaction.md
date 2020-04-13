@@ -140,8 +140,6 @@ The composition of the `digitalData.user` object strongly depends on the require
 **Correct**: do not declare the variable `digitalData.user.isSubscribed`.
 **Wrong**: declare a variable and assign it a value of FALSE.
 
->Even if the visitor is not authorized, but has been authorized in the past, pass the information about him to the object `digitalData.user`. This will help with the targeting of personalization campaigns and in the management of advertising systems.
-
 [More about the **user** object](/digitaldata/user)
 
 Example:
