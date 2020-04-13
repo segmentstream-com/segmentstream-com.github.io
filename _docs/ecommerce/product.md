@@ -10,8 +10,8 @@ order: 4
   <li><a href="#introduction">Introduction</a></li>
   <li><a href="#required-variables">Required variables</a></li>
   <ul>
-    <li><a href="#product">product</a></li>
     <li><a href="#page">page</a></li>
+    <li><a href="#product">product</a></li>
     <li><a href="#cart">cart</a></li>
     <li><a href="#website">website</a></li>
     <li><a href="#user">user</a></li>
