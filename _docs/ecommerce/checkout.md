@@ -29,7 +29,7 @@ On the page for registering an online store order, the following objects must be
 
 ### <a name="page"></a>page
 ------
-You need to declare and fill in only 2 variables in the `digitalData.page` object. All other variables will be automatically filled by the SegmentStream library.
+You need to declare and fill in only 2 variables in the `digitalData.page` object. All other variables are either optional or will be automatically filled by the SegmentStream library.
 
 >Usually the checkout step is divided into several steps. We recommend filling the `page.category` variable with words that best describe each step: 'Authorization', 'Delivery', 'Payment', 'Order Review'.
 

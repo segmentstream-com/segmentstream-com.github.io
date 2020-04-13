@@ -23,14 +23,17 @@ order: 5
 
 ## <a name="introduction"></a>Introduction
 ------
-The following properties must be declared and filled on the cart page of the online store: `page`, `website`, `user`, `cart`, `version`
+
+The cart page typically displays the items in a shopper’s cart.
+
+The following properties must be declared and filled on the cart page of the online store: `page`, `website`, `user`, `cart`, `version`.
 
 ## <a name="required-variables"></a>Required variables
 ------
 
 ### <a name="page"></a>page
 
-You need to declare and fill in only 2 variables in the `digitalData.page` object. All other variables will be automatically filled by the SegmentStream library.
+You need to define only one variable inside the `digitalData.page` object. All other variables are either optional or will be automatically filled by the SegmentStream library.
 
 [More about the **page** object](/digitaldata/page)
 
@@ -40,7 +43,6 @@ Example:
     ...,
     page: {
       type: 'cart',
-      category: 'Cart'
     },
     ...
   }
@@ -160,7 +162,6 @@ In the end, your code will be similar to:
 window.digitalData = {
   page: {
     type: 'cart',
-    category: 'Cart'
   },
   website: {
     type: "desktop",
