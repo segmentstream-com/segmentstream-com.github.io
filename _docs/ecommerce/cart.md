@@ -22,7 +22,7 @@ The following is an example of filling the `digitalData` data layer for the cart
       <li><a href="#campaigns">campaigns</a></li>
       <li><a href="#recommendation">recommendation</a></li>
     </ul>
-  <li><a href="#wholeObject">Whole object</a></li>
+  <li><a href="#example">Example</a></li>
 </ul>
 
 ## <a name="introduction"></a>Introduction
@@ -156,7 +156,7 @@ window.digitalData = {
 }
 ```
 
-### <a name="wholeObject"></a>Whole object
+## <a name="example"></a>Example
 ------
 
 In the end, your code will be similar to:
