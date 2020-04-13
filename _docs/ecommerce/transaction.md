@@ -1,7 +1,7 @@
 ---
 layout: page
 section: ecommerce
-title: "'Thank You' page"
+title: "Thank You" page
 date: 2020-04-13
 order: 7
 ---
