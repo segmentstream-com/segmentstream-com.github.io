@@ -130,8 +130,8 @@ Example:
 
 The composition of the `digitalData.user` object strongly depends on the requirements of the project. We recommend that you fill at least the following variables: `userId`, `user.email`, `user.isLoggedIn`, `user.firstName`, `user.isSubscribed`
 
->If you do not have information about a particular property of a visitor, do not declare the variable. For example: you do not know if the visitor is subscribed to the email-list.
-**Correct**: do not declare the variable `digitalData.user.isSubscribed`.
+>If you do not have information about a particular property of a visitor, do not declare the variable. For example: you do not know if the visitor is subscribed to the email-list.<br/>
+**Correct**: do not declare the variable `digitalData.user.isSubscribed`.<br/>
 **Wrong**: declare a variable and assign it a value of FALSE.
 
 [More about the **user** object](/digitaldata/user)
