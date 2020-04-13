@@ -18,9 +18,9 @@ sections: [
     ['datasources', 'Data Sources'],
     ['datadestinations', 'Data Destinations'],
     ['javascript-sdk', 'JavaScript SDK'],
-    ['digitaldata', 'Data Layer Variables'],
-    ['events', 'Data Layer Events'],
-    ['ecommerce', 'Data Layer for Ecommerce'],
+    ['digitaldata', 'DigitalData Variables'],
+    ['events', 'DigitalData Events'],
+    ['ecommerce', 'DigitalData for Ecommerce'],
     ['integrations', 'Tracking Integrations'],
     ['http-api', 'HTTP API']
 ]
