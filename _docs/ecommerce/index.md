@@ -14,7 +14,7 @@ Most online stores have a similar set of page templates, events and funnels. The
  - [Product page](/ecommerce/product)
  - [Cart page](/ecommerce/cart)
  - [Checkout page](/ecommerce/checkout)
- - ["Thank You" page](/ecommerce/transaction)
+ - [«Thank You» page](/ecommerce/transaction)
  - [Content page](/ecommerce/content)
 
 >The composition of the `digitalData` object depends on the type of the page (`digitalData.page.type`) and the content of the page.

@@ -1,7 +1,7 @@
 ---
 layout: page
 section: ecommerce
-title: \"Thank You\" page
+title: «Thank You» page
 date: 2020-04-13
 order: 7
 ---
@@ -22,7 +22,7 @@ order: 7
 
 ### <a name="introduction"></a>Introduction
 ------
-The "Thank you" page is the page displayed to customers immediately after they successfully purchased their items.
+The «Thank you» page is the page displayed to customers immediately after they successfully purchased their items.
 
 On the purchase complete page, the following objects must be declared and filled: `transaction`, `page`, `website`, `user`, `cart`, `version`.
 
