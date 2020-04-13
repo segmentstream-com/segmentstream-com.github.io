@@ -29,7 +29,7 @@ On content pages, the following objects must be defined: `page`, `website`, `use
 ------
 
 ### <a name="page"></a>page
-You need to define only 2 variables in the `digitalData.page` object. All other variables are either optional or will be automatically filled by the SegmentStream library.
+You need to define only one variable in the `digitalData.page` object. All other variables are either optional or will be automatically filled by the SegmentStream SDK.
 
 [More about the **page** object](/digitaldata/page)
 
@@ -38,8 +38,7 @@ Example:
   window.digitalData = {
     ...,
     page: {
-      type: 'content',
-      category: 'Content'
+      type: 'content'
     },
     ...
   }

@@ -30,7 +30,7 @@ On the purchase complete page, the following objects must be declared and filled
 ------
 
 ### <a name="page"></a>page
-You need to define only 2 variables in the `digitalData.page` object. All other variables are either optional or will be automatically filled by the SegmentStream library.
+You need to define only one variables in the `digitalData.page` object. All other variables are either optional or will be automatically filled by the SegmentStream SDK.
 
 [More about the **page** object](/digitaldata/page)
 
@@ -39,8 +39,7 @@ Example:
   window.digitalData = {
     ...,
     page: {
-      type: 'confirmation',
-      category: 'Confirmation'
+      type: 'confirmation'
     },
     ...
   }

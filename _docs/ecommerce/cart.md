@@ -31,7 +31,7 @@ The following properties must be definedon the cart page of the online store: `p
 
 ### <a name="page"></a>page
 
-You need to define only one variable inside the `digitalData.page` object. All other variables are either optional or will be automatically filled by the SegmentStream library.
+You need to define only one variable inside the `digitalData.page` object. All other variables are either optional or will be automatically filled by the SegmentStream SDK.
 
 [More about the **page** object](/digitaldata/page)
 

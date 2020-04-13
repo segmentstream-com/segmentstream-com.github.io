@@ -11,7 +11,7 @@ In this section you will learn:
 * How to install the digitalData data layer on your website.
 * How to correctly fill in all the variables inside the digitalData object.
 
-digitalData is a global JavaScript object. It must be declared as high as possible in the source code of the site, before connecting the SegmentStream library. This object should be present on every page of the site.
+digitalData is a global JavaScript object. It must be declared as high as possible in the source code of the site, before connecting the SegmentStream SDK. This object should be present on every page of the site.
 
 > Declare the `window.digitalData` object the first time the page loads. Do not try to build a system in which the object is created after an AJAX request. This decision will negatively affect your marketing infrastructure and make it unmanageable.
 

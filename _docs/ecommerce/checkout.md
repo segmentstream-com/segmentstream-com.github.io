@@ -33,7 +33,7 @@ The following properties must be defined for the checkout pages of the online st
 
 ### <a name="page"></a>page
 
-You need to define only `page.type` variable in the `digitalData.page` object. All other variables are either optional or will be automatically filled by the SegmentStream library.
+You need to define only `page.type` variable in the `digitalData.page` object. All other variables are either optional or will be automatically filled by the SegmentStream SDK.
 
 >Usually the checkout step is divided into several steps. We recommend filling the `page.category` variable with words that best describe each step: 'Authorization', 'Shipping', 'Payment', 'Order Review'.
 

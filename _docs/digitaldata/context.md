@@ -24,7 +24,7 @@ The `digitalData.context` object contains variables that describe the environmen
 ------
 The `digitalData.context` object must be declared and filled in the source code of each page.
 
->All variables of the object `digitalData.context` are filled automatically by the SegmentStream library. On your part, you only need to declare the object and fill in the value of the variable `digitalData.context.ip`.
+>All variables of the object `digitalData.context` are filled automatically by the SegmentStream SDK. On your part, you only need to declare the object and fill in the value of the variable `digitalData.context.ip`.
 
 Example for the URL 'http://website.com/?utm_campaign=sale_05_06_2016&utm_medium=cpc&utm_source=criteo':
 ```javascript
