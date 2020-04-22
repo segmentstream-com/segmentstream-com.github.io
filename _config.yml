@@ -15,8 +15,7 @@ navigation: 1
 
 # Default categories (in order) to appear in the navigation
 sections: [
-    ['bigquery', 'BigQuery Project Setup'],
-    ['google-analytics', 'Google Analytics Project Setup'],
+    ['bigquery', 'BigQuery Setup'],
     ['datasources', 'Data Sources'],
     ['datadestinations', 'Data Destinations'],
     ['javascript-sdk', 'JavaScript SDK'],
