@@ -3,7 +3,7 @@ layout: page
 section: bigquery
 navigation_title: "Connecting BigQuery"
 title: "Connecting BigQuery to SegmentStream"
-order: 3
+order: 4
 date: 2020-04-22
 ---
 
