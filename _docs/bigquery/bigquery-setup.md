@@ -1,7 +1,8 @@
 ---
 layout: page
 section: bigquery
-title: "BigQuery setup"
+navigation_title: "BigQuery setup"
+title: "Initial BigQuery setup"
 order: 3
 date: 2020-04-22
 ---
