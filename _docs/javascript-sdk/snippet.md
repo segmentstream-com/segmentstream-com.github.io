@@ -1,7 +1,7 @@
 ---
 layout: page
 section: javascript-sdk
-title: "Snippet code"
+title: "Set up SegmentStream snippet"
 date: 2020-04-28
 order: 2
 ---
