@@ -8,12 +8,12 @@ layout: default
     </h1>
 </div>
 
+{{ content }}
+
 {% if page.date %}
-<p>
+<p class="date-disclaimer">
 This document was last updated on {{ page.date | date: "%B %-d, %Y" }}. If you notice any gaps, 
 outdated information or simply want to leave some feedback to help us improve our documentation, 
 please <a href="https://support.segmentstream.com/hc/en-us/requests/new" taget="_blank">let us know</a>!
 </p>
 {% endif %}
-
-{{ content }}
