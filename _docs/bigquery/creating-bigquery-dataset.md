@@ -10,19 +10,24 @@ date: 2020-04-29
 <!---
 In this article explained how to create Google BigQuery dataset
 -->
-To store data in BigQuery you need to create a [dataset](https://cloud.google.com/bigquery/docs/datasets-intro){:target="_blank"}:
-
+<ul class="page-navigation">
+  <li><a href="#creating-dataset">Creating dataset</a></li>
+  <li><a href="#whats-next">What's next</a></li>
+</ul>
+To make Google BigQuery ready for work you need to create a [dataset](https://cloud.google.com/bigquery/docs/datasets-intro){:target="_blank"} which SegmentssStream will use to store imported data.
+Below are the steps that explain how to do this.
+## <a name="creating-dataset"></a>Creating dataset
 1. Go to the [Google Cloud Platform Console](https://console.cloud.google.com/){:target="_blank"}.
-2. Open the console left side menu and click BigQuery.
-![](/img/bigquery_dataset.1.png)
-3. Select the project where you would like to create a dataset in the bottom-left menu and click CREATE DATASET.
-![](/img/bigquery_dataset.2.png)
+2. Open the console left side menu and click **BigQuery**.
+![Click on BigQuery](/img/bigquery_dataset.1.png)
+3. Select the project where you would like to create a dataset in the bottom-left menu and click **CREATE DATASET**.
+![Create dataset](/img/bigquery_dataset.2.png)
 **Note: Instead of this screen, you might see general info about BigQuery:**
-![](/img/bigquery_dataset.3.png)
+![BigQuery API disclaimer](/img/bigquery_dataset.3.png)
 In that case, you should [enable BigQuery API](enabling-bigquery-api).
-4. Enter Dataset ID (for example "SegmentStream"). All other options leave in default values.
-![](/img/bigquery_dataset.4.png)
-5. Click Create dataset.
+4. Enter **Dataset ID** (for example "segmentstream"). All other options leave in default values.
+5. Click **Create dataset**.
+![Dataset creation page](/img/bigquery_dataset.4.png)
 
-## What's next:
+## <a name="whats-next"></a> What's next:
 * [Connecting BigQuery to SegmentStream](connecting-bigquery)
