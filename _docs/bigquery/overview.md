@@ -2,7 +2,7 @@
 layout: page
 section: bigquery
 navigation_title: "Overview"
-title: "Google BigQuery Overview"
+title: "Google BigQuery overview"
 order: 1
 date: 2020-04-29
 ---
