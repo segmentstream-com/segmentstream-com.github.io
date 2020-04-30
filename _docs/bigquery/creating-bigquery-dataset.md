@@ -23,11 +23,10 @@ Below are the steps that explain how to do this.
 ![Click on BigQuery](/img/bigquery_dataset.1.png)
 3. Select the project where you would like to create a dataset in the bottom-left menu and click **CREATE DATASET**.
 ![Create dataset](/img/bigquery_dataset.2.png)
-**Note: Instead of this screen, you might see general info about BigQuery:**
-![BigQuery API disclaimer](/img/bigquery_dataset.3.png)
-In that case, you should [enable BigQuery API](enabling-bigquery-api).
-4. Enter **Dataset ID** (for example "segmentstream"). All other options leave in default values.
-5. Click **Create dataset**.
+> **Note:** Instead of this screen, you might see general info about BigQuery. In that case, you should [enable BigQuery API](enabling-bigquery-api).
+
+1. Enter **Dataset ID** (for example "segmentstream"). All other options leave in default values.
+2. Click **Create dataset**.
 ![Dataset creation page](/img/bigquery_dataset.4.png)
 
 ## <a name="whats-next"></a> What's next:
