@@ -14,8 +14,9 @@ In this article explained how to create Google BigQuery dataset
   <li><a href="#creating-dataset">Creating dataset</a></li>
   <li><a href="#whats-next">What's next</a></li>
 </ul>
-To make Google BigQuery ready for work you need to create a [dataset](https://cloud.google.com/bigquery/docs/datasets-intro){:target="_blank"} which SegmentssStream will use to store imported data.
+To make Google BigQuery ready for work you need to create a [dataset](https://cloud.google.com/bigquery/docs/datasets-intro){:target="_blank"} which SegmentsStream will use to store imported data.
 Below are the steps that explain how to do this.
+
 ## <a name="creating-dataset"></a>Creating dataset
 1. Go to the [Google Cloud Platform Console](https://console.cloud.google.com/){:target="_blank"}.
 2. Open the console left side menu and click **BigQuery**.
