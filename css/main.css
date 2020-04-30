@@ -336,21 +336,37 @@ blockquote {
     display: none;
 }
 
-.question {
-    text-align: right;
+.helpful {
+    display: flex;
+    justify-content: center;
 }
 
-.answer {
-    text-align: left;
+@media only screen and (max-width: 767px)  {
+    .helpful {
+        flex-direction: column;
+    }
+}
+
+.question {
+    margin-right: 50px;
+}
+
+@media only screen and (max-width: 767px)  {
+    .question {
+        margin-right: 0px;
+    }
 }
 
 .button-questionaire {
-    margin-left: 20px;
     border-radius: 3px;
     border: solid 1px #9b9b9b;
     color: #9b9b9b;
     padding: 6px 53px;
     display: inline;
+}
+
+.button-questionaire:last-child {
+    margin-left: 20px;
 }
 
 .button-questionaire:hover, .button-questionaire:focus  {
