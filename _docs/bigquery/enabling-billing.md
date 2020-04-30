@@ -1,8 +1,8 @@
 ---
 layout: page
 section: bigquery
-navigation_title: "Enabling billing"
-title: "Enabling billing"
+navigation_title: "Setting up a billing account"
+title: "Setting up a billing account"
 order: 3
 date: 2020-04-29
 ---
