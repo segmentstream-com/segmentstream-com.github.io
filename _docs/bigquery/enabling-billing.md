@@ -26,7 +26,7 @@ To use BigQuery with SegmentStream you need an active billing account so that yo
 > Free Tier Google Cloud accounts don’t support some BigQuery services which are required for SegmentStream Data Import.
 
 ## Upgrading Free Tier account
-On the [main page of Google Cloud Platform](https://console.cloud.google.com) in the header click “Activate” and choose “Upgrade” in the pop-up window:
+On the [main page of Google Cloud Platform](https://console.cloud.google.com) in the header click **Activate** and choose **Upgrade** in the pop-up window:
 ![Upgrading BigQuery account](/img/bigquery_billing.1.png)
 More information on upgrading your account can be found [here](https://cloud.google.com/free/docs/gcp-free-tier#how-to-upgrade).
 

@@ -21,15 +21,15 @@ BigQuery is a part of Google Cloud Platform.
 To use BigQuery you need to have a Google Cloud Platform account.
 
 ## <a name="before-you-begin"></a> Before you begin
-You should have an existing [Google account](https://support.google.com/accounts/answer/27441)
+You should have an existing [Google account](https://support.google.com/accounts/answer/27441).
 
 ## <a name="creating-gcp-project"></a> Creating Google Cloud Platform account
 1. Navigate to the [Google Cloud Platform page ▸](https://cloud.google.com)
 
-2. Choose “Get started for free”
+2. Choose **Get started for free**.
 ![Click on Get started for free](/img/big-query_start.png)
  
-3. Log in to your Google Account
+3. Log in to your Google Account.
 
 4. Fill in the registration form.
 Provide valid payment details - it’s important, as you need an account with an active payment method to use BigQuery with SegmentStream.
