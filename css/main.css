@@ -97,7 +97,7 @@ code {
 
 #navigation li a {
     color: #9b9b9b;
-    padding-left: 26px;
+    padding-left: 36px;
     border-left: 3px solid transparent;
 }
 
@@ -123,7 +123,7 @@ code {
     text-transform: uppercase;
     font-size: 14px;
     color: #686868;
-    padding: 5px 0 5px 26px;
+    padding: 5px 0 5px 36px;
     cursor: pointer;
     user-select: none;
     -webkit-user-select: none;
@@ -145,6 +145,14 @@ code {
 .nav-header.active:after {
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
+}
+
+.nav-product {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 400;
+    color: #484848;
+    padding: 5px 0 10px 26px;
 }
 
 
