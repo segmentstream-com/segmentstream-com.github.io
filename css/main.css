@@ -147,12 +147,16 @@ code {
     transform: rotate(180deg);
 }
 
-.nav-product {
+div.nav-product {
     text-transform: uppercase;
     font-size: 18px;
     font-weight: 400;
     color: #484848;
-    padding: 5px 0 10px 26px;
+    padding: 20px 0 5px 26px;
+}
+
+ul.nav.nav-list > div.nav-product:first-child {
+    padding-top: 5px;
 }
 
 

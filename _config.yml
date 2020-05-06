@@ -15,16 +15,22 @@ navigation: 1
 
 # Default categories (in order) to appear in the navigation
 sections: [
-    ['bigquery', 'BigQuery Setup'],
-    ['datasources', 'Data Sources'],
-    ['datadestinations', 'Data Destinations'],
-    ['javascript-sdk', 'JavaScript SDK'],
-    ['digitaldata', 'DigitalData Variables'],
-    ['events', 'DigitalData Events'],
-    ['ecommerce', 'DigitalData for Ecommerce'],
-    ['integrations', 'Tracking Integrations'],
-    ['http-api', 'HTTP API'],
-    ['guides', 'Guides']
+    ['BigQuery project', [
+        ['bigquery', 'BigQuery Setup'],
+        ['datasources', 'Data Sources'],
+        ['datadestinations', 'Data Destinations'],
+        ['javascript-sdk', 'JavaScript SDK'],
+        ['digitaldata', 'DigitalData Variables'],
+        ['events', 'DigitalData Events'],
+        ['ecommerce', 'DigitalData for Ecommerce'],
+        ['integrations', 'Tracking Integrations'],
+        ['http-api', 'HTTP API'],
+        ['guides', 'Guides']
+    ]],
+    ['Google Analytics project', [
+        ['ga-datasources', 'Data Sources'],
+        ['ga-guides', 'Guides']
+    ]]
 ]
 
 # Keep as an empty string if served up at the root. If served up at a specific
