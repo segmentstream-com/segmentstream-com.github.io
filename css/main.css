@@ -119,6 +119,14 @@ code {
     border-left: 3px solid #4d6dd3;
 }
 
+.nav-product {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 16px;
+    padding: 5px 0 10px 26px;
+}
+
 .nav-header {
     text-transform: uppercase;
     font-size: 14px;
