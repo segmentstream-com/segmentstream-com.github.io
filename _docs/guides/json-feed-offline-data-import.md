@@ -25,7 +25,7 @@ This document describes how to import offline data from the CRM (i.e. sales or l
 Imported offline data can be combined with other website data to improve ROI reporting and attribution by optimising not only based on online transactions but on final order/lead statuses in the CRM.
 
 ## <a name="before-you-begin"></a> Before you begin
-* Make sure that BigQuery is [Connected to SegmentStream](/_docs/bigquery/connecting-bigquery).
+* Make sure that [BigQuery is connected to SegmentStream](/_docs/bigquery/connecting-bigquery).
 
 ## <a name="creating-feed"></a>Creating JSON feed
 
