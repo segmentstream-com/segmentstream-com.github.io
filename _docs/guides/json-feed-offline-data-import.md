@@ -8,7 +8,7 @@ date: 2020-05-08
 
 <ul class="page-navigation">
   <li><a href="#before-you-begin">Before you begin</a></li>
-  <li><a href="#creating-feed">Step 1: Creating JSON feed</a>
+  <li><a href="#creating-feed">Creating JSON feed</a>
     <ul>
       <li><a href="#feed-requirements">Feed requirements</a></li>
       <li><a href="#feed-example">Transaction feed example</a></li>
@@ -18,7 +18,7 @@ date: 2020-05-08
       <li><a href="#feed-contents">Feed contents</a></li>
     </ul>
   </li>
-  <li><a href="#enabling-feed-import">Step 2: Enabling feed import in SegmentStream</a></li>
+  <li><a href="#enabling-feed-import">Enabling feed import in SegmentStream</a></li>
 </ul>
 This document describes how to import offline data from the CRM (i.e. sales or leads statuses) into BigQuery using JSON feed.
 
@@ -39,56 +39,70 @@ SegmentStream can download feeds in JSON format and import its' content into Goo
 **For example**, the feed with the URL `https://example.com/feed.json?date=20200101` should display transactions updates for the 1st of January 2020
 This way instead of importing all transactions, only daily updates will be imported. This approach will be explained later on in this guide.
 
-### <a name="#feed-example"></a>Transaction feed example (formatted version)
-```json
-{
-    "createdAt": "2020-01-20T20:00:20.202Z",
-    "updatedAt": "2020-01-20T20:00:20.202Z",
-    "orderId": "100",
-    "currency": "USD",
-    "total": 120.13,
-    "status": "created",
-    "userId":"4af3ce14-e8ab-4c7a-907d-3848e6bdb7cf"
-}
-{
-    "createdAt": "2020-01-19T06:56:12.554Z",
-    "updatedAt": "2020-01-20T20:02:01.301Z",
-    "orderId": "50",
-    "currency": "USD",
-    "total": 96.12,
-    "status": "shipped",
-    "userId":"86116bb2-716b-4762-bc38-82417e69f7a1"
-}
-{
-    "createdAt": "2020-01-19T10:53:40.591Z",
-    "updatedAt": "2020-01-20T20:02:02.711Z",
-    "orderId": "73",
-    "currency": "USD",
-    "total": 299.99,
-    "status": "pendingShipment",
-    "userId":"dee3ca08-27de-495c-8738-060029a58449"
-}
-```
-> Note: This feed is not a in proper NDJSON - don't format your feed like this. In NDJSON each transaction should have only one line.
+### CRM data example
 
-Sample fields explanation: 
+Imagine, you have the following data in your CRM:
+
+createdAt | updatedAt | orderId | status | total | currency | userId
+--- | --- | --- | --- | --- | --- | ---
+2020-01-10| 2020-01-15 | N1 | USD | 120.13 | delivered | U1
+2020-01-15| 2020-01-20 | N2 | USD | 96.12 | refunded | U2
+2020-01-20| 2020-01-20 | N3 | USD | 299.99 | received | U3
+
+Where:
 * `createdAt` - time of the order creation in ISO 8601 standard
 * `updatedAt` - time of the latest order status update in ISO 8601
-* `orderId` - unique identifier of the order in your CRM system or website database. For other businesses it might be lead identifier or any other unique record identifier.
+* `orderId` - unique identifier of the order in your CRM system or website database. For other businesses it might be `leadId` or any other unique record identifier.
 * `currency` - order currency code
 * `total` - Total cost of the order
-* `status` - Order status by the time of  (e.g. "created", "shipped", "cancelled", "pendingPayment", "pendingShipment", "returned")
+* `status` - The most recent order status (e.g. `received`, `shipped`, `delivered`, `refunded`, etc)
 * `userId` - unique identifier of the user that made an order
 
-> Note: the structure is provided as a reference - you can add any other field that you need.
+> Note: the structure is provided as a reference, you can add any other fields you need.
 
-The feed in example above looks like this when properly formatted as NDJSON:
+There are two different approaches how this CRM data can be exported to the NDJSON feed.
 
-```ndjson
-{"createdAt":"2020-01-20T20:00:20.202Z","updatedAt":"2020-01-20T20:00:20.202Z","orderId":"100","currency":"USD","total":120.13,"status":"created","userId":"4af3ce14-e8ab-4c7a-907d-3848e6bdb7cf"}
-{"createdAt":"2020-01-19T06:56:12.554Z","updatedAt":"2020-01-20T20:02:01.301Z","orderId":"50","currency":"USD","total":96.12,"status":"shipped","userId":"86116bb2-716b-4762-bc38-82417e69f7a1"}
-{"createdAt":"2020-01-19T10:53:40.591Z","updatedAt":"2020-01-20T20:02:02.711Z","orderId":"73","currency":"USD","total":299.99,"status":"pendingShipment","userId":"dee3ca08-27de-495c-8738-060029a58449"}
-```
+### <a name="#all-orders"></a> Approach 1: Feed contains the snapshot all orders/leads from the CRM with it's current statuses
+Implementation of this approach will lead to full data overwrite every day with the new data. You feed may contain either all order/leads from the CRM or orders/leads for the last year.
+
+This approach is simple to implement, but will lead to the overhead in terms of lots of data transfer which might be not applicable if you have many transactions per day.
+
+#### Sample feed data
+
+Line|Feed record|
+--- | --- |
+1 | `{"orderId":"N1", "createdAt":"2020-01-10",**"updatedAt":"2020-01-15"**,"currency":"USD","total":120.13,"status":"delivered","userId":"U1"}`
+2 | `{"orderId":"N2", "createdAt":"2020-01-15",**"updatedAt":"2020-01-20"**, "currency":"USD","total":96.12,"status":"shipped","userId":"U2"}`
+3| `{"orderId":"N3", "createdAt":"2020-01-20",**"updatedAt":"2020-01-20"**, "currency":"USD","total":299.99,"status":"pendingShipment","userId":"U3"}`
+
+> **Notice** that feed contains different `updatedAt` values and absolutely all records from the CRM.
+
+### <a name="#daily-updates"></a> Approach 2: Feed contains only orders/leads that were updated during the day
+
+If you choose to implement this option you should parse `date` query parameter of the feed request and respond only with necessary update records. For example, if request is `https://example.com?date=20200120`, you should return only CRM records that were updated on the 20th Jan 2020:
+
+#### Sample feed data
+
+Line|Feed record|
+--- | --- |
+1 | `{"orderId":"N1", "createdAt":"2020-01-10",**"updatedAt":"2020-01-15"**,"currency":"USD","total":120.13,"status":"delivered","userId":"U1"}`
+2 | `{"orderId":"N2", "createdAt":"2020-01-15",**"updatedAt":"2020-01-20"**, "currency":"USD","total":96.12,"status":"shipped","userId":"U2"}`
+3| `{"orderId":"N3", "createdAt":"2020-01-20",**"updatedAt":"2020-01-20"**, "currency":"USD","total":299.99,"status":"pendingShipment","userId":"U3"}`
+
+> Note: This approach allows you to reduce BigQuery costs when implementing ROI reporting as only daily updates would be processed instead of processing the whole feed table.
+
+Your order feed should contain update records, meaning that for each change in the status of existing transaction you create a new record in the feed with the new value of the `updatedAt` field and preserving the value of the `createdAt` field.
+
+ 
+## <a name="enabling-feed-import"></a>Enabling feed import in SegmentStream
+1. Go to [SegmentStream admin page ▸](https://admin.segmentstream.com)
+2. Open **Data Sources ▸ Add**
+3. Select **JSON Feed**
+4. Fill in Basic Auth credentials
+5. Fill in the fields:
+    * **Feed URL** - fill in URL where your feed can be found (don't enter date parameter)
+    * **Destination table name** - BigQuery table name that will contain imported feed data
+6. If you use date  parameter and generate daily record updates enable option **Partition table by date**
 
 ### <a name="#how-feed-import-works"></a> How feed import works
 
@@ -98,65 +112,8 @@ Everyday SegmentStream fetches data from the specified feed URL using provided c
 * `MM` - current month;
 * `DD` - current date;
 
-Example of the possible feed request as of 9 May 2020: 
+Example of the possible feed request as of 9 May 2020:
 ```
 https://example.com/feed.json?**date=20200509**
-```
-
-You can implement one of the two approaches regarding returning feed data on request:
-
-### <a name="#all-orders"></a> Approach 1: Returning all of the order records on each request
-If you implement this approach every day your feed data in BigQuery will be overwritten by all of the transactions from your feed.
-
-Sample feed:
-
-
-line|feed record|
---- | --- |
-1 | `{"createdAt":"2020-01-19T20:00:20.202Z","updatedAt":"2020-01-20T20:00:20.202Z","orderId":"100","currency":"USD","total":120.13,"status":"created","userId":"4af3ce14-e8ab-4c7a-907d-3848e6bdb7cf"}`
-2 | `{"createdAt":"2020-01-19T20:00:20.202Z","updatedAt":"2020-01-21T05:03:15.661Z","orderId":"100","currency":"USD","total":120.13,"status":"shipped","userId":"4af3ce14-e8ab-4c7a-907d-3848e6bdb7cf"}`
-3| `{"createdAt":"2020-01-19T10:53:40.591Z","updatedAt":"2020-01-22T18:15:34.031Z","orderId":"73","currency":"USD","total":299.99,"status":"pendingShipment","userId":"dee3ca08-27de-495c-8738-060029a58449"}`
-
-> **Notice** that feed contains different update date value (stored in `updatedAt` field) - from 20th to 22th Jan 2020.
-
-If you implement this approach for every  value of the `date` URL parameter you should return all of the order records.
-
-### <a name="#daily-updates"></a> Approach 2: Returning daily transaction updates partitioned by day
-
-If you choose to implement this option you should parse `date` GET parameter of the feed request and respond only with necessary update records.
-e.g. if request is `https://example.com?date=20200120`
-you should return only records that were made on the 20th Jan 2020:
-
-line|feed record|
---- | --- |
-1|`{"createdAt":"2020-01-20T20:00:20.202Z","updatedAt":"2020-01-20T20:00:20.202Z","orderId":"100","currency":"USD","total":120.13,"status":"created","userId":"4af3ce14-e8ab-4c7a-907d-3848e6bdb7cf"}`
-2|`{"createdAt":"2020-01-19T06:56:12.554Z","updatedAt":"2020-01-20T20:02:01.301Z","orderId":"50","currency":"USD","total":96.12,"status":"shipped","userId":"86116bb2-716b-4762-bc38-82417e69f7a1"}`
-3|`{"createdAt":"2020-01-19T10:53:40.591Z","updatedAt":"2020-01-20T20:02:02.711Z","orderId":"73","currency":"USD","total":299.99,"status":"pendingShipment","userId":"dee3ca08-27de-495c-8738-060029a58449"}`
-
-
-> Note: This approach allows you to reduce BigQuery costs when implementing ROI reporting as only daily updates would be processed instead of processing the whole feed table.
-
-### <a name="#feed-contents"></a> Feed contents
-Your order feed should contain update records, meaning that for each change in the status of existing transaction you create a new record in the feed with the new value of the `updatedAt` field and preserving the value of the `createdAt` field. 
-
-**Example:**
-Order was created on the 19th Jan 2020 and later it was shipped on the 20th Jan 2020.
-It should be reflected in the feed the following way:
->Note: this is not valid NDJSON as it contains comments.
-
-line|feed record|
---- | --- |
-1| `{"createdAt":"2020-01-20T20:00:20.202Z","updatedAt":"2020-01-20T20:00:20.202Z","orderId":"100","currency":"USD","total":120.13,"status":"created","userId":"4af3ce14-e8ab-4c7a-907d-3848e6bdb7cf"}`
-2| `{"createdAt":"2020-01-20T20:00:20.202Z","updatedAt":"2020-01-21T17:02:01.301Z","orderId":"50","currency":"USD","total":96.12,"status":"shipped","userId":"86116bb2-716b-4762-bc38-82417e69f7a1"}`
- 
-## <a name="enabling-feed-import"></a> Step 2: Enabling feed import in SegmentStream
-1. Go to [SegmentStream admin page ▸](https://admin.segmentstream.com)
-2. Open **Data Sources ▸ Add**
-3. Select **JSON Feed**
-4. Fill in Basic Auth credentials
-5. Fill in the fields:
-    * **Feed URL** - fill in URL where your feed can be found (don't enter date parameter)
-    * **Destination table name** - BigQuery table name that will contain imported feed data
-6. If you use date  parameter and generate daily record updates enable option **Partition table by date**
 
 Congratulations! During the next 24 hours your feed data will be uploaded to the corresponding BigQuery table.
