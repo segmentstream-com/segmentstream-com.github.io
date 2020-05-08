@@ -18,6 +18,7 @@ date: 2020-05-08
     </ul>
   </li>
   <li><a href="#enabling-feed-import">Enabling feed import in SegmentStream</a></li>
+  <li><a href="#next">What's next</a></li>
 </ul>
 This document describes how to import offline data from the CRM (i.e. sales or leads statuses) into BigQuery using JSON feed.
 
@@ -87,7 +88,7 @@ Line|Feed record|
 1 | `{"orderId":"N2", "createdAt":"2020-01-15","updatedAt":"2020-01-20", "currency":"USD","total":96.12,"status":"shipped","userId":"U2"}`
 2| `{"orderId":"N3", "createdAt":"2020-01-20","updatedAt":"2020-01-20", "currency":"USD","total":299.99,"status":"pendingShipment","userId":"U3"}`
 
-> Note: This approach allows you to reduce BigQuery costs when implementing ROI reporting as only daily updates would be processed instead of processing the whole feed table.
+> Note: This approach allows to significantly reduce the bandwidth by importing only order updates instead of all CRM orders.
 
 Your order feed should contain update records, meaning that for each change in the status of existing transaction you create a new record in the feed with the new value of the `updatedAt` field and preserving the value of the `createdAt` field.
 
@@ -100,18 +101,26 @@ Your order feed should contain update records, meaning that for each change in t
 5. Fill in the fields:
     * **Feed URL** - fill in URL where your feed can be found (don't enter date parameter)
     * **Destination table name** - BigQuery table name that will contain imported feed data
-6. If you use date  parameter and generate daily record updates enable option **Partition table by date**
+6. Enable **Partition table by date** option if you decided to use [Approach 2](#daily-updates) for the feed generation.
 
 ### <a name="#how-feed-import-works"></a> How feed import works
 
-Everyday SegmentStream fetches data from the specified feed URL using provided credentials and appending `date` query parameter to the  URL with the value in `YYYYMMDD` format, where:
+Everyday SegmentStream fetches data from the specified feed URL using provided credentials and appending.
 
+If you enabled **Partition table by date** option, an additional `date` query parameter with the value `YYYYMMDD` will be added to the URL, where:
 * `YYYY` - current year;
 * `MM` - current month;
 * `DD` - current date;
 
-Example of the possible feed request as of 9 May 2020:
+Example request as of 20 Jan, 2020 when **Partition table by date** is disabled:
 ```
-https://example.com/feed.json?**date=20200509**
+https://example.com/feed.json
+```
+Example request as of 20 Jan, 2020 when **Partition table by date** is disabled:
+```
+https://example.com/feed.json?**date=20200120**
+```
 
-Congratulations! During the next 24 hours your feed data will be uploaded to the corresponding BigQuery table.
+## <a name="next"></a>What's next
+
+During the next 24 hours your feed data will be uploaded to the corresponding BigQuery table.
