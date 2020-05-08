@@ -1,8 +1,8 @@
 ---
 layout: page
 section: guides
-navigation_title: "Importing transactions or leads using JSON feed"
-title: "Importing transactions or leads using JSON feed"
+navigation_title: "Importing offline data using JSON feed"
+title: "Importing offline data using JSON feed"
 date: 2020-05-08
 ---
 
