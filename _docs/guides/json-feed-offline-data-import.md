@@ -95,13 +95,12 @@ Your order feed should contain update records, meaning that for each change in t
  
 ## <a name="enabling-feed-import"></a>Enabling feed import in SegmentStream
 1. Go to [SegmentStream admin page ▸](https://admin.segmentstream.com)
-2. Open **Data Sources ▸ Add**
-3. Select **JSON Feed**
-4. Fill in Basic Auth credentials
-5. Fill in the fields:
-    * **Feed URL** - fill in URL where your feed can be found (don't enter date parameter)
-    * **Destination table name** - BigQuery table name that will contain imported feed data
-6. Enable **Partition table by date** option if you decided to use [Approach 2](#daily-updates) for the feed generation.
+2. Open **Data Sources ▸ Add**.
+3. Select **JSON Feed**.
+4. Fill login and password for you Basic Auth credentials (if you decided not to implement Basic Auth you can enter any values here).
+5. In **Feed URL** field specify the URL where your feed can be found (don't enter `date` query param parameter).
+6. In **Destination table name** field specify the BigQuery table name that will contain imported feed data.
+7. Enable **Partition table by date** option if you decided to use [Approach 2](#daily-updates) for the feed generation (recommended).
 
 ### <a name="#how-feed-import-works"></a> How feed import works
 
