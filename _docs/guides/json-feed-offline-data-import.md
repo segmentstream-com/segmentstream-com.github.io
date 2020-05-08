@@ -12,9 +12,9 @@ date: 2020-05-08
     <ul>
       <li><a href="#feed-requirements">Feed requirements</a></li>
       <li><a href="#feed-example">Transaction feed example</a></li>
-      <li><a href="#how-feed-import-works">How feed import works</a></li>
-      <li><a href="#all-orders">Approach 1: all orders</a></li>
-      <li><a href="#daily-updates">Approach 2: daily updates</a></li>
+      <li><a href="#crm-data-example">CRM data example</a></li>
+      <li><a href="#all-orders">Approach 1: All CRM orders</a></li>
+      <li><a href="#daily-updates">Approach 2: Daily order updates</a></li>
       <li><a href="#feed-contents">Feed contents</a></li>
     </ul>
   </li>
@@ -39,7 +39,7 @@ SegmentStream can download feeds in JSON format and import its' content into Goo
 **For example**, the feed with the URL `https://example.com/feed.json?date=20200101` should display transactions updates for the 1st of January 2020
 This way instead of importing all transactions, only daily updates will be imported. This approach will be explained later on in this guide.
 
-### CRM data example
+### <a name="crm-data-example"></a>CRM data example
 
 Imagine, you have the following data in your CRM:
 
