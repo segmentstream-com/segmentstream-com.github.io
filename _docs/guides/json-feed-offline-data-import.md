@@ -112,13 +112,12 @@ If you enabled **Partition table by date** option, an additional `date` query pa
 * `DD` - current date;
 
 Example request as of 20 Jan, 2020 when **Partition table by date** is disabled:
-```
-https://example.com/feed.json
-```
+
+`https://example.com/feed.json`
+
 Example request as of 20 Jan, 2020 when **Partition table by date** is disabled:
-```
-https://example.com/feed.json?**date=20200120**
-```
+
+`https://example.com/feed.json?**date=20200120**`
 
 ## <a name="next"></a>What's next
 
