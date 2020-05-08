@@ -62,7 +62,7 @@ Where:
 
 There are two different approaches how this CRM data can be exported to the NDJSON feed.
 
-### <a name="#all-orders"></a> Approach 1: Feed contains the snapshot all orders/leads from the CRM with it's current statuses
+### <a name="#all-orders"></a> Approach 1: Feed contains the snapshot of all orders/leads from the CRM with it's current statuses
 Implementation of this approach will lead to full data overwrite every day with the new data. You feed may contain either all order/leads from the CRM or orders/leads for the last year.
 
 This approach is simple to implement, but will lead to the overhead in terms of lots of data transfer which might be not applicable if you have many transactions per day.
