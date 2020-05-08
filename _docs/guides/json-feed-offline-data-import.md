@@ -117,7 +117,7 @@ Example request as of 20 Jan, 2020 when **Partition table by date** is disabled:
 
 Example request as of 20 Jan, 2020 when **Partition table by date** is disabled:
 
-`GET https://example.com/feed.json?**date=20200120**`
+`GET https://example.com/feed.json?date=20200120`
 
 ## <a name="next"></a>What's next
 
