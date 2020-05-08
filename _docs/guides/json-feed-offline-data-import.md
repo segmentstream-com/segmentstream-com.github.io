@@ -71,23 +71,22 @@ This approach is simple to implement, but will lead to the overhead in terms of 
 
 Line|Feed record|
 --- | --- |
-1 | `{"orderId":"N1", "createdAt":"2020-01-10",**"updatedAt":"2020-01-15"**,"currency":"USD","total":120.13,"status":"delivered","userId":"U1"}`
-2 | `{"orderId":"N2", "createdAt":"2020-01-15",**"updatedAt":"2020-01-20"**, "currency":"USD","total":96.12,"status":"shipped","userId":"U2"}`
-3| `{"orderId":"N3", "createdAt":"2020-01-20",**"updatedAt":"2020-01-20"**, "currency":"USD","total":299.99,"status":"pendingShipment","userId":"U3"}`
+1 | `{"orderId":"N1", "createdAt":"2020-01-10","updatedAt":"2020-01-15","currency":"USD","total":120.13,"status":"delivered","userId":"U1"}`
+2 | `{"orderId":"N2", "createdAt":"2020-01-15","updatedAt":"2020-01-20", "currency":"USD","total":96.12,"status":"shipped","userId":"U2"}`
+3| `{"orderId":"N3", "createdAt":"2020-01-20","updatedAt":"2020-01-20", "currency":"USD","total":299.99,"status":"pendingShipment","userId":"U3"}`
 
 > **Notice** that feed contains different `updatedAt` values and absolutely all records from the CRM.
 
 ### <a name="#daily-updates"></a> Approach 2: Feed contains only orders/leads that were updated during the day
 
-If you choose to implement this option you should parse `date` query parameter of the feed request and respond only with necessary update records. For example, if request is `https://example.com?date=20200120`, you should return only CRM records that were updated on the 20th Jan 2020:
+If you choose to implement this option you should parse `date` query parameter of the feed request and respond only with necessary update records. For example, if request is `https://example.com?date=20200120`, you should return only CRM records that were updated 20th of Jan, 2020.
 
 #### Sample feed data
 
 Line|Feed record|
 --- | --- |
-1 | `{"orderId":"N1", "createdAt":"2020-01-10",**"updatedAt":"2020-01-15"**,"currency":"USD","total":120.13,"status":"delivered","userId":"U1"}`
-2 | `{"orderId":"N2", "createdAt":"2020-01-15",**"updatedAt":"2020-01-20"**, "currency":"USD","total":96.12,"status":"shipped","userId":"U2"}`
-3| `{"orderId":"N3", "createdAt":"2020-01-20",**"updatedAt":"2020-01-20"**, "currency":"USD","total":299.99,"status":"pendingShipment","userId":"U3"}`
+1 | `{"orderId":"N2", "createdAt":"2020-01-15","updatedAt":"2020-01-20", "currency":"USD","total":96.12,"status":"shipped","userId":"U2"}`
+2| `{"orderId":"N3", "createdAt":"2020-01-20","updatedAt":"2020-01-20", "currency":"USD","total":299.99,"status":"pendingShipment","userId":"U3"}`
 
 > Note: This approach allows you to reduce BigQuery costs when implementing ROI reporting as only daily updates would be processed instead of processing the whole feed table.
 
