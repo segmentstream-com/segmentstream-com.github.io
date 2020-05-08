@@ -15,7 +15,6 @@ date: 2020-05-08
       <li><a href="#crm-data-example">CRM data example</a></li>
       <li><a href="#all-orders">Approach 1: All CRM orders</a></li>
       <li><a href="#daily-updates">Approach 2: Daily order updates</a></li>
-      <li><a href="#feed-contents">Feed contents</a></li>
     </ul>
   </li>
   <li><a href="#enabling-feed-import">Enabling feed import in SegmentStream</a></li>
