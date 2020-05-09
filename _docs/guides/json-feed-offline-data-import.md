@@ -111,12 +111,10 @@ If you enabled **Partition table by date** option, an additional `date` query pa
 * `MM` - current month;
 * `DD` - current date;
 
-Example request as of 20 Jan, 2020 when **Partition table by date** is **disabled**:
-
+Example request as of 20 Jan, 2020 when **Partition table by date** is **disabled**:<br/>
 `GET https://example.com/feed.ndjson`
 
-Example request as of 20 Jan, 2020 when **Partition table by date** is **enabled**:
-
+Example request as of 20 Jan, 2020 when **Partition table by date** is **enabled**:<br/>
 `GET https://example.com/feed.ndjson?date=20200120`
 
 ## <a name="next"></a>What's next
