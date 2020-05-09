@@ -43,7 +43,7 @@ This way instead of importing all transactions, only daily updates will be impor
 
 Imagine, you have the following data in your CRM:
 
-createdAt | updatedAt | orderId | status | total | currency | userId
+createdAt | updatedAt | orderId | currency | total | status | userId
 --- | --- | --- | --- | --- | --- | ---
 2020-01-10| 2020-01-15 | N1 | USD | 120.13 | delivered | U1
 2020-01-15| 2020-01-20 | N2 | USD | 96.12 | refunded | U2
@@ -104,7 +104,7 @@ Your order feed should contain update records, meaning that for each change in t
 
 ### <a name="#how-feed-import-works"></a> How feed import works
 
-Everyday SegmentStream fetches data from the specified feed URL using provided credentials and appending.
+Everyday SegmentStream fetches data from the specified feed URL using provided credentials.
 
 If you enabled **Partition table by date** option, an additional `date` query parameter with the value `YYYYMMDD` will be added to the URL, where:
 * `YYYY` - current year;
