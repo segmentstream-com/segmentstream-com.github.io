@@ -191,6 +191,9 @@ body.rtl ul, body.rtl ol {
 }
 
 table {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
   margin-bottom: 30px;
   border: 1px solid #e5e5e5;
   border-collapse: collapse;
