@@ -11,7 +11,6 @@ date: 2020-05-08
   <li><a href="#creating-feed">Creating JSON feed</a>
     <ul>
       <li><a href="#feed-requirements">Feed requirements</a></li>
-      <li><a href="#feed-example">Transaction feed example</a></li>
       <li><a href="#crm-data-example">CRM data example</a></li>
       <li><a href="#all-orders">Approach 1: All CRM orders</a></li>
       <li><a href="#daily-updates">Approach 2: Daily order updates</a></li>
