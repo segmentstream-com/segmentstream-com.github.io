@@ -43,7 +43,7 @@ This way instead of importing all transactions, only daily updates will be impor
 
 Imagine, you have the following data in your CRM:
 
-createdAt | updatedAt | orderId | currency | total | status | userId
+createdAt | updatedAt | orderId | currency | total | status  | userId
 --- | --- | --- | --- | --- | --- | ---
 2020-01-10| 2020-01-15 | N1 | USD | 120.13 | delivered | U1
 2020-01-15| 2020-01-20 | N2 | USD | 96.12 | refunded | U2
@@ -88,7 +88,7 @@ Line|Feed record|
 1 | `{"orderId":"N2", "createdAt":"2020-01-15","updatedAt":"2020-01-20", "currency":"USD","total":96.12,"status":"shipped","userId":"U2"}`
 2| `{"orderId":"N3", "createdAt":"2020-01-20","updatedAt":"2020-01-20", "currency":"USD","total":299.99,"status":"pendingShipment","userId":"U3"}`
 
-> Note: This approach allows to significantly reduce the bandwidth by importing only order updates instead of all CRM orders.
+> Note: This approach allows to significantly reduce the amount of transferfed by importing only order updates instead of all CRM orders.
 
 Your order feed should contain update records, meaning that for each change in the status of existing transaction you create a new record in the feed with the new value of the `updatedAt` field and preserving the value of the `createdAt` field.
 
