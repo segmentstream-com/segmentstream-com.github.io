@@ -96,7 +96,7 @@ Your order feed should contain only updated records, meaning that for each chang
 1. Go to [SegmentStream admin panel▸](https://admin.segmentstream.com){:target="_blank"}.
 2. Open **Data Sources ▸ Add Data Source**.
 3. Select **JSON Feed**.
-4. Fill login and password for you Basic Auth credentials (if you decided not to implement Basic Auth you can enter any values).
+4. Fill **Username** and **Password** for you Basic Auth credentials (if you decided not to implement Basic Auth you can enter any values).
 5. In the **Feed URL** field specify the URL where your feed can be found (don't enter `date` query param parameter).
 6. In the **Destination table name** field specify the BigQuery table name that will contain imported feed data.
 7. Enable **Partition table by date** option if you decided to use [Approach 2](#daily-updates) for the feed generation (recommended).
