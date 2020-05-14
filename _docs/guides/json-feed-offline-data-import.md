@@ -127,7 +127,7 @@ Field|Data Type|Description
 `currency` | `STRING` | Order currency code.
 `total`  | `FLOAT` |  Total cost of the order.
 `status`  | `STRING` | The most recent order status (e.g. `received`, `shipped`, `delivered`, `refunded`, etc).
-`userId` | `STRING` | unique identifier of the user that made an order.
+`userId` | `STRING` | Unique identifier of the user that made an order.
 
 When **Partition table by date** is **disabled** SegmentStream will create a table with the name `project_id.dataset_name.destination_table_name`. Every day this table will be fully overwritten with the new data.
 
