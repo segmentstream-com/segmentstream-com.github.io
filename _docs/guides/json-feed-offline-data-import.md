@@ -127,7 +127,7 @@ After first run:
 
 With next schema:
 
-Field | Data Type | Description
+Field|Data Type|Description
 --- | --- | --- |
 `createdAt` | `DATETIME` | time of the order creation in ISO 8601 standard;
 `updatedAt` | `DATETIME` | time of the latest order status update in ISO 8601;
