@@ -50,6 +50,7 @@ createdAt | updatedAt | orderId | currency | total | status  | userId
 2020-01-20| 2020-01-20 | N3 | USD | 299.99 | received | U3
 
 Where:
+
 * `createdAt` - time of the order creation in ISO 8601 standard;
 * `updatedAt` - time of the latest order status update in ISO 8601;
 * `orderId` - unique identifier of the order in your CRM system or website database. For other businesses it might be `leadId` or any other unique record identifier;
@@ -58,7 +59,7 @@ Where:
 * `status` - The most recent order status (e.g. `received`, `shipped`, `delivered`, `refunded`, etc);
 * `userId` - unique identifier of the user that made an order;
 
-> Note: the structure is provided as a reference, you can add any other fields you need.
+> Note: here is provided minimal schema for stitching online and offline orders, but you can add any other fields you need.
 
 There are two different approaches to how this CRM data can be exported to the NDJSON feed.
 
@@ -118,4 +119,23 @@ Example request as of 20 Jan, 2020 when **Partition table by date** is **enabled
 
 ## <a name="next"></a>What's next
 
-During the next 24 hours your feed data will be uploaded to the corresponding BigQuery table.
+During the next 24 hours your data will be uploaded to the corresponding BigQuery table.
+
+After first run:
+1. For 1st approach: new table without partitioning will be created `projectId.datasetName.tableName`;
+2. For 2nd approach: new [ingestion-time partitioned table▸](https://cloud.google.com/bigquery/docs/creating-partitioned-tables#creating_ingestion-time_partitioned_tables) will be created `projectId.datasetName.tableName_yyyymmdd`. Where yyyymmdd - is a date of first run.
+
+With next schema:
+Field | Data Type | Description
+--- | --- | --- 
+`createdAt` | `DATETIME` | time of the order creation in ISO 8601 standard;
+`updatedAt` | `DATETIME` | time of the latest order status update in ISO 8601;
+`orderId` | `STRING` | unique identifier of the order in your CRM system or website database. For other businesses it might be `leadId` or any other unique record identifier;
+`currency` | `STRING` | order currency code;
+`total`  | `FLOAT` |  Total cost of the order;
+`status`  | `STRING` | The most recent order status (e.g. `received`, `shipped`, `delivered`, `refunded`, etc);
+`userId` | `STRING` | unique identifier of the user that made an order;
+
+After second and further runs:
+1. For 1st approach: the table `projectId.datasetName.tableName` will be fully overwritten with new data;
+2. For 2nd approach: the data will be added to the existing table with a new partition `projectId.datasetName.tableName_yyyymmdd`. Where yyyymmdd - is a date of second or further run.
