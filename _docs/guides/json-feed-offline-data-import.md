@@ -126,8 +126,9 @@ After first run:
 2. For 2nd approach: new [ingestion-time partitioned table▸](https://cloud.google.com/bigquery/docs/creating-partitioned-tables#creating_ingestion-time_partitioned_tables) will be created `projectId.datasetName.tableName_yyyymmdd`. Where yyyymmdd - is a date of first run.
 
 With next schema:
+
 Field | Data Type | Description
---- | --- | --- 
+--- | --- | --- |
 `createdAt` | `DATETIME` | time of the order creation in ISO 8601 standard;
 `updatedAt` | `DATETIME` | time of the latest order status update in ISO 8601;
 `orderId` | `STRING` | unique identifier of the order in your CRM system or website database. For other businesses it might be `leadId` or any other unique record identifier;
