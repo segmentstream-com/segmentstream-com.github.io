@@ -117,26 +117,21 @@ Example request as of 20 Jan, 2020 when **Partition table by date** is **disable
 Example request as of 20 Jan, 2020 when **Partition table by date** is **enabled**:<br/>
 `GET https://example.com/feed.ndjson?date=20200120`
 
+SegmentStream will automatically detect JSON schema and create a corresponding table in Googe BigQuery. For example, for the sample CRM data [provided above](#crm-data-example) the schema will looks like this:
+Field|Data Type|Description
+--- | --- | --- |
+`createdAt` | `DATETIME` | Time of the order creation in ISO 8601 standard.
+`updatedAt` | `DATETIME` | Time of the latest order status update in ISO 8601.
+`orderId` | `STRING` | Unique identifier of the order in your CRM system or website database. For other businesses it might be `leadId` or any other unique record identifier.
+`currency` | `STRING` | Order currency code.
+`total`  | `FLOAT` |  Total cost of the order.
+`status`  | `STRING` | The most recent order status (e.g. `received`, `shipped`, `delivered`, `refunded`, etc).
+`userId` | `STRING` | unique identifier of the user that made an order.
+
+When **Partition table by date** is **disabled** SegmentStream will create a table with the name `project_id.dataset_name.destination_table_name`. Every day this table will be fully overwritten with the new data.
+
+When **Partition table by date** is **enabled** SegmentStream will create a table with the name `project_id.dataset_name.destination_table_name_YYYYMMDD`, where `YYYYMMDD` prefix represents the date of import. Every day SegmentStream will add a new table for each day.
+
 ## <a name="next"></a>What's next
 
 During the next 24 hours your data will be uploaded to the corresponding BigQuery table.
-
-After first run:
-1. For 1st approach: new table without partitioning will be created `projectId.datasetName.tableName`;
-2. For 2nd approach: new [ingestion-time partitioned table▸](https://cloud.google.com/bigquery/docs/creating-partitioned-tables#creating_ingestion-time_partitioned_tables) will be created `projectId.datasetName.tableName_yyyymmdd`. Where yyyymmdd - is a date of first run.
-
-With next schema:
-
-Field|Data Type|Description
---- | --- | --- |
-`createdAt` | `DATETIME` | time of the order creation in ISO 8601 standard;
-`updatedAt` | `DATETIME` | time of the latest order status update in ISO 8601;
-`orderId` | `STRING` | unique identifier of the order in your CRM system or website database. For other businesses it might be `leadId` or any other unique record identifier;
-`currency` | `STRING` | order currency code;
-`total`  | `FLOAT` |  Total cost of the order;
-`status`  | `STRING` | The most recent order status (e.g. `received`, `shipped`, `delivered`, `refunded`, etc);
-`userId` | `STRING` | unique identifier of the user that made an order;
-
-After second and further runs:
-1. For 1st approach: the table `projectId.datasetName.tableName` will be fully overwritten with new data;
-2. For 2nd approach: the data will be added to the existing table with a new partition `projectId.datasetName.tableName_yyyymmdd`. Where yyyymmdd - is a date of second or further run.
