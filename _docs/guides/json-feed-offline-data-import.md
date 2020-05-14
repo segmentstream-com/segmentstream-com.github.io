@@ -118,6 +118,7 @@ Example request as of 20 Jan, 2020 when **Partition table by date** is **enabled
 `GET https://example.com/feed.ndjson?date=20200120`
 
 SegmentStream will automatically detect JSON schema and create a corresponding table in Googe BigQuery. For example, for the sample CRM data [provided above](#crm-data-example) the schema will looks like this:
+
 Field|Data Type|Description
 --- | --- | --- |
 `createdAt` | `DATETIME` | Time of the order creation in ISO 8601 standard.
