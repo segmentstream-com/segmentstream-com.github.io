@@ -7,7 +7,7 @@ date: 2020-04-08
 order: 1
 ---
 
-<ul class="page-navigation">
+<!-- <ul class="page-navigation">
   <li><a href="#getting-started">Getting started</a></li>
   <li>
     <a href="#reports">Available reports</a>
@@ -23,7 +23,7 @@ order: 1
   </li>
   
   <li><a href="#additional-transformation-settings">Additional transformation settings</a></li>
-</ul>
+</ul> -->
 
 Google Ads is an online advertising service developed by Google. With Google Ads, you can take advantage of online advertising to improve your internet marketing effectiveness. [Visit Website ▸](https://ads.google.com/home/){:target="_blank"}
 
@@ -263,10 +263,10 @@ You can read more about additional transformation to group cost data by UTM [her
 
 To enable this transformation use **"Import cost data grouped by UTM"** setting. Once enabled, a new table with cost data grouped by UTM will appear in your data warehouse.
 
-#### Table name
+### Table name
 **`googleAdsCosts_{CUSTOMER_ID}_{YYYYMMDD}`**
 
-#### Table schema
+### Table schema
 
 Field name|Type|Mode
 --- | --- | ---

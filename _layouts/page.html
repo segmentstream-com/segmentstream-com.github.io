@@ -17,3 +17,99 @@ outdated information or simply want to leave some feedback to help us improve ou
 please <a href="https://support.segmentstream.com/hc/en-us/requests/new" taget="_blank">let us know</a>!
 </p>
 {% endif %}
+
+<script type="text/javascript">
+var supportedHeaders = 'h2,h3,h4,h5';
+var $headers = $(supportedHeaders);
+
+if ($headers.length > 0 && jQuery('.page-navigation').length === 0) {
+  var $firstHeader = $headers.first();
+  var $firstUl = $('<ul class="page-navigation">');
+  var $currentUl = $firstUl;
+  var previousLevel = headingLevel($firstHeader);
+  var ulIndex = { [previousLevel]: $firstUl };
+  $firstUl.appendTo('.page-header');
+  insertHeading($firstHeader);
+}
+
+function insertHeading($heading) {
+  // what level heading are we on?
+  var currentLevel = headingLevel($heading);
+
+  // if it's the same as the one before it, add it to the current list
+  if (currentLevel === previousLevel) {
+    newLi($heading, $currentUl);
+  }
+  // if it's one level higher than the one before it... time to make a new nested list
+  else if (currentLevel > previousLevel) {
+    nestUl();
+    ulIndex[currentLevel] = $currentUl
+    newLi($heading, $currentUl);
+  }
+  else if (currentLevel < previousLevel) {
+    $currentUl = ulIndex[currentLevel]
+    newLi($heading, $currentUl);
+  }
+
+  previousLevel = currentLevel;
+
+  var $nextHeading = $heading.nextAll(supportedHeaders).first();
+  // if there's any headings left... run this again
+  if ($nextHeading.length > 0) insertHeading($nextHeading);
+}
+
+// adds a new UL to the current UL
+function nestUl() {
+  var $newUl = $('<ul>');
+  $newUl.appendTo($currentUl);
+  $currentUl = $newUl;
+}
+
+// returns a numerical value for each heading
+function headingLevel($heading) {
+  switch ($heading.prop('tagName')) {
+    case 'H1':
+      return 1;
+      break;
+    case 'H2':
+      return 2;
+      break;
+    case 'H3':
+      return 3;
+      break;
+    case 'H4':
+      return 4;
+      break;
+    case 'H5':
+      return 5;
+      break;
+    case 'H6':
+      return 6;
+      break;
+    default:
+      return 0;
+  }
+}
+
+// inserts a new line to the current list
+function newLi(heading, $list) {
+  var $heading = $(heading);
+  var $wrapper = $('<li></li>');
+  var anchorname = $heading.text().replace(/\s/g, '').toLowerCase()
+
+  if (jQuery('a[name="' + anchorname + '"]').length) {
+    var i = 1 ;
+    while (jQuery('a[name="' + anchorname + '-' + i + '"]').length) ++i;
+    anchorname += '-' + i;
+  }
+
+  var $link = $('<a>').prop('href', '#' + anchorname);
+
+  $link.text($heading.text());
+  $link.appendTo($wrapper);
+
+  $wrapper.appendTo($list);
+
+  $heading.html("<a name=\"" + anchorname + "\"></a>" + $link.find('.index').text() + ' ' + $heading.text());
+} 
+</script>
