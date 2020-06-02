@@ -19,7 +19,7 @@ please <a href="https://support.segmentstream.com/hc/en-us/requests/new" taget="
 {% endif %}
 
 <script type="text/javascript">
-var supportedHeaders = 'h2,h3,h4,h5';
+var supportedHeaders = 'h2,h3';
 var $headers = $(supportedHeaders);
 
 if ($headers.length > 0 && jQuery('.page-navigation').length === 0) {
@@ -28,7 +28,7 @@ if ($headers.length > 0 && jQuery('.page-navigation').length === 0) {
   var $currentUl = $firstUl;
   var previousLevel = headingLevel($firstHeader);
   var ulIndex = { [previousLevel]: $firstUl };
-  $firstUl.appendTo('.page-header');
+  $firstUl.insertAfter('.page-header');
   insertHeading($firstHeader);
 }
 
@@ -95,7 +95,7 @@ function headingLevel($heading) {
 function newLi(heading, $list) {
   var $heading = $(heading);
   var $wrapper = $('<li></li>');
-  var anchorname = $heading.text().replace(/\s/g, '').toLowerCase()
+  var anchorname = $heading.text().replace(/\s/g, '-').toLowerCase()
 
   if (jQuery('a[name="' + anchorname + '"]').length) {
     var i = 1 ;
