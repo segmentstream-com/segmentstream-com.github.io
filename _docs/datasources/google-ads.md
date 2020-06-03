@@ -7,27 +7,9 @@ date: 2020-04-08
 order: 1
 ---
 
-<!-- <ul class="page-navigation">
-  <li><a href="#getting-started">Getting started</a></li>
-  <li>
-    <a href="#reports">Available reports</a>
-    <ul>
-      <li><a href="#keyword-performance-report">Keyword performance</a></li>
-      <li><a href="#audience-performance-report">Audience performance</a></li>
-      <li><a href="#criteria-performance-report">Criteria performance</a></li>
-      <li><a href="#placement-performance-report">Placement performance</a></li>
-      <li><a href="#click-performance-report">Click performance</a></li>
-      <li><a href="#campaign-performance-report">Campaign performance</a></li>
-      <li><a href="#ad-performance-report">Ad performance</a></li>
-    </ul>
-  </li>
-  
-  <li><a href="#additional-transformation-settings">Additional transformation settings</a></li>
-</ul> -->
-
 Google Ads is an online advertising service developed by Google. With Google Ads, you can take advantage of online advertising to improve your internet marketing effectiveness. [Visit Website ▸](https://ads.google.com/home/){:target="_blank"}
 
-## <a name="connecting-and-configuring"></a>Getting started
+## Getting started
 
 1. Inside the admin panel go to **Google BigQuery ▸ Data Sources** page and click **Add data source**.
 2. Choose **Google Ads** from the list.
@@ -35,11 +17,11 @@ Google Ads is an online advertising service developed by Google. With Google Ads
 4. Select Google Ads account by defining proper Customer ID(s). [How to find your Google Ads customer ID ▸](https://support.google.com/google-ads/answer/1704344?hl=en-GB){:target="_blank"}
 5. Enable required reports.
 
-## <a name="reports"></a>Available reports
+## Available reports
 
 SegmentStream allows to import the following reports from Google Ads.
 
-### <a name="keyword-performance-report"></a>Keyword performance
+### Keyword performance
 
 [https://developers.google.com/adwords/api/docs/appendix/reports/keywords-performance-report](https://developers.google.com/adwords/api/docs/appendix/reports/keywords-performance-report){:target="_blank"}
 
@@ -69,7 +51,7 @@ AllConversions | FLOAT | REQUIRED
 FirstPositionCpc | STRING | REQUIRED
 FirstPageCpc | STRING | REQUIRED
 
-### <a name="audience-performance-report"></a>Audience performance
+### Audience performance
 
 [https://developers.google.com/adwords/api/docs/appendix/reports#audience](https://developers.google.com/adwords/api/docs/appendix/reports#audience){:target="_blank"}
 
@@ -96,7 +78,7 @@ AccountDescriptiveName | STRING | REQUIRED
 Conversions | FLOAT | REQUIRED
 AllConversions | FLOAT | REQUIRED
 
-### <a name="criteria-performance-report"></a>Criteria performance
+### Criteria performance
 
 [https://developers.google.com/adwords/api/docs/appendix/reports#criteria](https://developers.google.com/adwords/api/docs/appendix/reports#criteria){:target="_blank"}
 
@@ -127,7 +109,7 @@ AllConversions | FLOAT | REQUIRED
 FirstPositionCpc | STRING | REQUIRED
 FirstPageCpc | STRING | REQUIRED
 
-### <a name="placement-performance-report"></a>Placement performance
+### Placement performance
 
 [https://developers.google.com/adwords/api/docs/appendix/reports#placement](https://developers.google.com/adwords/api/docs/appendix/reports#placement){:target="_blank"}
 
@@ -152,7 +134,7 @@ AccountDescriptiveName | STRING | REQUIRED
 Conversions | FLOAT | REQUIRED
 AllConversions | FLOAT | REQUIRED
 
-### <a name="click-performance-report"></a>Click performance
+### Click performance
 
 [https://developers.google.com/adwords/api/docs/appendix/reports#click](https://developers.google.com/adwords/api/docs/appendix/reports#click){:target="_blank"}
 
@@ -185,7 +167,7 @@ CampaignId | INTEGER | REQUIRED
 CampaignName | STRING | REQUIRED
 AccountDescriptiveName | STRING | REQUIRED
 
-### <a name="campaign-performance-report"></a>Campaign performance
+### Campaign performance
 
 [https://developers.google.com/adwords/api/docs/appendix/reports#campaign](https://developers.google.com/adwords/api/docs/appendix/reports#campaign){:target="_blank"}
 
@@ -210,7 +192,7 @@ AdvertisingChannelSubType | STRING | REQUIRED
 Conversions | FLOAT | REQUIRED
 AllConversions | FLOAT | REQUIRED
 
-### <a name="ad-performance-report"></a>Ad performance
+### Ad performance
 
 [https://developers.google.com/adwords/api/docs/appendix/reports#ad](https://developers.google.com/adwords/api/docs/appendix/reports#ad){:target="_blank"}
 
@@ -247,17 +229,17 @@ AllConversions | FLOAT | REQUIRED
 
 <!-- edit later
 
-### <a name="managed-customers-dictionary"></a>Import "Managed Customers" dictionary
+### Import "Managed Customers" dictionary
 Enable "Managed Customers" dictionary import.
 
-### <a name="user-interest-dictionary"></a>Import "User Interest" dictionary
+### Import "User Interest" dictionary
 Enable "User Interest" dictionary import.
 
-### <a name="adwords-user-list-dictionary"></a>Import "Adwords User List" dictionary
+### Import "Adwords User List" dictionary
 Enable "Adwords User List" dictionary import.
 -->
 
-## <a name="additional-transformation-settings"></a>Additional transformation settings
+## Additional transformation settings
 
 You can read more about additional transformation to group cost data by UTM [here](/datasources/#additional-transformation-settings){:target="_blank"}.
 
@@ -282,7 +264,7 @@ clicks | INTEGER | NULLABLE
 impressions | INTEGER | NULLABLE
 currency | STRING | NULLABLE
 
-### <a name="supported-substitutions"></a>Supported dynamic URL parameters
+### Supported dynamic URL parameters
 
 By default Google Ads allows to use a lot of [dynamic URL tagging parameters](https://support.google.com/google-ads/answer/6305348){:target="_blank"} to track campains.
 
@@ -314,13 +296,13 @@ Session data will be available for unsupported parameters (through custom dimens
 * Session data will be available for unsupported parameters (through custom dimensions) and UTM-tags values.
 
 <!-- edit later
-### <a name="where-to-get-dictionary-data"></a>Where to get dictionary data
+### Where to get dictionary data
 
 - **googleAdsManagedCustomersDict_{CUSTOMER_ID}_{YYYYMMDD}** - data for "Managed Customers" dictionary
 - **googleAdsUserInterestDict_{CUSTOMER_ID}_{YYYYMMDD}** - data for "User Interest" dictionary
 - **googleAdsAdwordsUserListDict_{CUSTOMER_ID}_{YYYYMMDD}** - data for "Adwords User List" dictionary
 
-### <a name="table-structures"></a>Table structures
+### Table structures
 
 ### "Managed Customers" dictionary table structure
 
