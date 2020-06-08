@@ -611,12 +611,6 @@ blockquote {
         padding-left: 10px
     }
 
-    #content p {
-        padding-left: 0px;
-        margin-left: 0px;
-        margin-bottom: 10px
-    }
-
     #content > .page-header:first-child {
         margin-top: 15px;
     }
