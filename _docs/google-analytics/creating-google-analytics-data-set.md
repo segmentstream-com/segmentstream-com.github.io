@@ -7,8 +7,7 @@ order: 2
 date: 2020-06-08
 ---
 
-To make Google Analytics cost import ready for work you need to create a [dataset](https://support.google.com/analytics/answer/6014980){:target="_blank"} which SegmentsStream will use to store imported cost data.
-Below are the steps that explain how to do this.
+To make Google Analytics cost import ready for work you need to create a [dataset](https://support.google.com/analytics/answer/6014980){:target="_blank"} which SegmentStream will use to store imported cost data. Below are the steps that explain how to do this.
 
 ## Creating data set
 
