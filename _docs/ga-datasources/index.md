@@ -32,4 +32,16 @@ To connect a data source you should follow the following steps:
 3. Go through the authentication flow depending on the selected data source:
 ![Authenticate Google Analytics data source](/img/google-analytics/ga-auth-data-source.png)
 
-4. Apply additional transformation settings depending on the selected data source following the instructions in the appropriate documentation of the specific data source.
+4. Apply additional transformation settings following the instructions in the appropriate documentation of the specific data source.
+
+## Google Ads data source
+
+There is no Google Ads data source inside the SegmentStream platform as Google Analytics has a built-in integration for the Google Ads costs import. Please, read moe about this feature using the following links:
+* [Link Google Analytics and Google Ads accounts](https://support.google.com/google-ads/answer/1704341?visit_id=637235865015177230-592091607&rd=1){:target="_blank"}
+* [Link Google Analytics and a Google Ads manager account (MCC)](https://support.google.com/google-ads/answer/6209127?hl=en&ref_topic=3121765){:target="_blank"}
+
+## VAT handling
+
+As far as Google Analytics imports all cost data from Google Ads without VAT, SegmentStream follows the same logic for all other data sources to avoid cost data VAT inconsistency.
+
+Nevertheless, Yandex.Market and VK data sources require additional settings to subtract VAT from the cost data.
