@@ -7,9 +7,6 @@ order: 5
 date: 2020-04-29
 ---
 
-<!---
-In this article explained how to create Google BigQuery dataset
--->
 <ul class="page-navigation">
   <li><a href="#creating-dataset">Creating dataset</a></li>
   <li><a href="#whats-next">What's next</a></li>
