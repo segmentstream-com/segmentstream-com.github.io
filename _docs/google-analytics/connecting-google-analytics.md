@@ -22,3 +22,7 @@ Complete the following steps to connect BigQuery to SegmentStream:
 6. Click **Save**.
 
 Now you've connected your Google Analytics to SegmentStream.
+
+## What's next
+
+* [Connect required data sources](/ga-datasources/index) to enable automatic cost data import.
