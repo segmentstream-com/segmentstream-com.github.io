@@ -25,8 +25,11 @@ To connect a data source you should follow the following steps:
 
 1. Click **Add Data Source** button:
 ![Add Google Analytics cost import data source](/img/google-analytics/ga-add-data-source.png)
+
 2. Select the ad patforrm you would like to import cost data from:
 ![Select Google Analytics data souce](/img/google-analytics/ga-select-data-source.png)
+
 3. Go through the authentication flow depending on the selected data source:
 ![Authenticate Google Analytics data source](/img/google-analytics/ga-auth-data-source.png)
+
 4. Apply additional transformation settings depending on the selected data source following the instructions in the appropriate documentation of the specific data source.
