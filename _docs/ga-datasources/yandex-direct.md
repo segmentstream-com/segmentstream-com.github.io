@@ -16,7 +16,7 @@ date: 2020-06-08
 
 ## Configuration for advertising agencies
 
-If you have an advertising agency account the option **Agency** should be enabled in the data source settings. This options enables the possibility to import cost data for multiple clients which can be selected using **Client logins** dropdown.
+If you have an advertising agency account the option **Agency** should be enabled in the data source settings. This option makes it possible to import cost data for multiple clients which can be selected using **Client logins** dropdown.
 
 Optionally, you can enable **Spend agency points** option. Points are transformed into a certain number of requests to the Yandex.Direct API per unit of time. If this option is enabled, when requesting the Yandex.Direct API, the points of the agency will be used, and not the advertiser.
 
@@ -55,6 +55,15 @@ In order to keep matching visits and ad expenses in the cost analysis reports, m
 * Session data will be available for unsupported parameters (through custom dimensions) and UTM-tags values.
 
 > **Note.** Make sure you tag all campaign [sitelinks](https://yandex.com/support/direct/efficiency/quick-links.html#quick-links){:target="_blank"} the same way you tag the campaign. Otherwise SegmentStream might not be able to properly match clicks from sitelinks with Google Analytics sessions.
+
+## UTM matching for Smart banners and Search banners
+
+Currently, SegmentStream does not support automatic UTM matching for [Smart banners](https://yandex.ru/support/direct/smart-banners/about.html){:target="_blank"} and [Search banners](https://yandex.ru/support/direct/products-media-context-banner/about.html){:target="_blank"}.
+
+This means that you would need to match these types of campaigns mannually inside the SegmentStream admin panel.
+
+For all your Smart banners and Search banners you need to define matching between the **Campaign Id** and **URL parameters**. For example, if you have a Search banner with the **Campaign ID** = `123123123` with the following link to the website: `http://www.site.com/?utm_source=yandex&utm_medium=cpc&utm_campaign={campaign_id}&utm_term={keyword}&utm_content={banner_id}`, the mapping inside the SegmentStream admin panel should look the following way:
+`123123123` -> `utm_source=yandex&utm_medium=cpc&utm_campaign={campaign_id}&utm_term={keyword}&utm_content={banner_id}`
 
 <!--
 > Attention! The [Google BigQuery](/integrations/google-bigquery) integration has to be enabled to use this feature.
