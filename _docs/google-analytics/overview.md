@@ -15,4 +15,3 @@ Importing click and cost data for non-Google search engines and campaigns allows
 
 1. [Creating Google Analytics data set](creating-google-analytics-data-set)
 2. [Connecting Google Analytics to SegmentStream](connecting-google-analytics)
-3. [Troubleshooting](troubleshooting)
