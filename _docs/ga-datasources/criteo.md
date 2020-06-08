@@ -1,7 +1,8 @@
 ---
 layout: page
 section: ga-datasources
-title: "Criteo"
+navigation_title: "Criteo"
+title: "Criteo data source"
 order: 1
 ---
 

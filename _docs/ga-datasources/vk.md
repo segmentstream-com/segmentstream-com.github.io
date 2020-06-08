@@ -1,7 +1,8 @@
 ---
 layout: page
 section: ga-datasources
-title: "Vkontakte"
+navigation_title: "VK"
+title: "VK data source"
 order: 1
 ---
 

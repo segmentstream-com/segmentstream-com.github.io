@@ -1,7 +1,8 @@
 ---
 layout: page
 section: ga-datasources
-title: "Yandex.Market"
+navigation_title: "Yandex.Market"
+title: "Yandex.Market data source"
 order: 5
 date: 2020-06-08
 ---

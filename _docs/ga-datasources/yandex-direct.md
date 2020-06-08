@@ -1,7 +1,8 @@
 ---
 layout: page
 section: ga-datasources
-title: "Yandex.Direct"
+navigation_title: "Yandex.Direct"
+title: "Yandex.Direct data source"
 order: 4
 date: 2020-06-08
 ---

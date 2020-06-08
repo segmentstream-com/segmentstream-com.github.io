@@ -1,7 +1,8 @@
 ---
 layout: page
 section: ga-datasources
-title: "Facebook"
+navigation_title: "Facebook"
+title: "Facebook data source"
 order: 1
 ---
 

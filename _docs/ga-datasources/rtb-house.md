@@ -1,7 +1,8 @@
 ---
 layout: page
 section: ga-datasources
-title: "RTB House"
+navigation_title: "RTB House"
+title: "RTB House data source"
 order: 1
 ---
 

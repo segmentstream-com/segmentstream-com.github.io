@@ -1,7 +1,8 @@
 ---
 layout: page
 section: ga-datasources
-title: "myTarget"
+navigation_title: "myTarget"
+title: "myTarget data source"
 order: 1
 ---
 
