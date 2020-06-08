@@ -6,7 +6,7 @@ order: 2
 ---
 The `Searched Products` event must be pushed to the `digitalData.events` array when a search result page is loaded.
 
-#### From the site code / when using AJAX
+## From the site code / when using AJAX
 ```javascript
 digitalData.events.push({
   name: 'Searched Products'
@@ -14,7 +14,7 @@ digitalData.events.push({
 ```
 
 
-#### From the SegmentStream interface
+## From the SegmentStream interface
 **Trigger**: event `Viewed Page`
 
 **Event handler**:
@@ -24,7 +24,7 @@ if (_digitalData('page.type') === 'search') {
 }
 ```
 
-#### Required by the following integrations:
+## Required by the following integrations:
 * Adwords
 * Criteo
 * Facebook

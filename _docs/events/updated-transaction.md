@@ -42,7 +42,7 @@ digitalData.events.push({
 ```
 > For a detailed description of the `transaction` object, see the section for developers.
 
-#### From the SegmentStream interface
+## From the SegmentStream interface
 **Trigger**: event `Viewed Page`,
 
 **Event handler**:
@@ -58,4 +58,3 @@ if (
   };
 }
 ```
-

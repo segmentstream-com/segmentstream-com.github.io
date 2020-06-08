@@ -6,7 +6,7 @@ order: 2
 ---
 The `Started Order` event must be pushed to the `digitalData.events` array when the page of the first step of the checkout funnel is loaded. Usually the order is started from the page where the user is given the choice of ordering as a guest or as an authorized user.
 
-#### From the site code / when using AJAX
+## From the site code / when using AJAX
 ```javascript
 digitalData.events.push({
   category: 'Ecommerce',
@@ -15,7 +15,7 @@ digitalData.events.push({
 });
 ```
 
-#### From the SegmentStream interface
+## From the SegmentStream interface
 **Trigger**: event `Viewed Page`
 
 **Event handler**:
@@ -32,6 +32,6 @@ if (
 }
 ```
 
-#### Required by the following integrations:
+## Required by the following integrations:
 * [Vkontakte Dynamic Retargeting](/integrations/vkontakte)
 * [RTB House]

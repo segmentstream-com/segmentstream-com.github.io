@@ -11,18 +11,7 @@ In this section you will learn:
 
 The Google Ads dynamic remarketing module allows you to display ads with products that users are interested in.
 
-### Page contents
-------
-<ul class="page-navigation">
-  <li><a href="#introduction">Introduction</a></li>
-  <li><a href="#requiredEvents">Required events</a></li>
-  <li><a href="#conversionID">Conversion ID</a></li>
-  <li><a href="#businessType">Business type</a></li>
-  <li><a href="#productFeed">Product feed has grouped products</a></li>
-  <li><a href="#correctnessOfTheIntegrationSetup">Checking the correctness of the integration setup</a></li>
-</ul>
-
-### <a name="introduction"></a>Introduction
+## Introduction
 ------
 With the help of SegmentStream, you can fully integrate the Google Ads Dynamic Remarketing Module with your site.
 
@@ -36,7 +25,7 @@ To configure the Google Ads integration:
 <br />
 You can read more details about the settings below.
 
-### <a name="requiredEvents"></a>Required events
+## Required events
 ------
 For the correct operation of the Google Ads integration you must configure the filling of certain events in the `digitalData.events` array. The list of events is as follows:
 
@@ -56,15 +45,15 @@ It is also necessary to configure the filling of certain variables of the `digit
 
 > We strongly recommend that you configure the filling of all variables in the `digitalData` object (not just those described above), in accordance with the [documentation](/for-developer/).
 
-### <a name="sdkVersion"></a>SDK version
+## SDK version
 ------
 Use the 'gtag.js' version if you are connecting Google Ads to your website for the first time.
 
-### <a name="conversionID"></a>Conversion ID
+## Conversion ID
 ------
 You can find the conversion tracking ID in the Google Ads system interface.
 
-### <a name="businessType"></a>Business type
+## Business type
 ------
 The code for dynamic Google Ad Remarketing depends on the type of activity selected in the campaign settings. It is necessary in the SegmentStream interface to choose the same type as in the Google Ads API.
 
@@ -74,7 +63,7 @@ For example, if you select the "Retail" type in Google Ads, you must also select
 
 [More about business types](https://support.google.com/google-ads/answer/7305793?hl=en)
 
-### <a name="productFeed"></a>Product feed has grouped products
+## Product feed has grouped products
 ------
 Google Ads receives information about products placed on the site through an XML feed. With a certain interval, the Google robot downloads a feed from your server. This feed contains information about all products on the site.
 
@@ -90,7 +79,7 @@ For correct integration, Google should also receive information about the intera
  -If you do NOT use grouping of goods using the `item_group_id` xml-feed parameter - do not activate this setting.
   >In this case, the product id from your XML feed must match the `product.id` of the `digitalData` object.
 
-### <a name="correctnessOfTheIntegrationSetup"></a>Checking the correctness of the integration setup
+## Checking the correctness of the integration setup
 ------
-After configuring the integration in the SegmentStream interface, but before PUBLICATION - go to the site in test_mode, [go through the conversion funnel and check for errors](/for-analyst/integrations#testing).
+After configuring the integration in the SegmentStream interface, but before PUBLICATION - go to the site in test_mode, [go through the conversion funnel and check for errors](/javascript-sdk/integrations#testing).
 If there are no errors - publish the current version.

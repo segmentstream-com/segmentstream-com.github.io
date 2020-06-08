@@ -18,7 +18,7 @@ The variable `digitalData.version` contains the version of the standard. The las
 ```
 
 
-### Version history
+## Version history
 ------
 **1.1.3 -  May 2018**
 - Added `Updated Cart` server event. Based on this event, SegmentStream automatically creates the `Added Product` and `Removed Product` events, depending on the current basket composition.

@@ -7,25 +7,7 @@ order: 1
 
 The `listing` object contains variables that describe the list of goods: an array of [product](/digitaldata/product) objects, the name of the list, the number of products in the list, sorting, etc.
 
-### Page contents
-------
-<ul class="page-navigation">
-  <li><a href="#introduction">Introduction</a></li>
-  <li><a href="#listing.listName">listing.listName</a></li>
-  <li><a href="#listing.listId">listing.listId</a></li>
-  <li><a href="#listing.items">listing.items</a></li>
-  <li><a href="#listing.categoryId">listing.categoryId</a></li>
-  <li><a href="#listing.category">listing.category</a></li>
-  <li><a href="#listing.query">listing.query</a></li>
-  <li><a href="#listing.resultCount">listing.resultCount</a></li>
-  <li><a href="#listing.pagesCount">listing.pagesCount</a></li>
-  <li><a href="#listing.currentPage">listing.currentPage</a></li>
-  <li><a href="#listing.sortBy">listing.sortBy</a></li>
-  <li><a href="#listing.layout">listing.layout</a></li>
-</ul>
-
-
-### <a name="introduction"></a>Introduction
+## Introduction
 ------
 The `listing` object must be declared and filled in the source code of the page or after the page is loaded in case an AJAX-load catalog is used. The list of products can be located on the search page (`digitalData.page.type` равно 'search'), on a catalog category page (`digitalData.page.type` = 'listing') or on any other page as one or more lists of recommended products (`digitalData.recommendation` equalt to [ `listing`, `listing`, `listing`]).
 
@@ -92,7 +74,7 @@ window.digitalData = {
 
 >The `listing` object in the `digitalData.recommendation` array consists of only 3 variables.
 
-### <a name="listing.listName"></a>listing.listName
+## listing.listName
 ------
 Data type: string.
 
@@ -100,7 +82,7 @@ Data type: string.
 
 >The value of this variable will be displayed as the list name in the [Google Analytics](/integrations/google-analytics) reports
 
-### <a name="listing.listId"></a>listing.listId
+## listing.listId
 ------
 Data type: string.
 
@@ -108,13 +90,13 @@ Data type: string.
 
 >If there are 2 or more lists of goods on one page - each such list must have a unique identifier. Example: on the product category page, you can have both a basic list and a list of recently viewed items.
 
-### <a name="listing.items"></a>listing.items
+## listing.items
 ------
 Data type: array of **product** objects.
 
 `listing.items` - **required** variable that contains an array of objects. Each object describes a product located on the page. [more about the `product` object](/digitaldata/product)
 
-### <a name="listing.categoryId"></a>listing.categoryId
+## listing.categoryId
 ------
 Data type: string.
 
@@ -122,7 +104,7 @@ Data type: string.
 
 >This element must be included only in catalog category pages (pages where digitalData.page.type is equal to "listing").
 
-### <a name="listing.category"></a>listing.category
+## listing.category
 ------
 Data type: Array of strings.
 
@@ -130,7 +112,7 @@ Data type: Array of strings.
 
 >This element must be included only in catalog category pages (pages where digitalData.page.type is equal to "listing").
 
-### <a name="listing.query"></a>listing.query
+## listing.query
 ------
 Data type: string.
 
@@ -139,31 +121,31 @@ Data type: string.
 >This element must be included only in search result pages (pages where digitalData.page.type is equal to "search").
 >This variable should be filled even when there are no search results
 
-### <a name="listing.resultCount"></a>listing.resultCount
+## listing.resultCount
 ------
 Data type: number.
 
 `listing.resultCount` - contains the quantity of all products in this category or the number of all products found.
 
-### <a name="listing.pagesCount"></a>listing.pagesCount
+## listing.pagesCount
 ------
 Data type: number.
 
 `listing.pagesCount` - contains the number of pages with goods (if pagination is present).
 
-### <a name="listing.currentPage"></a>listing.currentPage
+## listing.currentPage
 ------
 Data type: number.
 
 `listing.currentPage` - contains the number of the page which the user is viewing (if pagination is present)
 
-### <a name="listing.sortBy"></a>listing.sortBy
+## listing.sortBy
 ------
 Data type: string.
 
 `listing.sortBy` contains the sort type applied to the list of products. For example: 'price_asc', 'price_desc'
 
-### <a name="listing.layout"></a>listing.layout
+## listing.layout
 ------
 Data type: string.
 

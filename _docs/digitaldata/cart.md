@@ -9,25 +9,7 @@ The object `digitalData.cart` contains variables that describe the contents of t
 
 >Depending on which page the user is on, the composition of the object may vary. For example, the variable `digitalData.cart.shippingMethod` appears only on pages of the checkout process `digitalData.page.type` = 'checkout'
 
-### Page contents
-------
-<ul class="page-navigation">
-  <li><a href="#introduction">Introduction</a></li>
-  <li><a href="#cart.currency">cart.currency</a></li>
-  <li><a href="#cart.subtotal">cart.subtotal</a></li>
-  <li><a href="#cart.total">cart.total</a></li>
-  <li><a href="#cart.lineItems">cart.lineItems</a></li>
-  <li><a href="#cart.id">cart.id</a></li>
-  <li><a href="#cart.vouchers">cart.vouchers</a></li>
-  <li><a href="#cart.voucherDiscount">cart.voucherDiscount</a></li>
-  <li><a href="#cart.shippingMethod">cart.shippingMethod</a></li>
-  <li><a href="#cart.shippingCost">cart.shippingCost</a></li>
-  <li><a href="#cart.paymentMethod">cart.paymentMethod</a></li>
-  <li><a href="#cart.tax">cart.tax</a></li>
-</ul>
-
-
-### <a name="introduction"></a>Introduction
+## Introduction
 ------
 The `digitalData.cart` object must be declared and filled in the source code of each page of the online store:
 
@@ -69,13 +51,13 @@ window.digitalData = {
 }
 ```
 
-### <a name="cart.currency"></a>cart.currency
+## cart.currency
 ------
 Data type: string.
 
 `cart.currency` - **required** variable, which contains the basket currency in the ISO 4217 format (USD, EUR, USD).
 
-### <a name="cart.subtotal"></a>cart.subtotal
+## cart.subtotal
 ------
 Data type: number.
 
@@ -84,13 +66,13 @@ Data type: number.
 
 >Includes discounts applied to specific goods, for example seasonal discounts.
 
-### <a name="cart.total"></a>cart.total
+## cart.total
 ------
 Data type: number.
 
 `cart.total` - **required** variable, which contains the total value of all goods added to the cart, including tax, discounts and shipping costs.
 
-### <a name="cart.lineItems"></a>cart.lineItems
+## cart.lineItems
 ------
 Data type: array of objects.
 
@@ -145,7 +127,7 @@ where,
  - **shippingMethod** - string. An optional variable. Typically, shippingMethod is defined for the whole basket, however, if it is possible to select different delivery methods for different products, this property can be used in the element of the array lineItems
  - **shippingCost** - number. An optional variable. Can be used in case the logic described for shippingMethod is applicable.
 
-### <a name="cart.id"></a>cart.id
+## cart.id
 ------
 Data type: string.
 
@@ -153,7 +135,7 @@ Data type: string.
 
 >This variable is required for the Ofsys integration
 
-### <a name="cart.vouchers"></a>cart.vouchers
+## cart.vouchers
 ------
 Data type: string.
 
@@ -161,13 +143,13 @@ Data type: string.
 
 >If only one promotional code has been applied to the shopping cart, the variable will take the value of an array consisting of one line
 
-### <a name="cart.voucherDiscount"></a>cart.voucherDiscount
+## cart.voucherDiscount
 ------
 Data type: number.
 
 `cart.voucherDiscount` - a variable that contains the total discount after applying all the promotional codes.
 
-### <a name="cart.shippingMethod"></a>cart.shippingMethod
+## cart.shippingMethod
 ------
 Data type: string.
 
@@ -175,7 +157,7 @@ Data type: string.
 
 >This variable appears in the `cart` object only on the page of the order stage.
 
-### <a name="cart.shippingCost"></a>cart.shippingCost
+## cart.shippingCost
 ------
 Data type: number.
 
@@ -183,13 +165,13 @@ Data type: number.
 
 >The shipping cost can be dynamically changed depending on the chosen method of delivery method. To dynamically change any variables, use the `digitalData.changes.push (...)` method.
 
-### <a name="cart.paymentMethod"></a>cart.paymentMethod
+## cart.paymentMethod
 ------
 Data type: string.
 
 `cart.paymentMethod` - a variable that contains the method of payment for the order.
 
-### <a name="cart.tax"></a>cart.tax
+## cart.tax
 ------
 Data type: number.
 

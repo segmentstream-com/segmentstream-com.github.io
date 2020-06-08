@@ -8,17 +8,7 @@ order: 95
 
 Each integration is a connector between `digitalData` and a third-party system. An integration can listen to all events added to the array `digitalData.events`, and also convert events into a format required for a third-party system. If an event is necessary for a system, **SegmentStream** sends it.
 
-### Page contents
-------
-<ul class="page-navigation">
-  <li><a href="#introduction">Introduction</a></li>
-  <li><a href="#setup">Setup</a></li>
-  <li><a href="#eventVariables">Event variables</a></li>
-  <li><a href="#testing">Testing</a></li>
-  <li><a href="#publication">Publication</a></li>
-</ul>
-
-### <a name="introduction"></a> Introduction
+##  Introduction
 ------
 For integrations to work, you will need to configure the addition of semantic events to the `digitalData.events` array: [Viewed Product Detail](/events/viewed-product-detail), [Clicked Product](/events/clicked-product), [Added Product](/events/added-product), [Completed Transaction](/events/completed-transaction), and others. Each integration uses its own set of events. The complete list of reserved events is described in the documentation.
 
@@ -28,7 +18,7 @@ The integration management interface contains 2 tabs:
 
 The typical process for connecting any integration is described below.
 
-### <a name="setup"></a> Setup
+##  Setup
 ------
 On the "Integration" screen, select the system that you want to connect and click on the card of this system.
 
@@ -38,7 +28,7 @@ On the "Integration" screen, select the system that you want to connect and clic
 
 You can set up the integration inside the panel. Read more about each integration in the appropriate section of the documentation.
 
-### <a name="eventVariables"></a> Event variables
+##  Event variables
 ------
 Let's take a look at an example of the product identifier override depending on the region of the user on a Google Adwords integration.
 1. Click the "Event Variables" tab and click "Add"
@@ -57,7 +47,7 @@ If before in Google Adwords the following value of the productId variable would 
  - '3856003' - is the skuCode, it has a different values for each variation of this product. For example, for sneakers of a certain color and size 40, the value will be '3856001', for the same sneakers of size 41 - '3856002'.
  - '3856003-moscow' - is the value of the product identifier, as marked in the XML-feed sent to Google Adwords for the 'Moscow' region.
 
-### <a name="testing"></a> Testing
+##  Testing
 ------
 Testing is necessary after setting up an integration. This can be done in **test_mode** mode.
 
@@ -77,6 +67,6 @@ Open the console (right mouse button -> View page code). In the console, you wil
 
 If there is an error, pay attention to the line indicating the error. The most common mistake is that you do not pass the variable you need to integrate into digitalData when loading the page.
 
-### <a name="publication"></a> Publication
+##  Publication
 ------
 After you test the integration in test_mode mode, you can publish the project. To do this, click the "Publish" button at the top right of the page.

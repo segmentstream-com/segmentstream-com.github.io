@@ -11,18 +11,7 @@ In this section, you will learn:
 
 Dynamic Yield is a website personalization platform. SegmentStream allows you to send data about the behavior of your users to [Dynamic Yield](https://www.dynamicyield.com/).
 
-### Page contents
-------
-<ul class="page-navigation">
-  <li><a href="#introduction">Introduction</a></li>
-  <li><a href="#Requirements">Requirements</a></li>
-  <li><a href="#requiredEventsAndVariables">Required events and variables</a></li>
-  <li><a href="#AccountID">Account ID</a></li>
-  <li><a href="#ProductFeed">Product feed has grouped products</a></li>
-  <li><a href="#features">Features</a></li>
-</ul>
-
-### <a name="introduction"></a>Introduction
+## Introduction
 ------
 With SegmentStream, you can fully integrate Dynamic Yield with your site.
 
@@ -33,11 +22,11 @@ To set up integration with Dynamic Yield:
 ![](/img/integrations.dynamicyield.settings.png)
 
 
-### <a name="Requirements"></a>Requirements
+## Requirements
 ------
 Before setting up the integration in the SegmentStream panel, you need to register in the connected system and ask your Dynamic Yield manager for your `Account ID` value.
 
-### <a name="requiredEventsAndVariables"></a>Required events and variables
+## Required events and variables
 ------
 For the correct integration of your site with Dynamic Yield - you need to configure the transfer of events in the `digitalData.events` array.
 The list of events is as follows:
@@ -61,11 +50,11 @@ The list of events is as follows:
 * [transaction](/digitaldata/transaction)
 * [user](/digitaldata/user)
 
-### <a name="AccountID"></a>Account ID
+## Account ID
 ------
 This identifier is used when initially loading the Dynamic Yield API to your website.
 
-### <a name="ProductFeed"></a>Product feed has grouped products
+## Product feed has grouped products
 ------
 Dynamic Yield receives information about products placed on the site through a CSV, JSON, XML feed. With a certain interval, the Dynamic Yield robot downloads a feed from your server. This feed contains information about all products on the site.
 
@@ -79,7 +68,7 @@ For correct integration, Dynamic Yield should also receive information about the
  -If you do NOT use grouping of goods using the `group_id` feed parameter - do not activate this setting.
   >In this case, the product id from your feed must match the `product.id` of the `digitalData` object.
 
-### <a name="features"></a>Features
+## Features
 ------
 Once the integration is set up, the following features of the Dynamic Yield integration will be activated:
 
@@ -99,4 +88,3 @@ SegmentStream currently supports the following Dynamic Yield events:
 * Login
 * Signup
 * Newsletter Subscription
-

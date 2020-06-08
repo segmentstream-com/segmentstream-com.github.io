@@ -11,7 +11,7 @@ order: 1
 
 After enabling this data source, campaign statistics information will be uploaded to BigQuery once every 24 hours.
 
-### Connecting and configuring
+## Connecting and configuring
 
 The process of connecting data sources is described in detail in the [overview](https://docs.segmentstream.com/datasources/index).
 
@@ -52,7 +52,9 @@ The "Disconnect" button (4) is used to revoke the authorization data. The settin
 - **yandexMarketCampaignStatistics_{shop_id}_{DATE}** - report containing information by shop offers (clicks, spending), see table structure below.
 - **yandexMarketCosts_{shop_id}_{DATE}** - report containing information on clicks, impressions and cost of the shop offers
 
-### Table structure for yandexMarketCampaignStatistics
+## Table structure
+
+### yandexMarketCampaignStatistics
 
 Field name|Type|Mode
 --- | --- | ---
@@ -62,7 +64,7 @@ clicks | INTEGER | REQUIRED
 campaign_name | STRING | REQUIRED
 
 
-### Table structure for yandexMarketCosts
+### yandexMarketCosts
 
 Field name|Type|Mode
 --- | --- | ---

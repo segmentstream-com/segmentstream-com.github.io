@@ -6,7 +6,7 @@ order: 2
 ---
 The `Updated Cart` event must be pushed to the `digitalData.events` array whenever the cart contents are modified, such as: adding/removing products, changing the quantity of products in the cart, emptying the cart.
 
-#### From the site code / when using AJAX
+## From the site code / when using AJAX
 When the user's cart is updated, the website should send an `Updated Cart` event.
 Note, that the `cart` object in the event must represent the complete state of the user's cart after the changes have been made.
 
@@ -113,10 +113,10 @@ If your [digitalData version](/digitaldata/standard-version) is '1.1.3' or highe
 
 For a detailed description of the [`cart`](/digitaldata/cart) object, see the developer section.
 
-#### From the SegmentStream interface
+## From the SegmentStream interface
 > `Updated Cart` is a server event. We recommend pushing it to the `digitalData.events` array from the site code. Do not create the `Updated Cart` event based on a `Add to cart` button click trigger. Clicking on the button does not guarantee that the cart's content on the server will update.
 
-#### Required by the following integrations:
+## Required by the following integrations:
 * Mindbox
 * RTB House
 * Ofsys

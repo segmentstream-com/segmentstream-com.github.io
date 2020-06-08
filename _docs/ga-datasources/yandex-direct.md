@@ -13,7 +13,7 @@ After enabling this data source, Yandex.Direct advertising costs information wil
 
 This integration is available for both ordinary advertisers and advertising agencies.
 
-### Connecting and configuring
+## Connecting and configuring
 
 The process of connecting data sources is described in detail in the [overview](https://docs.segmentstream.com/datasources/index).
 

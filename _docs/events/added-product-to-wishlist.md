@@ -6,7 +6,7 @@ order: 2
 ---
 The `Added Product to Wishlist` event must be pushed to the `digitalData.events` array when a user adds a product to their Wishlist.
 
-#### From the site code / when using AJAX
+## From the site code / when using AJAX
 ```javascript
 digitalData.events.push({
   name: 'Added Product to Wishlist',
@@ -16,7 +16,7 @@ digitalData.events.push({
 ```
 > For a detailed description of the `product` object, see the developer section.
 
-#### From the SegmentStream interface
+## From the SegmentStream interface
 > If you are sure that the product will be added to the user's Wishlist by clicking on the "Add to Favorites" button, you can use the following event settings:
 
 **Триггер**: `click`,
@@ -33,5 +33,5 @@ return {
 };
 ```
 
-#### Required by the following integrations:
+## Required by the following integrations:
 * Facebook

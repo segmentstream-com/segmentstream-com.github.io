@@ -13,19 +13,7 @@ In this section you will learn:
 
 Vkontakte is a social network with a small set of advertising tools. Vkontakte is able to create audiences based on site events and show ads to these audiences. In November 2017 Vkontakte added dynamic product remarketing. SegmentStream allows you to send data about the behavior of your users to [Vkontakte](https://vk.com/dev/manuals).
 
-### Page contents
-------
-<ul class="page-navigation">
-  <li><a href="#introduction">Introduction</a></li>
-  <li><a href="#vkontaktePixelID">Vkontakte pixel ID</a></li>
-  <li><a href="#productFeed">Product feed has grouped products</a></li>
-  <li><a href="#pricelistID">Default pricelist ID for dynamic retargeting</a></li>
-  <li><a href="#customEvents">Custom events</a></li>
-  <li><a href="#customEventsOld">Custom events (old version)</a></li>
-</ul>
-
-
-### <a name="introduction"></a>Introduction
+## Introduction
 ------
 Using SegmentStream, you can fully integrate Vkontakte with your site.
 
@@ -40,7 +28,7 @@ To configure the Vkontakte integration:
 
 You can read more details about the settings below.
 
-### <a name="vkontaktePixelID"></a>Vkontakte pixel ID
+## Vkontakte pixel ID
 ------
 The Vkontakte SegmentStream integration allows you to connect any number of Pixel IDs you need.
 
@@ -51,7 +39,7 @@ You can find the Pixel ID in the section: Advertising > Targeting > Retargeting 
 
 Copy the ID and paste it into the "Vkontakte pixel ID" field of the integration settings window.
 
-### <a name="productFeed"></a>Product feed has grouped products
+## Product feed has grouped products
 ------
 Vkontakte receives information about products placed on the site through an XML feed. With a certain interval, the Vkontakte robot downloads a feed from your server. This feed contains information about all products on the site.
 
@@ -68,7 +56,7 @@ For correct integration, Vkontakte should also receive information about the int
   >In this case, the product id from your XML feed must match the `product.id` of the `digitalData` object.
 
 
-### <a name="pricelistID"></a>Pricelist ID for dynamic retargeting
+## Pricelist ID for dynamic retargeting
 ------
 
 For the correct operation of the system, you must specify the pricelist identifier for each connected pixel. It can be set as a constant or dynamic parameter. Set the value as 1 if the prices on your site do not vary from region to region.
@@ -102,7 +90,7 @@ For the correct operation of the dynamic retargeting module, the following event
 
 >Dynamic retargeting only works with the new version of the pixel.
 
-### <a name="customEvents"></a>Custom events
+## Custom events
 ------
 SegmentStream can pass any event to Vkontakte.
 To set up the transmission of an event you have to fill in two fields:
@@ -113,7 +101,7 @@ You can add an unlimited number of events.
 
 [Vkontakte guide on events](https://vk.com/support?act=home_ads&union_id=1602826263)
 
-### <a name="customEventsOld"></a>Custom events (old version)
+## Custom events (old version)
 ------
 In the deprecated version of the API for each event in the VKontakte interface you need to create a special tracker.
 To set up the transmission of data to those trackers you have to fill in two fields:

@@ -7,11 +7,11 @@ order: 1
 
 > Attention! The [Google BigQuery](/integrations/google-bigquery) integration has to be enabled to use this feature.
 
-### Importing data from RTB House
+## Importing data from RTB House
 
 After enabling this data source, RTB House advertising costs information will be uploaded to Google BigQuery once every 24 hours.
 
-### Connecting and configuring
+## Connecting and configuring
 
 The process of connecting data sources is described in detail in the [overview](https://docs.segmentstream.com/datasources/index).
 
@@ -36,14 +36,14 @@ The "Disconnect" button (6) is used to revoke the authorization data. The settin
 
 You can enable or disable the data source at any time (5).
 
-### Where to get data on advertising costs
+## Where to get data on advertising costs
 
 - **rtbHouseCosts_{USER_LOGIN}_{YYYYMMDD}** - data for normalized costs
 - **rtbHouseCategoryStatsReport_{USER_LOGIN}_{YYYYMMDD}** - data for advertisers statistics report
 
-### Table structure
+## Table structure
 
-#### **rtbHouseCosts**
+### **rtbHouseCosts**
 
 Field name|Type|Mode
 --- | --- | ---
@@ -60,7 +60,7 @@ currency | STRING | NULLABLE
 
 Note, that clicks and impressions are float.
 
-#### **rtbHouseCategoryStatsReport**
+### **rtbHouseCategoryStatsReport**
 
 Field name|Type|Mode
 --- | --- | ---
