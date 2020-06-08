@@ -289,9 +289,6 @@ If you use some of the unsupported parameters in UTM-tags you’ll see the param
 
 In order to keep matching visits and ad expenses in the cost analysis reports, move the unsupported parameters from UTM-tags to additional custom GET-parameters and collect them to custom dimensions in Google Analytics:
 
-Cost data will be available only for UTM-tags values.
-Session data will be available for unsupported parameters (through custom dimensions) and UTM-tags values.
-
 * Cost data will be available only for UTM-tags values.
 * Session data will be available for unsupported parameters (through custom dimensions) and UTM-tags values.
 
