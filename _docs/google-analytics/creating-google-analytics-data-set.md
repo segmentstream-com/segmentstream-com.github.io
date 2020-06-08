@@ -23,7 +23,6 @@ Below are the steps that explain how to do this.
 
 4. Enter the **Data Set Name** and choose the **Enabled Views**. Cost data will be available only for the selected views:
 ![Google Analytics Data Set details](/img/google-analytics/ga-data-set-details.png)
-
 > Note: If you want to import your ad cost data to several views at once, you need to select these views while creating the data set. Note that SegmentStream will use the first view in the list to determine the cost data currency. This currency will be used to convert all cost data for all selecte views.
 
 5. Choose all the dimensions and metrics as shown in the screenshot, select **Import Behavior** as **Overwrite** and click **Save**:
