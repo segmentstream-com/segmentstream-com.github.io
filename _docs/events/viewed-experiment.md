@@ -6,7 +6,7 @@ order: 2
 ---
 The `Viewed Experiment` event must be pushed to the `digitalData.events` array the moment the user is split into one of the variations of a split-test.
 
-#### From the site code / when using AJAX
+## From the site code / when using AJAX
 ```javascript
 digitalData.events.push({
   name: 'Viewed Experiment',
@@ -24,7 +24,7 @@ digitalData.events.push({
 
 > `nonInteraction` is a boolean type variable that is used for controlling whether the event hit will affect the bounce rate on a page. By default, the variable has the value `false` and the event hit is considered an interaction hit, when its value is set to `true`, the type of event hit is not considered an interaction hit.
 
-#### From the SegmentStream interface
+## From the SegmentStream interface
 **Trigger**: event `Viewed Cart`,
 
 **Event handler**:
@@ -57,5 +57,5 @@ if(_digitalData('user.abGroup') === 1) {
 }
 ```
 
-#### Required by the following integrations:
+## Required by the following integrations:
 * Driveback

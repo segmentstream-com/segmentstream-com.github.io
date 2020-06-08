@@ -12,7 +12,7 @@ The SegmentStream container snippet is a small piece of JavaScript code that you
 
 To implement SegmentStream on your website:
 
-Copy the following JavaScript and paste it as close to the opening <head> tag as possible on every page of your website, replacing `<PROJECT_ID>` with your project ID, or open the ["Project Info"](/for-analyst/project-info) menu in the desired project's admin panel, and copy the prepared code.
+Copy the following JavaScript and paste it as close to the opening <head> tag as possible on every page of your website, replacing `<PROJECT_ID>` with your project ID, or open the "Project Info" menu in the desired project's admin panel, and copy the prepared code.
 
 ```html
 <!-- SegmentStream snippet -->

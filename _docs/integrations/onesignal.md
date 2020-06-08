@@ -12,29 +12,15 @@ In this section you will learn:
 OneSignal is a system for sending cross-browser and cross-platform push notifications. OneSignal is able to create audiences based on the events on the site and send browser-based pushes to this audience. SegmentStream allows you to send data about the behavior of your users to [OneSignal](https://onesignal.com/).
 
 
-### Page contents
-------
-<ul class="page-navigation">
-  <li><a href="#introduction">Introduction</a></li>
-  <li><a href="#oneSignalAppID">OneSignal App ID</a></li>
-  <li><a href="#automaticRegistration">Automatic registration</a></li>
-  <li><a href="#pushSubscriptionTrigger">Push subscription trigger event</a></li>
-  <li><a href="#useSlidePrompt">Use Slide Prompt</a></li>
-  <li><a href="#slidePromptOptions">Slide Prompt Options</a></li>
-  <li><a href="#tagSettings">Tag settings</a></li>
-  <li><a href="#systemPopupEvents">Tracking system popup events</a></li>
-</ul>
-
-
-### <a name="introduction"></a>Introduction
+## Introduction
 ------
 Using SegmentStream, you can fully integrate OneSignal with your site.<br />
-[OneSignal Documentation](https://documentation.onesignal.com/docs/web-push-sdk-setup-https)
+[OneSignal Documentation](https://documentation.onesignal.com/docs/web-push-sdk)
 
 > We recommend that you first fully transfer your site to https. In this case, the process of subscribing to push notifications for your users will be easier.
 
 >Before configuring the integration in the SegmentStream interface you need to install 3 files to the root of your site.<br/>
-For details, see the [OneSignal documentation](https://documentation.onesignal.com/docs/web-push-sdk-setup-https#section-2-upload-required-files)
+For details, see the [OneSignal documentation](https://documentation.onesignal.com/docs/web-push-sdk)
 
 To configure the OneSignal integration:
 1. Log in on the [segmentstream.com](https://admin.segmentstream.com/) website and go to the integration management panel
@@ -46,7 +32,7 @@ To configure the OneSignal integration:
 You can read more details about the settings below.
 
 
-### <a name="oneSignalAppID"></a>OneSignal App ID
+## OneSignal App ID
 ------
 You can find the App ID in the OneSignal interface.
 
@@ -54,13 +40,13 @@ You can find the App ID in the OneSignal interface.
 
 Copy the ID and paste it into the "OneSignal App ID" field of the integration settings window.
 
-### <a name="automaticRegistration"></a>Automatic registration
+## Automatic registration
 ------
 If you enable this toggle switch, the subscription window will appear immediately after the first page of your site is loaded.
 
 > We do not recommend using this method of collecting subscriptions.
 
-### <a name="pushSubscriptionTrigger"></a>Push subscription trigger event
+## Push subscription trigger event
 ------
 In order for the user to receive push notifications, he must first subscribe. The subscription form depends only on the version of the browser, you can not change it in any way. You can only control the moment the form appears in the user's browser.
 
@@ -68,7 +54,7 @@ In order for the user to receive push notifications, he must first subscribe. Th
 
 SegmentStream allows you to control the moment the subscription window is displayed. To specify this point, specify the name of the event in the corresponding field. After this event occurs (it will be pushed to the `digitalData.events` array), a standard window for subscribing to push notifications will be displayed.
 
-### <a name="useSlidePrompt"></a>Use Slide Prompt
+## Use Slide Prompt
 ------
 If you enable this toggle switch, a stylized OneSignal popup will appear instead of the system subscription window.
 
@@ -77,7 +63,7 @@ If you enable this toggle switch, a stylized OneSignal popup will appear instead
 >This option only works if the 'Custom Code' setup was selected in the OneSignal cabinet.
 >When using this option without the 'Custom Code' setup, the configurations setup inside the OneSignal cabinet will be overwritten.
 
-### <a name="slidePromptOptions"></a>Slide Prompt Options
+## Slide Prompt Options
 ------
 When you turn on the "Use Slide Prompt" toggle switch, the OneSignal pop-up window apears with the standart text, as shown in the screenshot above.<br>
 You can customize this text using the Slide Prompt Options. The text configuration is divided into 3 parts:
@@ -90,7 +76,7 @@ Blank fields are displayed with the standard text.
 Configuration example and the result:
 ![](/img/integrations.onesignal.7.png)
 
-### <a name="tagSettings"></a>Tag settings
+## Tag settings
 ------
 OneSignal provides ample opportunities for building trigger communications. For example, you can configure the sending of push notifications to those users who put the goods in the basket and left (the abandoned basket). For this, the system must know the composition of the basket each time the page is loaded.
 
@@ -103,7 +89,7 @@ To configure the transfer of variables, fill in 3 fields:
 
 See the first screenshot for an example.
 
-### <a name="systemPopupEvents"></a>Tracking system popup events
+## Tracking system popup events
 ------
 OneSignal gives you the option to subscribe to the events of interaction with the push notifications subscription system. There are 3 ways to interact:
  - Click on "Allow" - "Allowed Push Notifications"

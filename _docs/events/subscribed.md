@@ -7,7 +7,7 @@ order: 2
 The `Subscribed` event must be pushed to the `digitalData.events` array when the server responds with a message about a successful user newsletter subscription.
 The user might subscribe to the newsletter in different fields or campaigns, for example in the footer, in a pop-up window, etc., he might also subscribe to different types of newsletter mediums, for example: email, phone.
 
-#### From the site code / when using AJAX
+## From the site code / when using AJAX
 
 Simple example:
 ```javascript
@@ -51,10 +51,10 @@ digitalData.events.push({
 ```
 
 
-#### From the SegmentStream interface
+## From the SegmentStream interface
 The `Subscribed` event can not be created from the built-in SegmentStream triggers. The event must be added from the site code.
 
-#### Required by the following integrations:
+## Required by the following integrations:
 * Criteo
 * Facebook
 * Retail Rocket

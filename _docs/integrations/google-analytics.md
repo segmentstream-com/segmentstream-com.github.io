@@ -13,35 +13,9 @@ In this section you will learn:
 * How to pass custom dimensions, metrics and content groups
 * How to fine-tune Google Analytics tracking on your site
 
-SegmentStream makes it easy to send data about your users' behavior to [Google Analytics](https://analytics.google.com/). After full [integration of digitalData with your site](/for-developer/), you can go to the integration setup in the SegmentStream panel.
+SegmentStream makes it easy to send data about your users' behavior to [Google Analytics](https://analytics.google.com/). After full [integration of digitalData with your site](/javascript-sdk/digitaldata), you can go to the integration setup in the SegmentStream panel.
 
-### Page contents
-------
-<ul class="page-navigation">
-  <li><a href="#introduction">Introduction</a></li>
-  <li><a href="#trackingID">Tracking ID</a></li>
-  <li><a href="#eventTracking">Event tracking</a></li>
-  <li><a href="#useProxy">Use Proxy</a></li>
-  <li><a href="#enhancedEcommerceModule">Enhanced Ecommerce module</a></li>
-  <li><a href="#userId">User Id</a></li>
-  <li><a href="#enhancedLinkAttribution">Enhanced link attribution</a></li>
-  <li><a href="#anonymizeIP">Anonymize IP</a></li>
-  <li><a href="#transliterate">Transliterate cyrillic symbols</a></li>
-  <li><a href="#cross-domainTracking">Enable cross-domain tracking</a></li>
-  <li><a href="#currency">Default Currency</a></li>
-  <li><a href="#siteSpeed">Site speed sample rate</a></li>
-  <li><a href="#websiteDomain">Website domain</a></li>
-  <li><a href="#clientId">ClientId</a></li>
-  <li><a href="#containerID">Optimize Container ID</a></li>
-  <li><a href="#metrics">Metrics</a></li>
-  <li><a href="#dimensions">Dimensions</a></li>
-  <li><a href="#contentGroups">Content groups</a></li>
-  <li><a href="#namespace">Namespace</a></li>
-  <li><a href="#serverSide">Server Side</a></li>
-  <!-- <li><a href="#checkoutOptions">Checkout options</a></li> -->
-</ul>
-
-### <a name="introduction"></a>Introduction
+## Introduction
 ------
 With the help of SegmentStream, you can fully integrate Google Analytics with your website: events, advanced e-commerce, special metrics and parameters, content groups and much more. <br />
 [Google Analytics integration guide](https://support.google.com/analytics#topic=3544906) <br/><br/>
@@ -55,14 +29,14 @@ You can read more details about the settings below.
 
 > Important! To work with the main Google Analytics tracker, you need to configure the [Viewed Page](/events/viewed-page) event.
 
-### <a name="trackingID"></a>Tracking ID
+## Tracking ID
 ------
 To set up site tracking, you must create a resource in your Google Analytics account. When creating a resource, Google Analytics will generate a unique tracking ID. Look at the screenshot below for help on how to find it.
 ![](/img/integrations.ga.id.png)
 Copy the tracking ID and paste it into the appropriate field in the SegmentStream interface.
 ![](/img/integrations.ga.settings.id.png)
 
-### <a name="eventTracking"></a>Event tracking
+## Event tracking
 ------
 By default, SegmentStream sends all the events that are pushed to the `digitalData.events` array to Google Analytics.
 
@@ -99,15 +73,13 @@ ga('send', {
 
 [Google guide on event tracking](https://developers.google.com/analytics/devguides/collection/analyticsjs/events?hl=en)
 
-### <a name="useProxy"></a>Use Proxy
+## Use Proxy
 ------
 You can activate this setting if your users ISPs might be blocking requests to the Google Analytics server.
 
-### <a name="enhancedEcommerceModule"></a>Enhanced Ecommerce module
+## Enhanced Ecommerce module
 ------
 Google Analytics allows you to track the interaction of users with your products: product impressions in catalogs, product clicks, detailed viewing of product pages, adding to cart, orders and more. The integration SegmentStream allows you to connect or disconnect the advanced e-commerce module in 1 click.
-
-[Google Enhanced Ecommerce guide](https://support.google.com/analytics/answer/6166254?hl=en)
 
 > Important! You must configure the transmission of certain events to the `digitalData.events` array for the Enhanced Ecommerce module to work correctly. The list of events is as follows:
 
@@ -129,53 +101,53 @@ Google Analytics allows you to track the interaction of users with your products
 * [Searched Products](/events/searched-products)
 * [Viewed Cart](/events/searched-products)
 
-### <a name="userId"></a>User Id
+## User Id
 ------
 If SegmentStream is correctly integrated into your site, it means that on each page you have passed the visitor ID from your CRM or ERP to the digitalData.user.id variable. Google Analytics allows you to glue your user sessions from different browsers or devices into one story thanks to the "USER-ID" module. You can enable or disable USER-ID sending in Google Analytics in 1 click.
 
 [Google USER-ID guide](https://support.google.com/analytics/answer/3123662?hl=en)
-### <a name="enhancedLinkAttribution"></a>Enhanced link attribution
+## Enhanced link attribution
 ------
 The improved link attribution module allows you to automatically distinguish links on a page that lead to the same URL. This can be useful if you are using the Page Analytics extension for Chrome. This extension adds a layer of analytical data on top of the page. The extension highlights each link and displays a set of KPIs. In case if the improved link attribution was not enabled, KPIs for 2 links leading to the same URL would have identical values.
 
 [Google Enchanced link attribution guide](https://developers.google.com/analytics/devguides/collection/analyticsjs/enhanced-link-attribution)
-### <a name="anonymizeIP"></a>Anonymize IP
+## Anonymize IP
 ------
 Google Analytics allows site owners to hide their visitors' IP addresses when processing data. Enable or disable the IP anonymization feature in 1 click.
 
 [Google IP anonymization guide](https://support.google.com/analytics/answer/2763052?hl=en)
 
-### <a name="transliterate"></a>Transliterate cyrillic symbols
+## Transliterate cyrillic symbols
 ------
 You can activate this setting if you are sending cyrillic symbols to GA. By transliterating you can significantly reduce the size of hits and events that contain product names, descriptions, etc.
 
-### <a name="cross-domainTracking"></a>Enable cross-domain tracking
+## Enable cross-domain tracking
 ------
 By default, Google Analytics does not glue together user visits to different second-level domains into the same history. This function could be necessary if different parts of the same site are on different domains, for example: an online store - https://shop.com and a blog - https://blog.com. To send information about the behavior of a particular visitor on different domains in the same Google Analytics property, you must enable cross-domain tracking.
 Activate the "Enable cross-domain tracking" feature and add all the domains you want to link.
 
-[Справка Google по кроссдоменному отслеживанию](https://support.google.com/analytics/answer/1034342?hl=en)
+[Cross-domain measurement guide](https://support.google.com/analytics/answer/1034342?hl=en)
 
-### <a name="currency"></a>Currency
+## Currency
 ------
 In Google Analytics, there is a set of options for the enhanced e-commerce module that represent monetary values ​​in different currencies, for example: revenue from goods, transaction revenue, shipping costs, etc. A list of supported currencies is described in the Google currency guide. Important! If the currency specified in the SegmentStream integration settings is different from the global presentation currency (specified in the Analytics settings), Google Analytics will convert at the exchange rate for the previous day.
 
 [Google currency guide](https://support.google.com/analytics/answer/6205902?hl=en)
 
 
-### <a name="siteSpeed"></a>Site speed sample rate
+## Site speed sample rate
 ------
 Google allows you to specify the percentage of users whose data will be collected to track the speed of the site. The default value is 1.
 
 [Google guide on site speed sample rate](https://developers.google.com/analytics/devguides/collection/analyticsjs/field-reference#siteSpeedSampleRate)
 
-### <a name="websiteDomain"></a>Website domain
+## Website domain
 ------
 In this setting, you can specify the domain in which the cookie will be stored with the unique visitor ID of your site. We recommend using the default value: `auto`. In this case, the Google Analytics library automatically saves all cookies to the highest-level domain.
 
 [Google guide on Cross-domain tracking](https://developers.google.com/analytics/devguides/collection/analyticsjs/cross-domain)
 
-### <a name="clientId"></a>ClientId
+## ClientId
 ------
 Google Analytics identifies different hits from the same site visitor using ClientId.
 The identifier is generated by the analytics.js library and stored in the visitor's cookies.
@@ -184,13 +156,13 @@ Select the number of the custom parameter in the drop-down list below the "Clien
 
 [Google guide on ClientId](https://developers.google.com/analytics/devguides/collection/analyticsjs/cookies-user-id)
 
-### <a name="containerID"></a>Optimize Container ID
+## Optimize Container ID
 ------
 If you are using Google Optimize you can pass the container ID into this field.
 
 [Google guide on Optimize](https://support.google.com/tagmanager/answer/7164339?hl=en)
 
-### <a name="metrics"></a>Metrics
+## Metrics
 ------
 In Google Analytics, you can send custom metrics. The indicator is a quantitative value (integer, fractional number, time). For example: the number of sessions, the amount of the order, the depth of viewing, etc. Metrics can be transmitted at different levels:
 - at hit level (any interaction of the user with the site, information about which goes to the Google Analytics server)
@@ -212,7 +184,7 @@ In order to configure the transfer of a custom metric:
 
 [Google Guide on custom metrics](https://support.google.com/analytics/answer/2709829?hl=en#set_up_custom_metrics)
 
-### <a name="dimensions"></a>Dimensions
+## Dimensions
 ------
 In Google Analytics, you can pass custom dimensions. Parameters are data attributes. All metrics (numeric data) are calculated in the parameter sections. Examples of parameters: Traffic source, Page URL, Region, etc. Parameters can be transmitted at different levels:
   - at hit level (information isn't aggregated)
@@ -226,7 +198,7 @@ In Google Analytics, you can pass custom dimensions. Parameters are data attribu
 
 [Google guide on custom dimensions](https://support.google.com/analytics/answer/2709829?hl=en#set_up_custom_dimensions)
 
-### <a name="contentGroups"></a>Content groups
+## Content groups
 ------
 In Google Analytics, you can view reports not only in the slices of certain page addresses, but also in page groups. You can set these groups to your liking. For example, you can create a "Page type" content group and upload the value of the `digitalData.page.type` variable every time the page loads.
 1. Create a content group:
@@ -236,18 +208,18 @@ In Google Analytics, you can view reports not only in the slices of certain page
 
 [Google guide on Content Grouping](https://support.google.com/analytics/answer/2853546?hl=ru)
 
-### <a name="namespace"></a>Namespace
+## Namespace
 ------
 The analytics.js library allows you to create not one but several counters on the same page. This can be useful if you are sending data to two or more resources. For example, if you have an international business and you collect data from all regions in one common resource, but each region has its own resource with its own special settings.
 We recommend that you specify a unique value, for example `ss`.
 
 [Google on Working with multiple trackers](https://developers.google.com/analytics/devguides/collection/analyticsjs/creating-trackers?hl=en#working_with_multiple_trackers)
 
-### <a name="serverSide"></a>Server Side
+## Server Side
 ------
-When you track an event with the **[HTTP API](/for-developer/http-api)** we will send it along to the Google Analytics REST API using [Measurement Protocol](https://developers.google.com/analytics/devguides/collection/protocol/v1/devguidehttps://developers.google.com/analytics/devguides/collection/protocol/v1/devguide).
+When you track an event with the **[HTTP API](/http-api/overview)** we will send it along to the Google Analytics REST API using [Measurement Protocol](https://developers.google.com/analytics/devguides/collection/protocol/v1).
 
-### Combining Server-side and Client-side Events
+## Combining Server-side and Client-side Events
 
 Google Analytics uses cookies to keep track of visitors and their sessions while visiting your website. The cookie data is stored in the visitor’s browser, and is sent along to Google Analytics every time a new event occurs. This allows Google Analytics to show a single unique visitor between multiple page reloads.
 
@@ -255,7 +227,7 @@ Your servers also have access to this cookie, so they can re-use it when you sen
 
 If you want to use server-side Google Analytics you need to p**ass your Google Analytics cookies to SegmentStream**.
 
-### Passing Cookies from Universal Analytics
+## Passing Cookies from Universal Analytics
 
 Universal Analytics (analytics.js) uses the [`clientId`](https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage#analyticsjs) to keep track of unique visitors.
 
@@ -277,7 +249,7 @@ If you want our server-side destination to use your user’s `clientId`, pass i
 
 *Here’s an example:*
 
-### Completed Transaction ~> ('ec:setAction', 'purchase')
+## Completed Transaction ~> ('ec:setAction', 'purchase')
 
 ```json
 {
@@ -312,7 +284,7 @@ If you want our server-side destination to use your user’s `clientId`, pass i
 
 ```
 
-### Refunded Transaction ~> ('ec:setAction', 'refund')
+## Refunded Transaction ~> ('ec:setAction', 'refund')
 
 ```json
 {
@@ -347,7 +319,7 @@ If you want our server-side destination to use your user’s `clientId`, pass i
 
 ```
 
-<!-- ### <a name="checkoutOptions"></a>Checkout options
+<!-- ## Checkout options
 ------
 If you are measuring checkout option effectiveness you can pass.
 

@@ -7,11 +7,11 @@ order: 1
 
 > Attention! The [Google BigQuery](/integrations/google-bigquery) integration has to be enabled to use this feature.
 
-### Importing calls from Calltouch
+## Importing calls from Calltouch
 
 After enabling this data source, Calltouch calls history will be uploaded to BigQuery once every 24 hours.
 
-### Connecting and configuring
+## Connecting and configuring
 
 To enable API access to the Calltouch dashboard, go to your project, and click "Интеграции" (1) > "API и Webhooks" (2)
 
@@ -23,7 +23,7 @@ Ensure that the radio button (1) is enabled. Copy the Site ID (2) and token (3).
 
 The process of connecting data sources is described in detail in the [overview](https://docs.segmentstream.com/datasources/index).
 
-For authorization insert the API token (1) from the previous step and click "Save" (2) 
+For authorization insert the API token (1) from the previous step and click "Save" (2)
 
 ![](/img/calltouch_3.png)
 
@@ -41,6 +41,6 @@ The "Disconnect" button (5) is used to revoke the authorization data. The settin
 
 You can enable or disable the data source at any time (4).
 
-### Where to get data on Calltouch calls
+## Where to get data on Calltouch calls
 
 Calltouch calls will be uploaded to **calltouchCalls_{ID}** table.

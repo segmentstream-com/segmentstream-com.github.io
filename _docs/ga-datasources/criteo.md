@@ -19,8 +19,6 @@ In order to connect the data source, you must specify the Client ID (1) and Clie
 
 ![](/img/criteo_1.png)
 
-<a href="#APIAccountCriteo">How to create an API account in Criteo</a>
-
 After authorization you need to set the data source parameters.
 
 ![](/img/criteo_2.png)
@@ -46,9 +44,9 @@ Because there is no possibility to get information about utm tags in the Сriteo
 - **criteoCosts_{ADVERTISER_ID}_{YYYYMMDD}** - data for normalized costs
 - **criteoCampaignPerformance_{ADVERTISER_ID}_{YYYYMMDD}** - data for "Campaign Performance" report
 
-### Tables structure
+## Tables structure
 
-**criteoCosts**
+### **criteoCosts**
 
 Field name|Type|Mode
 --- | --- | ---
@@ -63,7 +61,7 @@ utmSource | STRING | REQUIRED
 currency | STRING | NULLABLE
 
 
-**criteoCampaignPerformance**
+### **criteoCampaignPerformance**
 
 Field name|Type|Mode
 --- | --- | ---
@@ -74,7 +72,7 @@ campaign_id | INTEGER | REQUIRED
 campaign | STRING | REQUIRED
 
 
-## <a name="APIAccountCriteo"></a>How to create an API account in Criteo
+## How to create an API account in Criteo
 
 1. Sign in to your account on [https://marketing.criteo.com](https://marketing.criteo.com/).
 2. Click **Criteo Management Center** and select **Account Settings**:

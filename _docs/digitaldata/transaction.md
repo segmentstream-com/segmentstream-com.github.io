@@ -9,30 +9,8 @@ The `digitalData.transaction` object contains variables that describe the number
 
 >The `transaction` object should appear only on the "Thank you for purchase" page (`page.type` = 'confirmation') or as part of a  ["Completed Transaction"](/events/completed-transaction) event.
 
-### Page contents
-------
-<ul class="page-navigation">
-  <li><a href="#introduction">Introduction</a></li>
-  <li><a href="#transaction.orderId">transaction.orderId</a></li>
-  <li><a href="#transaction.isReturning">transaction.isReturning</a></li>
-  <li><a href="#transaction.cartId">transaction.cartId</a></li>
-  <li><a href="#transaction.isFirst">transaction.isFirst</a></li>
-  <li><a href="#transaction.contactInfo">transaction.contactInfo</a></li>
-  <li><a href="#transaction.currency">transaction.currency</a></li>
-  <li><a href="#transaction.subtotal">transaction.subtotal</a></li>
-  <li><a href="#transaction.status">transaction.status</a></li>
-  <li><a href="#transaction.total">transaction.total</a></li>
-  <li><a href="#transaction.lineItems">transaction.lineItems</a></li>
-  <li><a href="#transaction.vouchers">transaction.vouchers</a></li>
-  <li><a href="#transaction.voucherDiscount">transaction.voucherDiscount</a></li>
-  <li><a href="#transaction.shippingMethod">transaction.shippingMethod</a></li>
-  <li><a href="#transaction.shippingCost">transaction.shippingCost</a></li>
-  <li><a href="#transaction.paymentMethod">transaction.paymentMethod</a></li>
-  <li><a href="#transaction.tax">transaction.tax</a></li>
-</ul>
 
-
-### <a name="introduction"></a>Introduction
+## Introduction
 ------
 The `digitalData.transaction` object must be declared and filled in the source code of the "Thank you for your purchase" page. The composition of the object almost completely coincides with the composition of the [`digitalData.cart`](/digitaldata/cart) object.
 
@@ -65,19 +43,19 @@ window.digitalData = {
 
 >If your site generates for each order confirmation page a unique URL like https://site.com/order?id=123456, make sure that when you load this URL from another browser, the transaction information is not added to the `digitalData` object
 
-### <a name="transaction.orderId"></a>transaction.orderId
+## transaction.orderId
 ------
 Data type: string.
 
 `transaction.orderId` - **required** variable that contains the unique order ID.
 
-### <a name="transaction.isReturning"></a>transaction.isReturning
+## transaction.isReturning
 ------
 Data type: boolean.
 
 `transaction.isReturning` - **required** variable that is equal to false if the user just made an order and sees the confirmation page for the first time. True - if the user made an order earlier, and now returned to re-view the order or track its status.
 
-### <a name="transaction.cartId"></a>transaction.cartId
+## transaction.cartId
 ------
 Data type: number.
 
@@ -85,13 +63,13 @@ Data type: number.
 
 >The value of `digitalData.transaction.cartId` should be equal to the `digitalData.cart.id` variable on page before the 'Thank You' page.
 
-### <a name="transaction.isFirst"></a>transaction.isFirst
+## transaction.isFirst
 ------
 Data type: boolean.
 
 `transaction.isFirst` - variable that is equal to true if the user has never bought before, and this is his first purchase. False, if he has purchased previously.
 
-### <a name="transaction.contactInfo"></a>transaction.contactInfo
+## transaction.contactInfo
 ------
 Data type: object.
 
@@ -113,13 +91,13 @@ window.digitalData = {
 }
 ```
 
-### <a name="transaction.currency"></a>transaction.currency
+## transaction.currency
 ------
 Data type: string.
 
 `transaction.currency` - **required** variable, which contains the basket currency in the ISO 4217 format (USD, EUR, USD).
 
-### <a name="transaction.subtotal"></a>transaction.subtotal
+## transaction.subtotal
 ------
 Data type: number.
 
@@ -128,19 +106,19 @@ Data type: number.
 
 >Includes discounts applied to specific goods, for example seasonal discounts.
 
-### <a name="transaction.status"></a>transaction.status
+## transaction.status
 ------
 Data type: string.
 
 `transaction.status` - variable, which contains the transaction status.
 
-### <a name="transaction.total"></a>transaction.total
+## transaction.total
 ------
 Data type: number.
 
 `transaction.total` - **required** variable, which contains the total value of all goods added to the cart, including tax, discounts and shipping costs.
 
-### <a name="transaction.lineItems"></a>transaction.lineItems
+## transaction.lineItems
 ------
 Data type: array of objects.
 
@@ -195,7 +173,7 @@ where,
  - **shippingMethod** - string. An optional variable. Typically, shippingMethod is defined for the whole basket, however, if it is possible to select different delivery methods for different products, this property can be used in the element of the array lineItems
  - **shippingCost** - number. An optional variable. Can be used in case the logic described for shippingMethod is applicable.
 
-### <a name="transaction.vouchers"></a>transaction.vouchers
+## transaction.vouchers
 ------
 Data type: array.
 
@@ -203,31 +181,31 @@ Data type: array.
 
 >If only one promotional code has been applied to the shopping cart, the variable will take the value of an array containing one string
 
-### <a name="transaction.voucherDiscount"></a>transaction.voucherDiscount
+## transaction.voucherDiscount
 ------
 Data type: number.
 
 `transaction.voucherDiscount` - a variable that contains the total discount after applying all the promotional codes.
 
-### <a name="transaction.shippingMethod"></a>transaction.shippingMethod
+## transaction.shippingMethod
 ------
 Data type: string.
 
 `transaction.shippingMethod` - a variable that contains the delivery method selected in the order process.
 
-### <a name="shippingCost"></a>transaction.shippingCost
+## transaction.shippingCost
 ------
 Data type: number.
 
 `transaction.shippingCost` - a variable that contains the delivery cost for the selected method.
 
-### <a name="transaction.paymentMethod"></a>transaction.paymentMethod
+## transaction.paymentMethod
 ------
 Data type: string.
 
 `transaction.paymentMethod` - a variable that contains the method of payment for the order.
 
-### <a name="transaction.tax"></a>transaction.tax
+## transaction.tax
 ------
 Data type: number.
 

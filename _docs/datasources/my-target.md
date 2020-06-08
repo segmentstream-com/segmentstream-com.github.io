@@ -7,11 +7,11 @@ order: 1
 
 > Attention! The [Google BigQuery](/integrations/google-bigquery) integration has to be enabled to use this feature.
 
-### Importing data from myTarget
+## Importing data from myTarget
 
 After enabling this data source, myTarget advertising costs information will be uploaded to Google BigQuery once every 24 hours.
 
-### Connecting and configuring
+## Connecting and configuring
 
 The process of connecting data sources is described in detail in the [overview](https://docs.segmentstream.com/datasources/index).
 
@@ -28,14 +28,14 @@ After authorization you need to set the data source parameters.
 (4) **Import banner statistics report** - enable banner statistics costs report import, without normalizing the values ​​in the table.
 
 
-### Where to get data on advertising costs
+## Where to get data on advertising costs
 
 - **myTargetCosts_{USER_ID}_{YYYYMMDD}** - data for normalized costs
 - **myTargetCampaignStatistics_{USER_ID}_{YYYYMMDD}** - data for banner statistics report
 
-### Table structure
+## Table structure
 
-**myTargetCosts**
+### **myTargetCosts**
 
 Field name|Type|Mode
 --- | --- | ---
@@ -49,7 +49,7 @@ utmMedium | STRING | REQUIRED
 utmSource | STRING | REQUIRED
 currency | STRING | NULLABLE
 
-**myTargetCampaignStatistics**
+### **myTargetCampaignStatistics**
 
 Field name|Type|Mode
 --- | --- | ---
@@ -60,7 +60,7 @@ banner_id | INTEGER | REQUIRED
 campaign_id | INTEGER | REQUIRED
 campaign_name | STRING | REQUIRED
 
-### Supported substitutions
+## Supported substitutions
 
 - `{advertiser_id}`
 - `{campaign_id}`

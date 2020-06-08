@@ -7,28 +7,14 @@ order: 1
 
 The Google BigQuery integration allows you to collect raw data in your own Google BigQuery data warehouse. Once connected, SegmentStream starts sending all of your users behavior data to the BigQuery cloud data storage.
 
-### Page contents
-------
-<ul class="page-navigation">
-  <li><a href="#introduction">Introduction</a></li>
-  <li><a href="#settingUpBigQuery">Setting up Google BigQuery</a></li>
-  <li><a href="#googleCloudProjectID">Google Cloud project ID</a></li>
-  <li><a href="#bigQueryDatasetName">BigQuery dataset name</a></li>
-  <li><a href="#UTCOffset">UTC offset</a></li>
-  <li><a href="#customDimensions">Custom dimensions</a></li>
-  <li><a href="#customMetrics">Custom metrics</a></li>
-  <li><a href="#dataSchemaHits">Data schema of hits table</a></li>
-  <li><a href="#dataSchemaSessions">Data schema of sessions table</a></li>
-</ul>
-
-### <a name="introduction"></a>Introduction
+## Introduction
 Setting up the Google BigQuery integration:
 1. Create an account in Google BigQuery and configure the rights and roles.
 2. Log in to the [segmentstream.com](https://admin.segmentstream.com/) website and go to the integration management panel
 3. Go to the  "Integrations" section and select "Google BigQuery" integration.
 4. In the panel that opens, configure the integration.
 
-### <a name="settingUpBigQuery"></a>Setting up BigQuery
+## Setting up BigQuery
 ------
 1. Log in to Google with an account that has full access to BigQuery.
 2. Select a Google Cloud project or create a new one
@@ -47,7 +33,7 @@ Setting up the Google BigQuery integration:
 7. The "**Disconnect**" (3) button is needed to disconnect your Google account from SegmentStream. Data streaming will end after the disconnection, but the settings will be saved.
 ![](/img/integrations.ddmstreaming.20.png)
 
-### <a name="googleCloudProjectID"></a>Google Cloud project ID
+## Google Cloud project ID
 Enter the Google Big Query project ID in the `Google Cloud project ID` field.
 
 >Please note that BigQuery project billing must be set up in order to load data using the SegmentStream Data Import features. Free BQ projects (including Sandbox) don't support some services which are required for SegmentStream Data Import.
@@ -57,18 +43,15 @@ The easiest way to find the project ID is on the [google cloud console main page
 2. Copy the Project ID from the corresponding `Project info` widget field
 ![](/img/integrations.ddmstreaming.1_2.png)
 
-### <a name="bigQueryDatasetName"></a>BigQuery dataset name
+## BigQuery dataset name
 Type `segmentstream` into the BigQuery DataSet name.
 > We recommend using the `segmentstream` name. If you want the data to stream into another DataSet, specify its name instead of `segmentstream`. Use only Latin letters and underscores.
 
-
-
-### <a name="UTCOffset"></a>UTC offset
+## UTC offset
 ------
 Select the time zone. For example, for all reports to be generated according to Moscow time, select "+03:00".
 
-
-### <a name="customDimensions"></a>Custom dimensions
+## Custom dimensions
 ------
 By default, SegmentStream sends a certain set of variables to the Google BigQuery. These variables are sufficient for most data analysis tasks. If you do not have enough variables, you can send custom variables along with each event.
 
@@ -88,7 +71,7 @@ In order to configure the transmission of custom dimensions (see screenshot belo
 
  ![](/img/integrations.ddmstreaming.1.png)
 
-### <a name="customMetrics"></a>Custom metrics
+## Custom metrics
 ------
 Similarly to custom dimensions, SegmentStream can pass custom metrics.
 
@@ -103,8 +86,9 @@ In order to configure the transmission of custom metrics (see screenshot above):
  - **Product**. Any variable of the `product` object
  4. Specify the name of the variable in the right field
 
+## Data schema tables
 
-### <a name="dataSchemaHits"></a>Data schema of hits_* table
+### Data schema of hits_* table
 ------
 
 Variable name | Data type | Comments
@@ -285,7 +269,7 @@ Variable name | Data type | Comments
 `website.type`|`STRING`|Type of website
 
 
-### <a name="dataSchemaSessions"></a>Data schema of sessions_* table
+### Data schema of sessions_* table
 ------
 
 Variable name | Data type | Comments

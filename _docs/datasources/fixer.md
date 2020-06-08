@@ -7,11 +7,11 @@ order: 1
 
 > Attention! The [Google BigQuery](/integrations/google-bigquery) integration has to be enabled to use this feature.
 
-### Importing data from Fixer
+## Importing data from Fixer
 
 After enabling the [Fixer](http://fixer.io) data source, exchange rates information will be uploaded to BigQuery once every 24 hours.
 
-### Connecting and configuring
+## Connecting and configuring
 
 The process of connecting data sources is described in detail in the [overview](https://docs.segmentstream.com/datasources/index).
 
@@ -21,7 +21,7 @@ In order to connect a new data source, go to "DATA IMPORT → Automatic" (1), se
 
 ![](/img/fixer2.png)
 
-### Configuring data source
+## Configuring data source
 
 ![](/img/fixer3.png)
 
@@ -37,11 +37,11 @@ The "Disconnect" button (4) is used to revoke the authorization data. The settin
 
 You can enable or disable the data source at any time (5).
 
-### Where to get data for exchange rates
+## Where to get data for exchange rates
 
 - **fixerExchangeRates_{BASE_CURRENCY}_{YYYYMMDD}** - data for exchange rates
 
-### Table structure
+## Table structure
 
 Field name|Type|Mode
 --- | --- | ---

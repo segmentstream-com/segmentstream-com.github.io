@@ -15,14 +15,7 @@ digitalData is a global JavaScript object. It must be declared as high as possib
 
 > Declare the `window.digitalData` object the first time the page loads. Do not try to build a system in which the object is created after an AJAX request. This decision will negatively affect your marketing infrastructure and make it unmanageable.
 
-## Page contents
-------
-<ul class="page-navigation">
-  <li><a href="#introduction">Introduction</a></li>
-  <li><a href="#howToFill">How to fill the object</a></li>
-</ul>
-
-## <a name="introduction"></a>Introduction
+## Introduction
 ------
 Let's analyze the structure of the object in more detail. The object consists of other objects and arrays. All these objects and arrays must be filled with information in accordance with the standard described in this documentation.
 
@@ -48,7 +41,7 @@ window.digitalData = {
 
 The detailed composition of each variable is discussed below.
 
-## <a name="howToFill"></a>How to fill the object
+## How to fill the object
 ------
 digitalData can be represented as a structured description of the page that the visitor sees on the screen of his monitor. The composition of the digitalData object depends on the content of the page. Here are some examples:
  - The user loaded a product page and sees detailed information about the product: image, name, price, brand, etc. All this information should be contained in the object `digitalData.product`
@@ -89,15 +82,15 @@ More detailed description of the composition of digitalData for **typical pages 
 
  >If your website is not an online store, you can still use the SegmentStream. We will help you prepare a data schema (the structure of the digitalData object) specifically for your project.
 
-## <a name="events"></a>Events
+## Events
 ------
 `digitalData.events` is an array which contains event objects. Access to each event is carried out by the sequence number of its addition to the drawer, for example `digitalData.events[2]`. The event itself is an object that contains information about what happened.
 For example, when a page of a site is loaded, the `Viewed Page` event occurs. It is the very first event added to the array `digitalData.events`. <br />
 SegmentStream watches the array `digitalData.events` all the time. As soon as an event arrives in the array, SegmentStream enriches it with information from other object variables and sends it to connected marketing and analytics systems.
  - [Learn more about events](/digitaldata/events)
- - [Creating events in the SegmentStream interface](/for-analyst/events)
+ - [Creating events in the SegmentStream interface](/javascript-sdk/events)
 
-## <a name="changesDigitalData"></a>Changes in digitalData without page reload
+## Changes in digitalData without page reload
 ------
 `digitalData.changes` is an array that contains information about all the changes that occurred with variables in digitalData without a page reload.
 For example: items in the basket have changed, a filter of goods in the catalog has been applied, the user has changed the delivery method and others.

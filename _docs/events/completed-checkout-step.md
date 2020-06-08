@@ -9,7 +9,7 @@ The `Completed Checkout Step` event must be pushed to the `digitalData.events` a
 * During the checkout process, the user chose an order option (delivery type, payment type, etc.) in one of the steps and clicked on the "Proceed to next step" button,
 * When loading the page of the next step in the checkout process. Along with the pageview event, an event with information about the completion of the previous checkout step should be sent.
 
-#### From the site code / when using AJAX
+## From the site code / when using AJAX
 ```javascript
 digitalData.events.push({
   category: 'Ecommerce',
@@ -20,7 +20,7 @@ digitalData.events.push({
 ```
 
 
-#### From the SegmentStream interface
+## From the SegmentStream interface
 > Let's say the checkout process on your website contains 4 steps:
 > 1. view the shopping cart
 > 2. enter information about the address and method of delivery
@@ -47,5 +47,5 @@ if (checkoutSteps.indexOf(checkoutStep) !== -1) {
 };
 ```
 
-#### Required by the following integrations:
+## Required by the following integrations:
 * Google Analytics (Enhanced Ecommerce)

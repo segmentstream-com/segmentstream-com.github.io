@@ -10,20 +10,15 @@ date: 2020-04-29
 <!---
 In this article explained how to Enable BigQuery API if it is not enabled
 -->
-<ul class="page-navigation">
-  <li><a href="#before-you-begin">Before you begin</a></li>
-  <li><a href="#enabling-bigquery">Steps to enable BigQuery API</a></li>
-  <li><a href="#whats-next">What's next</a></li>
-</ul>
 
-## <a name="before-you-begin"></a> Before you begin
+## Before you begin
 * You should have an existing [Google Cloud Platform account](creating-gcp-account).
 * You should have [enabled billing for your GCP account](enabling-billing).
 
 To start working with Google BigQuery firstly, you need to enable BigQuery API.
 Below are the steps that explain how to do this.
 
-## <a name="enabling-bigquery"></a> Steps to enable BigQuery API
+## Steps to enable BigQuery API
 1. Go to the [Google Cloud Platform Console](https://console.cloud.google.com/){:target="_blank"}.
 2. Open the console left side menu and click **APIs & Services**. Select **Dashboard** from the list.
 ![Click on APIs & Services](/img/bigquery_api.1.png)
@@ -37,7 +32,7 @@ Below are the steps that explain how to do this.
 5. Click **ENABLE** to enable BigQuery API.
 ![Enable BigQuery API](/img/bigquery_api.4.png)
 
-## <a name="whats-next"></a>What's next
+## What's next
 
 * [Creating BigQuery dataset](creating-bigquery-dataset)
 * [Connecting BigQuery to SegmentStream](connecting-bigquery)
