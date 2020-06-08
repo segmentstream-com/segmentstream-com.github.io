@@ -54,6 +54,7 @@ In order to keep matching visits and ad expenses in the cost analysis reports, m
 * Cost data will be available only for UTM-tags values.
 * Session data will be available for unsupported parameters (through custom dimensions) and UTM-tags values.
 
+> **Note.** Make sure you tag all campaign [sitelinks](https://yandex.com/support/direct/efficiency/quick-links.html#quick-links){:target="_blank"} the same way you tag the campaign. Otherwise SegmentStream might not be able to properly match clicks from sitelinks with Google Analytics sessions.
 
 <!--
 > Attention! The [Google BigQuery](/integrations/google-bigquery) integration has to be enabled to use this feature.
