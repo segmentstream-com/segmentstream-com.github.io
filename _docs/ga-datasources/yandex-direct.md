@@ -62,8 +62,14 @@ Currently, SegmentStream does not support automatic UTM matching for [Smart bann
 
 This means that you would need to match these types of campaigns mannually inside the SegmentStream admin panel.
 
-For all your Smart banners and Search banners you need to define matching between the **Campaign Id** and **URL parameters**. For example, if you have a Search banner with the **Campaign ID** = `123123123` with the following link to the website: `http://www.site.com/?utm_source=yandex&utm_medium=cpc&utm_campaign={campaign_id}&utm_term={keyword}&utm_content={banner_id}`, the mapping inside the SegmentStream admin panel should look the following way:
-`123123123` -> `utm_source=yandex&utm_medium=cpc&utm_campaign={campaign_id}&utm_term={keyword}&utm_content={banner_id}`
+For all your Smart banners and Search banners you need to define matching between the **Campaign ID** and **URL parameters**.
+
+For example, if you have a Search banner with the **Campaign ID** = `123123123` with the following link to the website: `http://www.site.com/?utm_source=yandex&utm_medium=cpc&utm_campaign={campaign_id}&utm_term={keyword}&utm_content={banner_id}`, the mapping inside the SegmentStream admin panel should look the following way:
+
+`123123123` ▸ `utm_source=yandex&utm_medium=cpc&utm_campaign={campaign_id}&utm_term={keyword}&utm_content={banner_id}`
+
+This is how it might look inside the admin panel:
+![Yandex.Direct URL params matching](/img/yandex-direct/yandex-search-banners-utm-params.png)
 
 <!--
 > Attention! The [Google BigQuery](/integrations/google-bigquery) integration has to be enabled to use this feature.
