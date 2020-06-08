@@ -44,4 +44,8 @@ There is no Google Ads data source inside the SegmentStream platform as Google A
 
 As far as Google Analytics imports all cost data from Google Ads without VAT, SegmentStream follows the same logic for all other data sources to avoid cost data VAT inconsistency.
 
-Nevertheless, Yandex.Market and VK data sources require additional settings to subtract VAT from the cost data.
+Nevertheless, Yandex.Market and VK data sources require additional settings to subtract VAT from the cost data by specifying the percentage of VAT to exclude.
+
+If you don't exclude VAT for these services while importing cost data, you'll end up overestimating the costs of your VK and Yandex.Market campaigns. As a result, you won't be able to make correct conclusions on their efficiency comparing to other channels.
+
+> **Note:** currently, there is no technical possibility to add VAT for the imported costs. If you want to analyze data with VAT included, you can create a custom report in Google Analytics adding [calculated metrics](https://support.google.com/analytics/answer/6121409?hl=en){:target="_blank"} to it.
