@@ -9,26 +9,7 @@ order: 105
 Helper functions help you write code faster and with fewer errors, plus, they make your code more readable.
 They can be used **only inside the admin panel** to setup of variable, event, and script handlers.
 
-### Page contents
-------
-<ul class="page-navigation">
-  <li><a href="#_queryParam">Get URL parameter value</a></li>
-  <li><a href="#_cookie">Get cookie value</a></li>
-  <li><a href="#_get">Safely get any property of an object</a></li>
-  <li><a href="#_digitalData">Safely get any digitalData property</a></li>
-  <li><a href="#_loadPixel">Load pixel</a></li>
-  <li><a href="#_loadScript">Load script</a></li>
-  <li><a href="#_loadIframe">Load Iframe</a></li>
-  <li><a href="#_loadLink">Load link</a></li>
-  <li><a href="#_global">Safely get any window property</a></li>
-  <li><a href="#_domQuery">Get an array of elements by CSS-selector</a></li>
-  <li><a href="#_dataLayer">Safely get a GTM dataLayer variable</a></li>
-  <li><a href="#_fetch">Get data from a remote server using ajax</a></li>
-  <li><a href="#_timeout">Delay before the handler returns the result</a></li>
-  <li><a href="#_retry">Try calling a function several times</a></li>
-</ul>
-
-### <a name="_queryParam"></a>Get URL parameter value - _queryParam
+## Get URL parameter value - _queryParam
 ------
 ```javascript
 _queryParam(paramName);
@@ -41,7 +22,7 @@ _queryParam('q'); // blue%20ball
 ```
 > The `_queryParam()` function always returns values in lowercase
 
-### <a name="_cookie"></a>Get cookie value - _ga
+## Get cookie value - _ga
 ------
 ```javascript
 _cookie(cookieName);
@@ -53,7 +34,7 @@ Get the GA cookie value:
 _cookie('_ga'); // GA1.2.1409919348.1513159051
 ```
 
-### <a name="_get"></a>Safely get any property of an object - _get
+## Safely get any property of an object - _get
 ------
 ```javascript
 _get(object, path);
@@ -65,7 +46,7 @@ Get the value of 'transaction.lineItems' from a digitalData event object:
 _get(event, 'transaction.lineItems'); // lineItems array [...]
 ```
 
-### <a name="_digitalData"></a>Safely get any digitalData property - _digitalData
+## Safely get any digitalData property - _digitalData
 ------
 ```javascript
 _digitalData(path);
@@ -77,7 +58,7 @@ Get the value of 'transaction.lineItems' from the digitalData object:
 _digitalData('transaction.lineItems'); // lineItems array [...]
 ```
 
-### <a name="_loadPixel"></a>Load pixel - _loadPixel
+## Load pixel - _loadPixel
 ------
 Any number of attributes is supported.
 ```javascript
@@ -94,7 +75,7 @@ Load pixel from https://example.com/pixel.png:
 _loadPixel({src: 'https://example.com/pixel.png', id: 'admit_ad'});
 ```
 
-### <a name="_loadScript"></a>Load script - _loadScript
+## Load script - _loadScript
 ------
 Any number of attributes is supported.
 ```javascript
@@ -111,7 +92,7 @@ Load script from https://example.com/script.js:
 _loadScript({src: 'https://example.com/script.js', id: 'google'});
 ```
 
-### <a name="_loadIframe"></a>Load iframe - _loadIframe
+## Load iframe - _loadIframe
 ------
 Any number of attributes is supported.
 ```javascript
@@ -128,7 +109,7 @@ Load iframe from https://example.com/window:
 _loadIframe({src: 'https://example.com/window', style: 'display: none;'});
 ```
 
-### <a name="_loadLink"></a>Load link - _loadLink
+## Load link - _loadLink
 ------
 Any number of attributes is supported.
 ```javascript
@@ -145,7 +126,7 @@ Load link from https://example.com/style.css:
 _loadLink({href: 'https://example.com/style.css', type: "text/css"});
 ```
 
-### <a name="_global"></a>Safely get any window property - _global
+## Safely get any window property - _global
 ------
 ```javascript
 _global(path);
@@ -157,7 +138,7 @@ Get the value of window.settings.mobile_app:
 _global('settings.mobile_app');
 ```
 
-### <a name="_domQuery"></a>Get an array of elements by CSS-selector - _domQuery
+## Get an array of elements by CSS-selector - _domQuery
 ------
 ```javascript
 _domQuery(cssSelector);
@@ -172,7 +153,7 @@ _domQuery('#logo');
 >  - if jQuery is not loaded on the website (there is no global window.jQuery object) or jQuery is loaded after SegmentStream (is located further down the HTML page), [document.querySelectorAll](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll) is used,
 >  - if jQuery is loaded on the website, jQuery selectors are used.
 
-### <a name="_dataLayer"></a>Safely get a GTM dataLayer variable - _dataLayer
+## Safely get a GTM dataLayer variable - _dataLayer
 ------
 ```javascript
 _dataLayer(path);
@@ -184,7 +165,7 @@ Get the value of 'ecommerce.purchase' from the dataLayer:
 _dataLayer('ecommerce.purchase');
 ```
 
-### <a name="_fetch"></a>Get data from a remote server using ajax - _fetch
+## Get data from a remote server using ajax - _fetch
 ------
 ```javascript
 return _fetch(link, function(result) {
@@ -200,7 +181,7 @@ return _fetch('/ajax?cart', function(result) {
 });
 ```
 
-### <a name="_timeout"></a>Delay before the handler returns the result - _timeout
+## Delay before the handler returns the result - _timeout
 ------
 ```javascript
 return _timeout(delay, function() {
@@ -218,7 +199,7 @@ return _timeout(1500, function() {
 });
 ```
 
-### <a name="_retry"></a>Try calling a function several times - _retry
+## Try calling a function several times - _retry
 ------
 The function takes 3 arguments, the function to be called, the number of attempts, the interval between the attempts.
 ```javascript

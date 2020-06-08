@@ -13,7 +13,7 @@ After enabling this data source, Yandex.Direct advertising costs information wil
 
 This integration is available for both ordinary advertisers and advertising agencies.
 
-### Connecting and configuring
+## Connecting and configuring
 
 The process of connecting data sources is described in detail in the [overview](https://docs.segmentstream.com/datasources/index).
 
@@ -113,7 +113,7 @@ Read more about dynamic parameters: [https://yandex.ru/support/direct/statistics
 
 ## Tables structure
 
-**yandexDirectCosts**
+### **yandexDirectCosts**
 
 Field name|Type|Mode
 --- | --- | ---
@@ -126,7 +126,7 @@ utmContent | STRING | NULLABLE
 utmMedium | STRING | REQUIRED
 utmSource | STRING | REQUIRED
 
-**yandexDirectCampaignPerformance**
+### **yandexDirectCampaignPerformance**
 
 Field name|Type|Mode
 --- | --- | ---

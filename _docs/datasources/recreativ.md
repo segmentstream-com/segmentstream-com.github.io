@@ -7,11 +7,11 @@ order: 1
 
 > Attention! The [Google BigQuery](/integrations/google-bigquery) integration has to be enabled to use this feature.
 
-### Importing data from Recreativ
+## Importing data from Recreativ
 
 After enabling this data source, Recreativ advertising costs information for the previous day will be uploaded to Google BigQuery once every 24 hours.
 
-### Connecting and configuring
+## Connecting and configuring
 
 ![](/img/recreativ.1.png)
 
@@ -19,7 +19,7 @@ In order to connect a new data source, go to "DATA IMPORT → Automatic" (1), se
 
 ![](/img/recreativ.2.png)
 
-### Configuring data source
+## Configuring data source
 
 ![](/img/recreativ.3.png)
 
@@ -32,11 +32,11 @@ The "Disconnect" button (4) is used to revoke the authorization data. The settin
 
 You can enable or disable the data source at any time (3).
 
-### Where to get data on advertising costs
+## Where to get data on advertising costs
 
 - **recreativCampaignStatistics_{ADVERTISER_ID}_{YYYYMMDD}** - data for advertising costs
 
-### Table structure
+## Table structure
 
 Field name|Type|Mode
 --- | --- | ---

@@ -12,15 +12,7 @@ In this section you will learn:
 
 We strongly recommend that you name variables and events in the same style. This approach will greatly simplify your work with all analytics and marketing systems.
 
-### Page contents
-------
-<ul class="page-navigation">
-  <li><a href="#introduction">Introduction</a></li>
-  <li><a href="#howToNameVariables">How to name variables</a></li>
-  <li><a href="#howToNameEvents">How to name events</a></li>
-</ul>
-
-### <a name="introduction"></a>Introduction
+## Introduction
 ------
 There are many methods for naming variables in programming languages. Each developer comes up with his own "standards", understandable and convenient only to him. As a result, your analytics is filled with a bunch of dissimilar data that is difficult to understand and analyze.
 
@@ -43,7 +35,7 @@ These standards are designed to comply with 3 main principles:
 * Convenience
 * Clarity
 
-### <a name="howToNameVariables"></a>How to name variables
+## How to name variables
 ------
 The SegmentStream is based on the digitalData standard, which is a multilevel object with a nested structure. All objects of the first level are defined by the standard and can not be changed:
 
@@ -64,7 +56,7 @@ When creating new objects and parameters in digitalData, it is important to foll
 * All parameters and objects must be named in [camelCase](https://en.wikipedia.org/wiki/Camel_case)
 
 
-### <a name="howToNameEvents"></a>How to name events
+## How to name events
 ------
 In SegmentStream we use a set of clear naming rules for events, oriented to past-time actions:
 

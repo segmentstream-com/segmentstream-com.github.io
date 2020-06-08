@@ -7,7 +7,7 @@ order: 2
 
 The `Completed Transaction` event must be pushed to the `digitalData.events` array when the page informing the user about a successfully created order is loaded ("Thank you" page).
 
-#### From the site code / when using AJAX
+## From the site code / when using AJAX
 In some cases, it's necessary adding the `Completed Transaction` event from the site code:
 * If you use a "1 click purchase" and the server sends a response about a successful purchase and there is no redirect to the "Thank you for your purchase" page, the purchase event should be added to the `digitalData.events` array from the site code.
 * if the user selects "online payment" and before redirecting to the "Thank you for your purchase" page, a redirect to the payment system gateway occurs, the following actions should be taken before the redirect:
@@ -52,7 +52,7 @@ digitalData.events.push({
 ```
 > For a detailed description of the `transaction` object, see the section for developers.
 
-#### From the SegmentStream interface
+## From the SegmentStream interface
 **Trigger**: event `Viewed Page`,
 
 **Event handler**:
@@ -70,7 +70,7 @@ if (
 }
 ```
 
-#### Required by the following integrations:
+## Required by the following integrations:
 * Adwords
 * Criteo
 * Facebook

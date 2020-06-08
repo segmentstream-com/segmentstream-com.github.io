@@ -7,20 +7,7 @@ order: 1
 
 The `digitalData.context` object contains variables that describe the environment and context of the current visit.
 
-### Page contents
-------
-<ul class="page-navigation">
-  <li><a href="#introduction">Introduction</a></li>
-  <li><a href="#context.ip">context.ip</a></li>
-  <li><a href="#context.userAgent">context.userAgent</a></li>
-  <li><a href="#context.os">context.os</a></li>
-  <li><a href="#context.location">context.location</a></li>
-  <li><a href="#context.device">context.device</a></li>
-  <li><a href="#context.browser">context.browser</a></li>
-  <li><a href="#context.campaign">context.campaign</a></li>
-</ul>
-
-### <a name="introduction"></a>Introduction
+## Introduction
 ------
 The `digitalData.context` object must be declared and filled in the source code of each page.
 
@@ -60,13 +47,13 @@ window.digitalData = {
 }
 ```
 
-### <a name="context.ip"></a>context.ip
+## context.ip
 ------
 Data type: string.
 
 `context.ip` - **optional** variable which contains the user's ip-address
 
-### <a name="context.userAgent"></a>context.userAgent
+## context.userAgent
 ------
 Data type: string.
 
@@ -74,7 +61,7 @@ Data type: string.
 
 > SDK creates and fills this variable automatically. Please do not try to reinitialize this variable.
 
-### <a name="context.os"></a>context.os
+## context.os
 ------
 Data type: object.
 
@@ -88,7 +75,7 @@ Path|Data Type|Description
 `context.os.name`|String|Name of the OS
 `context.os.version`|String|OS version
 
-### <a name="context.location"></a>context.location
+## context.location
 ------
 Data type: object.
 
@@ -102,7 +89,7 @@ Path|Data Type|Description
 `context.location.country`|String|Country
 `context.location.region`|String|Region/State/County
 
-### <a name="context.device"></a>context.device
+## context.device
 ------
 Data type: object.
 
@@ -116,7 +103,7 @@ Path|Data Type|Description
 `context.location.type`|String|Type of device: "desktop", "mobile", "tablet"
 `context.location.vendor`|String|Device manufacturer. Not relevant for desktops.
 
-### <a name="context.browser"></a>context.browser
+## context.browser
 ------
 Data type: object.
 
@@ -130,7 +117,7 @@ Path|Data Type|Description
 `context.browser.name`|String|Browser name
 `context.browser.version`|String|Full information on the browser version
 
-### <a name="context.campaign"></a>context.campaign
+## context.campaign
 ------
 Data type: object.
 

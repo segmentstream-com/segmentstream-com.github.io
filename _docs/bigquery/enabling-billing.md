@@ -10,13 +10,6 @@ date: 2020-04-29
 <!---
 In this article explained how to Enable BigQuery API if it is not enabled
 -->
-<ul class="page-navigation">
-  <li><a href="#before-you-begin">Before you begin</a></li>
-  <li><a href="#upgrading">Upgrading Free Tier account</a></li>
-  <li><a href="#checking-account-status">Checking billing account status</a></li>
-  <li><a href="#whats-next">What's next</a></li>
-</ul>
-
 
 ## Before you begin
 * You should have an existing [Google Cloud Platform account](creating-gcp-account).
@@ -32,7 +25,7 @@ More information on upgrading your account can be found [here](https://cloud.goo
 
 ## Checking billing account status
 If you don't have **Activate** button in the navigation bar, check that you have an active billing account with a valid payment method:
-1. Go to the [Google Cloud Platform Billing page ▸](https://console.cloud.google.com/billing) 
+1. Go to the [Google Cloud Platform Billing page ▸](https://console.cloud.google.com/billing)
 2. Check that you have at least one billing account with active status.
 ![Account with active status](/img/bigquery_billing.2.png)
 3. Click on the account name and follow instructions to set the status to active if it is different.

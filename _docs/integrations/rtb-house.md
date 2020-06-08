@@ -12,19 +12,7 @@ In this section you will learn:
 
 RTB House is a dynamic retargeting system. SegmentStream allows you to send data about the behavior of your users to [RTB House](https://www.rtbhouse.com).
 
-### Page contents
-------
-<ul class="page-navigation">
-  <li><a href="#introduction">Introduction</a></li>
-  <li><a href="#requiredEventsAndVariables">Required events and variables</a></li>
-  <li><a href="#accountKey">Account key</a></li>
-  <li><a href="#crossDevice">Cross-Device tracking</a></li>
-  <li><a href="#customTags">Custom tags</a></li>
-  <li><a href="#useCustomDeduplication">Use custom deduplication</a></li>
-  <li><a href="#correctnessOfIntegrationSetup">Checking the correctness of the integration setup</a></li>
-</ul>
-
-### <a name="introduction"></a>Introduction
+## Introduction
 ------
 With the help of SegmentStream, you can fully integrate RTB House on your website: events, deduplication etc. <br />
 To setup the RTB House integration:
@@ -35,7 +23,7 @@ To setup the RTB House integration:
 <br />
 You can read more details about the settings below.
 
-### <a name="requiredEventsAndVariables"></a>Required events and variables
+## Required events and variables
 ------
 For the correct operation of the integration of your site with RTB House - you must configure the filling of certain events in the `digitalData.events` array. The list of events is as follows:
 
@@ -55,15 +43,15 @@ It is also necessary to configure the filling of certain variables of the `digit
 * `listing`, `cart`, `transaction` objects
 * and others.
 
-### <a name="accountKey"></a>Account key
+## Account key
 ------
 The ID of your account can be checked with your RTB House account manager
 
-### <a name="crossDevice"></a>Cross-Device tracking
+## Cross-Device tracking
 ------
 If the [`digitalData.user.email`](/digitaldata/user#user.email) variable is filled, then we will automaticaly send a `uid` matching the sha256 hash of that email.
 
-### <a name="customTags"></a>Custom tags
+## Custom tags
 ------
 RTB House allows you to send several custom tags with each event, which can contain the users segments or any other variables.
 To configure the transfer of a custom tag, you have to fill in 3 fields:
@@ -75,22 +63,20 @@ To configure the transfer of a custom tag, you have to fill in 3 fields:
 
 For example:
 1. If you want to completely disable retargeting for a specific segment of users - you need to create a numeric variable in the `digitalData` object and insert its address into the integration configuration field.
-For example, for all users on which you want to disable retargeting, you pass the value 1 to the variable `digitalData.user.segment`, and for the rest, 0. For more information about creating variables, see [variables](/for-analyst/variables).
+For example, for all users on which you want to disable retargeting, you pass the value 1 to the variable `digitalData.user.segment`, and for the rest, 0. For more information about creating variables, see [variables](/javascript-sdk/variables).
 In the left field of the setting input `user` as a tag name, in the center drop-down select `DigitalData` and in the right field input `user.segment`, as illustrated in the screenshot below.
 2. If you want to pass the value of the `subscription` parameter of an event to a tag named `subscription`, in the left field of the setting input `subscription` as a tag name, in the center drop-down select `Event` and in the right field input `subscription`, as illustrated in the screenshot below.
 
 ![](/img/integrations.rtb.settings2.png)
 
-
-
-### <a name="useCustomDeduplication"></a>Use custom deduplication
+## Use custom deduplication
 ------
 Deduplication is an attribution setting that can be sent to RTB House along with the order. By default, this feature is disabled. This means that RTB House uses its own attribution model to set up its own machine learning algorithms.
 > The attribution model is the rule by which the value of the conversion/(order value) is redistributed between all sources of traffic that led the user to the site before buying. There is a large number of [attribution models](https://support.google.com/analytics/answer/1665189?hl=en), the most common of these is last non-direct click. When using this model of attribution - 100% of the conversion value will be assigned to the last indirect source of traffic. For example, if a user first came to the site from a search, then from RTB House, then typed the URL in the browser - the whole value of the order will be assigned to the source of "RTB House".
 
 If you use "own deduplication", SegmentStream will remember the source (the value of the GET parameter utm_source). If this value is "rtb-house", the transaction will be attributed to the RTB House source.
 
-### <a name="correctnessOfIntegrationSetup"></a>Checking the correctness of the integration setup
+## Checking the correctness of the integration setup
 ------
-After configuring the integration in the SegmentStream interface, but before PUBLICATION - go to the site in test_mode, [go through the conversion funnel and check for errors](/for-analyst/integrations#testing).
+After configuring the integration in the SegmentStream interface, but before PUBLICATION - go to the site in test_mode, [go through the conversion funnel and check for errors](/javascript-sdk/integrations#testing).
 If there are no errors - publish the current version.

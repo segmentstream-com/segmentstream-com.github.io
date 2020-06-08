@@ -6,7 +6,7 @@ order: 2
 ---
 The `Registered` event must be pushed to the `digitalData.events` array when the server responds with a message about a successful user registration.
 
-#### From the site code / when using AJAX
+## From the site code / when using AJAX
 ```javascript
 digitalData.events.push({
   name: 'Registered',
@@ -17,10 +17,10 @@ digitalData.events.push({
 })
 ```
 
-#### From the SegmentStream interface
+## From the SegmentStream interface
 The `Registered` event can not be created from the built-in SegmentStream triggers. The event must be added from the site code.
 
-#### Required by the following integrations:
+## Required by the following integrations:
 * Criteo
 * Facebook
 * Retail Rocket

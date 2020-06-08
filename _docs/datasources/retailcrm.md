@@ -10,27 +10,12 @@ In this section you will learn:
 
 > Attention! The [Google BigQuery](/integrations/google-bigquery) integration has to be enabled to use this feature.
 
-### Page contents
-------
-<ul class="page-navigation">
-  <li><a href="#importing-data">Importing data from retailCRM</a></li>
-  <li><a href="#connecting-and-configuring">Connecting and configuring</a></li>
-  <li><a href="#options-description">Options description</a></li>
-  <li><a href="#display-name">Display name</a></li>
-  <li><a href="#retailcrm-subdomain">retailCRM subdomain</a></li>
-  <li><a href="#orders-import">Orders import</a></li>
-  <li><a href="#order-custom-fields">Order custom fields</a></li>
-  <li><a href="#saving-disconnecting-disabling">Saving, Disconnecting, Disabling data source</a></li>
-  <li><a href="#where-to-get-orders-data">Where to get orders data</a></li>
-  <li><a href="#table-structures">Table structures</a></li>
-</ul>
-
-### <a name="importing-data"></a>Importing data from retailCRM
+## Importing data from retailCRM
 ------
 
 After enabling this data source, retailCRM data will be uploaded to BigQuery once every 24 hours.
 
-### <a name="connecting-and-configuring"></a>Connecting and configuring
+## Connecting and configuring
 ------
 Before connecting the data source, you must create an API key, this is described in detail in the [retailCRM docs](https://help.retailcrm.ru/Users/ApiKeys).
 
@@ -38,33 +23,33 @@ The process of connecting data sources is described in detail in the [overview](
 
 After authorization you need to set the data source parameters.
 
-### <a name="options-description"></a>Options description
+## Options description
 ------
 ![](/img/retailcrm.png)
 
-### <a name="display-name"></a>Display name
+## Display name
 The name of the data source. It is displayed in the interface in the list of sources.
 
-### <a name="retailcrm-subdomain"></a>retailCRM subdomain
+## retailCRM subdomain
 Should be filled with the first part of your CRM address. For example, if your CRM address is https://test-account.retailcrm.ru/, then the subdomain will be "test-account".
 
-### <a name="orders-import"></a>Orders import
+## Orders import
 Enable import of orders data. If this option enabled, updated orders for the previous day will be uploaded.
 
-### <a name="order-custom-fields"></a>Order custom fields
-The list of symbolic codes of order custom fields to import. 
+## Order custom fields
+The list of symbolic codes of order custom fields to import.
 
-### <a name="saving-disconnecting-disabling"></a>Saving, Disconnecting, Disabling data source
+## Saving, Disconnecting, Disabling data source
 To save and enable the data source, click **Save**.
 
 The **Disconnect** button is used to revoke the authorization data. The settings are saved.
 
 You can enable or disable the data source at any time by using the switch on the top right.
 
-### <a name="where-to-get-orders-data"></a>Where to get orders data
+## Where to get orders data
 - **retailCrmOrders_{SUBDOMAIN}_{YYYYMMDD}** - data for updated "Orders"
 
-### <a name="table-structures"></a>Table structures
+## Table structures
 ------
 
 ### retailCrmOrders table structure
@@ -89,7 +74,7 @@ fromApi | BOOLEAN | NULLABLE
 shipped | BOOLEAN | NULLABLE
 clientId | STRING | NULLABLE
 customer | RECORD | NULLABLE
-customer.id | INTEGER | NULLABLE	
+customer.id | INTEGER | NULLABLE
 customer.externalId | STRING | NULLABLE
 customer.site | STRING | NULLABLE
 customer.personalDiscount | FLOAT | NULLABLE
@@ -125,20 +110,20 @@ items.quantity | INTEGER | NULLABLE
 items.status | STRING | NULLABLE
 items.purchasePrice | FLOAT | NULLABLE
 items.isCanceled | BOOLEAN | NULLABLE
-customFields | RECORD | REPEATED	
-customFields.name | STRING | NULLABLE	
-customFields.code | STRING | NULLABLE	
-customFields.type | STRING | NULLABLE	
-customFields.value | RECORD | NULLABLE	
-customFields.value.string | STRING | NULLABLE	
-customFields.value.text | STRING | NULLABLE	
-customFields.value.integer | INTEGER | NULLABLE	
-customFields.value.numeric | FLOAT | NULLABLE	
-customFields.value.boolean | BOOLEAN | NULLABLE	
-customFields.value.date | DATE | NULLABLE	
-customFields.value.email | STRING | NULLABLE	
-customFields.value.dictionary | RECORD | NULLABLE	
-customFields.value.dictionary.name | STRING | NULLABLE	
-customFields.value.dictionary.element | RECORD | NULLABLE	
-customFields.value.dictionary.element.name | STRING | NULLABLE	
-customFields.value.dictionary.element.code | STRING | NULLABLE	
+customFields | RECORD | REPEATED
+customFields.name | STRING | NULLABLE
+customFields.code | STRING | NULLABLE
+customFields.type | STRING | NULLABLE
+customFields.value | RECORD | NULLABLE
+customFields.value.string | STRING | NULLABLE
+customFields.value.text | STRING | NULLABLE
+customFields.value.integer | INTEGER | NULLABLE
+customFields.value.numeric | FLOAT | NULLABLE
+customFields.value.boolean | BOOLEAN | NULLABLE
+customFields.value.date | DATE | NULLABLE
+customFields.value.email | STRING | NULLABLE
+customFields.value.dictionary | RECORD | NULLABLE
+customFields.value.dictionary.name | STRING | NULLABLE
+customFields.value.dictionary.element | RECORD | NULLABLE
+customFields.value.dictionary.element.name | STRING | NULLABLE
+customFields.value.dictionary.element.code | STRING | NULLABLE

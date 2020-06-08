@@ -7,7 +7,7 @@ order: 2
 The `Viewed Checkout Step` event must be pushed to the `digitalData.events` array when a checkout process page is loaded.
 >Important! In case you use a single-page basket page, in which each checkout step is loaded by AJAX, you should add a `Viewed Checkout Step` event from the site code at each new step.
 
-#### From the site code / when using AJAX
+## From the site code / when using AJAX
 **Step 1**
 ```javascript
 digitalData.events.push({
@@ -44,7 +44,7 @@ digitalData.events.push({
 });
 ```
 
-#### From the SegmentStream interface
+## From the SegmentStream interface
 **Trigger**: event `Viewed Page`,
 
 **Event handler**:
@@ -73,7 +73,7 @@ if (_digitalData('page.type') === 'checkout' || _digitalData('page.type') === 'c
 }
 ```
 
-#### Required by the following integrations:
+## Required by the following integrations:
 * [Facebook](/integrations/facebook)
 * RTB House
 * Segmento

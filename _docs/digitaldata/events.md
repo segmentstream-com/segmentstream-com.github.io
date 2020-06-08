@@ -7,7 +7,7 @@ order: 1
 
 The array `digitalData.events` contains a list of objects. Each object describes an event that occurred on the site from the moment the page was loaded to the next reload: 'Viewed Page', 'Viewed Product Detail', 'Clicked Banner', 'Add to Cart', 'Purchase' and many others.
 
->Each object of the array `digitalData.events` has only one required field: `name`. We strongly recommend that to adhere to our [naming convention](/for-developer/naming#howToNameEvents).
+>Each object of the array `digitalData.events` has only one required field: `name`. We strongly recommend that to adhere to our [naming convention](/javascript-sdk/events#event-naming-convention).
 
 Example:
 ```javascript
@@ -42,4 +42,4 @@ digitalData.events.push({
   ```
  - From the admin panel interface, based on other events and the content of the object `digitalData`
 
->For more details on working with events, see inside the section "analyst": [Events](/for-analyst/events)
+>For more details on working with events, see inside the section "javascript-sdk": [Events](/javascript-sdk/events)

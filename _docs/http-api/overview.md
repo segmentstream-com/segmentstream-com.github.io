@@ -7,27 +7,16 @@ date: 2019-05-21 19:00:00
 order: 0
 ---
 
-### Page contents
-------
-<ul class="page-navigation">
-  <li><a href="#introduction">Introduction</a></li>
-  <li><a href="#headers">Headers</a></li>
-  <li><a href="#errors">Errors</a></li>
-  <li><a href="#rateLimit">Rate Limit</a></li>
-  <li><a href="#maxRequestSize">Max Request Size</a></li>
-  <li><a href="#trackingEvents">Tracking Events</a></li>
-</ul>
-
-### <a name="introduction"></a>Introduction
+## Introduction
 ------
 The SegmentStream HTTP Tracking API lets you record analytics data from any website or application. The requests hit our servers, and we route your data to any destination you want!
 
 We have a native [JavaScript SDK](https://github.com/segmentstream/digital-data-manager) which is built for high-performance client-side tracking and is open-source. But sometimes you may want to send to the HTTP API directly—that’s what this reference is for.
 
-### <a name="headers"></a>Headers
+## Headers
 ------
 
-### Authorizing
+## Authorizing
 
 Each request must be authorized with an API Token.
 
@@ -40,26 +29,26 @@ In practice that means taking a provided  **API Token**,`'abc123'` as the usern
 
  `'Authorization: Basic YWJjMTIzOg=='`.
 
-### Content Type
+## Content Type
 
 In order to send data to our HTTP API, a content-type header must be set to `'application/json'`.
 
-### <a name="errors"></a>Errors
+## Errors
 ------
 
 We currently return a `204` response for all successful API requests. `401` if incorrect **API Token** is used or `400` if the request is too large or JSON is invalid.
 
-### <a name="rateLimit"></a>Rate limit
+## Rate limit
 ------
 
 There is no hard limit on request for API.
 
-### <a name="maxRequestSize"></a>Max Request Size
+## Max Request Size
 ------
 
 Max request size is 64kb per call.
 
-### <a name="trackingEvents"></a>Tracking Events
+## Tracking Events
 
 To get started, we recommend tracking just a few important events. You can always add more later!
 

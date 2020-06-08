@@ -7,14 +7,8 @@ order: 1
 
 The `digitalData.wishlist` array contains `product` objects, which describe the goods added by the visitor to their "favorites" list.
 
-### Page contents
-------
-<ul class="page-navigation">
-  <li><a href="#introduction">Introduction</a></li>
-</ul>
 
-
-### <a name="introduction"></a>Introduction
+## Introduction
 ------
 The `digitalData.wishlist` array must be declared and filled in the source code of the page.
 

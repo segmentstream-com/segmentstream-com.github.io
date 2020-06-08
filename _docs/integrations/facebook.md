@@ -12,20 +12,7 @@ In this section you will learn:
 
 Facebook is a social network with a large set of advertising tools. Facebook shows ads in the news feed of its users, including dynamic retargeting. SegmentStream allows you to send data about the behavior of your users to the [Facebook Pixel](https://developers.facebook.com/docs/facebook-pixel/api-reference#events).
 
-### Page contents
-------
-<ul class="page-navigation">
-  <li><a href="#introduction">Introduction</a></li>
-  <li><a href="#requiredEvents">Required events</a></li>
-  <li><a href="#facebookPixelID">Facebook Pixel ID</a></li>
-  <li><a href="#productFeed">Product feed has grouped products</a></li>
-  <li><a href="#costOfGoods">Pass the cost of goods to the event value parameter</a></li>
-  <li><a href="#customEvents">Custom events</a></li>
-  <li><a href="#eventParameters">Event parameters</a></li>
-  <li><a href="#checkingIntegrationCorrectness">Checking the correctness of the integration setup</a></li>
-</ul>
-
-### <a name="introduction"></a>Introduction
+## Introduction
 ------
 Using SegmentStream, you can fully integrate Facebook with your site: Including standard and custom events
 
@@ -39,7 +26,7 @@ To configure the Facebook integration:
 
 You can read more details about the settings below.
 
-### <a name="requiredEvents"></a>Required events
+## Required events
 ------
 For the correct integration of your site with Facebook - you need to configure the transfer of 3 events in the `digitalData.events` array. The list of events is as follows:
 
@@ -48,7 +35,7 @@ For the correct integration of your site with Facebook - you need to configure t
 * [Viewed Product Detail](/events/viewed-product-detail)
 * [Completed Transaction](/events/completed-transaction)
 
-### <a name="facebookPixelID"></a>Facebook Pixel ID
+## Facebook Pixel ID
 ------
 You can find the Facebook Pixel ID in the facebook section: Managing Advertising > All Tools > Pixels.
 
@@ -59,7 +46,7 @@ Copy the ID and paste it into the "Pixel Facebook ID" field of the integration s
 >Multiple Facebook pixels can be connected by entering their IDs separated by a coma. For example, in the screenshot below the pixels '111' and '222' are connected.
 ![](/img/integrations.facebook.multipixel.png)
 
-### <a name="productFeed"></a>Product feed has grouped products
+## Product feed has grouped products
 ------
 Facebook receives information about products placed on the site through an XML feed. With a certain interval, the Facebook robot downloads a feed from your server. This feed contains information about all products on the site.
 
@@ -75,12 +62,12 @@ For correct integration, Facebook should also receive information about the inte
  -If you do NOT use grouping of goods using the `item_group_id` xml-feed parameter - do not activate this setting.
   >In this case, the product id from your XML feed must match the `product.id` of the `digitalData` object.
 
-### <a name="costOfGoods"></a>Pass the cost of goods to the event value parameter
+## Pass the cost of goods to the event value parameter
 ------
 By default, along with the `Viewed Product Detail` event, SegmentStream does not transfer the price of the item in the `value` parameter. In the Facebook documentation it is written that the value of an event should be passed to the value parameter and not the value of an item.
 If you want to transfer the value of the goods to the `value` variable - enable this setting. The currency from the variable `product.currency` will also automatically be transferred.
 
-### <a name="customEvents"></a>Custom events
+## Custom events
 ------
 SegmentStream can send custom events to Facebook along with standard events.
 To configure the transfer of custom events, fill in 2 fields:
@@ -91,7 +78,7 @@ To configure the transfer of custom events, fill in 2 fields:
 
 You can add an unlimited number of custom events
 
-### <a name="eventParameters"></a>Event parameters
+## Event parameters
 ------
 SegmentStream can send custom parameters along with events, which can be used to define any custom audiences you create, as it is described in the Facebook [documentation](https://developers.facebook.com/docs/facebook-pixel/implementation/conversion-tracking#parameters).
 
@@ -110,7 +97,7 @@ Below are two examples of usage:
 
 You can add an unlimited number of event parameters, and they will be passed to all events sent to Facebook.
 
-### <a name="checkingIntegrationCorrectness"></a>Checking the correctness of the integration setup
+## Checking the correctness of the integration setup
 ------
-After configuring the integration in the SegmentStream interface, but before PUBLICATION - go to the site in test_mode, [go through the conversion funnel and check for errors](/for-analyst/integrations#testing).
+After configuring the integration in the SegmentStream interface, but before PUBLICATION - go to the site in test_mode, [go through the conversion funnel and check for errors](/javascript-sdk/integrations#testing).
 If there are no errors - publish the current version.

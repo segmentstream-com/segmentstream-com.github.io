@@ -7,20 +7,7 @@ order: 1
 
 Flocktory is a complete marketing platform. SegmentStream allows you to send data about the behavior of your users to [Flocktory](https://www.flocktory.com/en/).
 
-### Page contents
-------
-<ul class="page-navigation">
-  <li><a href="#introduction">Introduction</a></li>
-  <li><a href="#required-events-and-variables">Required events and variables</a></li>
-  <li><a href="#website-id">Website ID</a></li>
-  <li><a href="#enable-postcheckout">Enable Postcheckout</a></li>
-  <li><a href="#enable-precheckout">Enable Precheckout</a></li>
-  <li><a href="#enable-exchange">Enable Exchange</a></li>
-  <li><a href="#exchange-trigger-events">Exchange trigger event</a></li>
-  <li><a href="#exchange-spot">Setting an exchange spot</a></li>
-</ul>
-
-### <a name="introduction"></a>Introduction
+## Introduction
 ------
 With SegmentStream, you can fully integrate Flocktory with your site.
 
@@ -30,7 +17,7 @@ To set up integration with Flocktory:
 3. In the panel that opens, configure the integration.
 ![](/img/integrations.flocktory.settings.png)
 
-### <a name="required-events-and-variables"></a>Required events and variables
+## Required events and variables
 ------
 For the correct integration of your site with Flocktory - you need to configure the transfer of events in the `digitalData.events` array.
 The list of events is as follows:
@@ -52,38 +39,38 @@ The list of events is as follows:
 * [transaction](/digitaldata/transaction)
 * [user](/digitaldata/user)
 
-### <a name="website-id"></a>Website ID
+## Website ID
 ------
 By entering your Flocktory website ID in this field you enable the main Flocktory integration. You can read about it in detail on the [Flocktory documentation page](https://flocktory.github.io/en/integration/general/)
 
 >You can find your website's ID in your Flocktory admin panel – or request the ID from your Flocktory account manager.
 
-### <a name="enable-postcheckout"></a>Enable Postcheckout
+## Enable Postcheckout
 ------
 Enabling this toggle switch will activate the Flocktory Postcheckout module. You can read about it in detail on the [Flocktory documentation page](https://flocktory.github.io/en/integration/postcheckout/)
 
-### <a name="enable-precheckout"></a>Enable Precheckout
+## Enable Precheckout
 ------
 Enabling this toggle switch will activate the Flocktory Precheckout module. You can read about it in detail on the [Flocktory documentation page](https://flocktory.github.io/en/integration/precheckout/)
 
-### <a name="enable-exchange"></a>Enable Exchange
+## Enable Exchange
 ------
 The Flocktory Exchange module is enabled by the toggle switch.
 
 You can read about it in detail on the [Flocktory documentation page](https://flocktory.github.io/en/integration/exchange/)
 
-### <a name="exchange-trigger-events"></a>Exchange trigger event
+## Exchange trigger event
 ------
 By default, the Exchange banner is triggered when the `Completed Transaction` event is pushed to the `digitalData.events` array. Fill this field with the name of the event that you want to trigger the Exchange banner.
 
 This feature is usually used in scenarios where a website sends the `Completed Transaction` event right before redirecting to an online payment system, therefore leaving no chance for the Exchange banner to be viewed. To overcome this, a separate event has to be created, which is triggered when the user is redirected back from the payment system to the 'Thank You' page, for example `Viewed Thank You Page`.
 
-### <a name="exchange-spot"></a>Setting an exchange spot
+## Setting an exchange spot
 ------
 Spot is an optional parameter that serves as an internal filter for Flocktory campaigns.
 It should be used if you have different “thank you” pages and want to show different campaigns on each one.
 There are two ways to set the Spot parameter through SegmentStream:
-- Add a spot parameter to the [Completed Transaction](/events/completed-transaction) event and the configured [exchange trigger event](#exchangeTriggerEvent), for example:
+- Add a spot parameter to the [Completed Transaction](/events/completed-transaction) event and the configured [exchange trigger event](#exchange-trigger-event), for example:
 ```javascript
 window.digitalData.events.push({
     category: 'Ecommerce',
@@ -107,4 +94,3 @@ window.digitalData.events.push({
 5. Save (d) the event variable.
 
 You can read about it in detail on the [Flocktory documentation page](https://flocktory.github.io/en/integration/exchange/)
-

@@ -7,15 +7,8 @@ order: 1
 
 The array `digitalData.recommendation` contains `listing` objects  that describe the lists of recommended products located on the page
 
-### Page contents
-------
-<ul class="page-navigation">
-  <li><a href="#introduction">Introduction</a></li>
-  <li><a href="#thirdPartySystems">What to do if the list of recommendations is formed by a third-party system?</a></li>
-</ul>
 
-
-### <a name="introduction"></a>Introduction
+## Introduction
 ------
 The `digitalData.recommendation` array must be declared and filled in the source code of the page or after the AJAX-load of the list of recommendations.
 
@@ -45,8 +38,8 @@ window.digitalData = {
 
 [Detailed description of the `listing` object](/digitaldata/listing)
 
-### <a name="thirdPartySystems"></a>What to do if the list of recommendations is formed by a third-party system?
+## What to do if the list of recommendations is formed by a third-party system?
 ------
 There are services that generate a list of recommendations on their side. After loading the page of your site, the service integrates the generated list into the code of your site. However, for the user, the integration list is loaded a little later than the main content of the page.
 
-In this case, the connected system itself tracks impressions and clicks of the product blocks. To send information about impressions and clicks to Google Analytics, you need the third-party system to push events to the `digitalData.events` array. To correctly track events in Google Analytics send the [third-party system developer guide](/for-developer/partners) link to the manager of the connected system.
+In this case, the connected system itself tracks impressions and clicks of the product blocks. To send information about impressions and clicks to Google Analytics, you need the third-party system to push events to the `digitalData.events` array. To correctly track events in Google Analytics send the third-party system developer guide link to the manager of the connected system.

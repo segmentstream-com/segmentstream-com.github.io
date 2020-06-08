@@ -10,7 +10,7 @@ order: 2
 The `Added Product` event must be pushed to the `digitalData.events` array when a user adds a product to their cart or increases the quantity of a product in the cart.
 >Important! The event should not be added after clicking on the "Add to Cart" button, but after the server returns a signal about the successful addition of the product to the cart.
 
-#### From the site code / when using AJAX
+## From the site code / when using AJAX
 ```javascript
 digitalData.events.push({
   name: 'Added Product',
@@ -20,7 +20,7 @@ digitalData.events.push({
 ```
 > For a detailed description of the `product` object, see the developer section.
 
-#### From the SegmentStream interface
+## From the SegmentStream interface
 > If you are sure that the product will be added to the user's cart by clicking on the "Add to Cart" button, you can use the following event settings:
 
 **Trigger**: `click`,
@@ -38,7 +38,7 @@ return {
 };
 ```
 
-#### Required by the following integrations:
+## Required by the following integrations:
 * Facebook
 * Retail Rocket
 * Segmento

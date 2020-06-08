@@ -6,20 +6,7 @@ date: 2020-04-13
 order: 6
 ---
 
-<ul class="page-navigation">
-  <li><a href="#introduction">Introduction</a></li>
-  <li><a href="#required-variables">Required variables</a></li>
-  <ul>
-    <li><a href="#page">page</a></li>
-    <li><a href="#cart">cart</a></li>
-    <li><a href="#website">website</a></li>
-    <li><a href="#user">user</a></li>
-    <li><a href="#version">version</a></li>
-  </ul>
-  <li><a href="#example">Example</a></li>
-</ul>
-
-## <a name="introduction"></a>Introduction
+## Introduction
 ------
 The checkout page typically contains forms user needs to fill in ourder to make a purchase. Example checkout pages:
 * Payment details page
@@ -28,10 +15,10 @@ The checkout page typically contains forms user needs to fill in ourder to make 
 
 The following properties must be defined for the checkout pages of the online store: `page`, `website`, `user`, `cart`, `version`.
 
-## <a name="required-variables"></a>Required variables
+## Required variables
 ------
 
-### <a name="page"></a>page
+### page
 
 You need to define only `page.type` variable in the `digitalData.page` object. All other variables are either optional or will be automatically filled by the SegmentStream SDK.
 
@@ -51,7 +38,7 @@ Example:
   }
 ```
 
-### <a name="cart"></a>cart
+### cart
 
 As the user completes checkout steps, the `digitalData.cart` object is enriched with new variables:
 `vouchers`, `voucherDiscount`, `shippingCost`, `shippingMethod`, `paymentMethod`.
@@ -102,7 +89,7 @@ window.digitalData = {
 }
 ```
 
-### <a name="website"></a>website
+### website
 
 You need to declare and fill in only 6 variables in the `digitalData.website` object. The following 3 variables are required: `website.type`,` website.currency`, `website.environment`. The remaining variables depend on the characteristics of your site.
 
@@ -124,7 +111,7 @@ Example:
   }
 ```
 
-### <a name="user"></a>user
+### user
 
 The composition of the `digitalData.user` object strongly depends on the requirements of the project. We recommend that you fill at least the following variables: `userId`, `user.email`, `user.isLoggedIn`, `user.firstName`, `user.isSubscribed`
 
@@ -149,7 +136,7 @@ window.digitalData = {
 }
 ```
 
-### <a name="version"></a>version
+### version
 
 The `digitalData.version` variable must be declared and filled when loading each page of the site.
 
@@ -164,7 +151,7 @@ window.digitalData = {
 }
 ```
 
-## <a name="example"></a>Example
+## Example
 ------
 In the end, your code will be similar to:
 ```javascript

@@ -6,7 +6,7 @@ order: 2
 ---
 The `Updated Profile Info` event should be pushed to the `digitalData.events` array when the server responds with a message about a successful user profile info update.
 
-#### From the site code / when using AJAX
+## From the site code / when using AJAX
 ```javascript
 digitalData.events.push({
   name: 'Updated Profile Info',
@@ -37,8 +37,8 @@ digitalData.events.push({
 ```
 > In the user object, you must pass the updated user data (updated email, phone, name etc.).
 
-#### From the SegmentStream interface
+## From the SegmentStream interface
 The `Updated Profile Info` event can not be created from the built-in SegmentStream triggers. The event must be added from the site code.
 
-#### Required by the following integrations:
+## Required by the following integrations:
 * [Mindbox](/integrations/mindbox)
