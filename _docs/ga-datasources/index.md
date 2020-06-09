@@ -57,7 +57,7 @@ Nevertheless, Yandex.Market and VK data sources require additional settings to s
 
 If you don't exclude VAT for these services while importing cost data, you'll end up overestimating the costs of your VK and Yandex.Market campaigns. As a result, you won't be able to make correct conclusions on their efficiency comparing to other channels.
 
-> **Note:** currently, there is no technical possibility to add VAT for the imported costs. If you want to analyze data with VAT included, you can create a custom report in Google Analytics adding [calculated metrics](https://support.google.com/analytics/answer/6121409?hl=en){:target="_blank"} to it.
+> **Note!** Currently, there is no technical possibility to add VAT for the imported costs. If you want to analyze data with VAT included, you can create a custom report in Google Analytics adding [calculated metrics](https://support.google.com/analytics/answer/6121409?hl=en){:target="_blank"} to it.
 
 ## Historical data import
 
