@@ -19,7 +19,7 @@ date: 2020-06-09
 
 By default Facebook allows to use a lot of [dynamic URL tagging parameters](https://www.facebook.com/business/help/2360940870872492){:target="_blank"} to track campaigns.
 
-SegmentStream supports the following parameters.
+SegmentStream supports the following parameters:
 
 Name|Description
 --- | ---

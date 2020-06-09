@@ -25,7 +25,7 @@ Optionally, you can enable **Spend agency points** option. Points are transforme
 
 By default Yandex.Direct allows to use a lot of [dynamic URL tagging parameters](https://yandex.com/support/direct/statistics/url-tags.html){:target="_blank"} to track campaigns.
 
-SegmentStream supports the following parameters.
+SegmentStream supports the following parameters:
 
 Name|Description|Transmitted value
 --- | --- | ---

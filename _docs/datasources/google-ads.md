@@ -268,7 +268,7 @@ currency | STRING | NULLABLE
 
 By default Google Ads allows to use a lot of [dynamic URL tagging parameters](https://support.google.com/google-ads/answer/6305348){:target="_blank"} to track campaigns.
 
-SegmentStream supports the following parameters.
+SegmentStream supports the following parameters:
 
 Name|Description
 --- | ---
