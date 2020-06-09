@@ -4,7 +4,6 @@ title: "SegmentStream documentation"
 ---
 
 ## Introduction
----
 
 **SegmentStream** is a marketing data intelligence platform which allows to import and unify data from various data sources for advanced analytics and attribution.
 
@@ -30,7 +29,7 @@ Google BigQuery projects help to connect all your marketing data into your own G
 * JSON Feeds
 * etc
 
-You can learn more about Google Bigquery projects basic features [here](https://segmentstream.com/bigquery){:target="_blank"}.
+You can learn more about Google BigQuery projects basic features [here](https://segmentstream.com/bigquery){:target="_blank"}.
 
 ### Enterprise features
 
