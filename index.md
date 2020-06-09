@@ -4,6 +4,7 @@ title: "SegmentStream documentation"
 ---
 
 ## Introduction
+---
 
 **SegmentStram** is a marketing data intelligence platform which allows import and unify data from various data sources for advanced analytics and attribution.
 
@@ -13,12 +14,12 @@ Depending on the pricing plan it is possible to create the following types of pr
 * Google BigQuery project
 
 ## Google Analytics project
-
+---
 Google Anlaytics projects allow importing non-Google campaign cost data into your Google Anlytics account. This way you will be able to measure advertising campaigns from Facebook, Bing, Criteo, Yandex, and other sources in Google Analytics.
 
 ## Google BigQuery project
-
-### Basic fetures
+---
+### Basic features
 
 Google BigQuery projects help to connect all your marketing data into you own Google BigQuery data warehouse. This is more advanced functionality which allows working with raw data collected from various data sources:
 
