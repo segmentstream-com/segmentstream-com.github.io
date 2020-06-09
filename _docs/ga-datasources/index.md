@@ -41,6 +41,14 @@ There is no Google Ads data source inside the SegmentStream platform as Google A
 * [Link Google Analytics and Google Ads accounts](https://support.google.com/google-ads/answer/1704341?visit_id=637235865015177230-592091607&rd=1){:target="_blank"}
 * [Link Google Analytics and a Google Ads manager account (MCC)](https://support.google.com/google-ads/answer/6209127?hl=en&ref_topic=3121765){:target="_blank"}
 
+## Currency conversion
+
+SegmentStream automatically converts all currencies to the one used for your Google Analytics view. Note that SegmentStream will use the first view in the list to determine the cost data currency. This currency will be used to convert all cost data for all selected views.
+
+You can always change the currency used to display ad costs in Google Analytics. To do so, [change the currency setting](https://support.google.com/analytics/answer/1010249){:target="_blank"} for the Google Analytics view connected to the data set with cost data.
+
+In this case, the new currency setting will be applied only to the data SegmentStream will import to Google Analytics after you've changed the setting. The currency won't change for the previously imported data. However, you can contact our support team to run a backfill to update previously imported data.
+
 ## VAT handling
 
 As far as Google Analytics imports all cost data from Google Ads without VAT, SegmentStream follows the same logic for all other data sources to avoid cost data VAT inconsistency.
@@ -50,3 +58,10 @@ Nevertheless, Yandex.Market and VK data sources require additional settings to s
 If you don't exclude VAT for these services while importing cost data, you'll end up overestimating the costs of your VK and Yandex.Market campaigns. As a result, you won't be able to make correct conclusions on their efficiency comparing to other channels.
 
 > **Note:** currently, there is no technical possibility to add VAT for the imported costs. If you want to analyze data with VAT included, you can create a custom report in Google Analytics adding [calculated metrics](https://support.google.com/analytics/answer/6121409?hl=en){:target="_blank"} to it.
+
+## Historical data import
+
+In order to import historical cost data, please contact our support team. SegmentStream allows to backfill historical data depending on your pricing plan type:
+
+* For monthly subscriptions we can backfill up to 30 days of historical data.
+* For annual subscriptions we can backfill up to 6 months of historical data (depending on ad platforms allowance).
