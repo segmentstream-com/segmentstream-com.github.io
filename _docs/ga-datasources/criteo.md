@@ -34,4 +34,4 @@ For example, if you have a Criteo campaign with the **Campaign ID** = `123123123
 `123123123` ▸ `upper_funnel`
 
 This is how it might look inside the admin panel:
-![Criteo URL params matching](/img/criteo/criteo-utm-params.png =250px)
+![Criteo URL params matching](/img/criteo/criteo-utm-params.png)
