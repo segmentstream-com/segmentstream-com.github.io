@@ -25,7 +25,7 @@ Google BigQuery projects help to connect all your marketing data into your own G
 * CRM/ERP systems
 * Call tracking systems
 * Google Sheets
-* JSON Feeds
+* JSON/XML feeds
 * etc
 
 You can learn more about Google BigQuery projects basic features [here](https://segmentstream.com/bigquery){:target="_blank"}.
