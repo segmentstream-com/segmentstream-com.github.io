@@ -24,6 +24,11 @@ Complete the following steps to connect BigQuery to SegmentStream:
 
 Now you've connected your Google Analytics to SegmentStream.
 
+## Multiple Google Analytics properties
+
+SegmentStream allows creating unlimited Google Analytics projects which means possibility to connect unlimited amount of different Google Analytics properties. However, this functionality is not available for the **Free Trial** subscriptions.
+![Add Google Analytics project](/img/google-analytics/ga-add-project.png)
+
 ## What's next
 
 * [Connect required data sources](/ga-datasources/index) to enable automatic cost data import.
