@@ -8,7 +8,7 @@ order: 2
 
 ## Before you begin
 
-* Make sure that you've [created an API user](https://support.criteo.com/s/article?article=API-Getting-Started&language=en_US) in Criteo Management Center.
+* Make sure that you've [created an API user](https://support.criteo.com/s/article?article=API-Getting-Started&language=en_US){:target="_blank"} in Criteo Management Center.
 
 ## Getting started
 
