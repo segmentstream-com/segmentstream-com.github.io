@@ -1,25 +1,40 @@
 ---
 layout: default
-title: "Documentation Index Page"
+title: "SegmentStream documentation"
 ---
 
-### Introduction:
-------
-**SegmentStream** is a universal solution that manages the flow of information between the site and a variety of analytics and marketing systems. These systems are able to receive information about certain events occurring on the site in a certain format. Every system needs different events:
-- For the Criteo retargeting system, it is important to know at what point the user visits the basket page, while for the OneSignal system it is not.
-- For Yandex.Metrica, it is important to get information about the product at the time of its removal from the basket, while it isn't important for Google Analytics
-- Google BigQuery integration records all events occurring on the website for further in-depth analysis.
+## Introduction
 
-SegmentStream is functioning with the help of the following:
-- **[DigitalData](/javascript-sdk/digitaldata)** is an open standard for presenting information on web pages. Technically, DigitalDataLayer is a simple JavaScript object in JSON format that contains structured information about a user, a page, and all events (pageviews, items, clicks, additions to cart, transactions, JavaScript errors, and more).
-- **[SegmentStream Panel](/javascript-sdk/quickstart)** is a system that works with data from DigitalDataLayer. SegmentStream converts information into any format and passes it to marketing and analytics systems at the right time. Also SegmentStream enriches DigitalDataLayer with data from third-party systems, for example: CRM, DMP, weather API, etc.
+**SegmentStram** is a marketing data intelligence platform which allows import and unify data from various data sources for advanced analytics and attribution.
 
-### Key features:
-------
-- Activation and deactivation of marketing systems in 1 click.
-- Reducing the cost of integrations by 8-10 times.
-- Integration prioritization management.
-- Real-time error validation.
-- Automatic sending of data on any integration failures to analytics.
-- Data security. Trackers only get the necessary information for the effective operation of their system and not a bit more.
-- Streaming of all events into Google BigQuery.
+Depending on the pricing plan it is possible to create the following types of projects inside SegmentStream:
+
+* Google Analytics project
+* Google BigQuery project
+
+## Google Analytics project
+
+Google Anlaytics projects allow importing non-Google campaign cost data into your Google Anlytics account. This way you will be able to measure advertising campaigns from Facebook, Bing, Criteo, Yandex, and other sources in Google Analytics.
+
+## Google BigQuery project
+
+## Basic fetures
+
+Google BigQuery projects help to connect all your marketing data into you own Google BigQuery data warehouse. This is more advanced functionality which allows working with raw data collected from various data sources:
+
+* Advertising platforms (raw and UTM-grouped reports)
+* Mobile and web analytics platforms
+* CRM/ERP systems
+* Calltracking systems
+* Google Sheets
+* JSON Feeds
+* etc
+
+## Enterprise features
+
+Enterprise accounts are extended with more advanced features like:
+
+* Real-time event data collection using [SegmentStream JavaScript SDK](javascript-sdk/quickstart) or [HTTP API](http-api/overview);
+* Advanced Data Flow platform for complex data transformations and workflows;
+* Data Desinations which allow sending data from Google BigQuery to different marketing platforms (CDP functionality);
+* Advanced marketing reporting, ML-based multi-touch attribution, ROPO-analysis and other custom datasets and reports;
