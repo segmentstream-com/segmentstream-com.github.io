@@ -27,11 +27,11 @@ By default, the following matching applies for `utm_source` and `utm_medium`:
 
 This matching can be changed inside the admin panel by specifying appropriate values **UTM source** and **UTM medium** option.
 
-For all your Criteo campaigns you need to define matching between the **Campaign ID** and **utm_campaign** parameter.
+For all your Criteo campaigns you need to define matching between the **Campaign ID** and **UTM campaign**.
 
 For example, if you have a Criteo campaign with the **Campaign ID** = `123123123` with the following link to the website: `http://www.site.com/?utm_source=criteo&utm_medium=retargeting&utm_campaign=upper_funnel`, the mapping should be the following:
 
 `123123123` ▸ `upper_funnel`
 
 This is how it might look inside the admin panel:
-![Criteo URL params matching](/img/criteo/criteo-utm-params.png)
+<img src="/img/criteo/criteo-utm-params.png" alt="Criteo URL params matching" width="150"/>
