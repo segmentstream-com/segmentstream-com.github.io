@@ -22,7 +22,7 @@ please <a href="https://support.segmentstream.com/hc/en-us/requests/new" taget="
 var supportedHeaders = 'h2,h3';
 var $headers = $(supportedHeaders);
 
-if ($headers.length > 0 && jQuery('.page-navigation').length === 0) {
+if ($headers.length > 1 && jQuery('.page-navigation').length === 0) {
   var $firstHeader = $headers.first();
   var $firstUl = $('<ul class="page-navigation">');
   var $currentUl = $firstUl;
