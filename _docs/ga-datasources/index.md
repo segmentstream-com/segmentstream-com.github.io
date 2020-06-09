@@ -1,7 +1,8 @@
 ---
 layout: page
 section: ga-datasources
-title: "Overview"
+navigation_title: "Overview"
+title: "Data Sources overview"
 order: 0
 date: 2020-06-08
 ---

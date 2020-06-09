@@ -1,7 +1,8 @@
 ---
 layout: page
 section: datasources
-title: "Overview"
+navigation_title: "Overview"
+title: "Data Sources overview"
 order: 0
 ---
 
