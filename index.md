@@ -6,9 +6,9 @@ title: "SegmentStream documentation"
 ## Introduction
 ---
 
-**SegmentStram** is a marketing data intelligence platform which allows to import and unify data from various data sources for advanced analytics and attribution.
+**SegmentStream** is a marketing data intelligence platform which allows to import and unify data from various data sources for advanced analytics and attribution.
 
-Depending on the pricing plan it is possible to create the **Google Analytics** and **Google BigQuery** projects inside the SegmentStream platform.
+Depending on the pricing plan it is possible to create the **Google Analytics** and **Google BigQuery** projects inside the SegmentStream admin panel.
 
 ## Google Analytics project
 
