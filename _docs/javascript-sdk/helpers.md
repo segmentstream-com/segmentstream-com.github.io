@@ -7,10 +7,11 @@ order: 105
 ---
 
 Helper functions help you write code faster and with fewer errors, plus, they make your code more readable.
-They can be used **only inside the admin panel** to setup of variable, event, and script handlers.
+They can be used **only inside the admin panel** to setup variable, event, and script handlers.
 
-## Get URL parameter value - _queryParam
-------
+## _queryParam
+Get URL parameter value.
+
 ```javascript
 _queryParam(paramName);
 ```
@@ -22,8 +23,8 @@ _queryParam('q'); // blue%20ball
 ```
 > The `_queryParam()` function always returns values in lowercase
 
-## Get cookie value - _ga
-------
+## _cookie_
+Get cookie value.
 ```javascript
 _cookie(cookieName);
 ```
@@ -34,8 +35,8 @@ Get the GA cookie value:
 _cookie('_ga'); // GA1.2.1409919348.1513159051
 ```
 
-## Safely get any property of an object - _get
-------
+## _get 
+Safely get any property of an object.
 ```javascript
 _get(object, path);
 ```
@@ -46,8 +47,8 @@ Get the value of 'transaction.lineItems' from a digitalData event object:
 _get(event, 'transaction.lineItems'); // lineItems array [...]
 ```
 
-## Safely get any digitalData property - _digitalData
-------
+## _digitalData
+Safely get any digitalData property.
 ```javascript
 _digitalData(path);
 ```
@@ -58,76 +59,84 @@ Get the value of 'transaction.lineItems' from the digitalData object:
 _digitalData('transaction.lineItems'); // lineItems array [...]
 ```
 
-## Load pixel - _loadPixel
-------
-Any number of attributes is supported.
+## _loadPixel
+Load tracking pixel. Any number of attributes is supported.
 ```javascript
 _loadPixel({
-  src: 'pixelLink',
-  id: 'pixelId',
+  src: 'https://someurl.com/pixel.gif',
+  id: 'some_id',
   //...any other attributes
 });
 ```
-Where `pixelLink` is the link to the pixel and `pixelId` is the id - type `string`.
+Where `src` is the link to the pixel and `id` is the ID of the loaded pixel.
 
 Load pixel from https://example.com/pixel.png:
 ```javascript
-_loadPixel({src: 'https://example.com/pixel.png', id: 'admit_ad'});
+_loadPixel({
+  src: 'https://example.com/pixel.png',
+  id: 'admit_ad'
+});
 ```
 
-## Load script - _loadScript
-------
-Any number of attributes is supported.
+## _loadScript
+Load script. Any number of attributes is supported.
 ```javascript
 _loadScript({
-  src: 'scriptLink',
-  id: 'scriptId',
+  src: 'https://someurl.com/script.js',
+  id: 'some_id',
   //...any other attributes
 });
 ```
-Where `scriptLink` is the link to the script and `scriptId` is the id - type `string`.
+Where `src` is the link to the script and `id` is the ID of the script tag.
 
 Load script from https://example.com/script.js:
 ```javascript
-_loadScript({src: 'https://example.com/script.js', id: 'google'});
+_loadScript({
+  src: 'https://example.com/script.js',
+  id: 'google'
+});
 ```
 
-## Load iframe - _loadIframe
-------
-Any number of attributes is supported.
+## _loadIframe
+Load iframe. Any number of attributes is supported.
 ```javascript
 _loadIframe({
-  src: 'iframeLink',
-  id: 'iframeId',
+  src: 'https://someurl.com/iframe.html',
+  id: 'some_id',
   //...any other attributes
 });
 ```
-Where `iframeLink` is the link to the iframe and `iframeId` is the id - type `string`.
+Where `src` is the link to the iframe and `id` is the ID of the iframe tag.
 
 Load iframe from https://example.com/window:
 ```javascript
-_loadIframe({src: 'https://example.com/window', style: 'display: none;'});
+_loadIframe({
+  src: 'https://example.com/window',
+  style: 'display: none;'
+});
 ```
 
-## Load link - _loadLink
-------
-Any number of attributes is supported.
+## _loadLink
+Load link. Any number of attributes is supported.
 ```javascript
 _loadLink({
-  src: 'fileLink',
-  type: 'fileType',
+  src: 'https://someurl.com/styles.css',
+  type: 'text/css',
   //...any other attributes
 });
 ```
-Where `fileLink` is the link to the file and `fileType` is the type - type `string`.
+Where `src` is the link to the file and `type` is the type of the resource link.
 
 Load link from https://example.com/style.css:
 ```javascript
-_loadLink({href: 'https://example.com/style.css', type: "text/css"});
+_loadLink({
+  href: 'https://example.com/style.css',
+  type: "text/css"
+});
 ```
 
-## Safely get any window property - _global
-------
+## _global
+Safely get any window property.
 ```javascript
 _global(path);
 ```
@@ -138,8 +147,8 @@ Get the value of window.settings.mobile_app:
 _global('settings.mobile_app');
 ```
 
-## Get an array of elements by CSS-selector - _domQuery
-------
+## _domQuery
+Get an array of elements by CSS-selector.
 ```javascript
 _domQuery(cssSelector);
 ```
@@ -153,8 +162,8 @@ _domQuery('#logo');
 >  - if jQuery is not loaded on the website (there is no global window.jQuery object) or jQuery is loaded after SegmentStream (is located further down the HTML page), [document.querySelectorAll](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll) is used,
 >  - if jQuery is loaded on the website, jQuery selectors are used.
 
-## Safely get a GTM dataLayer variable - _dataLayer
-------
+## _dataLayer
+Safely get a GTM dataLayer variable.
 ```javascript
 _dataLayer(path);
 ```
@@ -165,8 +174,8 @@ Get the value of 'ecommerce.purchase' from the dataLayer:
 _dataLayer('ecommerce.purchase');
 ```
 
-## Get data from a remote server using ajax - _fetch
-------
+##  _fetch
+Get data from a remote server using ajax.
 ```javascript
 return _fetch(link, function(result) {
   return result;
@@ -181,8 +190,8 @@ return _fetch('/ajax?cart', function(result) {
 });
 ```
 
-## Delay before the handler returns the result - _timeout
-------
+## _timeout 
+Delay before the handler returns the result.
 ```javascript
 return _timeout(delay, function() {
   code
@@ -199,9 +208,8 @@ return _timeout(1500, function() {
 });
 ```
 
-## Try calling a function several times - _retry
-------
-The function takes 3 arguments, the function to be called, the number of attempts, the interval between the attempts.
+## _retry
+Try calling a function several times. The function takes 3 arguments, the function to be called, the number of attempts, the interval between the attempts.
 ```javascript
 _retry(callbackFunction, retryQuantity, retryInterval);
 ```
