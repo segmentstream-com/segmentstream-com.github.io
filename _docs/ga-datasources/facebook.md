@@ -23,10 +23,10 @@ SegmentStream supports the following parameters.
 
 Name|Description
 --- | ---
-`{% '{{ad.id}}' %}` | The unique ID of the ad.
-`{{adset.id}}` | The unique ID of the ad set. An ad set is a group of ads that share the same budget, schedule, delivery optimization and targeting.
-`{{campaign.id}}` | The unique ID number of the ad campaign. A campaign contains ad sets and ads.
-`{{ad.name}}` | The name of the ad
-`{{adset.name}}` | The name of the ad set. An ad set is a group of ads that share the same budget, schedule, delivery optimization and targeting.
-`{{campaign.name}}` | The name of the ad campaign. A campaign contains ad sets and ads.
-`{{site_source_name}}` | Depending on where the ad appeared this parameter has four possible values.<br/> `fb` - Facebook<br/>`ig` - Instagram<br/>`msg` - Messenger<br/>`an` - the Audience Network
+`{% raw %}{{ad.id}}{% endraw %}` | The unique ID of the ad.
+`{% raw %}{{adset.id}}{% endraw %}` | The unique ID of the ad set. An ad set is a group of ads that share the same budget, schedule, delivery optimization and targeting.
+`{% raw %}{{campaign.id}}{% endraw %}` | The unique ID number of the ad campaign. A campaign contains ad sets and ads.
+`{% raw %}{{ad.name}}{% endraw %}` | The name of the ad
+`{% raw %}{{adset.name}}{% endraw %}` | The name of the ad set. An ad set is a group of ads that share the same budget, schedule, delivery optimization and targeting.
+`{% raw %}{{campaign.name}}{% endraw %}` | The name of the ad campaign. A campaign contains ad sets and ads.
+`{% raw %}{{site_source_name}}{% endraw %}` | Depending on where the ad appeared this parameter has four possible values.<br/> `fb` - Facebook<br/>`ig` - Instagram<br/>`msg` - Messenger<br/>`an` - the Audience Network
