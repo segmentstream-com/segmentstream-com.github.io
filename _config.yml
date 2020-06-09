@@ -15,6 +15,10 @@ navigation: 1
 
 # Default categories (in order) to appear in the navigation
 sections: [
+    ['Google Analytics project', [
+        ['google-analytics', 'Google Analytics Setup'],
+        ['ga-datasources', 'Data Sources']
+    ]],
     ['BigQuery project', [
         ['bigquery', 'BigQuery Setup'],
         ['datasources', 'Data Sources'],
@@ -26,10 +30,6 @@ sections: [
         ['integrations', 'Tracking Integrations'],
         ['http-api', 'HTTP API'],
         ['guides', 'Guides']
-    ]],
-    ['Google Analytics project', [
-        ['google-analytics', 'Google Analytics Setup'],
-        ['ga-datasources', 'Data Sources']
     ]]
 ]
 
