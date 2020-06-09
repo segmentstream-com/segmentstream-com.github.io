@@ -3,7 +3,7 @@ layout: page
 section: ga-datasources
 navigation_title: "RTB House"
 title: "RTB House data source"
-order: 1
+order: 3
 ---
 
 > Attention! The [Google BigQuery](/integrations/google-bigquery) integration has to be enabled to use this feature.
