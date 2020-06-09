@@ -12,7 +12,7 @@ date: 2020-06-09
 
 ## Connecting Google Analytics
 
-Complete the following steps to connect BigQuery to SegmentStream:
+Complete the following steps to connect you Google Analytics property to SegmentStream:
 1. Go to the [SegmentStream admin panel](https://admin.segmentstream.com/).
 2. Click **Connect your Google Analytics**.
 3. Click **Authenticate with Google** and log in with your Google account that has a Google Analytics account associated with it.
