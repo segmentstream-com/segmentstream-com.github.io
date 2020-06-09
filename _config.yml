@@ -29,7 +29,7 @@ sections: [
     ]],
     ['Google Analytics project', [
         ['google-analytics', 'Google Analytics Setup'],
-        ['ga-datasources', 'Data Sources'],
+        ['ga-datasources', 'Data Sources']
     ]]
 ]
 
