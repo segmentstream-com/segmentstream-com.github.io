@@ -23,7 +23,7 @@ _queryParam('q'); // blue%20ball
 ```
 > The `_queryParam()` function always returns values in lowercase
 
-## _cookie_
+## _cookie
 Get cookie value.
 ```javascript
 _cookie(cookieName);
