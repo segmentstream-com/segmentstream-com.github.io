@@ -13,12 +13,14 @@ Depending on the pricing plan it is possible to create the following types of pr
 * Google Analytics project
 * Google BigQuery project
 
+You can learn more about Google Analytics projects functionality [here](https://segmentstream.com/google-analytics){:target="_blank"}.
+
 ## Google Analytics project
----
+
 Google Anlaytics projects allow importing non-Google campaign cost data into your Google Anlytics account. This way you will be able to measure advertising campaigns from Facebook, Bing, Criteo, Yandex, and other sources in Google Analytics.
 
 ## Google BigQuery project
----
+
 ### Basic features
 
 Google BigQuery projects help to connect all your marketing data into you own Google BigQuery data warehouse. This is more advanced functionality which allows working with raw data collected from various data sources:
@@ -31,6 +33,8 @@ Google BigQuery projects help to connect all your marketing data into you own Go
 * JSON Feeds
 * etc
 
+You can learn more about Google Bigquery projects basic features [here](https://segmentstream.com/bigquery){:target="_blank"}.
+
 ### Enterprise features
 
 Enterprise accounts are extended with more advanced features like:
@@ -39,3 +43,7 @@ Enterprise accounts are extended with more advanced features like:
 * Advanced Data Flow platform for complex data transformations and workflows;
 * Data Desinations which allow sending data from Google BigQuery to different marketing platforms (CDP functionality);
 * Advanced marketing reporting, ML-based multi-touch attribution, ROPO-analysis and other custom datasets and reports;
+
+## What's next
+* [Getting started with Google Analytics project](google-analytics/overview)
+* [Getting started with Google BigQuery project](bigquery/overview)
