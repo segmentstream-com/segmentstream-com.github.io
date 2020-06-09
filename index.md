@@ -18,7 +18,7 @@ Google Anlaytics projects allow importing non-Google campaign cost data into you
 
 ## Google BigQuery project
 
-## Basic fetures
+### Basic fetures
 
 Google BigQuery projects help to connect all your marketing data into you own Google BigQuery data warehouse. This is more advanced functionality which allows working with raw data collected from various data sources:
 
@@ -30,7 +30,7 @@ Google BigQuery projects help to connect all your marketing data into you own Go
 * JSON Feeds
 * etc
 
-## Enterprise features
+### Enterprise features
 
 Enterprise accounts are extended with more advanced features like:
 
