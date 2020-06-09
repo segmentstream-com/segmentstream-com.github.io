@@ -35,7 +35,7 @@ To connect a data source you should follow the following steps:
 
 4. Apply additional transformation settings following the instructions in the appropriate documentation of the specific data source.
 
-## Google Ads data source
+## Google Ads cost data import
 
 There is no Google Ads data source inside the SegmentStream platform as Google Analytics has a built-in integration for the Google Ads costs import. Please, read moe about this feature using the following links:
 * [Link Google Analytics and Google Ads accounts](https://support.google.com/google-ads/answer/1704341?visit_id=637235865015177230-592091607&rd=1){:target="_blank"}
