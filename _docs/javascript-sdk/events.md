@@ -25,7 +25,7 @@ Now SegmentStream can send information about the event "Some Event" with the val
 
 > Important! The default SegmentStream client library always sends a built-in Viewed Page event after loading. This event can be disabled by turning off the [Automatic sending of the Viewed Page event](javascript-sdk/settings#automatic-sending-of-the-viewed-page-event) option in the project settings.
 
-![](/img/events.1.png)
+<img src="/img/events.1.png" width="450"/>
 
 Based on these triggers and data from digitalData, you can create new events.
 
@@ -34,7 +34,7 @@ Based on these triggers and data from digitalData, you can create new events.
 
 Most marketing systems require information about your online store's product page views. To send the information about the viewed product to any integration, you need to configure the Viewed Product Detail event. This event occurs when the user loads a product page, or in the digitalData language: The Viewed Page event has occurred while the variable digitalData.page.type is equal to 'product' (the type of page on which the user is located is a product page).
 
-![](/img/events.viewedProductDetail.png)
+<img src="/img/events.viewedProductDetail.png" width="450"/>
 
 ```javascript
 if (_digitalData('page.type') === 'product') {
@@ -54,7 +54,7 @@ For tracking CTR and other indicators of the effectiveness of internal campaigns
 
 > Please note! When the "Click" trigger is selected an additional "Follow link defined in "href" after event" option appears. Enabling it will add a 500ms delay between the click on the link and the redirect, so that the tracked event has enough time to be sent to all integrations.
 
-![](/img/events.clickedCampaign.png)
+<img src="/img/events.clickedCampaign.png" width="450"/>
 
 ```javascript
 var campaignId = element.getAttribute('data-campaign-id');
@@ -70,7 +70,7 @@ return {
 In conjunction with clicks on banners, you need to track banner impressions. The built-in "Impression" trigger works only when 75% of the monitored page element is in the site visitor's browser field of view. The CSS selector for the tracked element is specified in the corresponding event setting field.
 > Important! If you selected "Impression" as the trigger in the campaign setup, in the "Function that returns an event object" field, you can refer to the "elements" variable. Elements is an array of DOM objects whose CSS selector you specified.
 
-![](/img/events.viewedCampaign.png)
+<img src="/img/events.viewedCampaign.png" width="450"/>
 
 ```javascript
 var viewedCampaigns = [];
@@ -90,7 +90,7 @@ return {
 A custom event checking how much of the page has been scrolled through. It can be triggered once per page, for each of the set comma separated scroll depths is reached.
 The example below shows how to track when 30, 40, and 100 percent of a page's length has been scrolled through.
 
-![](/img/events.scroll.png)
+<img src="/img/events.scroll.png" width="450"/>
 
 ### **Example 5: `Spent Active Time on Page: 30s` Event**
 
@@ -98,7 +98,7 @@ A custom event checking how much active time has been spent on the page.
 The example below shows how to track when 30 active seconds have been spent on the page.
 Changing the 'Trigger' input to 'Active time on site' will track all the active time in the visitors session.
 
-![](/img/events.active.png)
+<img src="/img/events.active.png" width="450"/>
 
 ### **Example 6: `Spent Time on Site: 180s` Event**
 
@@ -106,7 +106,7 @@ A custom event checking how much time has been spent on the website.
 The example below shows how to track when 3 minutes have been spent on the website.
 Changing the 'Trigger' input to 'Time on page' will track the time spent on a page.
 
-![](/img/events.time.png)
+<img src="/img/events.time.png" width="450"/>
 
 ## Event naming convention
 ------
