@@ -6,54 +6,32 @@ date: 2019-05-26
 order: 0
 ---
 
-## Snippet deployment
+## Before you begin
 
-The SegmentStream container snippet is a small piece of JavaScript code that you paste into your pages. It enables SegmentStream to fire events by inserting `segmentstream.js` into the page.
+1. [Set up BigQuery and connect it to SegmentStream](bigquery/overview){:target="_blank"}.
+2. Make sure that [SegmentStream JavaScript snippet](javascript-sdk/sinppet){:target="_blank"} is deployed on all website pages.
 
-To implement SegmentStream on your website:
+## Real-time event data collection
 
-Copy the following JavaScript and paste it as close to the opening <head> tag as possible on every page of your website, replacing `<PROJECT_ID>` with your project ID, or open the "Project Info" menu in the desired project's admin panel, and copy the prepared code.
+1. Go to your website and visit a few pages.
 
-```html
-<!-- SegmentStream snippet -->
-<script type="text/javascript">
-(function(h,d){d=d||"cdn.segmentstream.com";var a=window.segmentstream=window.segmentstream||[];window.ddListener=window.ddListener||[];var b=window.digitalData=window.digitalData||{};b.events=b.events||[];b.changes=b.changes||[];if(!a.initialize)if(a.invoked)window.console&&console.error&&console.error("SegmentStream snippet included twice.");else{a.invoked=!0;a.methods="initialize addIntegration persist unpersist on once off getConsent setConsent".split(" ");a.factory=function(k){return function(){var c=
-Array.prototype.slice.call(arguments);c.unshift(k);a.push(c);return a}};for(b=0;b<a.methods.length;b++){var f=a.methods[b];a[f]=a.factory(f)}a.load=function(a){var c=document.createElement("script");c.type="text/javascript";c.charset="utf-8";c.async=!0;c.src=a;a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(c,a)};a.loadProject=function(b){var c=window.location.search;if(0<=c.indexOf("segmentstream_test_mode=1"))try{var e=!0;window.localStorage.setItem("_segmentstream_test_mode",
-"1")}catch(g){}else if(0<=c.indexOf("segmentstream_test_mode=0"))try{e=!1,window.localStorage.removeItem("_segmentstream_test_mode")}catch(g){}else try{e="1"===window.localStorage.getItem("_segmentstream_test_mode")}catch(g){}e?a.load(window.SEGMENTSTREAM_TESTMODE_INIT_URL||"https://api.segmentstream.com/v1/project/"+b+".js"):a.load(window.SEGMENTSTREAM_INIT_URL||"https://"+d+"/project/"+b+".js")};a.CDN_DOMAIN=d;a.SNIPPET_VERSION="2.0.0";a.loadProject(h)}})("<PROJECT_ID>");
-</script>
-<!-- //SegmentStream snippet -->
-```
-
-A lot of data can be collected by just doing the basic code installation:
-
-* Viewed pages
-* Traffic sources
-* Information about the browser, ip, screen resolution
-* etc
-
-## Connecting Google BigQuery data warehouse
-
-1. Follow [this guide](/integrations/google-bigquery) to setup **Google BigQuery** integration.
-
-2. Go to your website and visit a few pages.
-
-3. Make sure that data is collected in the Chrome browser console:
+2. Make sure that data is collected in the Chrome browser console:
 ![How data is collected in Chrome browser console](/img/for-analyst/quickstart/bigquery-collect-console.png)
 
-4. Go to the Google Cloud Platform and check whether the new `hits_YYYYMMDD` table was created in you Google BigQuery Console:
+3. Go to the Google Cloud Platform and check whether the new `hits_YYYYMMDD` table was created in you Google BigQuery Console:
 ![Image shows how hits table is created in Google BigQuery](/img/for-analyst/quickstart/bigquery_hits_table.png)
 Note, that there are actually 2 hits tables were created: `hits` and `hits_YYYYMMDD`. First one is just a template that keeps the schema and used to create daily hits tables.
 
-5. Click on the `hits_YYYYMMDD` table and then on the "Query Table" button:
+4. Click on the `hits_YYYYMMDD` table and then on the "Query Table" button:
 ![Image shows how to query BigQuery table](/img/for-analyst/quickstart/bigquery_query_table.png)
 
-6. Run the following query in the Query editor:
+5. Run the following query in the Query editor:
 ```sql
 SELECT hitId, event.name, context FROM `<FULL_TABLE_NAME>`
 ```
 Note, that you should use proper full table name which is automatically filled once you click "Query Table" button.
 
-1. If everything was set up properly you will see results about pageviews from your website:
+6. If everything was set up properly you will see results about pageviews from your website:
 ![Image shows query results about page views](/img/for-analyst/quickstart/bigquery_results_1.png)
 
 Great! Now you've set up a real-time collection of all page views on your website.
