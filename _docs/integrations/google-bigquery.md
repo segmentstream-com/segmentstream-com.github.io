@@ -2,57 +2,22 @@
 layout: page
 section: integrations
 title: "Google BigQuery"
+date: 2020-06-11
 order: 1
 ---
 
+## Before you begin
+
+* Make sure you've finished a [BigQuery setup process](https://docs.segmentstream.com/bigquery/overview).
+
+## Introductio
+
 The Google BigQuery integration allows you to collect raw data in your own Google BigQuery data warehouse. Once connected, SegmentStream starts sending all of your users behavior data to the BigQuery cloud data storage.
 
-## Introduction
-Setting up the Google BigQuery integration:
-1. Create an account in Google BigQuery and configure the rights and roles.
-2. Log in to the [segmentstream.com](https://admin.segmentstream.com/) website and go to the integration management panel
-3. Go to the  "Integrations" section and select "Google BigQuery" integration.
-4. In the panel that opens, configure the integration.
-
-## Setting up BigQuery
-------
-1. Log in to Google with an account that has full access to BigQuery.
-2. Select a Google Cloud project or create a new one
-![](/img/integrations.ddmstreaming.2.png)
-3. Activate BigQuery API for your project
-![](/img/integrations.ddmstreaming.3.png)
-![](/img/integrations.ddmstreaming.4.png)
-![](/img/integrations.ddmstreaming.5.png)
-3. Login to your project's SegmentStream admin panel, and in the “Integrations” section, select the “Google BigQuery” integration.
-4. Click “Authenticate with Google” and follow the instructions. After successful authorization the integration setup form will appear.
-![](/img/integrations.ddmstreaming.19.png)
-5. Enter your **Google Cloud Project ID** (1), you can get in on **step 2**
-6. Enter your **BigQuery dataset name** (2).
-> You can specify the name of an existing dataset. In this case, SegmentStream will automatically create and update tables in this dataset.
-> You can also specify a new name. In this case, SegmentStream will automatically create a new Dataset.
-7. The "**Disconnect**" (3) button is needed to disconnect your Google account from SegmentStream. Data streaming will end after the disconnection, but the settings will be saved.
-![](/img/integrations.ddmstreaming.20.png)
-
-## Google Cloud project ID
-Enter the Google Big Query project ID in the `Google Cloud project ID` field.
-
->Please note that BigQuery project billing must be set up in order to load data using the SegmentStream Data Import features. Free BQ projects (including Sandbox) don't support some services which are required for SegmentStream Data Import.
-
-The easiest way to find the project ID is on the [google cloud console main page](https://console.cloud.google.com/):
-1. Enter the console and select the required project from the drop-down list.
-2. Copy the Project ID from the corresponding `Project info` widget field
-![](/img/integrations.ddmstreaming.1_2.png)
-
-## BigQuery dataset name
-Type `segmentstream` into the BigQuery DataSet name.
-> We recommend using the `segmentstream` name. If you want the data to stream into another DataSet, specify its name instead of `segmentstream`. Use only Latin letters and underscores.
-
 ## UTC offset
-------
 Select the time zone. For example, for all reports to be generated according to Moscow time, select "+03:00".
 
 ## Custom dimensions
-------
 By default, SegmentStream sends a certain set of variables to the Google BigQuery. These variables are sufficient for most data analysis tasks. If you do not have enough variables, you can send custom variables along with each event.
 
 For example:
