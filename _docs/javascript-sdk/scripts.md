@@ -17,7 +17,7 @@ In the system interface, creating and editing scripts is similar to creating and
 ------
 Below is an example of a script that sends a user's Email when a "Subscribed" event fires.
 
-![](/img/scripts.1.png)
+<img src="/img/scripts.1.png" width="450"/>
 
 ## Script
 ```javascript
