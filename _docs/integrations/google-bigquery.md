@@ -10,7 +10,7 @@ order: 1
 
 * Make sure you've finished a [BigQuery setup process](https://docs.segmentstream.com/bigquery/overview).
 
-## Introductio
+## Introduction
 
 The Google BigQuery integration allows you to collect raw data in your own Google BigQuery data warehouse. Once connected, SegmentStream starts sending all of your users behavior data to the BigQuery cloud data storage.
 
