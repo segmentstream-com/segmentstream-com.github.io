@@ -2,7 +2,7 @@
 layout: page
 section: javascript-sdk
 title: "Admin panel: Events"
-date: 2013-06-05 12:00:00
+date: 2020-06-11
 order: 90
 ---
 

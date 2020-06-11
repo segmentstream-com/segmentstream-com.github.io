@@ -2,7 +2,7 @@
 layout: page
 section: javascript-sdk
 title: "Admin panel: Scripts"
-date: 2017-08-11 17:32:00
+date: 2020-06-11
 order: 97
 ---
 
