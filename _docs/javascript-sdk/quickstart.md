@@ -9,7 +9,7 @@ order: 0
 ## Before you begin
 
 1. [Set up BigQuery and connect it to SegmentStream](/bigquery/overview){:target="_blank"}.
-2. Make sure that [SegmentStream JavaScript snippet](/javascript-sdk/sinppet){:target="_blank"} is deployed on all website pages.
+2. Make sure that [SegmentStream JavaScript snippet](/javascript-sdk/snippet){:target="_blank"} is deployed on all website pages.
 
 ## Real-time event data collection
 
