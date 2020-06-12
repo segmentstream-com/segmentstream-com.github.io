@@ -9,7 +9,7 @@ date: 2020-04-29
 
 Complete the following steps to connect BigQuery to SegmentStream:
 
-1. Go to the [SegmentStream admin panel](https://admin.segmentstream.com/).
+1. Go to the [SegmentStream admin panel](https://admin.segmentstream.com/){:target="_blank"}.
 2. Click **Enable BigQuery integration**.
 3. Click **Authenticate with Google** and log in with your Google account that has a Google Cloud Platform account associated with it.
 4. In the **Google Cloud project** dropdown select project that contains the dataset that you want to use with SegmentStream.
