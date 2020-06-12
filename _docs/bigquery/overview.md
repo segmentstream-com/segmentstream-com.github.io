@@ -4,7 +4,7 @@ section: bigquery
 navigation_title: "Overview"
 title: "Google BigQuery overview"
 order: 1
-date: 2020-04-29
+date: 2020-06-12
 ---
 
 ## What is Google BigQuery?
@@ -20,3 +20,4 @@ Google BigQuery is a central repository of data collected by the SegmentStream p
 3. [Enabling BigQuery API](enabling-bigquery-api)
 4. [Creating BigQuery dataset](creating-bigquery-dataset)
 5. [Connecting BigQuery to SegmentStream](connecting-bigquery)
+6. [Granting BigQuery access for the SegmentStream support team](bigquery-access)
