@@ -4,7 +4,7 @@ section: ga-datasources
 navigation_title: "VK"
 title: "VK data source"
 order: 7
-date: 2020-06-09
+date: 2020-06-16
 ---
 
 ## Getting started
@@ -18,17 +18,17 @@ date: 2020-06-09
   
 ## UTM matching for dynamic remarketing ads
 
-Currently, SegmentStream does not support automatic UTM matching for dynamic remarketing campaigns based on pricelists.
+Currently, SegmentStream does not support automatic UTM matching for dynamic remarketing campaigns based on price lists.
 
-Usually, there are 2 options how you define UTM parameters for your dynamic remarketing campaigns:
+Usually, there are 2 options for how you define UTM parameters for your dynamic remarketing campaigns:
 
 1. Inside the XML/YML product feed
-2. Inside the pricelist settings:
-![VK Pricelist UTM params](/img/vk/vk-pricelist.png)
+2. Inside the price list settings:
+![VK price list UTM params](/img/vk/vk-pricelist.png)
 
-Unfortunately, at the moment VK API does not allow to retrieve these settings. As a workaround, you should define the same UTM params you defined in pricelist settings inside the Ad Carousel Post. This is how you can do it.
+Unfortunately, at the moment VK API does not allow to retrieve these settings. As a workaround, you should define the same UTM params you defined in the price list settings inside the ad carousel post. This is how you can do it.
 
-1. Open your dynamic remarketing ad settings and click on the link which leads to the Carousel community post which is used as a layout for your ad:
+1. Open your dynamic remarketing ad settings and click on the link which leads to the carousel community post which is used as a layout for your ad:
 ![VK ad carousel post link](/img/vk/vk-carousel-layout-link.png)
 
 2. Click edit:
@@ -37,13 +37,15 @@ Unfortunately, at the moment VK API does not allow to retrieve these settings. A
 3. Click on the link of the first product in the carousel to edit it:
 ![VK ad carousel link edit](/img/vk/vk-carousel-link-edit.png)
 
-4. Enter any external website link (anyway it will be overriden by your XML/YML feed values) with the UTM paramters **identical** to the UTM paramters for the pricelist.
+4. Enter any external website link (anyway it will be overridden by your XML/YML feed values) with the UTM parameters **identical** to the UTM parameters for the price list.
 ![VK ad carousel link value](/img/vk/vk-carousel-link-value.png)
 
-For example, if you pricelist has the following value:
-`utm_source=vk&utm_medium=cpc&utm_campaign=carousel_dynamic_retargeting&utm_content={campaign_id}&utm_term={ad_id}`
+For example, if you price list has the following value:
+* `utm_source=vk&utm_medium=cpc&utm_campaign=carousel_dynamic_retargeting&utm_content={campaign_id}&utm_term={ad_id}`
 
-The value of you carousel product link after the `?` sign should be completely identical:
-`https://website.com/?utm_source=vk&utm_medium=cpc&utm_campaign=carousel_dynamic_retargeting&utm_content={campaign_id}&utm_term={ad_id}`
+The value of your carousel product link after the `?` sign should be completely identical:
+* `https://website.com/?utm_source=vk&utm_medium=cpc&utm_campaign=carousel_dynamic_retargeting&utm_content={campaign_id}&utm_term={ad_id}`
 
-> Note, that if you have pricelists with different URL templates, you should create a separate carousel layour for each ad.
+> Note, that if you have price lists or product feeds with different URL templates, you should create a separate carousel ad layout for each of them.
+
+This workaround will allow SegmentStream to fetch UTM settings from the carousel ad layout instead of the price list or product feed.
