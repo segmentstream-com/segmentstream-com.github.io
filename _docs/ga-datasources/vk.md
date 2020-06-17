@@ -4,7 +4,7 @@ section: ga-datasources
 navigation_title: "VK"
 title: "VK data source"
 order: 7
-date: 2020-06-16
+date: 2020-06-17
 ---
 
 ## Getting started
@@ -15,6 +15,18 @@ date: 2020-06-16
 4. Select **Account** which cost data you would like to import
 5. Optionally, select **Client** which cost data you would like to import (only for agency accounts).
 6. Click **Save**.
+
+## Supported dynamic URL parameters
+
+By default VK allows to use a lot of [dynamic URL tagging parameters](https://vk.com/faq11846){:target="_blank"} to track campaigns.
+
+SegmentStream supports the following parameters:
+
+Name|Description
+--- | ---
+`{% raw %}{{campaign_id}} {% endraw %}` | Advertising campaign ID.
+`{% raw %}{{campaign_name}}{% endraw %}` | Advertising campaign name.
+`{% raw %}{{ad_id}} {% endraw %}` | Ad ID.
   
 ## UTM matching for dynamic remarketing ads
 
