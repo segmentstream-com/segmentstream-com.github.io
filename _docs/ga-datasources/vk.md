@@ -61,3 +61,4 @@ The value of your carousel product link after the `?` sign should be completely 
 > Note, that if you have price lists or product feeds with different URL templates, you should create a separate carousel ad layout for each of them.
 
 This workaround will allow SegmentStream to fetch UTM settings from the carousel ad layout instead of the price list or product feed.
+  
