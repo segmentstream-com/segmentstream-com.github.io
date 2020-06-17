@@ -24,9 +24,9 @@ SegmentStream supports the following parameters:
 
 Name|Description
 --- | ---
-`{% raw %}{{campaign_id}} {% endraw %}` | Advertising campaign ID.
-`{% raw %}{{campaign_name}}{% endraw %}` | Advertising campaign name.
-`{% raw %}{{ad_id}} {% endraw %}` | Ad ID.
+`{campaign_id}` | Advertising campaign ID.
+`{campaign_name}` | Advertising campaign name.
+`{ad_id}` | Ad ID.
   
 ## UTM matching for dynamic remarketing ads
 
@@ -61,4 +61,3 @@ The value of your carousel product link after the `?` sign should be completely 
 > Note, that if you have price lists or product feeds with different URL templates, you should create a separate carousel ad layout for each of them.
 
 This workaround will allow SegmentStream to fetch UTM settings from the carousel ad layout instead of the price list or product feed.
-  
