@@ -18,7 +18,7 @@ date: 2020-06-17
 
 ## Excluding VAT
 
-By default, VK cost data includes VAT. To exclude VAT from imported costs you should switch on **Exclude VAT** option and define the **VAT rate** to be excluded. You can read more about why we recommend to always exclude VAT [here](/ga-datasources/#vat-handling){:target="_blank"}.
+By default, VK cost data includes VAT. To exclude VAT from imported costs you should switch on **Exclude VAT** option and define the **VAT rate** to be excluded. You can read more about why we recommend excluding VAT [here](/ga-datasources/#vat-handling){:target="_blank"}.
 
 ## Supported dynamic URL parameters
 
