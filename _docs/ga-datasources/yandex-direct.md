@@ -4,7 +4,7 @@ section: ga-datasources
 navigation_title: "Yandex.Direct"
 title: "Yandex.Direct data source"
 order: 4
-date: 2020-06-08
+date: 2020-06-19
 ---
 
 ## Getting started
@@ -57,9 +57,9 @@ In order to keep matching visits and ad expenses in the cost analysis reports, m
 
 > **Note.** Make sure you tag all campaign [sitelinks](https://yandex.com/support/direct/efficiency/quick-links.html#quick-links){:target="_blank"} the same way you tag the campaign. Otherwise SegmentStream might not be able to properly match clicks from sitelinks with Google Analytics sessions.
 
-## UTM matching for Smart banners and Search banners
+## UTM matching for Search banners
 
-Currently, SegmentStream does not support automatic UTM matching for [Smart banners](https://yandex.ru/support/direct/smart-banners/about.html){:target="_blank"} and [Search banners](https://yandex.ru/support/direct/products-media-context-banner/about.html){:target="_blank"}. This means that you would need to match these types of campaigns mannually inside the SegmentStream admin panel. For all your Smart banners and Search banners you need to define matching between the **Campaign ID** and **URL parameters**.
+Currently, SegmentStream does not support automatic UTM matching for [Search banners](https://yandex.ru/support/direct/products-media-context-banner/about.html){:target="_blank"}. This means that you would need to match these types of campaigns mannually inside the SegmentStream admin panel. For all your Search banners you need to define matching between the **Campaign ID** and **URL parameters**.
 
 For example, if you have a Search banner with the **Campaign ID** = `123123123` with the following link to the website: `http://www.site.com/?utm_source=yandex&utm_medium=cpc&utm_campaign={campaign_id}&utm_term={keyword}&utm_content={banner_id}`, the mapping should be the following:
 

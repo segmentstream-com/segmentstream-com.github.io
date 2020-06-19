@@ -4,7 +4,7 @@ section: ga-datasources
 navigation_title: "VK"
 title: "VK data source"
 order: 7
-date: 2020-06-17
+date: 2020-06-19
 ---
 
 ## Getting started

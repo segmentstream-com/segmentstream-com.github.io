@@ -4,7 +4,7 @@ section: ga-datasources
 navigation_title: "Yandex.Market"
 title: "Yandex.Market data source"
 order: 5
-date: 2020-06-08
+date: 2020-06-19
 ---
 
 ## Getting started
