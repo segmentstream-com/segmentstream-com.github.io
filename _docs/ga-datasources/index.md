@@ -4,7 +4,7 @@ section: ga-datasources
 navigation_title: "Overview"
 title: "Data Sources overview"
 order: 0
-date: 2020-06-08
+date: 2020-06-19
 ---
 
 ## Available data sources
@@ -54,7 +54,7 @@ In this case, the new currency setting will be applied only to the data SegmentS
 
 As far as Google Analytics imports all cost data from Google Ads without VAT, SegmentStream follows the same logic for all other data sources to avoid cost data VAT inconsistency.
 
-Nevertheless, Yandex.Market and VK data sources require additional settings to subtract VAT from the cost data by specifying the percentage of VAT to exclude.
+Nevertheless, [Yandex.Market](/ga-datasources/yandex-market){:target="_blank"} and [VK](/ga-datasources/vk){:target="_blank"} data sources require additional settings to subtract VAT from the cost data by specifying the percentage of VAT to exclude.
 
 If you don't exclude VAT for these services while importing cost data, you'll end up overestimating the costs of your VK and Yandex.Market campaigns. As a result, you won't be able to make correct conclusions on their efficiency comparing to other channels.
 
