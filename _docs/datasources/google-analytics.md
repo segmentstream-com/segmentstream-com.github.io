@@ -43,7 +43,7 @@ Input the dimensions that you want to import, for example:
 - ga:keyword
 - ga:adContent
 - ga:transactionId
-- ga:dimensionXX (for example for sessionId)
+- ga:dimension1 (for example for sessionId)
 
 A maximum of 7 dimensions can be imported.
 
@@ -54,9 +54,9 @@ A maximum of 7 dimensions can be imported.
 ## Metrics
 Input the metrics that you want to import, for example:
 - ga:sessions
-- ga:transaction
+- ga:transactions
 - ga:transactionRevenue
-- ga:goalXXCompletions
+- ga:goal1Completions
 
 A maximum of 10 metrics can be imported.
 
