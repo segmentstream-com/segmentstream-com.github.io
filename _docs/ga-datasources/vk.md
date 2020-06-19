@@ -27,6 +27,10 @@ Name|Description
 `{campaign_id}` | Advertising campaign ID.
 `{campaign_name}` | Advertising campaign name.
 `{ad_id}` | Ad ID.
+
+## Excluding VAT
+
+By default, VK cost data includes VAT. To exclude VAT from imported costs you should switch on **Exclude VAT** option and define the VAT rate to be excluded. You can read more about why we recommend to always exclude VAT [here](/ga-datasources/#vat-handling){:target="_blank"}.
   
 ## UTM matching for dynamic remarketing ads
 

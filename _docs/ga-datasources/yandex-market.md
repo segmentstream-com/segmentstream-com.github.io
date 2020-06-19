@@ -14,3 +14,7 @@ date: 2020-06-08
 3. Click **Authenticate with Yandex** and go through the authentication flow.
 4. Select shops which cost data you would like to import or select **All shops** option to import cost data from all the shops your account has access to.
 5. Click **Save**.
+
+## Excluding VAT
+
+By default, Yandex.Market cost data includes VAT when you account currency is RUB. To exclude VAT from imported costs you should switch on **Exclude VAT** option and define the VAT rate to be excluded. You can read more about why we recommend to always exclude VAT [here](/ga-datasources/#vat-handling){:target="_blank"}.
