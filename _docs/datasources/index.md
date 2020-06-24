@@ -4,35 +4,61 @@ section: datasources
 navigation_title: "Overview"
 title: "Data Sources overview"
 order: 0
+date: 2020-06-24
 ---
 
-> Attention! The [Google BigQuery](/integrations/google-bigquery) integration has to be enabled to use this feature.
+## Available data sources
 
-> BigQuery project billing must be set up in order to load data using the SegmentStream Data Import features. Free BQ projects (including Sandbox) don't support some services which are required for SegmentStream Data Import.
+To set up the automatic data import into own Google BigQuery data warehouse you need to connect at least one data source.
 
-## Connecting a new data source
+There following built-in data sources are available for the Google BigQuery projects withing the SegmentStream platform:
 
-In order to connect a new data source, go to **BigQuery → Data Sources**, click on the **Add** button and select the type of data source from menu. The new data source appears in the data source list.
+### Advertising platforms
 
-Next, follow the instructions for configuring the selected data source type.
+* [Google Ads](/datasources/google-ads)
+* [Facebook](/datasources/facebook)
+* [Microsoft Ads (former Bing)](/datasources/microsoft-ads)
+* [Criteo](/datasources/criteo)
+* [RTB House](/datasources/rtb-house)
+* [Yandex.Direct](/datasources/yandex-direct)
+* [Yandex.Market](/datasources/yandex-market)
+* [myTarget](/datasources/mytarget)
+* [VK](/datasources/vk)
+* [Recreativ](/datasources/recreativ)
 
-## Saving, disconnecting, disabling data source
-To save and enable the data source, click **Save**.
+### Analytics platforms
 
-The **Disconnect** button is used to revoke the authorization data. The settings are saved.
+* [Google Analytics](/datasources/google-analytics)
+* [AppMetrica](/datasources/appmetrica)
+* [Calltouch](/datasources/calltouch)
 
-You can enable or disable the data source at any time by using the switch on the top right.
+### CRM systems
+* [amoCRM](/datasources/amocrm)
+* [retailCRM](/datasources/retailcrm)
 
-## Importing reports
+### Other
+* [Fixer (currency exchange rates)](/datasources/fixer)
+* [Google Sheets](/datasources/google-sheets)
+* [JSON feed](/datasource/json-feed)
 
-Each data source allows to import specific data and reports from the data source API. You can find more info in the documentation of the specific data source.
+## Connecting data source
 
-## Additional transformation settings
+To connect a data source you should follow the following steps:
 
-Besides default reports import, SegmentStream allows to apply additional transformations for the data and help prepare cost data reports grouped by UTM.
+1. Click **Add Data Source** button:
+![Add BigQuery data source](/img/google-analytics/ga-add-data-source.png)
 
-This might be very handy if you need to stitch cost data with website sessions or [send cost data into Google Analytics](/datadestinations/google-analytics).
+2. Select the ad patforrm you would like to import cost data from:
+![Select BigQuery data souce](/img/google-analytics/ga-select-data-source.png)
 
-To enable this transformation use **"Import cost data grouped by UTM"** setting.
+3. Go through the authentication flow depending on the selected data source:
+![Authenticate BigQuery data source](/img/google-analytics/ga-auth-data-source.png)
 
-Each data source might have a unique set of settings to make this transformation possible. You can find more info in the documentation of the specific data source.
+4. Apply additional transformation settings following the instructions in the appropriate documentation of the specific data source.
+
+## Historical data import
+
+In order to import historical cost data, please contact our support team. SegmentStream allows to backfill historical data depending on your pricing plan type:
+
+* For monthly subscriptions we can backfill up to 30 days of historical data.
+* For annual subscriptions we can backfill up to 6 months of historical data (depending on ad platforms allowance).

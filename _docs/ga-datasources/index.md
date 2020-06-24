@@ -2,7 +2,7 @@
 layout: page
 section: ga-datasources
 navigation_title: "Overview"
-title: "Data Sources overview"
+title: "Costs Data Sources overview"
 order: 0
 date: 2020-06-19
 ---
@@ -11,7 +11,7 @@ date: 2020-06-19
 
 To set up the automatic cost data import you need to connect at least one data source.
 
-There following built-in data source are available for the Google Analytics projects withing the SegmentStream platform:
+There following built-in data sources are available for the Google Analytics projects withing the SegmentStream platform:
 
 * [Facebook](/ga-datasources/facebook)
 * [Criteo](/ga-datasources/criteo)
