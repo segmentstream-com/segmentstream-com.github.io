@@ -13,7 +13,7 @@ To set up the automatic data import into own Google BigQuery data warehouse you 
 
 There following built-in data sources are available for the Google BigQuery projects withing the SegmentStream platform:
 
-### Advertising platforms
+### Advertising
 
 * [Google Ads](/datasources/google-ads)
 * [Facebook](/datasources/facebook)
@@ -26,13 +26,13 @@ There following built-in data sources are available for the Google BigQuery proj
 * [VK](/datasources/vk)
 * [Recreativ](/datasources/recreativ)
 
-### Analytics platforms
+### Analytics
 
 * [Google Analytics](/datasources/google-analytics)
 * [AppMetrica](/datasources/appmetrica)
 * [Calltouch](/datasources/calltouch)
 
-### CRM systems
+### CRM
 * [amoCRM](/datasources/amocrm)
 * [retailCRM](/datasources/retailcrm)
 
