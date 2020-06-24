@@ -54,9 +54,9 @@ To connect a data source you should follow the following steps:
 3. Go through the authentication flow depending on the selected data source:
 ![Authenticate BigQuery data source](/img/bigquery/auth-data-source.png)
 
-1. Enable required reports.
+4. Enable required reports.
 
-2. Apply additional transformation settings following the instructions in the appropriate documentation of the specific data source.
+5. Apply additional transformation settings following the instructions in the appropriate documentation of the specific data source.
 
 ## Historical data import
 
