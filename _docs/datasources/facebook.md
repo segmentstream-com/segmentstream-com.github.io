@@ -9,7 +9,7 @@ date: 2020-07-02
 
 ## Getting started
 
-1. Inside the admin panel click **Add Data Source**.
+1. Inside the admin panel go to **Google BigQuery ▸ Data Sources** page and click **Add data source**.
 2. Choose **Facebook** from the list.
 3. Click **Authenticate with Facebook** and go through the authentication flow.
 4. Select accounts which cost data you would like to import.
