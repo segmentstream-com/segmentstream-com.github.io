@@ -53,7 +53,7 @@ inline_link_clicks | INTEGER | NULLABLE
 reach | INTEGER | NULLABLE
 unique_clicks | INTEGER | NULLABLE
 
->> If some of the fields you need are missing, please, [let us know](https://support.segmentstream.com/hc/en-us/requests/new){:target="_blank"}!
+> If some of the fields you need are missing, please, [let us know](https://support.segmentstream.com/hc/en-us/requests/new){:target="_blank"}!
 
 ## Additional transformation settings
 
