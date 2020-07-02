@@ -14,7 +14,7 @@ Google Ads is an online advertising service developed by Google. With Google Ads
 1. Inside the admin panel go to **Google BigQuery ▸ Data Sources** page and click **Add data source**.
 2. Choose **Google Ads** from the list.
 3. Click **Authenticate with Google** and go through the authentication flow.
-4. Select [manager](#manager-advertising-accounts) or idnividual Google Ads advertising accounts you would like to connect.
+4. Select [manager](#manager-advertising-accounts) or individual Google Ads advertising accounts you would like to connect.
 5. Enable required reports.
 
 ## Manager advertising accounts
