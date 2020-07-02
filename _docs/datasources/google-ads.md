@@ -245,7 +245,9 @@ Enable "Adwords User List" dictionary import.
 
 ## Additional transformation settings
 
-You can read more about additional transformation to group cost data by UTM [here](/datasources/#additional-transformation-settings){:target="_blank"}.
+Besides default reports import, SegmentStream allows to apply additional transformations for the data and help prepare cost data reports grouped by UTM.
+
+This might be very handy if you need to stitch cost data with website sessions or [send cost data into Google Analytics](/datadestinations/google-analytics).
 
 To enable this transformation use **"Import cost data grouped by UTM"** setting. Once enabled, a new table with cost data grouped by UTM will appear in your data warehouse.
 
