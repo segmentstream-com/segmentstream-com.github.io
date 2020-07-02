@@ -3,7 +3,7 @@ layout: page
 section: datasources
 navigation_title: "Google Ads"
 title: "Google Ads data source"
-date: 2020-04-08
+date: 2020-07-02
 order: 1
 ---
 
@@ -14,8 +14,12 @@ Google Ads is an online advertising service developed by Google. With Google Ads
 1. Inside the admin panel go to **Google BigQuery ▸ Data Sources** page and click **Add data source**.
 2. Choose **Google Ads** from the list.
 3. Click **Authenticate with Google** and go through the authentication flow.
-4. Select Google Ads account by defining proper Customer ID(s). [How to find your Google Ads customer ID ▸](https://support.google.com/google-ads/answer/1704344?hl=en-GB){:target="_blank"}
+4. Select [manager](#manager-advertising-accounts) or idnividual Google Ads advertising accounts you would like to connect.
 5. Enable required reports.
+
+## Manager advertising accounts
+
+By default, both [manager](https://support.google.com/google-ads/answer/6139186){:target="_blank"} and individual advertising accounts are available for the data import. If you decide to select a manager account, all associated individual accounts will be automatically connected as well.
 
 ## Available reports
 
