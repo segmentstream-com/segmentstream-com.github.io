@@ -53,6 +53,8 @@ inline_link_clicks | INTEGER | NULLABLE
 reach | INTEGER | NULLABLE
 unique_clicks | INTEGER | NULLABLE
 
+>> If some of the fields you need are missing, please, [let us know](https://support.segmentstream.com/hc/en-us/requests/new){:target="_blank"}!
+
 ## Additional transformation settings
 
 Besides default reports import, SegmentStream allows to apply additional transformations for the data and help prepare cost data reports grouped by UTM.
