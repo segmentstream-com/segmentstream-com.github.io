@@ -2,7 +2,7 @@
 layout: page
 section: datasources
 title: "Google Sheets"
-order: 1
+order: 10
 ---
 
 In this section you will learn:

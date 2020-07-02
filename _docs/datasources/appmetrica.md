@@ -2,7 +2,7 @@
 layout: page
 section: datasources
 title: "AppMetrica"
-order: 1
+order: 10
 ---
 
 In this section you will learn how to connect AppMetrica data import.

@@ -1,50 +1,70 @@
 ---
 layout: page
 section: datasources
-title: "Facebook"
-order: 1
+navigation_title: "Facebook"
+title: "Facebook data source"
+order: 2
+date: 2020-07-02
 ---
 
-> Attention! The [Google BigQuery](/integrations/google-bigquery) integration has to be enabled to use this feature.
+## Getting started
 
-## Importing data from Facebook
+1. Inside the admin panel click **Add Data Source**.
+2. Choose **Facebook** from the list.
+3. Click **Authenticate with Facebook** and go through the authentication flow.
+4. Select accounts which cost data you would like to import.
+5. Enable required reports.
+6. Click **Save**.
 
-After enabling this data source, Facebook advertising costs information for the past 7 days will be uploaded to Google BigQuery once every 24 hours.
+## Available reports
 
-## Connecting and configuring
+SegmentStream allows to import the following reports from Facebook.
 
-The process of connecting data sources is described in detail in the [overview](https://docs.segmentstream.com/datasources/index).
+### Ads Insights
 
-![](/img/fb.2.png)
+[https://developers.facebook.com/docs/marketing-api/insights/parameters/v7.0#fields](https://developers.facebook.com/docs/marketing-api/insights/parameters/v7.0#fields){:target="_blank"}
 
-After authorization you need to set the data source parameters.
+#### Table name
+**`facebookCampaignStatistics_{ACCOUNT_ID}_{YYYYMMDD}`**
 
-(1) The name of the data source. It is displayed in the interface in the list of sources.
+#### Table schema
 
-For a full picture of advertising costs, you need to add all your active advertising accounts (2) (see the "How to Find Your Facebook Ad Account ID" section to find out where to find the advertising account ID).
+Field name|Type|Mode
+--- | --- | ---
+publisher_platform | STRING | NULLABLE
+date_start | DATE | NULLABLE
+impression_device | STRING | NULLABLE
+impressions | INTEGER | NULLABLE
+campaign_id | INTEGER | NULLABLE
+campaign_name | STRING | NULLABLE
+platform_position | STRING | NULLABLE
+date_stop | DATE | REQUIRED
+frequency | FLOAT | NULLABLE
+account_id | INTEGER | NULLABLE
+account_name | STRING | NULLABLE
+spend | FLOAT | NULLABLE
+clicks | INTEGER | NULLABLE
+adset_id | INTEGER | NULLABLE
+adset_name | STRING | NULLABLE
+ad_id | STRING | NULLABLE
+ad_name | STRING | NULLABLE
+account_currency | STRING | NULLABLE
+inline_link_clicks | INTEGER | NULLABLE
+reach | INTEGER | NULLABLE
+unique_clicks | INTEGER | NULLABLE
 
-**Import "Ads Insights" report** (3) - enable costs report import, without normalizing the values ​​in the table.
+## Additional transformation settings
 
-**Import normalized costs report** (4) - enable normalized costs report import.
+Besides default reports import, SegmentStream allows to apply additional transformations for the data and help prepare cost data reports grouped by UTM.
 
-To save and enable the data source, click "Save" (5).
+This might be very handy if you need to stitch cost data with website sessions or [send cost data into Google Analytics](/datadestinations/google-analytics).
 
-The "Disconnect" button (7) is used to revoke the authorization data. The settings are saved.
+To enable this transformation use **"Import cost data grouped by UTM"** setting. Once enabled, a new table with cost data grouped by UTM will appear in your data warehouse.
 
-You can enable or disable the data source at any time (6).
+### Table name
+**`facebookCosts_{ACCOUNT_ID}_{YYYYMMDD}`**
 
-## How to Find Your Facebook Ad Account ID
-
-Log in to Facebook with an account that has access to the required company. On the [https://business.facebook.com/select/](http://business.facebook.com/select/) page, select your company. In the window that opens, you will see all your advertising accounts. In order to quickly copy the ID - click on it.
-
-![](/img/facebook_get_id.png)
-
-## Where to get data on advertising costs
-
-- **facebookCosts_{ACCOUNT_ID}_{YYYYMMDD}** - data for normalized costs
-- **facebookCampaignStatistics_{ACCOUNT_ID}_{YYYYMMDD}** - data for "Ads Insights" report
-
-## Table structure
+### Table schema
 
 Field name|Type|Mode
 --- | --- | ---
@@ -58,12 +78,18 @@ utmMedium | STRING | REQUIRED
 utmSource | STRING | REQUIRED
 currency | STRING | NULLABLE
 
-## Supported substitutions
+### Supported dynamic URL parameters
 
-- `campaign.id`
-- `adset.id`
-- `ad.id`
-- `campaign.name`
-- `adset.name`
-- `ad.name`
-- `site_source_name`
+By default Facebook allows to use a lot of [dynamic URL tagging parameters](https://www.facebook.com/business/help/2360940870872492){:target="_blank"} to track campaigns.
+
+SegmentStream supports the following parameters:
+
+Name|Description
+--- | ---
+`{% raw %}{{ad.id}}{% endraw %}` | The unique ID of the ad.
+`{% raw %}{{adset.id}}{% endraw %}` | The unique ID of the ad set. An ad set is a group of ads that share the same budget, schedule, delivery optimization and targeting.
+`{% raw %}{{campaign.id}}{% endraw %}` | The unique ID number of the ad campaign. A campaign contains ad sets and ads.
+`{% raw %}{{ad.name}}{% endraw %}` | The name of the ad
+`{% raw %}{{adset.name}}{% endraw %}` | The name of the ad set. An ad set is a group of ads that share the same budget, schedule, delivery optimization and targeting.
+`{% raw %}{{campaign.name}}{% endraw %}` | The name of the ad campaign. A campaign contains ad sets and ads.
+`{% raw %}{{site_source_name}}{% endraw %}` | Depending on where the ad appeared this parameter has four possible values.<br/> `fb` - Facebook<br/>`ig` - Instagram<br/>`msg` - Messenger<br/>`an` - the Audience Network

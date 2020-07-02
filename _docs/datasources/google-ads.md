@@ -16,6 +16,7 @@ Google Ads is an online advertising service developed by Google. With Google Ads
 3. Click **Authenticate with Google** and go through the authentication flow.
 4. Select [manager](#manager-advertising-accounts) or individual Google Ads advertising accounts you would like to connect.
 5. Enable required reports.
+6. Click **Save**.
 
 ## Manager advertising accounts
 
