@@ -32,6 +32,12 @@ Name|Description
 `{campaign_name}` | Advertising campaign name.
 `{ad_id}` | Ad ID.
   
+## Default source/medium
+
+VK allows running ads that do not lead directly to your website (for example VK page promo, VK post promo, events promo, etc). This means that these types of campaigns can not have UTM-params and it is not possible to import them into Google Analytics due to limitations that require all imported costs to have campaign source and medium defined.
+
+As a workaround, you can define default UTM-source and UTM-medium for your VK data source to see costs for these campaigns inside your Google Analytics account.
+
 ## UTM matching for dynamic remarketing ads
 
 Currently, SegmentStream does not support automatic UTM matching for dynamic remarketing campaigns based on price lists.
