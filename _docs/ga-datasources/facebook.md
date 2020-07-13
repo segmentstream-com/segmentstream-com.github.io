@@ -4,7 +4,7 @@ section: ga-datasources
 navigation_title: "Facebook"
 title: "Facebook data source"
 order: 1
-date: 2020-06-09
+date: 2020-07-13
 ---
 
 ## Getting started
