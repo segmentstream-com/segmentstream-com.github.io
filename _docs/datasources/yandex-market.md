@@ -4,7 +4,7 @@ section: datasources
 navigation_title: "Yandex.Market"
 title: "Yandex.Market data source"
 order: 10
-date: 2020-07-29
+date: 2020-07-20
 ---
 
 ## Getting started
