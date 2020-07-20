@@ -14,7 +14,7 @@ Imported data can be combined with other website data to improve ROI reporting b
 
 - Make sure that BigQuery is [connected to SegmentStream](/bigquery/connecting-bigquery).
 
-## Sheet format
+## Costs sheet format
 
 Name | Type | Required | Description | Example |
 --- | --- | --- | --- | --- |
@@ -28,8 +28,6 @@ utmSource | STRING | **required** | utm_source URL parameter attributied to the 
 utmCampaign | STRING | optional | utm_campaign URL parameter attributied to the costs entry | campaign1
 utmTerm | STRING | optional | utm_term URL parameter attributied to the costs entry | black_shoes
 utmContent | STRING | optional | utm_content URL parameter attributied to the costs entry |bottom_cta_button
-
-## Costs sheet example
 
 Here is the [example of the valid Costs Sheet document ▸](https://docs.google.com/spreadsheets/d/1rHqVpQP-dJnd7Cx5cxXNUJETi3Ko_ljuIAigbYskvIQ/edit#gid=0){:target="_blank"}.
 
