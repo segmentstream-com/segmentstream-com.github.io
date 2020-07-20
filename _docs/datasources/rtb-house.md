@@ -1,66 +1,29 @@
 ---
 layout: page
 section: datasources
-title: "RTB House"
+navigation_title: "RTB House"
+title: "RTB House data source"
 order: 10
+date: 2020-07-20
 ---
 
-> Attention! The [Google BigQuery](/integrations/google-bigquery) integration has to be enabled to use this feature.
+## Getting started
 
-## Importing data from RTB House
+1. Inside the admin panel click **Add Data Source**.
+2. Choose **RTB House** from the list.
+3. Authenticate using your RTB House **Username** and **Password**.
+4. Click **Save**.
 
-After enabling this data source, RTB House advertising costs information will be uploaded to Google BigQuery once every 24 hours.
+## Available reports
 
-## Connecting and configuring
+SegmentStream allows to import the following reports from RTB Houuse.
 
-The process of connecting data sources is described in detail in the [overview](https://docs.segmentstream.com/datasources/index).
+### Campaign performance
 
-After adding new RTB House data source you must enter username and password from RTB House panel
-![](/img/datasources.rtbhouse.1.png)
+#### Table name
+**`rtbHouseCategoryStatsReport_{USER_LOGIN}_{YYYYMMDD}`**
 
-
-After authorization you need to set the data source parameters.
-
-![](/img/datasources.rtbhouse.2.png)
-
-
-(1) The name of the data source. It is displayed in the interface in the list of sources.
-
-**Import normalized costs report** (2) - enable normalized costs report import.
-
-**Import Advertisers statistics report** (3) - enable advertisers statistics report import.
-
-To save and enable the data source, click "Save" (4).
-
-The "Disconnect" button (6) is used to revoke the authorization data. The settings are saved.
-
-You can enable or disable the data source at any time (5).
-
-## Where to get data on advertising costs
-
-- **rtbHouseCosts_{USER_LOGIN}_{YYYYMMDD}** - data for normalized costs
-- **rtbHouseCategoryStatsReport_{USER_LOGIN}_{YYYYMMDD}** - data for advertisers statistics report
-
-## Table structure
-
-### **rtbHouseCosts**
-
-Field name|Type|Mode
---- | --- | ---
-date | DATE | NULLABLE
-cost | FLOAT | NULLABLE
-clicks | FLOAT | NULLABLE
-impressions | FLOAT | NULLABLE
-utmTerm | INTEGER | NULLABLE
-utmCampaign | STRING | NULLABLE
-utmContent | STRING | NULLABLE
-utmMedium | STRING | NULLABLE
-utmSource | STRING | NULLABLE
-currency | STRING | NULLABLE
-
-Note, that clicks and impressions are float.
-
-### **rtbHouseCategoryStatsReport**
+#### Table schema
 
 Field name|Type|Mode
 --- | --- | ---
@@ -76,3 +39,29 @@ cpc | FLOAT | NULLABLE
 conversionsCount | INTEGER | NULLABLE
 currency | STRING | NULLABLE
 date | DATE | NULLABLE
+
+## Additional transformation settings
+
+Besides default reports import, SegmentStream allows to apply additional transformations for the data and help prepare cost data reports grouped by UTM.
+
+This might be very handy if you need to stitch cost data with website sessions or [send cost data into Google Analytics](/datadestinations/google-analytics).
+
+To enable this transformation use **"Import cost data grouped by UTM"** setting. Once enabled, a new table with cost data grouped by UTM will appear in your data warehouse.
+
+### Table name
+**`rtbHouseCosts_{SHOP_NAME}_{YYYYMMDD}`**
+
+### Table schema
+
+Field name|Type|Mode
+--- | --- | ---
+date | DATE | NULLABLE
+cost | FLOAT | NULLABLE
+clicks | FLOAT | NULLABLE
+impressions | FLOAT | NULLABLE
+utmTerm | INTEGER | NULLABLE
+utmCampaign | STRING | NULLABLE
+utmContent | STRING | NULLABLE
+utmMedium | STRING | NULLABLE
+utmSource | STRING | NULLABLE
+currency | STRING | NULLABLE
