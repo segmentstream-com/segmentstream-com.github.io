@@ -12,7 +12,8 @@ date: 2020-07-20
 1. Inside the admin panel click **Add Data Source**.
 2. Choose **RTB House** from the list.
 3. Authenticate using your RTB House **Username** and **Password**.
-4. Click **Save**.
+4. Enable required reports.
+5. Click **Save**.
 
 ## Available reports
 

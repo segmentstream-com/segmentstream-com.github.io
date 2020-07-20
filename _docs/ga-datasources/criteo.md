@@ -4,6 +4,7 @@ section: ga-datasources
 navigation_title: "Criteo"
 title: "Criteo data source"
 order: 2
+date: 2020-07-20
 ---
 
 ## Before you begin
