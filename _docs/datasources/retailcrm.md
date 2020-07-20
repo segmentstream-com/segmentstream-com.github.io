@@ -2,7 +2,7 @@
 layout: page
 section: datasources
 title: "retailCRM"
-order: 10
+order: 15
 ---
 
 In this section you will learn:
