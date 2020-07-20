@@ -61,6 +61,21 @@ Gender | STRING | NULLABLE
 LocationOfPresenceId | STRING | NULLABLE
 LocationOfPresenceName | STRING | NULLABLE
 
+### Accounts balance
+
+#### Table name
+**`yandexDirectAccountsInfo_{ACCOUNT}_{YYYYMMDD}`**
+
+#### Table schema
+
+Field name|Type|Mode
+--- | --- | ---
+AgencyName | STRING | NULLABLE
+Currency | STRING | NULLABLE
+Amount | FLOAT | NULLABLE
+Login | STRING | NULLABLE
+AccountID | INTEGER | NULLABLE
+
 ## Additional transformation settings
 
 Besides default reports import, SegmentStream allows to apply additional transformations for the data and help prepare cost data reports grouped by UTM.
