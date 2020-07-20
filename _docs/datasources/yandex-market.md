@@ -1,60 +1,31 @@
 ---
 layout: page
 section: datasources
-title: "Yandex.Market"
+navigation_title: "Yandex.Market"
+title: "Yandex.Market data source"
 order: 10
+date: 2020-07-29
 ---
 
-> Attention! The [Google BigQuery](/integrations/google-bigquery) integration has to be enabled to use this feature.
+## Getting started
 
-## Importing data from Yandex.Market
+1. Inside the admin panel click **Add Data Source**.
+2. Choose **Yandex.Market** from the list.
+3. Click **Authenticate with Yandex** and go through the authentication flow.
+4. Select shops which cost data you would like to import or select **All shops** option to import cost data from all the shops your account has access to.
+5. Enable required reports.
+6. Click **Save**.
 
-After enabling this data source, campaign statistics information will be uploaded to BigQuery once every 24 hours.
+## Available reports
 
-## Connecting and configuring
+SegmentStream allows to import the following reports from Yandex.Direct.
 
-The process of connecting data sources is described in detail in the [overview](https://docs.segmentstream.com/datasources/index).
+### Campaign performance
 
-![](/img/YM1.png)
+#### Table name
+**`yandexMarketCampaignStatistics_{SHOP_NAME}_{YYYYMMDD}`**
 
-After authorization you need to set the data source parameters.
-
-(1) The name of the data source. It is displayed in the interface in the list of sources.
-
-(2) **All shops** if enabled, data will be imported from all available shops on account, otherwise data will be imported only from shops in **Shop names** list.
-
-(3) Shops names to import data from them. Shop names are identical as in Yandex.Market UI.
-
-(4) Click Add if need to add shop.
-
-(5) **Import normalized costs report**  - enable normalized costs report import.
-
-(6) If the normalized costs report is enabled, you can select the billing currency of the report.
-
-(7) If the normalized costs report is enabled, you can set the value multiplier. Multiplied by the cost in the report.
-
-(8) **Import offer statistics report**  - enable offer statistics report import.
-
----
-
-To save and enable the data source, click "Save" (1).
-
-![](/img/YM2.png)
-
-Clicking "Remove" (2) will delete the data source with its options and authorization.
-
-You can enable or disable the data source at any time (3).
-
-The "Disconnect" button (4) is used to revoke the authorization data. The settings are saved.
-
-## Where to get data on advertising costs
-
-- **yandexMarketCampaignStatistics_{shop_id}_{DATE}** - report containing information by shop offers (clicks, spending), see table structure below.
-- **yandexMarketCosts_{shop_id}_{DATE}** - report containing information on clicks, impressions and cost of the shop offers
-
-## Table structure
-
-### yandexMarketCampaignStatistics
+#### Table schema
 
 Field name|Type|Mode
 --- | --- | ---
@@ -63,16 +34,32 @@ spending | FLOAT | REQUIRED
 clicks | INTEGER | REQUIRED
 campaign_name | STRING | REQUIRED
 
+## Additional transformation settings
 
-### yandexMarketCosts
+Besides default reports import, SegmentStream allows to apply additional transformations for the data and help prepare cost data reports grouped by UTM.
 
-Field name|Type|Mode
+This might be very handy if you need to stitch cost data with website sessions or [send cost data into Google Analytics](/datadestinations/google-analytics).
+
+To enable this transformation use **"Import cost data grouped by UTM"** setting. Once enabled, a new table with cost data grouped by UTM will appear in your data warehouse.
+
+### Table name
+**`yandexMarketCosts_{SHOP_NAME}_{YYYYMMDD}`**
+
+### Table schema
+
+Field name| Type | Mode
 --- | --- | ---
+date | DATE | NULLABLE
+utmSource | STRING | NULLABLE
+utmMedium | STRING | NULLABLE
+utmCampaign | STRING | NULLABLE
+utmContent | STRING | NULLABLE
+utmTerm | STRING | NULLABLE
 cost | FLOAT | REQUIRED
 clicks | INTEGER | NULLABLE
 impressions | INTEGER | NULLABLE
-utmTerm | STRING | NULLABLE
-utmCampaign | STRING | NULLABLE
-utmContent | STRING | NULLABLE
-utmMedium | STRING | REQUIRED
-utmSource | STRING | REQUIRED
+currency | STRING | NULLABLE
+
+### Excluding VAT
+
+By default, Yandex.Market cost data includes VAT when you account currency is RUB. To exclude VAT from imported costs you should switch on **Exclude VAT** option and define the **VAT rate** to be excluded.

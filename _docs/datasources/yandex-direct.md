@@ -22,6 +22,10 @@ If you have an advertising agency account the option **Agency** should be enable
 
 Optionally, you can enable **Spend agency points** option. Points are transformed into a certain number of requests to the Yandex.Direct API per unit of time. If this option is enabled, when requesting the Yandex.Direct API, the points of the agency will be used, and not the advertiser.
 
+## VAT handling
+
+Yandex.Direct API allows importing cost data either with or without VAT. If you would like cost data to include VAT - switch on **Include VAT** option.
+
 ## Available reports
 
 SegmentStream allows to import the following reports from Yandex.Direct.
