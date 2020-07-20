@@ -16,7 +16,7 @@ date: 2020-07-20
 
 ## Available reports
 
-SegmentStream allows to import the following reports from RTB Houuse.
+SegmentStream allows to import the following reports from RTB House.
 
 ### Campaign performance
 
