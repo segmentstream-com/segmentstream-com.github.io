@@ -18,16 +18,16 @@ Imported data can be combined with other website data to improve ROI reporting b
 
 Name | Type | Required | Description | Example |
 --- | --- | --- | --- | --- |
-date | DATE | **required** |  Reporting day in format YYYY-MM-DD ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)) | 2020-04-03
-currency| STRING | **required** |Currency code | USD
-cost | FLOAT | **required** | Total cost of spendings in the reporting day. Floating point number | 460.5
-impressions| INTEGER | optional |Total number of impressions in the reporting day. Integer | 12500
-clicks | INTEGER | optional | Total number of impressions in the reporting day. Integer | 284
-utmMedium | STRING | **required** | Value of the utm_medium URL parameter that is reported | cpa
-utmSource | STRING | **required** | Value of the utm_source URL parameter that is reported | partner1
-utmCampaign | STRING | optional | Value of the utm_campaign URL parameter that is reported | campaign1
-utmTerm | STRING | optional | Value of the utm_term URL parameter that is reported | black_shoes
-utmContent | STRING | optional | Value of the utm_content URL parameter that is reported |bottom_cta_button
+date | DATE | **required** |  Reporting date `YYYY-MM-DD` format YYYY-MM-DD | 2020-04-03
+currency| STRING | **required** | Currency code | USD
+cost | FLOAT | **required** | Total spendings for the reporting date. | 460.5
+impressions| INTEGER | optional | Total number of impressions during the day. | 12500
+clicks | INTEGER | optional | Total number of impressions during the day. | 284
+utmMedium | STRING | **required** | utm_medium URL parameter attributied to the costs entry | cpa
+utmSource | STRING | **required** | utm_source URL parameter attributied to the costs entry | partner1
+utmCampaign | STRING | optional | utm_campaign URL parameter attributied to the costs entry | campaign1
+utmTerm | STRING | optional | utm_term URL parameter attributied to the costs entry | black_shoes
+utmContent | STRING | optional | utm_content URL parameter attributied to the costs entry |bottom_cta_button
 
 ## Costs sheet example
 
@@ -41,7 +41,7 @@ Here is the [example of the valid Costs Sheet document ▸](https://docs.google.
 4. Click **Authenticate with Google** and go through the authentication flow.
 5. In the **Google Spreadsheet URL** field specify the URL of the sheet that you want to import.
 6. If you want to load data only from a specific range, define it in the **Range** field. Otherwise leave it empty.
-7. Map sheet columns to specific data types:
+7. Map sheet columns to proper data types:
    * **date** -> `DATE`
    * **cost** -> `FLOAT`
    * **impressions** -> `INTEGER`
