@@ -18,7 +18,7 @@ date: 2020-07-29
 
 ## Available reports
 
-SegmentStream allows to import the following reports from Yandex.Direct.
+SegmentStream allows to import the following reports from Yandex.Market.
 
 ### Campaign performance
 

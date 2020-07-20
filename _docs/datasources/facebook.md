@@ -98,6 +98,6 @@ Name|Description
 
 ### Default source/medium
 
-Facebook allows running ads that do not lead directly to your website (for example Facebook page promo, Facebook post promo, events promo, etc). This means that these types of campaigns can not have UTM-params and it is not possible to import them into Google Analytics due to limitations that require all imported costs to have campaign source and medium defined.
+Facebook allows running ads that do not lead directly to your website (for example Facebook page promo, Facebook post promo, events promo, etc). This means that these types of campaigns can not have UTM-params and it is not possible to import them into Google Analytics or match them with website sessions due to limitations that require all imported costs to have campaign source and medium defined.
 
-As a workaround, you can define default UTM-source and UTM-medium for your Facebook data source to see costs for these campaigns inside your Google Analytics account.
+As a workaround, you can define default UTM-source and UTM-medium for your Facebook data source to manually attribute these costs to sessions with specified utm_source and utm_medium.
