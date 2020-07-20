@@ -18,7 +18,7 @@ date: 2020-07-20
 
 SegmentStream allows to import the following reports from RTB House.
 
-### Campaign performance
+### Category statistics
 
 #### Table name
 **`rtbHouseCategoryStatsReport_{USER_LOGIN}_{YYYYMMDD}`**
