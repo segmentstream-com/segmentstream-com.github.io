@@ -25,8 +25,8 @@ SegmentStream allows to import the following reports from VK.
 
 #### Table name
 
-**`vkCampaignStatistics_{CLIENT_ID}_{YYYYMMDD}`** - for agencies
-**`vkCampaignStatistics_{ACCOUNT_ID}_{YYYYMMDD}`** - for advertisers
+- **`vkCampaignStatistics_{CLIENT_ID}_{YYYYMMDD}`** - for agencies
+- **`vkCampaignStatistics_{ACCOUNT_ID}_{YYYYMMDD}`** - for advertisers
 
 #### Table schema
 
@@ -58,8 +58,9 @@ This might be very handy if you need to stitch cost data with website sessions o
 To enable this transformation use **"Import cost data grouped by UTM"** setting. Once enabled, a new table with cost data grouped by UTM will appear in your data warehouse.
 
 ### Table name
-**`vkCosts_{CLIENT_ID}_{YYYYMMDD}`** - for agencies
-**`vkCosts_{ACCOUNT_ID}_{YYYYMMDD}`** - for advertisers
+
+- **`vkCosts_{CLIENT_ID}_{YYYYMMDD}`** - for agencies
+- **`vkCosts_{ACCOUNT_ID}_{YYYYMMDD}`** - for advertisers
 
 ### Table schema
 
