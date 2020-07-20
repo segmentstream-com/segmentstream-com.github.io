@@ -14,7 +14,9 @@ Imported data can be combined with other website data to improve ROI reporting b
 
 - Make sure that BigQuery is [connected to SegmentStream](/bigquery/connecting-bigquery).
 
-## Costs sheet format
+## Creating costs sheet
+
+In order to be able to import custom costs into Google BigQuery you need to create a Google Sheet with custom costs with the following format:
 
 Name | Type | Required | Description | Example |
 --- | --- | --- | --- | --- |
