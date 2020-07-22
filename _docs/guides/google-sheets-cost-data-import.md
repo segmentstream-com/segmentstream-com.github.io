@@ -41,13 +41,11 @@ Sometimes it might be required to import monthly costs (subscriptions, salaries)
 - PR costs
 - etc
 
-There are 2 approached how this can be implemented.
+For example, if you spent $3000 in June 2020 for your favourite ESP platform and would like to attribute this costs to `utm_source=my_esp` and `utm_medium=email`, you can use one of the following approaches.
 
 ### Approach 1 - daily costs distribution
 
-To make a proper allocation of such costs you should equally devide them between all the days during the month.
-
-For example, if you spent $3000 in June 2020 for your favourite ESP platform and would like to attribute this costs to `utm_source=my_esp` and `utm_medium=email`, the file should looks the following way:
+To make a proper allocation of such costs you should equally devide them between all the days during the month. The file should looks the following way:
 
 date| currency | cost | imporessions | clicks | utmSource | utmMedium
 --- | --- | --- | --- | --- | --- | ---
