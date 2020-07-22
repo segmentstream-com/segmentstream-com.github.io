@@ -72,8 +72,6 @@ date| currency | cost | imporessions | clicks | utmSource | utmMedium
 2020-07-01 | USD | 3000 | | | email | my_esp
 2020-08-01 | USD | 3000 | | | email | my_esp
 
-
-
 ## Enabling Google Sheets data source
 
 1. Go to [SegmentStream admin panel ▸](https://admin.segmentstream.com/){:target="_blank"}.
