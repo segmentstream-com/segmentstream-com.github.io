@@ -2,69 +2,28 @@
 layout: page
 section: datasources
 title: "Google Analytics"
-order: 10
+order: 1
+date: 2020-07-22
 ---
 
-In this section you will learn:
-* How to connect Google Analytics data import.
+Google Analytics is a web analytics service used to track website activity such as session duration, pages per session, bounce rate etc. of individuals using the site, along with the information on the source of the traffic and site conversion (goals). Goals might include sales, lead generation, viewing a specific page, or downloading a particular file. [Visit Website ▸](https://marketingplatform.google.com/about/analytics/){:target="_blank"}
 
-> Attention! The [Google BigQuery](/integrations/google-bigquery) integration has to be enabled to use this feature.
+SegmentStream allows importing raw data from Google Analytics into your own Google BigQuery data warehouse for further processing and analysis.
 
-## Importing data from Google Analytics
-------
+## Getting started
 
-After enabling this data source, Google Analytics data for the previous day will be uploaded to BigQuery once every 24 hours.
+1. Inside the admin panel go to **Google BigQuery ▸ Data Sources** page and click **Add data source**.
+2. Choose **Google Ads** from the list.
+3. Click **Authenticate with Google** and go through the authentication flow.
+4. Select **Account**, **Property** and **View** you would like to import the data from.
+5. Define Google BigQuery **Destination table** where imported data will be stored.
+6. Select up to 7 dimensions and up to 10 metrics you would like to import.
+7. Click **Save**.
 
-## Connecting and configuring
-------
+## Metrics and dimensions valid combinations
 
-The process of connecting data sources is described in detail in the [overview](https://docs.segmentstream.com/datasources/index).
+Not all dimensions and metrics can be queried together. Only certain dimensions and metrics can be used together to create valid combinations. We recommend using the [Dimensions & Metrics Explorer](https://ga-dev-tools.appspot.com/dimensions-metrics-explorer/){:target="_blank"} to make sure that the settings used are valid.
 
-After authorization you need to set the data source parameters.
+## Limits
 
-## Options description
-------
-![](/img/ga_datasource.png)
-
-## Title
-The name of the data source. It is displayed in the interface in the list of sources.
-
-## View ID
-View ID of your Google Analytics account.
-
-## Destination table name
-The name of the table in BigQuery to which the imported data will be written.
-
-## Dimensions
-Input the dimensions that you want to import, for example:
-- ga:clientId (this option not documented in official GA docs)
-- ga:sourceMedium
-- ga:campaign
-- ga:keyword
-- ga:adContent
-- ga:transactionId
-- ga:dimension1 (for example for sessionId)
-
-A maximum of 7 dimensions can be imported.
-
->**Please note!** Not all dimensions and metrics can be queried together, we recommend using the [Dimensions & Metrics Explorer](https://ga-dev-tools.appspot.com/dimensions-metrics-explorer/) to make sure that the settings used are valid.
-
->Do not pass Google clientId to custom dimension. In API v4 **ga:clientId** natively available.
-
-## Metrics
-Input the metrics that you want to import, for example:
-- ga:sessions
-- ga:transactions
-- ga:transactionRevenue
-- ga:goal1Completions
-
-A maximum of 10 metrics can be imported.
-
->**Please note!** Not all dimensions and metrics can be queried together, we recommend using the [Dimensions & Metrics Explorer](https://ga-dev-tools.appspot.com/dimensions-metrics-explorer/) to make sure that the settings used are valid.
-
-## Saving, Disconnecting, Disabling data source
-To save and enable the data source, click **Save**.
-
-The **Disconnect** button is used to revoke the authorization data. The settings are saved.
-
-You can enable or disable the data source at any time by using the switch on the top right.
+Google Analytics Core Reporting API allows importing maximum of [7 dimensions](https://developers.google.com/analytics/devguides/reporting/core/v3/reference#dimensions){:target="_blank"} and [10 metrics](https://developers.google.com/analytics/devguides/reporting/core/v3/reference#metrics){:target="_blank"} per query. If you need to import more dimensions and metrics you can always create an additional Google Analytics data source.

@@ -4,10 +4,10 @@ section: datasources
 navigation_title: "Google Ads"
 title: "Google Ads data source"
 date: 2020-07-02
-order: 1
+order: 2
 ---
 
-Google Ads is an online advertising service developed by Google. With Google Ads, you can take advantage of online advertising to improve your internet marketing effectiveness. [Visit Website ▸](https://ads.google.com/home/)
+Google Ads is an online advertising service developed by Google. With Google Ads, you can take advantage of online advertising to improve your internet marketing effectiveness. [Visit Website ▸](https://ads.google.com/home/){:target="_blank"}
 
 ## Getting started
 
