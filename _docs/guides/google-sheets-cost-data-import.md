@@ -3,7 +3,7 @@ layout: page
 section: guides
 navigation_title: "Importing cost data from Google Sheets"
 title: "Importing cost data from Google Sheets"
-date: 2020-07-20
+date: 2020-07-22
 ---
 
 This document describes how to import custom costs data into BigQuery using Google Sheets.
