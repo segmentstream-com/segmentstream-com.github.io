@@ -13,7 +13,7 @@ SegmentStream allows importing raw data from Google Analytics into your own Goog
 ## Getting started
 
 1. Inside the admin panel go to **Google BigQuery ▸ Data Sources** page and click **Add data source**.
-2. Choose **Google Ads** from the list.
+2. Choose **Google Analytics** from the list.
 3. Click **Authenticate with Google** and go through the authentication flow.
 4. Select **Account**, **Property** and **View** you would like to import the data from.
 5. Define Google BigQuery **Destination table** where imported data will be stored.
