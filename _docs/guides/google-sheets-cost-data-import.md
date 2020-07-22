@@ -33,7 +33,7 @@ utmContent | STRING | optional | utm_content URL parameter attributied to the co
 
 Here is the [example of the valid Costs Sheet document ▸](https://docs.google.com/spreadsheets/d/1rHqVpQP-dJnd7Cx5cxXNUJETi3Ko_ljuIAigbYskvIQ/edit#gid=0){:target="_blank"}.
 
-## Adding monthly spend
+## Monthly costs import
 
 Sometimes it might be required to import monthly costs (subscriptions, salaries) and attribute them to specific set of UTM paramterers, for example:
 - SEO costs
@@ -43,7 +43,7 @@ Sometimes it might be required to import monthly costs (subscriptions, salaries)
 
 For example, if you spent $3000 in June 2020 for your favourite ESP platform and would like to attribute this costs to `utm_source=my_esp` and `utm_medium=email`, you can use one of the following approaches.
 
-### Approach 1 - daily costs distribution
+### Approach 1: Daily costs distribution
 
 To make a proper allocation of such costs you should equally devide them between all the days during the month. The file should looks the following way:
 
@@ -60,7 +60,7 @@ date| currency | cost | imporessions | clicks | utmSource | utmMedium
 ... | USD | 100 | | | email | my_esp
 2020-06-30 | USD | 100 | | | email | my_esp
 
-### Approach 2 - use a separate sheet for monthly costs
+### Approach 2: Use a separate sheet for monthly costs
 
 Alternatively, you can have separate Google Sheets files for monthly and daily costs. This way you can have the following format for your monthly costs:
 
