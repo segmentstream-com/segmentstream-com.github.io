@@ -49,8 +49,8 @@ To make a proper allocation of such costs you should equally devide them between
 
 For example, if you spent $3000 in June 2020 for your favourite ESP platform and would like to attribute this costs to `utm_source=my_esp` and `utm_medium=email`, the file should looks the following way:
 
-date| currency | cost | imporessions | clicks | utmSource | utmMedium | utmCampaign
---- | --- | --- | --- | --- | --- | --- | ---
+date| currency | cost | imporessions | clicks | utmSource | utmMedium
+--- | --- | --- | --- | --- | --- | ---
 2020-06-01 | USD | 100 | | | email | my_esp
 2020-06-02 | USD | 100 | | | email | my_esp
 2020-06-03 | USD | 100 | | | email | my_esp
@@ -66,8 +66,8 @@ date| currency | cost | imporessions | clicks | utmSource | utmMedium | utmCampa
 
 Alternatively, you can have separate Google Sheets files for monthly and daily costs. This way you can have the following format for your monthly costs:
 
-date| currency | cost | imporessions | clicks | utmSource | utmMedium | utmCampaign | utmCampaign | utmTerm | utmContent
---- | --- | --- | --- | --- | --- | --- | ---
+date| currency | cost | imporessions | clicks | utmSource | utmMedium
+--- | --- | --- | --- | --- | --- | ---
 2020-06-01 | USD | 3000 | | | email | my_esp
 2020-07-01 | USD | 3000 | | | email | my_esp
 2020-08-01 | USD | 3000 | | | email | my_esp
