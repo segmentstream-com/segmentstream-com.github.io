@@ -33,6 +33,47 @@ utmContent | STRING | optional | utm_content URL parameter attributied to the co
 
 Here is the [example of the valid Costs Sheet document ▸](https://docs.google.com/spreadsheets/d/1rHqVpQP-dJnd7Cx5cxXNUJETi3Ko_ljuIAigbYskvIQ/edit#gid=0){:target="_blank"}.
 
+## Adding monthly spend
+
+Sometimes it might be required to import monthly costs (subscriptions, salaries) and attribute them to specific set of UTM paramterers, for example:
+- SEO costs
+- CDP/ESP costs
+- PR costs
+- etc
+
+There are 2 approached how this can be implemented.
+
+### Approach 1 - daily costs distribution
+
+To make a proper allocation of such costs you should equally devide them between all the days during the month.
+
+For example, if you spent $3000 in June 2020 for your favourite ESP platform and would like to attribute this costs to `utm_source=my_esp` and `utm_medium=email`, the file should looks the following way:
+
+date| currency | cost | imporessions | clicks | utmSource | utmMedium | utmCampaign | utmCampaign | utmTerm | utmContent
+--- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ---
+2020-06-01 | USD | 100 | | | email | my_esp | | | 
+2020-06-02 | USD | 100 | | | email | my_esp | | | 
+2020-06-03 | USD | 100 | | | email | my_esp | | | 
+2020-06-04 | USD | 100 | | | email | my_esp | | | 
+2020-06-05 | USD | 100 | | | email | my_esp | | | 
+2020-06-06 | USD | 100 | | | email | my_esp | | | 
+2020-06-07 | USD | 100 | | | email | my_esp | | | 
+2020-06-08 | USD | 100 | | | email | my_esp | | | 
+... | USD | 100 | | | email | my_esp | | | 
+2020-06-30 | 100 | | | email | my_esp | | | 
+
+### Approach 2 - use a separate sheet for monthly costs
+
+Alternatively, you can have separate Google Sheets files for monthly and daily costs. This way you can have the following format for your monthly costs:
+
+date| currency | cost | imporessions | clicks | utmSource | utmMedium | utmCampaign | utmCampaign | utmTerm | utmContent
+--- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ---
+2020-06-01 | USD | 3000 | | | email | my_esp | | | 
+2020-07-01 | USD | 3000 | | | email | my_esp | | | 
+2020-08-01 | USD | 3000 | | | email | my_esp | | | 
+
+
+
 ## Enabling Google Sheets data source
 
 1. Go to [SegmentStream admin panel ▸](https://admin.segmentstream.com/){:target="_blank"}.
