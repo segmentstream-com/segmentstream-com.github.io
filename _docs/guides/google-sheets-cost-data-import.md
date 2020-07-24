@@ -3,7 +3,7 @@ layout: page
 section: guides
 navigation_title: "Importing cost data from Google Sheets"
 title: "Importing cost data from Google Sheets"
-date: 2020-07-22
+date: 2020-07-24
 ---
 
 This document describes how to import custom costs data into BigQuery using Google Sheets.
@@ -64,7 +64,7 @@ date| currency | cost | imporessions | clicks | utmSource | utmMedium
 
 Alternatively, you can have separate Google Sheets files for monthly and daily costs. This way you can have the following format for your monthly costs:
 
-date| currency | cost | imporessions | clicks | utmSource | utmMedium
+month| currency | cost | imporessions | clicks | utmSource | utmMedium
 --- | --- | --- | --- | --- | --- | ---
 2020-06-01 | USD | 3000 | | | email | my_esp
 2020-07-01 | USD | 3000 | | | email | my_esp
