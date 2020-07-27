@@ -1,72 +1,102 @@
 ---
 layout: page
 section: datasources
-title: "Microsoft Advertising"
-order: 10
+navigation_title: "Microsoft Advertising"
+title: "Microsoft Advertising data source"
+date: 2020-07-27
+order: 5
 ---
 
-In this section you will learn how to connect Microsoft Advertising data import.
+Microsoft Advertising (formerly Bing Ads, Microsoft adCenter and MSN adCenter) is a service that provides pay per click advertising on both the Bing and Yahoo! search engines. [Visit Website ▸](https://ads.microsoft.com){:target="_blank"}
 
-> Attention! The [Google BigQuery](/integrations/google-bigquery) integration has to be enabled to use this feature.
+## Getting started
 
-## Importing data from Microsoft Advertising
-------
+1. Inside the admin panel go to **Google BigQuery ▸ Data Sources** page and click **Add data source**.
+2. Choose **Microsoft Advertising** from the list.
+3. Click **Authenticate with Microsoft** and go through the authentication flow.
+4. Select advertising account you would like to connect.
+5. Enable required reports.
+6. Click **Save**.
 
-After enabling this data source, Microsoft Advertising reports information will be uploaded to BigQuery once every 24 hours.
+## Available reports
 
-## Connecting and configuring
-------
+SegmentStream allows to import the following reports from Microsoft Advertising.
 
-The process of connecting data sources is described in detail in the [overview](https://docs.segmentstream.com/datasources/index).
+### Campaign performance
 
-After authorization you need to set the data source parameters.
+[https://docs.microsoft.com/en-us/advertising/reporting-service/campaignperformancereportcolumn?view=bingads-13](https://docs.microsoft.com/en-us/advertising/reporting-service/campaignperformancereportcolumn?view=bingads-13){:target="_blank"}
 
-## Options description
-------
-![](/img/datasources.microsoft-ads.1.png)
+#### Table name
 
-## Display name
-The name of the data source. It is displayed in the interface in the list of sources.
+**`microsoftAdsCampaignPerformance_{ACCOUNT_ID}_{YYYYMMDD}`**
 
-## Account ID
-Unique ID of your account in Microsoft Advertising.
-To find it log in to your Microsoft Advertising account and find parameter "aid" in URL:
-![](/img/datasources.microsoft-ads.2.png)
-You should copy number after symbol "=" and before leading "&"
+#### Table schema
 
-## Customer ID
-The ID of the customer that owns this Microsoft Advertising account.
-To find it log in to your Microsoft Advertising account and find parameter "cid" in URL:
-![](/img/datasources.microsoft-ads.3.png)
-You should copy number after symbol "=" and before leading "&"
+Field name | Type | Mode |
+AccountName | STRING | NULLABLE |
+AccountNumber | STRING | NULLABLE |
+AccountId | STRING | NULLABLE |
+TimePeriod | STRING | NULLABLE |
+CampaignName | STRING | NULLABLE |
+CampaignId | STRING | NULLABLE |
+AdGroupName | STRING | NULLABLE |
+AdGroupId | STRING | NULLABLE |
+Country | STRING | NULLABLE |
+State | STRING | NULLABLE |
+MetroArea | STRING | NULLABLE |
+City | STRING | NULLABLE |
+CurrencyCode | STRING | NULLABLE |
+AdDistribution | STRING | NULLABLE |
+Impressions | STRING | NULLABLE |
+Clicks | STRING | NULLABLE |
+Ctr | STRING | NULLABLE |
+AverageCpc | STRING | NULLABLE |
+Spend | STRING | NULLABLE |
+AveragePosition | STRING | NULLABLE |
+ProximityTargetLocation | STRING | NULLABLE |
+Radius | STRING | NULLABLE |
+Language | STRING | NULLABLE |
+BidMatchType | STRING | NULLABLE |
+DeliveredMatchType | STRING | NULLABLE |
+Network | STRING | NULLABLE |
+TopVsOther | STRING | NULLABLE |
+DeviceType | STRING | NULLABLE |
+DeviceOS | STRING | NULLABLE |
+Assists | STRING | NULLABLE |
+Conversions | STRING | NULLABLE |
+ConversionRate | STRING | NULLABLE |
+Revenue | STRING | NULLABLE |
+ReturnOnAdSpend | STRING | NULLABLE |
+CostPerConversion | STRING | NULLABLE |
+CostPerAssist | STRING | NULLABLE |
+RevenuePerConversion | STRING | NULLABLE |
+RevenuePerAssist | STRING | NULLABLE |
+LocationType | STRING | NULLABLE |
+MostSpecificLocation | STRING | NULLABLE |
+AccountStatus | STRING | NULLABLE |
+CampaignStatus | STRING | NULLABLE |
+AdGroupStatus | STRING | NULLABLE |
+County | STRING | NULLABLE |
+PostalCode | STRING | NULLABLE |
+LocationId | STRING | NULLABLE |
+BaseCampaignId | STRING | NULLABLE |
+AllConversions | STRING | NULLABLE |
+AllRevenue | STRING | NULLABLE |
+AllConversionRate | STRING | NULLABLE |
+AllCostPerConversion | STRING | NULLABLE |
+AllReturnOnAdSpend | STRING | NULLABLE |
+AllRevenuePerConversion | STRING | NULLABLE |
+ViewThroughConversions | STRING | NULLABLE |
 
+### Ad group performance
 
-## Import reports
-Enables import of raw report data from Microsoft Advertising to BigQuery
+[https://docs.microsoft.com/en-us/advertising/reporting-service/adgroupperformancereportcolumn?view=bingads-13](https://docs.microsoft.com/en-us/advertising/reporting-service/adgroupperformancereportcolumn?view=bingads-13){:target="_blank"}
 
-## Saving, Disconnecting, Disabling data source
-To save and enable the data source, click **Save**.
+#### Table name
 
-The **Disconnect** button is used to revoke the authorization data. The settings are saved.
+**`microsoftAdsAdGroupPerformance_{ACCOUNT_ID}_{YYYYMMDD}`**
 
-You can enable or disable the data source at any time by using the switch on the top right.
-
-## Where to find imported data
-Within 24 hours since you've enabled Microsoft Advertising data source you should find following tables in your BigQuery dataset if corresponding report was enabled:
-- **microsoftAdsAdGroupPerformance_{ACCOUNT_ID}_{YYYYMMDD}** - data for "Ad group" report
-- **microsoftAdsAdPerformance_{ACCOUNT_ID}_{YYYYMMDD}** - data for "Ad" report
-- **microsoftAdsAgeGenderAudience_{ACCOUNT_ID}_{YYYYMMDD}** - data for "Age & Gender" report
-- **microsoftAdsAudiencePerformance_{ACCOUNT_ID}_{YYYYMMDD}** - data for "Audience" report
-- **microsoftAdsCampaignPerformance_{ACCOUNT_ID}_{YYYYMMDD}** - data for "Campaign" report
-- **microsoftAdsGeographicPerformance_{ACCOUNT_ID}_{YYYYMMDD}** - data for "Geo" report
-- **microsoftAdsKeywordPerformance_{ACCOUNT_ID}_{YYYYMMDD}** - data for "Keyword" report
-- **microsoftAdsSearchQueryPerformance_{ACCOUNT_ID}_{YYYYMMDD}** - data for "Search term" report
-- **microsoftAdsShareOfVoice_{ACCOUNT_ID}_{YYYYMMDD}** - data for "Share of voice" report
-
-## Table structures
-------
-
-### "Ad group" report table structure
+#### Table schema
 
 Field name | Type | Mode |
 AccountName | STRING | NULLABLE |
@@ -144,7 +174,15 @@ AllReturnOnAdSpend | STRING | NULLABLE |
 AllRevenuePerConversion | STRING | NULLABLE |
 ViewThroughConversions | STRING | NULLABLE |
 
-### "Ad" report table structure
+### Ad performance
+
+[https://docs.microsoft.com/en-us/advertising/reporting-service/adperformancereportcolumn?view=bingads-13](https://docs.microsoft.com/en-us/advertising/reporting-service/adperformancereportcolumn?view=bingads-13){:target="_blank"}
+
+#### Table name
+
+**`microsoftAdsAdPerformance_{ACCOUNT_ID}_{YYYYMMDD}`**
+
+#### Table schema
 
 Field name | Type | Mode |
 AccountName | STRING | NULLABLE |
@@ -217,196 +255,15 @@ AllRevenuePerConversion | STRING | NULLABLE |
 FinalUrlSuffix | STRING | NULLABLE |
 ViewThroughConversions | STRING | NULLABLE |
 
-### "Age & Gender" report table structure
+### Keyword performance
 
-Field name | Type | Mode |
-AccountName | STRING | NULLABLE |
-AccountNumber | STRING | NULLABLE |
-AccountId | STRING | NULLABLE |
-TimePeriod | STRING | NULLABLE |
-CampaignName | STRING | NULLABLE |
-CampaignId | STRING | NULLABLE |
-AdGroupName | STRING | NULLABLE |
-AdGroupId | STRING | NULLABLE |
-AdDistribution | STRING | NULLABLE |
-AgeGroup | STRING | NULLABLE |
-Gender | STRING | NULLABLE |
-Impressions | STRING | NULLABLE |
-Clicks | STRING | NULLABLE |
-Conversions | STRING | NULLABLE |
-Spend | STRING | NULLABLE |
-Revenue | STRING | NULLABLE |
-ExtendedCost | STRING | NULLABLE |
-Assists | STRING | NULLABLE |
-Language | STRING | NULLABLE |
-AccountStatus | STRING | NULLABLE |
-CampaignStatus | STRING | NULLABLE |
-AdGroupStatus | STRING | NULLABLE |
-BaseCampaignId | STRING | NULLABLE |
-AllConversions | STRING | NULLABLE |
-AllRevenue | STRING | NULLABLE |
-ViewThroughConversions | STRING | NULLABLE |
+[https://docs.microsoft.com/en-us/advertising/reporting-service/keywordperformancereportcolumn?view=bingads-13](https://docs.microsoft.com/en-us/advertising/reporting-service/keywordperformancereportcolumn?view=bingads-13){:target="_blank"}
 
-### "Audience" report table structure
+#### Table name
 
-Field name | Type | Mode |
-AccountName | STRING | NULLABLE |
-AccountNumber | STRING | NULLABLE |
-AccountId | STRING | NULLABLE |
-TimePeriod | STRING | NULLABLE |
-CampaignName | STRING | NULLABLE |
-CampaignId | STRING | NULLABLE |
-AdGroupName | STRING | NULLABLE |
-AdGroupId | STRING | NULLABLE |
-AudienceId | STRING | NULLABLE |
-AudienceName | STRING | NULLABLE |
-AssociationStatus | STRING | NULLABLE |
-BidAdjustment | STRING | NULLABLE |
-TargetingSetting | STRING | NULLABLE |
-Impressions | STRING | NULLABLE |
-Clicks | STRING | NULLABLE |
-Ctr | STRING | NULLABLE |
-AverageCpc | STRING | NULLABLE |
-Spend | STRING | NULLABLE |
-AveragePosition | STRING | NULLABLE |
-Conversions | STRING | NULLABLE |
-ConversionRate | STRING | NULLABLE |
-CostPerConversion | STRING | NULLABLE |
-Revenue | STRING | NULLABLE |
-ReturnOnAdSpend | STRING | NULLABLE |
-RevenuePerConversion | STRING | NULLABLE |
-AccountStatus | STRING | NULLABLE |
-CampaignStatus | STRING | NULLABLE |
-AdGroupStatus | STRING | NULLABLE |
-AudienceType | STRING | NULLABLE |
-BaseCampaignId | STRING | NULLABLE |
-AllConversions | STRING | NULLABLE |
-AllRevenue | STRING | NULLABLE |
-AllConversionRate | STRING | NULLABLE |
-AllCostPerConversion | STRING | NULLABLE |
-AllReturnOnAdSpend | STRING | NULLABLE |
-AllRevenuePerConversion | STRING | NULLABLE |
-AssociationId | STRING | NULLABLE |
-AssociationLevel | STRING | NULLABLE |
-ViewThroughConversions | STRING | NULLABLE |
+**`microsoftAdsKeywordPerformance_{ACCOUNT_ID}_{YYYYMMDD}`**
 
-### "Campaign" report table structure
-
-Field name | Type | Mode |
-AccountName | STRING | NULLABLE |
-AccountNumber | STRING | NULLABLE |
-AccountId | STRING | NULLABLE |
-TimePeriod | STRING | NULLABLE |
-CampaignName | STRING | NULLABLE |
-CampaignId | STRING | NULLABLE |
-AdGroupName | STRING | NULLABLE |
-AdGroupId | STRING | NULLABLE |
-Country | STRING | NULLABLE |
-State | STRING | NULLABLE |
-MetroArea | STRING | NULLABLE |
-City | STRING | NULLABLE |
-CurrencyCode | STRING | NULLABLE |
-AdDistribution | STRING | NULLABLE |
-Impressions | STRING | NULLABLE |
-Clicks | STRING | NULLABLE |
-Ctr | STRING | NULLABLE |
-AverageCpc | STRING | NULLABLE |
-Spend | STRING | NULLABLE |
-AveragePosition | STRING | NULLABLE |
-ProximityTargetLocation | STRING | NULLABLE |
-Radius | STRING | NULLABLE |
-Language | STRING | NULLABLE |
-BidMatchType | STRING | NULLABLE |
-DeliveredMatchType | STRING | NULLABLE |
-Network | STRING | NULLABLE |
-TopVsOther | STRING | NULLABLE |
-DeviceType | STRING | NULLABLE |
-DeviceOS | STRING | NULLABLE |
-Assists | STRING | NULLABLE |
-Conversions | STRING | NULLABLE |
-ConversionRate | STRING | NULLABLE |
-Revenue | STRING | NULLABLE |
-ReturnOnAdSpend | STRING | NULLABLE |
-CostPerConversion | STRING | NULLABLE |
-CostPerAssist | STRING | NULLABLE |
-RevenuePerConversion | STRING | NULLABLE |
-RevenuePerAssist | STRING | NULLABLE |
-LocationType | STRING | NULLABLE |
-MostSpecificLocation | STRING | NULLABLE |
-AccountStatus | STRING | NULLABLE |
-CampaignStatus | STRING | NULLABLE |
-AdGroupStatus | STRING | NULLABLE |
-County | STRING | NULLABLE |
-PostalCode | STRING | NULLABLE |
-LocationId | STRING | NULLABLE |
-BaseCampaignId | STRING | NULLABLE |
-AllConversions | STRING | NULLABLE |
-AllRevenue | STRING | NULLABLE |
-AllConversionRate | STRING | NULLABLE |
-AllCostPerConversion | STRING | NULLABLE |
-AllReturnOnAdSpend | STRING | NULLABLE |
-AllRevenuePerConversion | STRING | NULLABLE |
-ViewThroughConversions | STRING | NULLABLE |
-
-### "Geo" report table structure
-
-Field name | Type | Mode |
-AccountName | STRING | NULLABLE |
-AccountNumber | STRING | NULLABLE |
-AccountId | STRING | NULLABLE |
-TimePeriod | STRING | NULLABLE |
-CampaignName | STRING | NULLABLE |
-CampaignId | STRING | NULLABLE |
-AdGroupName | STRING | NULLABLE |
-AdGroupId | STRING | NULLABLE |
-Country | STRING | NULLABLE |
-State | STRING | NULLABLE |
-MetroArea | STRING | NULLABLE |
-City | STRING | NULLABLE |
-CurrencyCode | STRING | NULLABLE |
-AdDistribution | STRING | NULLABLE |
-Impressions | STRING | NULLABLE |
-Clicks | STRING | NULLABLE |
-Ctr | STRING | NULLABLE |
-AverageCpc | STRING | NULLABLE |
-Spend | STRING | NULLABLE |
-AveragePosition | STRING | NULLABLE |
-ProximityTargetLocation | STRING | NULLABLE |
-Radius | STRING | NULLABLE |
-Language | STRING | NULLABLE |
-BidMatchType | STRING | NULLABLE |
-DeliveredMatchType | STRING | NULLABLE |
-Network | STRING | NULLABLE |
-TopVsOther | STRING | NULLABLE |
-DeviceType | STRING | NULLABLE |
-DeviceOS | STRING | NULLABLE |
-Assists | STRING | NULLABLE |
-Conversions | STRING | NULLABLE |
-ConversionRate | STRING | NULLABLE |
-Revenue | STRING | NULLABLE |
-ReturnOnAdSpend | STRING | NULLABLE |
-CostPerConversion | STRING | NULLABLE |
-CostPerAssist | STRING | NULLABLE |
-RevenuePerConversion | STRING | NULLABLE |
-RevenuePerAssist | STRING | NULLABLE |
-LocationType | STRING | NULLABLE |
-MostSpecificLocation | STRING | NULLABLE |
-AccountStatus | STRING | NULLABLE |
-CampaignStatus | STRING | NULLABLE |
-AdGroupStatus | STRING | NULLABLE |
-County | STRING | NULLABLE |
-PostalCode | STRING | NULLABLE |
-LocationId | STRING | NULLABLE |
-BaseCampaignId | STRING | NULLABLE |
-AllConversions | STRING | NULLABLE |
-AllRevenue | STRING | NULLABLE |
-AllConversionRate | STRING | NULLABLE |
-AllCostPerConversion | STRING | NULLABLE |
-AllReturnOnAdSpend | STRING | NULLABLE |
-AllRevenuePerConversion | STRING | NULLABLE |
-ViewThroughConversions | STRING | NULLABLE |
-
-### "Keyword" report table structure
+#### Table schema
 
 Field name | Type | Mode |
 AccountName | STRING | NULLABLE |
@@ -480,7 +337,14 @@ AllReturnOnAdSpend | STRING | NULLABLE |
 AllRevenuePerConversion | STRING | NULLABLE |
 ViewThroughConversions | STRING | NULLABLE |
 
-### "Search term" report table structure
+### Search query performance
+[https://docs.microsoft.com/en-us/advertising/reporting-service/searchqueryperformancereportcolumn?view=bingads-13](https://docs.microsoft.com/en-us/advertising/reporting-service/searchqueryperformancereportcolumn?view=bingads-13){:target="_blank"}
+
+#### Table name
+
+**`microsoftAdsSearchQueryPerformance_{ACCOUNT_ID}_{YYYYMMDD}`**
+
+#### Table schema
 
 Field name | Type | Mode |
 AccountName | STRING | NULLABLE |
@@ -535,7 +399,14 @@ AllCostPerConversion | STRING | NULLABLE |
 AllReturnOnAdSpend | STRING | NULLABLE |
 AllRevenuePerConversion | STRING | NULLABLE |
 
-### "Share of voice" report table structure
+### Share of voice
+[https://docs.microsoft.com/en-us/advertising/reporting-service/shareofvoicereportcolumn?view=bingads-13](https://docs.microsoft.com/en-us/advertising/reporting-service/shareofvoicereportcolumn?view=bingads-13){:target="_blank"}
+
+#### Table name
+
+**`microsoftAdsShareOfVoice_{ACCOUNT_ID}_{YYYYMMDD}`**
+
+#### Table schema
 
 Field name | Type | Mode |
 AccountName | STRING | NULLABLE |
@@ -591,4 +462,156 @@ BaseCampaignId | STRING | NULLABLE |
 AllConversions | STRING | NULLABLE |
 AllConversionRate | STRING | NULLABLE |
 AllCostPerConversion | STRING | NULLABLE |
+ViewThroughConversions | STRING | NULLABLE |
+
+### Audience performance
+[https://docs.microsoft.com/en-us/advertising/reporting-service/audienceperformancereportcolumn?view=bingads-13](https://docs.microsoft.com/en-us/advertising/reporting-service/audienceperformancereportcolumn?view=bingads-13){:target="_blank"}
+
+#### Table name
+
+**`microsoftAdsAudiencePerformance_{ACCOUNT_ID}_{YYYYMMDD}`**
+
+#### Table schema
+
+Field name | Type | Mode |
+AccountName | STRING | NULLABLE |
+AccountNumber | STRING | NULLABLE |
+AccountId | STRING | NULLABLE |
+TimePeriod | STRING | NULLABLE |
+CampaignName | STRING | NULLABLE |
+CampaignId | STRING | NULLABLE |
+AdGroupName | STRING | NULLABLE |
+AdGroupId | STRING | NULLABLE |
+AudienceId | STRING | NULLABLE |
+AudienceName | STRING | NULLABLE |
+AssociationStatus | STRING | NULLABLE |
+BidAdjustment | STRING | NULLABLE |
+TargetingSetting | STRING | NULLABLE |
+Impressions | STRING | NULLABLE |
+Clicks | STRING | NULLABLE |
+Ctr | STRING | NULLABLE |
+AverageCpc | STRING | NULLABLE |
+Spend | STRING | NULLABLE |
+AveragePosition | STRING | NULLABLE |
+Conversions | STRING | NULLABLE |
+ConversionRate | STRING | NULLABLE |
+CostPerConversion | STRING | NULLABLE |
+Revenue | STRING | NULLABLE |
+ReturnOnAdSpend | STRING | NULLABLE |
+RevenuePerConversion | STRING | NULLABLE |
+AccountStatus | STRING | NULLABLE |
+CampaignStatus | STRING | NULLABLE |
+AdGroupStatus | STRING | NULLABLE |
+AudienceType | STRING | NULLABLE |
+BaseCampaignId | STRING | NULLABLE |
+AllConversions | STRING | NULLABLE |
+AllRevenue | STRING | NULLABLE |
+AllConversionRate | STRING | NULLABLE |
+AllCostPerConversion | STRING | NULLABLE |
+AllReturnOnAdSpend | STRING | NULLABLE |
+AllRevenuePerConversion | STRING | NULLABLE |
+AssociationId | STRING | NULLABLE |
+AssociationLevel | STRING | NULLABLE |
+ViewThroughConversions | STRING | NULLABLE |
+
+### Geographic performance
+[https://docs.microsoft.com/en-us/advertising/reporting-service/geographicperformancereportcolumn?view=bingads-13](https://docs.microsoft.com/en-us/advertising/reporting-service/geographicperformancereportcolumn?view=bingads-13){:target="_blank"}
+
+#### Table name
+
+**`microsoftAdsGeographicPerformance_{ACCOUNT_ID}_{YYYYMMDD}`**
+
+#### Table schema
+
+Field name | Type | Mode |
+AccountName | STRING | NULLABLE |
+AccountNumber | STRING | NULLABLE |
+AccountId | STRING | NULLABLE |
+TimePeriod | STRING | NULLABLE |
+CampaignName | STRING | NULLABLE |
+CampaignId | STRING | NULLABLE |
+AdGroupName | STRING | NULLABLE |
+AdGroupId | STRING | NULLABLE |
+Country | STRING | NULLABLE |
+State | STRING | NULLABLE |
+MetroArea | STRING | NULLABLE |
+City | STRING | NULLABLE |
+CurrencyCode | STRING | NULLABLE |
+AdDistribution | STRING | NULLABLE |
+Impressions | STRING | NULLABLE |
+Clicks | STRING | NULLABLE |
+Ctr | STRING | NULLABLE |
+AverageCpc | STRING | NULLABLE |
+Spend | STRING | NULLABLE |
+AveragePosition | STRING | NULLABLE |
+ProximityTargetLocation | STRING | NULLABLE |
+Radius | STRING | NULLABLE |
+Language | STRING | NULLABLE |
+BidMatchType | STRING | NULLABLE |
+DeliveredMatchType | STRING | NULLABLE |
+Network | STRING | NULLABLE |
+TopVsOther | STRING | NULLABLE |
+DeviceType | STRING | NULLABLE |
+DeviceOS | STRING | NULLABLE |
+Assists | STRING | NULLABLE |
+Conversions | STRING | NULLABLE |
+ConversionRate | STRING | NULLABLE |
+Revenue | STRING | NULLABLE |
+ReturnOnAdSpend | STRING | NULLABLE |
+CostPerConversion | STRING | NULLABLE |
+CostPerAssist | STRING | NULLABLE |
+RevenuePerConversion | STRING | NULLABLE |
+RevenuePerAssist | STRING | NULLABLE |
+LocationType | STRING | NULLABLE |
+MostSpecificLocation | STRING | NULLABLE |
+AccountStatus | STRING | NULLABLE |
+CampaignStatus | STRING | NULLABLE |
+AdGroupStatus | STRING | NULLABLE |
+County | STRING | NULLABLE |
+PostalCode | STRING | NULLABLE |
+LocationId | STRING | NULLABLE |
+BaseCampaignId | STRING | NULLABLE |
+AllConversions | STRING | NULLABLE |
+AllRevenue | STRING | NULLABLE |
+AllConversionRate | STRING | NULLABLE |
+AllCostPerConversion | STRING | NULLABLE |
+AllReturnOnAdSpend | STRING | NULLABLE |
+AllRevenuePerConversion | STRING | NULLABLE |
+ViewThroughConversions | STRING | NULLABLE |
+
+### Age and gender audience
+[https://docs.microsoft.com/en-us/advertising/reporting-service/agegenderaudiencereportcolumn?view=bingads-13](https://docs.microsoft.com/en-us/advertising/reporting-service/agegenderaudiencereportcolumn?view=bingads-13){:target="_blank"}
+
+#### Table name
+
+**`microsoftAdsAgeGenderAudience_{ACCOUNT_ID}_{YYYYMMDD}`**
+
+#### Table schema
+
+Field name | Type | Mode |
+AccountName | STRING | NULLABLE |
+AccountNumber | STRING | NULLABLE |
+AccountId | STRING | NULLABLE |
+TimePeriod | STRING | NULLABLE |
+CampaignName | STRING | NULLABLE |
+CampaignId | STRING | NULLABLE |
+AdGroupName | STRING | NULLABLE |
+AdGroupId | STRING | NULLABLE |
+AdDistribution | STRING | NULLABLE |
+AgeGroup | STRING | NULLABLE |
+Gender | STRING | NULLABLE |
+Impressions | STRING | NULLABLE |
+Clicks | STRING | NULLABLE |
+Conversions | STRING | NULLABLE |
+Spend | STRING | NULLABLE |
+Revenue | STRING | NULLABLE |
+ExtendedCost | STRING | NULLABLE |
+Assists | STRING | NULLABLE |
+Language | STRING | NULLABLE |
+AccountStatus | STRING | NULLABLE |
+CampaignStatus | STRING | NULLABLE |
+AdGroupStatus | STRING | NULLABLE |
+BaseCampaignId | STRING | NULLABLE |
+AllConversions | STRING | NULLABLE |
+AllRevenue | STRING | NULLABLE |
 ViewThroughConversions | STRING | NULLABLE |
