@@ -21,8 +21,9 @@ Below are the steps that explain how to give access to the SegmentStream support
 ![BigQuery add IAM](/img/bigquery/bq-access-2.png)
 
 4. Enter the `bigquery@segmentstream.com` email address into **New Members** field.
-5. Select **BigQuery Data Viewer** and **BigQuery User** roles.
-6. Click **Save**.
+5. Select **BigQuery Data Editor** and **BigQuery User** roles.
+6. Enable **Send notification email** checkbox.
+7. Click **Save**.
 ![BigQuery add IAM roles](/img/bigquery/bq-access-3.png)
 
-7. Let your SegmentStream support know that the access was granted.
+8. Let your SegmentStream support know that the access was granted.
