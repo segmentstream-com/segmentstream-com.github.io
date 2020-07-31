@@ -7,7 +7,7 @@ date: 2020-07-31
 order: 2
 ---
 
-AppsFlyer is a mobile attribution and analytics platform, helping marketers to increase their targeting, optimize their ad spend, and boosting ROI. [Visit Website ▸](appsflyer.com/){:target="_blank"}
+AppsFlyer is a mobile attribution and analytics platform, helping marketers to increase their targeting, optimize their ad spend, and boosting ROI. [Visit Website ▸](https://appsflyer.com/){:target="_blank"}
 
 ## Getting started
 
