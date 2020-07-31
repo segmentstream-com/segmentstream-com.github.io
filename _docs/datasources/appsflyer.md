@@ -2,7 +2,7 @@
 layout: page
 section: datasources
 navigation_title: "Appsflyer"
-title: "Google Ads data source"
+title: "AppsFlyer data source"
 date: 2020-07-31
 order: 2
 ---
