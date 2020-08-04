@@ -1,8 +1,8 @@
 ---
 layout: page
 section: guides
-navigation_title: "Uploading users probability to convert into Google Analytics"
-title: "Uploading user scoring into Google Analytics"
+navigation_title: "Uploading ML-based user scoring into Google Analytics"
+title: "Uploading ML user scoring into Google Analytics"
 date: 2020-08-04
 ---
 
