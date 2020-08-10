@@ -21,6 +21,7 @@ sections: [
     ]],
     ['BigQuery project', [
         ['bigquery', 'BigQuery Setup'],
+        ['datastreams', 'Data Streams'],
         ['datasources', 'Data Sources'],
         ['datadestinations', 'Data Destinations'],
         ['javascript-sdk', 'JavaScript SDK'],
