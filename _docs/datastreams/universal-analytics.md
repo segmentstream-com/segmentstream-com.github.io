@@ -61,7 +61,7 @@ Choose this method if your Google Analytics integrated with Google Tag Manager.
 
     ![GTM Setup](/img/datastreams/ua-gtm-6.png)
 
-4. Enter ```customTask``` as Field name and ```\{{SegmentStream}}``` as Value
+4. Enter ```customTask``` as Field name and {% raw %}```{{SegmentStream}}```{% endraw %} as Value
 
     ![GTM Setup](/img/datastreams/ua-gtm-7.png)
 
