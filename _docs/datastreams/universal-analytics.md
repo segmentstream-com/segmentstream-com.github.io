@@ -90,5 +90,6 @@ Add **Snippet** from **analytics.js** type to the website source code on each pa
 ## Check if integration works correctly
 
 1. Go to your website, open **console** > **network** and filter results with *track.segmentstream* endpoint. If snippet integrated correctly you will see requests:
+    ![GTM Setup](/img/datastreams/datastreams-check.png)
 
 2. Go to your Google BigQuery account and check if table with name from **Destination table** appears in your DataSet.
