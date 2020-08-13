@@ -37,33 +37,33 @@ Choose this method if your Google Analytics integrated with Google Tag Manager.
 
 1. In the **Variables** section click **New** to create a customTask variable.
 
-![GTM Setup](/img/datastreams/ua-gtm-1.png)
+  ![GTM Setup](/img/datastreams/ua-gtm-1.png)
 
 2. Click on the **Variable Configuration** > **Custom JavaScript** under *Page Variables* section: 
 
-![GTM Setup](/img/datastreams/ua-gtm-2.png)
+  ![GTM Setup](/img/datastreams/ua-gtm-2.png)
 
 3. Set **SegmentStream** as a Name of the variable. Paste code from Data Streams settings modal to **Custom Javascript** field. Click Save.
 
-![GTM Setup](/img/datastreams/ua-gtm-3.png)
+  ![GTM Setup](/img/datastreams/ua-gtm-3.png)
 
 ### Add variable to the each of the Universal Analytics tags
 
 1. Open Universal Analytics tag
 
-![GTM Setup](/img/datastreams/ua-gtm-4.png)
+  ![GTM Setup](/img/datastreams/ua-gtm-4.png)
 
 2. Click on **Tag Configuration** > check **Enable overriding settings in this tag**
 
-![GTM Setup](/img/datastreams/ua-gtm-5.png)
+  ![GTM Setup](/img/datastreams/ua-gtm-5.png)
 
 3. Go to **More settings** > **Fields to set** and click **Add Field** button.
 
-![GTM Setup](/img/datastreams/ua-gtm-6.png)
+  ![GTM Setup](/img/datastreams/ua-gtm-6.png)
 
 4. Enter **customTask** as Field name and **{{SegmentStream}}** as Value
 
-![GTM Setup](/img/datastreams/ua-gtm-7.png)
+  ![GTM Setup](/img/datastreams/ua-gtm-7.png)
 
 > Repeat this operation with each tag responsible to sending data to Universal Analytics to collect full data.
 
