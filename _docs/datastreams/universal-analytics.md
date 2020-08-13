@@ -2,7 +2,7 @@
 layout: page
 section: datastreams
 navigation_title: "Universal Analytics"
-title: "Universal Analytics Data Streams"
+title: "Universal Analytics Data Stream"
 order: 1
 date: 2020-08-12
 ---
