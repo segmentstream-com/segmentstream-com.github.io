@@ -1,7 +1,7 @@
 ---
 layout: page
 section: datastreams
-navigation_title: "Collecting raw hit-level non-sampled data"
+navigation_title: "Universal Analytics"
 title: "Collecting raw hit-level non-sampled data"
 date: 2020-08-12
 ---
