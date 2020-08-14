@@ -39,7 +39,7 @@ Choose this method if your Google Analytics integrated with Google Tag Manager.
 
     ![GTM Setup](/img/datastreams/ua-gtm-1.png)
 
-2. Click on the **Variable Configuration** > **Custom JavaScript** under *Page Variables* section: 
+2. Click on the **Variable Configuration** > **Custom JavaScript** in *Page Variables* section: 
 
     ![GTM Setup](/img/datastreams/ua-gtm-2.png)
 
