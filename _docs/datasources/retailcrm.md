@@ -30,8 +30,8 @@ After authorization you need to set the data source parameters.
 ## Display name
 The name of the data source. It is displayed in the interface in the list of sources.
 
-## retailCRM subdomain
-Should be filled with the first part of your CRM address. For example, if your CRM address is https://test-account.retailcrm.ru/, then the subdomain will be "test-account".
+## retailCRM endpoint
+Should be filled with the full CRM address. For example, if your CRM address is https://website.retailcrm.ru/, then the **endpoint** will be "website.retailcrm.ru".
 
 ## Orders import
 Enable import of orders data. If this option enabled, updated orders for the previous day will be uploaded.
