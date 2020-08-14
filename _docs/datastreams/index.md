@@ -24,5 +24,5 @@ To connect a data stream you should follow the following steps:
 3. Go through setting up flow depending on the selected data stream
 ![Set up BigQuery data stream](/img/datastreams/data-stream-setup.png)
 
-4. Use generated to code on your website, mobile App or server depending on the requirements
+4. Use **Snippet code** on your website, mobile App or server depending on the requirements
 ![Use code of BigQuery data stream](/img/datastreams/data-stream-snippet.png)
