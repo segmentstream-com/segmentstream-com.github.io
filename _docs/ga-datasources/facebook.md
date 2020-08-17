@@ -31,7 +31,6 @@ Name|Description
 `{% raw %}{{campaign.name}}{% endraw %}` | The name of the ad campaign. A campaign contains ad sets and ads.
 `{% raw %}{{site_source_name}}{% endraw %}` | Depending on where the ad appeared this parameter has four possible values.<br/> `fb` - Facebook<br/>`ig` - Instagram<br/>`msg` - Messenger<br/>`an` - the Audience Network
 `{% raw %}{{placement}}{% endraw %}` | Depending on where the ad appeared this parameter has possible values.<br/>`Facebook_Mobile_Feed`<br/>`Facebook_Right_Column`<br/>`Facebook_Instant_Articles`<br/>`Facebook_Instream_Video`<br/>`Facebook_Marketplace`<br/>`Instagram_Stories`<br/>`Instagram_Feed`<br/>`Instagram_Explore`<br/>`Messenger_Inbox`<br/>`Messenger_Stories`<br/>`Facebook_Desktop_Feed`<br/>`an` (for Audience Network)<br/>`Others` (for all other placements)
-`
 
 ## Default source/medium
 
