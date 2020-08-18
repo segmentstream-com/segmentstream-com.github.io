@@ -25,34 +25,34 @@ A Data Stream — is a universal way to collect **any real-time data** directly 
 In a nutshell, a Data Stream is a unique SegmentStream endpoint where you can send absolutely any data. All endpoints have the following format:
 
 ```
-https://track.segmentstream.com/ds/{{DATA_STREAM_ID}}
+https://track.segmentstream.com/ds/{% raw %}{{DATA_STREAM_ID}}{% endraw %}
 ```
 
-Where `{{DATA_STREAM_ID}}` is a unique ID of your data stream connected to the specific BigQuery table.
+Where `{% raw %}{{DATA_STREAM_ID}}{% endraw %}` is a unique ID of your data stream connected to the specific BigQuery table.
 
 You can send data into this endpoint in any format using:
 
 1. Simple HTTP request:
 ```
 curl -d "event=Lead&value=3500&currency=USD" \
-https://track.segmentstream.com/ds/{{DATA_STREAM_ID}}
+https://track.segmentstream.com/ds/{% raw %}{{DATA_STREAM_ID}}{% endraw %}
 ```
 
 2. HTTP request with JSON body:
 ```jsx
 curl -H "Content-Type: application/json" -X \ 
 POST -d '{"event":"Lead","valuee":3500,"currency":"USD"}' \
-https://track.segmentstream.com/ds/{{DATA_STREAM_ID}}
+https://track.segmentstream.com/ds/{% raw %}{{DATA_STREAM_ID}}{% endraw %}
 ```
 
 3. Tracking pixel (for AMP pages or ad impressions tracking):
 ```jsx
-<img height="1" width="1" style="display:none;" src="https://track.segmentstream.com/ds/{{DATA_STREAM_ID}}?event=ad_view&placement=DV360&type=banner" />
+<img height="1" width="1" style="display:none;" src="https://track.segmentstream.com/ds/{% raw %}{{DATA_STREAM_ID}}{% endraw %}?event=ad_view&placement=DV360&type=banner" />
 ```
 
 4. JavaScript:
 ```jsx
-jQuery.post("https://track.segmentstream.com/ds/{{DATA_STREAM_ID}}", { 
+jQuery.post("https://track.segmentstream.com/ds/{% raw %}{{DATA_STREAM_ID}}{% endraw %}", { 
   event: "Lead",
   value: 3500,
   currency: "USD"
