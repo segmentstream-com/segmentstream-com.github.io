@@ -4,25 +4,74 @@ section: datastreams
 navigation_title: "Overview"
 title: "Data Streams overview"
 order: 0
-date: 2020-08-10
+date: 2020-08-18
 ---
 
-## What is Data Streams?
+## What is Data Streams
 
-Data Stream is an universal way to collect any type of data from both client and server sides in real-time.
+A Data Stream — is a universal way to collect **any real-time data** directly into your Google BigQuery data warehouse. This might be any client or server-side data stream.
 
-## Connecting data stream
+**A few sample usages:**
 
-To connect a data stream you should follow the following steps:
+- Automatically intercept and duplicate all Google Analytics hits to SegmentStream that allows collecting raw hit-level data into your Google BigQuery without any limits and sampling;
+- Track and analyse AMP pages using non-script tracking pixels;
+- Track views of your media ads by embedding a tracking pixel that collects data about ad views directly into SegmentStream and Google BigQuery;
+- Collect CRM/ERP/ESP webhooks data from 3rd party systems;
+- Send real-time server-side events into Google BigQuery;
+- etc
+
+## How Data Streams work
+
+In a nutshell, a Data Stream is a unique SegmentStream endpoint where you can send absolutely any data. All endpoints have the following format:
+
+```
+https://track.segmentstream.com/ds/{{DATA_STREAM_ID}}
+```
+
+Where `{{DATA_STREAM_ID}}` is a unique ID of your data stream connected to the specific BigQuery table.
+
+You can send data into this endpoint in any format using:
+
+1. Simple HTTP request:
+```
+curl -d "event=Lead&value=3500&currency=USD" \
+https://track.segmentstream.com/ds/{{DATA_STREAM_ID}}
+```
+
+2. HTTP request with JSON body:
+```jsx
+curl -H "Content-Type: application/json" -X \ 
+POST -d '{"event":"Lead","valuee":3500,"currency":"USD"}' \
+https://track.segmentstream.com/ds/{{DATA_STREAM_ID}}
+```
+
+3. Tracking pixel (for AMP pages or ad impressions tracking):
+```jsx
+<img height="1" width="1" style="display:none;" src="https://track.segmentstream.com/ds/{{DATA_STREAM_ID}}?event=ad_view&placement=DV360&type=banner" />
+```
+
+4. JavaScript:
+```jsx
+jQuery.post("https://track.segmentstream.com/ds/{{DATA_STREAM_ID}}", { 
+  event: "Lead",
+  value: 3500,
+  currency: "USD"
+});
+```
+
+Regardless of the method you choose to send the data to the Data Stream endpoint, SegmentStream guarantees that this data will be successfully recorded into the Google BigQuery table specified for this Data Stream.
+
+## Creating a new Data Stream
+
+To create a data stream you should follow the following steps:
 
 1. Click **Add Data Stream** button:
 ![Add BigQuery data stream](/img/datastreams/data-stream-add.png)
 
-2. Select the data stream you would like to collect data from:
+2. Select the desireed data stream typ.
 
-
-3. Go through setting up flow depending on the selected data stream
+3. Go through setting up flow depending on the selected data stream type:
 ![Set up BigQuery data stream](/img/datastreams/data-stream-setup.png)
 
-4. Use **Snippet code** on your website, mobile App or server depending on the requirements
+4. Use **Snippet code** on your website, mobile app or server depending on the requirements:
 ![Use code of BigQuery data stream](/img/datastreams/data-stream-snippet.png)
