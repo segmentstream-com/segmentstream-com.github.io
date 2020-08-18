@@ -4,7 +4,7 @@ section: datasources
 navigation_title: "Yandex.Market"
 title: "Yandex.Market data source"
 order: 10
-date: 2020-07-20
+date: 2020-08-18
 ---
 
 ## Getting started
@@ -63,3 +63,7 @@ currency | STRING | NULLABLE
 ### Excluding VAT
 
 By default, Yandex.Market cost data includes VAT when you account currency is RUB. To exclude VAT from imported costs you should switch on **Exclude VAT** option and define the **VAT rate** to be excluded.
+
+## Historical data import limits
+
+The maximum period for which historical data is available on the Yandex.Market side is 30 days.
