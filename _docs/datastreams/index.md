@@ -9,7 +9,7 @@ date: 2020-08-18
 
 ## What is Data Streams
 
-A Data Stream — is a universal way to collect **any real-time data** directly into your Google BigQuery data warehouse. This includes both client-side or server-side event data.
+A Data Stream — is a universal way to collect **any real-time data** directly into your Google BigQuery data warehouse. This includes both client-side and server-side event data.
 
 **A few sample usages:**
 
