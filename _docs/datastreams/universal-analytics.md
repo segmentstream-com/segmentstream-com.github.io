@@ -4,7 +4,7 @@ section: datastreams
 navigation_title: "Universal Analytics"
 title: "Universal Analytics Data Stream"
 order: 1
-date: 2020-08-12
+date: 2020-08-19
 ---
 
 **Universal Analytics Data Stream** allows to collect raw hit-level non-sampled data into your Google BigQuery account. 
@@ -65,9 +65,11 @@ Choose this method if your Google Analytics integrated with Google Tag Manager.
 
     ![GTM Setup](/img/datastreams/ua-gtm-7.png)
 
-    > Repeat this operation with each tag responsible to sending data to Universal Analytics to collect full data.
+    > You can't use more than one customTask in one GTM tag. The function of each new customTask overrides the function of the previous one. If it's required to use several customTask functions in a single tag, you should join their JavaScript code within a single customTask.
 
 5. Save the tag and publish the container.
+
+    > It is important to add the customTask field to all your Universal Analytics tags. For example, event tags, conversion tracking tags etc.
 
 ## Integration with Analytics.js (site code)
 
