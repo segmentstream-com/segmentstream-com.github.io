@@ -27,7 +27,7 @@ This way instead of importing all transactions, only daily updates will be impor
 
 ### Examples
 
-> 
+> Here are simple examples with 2 fields for clarity.
 
 <span style="color:green">**Correct feed structure**</span>:
 
