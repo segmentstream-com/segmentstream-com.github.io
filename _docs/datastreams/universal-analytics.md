@@ -75,18 +75,13 @@ Choose this method if your Google Analytics integrated with Google Tag Manager.
 
 Choose this method if your Google Analytics integrated with website source code.
 
-Add **Snippet** from **analytics.js** type to the website source code on each page of your website with a Google Analytics:
+Add **Snippet** from **analytics.js** type to the website source code on each page after the command ```ga('create', 'UA-XXXXX-Y', 'auto'); ``` and before ```ga('send', 'pageview');```:
 
-1. After the Google Analytics initialization command (ga('create', 'UA-... ); line) add:
+    ga('create', 'UA-XXXXX-Y', 'auto');
 
-    ```
-    ga('require', 'SegmentStream');
-    ```
-
-2. Add snippet after the line 
-    ```
+    <% snippet code from admin panel %>
+    
     ga('send', 'pageview');
-    ```
 
 
 ## Check if integration works correctly

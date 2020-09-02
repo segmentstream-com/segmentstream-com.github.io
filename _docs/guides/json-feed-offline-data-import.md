@@ -25,6 +25,70 @@ SegmentStream can download JSON feeds and import its' content into Google BigQue
 **For example**, the feed with the URL `https://example.com/feed.ndjson?date=20200101` should display transactions updates for the 1st of January 2020
 This way instead of importing all transactions, only daily updates will be imported. This approach will be explained later on in this guide.
 
+### Examples
+
+> Here are simple examples with 2 fields for clarity.
+
+<span style="color:green">**Correct feed structure**</span>:
+
+  ```jsx
+  {"orderId": "123", "total": 100}
+  {"orderId": "124", "total": 250}
+  {"orderId": "125",  "total": 300}
+  ```
+
+<span style="color:red">**Incorrect feed structure**</span>:
+
+* Object:
+
+  ```jsx
+  {
+    users: [
+        {"orderId": "123", "total": 100}
+        {"orderId": "124", "total": 250}
+        {"orderId": "125",  "total": 300}
+    ]
+  }
+  ```
+
+* Pseudo-Array
+
+  ```jsx
+  [
+      {"orderId": "123", "total": 100}
+      {"orderId": "124", "total": 250}
+      {"orderId": "125",  "total": 300}
+  ]
+  ```
+
+* Pseudo-Object
+
+  ```jsx
+  {
+      {"orderId": "123", "total": 100}
+      {"orderId": "124", "total": 250}
+      {"orderId": "125",  "total": 300}
+  }
+  ```
+
+* Objects, separated by commas
+
+  ```jsx
+  {"orderId": "123", "total": 100},
+  {"orderId": "124", "total": 250},
+  {"orderId": "125",  "total": 300}
+  ```
+
+* Different data types in different rows for same fields
+
+  ```jsx
+  {"orderId": "123", "total": "100"}
+  {"orderId": "124", "total": 250}
+  {"orderId": "125",  "total": 300}
+  ```
+
+> *total* can't be a STRING and INTEGER
+
 ## CRM data example
 
 Imagine, you have the following data in your CRM:

@@ -23,17 +23,17 @@ These retargeting audiences can be then transferred to Google Ads to improve bid
 ## Creating custom dimension for Google clientId
 - In the **Admin** section, select the account and property you want to import data to and select **Custom Definitions > Custom Dimensions**:
 - Create custom dimension on user level. You can name it anyway you want.
-![Google Analytics create Custom Dimension](/img/google-analytics/ga_cd_1.png)
+![Google Analytics create Custom Dimension](/img/GA_cd_1.png)
 - Use **Custom Dimension** index while setting up **Data Import**
-![Google Analytics create Custom Dimension](/img/google-analytics/ga_cd_2.png)
+![Google Analytics create Custom Dimension](/img/GA_cd_2.png)
 - Click Save
 
 ## Creating custom metric for conversion probability
 - In the **Admin** section, select the account and property you want to import data to and select **Custom Definitions > Custom Metrics**:
 - Create custom metric with Integer "Formatting Type". You can name it anyway you want.
-![Google Analytics create Custom Dimension](/img/google-analytics/ga_cm_1.png)
+![Google Analytics create Custom Dimension](/img/GA_cm_1.png)
 - Use **Custom Metric** index while setting up **Data Import**
-![Google Analytics create Custom Dimension](/img/google-analytics/ga_cm_2.png)
+![Google Analytics create Custom Dimension](/img/GA_cm_2.png)
 - Click Save
 
 ## Setting up Google clintId collection into Custom Dimension
