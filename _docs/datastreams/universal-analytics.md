@@ -94,15 +94,15 @@ Add **Snippet** from **analytics.js** type to the website source code on each pa
 ## Table SCHEMA
 Field name | Type |  Mode | Description
 --- | --- | --- | ---
-hit_id |	string | Nullable |	uuid.	Required to avoid data inconsistency in case of backfill
-ip |	string	| Nullable| ip address	detect on server
-received_at |	integer	|Nullable |	Detected on server. Hit time in milliseconds passed since January 1, 1970
-ssuid |	string |Nullable|	cross-domain unique user id	detected on server
-payload |	string	|Nullable |hit payload	raw Query String
-cookie |	record | Repeated |	1st-party cookies of major advertising platforms	
-cookie.name |	string |Nullable |	cookie name	
-cookie.value |	string |Nullable |	cooke value	
-date |	date | Nullable| **partitition field**,	Date of hit with UTC offset	f.e. +3 offset and receivedAt 14.05.2020 23:00 by UTC give us 15.05.2020
-user_agent |string | Nullable|  userAgent	detect on server
+hit_id|string|Nullable|uuid.	Required to avoid data inconsistency in case of backfill
+ip|string| Nullable|ip address	detect on server
+received_at|integer|Nullable|Detected on server. Hit time in milliseconds passed since January 1, 1970
+ssuid|string|Nullable|cross-domain unique user id	detected on server
+payload|string|Nullable|hit payload	raw Query String
+cookie|record|Repeated|1st-party cookies of major advertising platforms	
+cookie.name|string|Nullable|cookie name	
+cookie.value|string|Nullable|cooke value	
+date|date|Nullable|**partitition field**,	Date of hit with UTC offset	f.e. +3 offset and receivedAt 14.05.2020 23:00 by UTC give us 15.05.2020
+user_agent|string|Nullable|userAgent	detect on server
 
 >Supported cookies: _ym_uid, _ga, ssaid, _fbp, _fbc, tmr_lvid
