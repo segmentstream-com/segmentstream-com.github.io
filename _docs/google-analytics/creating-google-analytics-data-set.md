@@ -4,10 +4,12 @@ section: google-analytics
 navigation_title: "Creating Google Analytics data set"
 title: "Creating Google Analytics data set"
 order: 2
-date: 2020-06-08
+date: 2020-09-02
 ---
 
 To make Google Analytics cost import ready for work you need to create a [dataset](https://support.google.com/analytics/answer/6014980){:target="_blank"} which SegmentStream will use to store imported cost data. Below are the steps that explain how to do this.
+
+> Note! We highly recommend creating a separate Data Set for SegmentStream even if you already have cost data import data sets that you've used previously. This will allow avoiding data inconsistency or duplication and will make it easier to troubleshoot any issues.
 
 ## Creating data set
 
