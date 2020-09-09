@@ -92,6 +92,7 @@ Add **Snippet** from **analytics.js** type to the website source code on each pa
 2. Go to your Google BigQuery account and check if table with name from **Destination table** appears in your DataSet.
 
 ## Table SCHEMA
+
 Field name|Type|Mode|Description
 ---|---|---|---
 hit_id|string|Nullable|uuid.	Required to avoid data inconsistency in case of backfill
