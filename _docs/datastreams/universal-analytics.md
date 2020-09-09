@@ -105,4 +105,4 @@ cookie.value|string|Nullable|cooke value
 date|date|Nullable|**partitition field**,	Date of hit with UTC offset	f.e. +3 offset and receivedAt 14.05.2020 23:00 by UTC give us 15.05.2020
 user_agent|string|Nullable|userAgent	detect on server
 
->Supported cookies: _ym_uid, _ga, ssaid, _fbp, _fbc, tmr_lvid
+>Default cookies: _ym_uid, _ga, ssaid, _fbp, _fbc, tmr_lvid
