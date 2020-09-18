@@ -3,7 +3,7 @@ layout: page
 section: datasources
 navigation_title: "Microsoft Advertising"
 title: "Microsoft Advertising data source"
-date: 2020-07-27
+date: 2020-09-18
 order: 5
 ---
 
@@ -615,3 +615,57 @@ BaseCampaignId | STRING | NULLABLE |
 AllConversions | STRING | NULLABLE |
 AllRevenue | STRING | NULLABLE |
 ViewThroughConversions | STRING | NULLABLE |
+
+## Additional transformation settings
+
+Besides default reports import, SegmentStream allows to apply additional transformations for the data and help prepare cost data reports grouped by UTM.
+
+This might be very handy if you need to stitch cost data with website sessions or [send cost data into Google Analytics](/datadestinations/google-analytics).
+
+To enable this transformation use **"Import cost data grouped by UTM"** setting. Once enabled, a new table with cost data grouped by UTM will appear in your data warehouse.
+
+### Table name
+**`microsoftAdsCosts_{CUSTOMER_ID}_{YYYYMMDD}`**
+
+### Table schema
+
+Field name|Type|Mode
+--- | --- | ---
+date | DATE | NULLABLE
+account | STRING | NULLABLE
+utmSource | STRING | NULLABLE
+utmMedium | STRING | NULLABLE
+utmCampaign | STRING | NULLABLE
+utmContent | STRING | NULLABLE
+utmTerm | STRING | NULLABLE
+cost | FLOAT | REQUIRED
+clicks | INTEGER | NULLABLE
+impressions | INTEGER | NULLABLE
+currency | STRING | NULLABLE
+
+### Supported dynamic URL parameters
+
+By default Microsoft Advertising allows to use a lot of [dynamic URL tracking parameters](https://help.ads.microsoft.com/#apex/3/en/56799/2){:target="_blank"} to track campaigns.
+
+SegmentStream supports the following parameters:
+
+Name|Description
+--- | ---
+`{lpurl}` | The final URL. It will be escaped unless you put {lpurl} at the beginning of your tracking template. If {lpurl} isn't at the beginning of your tracking template, it escapes the characters ?, =, ", #, \t, ' and [space]. <br/><br/>**Example**<br/>Final URL: http://example.com<br/>Tracking template:<br/>{lpurl}?matchtype={matchtype}<br/>Landing page URL:<br/> http://example.com?matchtype={matchtype}
+`{CampaignId}` | The ID of the campaign that triggered the ad.
+`{Campaign}` | The name of the campaign that triggered the ad.
+`{AdGroupId}` | The ID of the ad group that triggered the ad.
+`{AdGroup}` | The name of the ad group that triggered the ad.
+`{MatchType}` | The match type used to deliver an ad: `"e"` for exact, `"p"` for phrase, `"b"` for broad, `"b"` for expanded (Expanded match is treated as a broad match).
+`{BidMatchType}` | The keyword bid match type: `"be"` for bidded exact, `"bp"` for bidded phrase, `"bb"` for bidded broad.
+`{Network}` | The ad network type on which the ad was served: `"o"` for owned and operated (Bing, AOL, and Yahoo search results), `"s"` for syndicated (search partner site results), `"a"` for audience (Microsoft Audience Network placements).
+`{Device}` | One of the following codes depending on where the click came from: `"m"` for mobile device, `"t"` for tablet device, `"c"` for desktop or laptop computer.
+`{AdId}` | The numeric ID of the displayed ad.
+`{keyword}` | The keyword that matched the user's search term.
+
+If you use some of the unsupported parameters in UTM-tags you’ll see the parameter names instead of their values, for example: `{OrderItemId}` instead of `1234567890`.
+
+In order to keep matching visits and ad expenses in the cost analysis reports, move the unsupported parameters from UTM-tags to additional custom GET-parameters and collect them to custom dimensions in Google Analytics:
+
+* Cost data will be available only for UTM-tags values.
+* Session data will be available for unsupported parameters (through custom dimensions) and UTM-tags values.
