@@ -4,7 +4,7 @@ section: datasources
 navigation_title: "Facebook"
 title: "Facebook data source"
 order: 2
-date: 2020-08-17
+date: 2020-09-22
 ---
 
 ## Getting started
@@ -22,7 +22,7 @@ SegmentStream allows to import the following reports from Facebook.
 
 ### Ads Insights
 
-[https://developers.facebook.com/docs/marketing-api/insights/parameters/v7.0#fields](https://developers.facebook.com/docs/marketing-api/insights/parameters/v7.0#fields){:target="_blank"}
+[https://developers.facebook.com/docs/marketing-api/insights/parameters/v7.0#fields](https://developers.facebook.com/docs/marketing-api/insights/parameters/v8.0#fields){:target="_blank"}
 
 #### Table name
 **`facebookCampaignStatistics_{ACCOUNT_ID}_{YYYYMMDD}`**
