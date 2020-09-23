@@ -36,7 +36,7 @@ You can learn more about Google BigQuery projects basic features [here](https://
 
 Enterprise accounts are extended with more advanced features like:
 
-* Real-time event data collection using [SegmentStream JavaScript SDK](javascript-sdk/quickstart) or [HTTP API](http-api/overview);
+* Real-time event data collection using [Data Streams](javascript-sdk/datastream);
 * Advanced Dataflow Platform for complex data transformations and workflows;
 * Data Destinations which allow sending data from Google BigQuery to different marketing platforms (CDP functionality);
 * Advanced marketing reporting, ML-based multi-touch attribution, ROPO-analysis and other custom datasets and reports;
