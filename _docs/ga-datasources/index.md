@@ -20,6 +20,7 @@ There following built-in data sources are available for the Google Analytics pro
 * [Yandex.Market](/ga-datasources/yandex-market)
 * [myTarget](/ga-datasources/mytarget)
 * [VK](/ga-datasources/vk)
+* [Microsoft Advertising](/ga-datasources/microsoft-ads)
 
 ## Connecting data source
 
