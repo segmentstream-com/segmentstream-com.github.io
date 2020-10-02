@@ -4,7 +4,7 @@ section: datasources
 navigation_title: "RTB House"
 title: "RTB House data source"
 order: 10
-date: 2020-07-20
+date: 2020-10-02
 ---
 
 ## Getting started
@@ -66,3 +66,7 @@ utmContent | STRING | NULLABLE
 utmMedium | STRING | NULLABLE
 utmSource | STRING | NULLABLE
 currency | STRING | NULLABLE
+
+### Default source/medium
+
+You can define default UTM-source and UTM-medium for your RTB House data source to manually attribute costs of untagged campaigns to sessions with specified utm_source and utm_medium.
