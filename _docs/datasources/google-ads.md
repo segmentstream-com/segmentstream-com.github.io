@@ -232,6 +232,8 @@ CreativeTrackingUrlTemplate | STRING | REQUIRED
 Conversions | FLOAT | REQUIRED
 AllConversions | FLOAT | REQUIRED
 
+>[https://support.google.com/google-ads/answer/6247380?hl=en](App Campaigns) is not supported by Ad performance report
+
 <!-- edit later
 
 ### Import "Managed Customers" dictionary
