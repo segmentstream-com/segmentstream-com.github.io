@@ -24,6 +24,10 @@ By default, both [manager](https://support.google.com/google-ads/answer/6139186)
 
 ## Available reports
 
+>Google Ads API doesn't currently support **any reports** for [Smart Campaigns](https://support.google.com/google-ads/answer/7652860?hl=en)
+
+>Google Ads API currently supports only **Campaign Performance** report for [App Campaigns](https://support.google.com/google-ads/answer/6247380?hl=en) 
+
 SegmentStream allows to import the following reports from Google Ads.
 
 ### Keyword performance
@@ -232,7 +236,6 @@ CreativeTrackingUrlTemplate | STRING | REQUIRED
 Conversions | FLOAT | REQUIRED
 AllConversions | FLOAT | REQUIRED
 
->[App Campaigns](https://support.google.com/google-ads/answer/6247380?hl=en) is not supported by **Ad Performance** report
 
 <!-- edit later
 
