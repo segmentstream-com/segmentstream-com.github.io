@@ -67,6 +67,12 @@ utmMedium | STRING | NULLABLE
 utmSource | STRING | NULLABLE
 currency | STRING | NULLABLE
 
-### Default source/medium
+### UTM matching for campaigns
 
-You can define default UTM-source and UTM-medium for your RTB House data source to manually attribute costs of untagged campaigns to sessions with specified utm_source and utm_medium.
+Currently, SegmentStream supports automatic UTM matching for RTBHouse campaigns only when UTM params are defined inside the URL for each offer in your product feed. Otherwise, you would need to match RTBHouse campaigns mannually inside the SegmentStream admin panel.
+
+By default, the following matching applies for `utm_source` and `utm_medium`:
+* `utm_source` ▸ `rtbhouse`
+* `utm_medium` ▸ `cpc`
+
+This matching can be changed inside the admin panel by specifying appropriate values **UTM source** and **UTM medium** options.

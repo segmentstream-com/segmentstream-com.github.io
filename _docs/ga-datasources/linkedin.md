@@ -4,7 +4,7 @@ section: ga-datasources
 navigation_title: "LinkedIn"
 title: "LinkedIn data source"
 order: 8
-date: 2020-10-02
+date: 2020-10-03
 ---
 
 ## Getting started
@@ -15,7 +15,7 @@ date: 2020-10-02
 4. Select ad accounts which cost data you would like to import.
 5. Click **Save**.
 
-### Default source/medium
+## Default source/medium
 
 LinkedIn allows running ads that do not lead directly to your website. This means that these types of campaigns can not have UTM-params and it is not possible to import them into Google Analytics or match them with website sessions due to limitations that require all imported costs to have campaign source and medium defined.
 

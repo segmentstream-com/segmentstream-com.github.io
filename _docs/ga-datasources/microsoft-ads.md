@@ -3,7 +3,7 @@ layout: page
 section: ga-datasources
 navigation_title: "Microsoft Advertising"
 title: "Microsoft Advertising data source"
-date: 2020-09-22
+date: 2020-10-03
 order: 5
 ---
 
@@ -15,7 +15,7 @@ order: 5
 4. Select the advertising account you would like to connect.
 5. Click **Save**.
 
-### Supported dynamic URL parameters
+## Supported dynamic URL parameters
 
 By default Microsoft Advertising allows to use a lot of [dynamic URL tracking parameters](https://help.ads.microsoft.com/#apex/3/en/56799/2){:target="_blank"} to track campaigns.
 
