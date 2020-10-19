@@ -42,13 +42,13 @@ Where:
 * `currency` - order currency code;
 * `total` - Total cost of the order;
 * `status` - The most recent order status (e.g. `received`, `shipped`, `delivered`, `refunded`, etc);
-* `userId` - unique identifier of the user that made an order;
+* `userId` - unique identifier of the user that made an order.
 
 > Note: here is provided minimal schema for stitching online and offline orders, but you can add any other fields you need.
 
 Depending on the programming language you use on the backend of your application your should implement a webhook triggering each time a new order or lead is created or the status of a particular order or lead changes inside your CRM.
 
-This is how it can look like using CURL implementation:
+For example, the following code (CURL example) should be triggered in the order status was changed from **shipped** to **delivered**.
 ```
 curl -d "orderId=N1&status=delivered&total=120.13&userId=U1" \
 -X POST https://track.segmentstream.com/ds/522ed95e-9f07-45f6-a0b7-28bf2d0315e5
@@ -67,7 +67,8 @@ hit_id | payload | received_at | date
 83cc2a6a-4829-4410-bab4-95b680c5b8d7 | orderId=N1&status=delivered&total=120.13&userId=U1 | 1603131452 | 2020-10-19
 
 Where,
-`hit_id` - a unique ID of the request generated automatically when webhook is received by the SegmentStream server,
-`payload` - the data sent in a POST body
-`received_at` - webhook Unix timestamp (in milliseconds passed since January 1, 1970),
-`date` - the date of the webhook with a proper UTC offset applied.
+
+* `hit_id` - a unique ID of the request generated automatically when webhook is received by the SegmentStream server;
+* `payload` - the data sent in a POST body;
+* `received_at` - webhook Unix timestamp (in milliseconds passed since January 1, 1970);
+* `date` - the date of the webhook with a proper UTC offset applied.
