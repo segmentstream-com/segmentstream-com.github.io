@@ -3,7 +3,7 @@ layout: page
 section: guides
 navigation_title: "Importing offline data using JSON feed"
 title: "Importing offline data using JSON feed"
-date: 2020-05-08
+date: 2020-10-19
 ---
 
 This document describes how to import offline data from the CRM (i.e. sales or leads statuses) into BigQuery using JSON feed.
@@ -24,70 +24,6 @@ SegmentStream can download JSON feeds and import its' content into Google BigQue
 * (Optional, recommended) It should be possible to fetch daily feed data using date parameter added to the feed URL.<br/>
 **For example**, the feed with the URL `https://example.com/feed.ndjson?date=20200101` should display transactions updates for the 1st of January 2020
 This way instead of importing all transactions, only daily updates will be imported. This approach will be explained later on in this guide.
-
-### Examples
-
-> Here are simple examples with 2 fields for clarity.
-
-<span style="color:green">**Correct feed structure**</span>:
-
-  ```jsx
-  {"orderId": "123", "total": 100}
-  {"orderId": "124", "total": 250}
-  {"orderId": "125",  "total": 300}
-  ```
-
-<span style="color:red">**Incorrect feed structure**</span>:
-
-* Object:
-
-  ```jsx
-  {
-    users: [
-        {"orderId": "123", "total": 100}
-        {"orderId": "124", "total": 250}
-        {"orderId": "125",  "total": 300}
-    ]
-  }
-  ```
-
-* Pseudo-Array
-
-  ```jsx
-  [
-      {"orderId": "123", "total": 100}
-      {"orderId": "124", "total": 250}
-      {"orderId": "125",  "total": 300}
-  ]
-  ```
-
-* Pseudo-Object
-
-  ```jsx
-  {
-      {"orderId": "123", "total": 100}
-      {"orderId": "124", "total": 250}
-      {"orderId": "125",  "total": 300}
-  }
-  ```
-
-* Objects, separated by commas
-
-  ```jsx
-  {"orderId": "123", "total": 100},
-  {"orderId": "124", "total": 250},
-  {"orderId": "125",  "total": 300}
-  ```
-
-* Different data types in different rows for same fields
-
-  ```jsx
-  {"orderId": "123", "total": "100"}
-  {"orderId": "124", "total": 250}
-  {"orderId": "125",  "total": 300}
-  ```
-
-> *total* can't be a STRING and INTEGER
 
 ## CRM data example
 
@@ -142,6 +78,58 @@ Line|Feed record|
 > Note: This approach allows to significantly reduce the amount of transferred data by importing only order updates instead of all CRM orders.
 
 Your order feed should contain only updated records, meaning that for each change in the status of existing transaction you create a new record in the feed with the new value of the `updatedAt` field and preserving the value of the `createdAt` field.
+
+## Common mistakes
+
+* Object instead of newline delimited JSON:
+
+  ```jsx
+  {
+    users: [
+        {"orderId": "123", "total": 100}
+        {"orderId": "124", "total": 250}
+        {"orderId": "125",  "total": 300}
+    ]
+  }
+  ```
+
+* Pseudo-array instead of newline delimited JSON:
+
+  ```jsx
+  [
+      {"orderId": "123", "total": 100}
+      {"orderId": "124", "total": 250}
+      {"orderId": "125",  "total": 300}
+  ]
+  ```
+
+* Pseudo-object instead of newline delimited JSON:
+
+  ```jsx
+  {
+      {"orderId": "123", "total": 100}
+      {"orderId": "124", "total": 250}
+      {"orderId": "125",  "total": 300}
+  }
+  ```
+
+* Objects separated by commas instead of newline delimited JSON:
+
+  ```jsx
+  {"orderId": "123", "total": 100},
+  {"orderId": "124", "total": 250},
+  {"orderId": "125",  "total": 300}
+  ```
+
+* Different data types in different rows:
+
+  ```jsx
+  {"orderId": "123", "total": "100"}
+  {"orderId": "124", "total": 250}
+  {"orderId": "125",  "total": 300}
+  ```
+
+> *total* can't be a STRING and INTEGER
 
 ## Enabling "JSON Feed" data source
 1. Go to [SegmentStream admin panel▸](https://admin.segmentstream.com){:target="_blank"}.
