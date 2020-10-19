@@ -46,7 +46,7 @@ Where:
 
 > Note: here is provided minimal schema for stitching online and offline orders, but you can add any other fields you need.
 
-Depending on the programming language you use on the backend of your application your should implement a webhook triggering each time a new order or lead is created or the status of a particular order or lead changes inside your CRM.
+Depending on the programming language you use on the backend of your application your should implement a webhook triggering each time a new order or lead is created, or the status of a particular order or lead changes inside your CRM.
 
 For example, the following code (CURL example) should be triggered in the order status was changed from **shipped** to **delivered**.
 ```
