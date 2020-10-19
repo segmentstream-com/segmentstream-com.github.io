@@ -20,7 +20,7 @@ Imported offline data can be combined with other website data to improve ROI rep
 2. Choose **Webhook** from the list.
 3. Define Google BigQuery **Destination table** where collected data will be stored.
 4. Choose the **UTC offset** from the list.
-5. Select **Integration type** depending on the programming languages using on your backend.
+5. Select **Integration type** depending on the programming language on your backend.
 6. Copy **Snippet** code.
 7. Click **Save** and follow the further instructions to integrate the code.
 
