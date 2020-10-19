@@ -24,10 +24,10 @@ After simple integration with Google Tag Manager or Source Code SegmentStream wi
 1. Inside the admin panel go to **Google BigQuery ▸ Data Streams** page and click **Add data stream**.
 2. Choose **Universal Analytics** from the list.
 3. Define Google BigQuery **Destination table** where collected data will be stored.
-4. Define **UTC offset** from the list.
+4. Choose the **UTC offset** from the list.
 5. Select **Integration type**. There are 2 types: GTM or Analytics.js
 6. Copy **Snippet** code.
-7. Click **Save** and follow the further instructions to integrate code.
+7. Click **Save** and follow the further instructions to integrate the code.
 
 ## Integration with Google Tag Manager (GTM)
 

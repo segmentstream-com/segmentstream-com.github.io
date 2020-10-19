@@ -140,7 +140,7 @@ Your order feed should contain only updated records, meaning that for each chang
 6. In the **Destination table name** field specify the BigQuery table name that will contain imported feed data.
 7. Enable **Partition table by date** option if you decided to use [Approach 2](#approach-2:-the-feed-contains-only-orders/leads-that-were-updated-during-the-day) for the feed generation (recommended).
 
-##  How feed import works
+## How feed import works
 
 Everyday SegmentStream fetches data from the specified feed URL using provided credentials.
 
