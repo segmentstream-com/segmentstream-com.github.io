@@ -28,11 +28,11 @@ SegmentStream supports many [dynamic parameters](/datasources/google-ads#support
 
 A good example of UTM-tagging for Google Ads may look the following way:
 ```
-utm_source=google&utm_medium=cpc&utm_campaign=some_campaign&utm_term={keyword}&utm_content=tid|{targetid}|aid|{creative}|gid|{adgroupid}|src|{network}|dev |{device}|locph|{loc_physical_ms}|locin|{loc_interest_ms}|clid|{gclid}
+utm_source=google&utm_medium=cpc&utm_campaign=some_campaign&utm_term={keyword}&utm_content=tid|{targetid}|aid|{creative}|gid|{adgroupid}|src|{network}|dev|{device}|locph|{loc_physical_ms}|locin|{loc_interest_ms}|gclid|{gclid}
 ```
 
 Alternatively, you can use a `{campaignid}` dynamic param to define `utm_campaign` automatically at the account level. The only downside here will be a less readable `utm_campaign`:
 
 ```
-utm_source=google&utm_medium=cpc&utm_campaign={campaignid}&utm_term={keyword}&utm_content=tid|{targetid}|aid|{creative}|gid|{adgroupid}|src|{network}|dev |{device}|locph|{loc_physical_ms}|locin|{loc_interest_ms}|clid|{gclid}
+utm_source=google&utm_medium=cpc&utm_campaign={campaignid}&utm_term={keyword}&utm_content=tid|{targetid}|aid|{creative}|gid|{adgroupid}|src|{network}|dev|{device}|locph|{loc_physical_ms}|locin|{loc_interest_ms}|gclid|{gclid}
 ```
