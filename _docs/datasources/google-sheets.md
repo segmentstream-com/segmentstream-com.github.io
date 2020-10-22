@@ -27,4 +27,4 @@ Using Google Sheets data source is a universal way to inport aby type of data in
 
 ## Importing cost data
 
-Importing cost data requires a predefined format of your Google Sheet file. Please [follow this guide](/guides/google-sheets-cost-data-import) for more detail.
+Importing cost data requires a predefined format of the Google Sheet file. Please [follow this guide](/guides/google-sheets-cost-data-import) for more detail.
