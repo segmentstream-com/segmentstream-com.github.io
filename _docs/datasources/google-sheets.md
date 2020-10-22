@@ -1,58 +1,30 @@
 ---
 layout: page
 section: datasources
-title: "Google Sheets"
+navigation_title: "Google Sheets"
+title: "Google Sheets data source"
+date: 2020-10-22
 order: 10
 ---
 
-In this section you will learn:
-* How to setup data import from Google Sheets to Google BigQuery.
+Using Google Sheets data source is a universal way to inport aby type of data into Google BigQuery even if you didn't find appropriate data source inside the SegmentStream admin panel.
 
-> Attention! The [Google BigQuery](/integrations/google-bigquery) integration has to be enabled to use this feature.
+## Getting started
 
-## Importing data from Google Sheets
-------
+1. Inside the admin panel go to **Data Sources** page and click **Add data source**.
+2. Choose **Google Sheets** from the list.
+3. Click **Authenticate with Google** and go through the authentication flow.
+4. Paste the URL of the Google Sheet you would like to import the data from.
+5. Optionally, apply a specific cell range you would like to import (i.e. A1:E22 or A:E).
+6. Optionally, map column name to specific BigQuery types. Otherwise, STRING type will be used for all columns.
+7. Define the name of the destination table in BigQuery.
+8. Click **Save**.
 
-After enabling this data source, data from Google Sheets will be uploaded to BigQuery once every 24 hours.
+## Google Sheets file requirements
 
-## Connecting and configuring
-------
+1. The first row should contain column names.
+2. Data type should be consistent for each column.
 
-The process of connecting data sources is described in detail in the [overview](/datasources/index).
-After authorization you need to set the data source parameters.
+## Importing cost data
 
-## Options description
-------
-![](/img/google-sheets-1.png)
-
-## Display name
-The name of the data source. It is displayed in the interface in the list of sources.
-
-## Google Spreadsheet URL
-Link to Google Spreadsheet.
-Just copy-paste it from the browser address bar of the spreadsheet table.
-If you want load data from specific sheet (tab), select it before copying URL.
-
-> Notice! If range not specified, first row of the sheet will be used for field names.
-> Notice! Field names must contain only letters, numbers, and underscores, start with a letter or underscore, and be at most 128 characters long.
-
-## Range
-If you want to load data only from a specific range, type it here using A1 notation.
-
-> Notice! First row of range will be used for field names.
-> Notice! You can specify full columns, like A:F
-
-## Column types
-Optionally you can specify column types.
-The screenshot above displays an example of a Google spreadsheet costs data import setup.
-If column types are not specified, STRING type will be used by default.
-
-## Destination table name
-The name of the table in BigQuery to which the imported data will be written.
-
-> Notice! Old data will be overwritten.
-
-## Saving, Disconnecting, Disabling data source
-To save and enable the data source, click **Save**.
-The **Disconnect** button is used to revoke the authorization data. The settings are saved.
-You can enable or disable the data source at any time by using the switch on the top right.
+Importing cost data requires a predefined format of your Google Sheet file. Please [follow this guide](/guides/google-sheets-cost-data-import) for more detail.
