@@ -3,7 +3,7 @@ layout: page
 section: guides
 navigation_title: "UTM-tagging best practices"
 title: "UTM-tagging best practices"
-date: 2020-10-20
+date: 2020-10-25
 ---
 
 This guide describes how to properly implement paid campaigns UTM-tagging for the most popular data sources.
@@ -21,6 +21,36 @@ Try to tag as many touchpoints as possible. Some commonly overlooked options inc
 - QR codes
 
 In some advertising systems, you can use dynamic parameters  `{...}` in your links. These parameters help to attribute costs to sessions with high accuracy. We encourage you to use as many of them as possible as long as they are supported by SegmentStream for the particular data source.
+
+## How session cost calculation works
+
+By default, SegmentStram uses the set of 5 UTM parameters (source, medium, campaign, term, content) to identify the cost of each session. The more granular tagging you have - the more accurately SegmentStream will be able to attribute a proper cost for a specific session.
+
+For example, imagine you have **3 clicks**:
+
+* `utm_source=google&utm_medium=cpc&utm_campaign=supercampaign&utm_content=ad1|position|1` (you paid **$3** per click)
+* `utm_source=google&utm_medium=cpc&utm_campaign=supercampaign&utm_content=ad1|position|2` (you paid **$1** per click)
+* `utm_source=google&utm_medium=cpc&utm_campaign=supercampaign&utm_content=ad1|position|3` (you paid **$5** per click)
+
+As you can see, if you have a `utm_content` and SegmentStream was able to properly parse it, it will be possible to stitch your clicks with initiated session very accurately to identify the cost of each session (in our case **$3**, **$1** and **$5**).
+
+But if `utm_content` does not have dynamic parameters that allow more granular segmentation (in our example - by position) all 3 clicks will looks the same and there will be no way to understand the cost of each particualr session:
+
+* `utm_source=google&utm_medium=cpc&utm_campaign=supercampaign&utm_content=ad1`
+
+Alternatively, if SegmentStream was unable to properly parse `utm_content` due to unsupported UTM dynamic parameters, stitching will fallback to `utm_campaign` level with the same set of UTMs for all 3 clicks:
+
+* `utm_source=google&utm_medium=cpc&utm_campaign=supercampaign`
+
+This way, SegmentStream will allocate the same cost for each of 3 sessions. Knowing that overall spend was **$9**, the cost of each session will be **$3**, **$3** and **$3**.
+
+As you can see, this will cause less accurate identification of the cost of each session which will lead to less accurate ROAS analysis.
+
+**That's why we ecourage to:**
+  
+* Use different UTM parameters for different Campaigns, Ad Groups and Ads;
+* Use as many dynamic parameters as possible to make your UTM-tagging more granular;
+* Use only supported dynamic parameters when you do you UTM tagging (for example, [here](/datasources/google-ads#supported-dynamic-url-parameters) you can find supported dynamic parameters for Google Ads).
 
 ## Google Ads
 
