@@ -7,6 +7,8 @@ date: 2019-05-21 19:00:00
 order: 0
 ---
 
+> **Deprecated**. Use [Data Streams](/datastreams/) instead.
+
 ## Introduction
 ------
 The SegmentStream HTTP Tracking API lets you record analytics data from any website or application. The requests hit our servers, and we route your data to any destination you want!
