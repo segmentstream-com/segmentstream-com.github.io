@@ -3,7 +3,7 @@ layout: page
 section: guides
 navigation_title: "UTM-tagging best practices"
 title: "UTM-tagging best practices"
-date: 2020-10-25
+date: 2020-11-10
 ---
 
 This guide describes how to properly implement paid campaigns UTM-tagging for the most popular data sources.
@@ -66,3 +66,5 @@ Alternatively, you can use a `{campaignid}` dynamic param to define `utm_campaig
 ```
 utm_source=google&utm_medium=cpc&utm_campaign={campaignid}&utm_term={keyword}&utm_content=tid|{targetid}|aid|{creative}|gid|{adgroupid}|src|{network}|dev|{device}|locph|{loc_physical_ms}|locin|{loc_interest_ms}|gclid|{gclid}
 ```
+
+> We suggest to avoid using UTM tagging inside the **Final URL** or inside your product feed links and use **Tracking template** or **Final URL suffix** inside the Settings at Account, Campaign or Ad Group level.
