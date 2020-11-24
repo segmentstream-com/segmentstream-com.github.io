@@ -16,6 +16,7 @@ There following built-in data sources are available for the Google BigQuery proj
 ### Advertising
 
 * [Google Ads](/datasources/google-ads)
+* [Google Campaign Manager](/datasources/google-campaign-manager)
 * [Facebook](/datasources/facebook)
 * [Microsoft Ads (former Bing)](/datasources/microsoft-ads)
 * [Criteo](/datasources/criteo)
@@ -25,16 +26,22 @@ There following built-in data sources are available for the Google BigQuery proj
 * [myTarget](/datasources/mytarget)
 * [VK](/datasources/vk)
 * [Recreativ](/datasources/recreativ)
+* [LinkedIn](/datasources/linkedin)
+* [Quora](/datasources/quora)
+* [TikTok](/datasources/tiktok)
 
 ### Analytics
 
 * [Google Analytics](/datasources/google-analytics)
 * [AppMetrica](/datasources/appmetrica)
 * [Calltouch](/datasources/calltouch)
+* [Appsflyer](/datasources/appsflyer)
 
 ### CRM
 * [amoCRM](/datasources/amocrm)
 * [retailCRM](/datasources/retailcrm)
+* [Pipedrive](/datasources/pipedrive)
+* [Hubspot](/datasources/hubspot)
 
 ### Other
 * [Fixer (currency exchange rates)](/datasources/fixer)

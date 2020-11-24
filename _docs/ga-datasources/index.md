@@ -21,6 +21,10 @@ There following built-in data sources are available for the Google Analytics pro
 * [myTarget](/ga-datasources/mytarget)
 * [VK](/ga-datasources/vk)
 * [Microsoft Advertising](/ga-datasources/microsoft-ads)
+* [LinkedIn](/ga-datasources/linkedin)
+* [Quora](/ga-datasources/quora)
+* [TikTok](/ga-datasources/tiktok)
+* [Google Sheets](/datasources/google-sheets)
 
 ## Connecting data source
 
