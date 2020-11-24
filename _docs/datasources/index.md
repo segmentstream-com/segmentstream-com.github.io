@@ -29,6 +29,9 @@ There following built-in data sources are available for the Google BigQuery proj
 * [LinkedIn](/datasources/linkedin)
 * [Quora](/datasources/quora)
 * [TikTok](/datasources/tiktok)
+* [Twitter](/datasources/twitter)
+* [Reddit](/datasources/reddit)
+* [Snapchat](/datasources/snapchat)
 
 ### Analytics
 

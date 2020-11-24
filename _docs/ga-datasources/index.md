@@ -25,6 +25,9 @@ There following built-in data sources are available for the Google Analytics pro
 * [Quora](/ga-datasources/quora)
 * [TikTok](/ga-datasources/tiktok)
 * [Google Sheets](/datasources/google-sheets)
+* [Twitter](/ga-datasources/twitter)
+* [Reddit](/ga-datasources/reddit)
+* [Snapchat](/ga-datasources/snapchat)
 
 ## Connecting data source
 
