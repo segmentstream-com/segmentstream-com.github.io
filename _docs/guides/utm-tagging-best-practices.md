@@ -58,38 +58,38 @@ SegmentStream supports many [dynamic parameters](/datasources/google-ads#support
 
 A good example of UTM-tagging for Google Ads campaigns:
 
-**Search campaigns:**
+**Search campaigns (campaign level settings):**
 ```
 utm_source=google&utm_medium=search&utm_campaign=some_campaign&utm_term={keyword}&utm_content={creative}
 ```
-**Shopping campaigns:**
+**Shopping campaigns (adgroup level settings):**
 ```
 utm_source=google&utm_medium=shopping&utm_campaign=some_campaign&utm_term=some_adgroup_name&utm_content={creative}
 ```
-**Display campaings:**
+**Display campaings (adgroup level settings):**
 ```
 utm_source=google&utm_medium=display&utm_campaign=some_campaign_name&utm_term=some_adgroup_name&utm_content={creative}
 ```
-**Video campaings:**
+**Video campaings (adgroup level settings):**
 ```
 utm_source=google&utm_medium=video&utm_campaign=some_campaign_name&utm_term=some_adgroup_name&utm_content={creative}
 ```
 
 Alternatively, you can use a `{campaignid}` and `{adgroupid}` dynamic parameters to define `utm_campaign` and `utm_term` automatically at the account level or campaign level. The only downside here will be a less readable `utm_campaign` and `utm_term`:
 
-**Search campaigns:**
+**Search campaigns (campaign or account level settings):**
 ```
 utm_source=google&utm_medium=search&utm_campaign={campaignid}&utm_term={keyword}&utm_content={creative}
 ```
-**Shopping campaigns:**
+**Shopping campaigns (campaign or account level settings):**
 ```
 utm_source=google&utm_medium=shopping&utm_campaign={campaignid}&utm_term={adgroupid}&utm_content={creative}
 ```
-**Display campaings:**
+**Display campaings (campaign or account level settings):**
 ```
 utm_source=google&utm_medium=display&utm_campaign={campaignid}&utm_term={adgroupid}&utm_content={creative}
 ```
-**Video campaings:**
+**Video campaings (campaign or account level settings):**
 ```
 utm_source=google&utm_medium=video&utm_campaign={campaignid}&utm_term={adgroupid}&utm_content={creative}
 ```
