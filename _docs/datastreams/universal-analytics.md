@@ -81,8 +81,8 @@ To achieve this you just need to send the same request you send to your Google A
 For example:
 
 ```
-POST https://track.segmentstream.com/ds/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  // Use proper endpoint from the admin panel
-Host: www.mywebsite.com
+POST https://track.segmentstream.com/ds/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  
+// Use proper endpoint from the admin panel
 
 v=1                                   // Version.
 &tid=UA-XXXXX-Y                       // Tracking ID / Property ID.
