@@ -47,7 +47,7 @@ Choose this method if your Google Analytics is integrated using Google Tag Manag
 
 4. Add this variable as your Gooogle Analytics Settings `customTask` field
 
-    ![GTM Setup Step 4](/img/datastreams/ua-gtm-4.png)
+    ![GTM Setup Step 4](/img/datastreams/ua-gtm-4.png?v2)
 
    > You can't use more than one customTask in one GTM tag. The function of each new customTask overrides the function of the previous one. If it's required to use several customTask functions in a single tag, you should join their JavaScript code within a single customTask.
 
@@ -76,7 +76,7 @@ Add **Snippet** from **analytics.js** type to the website source code on each pa
 
 Sometimes you might need to send some hits using [Measurement Protocol](https://developers.google.com/analytics/devguides/collection/protocol/v1/devguide){:target=blank}. For example - transactions or refunds.
 
-To achieve this you just need to send the same request you send to your Google Anlaytics to your SegmentStream data stream endpoint. 
+To achieve this you just need to send the same request you send to your Google Anlaytics to your SegmentStream data stream endpoint.
 
 For example:
 
@@ -123,4 +123,4 @@ cookie.value|string|Nullable|Cooke value
 date|date|Nullable|**partitition field**,	Date of the hit with UTC offset
 user_agent|string|Nullable|Visitor's device userAgent
 
->Default cookies: _ym_uid, _ga, ssaid, _fbp, _fbc, tmr_lvid. Can be expanded by request to support@segmentstream.com
+>By default, SegmentStream collects the following cookies alongside with the hit data: `_ym_uid`, `_ga`, `ssaid`, `_fbp`, `_fbc`, `tmr_lvid`. The list of cookies can be expanded by request.
