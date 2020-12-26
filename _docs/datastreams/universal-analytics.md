@@ -33,43 +33,25 @@ After simple integration with Google Tag Manager or javascript on your website, 
 
 Choose this method if your Google Analytics is integrated using Google Tag Manager.
 
-### Create Custom JavaScript Variable
-
 1. In the **Variables** section click **New** to create a customTask variable.
 
-    ![GTM Setup](/img/datastreams/ua-gtm-1.png)
+    ![GTM Setup Step 1](/img/datastreams/ua-gtm-1.png)
 
 2. Click on the **Variable Configuration** > **Custom JavaScript** in *Page Variables* section: 
 
-    ![GTM Setup](/img/datastreams/ua-gtm-2.png)
+    ![GTM Setup Step 2](/img/datastreams/ua-gtm-2.png)
 
 3. Set **SegmentStream** as a Name of the variable. Paste code from Data Streams settings modal to **Custom Javascript** field. Click Save.
 
-    ![GTM Setup](/img/datastreams/ua-gtm-3.png)
+    ![GTM Setup Step 3](/img/datastreams/ua-gtm-3.png)
 
-### Add variable to the each of the Universal Analytics tags
+4. Add this variable as your Gooogle Analytics Settings `customTask` field
 
-1. Open Universal Analytics tag
+    ![GTM Setup Step 4](/img/datastreams/ua-gtm-4.png)
 
-    ![GTM Setup](/img/datastreams/ua-gtm-4.png)
-
-2. Click on **Tag Configuration** > check **Enable overriding settings in this tag**
-
-    ![GTM Setup](/img/datastreams/ua-gtm-5.png)
-
-3. Go to **More settings** > **Fields to set** and click **Add Field** button.
-
-    ![GTM Setup](/img/datastreams/ua-gtm-6.png)
-
-4. Enter ```customTask``` as Field name and {% raw %}```{{SegmentStream}}```{% endraw %} as Value
-
-    ![GTM Setup](/img/datastreams/ua-gtm-7.png)
-
-    > You can't use more than one customTask in one GTM tag. The function of each new customTask overrides the function of the previous one. If it's required to use several customTask functions in a single tag, you should join their JavaScript code within a single customTask.
+   > You can't use more than one customTask in one GTM tag. The function of each new customTask overrides the function of the previous one. If it's required to use several customTask functions in a single tag, you should join their JavaScript code within a single customTask.
 
 5. Save the tag and publish the container.
-
-    > It is important to add the customTask field to all your Universal Analytics tags. For example, event tags, conversion tracking tags etc.
 
 ## Integration with analytics.js (website code)
 
