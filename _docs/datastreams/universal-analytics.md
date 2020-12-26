@@ -7,7 +7,7 @@ order: 1
 date: 2020-08-19
 ---
 
-**Universal Analytics Data Stream** allows to collect raw hit-level non-sampled data into your Google BigQuery account. 
+**Universal Analytics Data Stream** allows collecting hit-level non-sampled data with unlimited dimensions and metrics into your Google BigQuery account using your existing Google Analytics tracker even if you use a free version of Google Analytics.
 
 ## Before you begin
 
@@ -17,21 +17,21 @@ date: 2020-08-19
 
 ## How it works?
 
-After simple integration with Google Tag Manager or Source Code SegmentStream will start listening all Google Analytics events, already implemented on website, and push same events into Google BigQuery in real-time.
+After simple integration with Google Tag Manager or javascript on your website, SegmentStream will start listening all Google Analytics events already implemented on the website and push same events into Google BigQuery in real-time.
 
 ## Getting started
 
-1. Inside the admin panel go to **Google BigQuery ▸ Data Streams** page and click **Add data stream**.
+1. Inside the admin panel go to **Google BigQuery ▸ Data Streams** and click **Add data stream**.
 2. Choose **Universal Analytics** from the list.
 3. Define Google BigQuery **Destination table** where collected data will be stored.
 4. Choose the **UTC offset** from the list.
-5. Select **Integration type**. There are 2 types: GTM or Analytics.js
+5. Select **Integration type**. There are 2 types: "GTM" or "analytics.js".
 6. Copy **Snippet** code.
 7. Click **Save** and follow the further instructions to integrate the code.
 
-## Integration with Google Tag Manager (GTM)
+## Integrating using Google Tag Manager (GTM)
 
-Choose this method if your Google Analytics integrated with Google Tag Manager.
+Choose this method if your Google Analytics is integrated using Google Tag Manager.
 
 ### Create Custom JavaScript Variable
 
@@ -71,7 +71,7 @@ Choose this method if your Google Analytics integrated with Google Tag Manager.
 
     > It is important to add the customTask field to all your Universal Analytics tags. For example, event tags, conversion tracking tags etc.
 
-## Integration with Analytics.js (site code)
+## Integration with analytics.js (website code)
 
 Choose this method if your Google Analytics integrated with website source code.
 
@@ -83,13 +83,48 @@ Add **Snippet** from **analytics.js** type to the website source code on each pa
     
     ga('send', 'pageview');
 
-
 ## Check if integration works correctly
 
 1. Go to your website, open **console** > **network** and filter results with *track.segmentstream* endpoint. If snippet integrated correctly you will see requests:
     ![GTM Setup](/img/datastreams/datastreams-check.png)
 
 2. Go to your Google BigQuery account and check if table with name from **Destination table** appears in your DataSet.
+
+## Sending hits using Measurement Protocol
+
+Sometimes you might need to send some hits using [Measurement Protocol](https://developers.google.com/analytics/devguides/collection/protocol/v1/devguide){:target=blank}. For example - transactions or refunds.
+
+To achieve this you just need to send the same request you send to your Google Anlaytics to your SegmentStream data stream endpoint. 
+
+For example:
+
+```
+POST https://track.segmentstream.com/ds/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  // Use proper endpoint from the admin panel
+Host: www.mywebsite.com
+
+v=1                                   // Version.
+&tid=UA-XXXXX-Y                       // Tracking ID / Property ID.
+&cid=555                              // Anonymous Client ID.
+&t=pageview                           // Pageview hit type.
+&dh=mydemo.com                        // Document hostname.
+&dp=/receipt                          // Page.
+&dt=Receipt%20Page                    // Title.
+
+&ti=T12345                            // Transaction ID. Required.
+&ta=Google%20Store%20-%20Online       // Affiliation.
+&tr=37.39                             // Revenue.
+&tt=2.85                              // Tax.
+&ts=5.34                              // Shipping.
+&tcc=SUMMER2013                       // Transaction coupon.
+
+&pa=purchase                          // Product action (purchase). Required.
+&pr1id=P12345                         // Product 1 ID. Either ID or name must be set.
+&pr1nm=Android%20Warhol%20T-Shirt     // Product 1 name. Either ID or name must be set.
+&pr1ca=Apparel                        // Product 1 category.
+&pr1br=Google                         // Product 1 brand.
+&pr1va=Black                          // Product 1 variant.
+&pr1ps=1                              // Product 1 position.
+```
 
 ## Table SCHEMA
 
