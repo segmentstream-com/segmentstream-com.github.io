@@ -31,7 +31,7 @@ external_attribution_credit | FLOAT | REQUIRED
 conversion_date_time | TIMESTAMP | REQUIRED
 
 Where:
-- `date` - the when conversion happened (good to use for partitioning);
+- `date` - the date when conversion happened (good to use for partitioning);
 - `gclid` - Google click identifier (is sent in a `gclid=xxxxx` format within the query string);
 - `external_attribution_credit` - how much credit you attribute to the click (value from from 0 to 1);
 - `conversion_date_time` - exact time of the conversion with a timezone;
