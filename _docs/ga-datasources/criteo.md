@@ -11,7 +11,7 @@ date: 2020-07-20
 
 Make sure that you've created an API user in the Criteo Management Center.
 1. Go to [https://marketing.criteo.com/](https://marketing.criteo.com/).
-2. Log in, click **Setup->Users**.
+2. Log in, click **Setup ▸ Users**.
 3. Click **CREATE API USER**.
 4. Enter an email address and select the "Business Manager" user role.
 5. Click **Add user**.
