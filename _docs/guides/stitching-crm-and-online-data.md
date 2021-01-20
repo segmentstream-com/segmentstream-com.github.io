@@ -101,7 +101,7 @@ ga(function(tracker) {
     email: "customer@email.com"
     ...
     google_client_id: 
-  }
+  };
 
   // intercom snippet goes here
 })
@@ -123,7 +123,7 @@ function sendGoogleClientId() {
     var clientId = tracker.get('clientId');
     drift.api.setUserAttributes({
       google_client_id: clientId
-    })
+    });
   });
 }
 
@@ -132,7 +132,7 @@ window.drift.on("emailCapture", function(e) {
 });
 window.drift.on("phoneCapture", function(data) {
   sendGoogleClientId();
-})
+});
 </script>
 ```
 
