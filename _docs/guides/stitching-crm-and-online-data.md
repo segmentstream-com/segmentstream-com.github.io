@@ -97,10 +97,7 @@ ga(function(tracker) {
   // once Google Client ID is retrieved
   window.intercomSettings = {
     app_id: 'WORKSPACE_ID',
-    name: "John Dow",
-    email: "customer@email.com"
-    ...
-    google_client_id: 
+    google_client_id: clientId
   };
 
   // intercom snippet goes here
