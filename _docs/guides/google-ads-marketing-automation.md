@@ -8,9 +8,9 @@ date: 2021-01-18
 
 When you run ads with Google Ads, you may want to see whether clicks on your ad led a customer to take a certain action, such as a purchase on your website, calling your business, or downloading an app.
 
-Most of the users use Google Analytics to [import conversions into Google Ads](https://support.google.com/google-ads/answer/2375435https://support.google.com/google-ads/answer/2375435){:target=blank}. Alternatively, it is possible to [deploy Google Ads tracker on a website](https://support.google.com/google-ads/answer/1722054){:target=blank} to track online conversions without Google Analytics.
+Most of the users use Google Analytics to [import conversions into Google Ads](https://support.google.com/google-ads/answer/2375435https://support.google.com/google-ads/answer/2375435){:target="_blank"}. Alternatively, it is possible to [deploy Google Ads tracker on a website](https://support.google.com/google-ads/answer/1722054){:target="_blank"} to track online conversions without Google Analytics.
 
-Unfortunately, with both variants you are limited to default [Google Ads attribution models](https://support.google.com/google-ads/answer/6259715){:target=blank}.
+Unfortunately, with both variants you are limited to default [Google Ads attribution models](https://support.google.com/google-ads/answer/6259715){:target="_blank"}.
 
 This guide explains how to use SegmentStream's or any other external attribution to automate Google Ads campaign bidding and budget allocation strategies.
 
