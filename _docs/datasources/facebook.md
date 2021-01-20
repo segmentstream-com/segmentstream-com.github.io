@@ -52,6 +52,37 @@ account_currency | STRING | NULLABLE
 inline_link_clicks | INTEGER | NULLABLE
 reach | INTEGER | NULLABLE
 unique_clicks | INTEGER | NULLABLE
+actions | RECORD | NULLABLE
+actions.action_type	 | STRING | NULLABLE
+actions.value | FLOAT | NULLABLE
+actions._1d_view | FLOAT | NULLABLE
+actions._7d_view | FLOAT | NULLABLE
+actions._28d_view | FLOAT | NULLABLE
+actions._1d_click | FLOAT | NULLABLE
+actions._7d_click | FLOAT | NULLABLE
+actions._28d_click | FLOAT | NULLABLE
+actions.dda | FLOAT | NULLABLE
+conversions | RECORD | NULLABLE
+conversions.action_type	 | STRING | NULLABLE
+conversions.value | FLOAT | NULLABLE
+conversions._1d_view | FLOAT | NULLABLE
+conversions._7d_view | FLOAT | NULLABLE
+conversions._28d_view | FLOAT | NULLABLE
+conversions._1d_click | FLOAT | NULLABLE
+conversions._7d_click | FLOAT | NULLABLE
+conversions._28d_click | FLOAT | NULLABLE
+conversions.dda | FLOAT | NULLABLE
+cost_per_action_type | RECORD | NULLABLE
+cost_per_action_type.action_type	 | STRING | NULLABLE
+cost_per_action_type.value | FLOAT | NULLABLE
+cost_per_action_type._1d_view | FLOAT | NULLABLE
+cost_per_action_type._7d_view | FLOAT | NULLABLE
+cost_per_action_type._28d_view | FLOAT | NULLABLE
+cost_per_action_type._1d_click | FLOAT | NULLABLE
+cost_per_action_type._7d_click | FLOAT | NULLABLE
+cost_per_action_type._28d_click | FLOAT | NULLABLE
+cost_per_action_type.dda | FLOAT | NULLABLE
+
 
 > If some of the fields you need are missing, please, [let us know](https://support.segmentstream.com/hc/en-us/requests/new){:target="_blank"}!
 
