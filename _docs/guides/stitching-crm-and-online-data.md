@@ -109,6 +109,7 @@ ga(function(tracker) {
 ```
 
 This modification guarantess that Google Client ID will be sent to Intercom for each visitor. After that, you can integrate Intercom with your CRM to transfer google_client_id alongside with other fields:
+
 * [Intercom ▸ HubSpot integration](https://www.intercom.com/help/en/articles/2128216-hubspot-app-send-leads-and-conversations-to-hubspot){:target=blank}
 * [Intercom ▸ Salesforce integration](https://www.intercom.com/help/en/articles/1047309-salesforce-app){:target=blank}
 * [Intercom ▸ Pipedrive integration](https://www.intercom.com/help/en/articles/2535853-pipedrive-app){:target=blank}
@@ -127,15 +128,16 @@ function sendGoogleClientId() {
 }
 
 window.drift.on("emailCapture", function(e) {
-  sendGoogleClientId()
+  sendGoogleClientId();
 });
 window.drift.on("phoneCapture", function(data) {
-  sendGoogleClientId()
+  sendGoogleClientId();
 })
 </script>
 ```
 
 This modification guarantess that Google Client ID will be sent to Drift for each visitor. After that, you can integrate Drift with your CRM to transfer google_client_id alongside with other fields:
+
 * [Drift ▸ HubSpot integration](https://gethelp.drift.com/hc/en-us/articles/360019665833-How-to-Connect-Drift-to-HubSpot){:target=blank}
 * [Drift ▸ Salesforce integration](https://gethelp.drift.com/hc/en-us/articles/360018794974-How-To-Integrate-Drift-With-Salesforce){:target=blank}
 
@@ -149,8 +151,8 @@ Call tracking works by assigning unique trackable phone numbers to each of your 
 
 CallRail by default is integrated with Google Analytics and can collect **gclid** (Google Client ID) for each phone call. Once collected, the data can be syncronised with your CRM system:
 
-* [CallRail ▸ Salesforce integration](https://support.callrail.com/hc/en-us/articles/208612596-Salesforce-Integration){:target=blank}
 * [CallRail ▸ HubSpot integration](https://support.callrail.com/hc/en-us/articles/205568785-HubSpot-Integration-for-Calls-Texts){:target=blank}
+* [CallRail ▸ Salesforce integration](https://support.callrail.com/hc/en-us/articles/208612596-Salesforce-Integration){:target=blank}
   
 ## Conclusion
 
