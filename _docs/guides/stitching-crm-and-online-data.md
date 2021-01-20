@@ -145,7 +145,7 @@ This modification guarantess that Google Client ID will be sent to Drift for eac
 
 The last way to generate leads on a website are phone calls. And the onl way to stitch phone calls with website data is to use specialised call tracking solutions.
 
-Call tracking works by assigning unique trackable phone numbers to each of your marketing sources. These phone numbers capture data from the calls, allowing you understand how many calls each of your marketing sources is driving and basic demographic information about who each caller is. Most of call tracking systems also callect cookies, such as Google Client ID and have integrations most popular CRM systems.
+Call tracking works by assigning unique trackable phone numbers to each of website visitors. These phone numbers capture data from the calls, allowing you understand how many calls each of your marketing sources is driving and basic demographic information about who each caller is. Most of call tracking systems also callect cookies, such as Google Client ID and have integrations most popular CRM systems.
 
 ### CallRail
 
