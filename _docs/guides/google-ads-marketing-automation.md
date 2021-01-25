@@ -3,7 +3,7 @@ layout: page
 section: guides
 navigation_title: "Google Ads marketing automation"
 title: "Google Ads marketing automation"
-date: 2021-01-18
+date: 2021-01-25
 ---
 
 When you run ads with Google Ads, you may want to see whether clicks on your ad led a customer to take a certain action, such as a purchase on your website, calling your business, or downloading an app.
@@ -49,7 +49,7 @@ Where:
 5. Select **Import** -> **Other data sources or CRM** -> **Track conversions from clicks** and click **CONTINUE**:
 ![Google Ads - Import Conversions](/img/guides/google-ads-marketing-automation/google-ads-3.png)
 6. Choose conversion **Category** depending on your business.
-7. Enter  **Conversion name**.
+7. Enter  **Conversion name** (for example, "Purchase - SegmentStream" or "Lead - SegmentStream").
 8. Choose how to **Value** and how to **Count** conversions depending on your attribution model. For SegmentStream's AI-driven multi-touch attribution you should use the values as follows:
 ![Google Ads - Creating Conversion](/img/guides/google-ads-marketing-automation/google-ads-4.png)
 9. Choose **Click-through conversion window** depending on your attribution window. Usually **30 days**.
