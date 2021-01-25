@@ -52,6 +52,9 @@ account_currency | STRING | NULLABLE
 inline_link_clicks | INTEGER | NULLABLE
 reach | INTEGER | NULLABLE
 unique_clicks | INTEGER | NULLABLE
+cpm | FLOAT | NULLABLE
+cpc | FLOAT | NULLABLE
+ctr | FLOAT | NULLABLE
 actions | RECORD | NULLABLE
 actions.action_type	 | STRING | NULLABLE
 actions.value | FLOAT | NULLABLE
