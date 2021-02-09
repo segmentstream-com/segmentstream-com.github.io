@@ -3,7 +3,7 @@ layout: page
 section: guides
 navigation_title: "Google Ads marketing automation"
 title: "Google Ads marketing automation"
-date: 2021-02-09
+date: 2021-02-08
 ---
 
 When you run ads with Google Ads, you may want to see whether clicks on your ad led a customer to take a certain action, such as a purchase on your website, calling your business, or downloading an app.
