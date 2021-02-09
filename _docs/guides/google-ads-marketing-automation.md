@@ -3,7 +3,7 @@ layout: page
 section: guides
 navigation_title: "Google Ads marketing automation"
 title: "Google Ads marketing automation"
-date: 2021-02-08
+date: 2021-02-09
 ---
 
 When you run ads with Google Ads, you may want to see whether clicks on your ad led a customer to take a certain action, such as a purchase on your website, calling your business, or downloading an app.
@@ -83,7 +83,7 @@ The setup is complete. Now Google Ads will start optimizing your campaign based 
 
 Attribution testing is quite tricky, especially when it comes to cross-device multi-channel interactions. Nevertheless, there are some methodologies that allow to at least implement cookie-based multi-touch testing using built-in Google Ads experiments and Google BigQuery.
 
-## Things to note about experiments
+### Things to note about experiments
 * Experiments are only available for Search and Display Network campaigns. You won’t be able to create an experiment for Video, App or Shopping campaigns.
 * You can schedule up to five experiments for a campaign, but you can only run one experiment at a time.
 * It may take some time for your experiment’s ads to complete the review process and to start running, depending on the size of your original campaign. You may want to schedule your experiment to begin in the future to prevent it from starting before your ads have been reviewed.
