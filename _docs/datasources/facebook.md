@@ -4,7 +4,7 @@ section: datasources
 navigation_title: "Facebook"
 title: "Facebook data source"
 order: 2
-date: 2020-09-22
+date: 2020-09-23
 ---
 
 ## Getting started
