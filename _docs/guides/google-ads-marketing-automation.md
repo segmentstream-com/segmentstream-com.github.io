@@ -105,6 +105,7 @@ Attribution testing is quite tricky, especially when it comes to cross-device mu
 10. Click Save to finish creating the experiment.
 11. Once you create your experiment, you can find your experiments listed alongside your regular campaigns, as well as in your “Campaign experiments” page.
 12. Add additional URL parameter `ss_variation=0` to your original campaign URL and `ss_variation=1` to the experiment campaign either using the **Final URL suffix** or **Tracking template**. This parameter will help to filter traffic initiated by each campaign inside the Google BigQuery.
+13. Make sure you've changed a bidding strategy in the experiment campaign to tCPA or tROAS as described [here](#updating-campaign-settings).
 
 > **Important note!** The whole analysis will happen inside the Google BigQuery instead of Google Ads because you will be testing different attributions rather than different bidding strategies. Also, you would be testing multi-touch interactions across all possible channels, not only Google Ads interactions.
 
