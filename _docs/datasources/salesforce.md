@@ -7,6 +7,10 @@ order: 20
 date: 2020-10-02
 ---
 
+## Before you begin
+
+* [Enable field history tracking](https://help.salesforce.com/articleView?id=tracking_field_history.htm&type=0){:target="blank"} for your Salesforce account.
+
 ## Getting started
 1. Inside the admin panel click **Add Data Source**.
 2. Choose **Salesforce** from the list.
