@@ -9,7 +9,7 @@ date: 2021-02-15
 
 Below are the steps that explain how to revoke access to the SegmentStream support team.
 
-## Creating BigQuery Data Viewer and BigQuery User Roles
+## Remove BigQuery member
 
 1. Go to the [Google Cloud Platform Console](https://console.cloud.google.com){:target="_blank"}.
 2. Open the console left side menu and click **IAM & admin**. Select **IAM** from the list.
