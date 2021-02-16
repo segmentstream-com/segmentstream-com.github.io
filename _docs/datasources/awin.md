@@ -8,6 +8,7 @@ date: 2020-10-16
 ---
 
 ## Before you begin
+You must obtain an API token to provide access to AWIN data.
 
 1. Login in to your [AWIN control panel](https://ui.AWIN.com/login){:target="_blank"}.
 2. Go to the [API credentials section](https://ui.awin.com/awin-api){:target="_blank"}.
@@ -20,11 +21,11 @@ date: 2020-10-16
 2. Choose **AWIN** from the list.
 3. Paste **API token** into input field. Click **Save**.
 4. Add **Account**, **Region**, **Time zone** and input **AWIN comission %**. Add all accounts which cost data you would like to import.
-![Choose AWIN account](awin-config-1.png)
+![Choose AWIN account](/img/awin-config-1.png)
 5. Make sure **Transactions**, **Publisher performance report**, **Creative performance report**, radial buttons are on.
-![Import reports](awin-config-2.png)
+![Import reports](/img/awin-config-2.png)
 6. Configure additional transformation settings.
-![Utm Mapping example](awin-config-3.png)
+![Utm Mapping example](/img/awin-config-3.png)
 7. Click **Save**.
 
 ## Additional transformation settings
@@ -44,4 +45,4 @@ By default, the following matching applies for `utm_source` and `utm_medium`:
 * `utm_medium` ▸ `Publisher type` 
 
 This matching can be changed inside the admin panel by specifying appropriate values **UTM source**, **UTM medium**, and **UTM campaign** options.
-![UTM Grouping options](awin-utm_options.png)
+![UTM Grouping options](/img/awin-utm_options.png)
