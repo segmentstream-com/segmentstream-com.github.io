@@ -57,7 +57,7 @@ Where:
 11. For the **Attribution model** choose **External attribution** and click **CREATE AND CONTINUE**:
 ![Google Ads - External Attribution](/img/guides/google-ads-marketing-automation/google-ads-5.png)
 
-> Note! Please, make sure you've enabled a [cross-account conversion tracking](https://support.google.com/google-ads/answer/3030657){:target="blank"} if you created a conversion action inside the MCC account and would like to use it across you accounts.
+> Note! Please, make sure you've enabled a [cross-account conversion tracking](https://support.google.com/google-ads/answer/3030657){:target="blank"} if you created a conversion action inside the MCC account and would like to use it across your accounts.
 
 ## Connecting Google Ads to SegmentStream
 
