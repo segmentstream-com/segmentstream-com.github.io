@@ -3,7 +3,7 @@ layout: page
 section: guides
 navigation_title: "Google Ads marketing automation"
 title: "Google Ads marketing automation"
-date: 2021-02-09
+date: 2021-02-25
 ---
 
 When you run ads with Google Ads, you may want to see whether clicks on your ad led a customer to take a certain action, such as a purchase on your website, calling your business, or downloading an app.
@@ -56,6 +56,8 @@ Where:
 10. Uncheck **Include in 'Conversion'** for now.
 11. For the **Attribution model** choose **External attribution** and click **CREATE AND CONTINUE**:
 ![Google Ads - External Attribution](/img/guides/google-ads-marketing-automation/google-ads-5.png)
+
+> Note! Please, make sure you've enabled a [cross-account conversion tracking](https://support.google.com/google-ads/answer/3030657){:target="blank"} if you created a conversion action inside the MCC account and would like to use it across you accounts.
 
 ## Connecting Google Ads to SegmentStream
 
