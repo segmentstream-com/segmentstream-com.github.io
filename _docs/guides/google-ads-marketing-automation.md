@@ -3,7 +3,7 @@ layout: page
 section: guides
 navigation_title: "Google Ads marketing automation"
 title: "Google Ads marketing automation"
-date: 2021-02-25
+date: 2021-03-04
 ---
 
 When you run ads with Google Ads, you may want to see whether clicks on your ad led a customer to take a certain action, such as a purchase on your website, calling your business, or downloading an app.
@@ -29,12 +29,16 @@ date | DATE | REQUIRED
 gclid | STRING | REQUIRED
 external_attribution_credit | FLOAT | REQUIRED
 conversion_date_time | TIMESTAMP | REQUIRED
+conversion_value | FLOAT | OPTIONAL
+currency_code | STRING | REQUIRED if `conersion_value` is used
 
 Where:
 - `date` - the date when conversion happened (good to use for partitioning);
 - `gclid` - Google click identifier (is sent in a `gclid=xxxxx` format within the query string);
 - `external_attribution_credit` - how much credit you attribute to the click (value from from 0 to 1);
 - `conversion_date_time` - exact time of the conversion with a timezone;
+- `conversion_value` - how much value (i.e. revenue/profit) is attributed to the click;
+- `currency_code` - the currency of the attributed conversion value in the [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217){:target="blank"} format;
 
 > If you use SegmentSteam's AI-driven multi-touch attribution - this table will be prepared for you by the implementation team.
 
