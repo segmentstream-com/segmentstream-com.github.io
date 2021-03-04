@@ -1,18 +1,18 @@
 ---
 layout: page
 section: guides
-navigation_title: "Google Ads marketing automation"
-title: "Google Ads marketing automation"
+navigation_title: "Facebook Ads marketing automation"
+title: "Facebook Ads marketing automation"
 date: 2021-03-04
 ---
 
-When you run ads with Google Ads, you may want to see whether clicks on your ad led a customer to take a certain action, such as a purchase on your website, calling your business, or downloading an app.
+When you run ads with Facebook Ads, you may want to see whether clicks on your ad led a customer to take a certain action, such as a purchase on your website, calling your business, or downloading an app.
 
-Most of the users use Google Analytics to [import conversions into Google Ads](https://support.google.com/google-ads/answer/2375435https://support.google.com/google-ads/answer/2375435){:target="_blank"}. Alternatively, it is possible to [deploy Google Ads tracker on a website](https://support.google.com/google-ads/answer/1722054){:target="_blank"} to track online conversions without Google Analytics.
+Most of the users use [Facebook Pixel](https://www.facebook.com/business/help/952192354843755?id=1205376682832142){:target="_blank"} to track online conversions from the website.
 
-Unfortunately, with both variants you are limited to default [Google Ads attribution models](https://support.google.com/google-ads/answer/6259715){:target="_blank"}.
+Unfortunately, with this solution you are limited to default [Facebook attribution models](https://www.facebook.com/business/help/370704083280490?id=399393560487908){:target="_blank"}.
 
-This guide explains how to use SegmentStream's or any other external attribution to automate Google Ads campaign bidding and budget allocation strategies.
+This guide explains how to use SegmentStream's or any other external attribution to automate Facebook Ads campaign bidding and budget allocation strategies.
 
 ## Before you begin
 
@@ -26,23 +26,25 @@ Firstly, you need to make sure that an attribution table with the following form
 Field name|Type|Mode
 --- | --- | ---
 date | DATE | REQUIRED
-gclid | STRING | REQUIRED
-external_attribution_credit | FLOAT | REQUIRED
-conversion_date_time | TIMESTAMP | REQUIRED
-conversion_value | FLOAT | OPTIONAL
-currency_code | STRING | REQUIRED if `conersion_value` is used
+fbc | STRING | REQUIRED
+fbp | STRING | OPTIONAL
+event_time | TIMESTAMP | REQUIRED
+event_id | STRING | REQUIRED
+value | FLOAT | OPTIONAL
+currency | STRING | REQUIRED if `value` is used
 
 Where:
 - `date` - the date when conversion happened (good to use for partitioning);
-- `gclid` - Google click identifier (is sent in a `gclid=xxxxx` format within the query string);
-- `external_attribution_credit` - how much credit you attribute to the click (value from from 0 to 1);
-- `conversion_date_time` - exact time of the conversion with a timezone;
-- `conversion_value` - how much value (i.e. revenue/profit) is attributed to the click;
-- `currency_code` - the currency of the attributed conversion value in the [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217){:target="blank"} format;
+- `fbc` - Facebook click identifier (is sent in a `fbclid=xxxxx` format within the query string);
+- `fbp` - Facebook Pixel cookie id (is set automatically by the Facebook Pixel inside the `_fbp` cookie). Sending this param may increase conversion stitching accuracy;
+- `event_time` - exact time of the conversion with a timezone;
+- `event_id` - a unique event identifier responsible for the deduplication (i.e. session_id, hit_id or other unique identificator);
+- `value` - how much value (i.e. revenue/profit) is attributed to the click;
+- `currency` - the currency of the attributed conversion value in the [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217){:target="blank"} format;
 
 > If you use SegmentSteam's AI-driven multi-touch attribution - this table will be prepared for you by the implementation team.
 
-## Create conversion action in Google Ads
+<!-- ## Create conversion action in Google Ads
 
 1. Sign in to your Google Ads account.
 2. Click the **TOOLS & SETTINGS**  in the upper right corner of your account.
@@ -61,19 +63,18 @@ Where:
 11. For the **Attribution model** choose **External attribution** and click **CREATE AND CONTINUE**:
 ![Google Ads - External Attribution](/img/guides/google-ads-marketing-automation/google-ads-5.png)
 
-> **Note!** Please, make sure you've enabled a [cross-account conversion tracking](https://support.google.com/google-ads/answer/3030657){:target="blank"} if you created a conversion action inside the MCC account and would like to use it across your accounts.
+> **Note!** Please, make sure you've enabled a [cross-account conversion tracking](https://support.google.com/google-ads/answer/3030657){:target="blank"} if you created a conversion action inside the MCC account and would like to use it across your accounts. -->
 
-## Connecting Google Ads to SegmentStream
+## Connecting Facebook Ads to SegmentStream
 
 1. Inside the admin panel go to **Data Destinations** page and click **Add Data Destination**.
-2. Choose **Google Ads** from the list.
-3. Click **Authenticate with Google** and go through the authentication flow.
-4. Select [manager](#manager-advertising-accounts) or individual Google Ads advertising accounts you would like to connect.
-5. Select the **Conversion** you've created in a previous section of this tutorial.
-6. Enter the name of the BigQuery table with your attribution into **BigQuery source table name** (if you are using SegmentStream's AI-driven multi-touch attribution - ask the name from your implementation manager).
-7. Click **Save**.
+2. Choose **Facebook** from the list.
+3. Authenticate by entering your **Facebook Pixel ID** and **Access Token**.
+4. Enter the name of the BigQuery table with your attribution into **BigQuery source table name** (if you are using SegmentStream's AI-driven multi-touch attribution - ask the name from your implementation manager).
+5. Enter **Event name** of your conversion (i.e. "Purchase ML").
+6. Click **Save**.
 
-## Updating campaign settings
+<!-- ## Updating campaign settings
 
 1. Select the campaign you would like to optimize based on the external attribution you've just imported.
 2. Select **Setting**.
@@ -116,4 +117,4 @@ Attribution testing is quite tricky, especially when it comes to cross-device mu
 
 > **Important note!** The whole analysis will happen inside the Google BigQuery instead of Google Ads because you will be testing different attributions rather than different bidding strategies. Also, you would be testing multi-touch interactions across all possible channels, not only Google Ads interactions.
 
-Once the A/B-test is finished you will be able to compare CoS/ROAS across all channels for users with `ss_variation=0` and `ss_variation=1`. This will give understanding which attribution works better within one device in a multi-touch journey but unfortunately will not give understanding about multi-device interactions (an this is the main advantage of the AI-driven attribution). Nevertheless, if AI-driven attribution wins even within one device this is a clear sign it will work even better within cross-device customer journeys.
+Once the A/B-test is finished you will be able to compare CoS/ROAS across all channels for users with `ss_variation=0` and `ss_variation=1`. This will give understanding which attribution works better within one device in a multi-touch journey but unfortunately will not give understanding about multi-device interactions (an this is the main advantage of the AI-driven attribution). Nevertheless, if AI-driven attribution wins even within one device this is a clear sign it will work even better within cross-device customer journeys. -->
