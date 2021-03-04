@@ -18,6 +18,7 @@ This guide explains how to use SegmentStream's or any other external attribution
 
 - You should be subscribed to SegmentStream **enterprise plan** to use this feature.
 - Make sure that BigQuery is [connected to SegmentStream](/bigquery/connecting-bigquery).
+- Make sure you have the [Facebook pixel correctly implemented in your website](https://www.facebook.com/business/help/952192354843755?id=1205376682832142){:target="blank"}. We recommend that you use the same pixel for your browser and server events.
 
 ## Prepare data for import
 
@@ -44,35 +45,15 @@ Where:
 
 > If you use SegmentSteam's AI-driven multi-touch attribution - this table will be prepared for you by the implementation team.
 
-<!-- ## Create conversion action in Google Ads
-
-1. Sign in to your Google Ads account.
-2. Click the **TOOLS & SETTINGS**  in the upper right corner of your account.
-![Google Ads - Tools&Settings](/img/guides/google-ads-marketing-automation/google-ads-1.png)
-3. Under **Measurement**, click **Conversions**.
-4. Click *"+"* icon to add a new conversion:
-![Google Ads - Add Conversion](/img/guides/google-ads-marketing-automation/google-ads-2.png)
-5. Select **Import** -> **Other data sources or CRM** -> **Track conversions from clicks** and click **CONTINUE**:
-![Google Ads - Import Conversions](/img/guides/google-ads-marketing-automation/google-ads-3.png)
-6. Choose conversion **Category** depending on your business.
-7. Enter  **Conversion name** (for example, "Purchase - SegmentStream" or "Lead - SegmentStream").
-8. Choose how to **Value** and how to **Count** conversions depending on your attribution model. For SegmentStream's AI-driven multi-touch attribution you should use the values as follows:
-![Google Ads - Creating Conversion](/img/guides/google-ads-marketing-automation/google-ads-4.png)
-9. Choose **Click-through conversion window** depending on your attribution window. Usually **30 days**.
-10. Uncheck **Include in 'Conversion'** for now.
-11. For the **Attribution model** choose **External attribution** and click **CREATE AND CONTINUE**:
-![Google Ads - External Attribution](/img/guides/google-ads-marketing-automation/google-ads-5.png)
-
-> **Note!** Please, make sure you've enabled a [cross-account conversion tracking](https://support.google.com/google-ads/answer/3030657){:target="blank"} if you created a conversion action inside the MCC account and would like to use it across your accounts. -->
-
 ## Connecting Facebook Ads to SegmentStream
 
 1. Inside the admin panel go to **Data Destinations** page and click **Add Data Destination**.
 2. Choose **Facebook** from the list.
-3. Authenticate by entering your **Facebook Pixel ID** and **Access Token**.
-4. Enter the name of the BigQuery table with your attribution into **BigQuery source table name** (if you are using SegmentStream's AI-driven multi-touch attribution - ask the name from your implementation manager).
-5. Enter **Event name** of your conversion (i.e. "Purchase ML").
-6. Click **Save**.
+3. Click **Authenticate with Google** and go through the authentication flow.
+4. Enter you **Facebook Pixel ID** (can be found inside the **Facebook Ads Panel ▸ Event Manager**)
+5. Enter the name of the BigQuery table with your attribution into **BigQuery source table name** (if you are using SegmentStream's AI-driven multi-touch attribution - ask the name from your implementation manager).
+6. Enter **Event name** of your conversion (i.e. "Purchase ML").
+7. Click **Save**.
 
 <!-- ## Updating campaign settings
 
