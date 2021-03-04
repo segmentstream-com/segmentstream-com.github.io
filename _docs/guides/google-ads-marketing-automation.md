@@ -77,8 +77,9 @@ Where:
 
 1. Select the campaign you would like to optimize based on the external attribution you've just imported.
 2. Select **Setting**.
-3. In the **Bidding** section select **Target CPA** strategy and define your **Target CPA**:
+3. In the **Bidding** section select **Target CPA**, **Target ROAS** strategy and define your **Target CPA**:
 ![Google Ads - Target CPA](/img/guides/google-ads-marketing-automation/google-ads-6.png)
+Alternatively, you can define **Maximise conversions** strategy if you don't have cpecific CPA requirements or **Target ROAS** strategy if you want to optimise for ROAS.
 4. Expand the **Additional settings** section and then **Conversions** section.
 5. Select **Choose conversion actions for this campaign** and select the conversion you've created earlier in this guide.
 6. Click **SAVE**.
