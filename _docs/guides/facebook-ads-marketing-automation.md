@@ -59,9 +59,9 @@ Where:
 
 1. Select the campaign you would like to optimize based on the imported conversions.
 2. Make sure that **Campaign Objective** is **Conversions**:
-![Facebook Ads - Campaign Objective](/img/guides/facebook-ads-marketing-automation/facebook-ads-1.png)
-3. In the **Campaign Bid Strategy** section select either **Lowest cost** or **Cost cap** depending on whether you would like to limit your campaign by a daily budget or maximal CPA:
-![Facebook Ads - Bid Strategy](/img/guides/facebook-ads-marketing-automation/facebook-ads-2.png)
+![Facebook Ads - Campaign Objective](/img/guides/facebook-ads-marketing-automation/facebook-ads-1.png =800x)
+1. In the **Campaign Bid Strategy** section select either **Lowest cost** or **Cost cap** depending on whether you would like to limit your campaign by a daily budget or maximal CPA:
+![Facebook Ads - Bid Strategy](/img/guides/facebook-ads-marketing-automation/facebook-ads-2.png =800x)
 Alternatively, you can use **Minimum ROAS** strategy if you want to optimise for ROAS.
 > **Note!** We suggest avoid using **Bid cap** strategy as it will not bring any benefit in  terms of the optimisation for imported conversions.
 4. Adjust your **Optimization & Delivery** settings for each **Ad Set** to match your selected **Campaign Bid Strategy**.
@@ -99,4 +99,4 @@ Attribution testing is quite tricky, especially when it comes to cross-device mu
 
 > **Important note!** The whole analysis will happen inside the Google BigQuery instead of Google Ads because you will be testing different attributions rather than different bidding strategies. Also, you would be testing multi-touch interactions across all possible channels, not only Google Ads interactions.
 
-Once the A/B-test is finished you will be able to compare CoS/ROAS across all channels for users with `ss_variation=0` and `ss_variation=1`. This will give understanding which attribution works better within one device in a multi-touch journey but unfortunately will not give understanding about multi-device interactions (an this is the main advantage of the AI-driven attribution). Nevertheless, if AI-driven attribution wins even within one device this is a clear sign it will work even better within cross-device customer journeys. --> -->
+Once the A/B-test is finished you will be able to compare CoS/ROAS across all channels for users with `ss_variation=0` and `ss_variation=1`. This will give understanding which attribution works better within one device in a multi-touch journey but unfortunately will not give understanding about multi-device interactions (an this is the main advantage of the AI-driven attribution). Nevertheless, if AI-driven attribution wins even within one device this is a clear sign it will work even better within cross-device customer journeys. --> 
