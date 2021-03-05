@@ -4,7 +4,7 @@ section: datastreams
 navigation_title: "Universal Analytics"
 title: "Universal Analytics Data Stream"
 order: 1
-date: 2020-08-19
+date: 2021-03-05
 ---
 
 **Universal Analytics Data Stream** allows collecting hit-level non-sampled data with unlimited dimensions and metrics into your Google BigQuery account using your existing Google Analytics tracker even if you use a free version of Google Analytics.
@@ -47,9 +47,15 @@ Choose this method if your Google Analytics is integrated using Google Tag Manag
 
 4. Add this variable as your Gooogle Analytics Settings `customTask` field
 
-    ![GTM Setup Step 4](/img/datastreams/ua-gtm-4.png?v2)
+    ![GTM Setup Step 4.1](/img/datastreams/ua-gtm-4.png?v2)
 
-   > You can't use more than one customTask in one GTM tag. The function of each new customTask overrides the function of the previous one. If it's required to use several customTask functions in a single tag, you should join their JavaScript code within a single customTask.
+    In case you enabled have **Enable overriding settings in this tag** option switched on, you would need to define `customTask` field in **each** of your Universal Analytics tags.
+
+    ![GTM Setup Step 4.2](/img/datastreams/ua-gtm-4-2.png)
+
+    > **Important!** You can't use more than one customTask in one GTM tag. The function of each new customTask overrides the function of the previous one. If it's required to use several customTask functions in a single tag, you should join their JavaScript code within a single customTask using [this guide](/guides/combining-custom-tasks){:target="blanks"}.
+
+    
 
 5. Save the tag and publish the container.
 
