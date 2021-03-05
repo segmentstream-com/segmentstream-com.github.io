@@ -55,20 +55,21 @@ Where:
 6. Enter **Event name** of your conversion (i.e. "Purchase ML").
 7. Click **Save**.
 
-<!-- ## Updating campaign settings
+## Updating campaign settings
 
-1. Select the campaign you would like to optimize based on the external attribution you've just imported.
-2. Select **Setting**.
-3. In the **Bidding** section select **Target CPA** strategy and define your **Target CPA**:
-![Google Ads - Target CPA](/img/guides/google-ads-marketing-automation/google-ads-6.png)
-Alternatively, you can define **Maximise conversions** strategy if you don't have cpecific CPA requirements or **Target ROAS** strategy if you want to optimise for ROAS.
-4. Expand the **Additional settings** section and then **Conversions** section.
-5. Select **Choose conversion actions for this campaign** and select the conversion you've created earlier in this guide.
-6. Click **SAVE**.
+1. Select the campaign you would like to optimize based on the imported conversions.
+2. Make sure that **Campaign Objective** is **Conversions**:
+![Facebook Ads - Campaign Objective](/img/guides/facebook-ads-marketing-automation/facebook-ads-1.png)
+3. In the **Campaign Bid Strategy** section select either **Lowest cost** or **Cost cap** depending on whether you would like to limit your campaign by a daily budget or maximal CPA:
+![Facebook Ads - Bid Strategy](/img/guides/facebook-ads-marketing-automation/facebook-ads-2.png)
+Alternatively, you can use **Minimum ROAS** strategy if you want to optimise for ROAS.
+> **Note!** We suggest avoid using **Bid cap** strategy as it will not bring any benefit in  terms of the optimisation for imported conversions.
+4. Adjust your **Optimization & Delivery** settings for each **Ad Set** to match your selected **Campaign Bid Strategy**.
+5. **Save** your campaign.
 
-The setup is complete. Now Google Ads will start optimizing your campaign based on the external attribution you are importing using SegmentStream.
+The setup is complete. Now Facebook Ads will start optimizing your campaign based on the conversions you are importing using SegmentStream.
 
-## Optimisation testing
+<!-- ## Optimisation testing
 
 Attribution testing is quite tricky, especially when it comes to cross-device multi-channel interactions. Nevertheless, there are some methodologies that allow to at least implement cookie-based multi-touch testing using built-in Google Ads experiments and Google BigQuery.
 
@@ -98,4 +99,4 @@ Attribution testing is quite tricky, especially when it comes to cross-device mu
 
 > **Important note!** The whole analysis will happen inside the Google BigQuery instead of Google Ads because you will be testing different attributions rather than different bidding strategies. Also, you would be testing multi-touch interactions across all possible channels, not only Google Ads interactions.
 
-Once the A/B-test is finished you will be able to compare CoS/ROAS across all channels for users with `ss_variation=0` and `ss_variation=1`. This will give understanding which attribution works better within one device in a multi-touch journey but unfortunately will not give understanding about multi-device interactions (an this is the main advantage of the AI-driven attribution). Nevertheless, if AI-driven attribution wins even within one device this is a clear sign it will work even better within cross-device customer journeys. -->
+Once the A/B-test is finished you will be able to compare CoS/ROAS across all channels for users with `ss_variation=0` and `ss_variation=1`. This will give understanding which attribution works better within one device in a multi-touch journey but unfortunately will not give understanding about multi-device interactions (an this is the main advantage of the AI-driven attribution). Nevertheless, if AI-driven attribution wins even within one device this is a clear sign it will work even better within cross-device customer journeys. --> -->
