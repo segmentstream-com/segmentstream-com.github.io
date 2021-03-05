@@ -57,7 +57,7 @@ Choose this method if your Google Analytics is integrated using Google Tag Manag
 
     
 
-5. Save the tag and publish the container.
+5. **Save** the tag and **Publish** the container.
 
 ## Integration with analytics.js (website code)
 
