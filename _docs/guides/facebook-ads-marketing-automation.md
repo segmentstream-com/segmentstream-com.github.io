@@ -59,9 +59,9 @@ Where:
 
 1. Select the campaign you would like to optimize based on the imported conversions.
 2. Make sure that **Campaign Objective** is **Conversions**:
-<img src="/img/guides/facebook-ads-marketing-automation/facebook-ads-1.png" alt="Facebook Ads - Campaign Objective" width="600"/>
+<img src="/img/guides/facebook-ads-marketing-automation/facebook-ads-1.png" alt="Facebook Ads - Campaign Objective" width="600" style="display:block"/>
 3. In the **Campaign Bid Strategy** section select either **Lowest cost** or **Cost cap** depending on whether you would like to limit your campaign by a daily budget or maximal CPA:
-<img src="/img/guides/facebook-ads-marketing-automation/facebook-ads-2.png" alt="Facebook Ads - Bid Strategy" width="600"/>
+<img src="/img/guides/facebook-ads-marketing-automation/facebook-ads-2.png" alt="Facebook Ads - Bid Strategy" width="600" style="display:block"/>
 Alternatively, you can use **Minimum ROAS** strategy if you want to optimise for ROAS.
 > **Note!** We suggest avoid using **Bid cap** strategy as it will not bring any benefit in  terms of the optimisation for imported conversions.
 1. Adjust your **Optimization & Delivery** settings for each **Ad Set** to match your selected **Campaign Bid Strategy**.
