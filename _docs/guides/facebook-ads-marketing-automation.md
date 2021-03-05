@@ -59,13 +59,13 @@ Where:
 
 1. Select the campaign you would like to optimize based on the imported conversions.
 2. Make sure that **Campaign Objective** is **Conversions**:
-![Facebook Ads - Campaign Objective](/img/guides/facebook-ads-marketing-automation/facebook-ads-1.png =800x)
-1. In the **Campaign Bid Strategy** section select either **Lowest cost** or **Cost cap** depending on whether you would like to limit your campaign by a daily budget or maximal CPA:
-![Facebook Ads - Bid Strategy](/img/guides/facebook-ads-marketing-automation/facebook-ads-2.png =800x)
+<img src="/img/guides/facebook-ads-marketing-automation/facebook-ads-1.png" alt="Facebook Ads - Campaign Objective" width="800"/>
+3. In the **Campaign Bid Strategy** section select either **Lowest cost** or **Cost cap** depending on whether you would like to limit your campaign by a daily budget or maximal CPA:
+<img src="/img/guides/facebook-ads-marketing-automation/facebook-ads-2.png" alt="Facebook Ads - Bid Strategy" width="800"/>
 Alternatively, you can use **Minimum ROAS** strategy if you want to optimise for ROAS.
 > **Note!** We suggest avoid using **Bid cap** strategy as it will not bring any benefit in  terms of the optimisation for imported conversions.
-4. Adjust your **Optimization & Delivery** settings for each **Ad Set** to match your selected **Campaign Bid Strategy**.
-5. **Save** your campaign.
+1. Adjust your **Optimization & Delivery** settings for each **Ad Set** to match your selected **Campaign Bid Strategy**.
+2. **Save** your campaign.
 
 The setup is complete. Now Facebook Ads will start optimizing your campaign based on the conversions you are importing using SegmentStream.
 
