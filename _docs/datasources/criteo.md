@@ -12,22 +12,22 @@ date: 2020-07-20
 Make sure you have Admin rights for the Criteo Account:
 1. Go to https://partners.criteo.com/.
 2. Create a new Organization (if it is not already created).
-![Organisation](../img/criteo_auth_1_create_Organization.png)
+<img src="/img/criteo_auth_1_create_Organization.png" alt="Criteo — Organisation" width="600" style="display:block"/>
 3. Click the **Create New App** button. 
-![Create app](../img/criteo_auth_2_create_app.png)
+<img src="/img/criteo_auth_2_create_app.png" alt="Criteo — Create app" width="600" style="display:block"/>
 4. Fill in the **Name** and the **Description** fields and click **Create App**.
 Configure a new app:
 5. Navigate to the **Service** section, choose **Marketing solutions**. Click **Save**.
-![Marketing](../img/criteo_auth_5-1_service.png)
+<img src="/img/criteo_auth_5-1_service.png" alt="Criteo — Marketing" width="600" style="display:block"/>
 6. Navigate to the **Authorization** section, choose the **Read** value for every Domain in the row. Click **Save**.
-![Authorization](../img/criteo_auth_5-2_auth.png)
+<img src="/img/criteo_auth_5-2_auth.png" alt="Criteo — Authorization" width="600" style="display:block"/>
 7. Navigate to the **App Credentials** section and click the **Create new key** button. The browser will download a text file with the New App credentials.
-![App Credentials](../img/criteo_auth_5-3_create_new.png)
+<img src="/img/criteo_auth_5-3_create_new.png" alt="Criteo — App Credentials" width="600" style="display:block"/>
 8. Click **Authorize App** in the right upper corner.
-![Auth App](../img/criteo_auth_8_generate.png)
+<img src="/img/criteo_auth_8_generate.png" alt="Criteo — Authorize App" width="600" style="display:block"/>
 9. Click **Generate URL** and copy-paste it in the address bar of the browser.
 10. Scroll to the **Portfolio Access** section, choose the **Account name** and click **Ok**. 
-![Access](../img/criteo_auth_9_portfolio_access.png)
+<img src="/img/criteo_auth_9_portfolio_access.png" alt="Criteo — Portfolio Access" width="600" style="display:block"/>
 
 ## Getting started
 
