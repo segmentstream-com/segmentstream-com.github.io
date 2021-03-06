@@ -10,7 +10,7 @@ date: 2020-07-20
 ## Before you begin
 
 Make sure you have Admin rights for the Criteo Account:
-1. Go to https://partners.criteo.com/.
+1. Go to [https://partners.criteo.com/](https://partners.criteo.com/){:target="blank"}.
 2. Create a new Organization (if it is not already created).
 ![Organisation](img/criteo_auth_1_create_Organization.png)
 3. Click the **Create New App** button. 
