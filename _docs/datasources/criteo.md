@@ -12,21 +12,29 @@ date: 2020-07-20
 Make sure you have Admin rights for the Criteo Account:
 1. Go to https://partners.criteo.com/.
 2. Create a new Organization (if it is not already created).
-3. Click the "Create New App" button. 
-4. Fill in the Name and the Description fields and click "Create App".
+![Organisation](img/criteo_auth_1_create_Organization.png)
+3. Click the **Create New App** button. 
+![Create app](img/criteo_auth_2_create_app.png)
+4. Fill in the **Name** and the **Description** fields and click **Create App**.
 Configure a new app:
-5. Navigate to the "Service" section, choose "Marketing solutions". Click **Save**.
-6. Navigate to the Authorization section, choose the "Read" value for every Domain in the row. Click **Save**.
-7. Navigate to the "App Credentials" section and click the "Create new key" button. The browser will download a text file with the New App credentials.
-8. Click "Authorize App" in the right upper corner.
-9. Click "Generate URL" and copy-paste it in the address bar of the browser.
-10. Scroll to the "Portfolio Access" section, choose the "Account name" and click Ok. 
+5. Navigate to the **Service** section, choose **Marketing solutions**. Click **Save**.
+![Marketing](img/criteo_auth_5-1_service.png)
+6. Navigate to the **Authorization** section, choose the **Read** value for every Domain in the row. Click **Save**.
+![Authorization](img/criteo_auth_5-2_auth.png)
+7. Navigate to the **App Credentials** section and click the **Create new key** button. The browser will download a text file with the New App credentials.
+![App Credentials](img/criteo_auth_5-3_create_new.png)
+8. Click **Authorize App** in the right upper corner.
+![Auth App](img/criteo_auth_8_generate.png)
+9. Click **Generate URL** and copy-paste it in the address bar of the browser.
+10. Scroll to the **Portfolio Access** section, choose the **Account name** and click **Ok**. 
+![Access](img/criteo_auth_9_portfolio_access.png)
 
 ## Getting started
 
 1. Inside the admin panel click **Add Data Source**.
 2. Choose **Criteo** from the list.
 3. Open the downloaded file with the **App Credentials** and copy-paste **Client Id** and **Client Secret**.
+![App Credentials](img/criteo_1.png)
 4. Enable required reports.
 5. Click **Save**.
 
