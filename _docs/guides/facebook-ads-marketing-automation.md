@@ -3,7 +3,7 @@ layout: page
 section: guides
 navigation_title: "Facebook Ads marketing automation"
 title: "Facebook Ads marketing automation"
-date: 2021-03-04
+date: 2021-03-09
 ---
 
 When you run ads with Facebook Ads, you may want to see whether clicks on your ad led a customer to take a certain action, such as a purchase on your website, calling your business, or downloading an app.
@@ -36,8 +36,8 @@ currency | STRING | REQUIRED if `value` is used
 
 Where:
 - `date` - the date when conversion happened (good to use for partitioning);
-- `fbc` - Facebook click identifier (is sent in a `fbclid=xxxxx` format within the query string);
-- `fbp` - Facebook Pixel cookie id (is set automatically by the Facebook Pixel inside the `_fbp` cookie). Sending this param may increase conversion stitching accuracy;
+- `fbc` - Facebook click identifier. You can find more information about ths paramer [here](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/fbp-and-fbc/){:target="blank"};
+- `fbp` - Facebook Pixel cookie id. Sending this parameter may increase conversion stitching accuracy. You can find more information about ths paramer [here](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/fbp-and-fbc/){:target="blank"};
 - `event_time` - exact time of the conversion with a timezone;
 - `event_id` - a unique event identifier responsible for the deduplication (i.e. session_id, hit_id or other unique identificator);
 - `value` - how much value (i.e. revenue/profit) is attributed to the click;
