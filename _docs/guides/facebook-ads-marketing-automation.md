@@ -56,7 +56,7 @@ Where:
 6. Enter **Event name** of your conversion (i.e. "Purchase ML").
 7. Click **Save**.
 
-## Configuring event to use aggregated event measurement
+## Aggregated event measurement setup
 
 Follow [this guide](https://www.facebook.com/business/help/422408905612648){:target="blank"} to setup **Aggregated Event Measurement** for the event you've defined inside the SegmentStream admin panel.
 
