@@ -67,7 +67,7 @@ Follow [this guide](https://www.facebook.com/business/help/422408905612648){:tar
 3. Click **Create ▸ Create Custom Conversion**:
    ![](/img/guides/facebook-ads-marketing-automation/facebook-ads-3.png)
 4. Set conversion **Name** (i.e. "Purchase ML").
-5. In **Conversion Event** field the event you've set inside the SegmentStream admin panel (it might take up to 24 hours for the event to appear after connecting SegmentStream to Facebook).
+5. In **Conversion Event** field select the event you've defined inside the SegmentStream admin panel (it might take up to 24 hours for the event to appear after connecting SegmentStream to Facebook).
 6. Click **Create**.
 
 ## Updating campaign settings
