@@ -3,7 +3,7 @@ layout: page
 section: guides
 navigation_title: "Facebook Ads marketing automation"
 title: "Facebook Ads marketing automation"
-date: 2021-03-09
+date: 2021-03-15
 ---
 
 When you run ads with Facebook Ads, you may want to see whether clicks on your ad led a customer to take a certain action, such as a purchase on your website, calling your business, or downloading an app.
@@ -19,6 +19,7 @@ This guide explains how to use SegmentStream's or any other external attribution
 - You should be subscribed to SegmentStream **enterprise plan** to use this feature.
 - Make sure that BigQuery is [connected to SegmentStream](/bigquery/connecting-bigquery).
 - Make sure you have the [Facebook pixel correctly implemented in your website](https://www.facebook.com/business/help/952192354843755?id=1205376682832142){:target="blank"}. We recommend that you use the same pixel for your browser and server events.
+- Make sure you website domain name is [verified by Facebook](https://developers.facebook.com/docs/sharing/domain-verification){:target="blank"} to enable [Aggregated Event Measurement](https://www.facebook.com/business/help/721422165168355/).
 
 ## Prepare data for import
 
@@ -50,22 +51,37 @@ Where:
 1. Inside the admin panel go to **Data Destinations** page and click **Add Data Destination**.
 2. Choose **Facebook** from the list.
 3. Click **Authenticate with Google** and go through the authentication flow.
-4. Enter you **Facebook Pixel ID** (can be found inside the **Facebook Ads Panel ▸ Event Manager**)
+4. Enter you **Facebook Pixel ID** (can be found inside the [Facebook Events Manager](https://www.facebook.com/events_manager2/){:target="blank"})
 5. Enter the name of the BigQuery table with your attribution into **BigQuery source table name** (if you are using SegmentStream's AI-driven multi-touch attribution - ask the name from your implementation manager).
 6. Enter **Event name** of your conversion (i.e. "Purchase ML").
 7. Click **Save**.
+
+## Configuring event to use aggregated event measurement
+
+Follow [this guide](https://www.facebook.com/business/help/422408905612648){:target="blank"} to setup **Aggregated Event Measurement** for the event you've defined inside the SegmentStream admin panel.
+
+## Creating a custom conversion
+
+1. Go to [Facebook Events Manager](https://www.facebook.com/events_manager2/){:target="blank"}.
+2. Click the pixel you've used for your conversion event.
+3. Click **Create ▸ Create Custom Conversion**:
+   ![](/img/guides/facebook-ads-marketing-automation/facebook-ads-3.png)
+4. Set conversion **Name** (i.e. "Purchase ML").
+5. In **Conversion Event** field the event you've set inside the SegmentStream admin panel (it might take up to 24 hours for the event to appear after connecting SegmentStream to Facebook).
+6. Click **Create**.
 
 ## Updating campaign settings
 
 1. Select the campaign you would like to optimize based on the imported conversions.
 2. Make sure that **Campaign Objective** is **Conversions**:
-<img src="/img/guides/facebook-ads-marketing-automation/facebook-ads-1.png" alt="Facebook Ads - Campaign Objective" width="600" style="display:block"/>
+  <img src="/img/guides/facebook-ads-marketing-automation/facebook-ads-1.png" alt="Facebook Ads - Campaign Objective" width="600" style="display:block"/>
 3. In the **Campaign Bid Strategy** section select either **Lowest cost** or **Cost cap** depending on whether you would like to limit your campaign by a daily budget or maximal CPA:
-<img src="/img/guides/facebook-ads-marketing-automation/facebook-ads-2.png" alt="Facebook Ads - Bid Strategy" width="600" style="display:block"/>
-Alternatively, you can use **Minimum ROAS** strategy if you want to optimise for ROAS.
-> **Note!** We suggest avoid using **Bid cap** strategy as it will not bring any benefit in  terms of the optimisation for imported conversions.
-1. Adjust your **Optimization & Delivery** settings for each **Ad Set** to match your selected **Campaign Bid Strategy**.
-2. **Save** your campaign.
+  <img src="/img/guides/facebook-ads-marketing-automation/facebook-ads-2.png" alt="Facebook Ads - Bid Strategy" width="600" style="display:block"/>
+  Alternatively, you can use **Minimum ROAS** strategy if you want to optimise for ROAS.
+  > **Note!** We suggest avoid using **Bid cap** strategy as it will not bring any benefit in  terms of the optimisation for imported conversions.
+4. Select your recently created **Custom Conversion** for a **Conversion Event** field inside the **Conversion** section for each **Ad Set**.
+5. Adjust your **Optimization & Delivery** settings for each **Ad Set** to match your selected **Campaign Bid Strategy**.
+6. **Save** your campaign.
 
 The setup is complete. Now Facebook Ads will start optimizing your campaign based on the conversions you are importing using SegmentStream.
 

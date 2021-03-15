@@ -42,7 +42,7 @@ Where:
 
 > If you use SegmentSteam's AI-driven multi-touch attribution - this table will be prepared for you by the implementation team.
 
-## Create conversion action in Google Ads
+## Creating conversion action in Google Ads
 
 1. Sign in to your Google Ads account.
 2. Click the **TOOLS & SETTINGS**  in the upper right corner of your account.
