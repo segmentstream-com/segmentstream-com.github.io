@@ -43,9 +43,11 @@ Record type|BigQuery Type|Example
 boolean | BOOLEAN | "isFirst": false,
 Date | TIMESTAMP | "created": "2020-10-17T16:47:05.0Z",
 object | RECORD | "product": {...},
-date | DATE | "bday": "2020-12-31",
-integer | INTEGER | "total": 900
-number | FLOAT | "unitSalePrice": 10.9
+string in date format | DATE | "bday": "2020-12-31",
+integer | INTEGER | "total": 900,
+number | FLOAT | "unitSalePrice": 10.9,
+string | STRING | "name": "John",
+null | STRING | "surname": null,
 
 - Please note, if a parameter can have a value with decimals in an instance of your record, use a value with a decimal in the example, so that the BigQuery schema type will be correctly set to **FLOAT**.
 
