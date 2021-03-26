@@ -26,22 +26,35 @@ The process of connecting data sources is described in detail in the [overview](
 
 ![](/img/json_feed_1.png)
 
-In order to enable this data source, go to "DATA IMPORT → Automatic" (1), select the data source (2), enter login (3), enter password (4) and save (5)
+In order to enable this data source, go to "DATA IMPORT → Automatic", select the data source, enter login, enter password and save.
 
 ## Configuring data source
 
-![](/img/json_feed_3.png)
+![](/img/json_feed_example.png)
 
-Enter a title for the data source (1).
+Enter a title for the data source.
 
-**Feed URL (2)** - the address of the file you generated (the requirements for the file contents are listed below)
+**Feed URL** - the address of the file you generated (the requirements for the file contents are listed below)
 
-**Destination table name (3)** - the name of the table in BigQuery to which the data from the file will be written.
+**Example record** - copy an example of a record in your feed. Below is a table with the mapping of the example record property types to BigQuery types:
 
-**Partition table by date (4)** - if this option is enabled, a new table with new content will be created every day. Otherwise, the data will be overwritten every day.
+Record type|BigQuery Type|Example
+--- | --- | ---
+boolean | BOOLEAN | "isFirst": false,
+Date | TIMESTAMP | "created": "2020-10-17T16:47:05.0Z",
+object | RECORD | "product": {...},
+date | DATE | "bday": "2020-12-31",
+integer | INTEGER | "total": 900
+number | FLOAT | "unitSalePrice": 10.9
 
-To save and enable the data source, click "Save" (5).
+- Please note, if a parameter can have a value with decimals in an instance of your record, use a value with a decimal in the example, so that the BigQuery schema type will be correctly set to **FLOAT**.
 
-The "Disconnect" button (5) is used to revoke the authorization data. The settings are saved.
+**Destination table name** - the name of the table in BigQuery to which the data from the file will be written.
 
-You can enable or disable the data source at any time (6).
+**Partition table by date** - if this option is enabled, a new table with new content will be created every day. Otherwise, the data will be overwritten every day.
+
+To save and enable the data source, click "Save".
+
+The "Disconnect" button is used to revoke the authorization data. The settings are saved.
+
+You can enable or disable the data source at any time.
