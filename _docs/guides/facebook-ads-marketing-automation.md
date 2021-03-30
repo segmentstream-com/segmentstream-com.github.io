@@ -90,7 +90,7 @@ Once connected, make sure you've started receiving server-side SegmenetStrem eve
 
 Follow [this guide](https://www.facebook.com/business/help/422408905612648){:target="blank"} to setup **Aggregated Event Measurement** for the event you've defined inside the SegmentStream admin panel.
 
-Make sure that SegmentStream event has the highest possible priority right blow your main convrsion event.
+Make sure that SegmentStream event has the highest possible priority right below your main conversion event.
 
 ## Updating campaign settings
 
