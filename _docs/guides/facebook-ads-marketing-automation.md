@@ -20,7 +20,7 @@ In this case you will be able to replace final conversions with a **SegmentStrea
 
 ![](/img/guides/facebook-ads-marketing-automation/facebook-ads-5.png)
 
-This guide explains how to use SegmentStream's external attribution to automate Facebook Ads campaign bidding and budget allocation strategies as well as how to solve "Limited Learning" strategy if you don't have enough conversions.
+This guide explains how to use SegmentStream's external attribution to automate Facebook Ads campaign bidding and budget allocation strategies as well as how to solve "Limited Learning" problem if you don't have enough conversions.
 
 ## Before you begin
 
