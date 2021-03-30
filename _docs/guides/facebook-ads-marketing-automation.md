@@ -12,11 +12,11 @@ Most of the users use [Facebook Pixel](https://www.facebook.com/business/help/95
 
 Unfortunately, with this solution you are limited to default [Facebook attribution models](https://www.facebook.com/business/help/370704083280490?id=399393560487908){:target="_blank"} which don't support deduplication with other channels and have other limitations.
 
-Also, some businesses might find them in a situation where there is not enough final conversions to properly optimise campaigns due to the "Limited Learning" problem:
+Also, some businesses might find themselves in a situation where there is not enough final conversions to properly optimise campaigns due to the "Limited Learning" problem:
 
 <img src="/img/guides/facebook-ads-marketing-automation/facebook-ads-4.png" alt="Facebook Ads - Campaign Objective" width="400" style="display:block"/> 
 
-In this case you will be able to replace final conversions with a **SegmentStream Score** which provides much more signals for Facebook algorithms to optimise.
+In this case you will be able to replace final conversions with a **SegmentStream Score** which provides much more signals for Facebook algorithms to optimise faster.
 
 ![](/img/guides/facebook-ads-marketing-automation/facebook-ads-5.png)
 
