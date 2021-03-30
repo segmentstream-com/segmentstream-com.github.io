@@ -14,7 +14,7 @@ Unfortunately, with this solution you are limited to default [Facebook attributi
 
 Also, some businesses might find them in a situation where there is not enough final conversions to properly optimise campaigns due to the "Limited Learning" problem. 
 
-<img src="/img/guides/facebook-ads-marketing-automation/facebook-ads-1.png" alt="Facebook Ads - Campaign Objective" width="600" style="display:block"/> 
+<img src="/img/guides/facebook-ads-marketing-automation/facebook-ads-4.png" alt="Facebook Ads - Campaign Objective" width="600" style="display:block"/> 
 
 In this case you will be able to replace final conversions with a **SegmentStream Score** which provides much more signals for Facebook algorithms to optimise.
 
