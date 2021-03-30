@@ -12,9 +12,9 @@ Most of the users use [Facebook Pixel](https://www.facebook.com/business/help/95
 
 Unfortunately, with this solution you are limited to default [Facebook attribution models](https://www.facebook.com/business/help/370704083280490?id=399393560487908){:target="_blank"} which don't support deduplication with other channels and have other limitations.
 
-Also, some businesses might find them in a situation where there is not enough final conversions to properly optimise campaigns due to the "Limited Learning" problem. 
+Also, some businesses might find them in a situation where there is not enough final conversions to properly optimise campaigns due to the "Limited Learning" problem:
 
-<img src="/img/guides/facebook-ads-marketing-automation/facebook-ads-4.png" alt="Facebook Ads - Campaign Objective" width="600" style="display:block"/> 
+<img src="/img/guides/facebook-ads-marketing-automation/facebook-ads-4.png" alt="Facebook Ads - Campaign Objective" width="400" style="display:block"/> 
 
 In this case you will be able to replace final conversions with a **SegmentStream Score** which provides much more signals for Facebook algorithms to optimise.
 
@@ -80,7 +80,7 @@ Once connected, make sure you've started receiving server-side SegmenetStrem eve
 6. In **Conversion Event** field select the event you've defined inside the SegmentStream admin panel (it might take up to 24 hours for the event to appear after connecting SegmentStream to Facebook).
 7. Click **Create**.
 
-## Sharing custom conversions to your Ad Account
+## Sharing a custom conversion to your Ad Account
 
 1. Expand your newly created custom conversion and click **Share**.
 2. Select **Share with an Ad Account** and select your Ad account.
