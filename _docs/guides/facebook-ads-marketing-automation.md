@@ -3,16 +3,24 @@ layout: page
 section: guides
 navigation_title: "Facebook Ads marketing automation"
 title: "Facebook Ads marketing automation"
-date: 2021-03-15
+date: 2021-03-30
 ---
 
 When you run ads with Facebook Ads, you may want to see whether clicks on your ad led a customer to take a certain action, such as a purchase on your website, calling your business, or downloading an app.
 
 Most of the users use [Facebook Pixel](https://www.facebook.com/business/help/952192354843755?id=1205376682832142){:target="_blank"} to track online conversions from the website.
 
-Unfortunately, with this solution you are limited to default [Facebook attribution models](https://www.facebook.com/business/help/370704083280490?id=399393560487908){:target="_blank"}.
+Unfortunately, with this solution you are limited to default [Facebook attribution models](https://www.facebook.com/business/help/370704083280490?id=399393560487908){:target="_blank"} which don't support deduplication with other channels and have other limitations.
 
-This guide explains how to use SegmentStream's or any other external attribution to automate Facebook Ads campaign bidding and budget allocation strategies.
+Also, some businesses might find them in a situation where there is not enough final conversions to properly optimise campaigns due to the "Limited Learning" problem. 
+
+<img src="/img/guides/facebook-ads-marketing-automation/facebook-ads-1.png" alt="Facebook Ads - Campaign Objective" width="600" style="display:block"/> 
+
+In this case you will be able to replace final conversions with a **SegmentStream Score** which provides much more signals for Facebook algorithms to optimise.
+
+![](/img/guides/facebook-ads-marketing-automation/facebook-ads-5.png)
+
+This guide explains how to use SegmentStream's external attribution to automate Facebook Ads campaign bidding and budget allocation strategies as well as how to solve "Limited Learning" strategy if you don't have enough conversions.
 
 ## Before you begin
 
@@ -53,22 +61,36 @@ Where:
 3. Click **Authenticate with Google** and go through the authentication flow.
 4. Enter you **Facebook Pixel ID** (can be found inside the [Facebook Events Manager](https://www.facebook.com/events_manager2/){:target="blank"})
 5. Enter the name of the BigQuery table with your attribution into **BigQuery source table name** (if you are using SegmentStream's AI-driven multi-touch attribution - ask the name from your implementation manager).
-6. Enter **Event name** of your conversion (i.e. "Purchase ML").
+6. Enter **Event name** of your conversion (i.e. "Purchase Score").
 7. Click **Save**.
+
+Once connected, make sure you've started receiving server-side SegmenetStrem events inside the Facebook Event Manager:
+![](/img/guides/facebook-ads-marketing-automation/facebook-ads-6.png)
+
+> **Note!** It might take up to 24 hours before you see the first batch of events from SegmentStream.
+
+## Creating a custom conversion inside the Businss Account
+
+1. Go to [Facebook Events Manager](https://www.facebook.com/events_manager2/){:target="blank"} and choose your Facebook Business Account (make sure you choose a Business Account, not an Ad Account).
+2. Click on **Custom conversions** menu item.
+3. Click **Create Custom Conversion**:
+   ![](/img/guides/facebook-ads-marketing-automation/facebook-ads-7.png)
+4. Set conversion **Name** (i.e. "Purchase Score").
+5. In **Data Source** select your Facebook Pixel.
+6. In **Conversion Event** field select the event you've defined inside the SegmentStream admin panel (it might take up to 24 hours for the event to appear after connecting SegmentStream to Facebook).
+7. Click **Create**.
+
+## Sharing custom conversions to your Ad Account
+
+1. Expand your newly created custom conversion and click **Share**.
+2. Select **Share with an Ad Account** and select your Ad account.
+![](/img/guides/facebook-ads-marketing-automation/facebook-ads-8.png)
 
 ## Aggregated event measurement setup
 
 Follow [this guide](https://www.facebook.com/business/help/422408905612648){:target="blank"} to setup **Aggregated Event Measurement** for the event you've defined inside the SegmentStream admin panel.
 
-## Creating a custom conversion
-
-1. Go to [Facebook Events Manager](https://www.facebook.com/events_manager2/){:target="blank"}.
-2. Click the pixel you've used for your conversion event.
-3. Click **Create ▸ Create Custom Conversion**:
-   ![](/img/guides/facebook-ads-marketing-automation/facebook-ads-3.png)
-4. Set conversion **Name** (i.e. "Purchase ML").
-5. In **Conversion Event** field select the event you've defined inside the SegmentStream admin panel (it might take up to 24 hours for the event to appear after connecting SegmentStream to Facebook).
-6. Click **Create**.
+Make sure that SegmentStream event has the highest possible priority right blow your main convrsion event.
 
 ## Updating campaign settings
 
@@ -84,35 +106,3 @@ Follow [this guide](https://www.facebook.com/business/help/422408905612648){:tar
 6. **Save** your campaign.
 
 The setup is complete. Now Facebook Ads will start optimizing your campaign based on the conversions you are importing using SegmentStream.
-
-<!-- ## Optimisation testing
-
-Attribution testing is quite tricky, especially when it comes to cross-device multi-channel interactions. Nevertheless, there are some methodologies that allow to at least implement cookie-based multi-touch testing using built-in Google Ads experiments and Google BigQuery.
-
-### Things to note about experiments
-* Experiments are only available for Search and Display Network campaigns. You won’t be able to create an experiment for Video, App or Shopping campaigns.
-* You can schedule up to five experiments for a campaign, but you can only run one experiment at a time.
-* It may take some time for your experiment’s ads to complete the review process and to start running, depending on the size of your original campaign. You may want to schedule your experiment to begin in the future to prevent it from starting before your ads have been reviewed.
-* If you use audience lists, you should have at least 10,000 users in the list to run an experiment. If you have less users than that, your results may be less accurate. 
-
-> If you make changes to your original campaign, these changes won’t be reflected in your experiment. Making changes to either your original campaign or experiment while your experiment is running may make it harder to interpret your results.
-
-### Set up an experiment
-
-1. Sign in to your [Google Ads account](https://ads.google.com/){:target="blank"}.
-2. From the page menu on the left, click **Drafts & experiments**, then click **Campaign Experiments** at the top of the page.
-3. Click the **"+"** button.
-4. Click Select draft, and select the draft you want to turn into an experiment.
-5. Enter a name for your experiment. Your experiment shouldn’t share the same name as your campaigns and other experiments.
-6. Select a start date for your experiment.
-7. If you’d like to manually end your experiment, select **None**. Otherwise, select an end date for your experiment.
-8. Enter the percentage of the original campaign’s budget that you’d like to allocate to your experiment.
-9. For Search campaigns, under “Advanced options”, choose **Cookie-based** experiment split option. It means users may see only one version of your campaign, regardless of how many times they search. This can help ensure that other factors don’t impact your results, and will give you more accurate data.
-10. Click Save to finish creating the experiment.
-11. Once you create your experiment, you can find your experiments listed alongside your regular campaigns, as well as in your “Campaign experiments” page.
-12. Add additional URL parameter `ss_variation=0` to your original campaign URL and `ss_variation=1` to the experiment campaign either using the **Final URL suffix** or **Tracking template**. This parameter will help to filter traffic initiated by each campaign inside the Google BigQuery.
-13. Make sure you've changed a bidding strategy in the experiment campaign to tCPA or tROAS as described [here](  #updating-campaign-settings).
-
-> **Important note!** The whole analysis will happen inside the Google BigQuery instead of Google Ads because you will be testing different attributions rather than different bidding strategies. Also, you would be testing multi-touch interactions across all possible channels, not only Google Ads interactions.
-
-Once the A/B-test is finished you will be able to compare CoS/ROAS across all channels for users with `ss_variation=0` and `ss_variation=1`. This will give understanding which attribution works better within one device in a multi-touch journey but unfortunately will not give understanding about multi-device interactions (an this is the main advantage of the AI-driven attribution). Nevertheless, if AI-driven attribution wins even within one device this is a clear sign it will work even better within cross-device customer journeys. --> 
