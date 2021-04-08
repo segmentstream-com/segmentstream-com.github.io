@@ -11,7 +11,7 @@ Google Cloud Platform might be a bit complex for non-technical users or users th
 
 Below are the steps that explain how to give access to the SegmentStream support team.
 
-## Creating BigQuery Data Viewer and BigQuery User Roles
+## Creating BigQuery Data Editor and BigQuery User Roles
 
 1. Go to the [Google Cloud Platform Console](https://console.cloud.google.com){:target="_blank"}.
 2. Open the console left side menu and click **IAM & admin**. Select **IAM** from the list.
