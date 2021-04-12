@@ -1,7 +1,7 @@
 ---
 layout: page
-section: guides
-navigation_title: "Facebook Ads marketing automation"
+# section: guides
+# navigation_title: "Facebook Ads marketing automation"
 title: "Facebook Ads marketing automation"
 date: 2021-03-30
 ---

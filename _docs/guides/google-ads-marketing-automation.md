@@ -1,7 +1,7 @@
 ---
 layout: page
-section: guides
-navigation_title: "Google Ads marketing automation"
+# section: guides
+# navigation_title: "Google Ads marketing automation"
 title: "Google Ads marketing automation"
 date: 2021-03-04
 ---
