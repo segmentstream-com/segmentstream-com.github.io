@@ -1,7 +1,7 @@
 ---
 layout: page
-section: guides
-navigation_title: "Stitching CRM and online data"
+#section: guides
+#navigation_title: "Stitching CRM and online data"
 title: "Stitching CRM and online data"
 date: 2021-01-19
 ---
