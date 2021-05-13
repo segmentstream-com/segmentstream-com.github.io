@@ -40,7 +40,7 @@ https://track.segmentstream.com/ds/{% raw %}{{DATA_STREAM_ID}}{% endraw %}
 
 2. HTTP request with JSON body:
 ```jsx
-curl -H "Content-Type: application/json" -X \ 
+curl -H "Content-Type: application/json" -X \
 POST -d '{"event":"Lead","valuee":3500,"currency":"USD"}' \
 https://track.segmentstream.com/ds/{% raw %}{{DATA_STREAM_ID}}{% endraw %}
 ```
@@ -52,7 +52,7 @@ https://track.segmentstream.com/ds/{% raw %}{{DATA_STREAM_ID}}{% endraw %}
 
 4. JavaScript:
 ```jsx
-jQuery.post("https://track.segmentstream.com/ds/{% raw %}{{DATA_STREAM_ID}}{% endraw %}", { 
+jQuery.post("https://track.segmentstream.com/ds/{% raw %}{{DATA_STREAM_ID}}{% endraw %}", {
   event: "Lead",
   value: 3500,
   currency: "USD"
@@ -75,3 +75,6 @@ To create a data stream you should follow the following steps:
 
 4. Use **Snippet code** on your website, mobile app or server depending on the requirements:
 ![Use code of BigQuery data stream](/img/datastreams/data-stream-snippet.png)
+
+
+https://dev.maxmind.com/geoip/geoip2/geolite2/
