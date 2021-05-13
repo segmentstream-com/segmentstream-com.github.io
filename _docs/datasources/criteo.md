@@ -3,8 +3,8 @@ layout: page
 section: datasources
 navigation_title: "Criteo"
 title: "Criteo data source"
-order: 10
-date: 2021-03-06
+order: 2
+date: 2021-03-08
 ---
 
 ## Before you begin
@@ -37,53 +37,7 @@ Configure a new app:
 ![App Credentials](../img/criteo_1.png)
 4. Enable required reports.
 5. Click **Save**.
-
-## Available reports
-
-SegmentStream allows to import the following reports from Criteo.
-
-### Campaign performance
-
-#### Table name
-**`criteoCampaignPerformance_{ADVERTISER_ID}_{YYYYMMDD}`**
-
-#### Table schema
-
-Field name|Type|Mode
---- | --- | ---
-cost | FLOAT | REQUIRED
-impressions | INTEGER | REQUIRED
-clicks | INTEGER | REQUIRED
-campaign_id | INTEGER | REQUIRED
-campaign | STRING | REQUIRED
-
-## Additional transformation settings
-
-Besides default reports import, SegmentStream allows to apply additional transformations for the data and help prepare cost data reports grouped by UTM.
-
-This might be very handy if you need to stitch cost data with website sessions or [send cost data into Google Analytics](/datadestinations/google-analytics).
-
-To enable this transformation use **"Import cost data grouped by UTM"** setting. Once enabled, a new table with cost data grouped by UTM will appear in your data warehouse.
-
-### Table name
-**`criteoCosts_{ADVERTISER_ID}_{YYYYMMDD}`**
-
-### Table schema
-
-Field name|Type|Mode
---- | --- | ---
-date | DATE | NULLABLE
-cost | FLOAT | NULLABLE
-clicks | FLOAT | NULLABLE
-impressions | FLOAT | NULLABLE
-utmTerm | INTEGER | NULLABLE
-utmCampaign | STRING | NULLABLE
-utmContent | STRING | NULLABLE
-utmMedium | STRING | NULLABLE
-utmSource | STRING | NULLABLE
-currency | STRING | NULLABLE
-
-### UTM matching for campaigns
+## UTM matching for campaigns
 
 Currently, SegmentStream does not support automatic UTM matching for Criteo campaigns. This means that you would need to match Criteo campaigns mannually inside the SegmentStream admin panel.
 

@@ -3,8 +3,8 @@ layout: page
 section: datasources
 navigation_title: "Yandex.Direct"
 title: "Yandex.Direct data source"
-order: 10
-date: 2020-07-20
+order: 4
+date: 2020-06-19
 ---
 
 ## Getting started
@@ -12,9 +12,8 @@ date: 2020-07-20
 1. Inside the admin panel click **Add Data Source**.
 2. Choose **Yandex.Direct** from the list.
 3. Click **Authenticate with Yandex** and go through the authentication flow.
-4. Enable required reports.
-5. Apply additional settings if required.
-6. Click **Save**.
+4. Apply additional settings if required.
+5. Click **Save**.
 
 ## Configuration for advertising agencies
 
@@ -22,88 +21,7 @@ If you have an advertising agency account the option **Agency** should be enable
 
 Optionally, you can enable **Spend agency points** option. Points are transformed into a certain number of requests to the Yandex.Direct API per unit of time. If this option is enabled, when requesting the Yandex.Direct API, the points of the agency will be used, and not the advertiser.
 
-## VAT handling
-
-Yandex.Direct API allows importing cost data either with or without VAT. If you would like cost data to include VAT - switch on **Include VAT** option.
-
-## Available reports
-
-SegmentStream allows to import the following reports from Yandex.Direct.
-
-### Campaign performance
-
-#### Table name
-**`yandexDirectCampaignPerformance_{ACCOUNT}_{YYYYMMDD}`**
-
-#### Table schema
-
-Field name|Type|Mode
---- | --- | ---
-CampaignType | STRING | NULLABLE
-MatchType | STRING | NULLABLE
-Criterion | STRING | NULLABLE
-Device | STRING | NULLABLE
-Clicks | INTEGER | NULLABLE
-Impressions | INTEGER | NULLABLE
-Cost | INTEGER | NULLABLE
-Placement | STRING | NULLABLE
-CriterionType | STRING | NULLABLE
-AdGroupId | INTEGER | NULLABLE
-Date | DATE | NULLABLE
-CampaignId | INTEGER | NULLABLE
-CampaignName | STRING | NULLABLE
-AdId | INTEGER | NULLABLE
-AdNetworkType | STRING | NULLABLE
-CriterionId | INTEGER | NULLABLE
-MobilePlatform | STRING | NULLABLE
-AdGroupName | STRING | NULLABLE
-Gender | STRING | NULLABLE
-LocationOfPresenceId | STRING | NULLABLE
-LocationOfPresenceName | STRING | NULLABLE
-
-### Accounts balance
-
-#### Table name
-**`yandexDirectAccountsInfo_{ACCOUNT}_{YYYYMMDD}`**
-
-#### Table schema
-
-Field name|Type|Mode
---- | --- | ---
-AgencyName | STRING | NULLABLE
-Currency | STRING | NULLABLE
-Amount | FLOAT | NULLABLE
-Login | STRING | NULLABLE
-AccountID | INTEGER | NULLABLE
-
-## Additional transformation settings
-
-Besides default reports import, SegmentStream allows to apply additional transformations for the data and help prepare cost data reports grouped by UTM.
-
-This might be very handy if you need to stitch cost data with website sessions or [send cost data into Google Analytics](/datadestinations/google-analytics).
-
-To enable this transformation use **"Import cost data grouped by UTM"** setting. Once enabled, a new table with cost data grouped by UTM will appear in your data warehouse.
-
-### Table name
-**`yandexDirectCosts_{ACCOUNT}_{YYYYMMDD}`**
-
-### Table schema
-
-Field name|Type|Mode
---- | --- | ---
-date | DATE | NULLABLE
-account | STRING | NULLABLE
-utmSource | STRING | NULLABLE
-utmMedium | STRING | NULLABLE
-utmCampaign | STRING | NULLABLE
-utmContent | STRING | NULLABLE
-utmTerm | STRING | NULLABLE
-cost | FLOAT | REQUIRED
-clicks | INTEGER | NULLABLE
-impressions | INTEGER | NULLABLE
-currency | STRING | NULLABLE
-
-### Supported dynamic URL parameters
+## Supported dynamic URL parameters
 
 By default Yandex.Direct allows to use a lot of [dynamic URL tagging parameters](https://yandex.com/support/direct/statistics/url-tags.html){:target="_blank"} to track campaigns.
 
@@ -139,7 +57,7 @@ In order to keep matching visits and ad expenses in the cost analysis reports, m
 
 > **Note.** Make sure you tag all campaign [sitelinks](https://yandex.com/support/direct/efficiency/quick-links.html#quick-links){:target="_blank"} the same way you tag the campaign. Otherwise SegmentStream might not be able to properly match clicks from sitelinks with Google Analytics sessions.
 
-### UTM matching for Search banners
+## UTM matching for Search banners
 
 Currently, SegmentStream does not support automatic UTM matching for [Search banners](https://yandex.ru/support/direct/products-media-context-banner/about.html){:target="_blank"}. This means that you would need to match these types of campaigns mannually inside the SegmentStream admin panel. For all your Search banners you need to define matching between the **Campaign ID** and **URL parameters**.
 

@@ -1,6 +1,6 @@
 ---
 layout: page
-section: ga-datasources
+section: datasources
 navigation_title: "myTarget"
 title: "myTarget data source"
 order: 6
