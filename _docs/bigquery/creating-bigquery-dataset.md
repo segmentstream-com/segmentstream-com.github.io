@@ -4,7 +4,7 @@ section: bigquery
 navigation_title: "Creating BigQuery dataset"
 title: "Creating BigQuery dataset"
 order: 5
-date: 2020-04-29
+date: 2020-05-28
 ---
 
 <!---
@@ -18,11 +18,13 @@ Below are the steps that explain how to do this.
 2. Open the console left side menu and click **BigQuery**.
 ![Click on BigQuery](/img/bigquery_dataset.1.png)
 3. Select the project where you would like to create a dataset in the bottom-left menu and click **CREATE DATASET**.
-![Create dataset](/img/bigquery_dataset.2.png)
-> **Note:** Instead of this screen, you might see general info about BigQuery. In that case, you should [enable BigQuery API](enabling-bigquery-api).
+  ![Create dataset](/img/bigquery_dataset.2.png)
+  > **Note:** Instead of this screen, you might see general info about BigQuery. In that case, you should [enable BigQuery API](enabling-bigquery-api).
 
-1. Enter **Dataset ID** (for example "segmentstream"). All other options leave in default values.
-2. Click **Create dataset**.
+4. Enter **Dataset ID** (for example "segmentstream").
+5. Select **Dataset location**. 
+  > **Important!** In case you use Google Analytics 360 or Google Analytics 4, make sure you select the same dataset location as for the dataset where your Google Analytics export data is stored.
+6. Click **Create dataset**.
 ![Dataset creation page](/img/bigquery_dataset.4.png)
 
 ## What's next:
