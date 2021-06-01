@@ -4,7 +4,7 @@ section: datastreams
 navigation_title: "Google Analytics 360"
 title: "Google Analytics 360 Data Stream"
 order: 2
-date: 2021-04-08
+date: 2021-06-01
 ---
 
 With **Google Analytics 360** you can export session and hit data from a Google Analytics 360 account to BigQuery, and then use this data for SegmentSteam's marketing analytics and attribution.
@@ -32,5 +32,6 @@ Below you can find a step-by-step tutorial on how to do this.
    ![GTM Page URL built-in variable](/img/datastreams/ga360/ga360-gtm-2.png)
 5. Open your **Google Analytics Settings** variable and define an additional custom dimension (make sure you use a proper number) with a **{{Page URL}}** variable as a value:
    ![GA360 custom dimension send](/img/datastreams/ga360/ga360-gtm-3.png)
+   > Important! In case you don't use **Google Analytics Settings** and define custom dimensions directly inside your Google Analytics tags, make sure that custom dimension with a **{{Page URL}}** is implemented for all Google Analytics tags and events, not only for pageviews. 
 6. Click **Save** and **Publish** the container.
 7. Make sure full URL is properly collected as a custom dimension inside your Google BigQuery GA360 data export.
