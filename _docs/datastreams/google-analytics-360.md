@@ -30,8 +30,8 @@ Below you can find a step-by-step tutorial on how to do this.
    ![GTM built-in variables configure](/img/datastreams/ga360/ga360-gtm-1.png)
 4. Make sure **Page URL** built-in variable is enabled:
    ![GTM Page URL built-in variable](/img/datastreams/ga360/ga360-gtm-2.png)
-5. Open your **Google Analytics Settings** variable and define an additional custom dimension (make sure you use a proper number) with a **{{Page URL}}** variable as a value:
+5. Open your **Google Analytics Settings** variable and define an additional custom dimension (make sure you use a proper number) with a **{% raw %}{{Page URL}}{% endraw %}** variable as a value:
    ![GA360 custom dimension send](/img/datastreams/ga360/ga360-gtm-3.png)
-   > Important! In case you don't use **Google Analytics Settings** and define custom dimensions directly inside your Google Analytics tags, make sure that custom dimension with a **{{Page URL}}** is implemented for all Google Analytics tags and events, not only for pageviews. 
+   > **Important!** In case you don't use **Google Analytics Settings** and define custom dimensions directly inside your Google Analytics tags, make sure that custom dimension with a **{% raw %}{{Page URL}}{% endraw %}** is implemented for all Google Analytics tags and events, not only for pageviews.
 6. Click **Save** and **Publish** the container.
 7. Make sure full URL is properly collected as a custom dimension inside your Google BigQuery GA360 data export.
