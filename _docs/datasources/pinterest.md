@@ -11,7 +11,7 @@ date: 2020-10-03
 
 1. Inside the admin panel click **Add Data Source**.
 2. Choose **Pinterest** from the list.
-3. Click **Click to connect Pinterest via Fivetran** and go through the authentication flow and setup in the Fivetran interface.
+3. Click **Click to connect Pinterest** and go through the authentication and setup flow.
 4. Name your data source.
 5. Click **Save**.
 
