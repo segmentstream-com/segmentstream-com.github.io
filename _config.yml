@@ -20,12 +20,6 @@ sections: [
     ['datasources', 'Data Sources'],
     ['datastreams', 'Data Streams'],
     ['datadestinations', 'Data Destinations'],
-    ['javascript-sdk', 'JavaScript SDK'],
-    ['digitaldata', 'DigitalData Variables'],
-    ['events', 'DigitalData Events'],
-    ['ecommerce', 'DigitalData for Ecommerce'],
-    ['integrations', 'Tracking Integrations'],
-    ['http-api', 'HTTP API'],
     ['guides', 'Guides']
 ]
 
