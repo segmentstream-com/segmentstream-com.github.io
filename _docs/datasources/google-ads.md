@@ -21,6 +21,10 @@ Google Ads is an online advertising service developed by Google. With Google Ads
 
 By default, both [manager](https://support.google.com/google-ads/answer/6139186){:target="_blank"} and individual advertising accounts are available for the data import. If you decide to select a manager account, all associated individual accounts will be automatically connected as well.
 
+## UTM tagging best practices
+
+Please, avoid defining UTM parameters at **Ad** or **Ad Extension** level as SegmentStream won't be able to properly allocate costs for your [ad extension](https://support.google.com/google-ads/answer/2375499){:target="blank"} clicks (such as sitelink extensions, price extensions, promotion extensions, etc). Please, define your UTMs at Account, Campaign or Ad Group level instead.
+
 ## Supported dynamic URL parameters
 
 By default Google Ads allows to use a lot of [dynamic URL tagging parameters](https://support.google.com/google-ads/answer/6305348){:target="_blank"} to track campaigns.
