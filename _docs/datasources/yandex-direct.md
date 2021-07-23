@@ -59,11 +59,13 @@ In order to keep matching visits and ad expenses in the cost analysis reports, m
 
 ## UTM matching for Search banners
 
-Currently, SegmentStream does not support automatic UTM matching for [Search banners](https://yandex.ru/support/direct/products-media-context-banner/about.html){:target="_blank"}. This means that you would need to match these types of campaigns mannually inside the SegmentStream admin panel. For all your Search banners you need to define matching between the **Campaign ID** and **URL parameters**.
+Currently, SegmentStream does not support automatic UTM matching for [Search banners](https://yandex.ru/support/direct/products-media-context-banner/about.html){:target="_blank"}. This means that you would need to match these types of campaigns manually inside the SegmentStream admin panel.
 
-For example, if you have a Search banner with the **Campaign ID** = `123123123` with the following link to the website: `http://www.site.com/?utm_source=yandex&utm_medium=cpc&utm_campaign={campaign_id}&utm_term={keyword}&utm_content={banner_id}`, the mapping should be the following:
+You can define the UTM parameters for all Search banners through the **URL parameters for all Search banners** setting, and also define them for specific Search banners by matching between the **Campaign ID** and **URL parameters** in the **URL parameters for specific Search banners** setting.
+
+For example, if all Search banners have the following link to the website `http://www.site.com/?utm_source=yandex&utm_medium=cpc&utm_campaign={campaign_id}` and a Search banner with the **Campaign ID** = `123123123` with the following link to the website: `http://www.site.com/?utm_source=yandex&utm_medium=cpc&utm_campaign={campaign_id}&utm_term={keyword}&utm_content={banner_id}`, the mapping should be the following:
 
 `123123123` ▸ `utm_source=yandex&utm_medium=cpc&utm_campaign={campaign_id}&utm_term={keyword}&utm_content={banner_id}`
 
 This is how it might look inside the admin panel:
-![Yandex.Direct URL params matching](/img/yandex-direct/yandex-search-banners-utm-params.png)
+![Yandex.Direct URL params matching](/img/yandex-direct/mcbanneroptions.png)
