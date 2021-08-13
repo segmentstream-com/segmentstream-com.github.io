@@ -4,7 +4,7 @@ section: datasources
 navigation_title: "Pinterest"
 title: "Pinterest data source"
 order: 9
-date: 2020-10-03
+date: 2021-08-13
 ---
 
 ## Getting started
