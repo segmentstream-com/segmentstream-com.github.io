@@ -1,8 +1,8 @@
 ---
 layout: page
 section: datasources
-navigation_title: "Google Display & Video 360"
-title: "Google Display & Video 360 data source"
+navigation_title: "Google Display and Video 360"
+title: "Google Display and Video 360 data source"
 order: 9
 date: 2021-10-20
 ---
