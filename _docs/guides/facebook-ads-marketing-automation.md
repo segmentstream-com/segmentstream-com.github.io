@@ -14,7 +14,7 @@ Unfortunately, with this solution you are limited to default [Facebook attributi
 
 Also, some businesses might find themselves in a situation where there is not enough final conversions to properly optimise campaigns due to the "Limited Learning" problem:
 
-<img src="/img/guides/facebook-ads-marketing-automation/facebook-ads-4.png" alt="Facebook Ads - Campaign Objective" width="400" style="display:block"/> 
+<img src="/img/guides/facebook-ads-marketing-automation/facebook-ads-4.png" alt="Facebook Ads - Campaign Objective" width="400" style="display:block"/>
 
 In this case you will be able to replace final conversions with a **SegmentStream Score** which provides much more signals for Facebook algorithms to optimise faster.
 
@@ -58,18 +58,18 @@ Where:
 
 1. Inside the admin panel go to **Data Destinations** page and click **Add Data Destination**.
 2. Choose **Facebook** from the list.
-3. Click **Authenticate with Google** and go through the authentication flow.
+3. Click **Authenticate with Facebook** and go through the authentication flow.
 4. Enter you **Facebook Pixel ID** (can be found inside the [Facebook Events Manager](https://www.facebook.com/events_manager2/){:target="blank"})
 5. Enter the name of the BigQuery table with your attribution into **BigQuery source table name** (if you are using SegmentStream's AI-driven multi-touch attribution - ask the name from your implementation manager).
 6. Enter **Event name** of your conversion (i.e. "Purchase Score").
 7. Click **Save**.
 
-Once connected, make sure you've started receiving server-side SegmenetStrem events inside the Facebook Event Manager:
+Once connected, make sure you've started receiving server-side SegmentStream events inside the Facebook Event Manager:
 ![](/img/guides/facebook-ads-marketing-automation/facebook-ads-6.png)
 
 > **Note!** It might take up to 24 hours before you see the first batch of events from SegmentStream.
 
-## Creating a custom conversion inside the Businss Account
+## Creating a custom conversion inside a Business Account
 
 1. Go to [Facebook Events Manager](https://www.facebook.com/events_manager2/){:target="blank"} and choose your Facebook Business Account (make sure you choose a Business Account, not an Ad Account).
 2. Click on **Custom conversions** menu item.
@@ -100,7 +100,7 @@ Make sure that SegmentStream event has the highest possible priority right below
 3. In the **Campaign Bid Strategy** section select either **Lowest cost** or **Cost cap** depending on whether you would like to limit your campaign by a daily budget or maximal CPA:
   <img src="/img/guides/facebook-ads-marketing-automation/facebook-ads-2.png" alt="Facebook Ads - Bid Strategy" width="600" style="display:block"/>
   Alternatively, you can use **Minimum ROAS** strategy if you want to optimise for ROAS.
-  > **Note!** We suggest avoid using **Bid cap** strategy as it will not bring any benefit in  terms of the optimisation for imported conversions.
+  > **Note!** We suggest to avoid using **Bid cap** strategy as it will not bring any benefit in terms of the optimisation for imported conversions.
 4. Select your recently created **Custom Conversion** for a **Conversion Event** field inside the **Conversion** section for each **Ad Set**.
 5. Adjust your **Optimization & Delivery** settings for each **Ad Set** to match your selected **Campaign Bid Strategy**.
 6. **Save** your campaign.
