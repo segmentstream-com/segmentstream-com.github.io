@@ -3,7 +3,7 @@ layout: page
 section: guides
 navigation_title: "Importing offline data using Webhooks"
 title: "Importing offline data using Webhooks"
-date: 2020-10-19
+date: 2021-12-07
 ---
 
 This document describes how to import offline data from the CRM (i.e. sales or leads statuses) into BigQuery using Webhooks (postbacks).
@@ -19,10 +19,11 @@ Imported offline data can be combined with other website data to improve ROI rep
 1. Inside the admin panel go to **Google BigQuery ▸ Data Streams** page and click **Add data stream**.
 2. Choose **Webhook** from the list.
 3. Define Google BigQuery **Destination table** where collected data will be stored.
-4. Choose the **UTC offset** from the list.
-5. Select **Integration type** depending on the programming language on your backend.
-6. Copy **Snippet** code.
-7. Click **Save** and follow the further instructions to integrate the code.
+<!-- 4. Choose the **UTC offset** from the list. -->
+<!-- 5. Select **Integration type** depending on the programming language on your backend. -->
+<!-- 6. Copy **Snippet** code. -->
+4. Copy the value from the **Webhook endpoint** field.
+5. Click **Save** and follow the further instructions to integrate the code.
 
 ## Webhook implementation
 
@@ -44,7 +45,7 @@ Where:
 * `status` - The most recent order status (e.g. `received`, `shipped`, `delivered`, `refunded`, etc);
 * `userId` - unique identifier of the user that made an order.
 
-> Note: here is provided minimal schema for stitching online and offline orders, but you can add any other fields you need.
+> Note: here we demonstrate the minimal schema required for stitching online and offline orders, but you can add any other fields you need.
 
 Depending on the programming language you use on the backend of your application your should implement a webhook triggering each time a new order or lead is created, or the status of a particular order or lead changes inside your CRM.
 
@@ -54,7 +55,7 @@ curl -d "orderId=N1&status=delivered&total=120.13&userId=U1" \
 -X POST https://track.segmentstream.com/ds/522ed95e-9f07-45f6-a0b7-28bf2d0315e5
 ```
 
-Make sure, that `https://track.segmentstream.com/ds/522ed95e-9f07-45f6-a0b7-28bf2d0315e5` is replaced with a valid enpoint retrieved from the SegmentStream admin panel for a Webhook data stream.
+Make sure, that `https://track.segmentstream.com/ds/522ed95e-9f07-45f6-a0b7-28bf2d0315e5` is replaced with a valid endpoint retrieved from the **Webhook endpoint** field of the data stream configuration inside the SegmentStream admin panel.
 
 ## How webhook data import works
 

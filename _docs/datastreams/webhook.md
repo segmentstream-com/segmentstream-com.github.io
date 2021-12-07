@@ -18,9 +18,8 @@ date: 2021-01-14
 
 1. Inside the admin panel go to **Google BigQuery ▸ Data Streams** and click **Add data stream**.
 2. Choose **Webhook** from the list.
-3. Define Google BigQuery **Destination table** where collected data will be stored.
-4. Choose the **UTC offset** from the list.
-5. Copy **Webhook enpoint** code.
-6. Click **Save**.
+3. Define the Google BigQuery **Destination table** where collected data will be stored.
+4. Copy the value from the **Webhook endpoint** field.
+5. Click **Save**.
 
-Now you can use copied webhook endpoint inside third-party apps to send data.
+Now you can use the copied webhook endpoint inside third-party apps to send data. We've prepared a detailed guide on [sending offline data using webhooks](/guides/webhooks-offline-data-import).
