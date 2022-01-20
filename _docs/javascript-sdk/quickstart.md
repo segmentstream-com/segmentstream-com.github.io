@@ -154,6 +154,6 @@ For example, this is how click event from the previous step will look like in th
 
 ## What's next
 
-* [Connect advertising data sources](/ga-datasources/index) to enable automatic marketing campaign performance data import.
+* [Connect advertising data sources](/datasources/index) to enable automatic marketing campaign performance data import.
 * Learn how to [importing offline data using JSON feed](/guides/json-feed-offline-data-import)
 * Set up [server-side events tracking using HTTP API](/http-api/overview).

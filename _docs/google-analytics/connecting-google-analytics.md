@@ -31,4 +31,4 @@ SegmentStream allows creating unlimited Google Analytics projects which means po
 
 ## What's next
 
-* [Connect required data sources](/ga-datasources/index) to enable automatic cost data import.
+* [Connect required data sources](/datasources/index) to enable automatic cost data import.

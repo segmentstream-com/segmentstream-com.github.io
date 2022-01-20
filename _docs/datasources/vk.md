@@ -18,7 +18,7 @@ date: 2020-07-13
 
 ## Excluding VAT
 
-By default, VK cost data includes VAT. To exclude VAT from imported costs you should switch on **Exclude VAT** option and define the **VAT rate** to be excluded. You can read more about why we recommend excluding VAT [here](/ga-datasources/#vat-handling){:target="_blank"}.
+By default, VK cost data includes VAT. To exclude VAT from imported costs you should switch on **Exclude VAT** option and define the **VAT rate** to be excluded. You can read more about why we recommend excluding VAT [here](/datasources/#vat-handling){:target="_blank"}.
 
 ## Supported dynamic URL parameters
 
@@ -31,7 +31,7 @@ Name|Description
 `{campaign_id}` | Advertising campaign ID.
 `{campaign_name}` | Advertising campaign name.
 `{ad_id}` | Ad ID.
-  
+
 ## Default source/medium
 
 VK allows running ads that do not lead directly to your website (for example VK page promo, VK post promo, events promo, etc). This means that these types of campaigns can not have UTM-params and it is not possible to import them into Google Analytics due to limitations that require all imported costs to have campaign source and medium defined.

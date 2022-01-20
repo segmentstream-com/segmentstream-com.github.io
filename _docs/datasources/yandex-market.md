@@ -17,7 +17,7 @@ date: 2020-08-18
 
 ## Excluding VAT
 
-By default, Yandex.Market cost data includes VAT when you account currency is RUB. To exclude VAT from imported costs you should switch on **Exclude VAT** option and define the **VAT rate** to be excluded. You can read more about why we recommend excluding VAT [here](/ga-datasources/#vat-handling){:target="_blank"}.
+By default, Yandex.Market cost data includes VAT when you account currency is RUB. To exclude VAT from imported costs you should switch on **Exclude VAT** option and define the **VAT rate** to be excluded. You can read more about why we recommend excluding VAT [here](/datasources/#vat-handling){:target="_blank"}.
 
 ## Historical data import limits
 
