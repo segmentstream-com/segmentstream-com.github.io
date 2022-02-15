@@ -8,14 +8,6 @@ layout: default
 
 **SegmentStream** is a marketing data intelligence platform which allows to import and unify data from various data sources for advanced analytics and attribution.
 
-Depending on the pricing plan it is possible to create **Google Analytics** and **Google BigQuery** projects inside the SegmentStream admin panel.
-
-## Google Analytics project
-
-Google Analytics projects allow importing non-Google campaign cost data into your Google Analytics account. This way you will be able to measure advertising campaigns from Facebook, Bing, Criteo, Yandex, and other sources in Google Analytics.
-
-You can learn more about Google Analytics projects functionality [here](https://segmentstream.com/google-analytics){:target="_blank"}.
-
 ## Google BigQuery project
 
 ### Basic features

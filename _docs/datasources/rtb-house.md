@@ -16,7 +16,7 @@ date: 2020-10-03
 
 ## UTM matching for campaigns
 
-Currently, SegmentStream supports automatic UTM matching for RTBHouse campaigns only when UTM params are defined inside the URL for each offer in your product feed. Otherwise, you would need to match RTBHouse campaigns mannually inside the SegmentStream admin panel.
+Currently, SegmentStream supports automatic UTM matching for RTBHouse campaigns only when UTM params are defined inside the URL for each offer in your product feed. Otherwise, you would need to match RTBHouse campaigns manually inside the SegmentStream admin panel.
 
 By default, the following matching applies for `utm_source` and `utm_medium`:
 * `utm_source` ▸ `rtbhouse`

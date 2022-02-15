@@ -39,7 +39,7 @@ Configure a new app:
 5. Click **Save**.
 ## UTM matching for campaigns
 
-Currently, SegmentStream does not support automatic UTM matching for Criteo campaigns. This means that you would need to match Criteo campaigns mannually inside the SegmentStream admin panel.
+Currently, SegmentStream does not support automatic UTM matching for Criteo campaigns. This means that you would need to match Criteo campaigns manually inside the SegmentStream admin panel.
 
 By default, the following matching applies for `utm_source` and `utm_medium`:
 * `utm_source` ▸ `criteo`

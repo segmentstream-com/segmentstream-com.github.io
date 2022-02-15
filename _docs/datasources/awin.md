@@ -38,11 +38,11 @@ To enable this transformation use **"Import cost data grouped by UTM"** setting.
 
 ### UTM matching for campaigns
 
-Currently, SegmentStream supports automatic UTM matching for AWIN campaigns only when UTM params are defined inside the URL for each offer in your product feed. Otherwise, you would need to match AWIN campaigns mannually inside the SegmentStream admin panel.
+Currently, SegmentStream supports automatic UTM matching for AWIN campaigns only when UTM params are defined inside the URL for each offer in your product feed. Otherwise, you would need to match AWIN campaigns manually inside the SegmentStream admin panel.
 
 By default, the following matching applies for `utm_source` and `utm_medium`:
-* `utm_source` ▸ `AWIN` 
-* `utm_medium` ▸ `Publisher type` 
+* `utm_source` ▸ `AWIN`
+* `utm_medium` ▸ `Publisher type`
 
 This matching can be changed inside the admin panel by specifying appropriate values **UTM source**, **UTM medium**, and **UTM campaign** options.
 ![UTM Grouping options](/img/awin-utm_options.png)

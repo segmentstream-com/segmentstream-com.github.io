@@ -45,7 +45,7 @@ For example, if you spent $3000 in June 2020 for your favourite ESP platform and
 
 ### Approach 1: Daily costs distribution
 
-To make a proper allocation of such costs you should equally devide them between all the days during the month. The file should looks the following way:
+To make a proper allocation of such costs you should equally divide them between all the days during the month. The file should looks the following way:
 
 date| currency | cost | imporessions | clicks | utmSource | utmMedium
 --- | --- | --- | --- | --- | --- | ---

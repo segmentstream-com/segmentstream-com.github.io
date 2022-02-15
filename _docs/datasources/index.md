@@ -11,7 +11,7 @@ date: 2020-06-19
 
 To set up the automatic cost data import you need to connect at least one data source.
 
-There following built-in data sources are available for the Google Analytics projects withing the SegmentStream platform:
+There following built-in data sources are available for the Google Analytics projects within the SegmentStream platform:
 
 * [Facebook](/datasources/facebook)
 * [Criteo](/datasources/criteo)
