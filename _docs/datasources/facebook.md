@@ -32,6 +32,8 @@ Name|Description
 `{% raw %}{{site_source_name}}{% endraw %}` | Depending on where the ad appeared this parameter has four possible values.<br/> `fb` - Facebook<br/>`ig` - Instagram<br/>`msg` - Messenger<br/>`an` - the Audience Network
 `{% raw %}{{placement}}{% endraw %}` | Depending on where the ad appeared this parameter has possible values.<br/>`Facebook_Mobile_Feed`<br/>`Facebook_Right_Column`<br/>`Facebook_Instant_Articles`<br/>`Facebook_Instream_Video`<br/>`Facebook_Marketplace`<br/>`Instagram_Stories`<br/>`Instagram_Feed`<br/>`Instagram_Explore`<br/>`Messenger_Inbox`<br/>`Messenger_Stories`<br/>`Facebook_Desktop_Feed`<br/>`an` (for Audience Network)<br/>`Others` (for all other placements)
 
+> Please, avoid using name-based parameters like {{campaign.name}}, {{adset.name}} or {{ad.name}} inside your UTM tags. If your campaign, ad set or ad names will be changed, the parameters will refer to the original names while SegmentStream will use new names. This will lead to a problem in cost allocation for your sessions. You can find more info about this <a href="https://www.facebook.com/business/help/2360940870872492" target="_blank" rel="noopener noreferrer">here</a>.
+
 ## Default source/medium
 
 Facebook allows running ads that do not lead directly to your website (for example Facebook page promo, Facebook post promo, events promo, etc). This means that these types of campaigns can not have UTM-params and it is not possible to import them into Google Analytics due to limitations that require all imported costs to have campaign source and medium defined.
