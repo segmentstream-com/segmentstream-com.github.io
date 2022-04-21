@@ -1,6 +1,6 @@
 ---
 layout: page
-section: datasources
+section: datastreams
 navigation_title: "Real-time data sources"
 title: "Real-time Data Source overview"
 order: 0
@@ -66,7 +66,7 @@ Regardless of the method you choose to send the data to the Data Source endpoint
 To create a data source you should follow the following steps:
 
 1. Inside the admin panel go to **Data Sources** and click **Add data source**.
-![Add BigQuery data stream](/img/datastreams/data-source-add.png)
+![Add BigQuery data source](/img/datastreams/data-source-add.png)
 
 2. Select the desired data source type, currently we support Universal Analytics and Webhook data sources.
 

@@ -1,6 +1,6 @@
 ---
 layout: page
-section: datasources
+section: datastreams
 navigation_title: "Webhook"
 title: "Webhook Data Source"
 order: 3

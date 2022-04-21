@@ -1,6 +1,6 @@
 ---
 layout: page
-section: datasources
+section: datastreams
 navigation_title: "Universal Analytics"
 title: "Universal Analytics Data Source"
 order: 1

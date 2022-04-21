@@ -7,7 +7,7 @@ date: 2019-05-21 19:00:00
 order: 0
 ---
 
-> **Deprecated**. Use [Data Streams](/datastreams/) instead.
+> **Deprecated**. Use [Real-time Data Sources](/datastreams/) instead.
 
 ## Introduction
 ------

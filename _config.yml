@@ -18,7 +18,7 @@ sections: [
     ['bigquery', 'BigQuery Setup'],
     ['google-analytics', 'Google Analytics Setup'],
     ['datasources', 'Data Sources'],
-    ['datastreams', 'Data Streams'],
+    ['datastreams', 'Real-time Data Sources'],
     ['datadestinations', 'Data Destinations'],
     ['guides', 'Guides']
 ]
