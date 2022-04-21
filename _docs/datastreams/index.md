@@ -1,7 +1,7 @@
 ---
 layout: page
-section: datastreams
-navigation_title: "Overview"
+section: datasources
+navigation_title: "Real-time data sources"
 title: "Real-time Data Source overview"
 order: 0
 date: 2020-08-18
