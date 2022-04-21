@@ -1,13 +1,13 @@
 ---
 layout: page
-section: datastreams
+section: datasources
 navigation_title: "Universal Analytics"
-title: "Universal Analytics Data Stream"
+title: "Universal Analytics Data Source"
 order: 1
 date: 2021-03-05
 ---
 
-**Universal Analytics Data Stream** allows collecting hit-level non-sampled data with unlimited dimensions and metrics into your Google BigQuery account using your existing Google Analytics tracker even if you use a free version of Google Analytics.
+**Universal Analytics Data Source** allows collecting hit-level non-sampled data with unlimited dimensions and metrics into your Google BigQuery account using your existing Google Analytics tracker even if you use a free version of Google Analytics.
 
 ## Before you begin
 
@@ -21,13 +21,12 @@ After simple integration with Google Tag Manager or javascript on your website, 
 
 ## Getting started
 
-1. Inside the admin panel go to **Google BigQuery ▸ Data Streams** and click **Add data stream**.
+1. Inside the admin panel go to **Data Sources** and click **Add data source**.
 2. Choose **Universal Analytics** from the list.
-3. Define Google BigQuery **Destination table** where collected data will be stored.
-4. Choose the **UTC offset** from the list.
-5. Select **Integration type**. There are 2 types: "GTM" or "analytics.js".
-6. Copy **Snippet** code.
-7. Click **Save** and follow the further instructions to integrate the code.
+3. Define the Google BigQuery **Destination table** where collected data will be stored.
+4. Select the **Integration type** that suits you.
+5. Copy **Snippet** code.
+6. Click **Save** and follow the further instructions to integrate the code.
 
 ## Integrating using Google Tag Manager (GTM)
 
@@ -37,11 +36,11 @@ Choose this method if your Google Analytics is integrated using Google Tag Manag
 
     ![GTM Setup Step 1](/img/datastreams/ua-gtm-1.png)
 
-2. Click on the **Variable Configuration** > **Custom JavaScript** in *Page Variables* section: 
+2. Click on the **Variable Configuration** > **Custom JavaScript** in *Page Variables* section:
 
     ![GTM Setup Step 2](/img/datastreams/ua-gtm-2.png)
 
-3. Set **SegmentStream** as a Name of the variable. Paste code from Data Streams settings modal to **Custom Javascript** field. Click Save.
+3. Set **SegmentStream** as a Name of the variable. Paste code from the Data Source settings modal to **Custom Javascript** field. Click Save.
 
     ![GTM Setup Step 3](/img/datastreams/ua-gtm-3.png)
 
@@ -55,7 +54,7 @@ Choose this method if your Google Analytics is integrated using Google Tag Manag
 
     > **Important!** You can't use more than one customTask in one GTM tag. The function of each new customTask overrides the function of the previous one. If it's required to use several customTask functions in a single tag, you should join their JavaScript code within a single customTask using [this guide](/guides/combining-custom-tasks){:target="blanks"}.
 
-    
+
 
 5. **Save** the tag and **Publish** the container.
 
@@ -68,7 +67,7 @@ Add **Snippet** from **analytics.js** type to the website source code on each pa
     ga('create', 'UA-XXXXX-Y', 'auto');
 
     <% snippet code from admin panel %>
-    
+
     ga('send', 'pageview');
 
 ## Check if integration works correctly
@@ -87,7 +86,7 @@ To achieve this you just need to send the same request you send to your Google A
 For example:
 
 ```
-POST https://track.segmentstream.com/ds/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  
+POST https://track.segmentstream.com/ds/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 // Use proper endpoint from the admin panel
 
 v=1                                   // Version.
@@ -123,9 +122,9 @@ ip|string| Nullable|Visitor's IP address
 received_at|integer|Nullable|Hit time in milliseconds passed since January 1, 1970
 ssuid|string|Nullable|Cross-domain unique user's identifier
 payload|string|Nullable|Raw hit payload
-cookie|record|Repeated|1st-party cookies of major advertising platforms	
-cookie.name|string|Nullable|Cookie name	
-cookie.value|string|Nullable|Cooke value	
+cookie|record|Repeated|1st-party cookies of major advertising platforms
+cookie.name|string|Nullable|Cookie name
+cookie.value|string|Nullable|Cooke value
 date|date|Nullable|**partitition field**,	Date of the hit with UTC offset
 user_agent|string|Nullable|Visitor's device userAgent
 

@@ -1,13 +1,13 @@
 ---
 layout: page
-section: datastreams
+section: datasources
 navigation_title: "Webhook"
-title: "Webhook Data Stream"
+title: "Webhook Data Source"
 order: 3
 date: 2021-01-14
 ---
 
-**Webhook Data Stream** allows to create a unique endpoint withing the SegmentStream platform that can be used to send Webhooks from third-party applications like CRM, ERP, call tracking system, etc.
+**Webhook Data Source** allows to create a unique endpoint withing the SegmentStream platform that can be used to send Webhooks from third-party applications like CRM, ERP, call tracking system, etc.
 
 ## Before you begin
 
@@ -16,7 +16,7 @@ date: 2021-01-14
 
 ## Getting started
 
-1. Inside the admin panel go to **Google BigQuery ▸ Data Streams** and click **Add data stream**.
+1. Inside the admin panel go to **Data Sources** and click **Add data source**.
 2. Choose **Webhook** from the list.
 3. Define the Google BigQuery **Destination table** where collected data will be stored.
 4. Copy the value from the **Webhook endpoint** field.
