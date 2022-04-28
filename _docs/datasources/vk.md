@@ -29,7 +29,6 @@ SegmentStream supports the following parameters:
 Name|Description
 --- | ---
 `{campaign_id}` | Advertising campaign ID.
-`{campaign_name}` | Advertising campaign name.
 `{ad_id}` | Ad ID.
 
 ## Default source/medium
