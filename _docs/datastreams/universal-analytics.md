@@ -1,13 +1,13 @@
 ---
 layout: page
 section: datastreams
-navigation_title: "Universal Analytics"
-title: "Universal Analytics Data Source"
+navigation_title: "Google Analytics"
+title: "Google Analytics (Streaming) Data Source"
 order: 1
 date: 2021-03-05
 ---
 
-**Universal Analytics Data Source** allows collecting hit-level non-sampled data with unlimited dimensions and metrics into your Google BigQuery account using your existing Google Analytics tracker even if you use a free version of Google Analytics.
+**Google Analytics (Streaming) Data Source** allows collecting hit-level non-sampled data with unlimited dimensions and metrics into your Google BigQuery account using your existing Google Analytics tracker even if you use a free version of Google Analytics.
 
 ## Before you begin
 
@@ -22,7 +22,7 @@ After simple integration with Google Tag Manager or javascript on your website, 
 ## Getting started
 
 1. Inside the admin panel go to **Data Sources** and click **Add data source**.
-2. Choose **Universal Analytics** from the list.
+2. Choose **Google Analytics (Streaming)** from the list.
 3. Define the Google BigQuery **Destination table** where collected data will be stored.
 4. Select the **Integration type** that suits you.
 5. Copy **Snippet** code.
