@@ -10,11 +10,11 @@ date: 2022-05-30
 ## Getting started
 
 1. Inside the admin panel click **Add Data Source**.
-2. Choose **Impact.com** from the list.
+2. Choose **impact.com** from the list.
 3. Enter the **Account SID** and **Auth Token** API credentials, you can find them in your [impact.com](https://app.impact.com/){:target="blank"} settings by navigating to [Vertical Ellipsis] → Settings → API.
 <img src="/img/impact_auth_1_api.png" alt="Impact — API" width="600" style="display:block"/>
 
-4. Select your Advertising accounts.
+4. Select your **Advertising accounts**.
 5. Click **Save**.
 
 ## Supported dynamic URL parameters
