@@ -6,7 +6,7 @@ order: 1
 date: 2020-12-06
 ---
 
-In order to import data from Google Analytics 4 into SegmentStream, you have to first set up a Google Analytics 4 BigQuery export, follow [this guide](https://support.google.com/analytics/answer/9358801?hl=en) before continuing.
+In order to import data from Google Analytics 4 into SegmentStream, you have to first set up a Google Analytics 4 BigQuery export, follow [this guide](https://support.google.com/analytics/answer/9823238#step3&zippy=%2Cin-this-article) before continuing.
 
 
 ## Getting started
