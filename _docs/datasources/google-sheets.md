@@ -46,7 +46,7 @@ For example, if you spent $3000 in June 2020 for your favourite ESP platform and
 
 To make a proper allocation of such costs you should equally divide them between all the days during the month. The file should looks the following way:
 
-date| currency | cost | imporessions | clicks | utmSource | utmMedium
+date| currency | cost | impressions | clicks | utmSource | utmMedium
 --- | --- | --- | --- | --- | --- | ---
 2020-06-01 | USD | 100 | | | email | my_esp
 2020-06-02 | USD | 100 | | | email | my_esp
@@ -63,7 +63,7 @@ date| currency | cost | imporessions | clicks | utmSource | utmMedium
 
 Alternatively, you can have separate Google Sheets files for monthly and daily costs. This way you can have the following format for your monthly costs:
 
-month| currency | cost | imporessions | clicks | utmSource | utmMedium
+month| currency | cost | impressions | clicks | utmSource | utmMedium
 --- | --- | --- | --- | --- | --- | ---
 2020-06-01 | USD | 3000 | | | email | my_esp
 2020-07-01 | USD | 3000 | | | email | my_esp
