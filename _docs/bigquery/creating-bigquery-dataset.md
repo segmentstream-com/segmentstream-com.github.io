@@ -3,7 +3,7 @@ layout: page
 section: bigquery
 navigation_title: "Creating BigQuery dataset"
 title: "Creating BigQuery dataset"
-order: 5
+order: 6
 date: 2020-05-28
 ---
 
@@ -22,7 +22,7 @@ Below are the steps that explain how to do this.
   > **Note:** Instead of this screen, you might see general info about BigQuery. In that case, you should [enable BigQuery API](enabling-bigquery-api).
 
 4. Enter **Dataset ID** (for example "segmentstream").
-5. Select **Dataset location**. 
+5. Select **Dataset location**.
   > **Important!** In case you use Google Analytics 360 or Google Analytics 4, make sure you select the same dataset location as for the dataset where your Google Analytics export data is stored.
 6. Click **Create dataset**.
 ![Dataset creation page](/img/bigquery_dataset.4.png)

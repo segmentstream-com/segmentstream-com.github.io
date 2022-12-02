@@ -3,7 +3,7 @@ layout: page
 section: bigquery
 navigation_title: "Creating GCP project"
 title: "Creating Google Cloud Platform project"
-order: 4
+order: 5
 date: 2020-04-29
 ---
 

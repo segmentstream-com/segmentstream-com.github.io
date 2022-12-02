@@ -3,7 +3,7 @@ layout: page
 section: bigquery
 navigation_title: "Granting BigQuery access"
 title: "BigQuery access for the SegmentStream support team"
-order: 7
+order: 8
 date: 2020-06-12
 ---
 
