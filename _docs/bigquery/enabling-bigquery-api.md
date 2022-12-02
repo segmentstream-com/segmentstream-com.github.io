@@ -34,5 +34,6 @@ Below are the steps that explain how to do this.
 
 ## What's next
 
+* [Creating Google Cloud project](creating-gcp-project)
 * [Creating BigQuery dataset](creating-bigquery-dataset)
 * [Connecting BigQuery to SegmentStream](connecting-bigquery)
