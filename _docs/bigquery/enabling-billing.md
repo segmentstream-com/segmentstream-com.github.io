@@ -40,7 +40,7 @@ If you experience an issue with setting up a billing account [consult the docume
 
 ## What's next:
 
-* [Creating Google Cloud project](creating-gcp-project)
 * [Enabling BigQuery API](enabling-bigquery-api)
+* [Creating Google Cloud project](creating-gcp-project)
 * [Creating BigQuery dataset](creating-bigquery-dataset)
 * [Connecting BigQuery to SegmentStream](connecting-bigquery)
