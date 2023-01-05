@@ -6,33 +6,8 @@ layout: default
 
 ## Introduction
 
-**SegmentStream** is a marketing data intelligence platform which allows to import and unify data from various data sources for advanced analytics and attribution.
+Welcome to **SegmentStream**!
 
-## Google BigQuery project
+To begin working with SegmentStream, you should set up a Google Cloud Platform account and enable BigQuery.
 
-### Basic features
-
-Google BigQuery projects help to connect all your marketing data into your own Google BigQuery data warehouse. This is more advanced functionality which allows working with raw data collected from various data sources:
-
-* Advertising platforms (raw and UTM-grouped reports)
-* Mobile and web analytics platforms
-* CRM/ERP systems
-* Call tracking systems
-* Google Sheets
-* JSON/XML feeds
-* etc
-
-You can learn more about Google BigQuery projects basic features [here](https://segmentstream.com/bigquery){:target="_blank"}.
-
-### Enterprise features
-
-Enterprise accounts are extended with more advanced features like:
-
-* Real-time event data collection using [Data Streams](javascript-sdk/datastream);
-* Advanced Dataflow Platform for complex data transformations and workflows;
-* Data Destinations which allow sending data from Google BigQuery to different marketing platforms (CDP functionality);
-* Advanced marketing reporting, ML-based multi-touch attribution, ROPO-analysis and other custom datasets and reports;
-
-## What's next
-* [Getting started with Google Analytics project](google-analytics/overview)
-* [Getting started with Google BigQuery project](bigquery/overview)
+All the steps are described in our [BigQuery setup guide.](bigquery/overview)
