@@ -1,19 +1,18 @@
 ---
 layout: page
-section: datastreams
-navigation_title: "Google Analytics"
-title: "Google Analytics (Streaming) Data Source"
-order: 1
+section: datasources
+navigation_title: "Universal Analytics Streaming"
+title: "Universal Analytics Streaming"
+order: 2.1
 date: 2021-03-05
 ---
 
-**Google Analytics (Streaming) Data Source** allows collecting hit-level non-sampled data with unlimited dimensions and metrics into your Google BigQuery account using your existing Google Analytics tracker even if you use a free version of Google Analytics.
+**Universtal Analytics** Streaming Data Source allows collecting hit-level non-sampled data with unlimited dimensions and metrics into your Google BigQuery account using your existing Google Analytics tracker even if you use a free version of Google Analytics.
 
 ## Before you begin
 
 - Make sure that BigQuery is [connected to SegmentStream](/bigquery/connecting-bigquery).
 - Make sure that Google Analytics tracker already implemented in website.
-- You subscribed to SegmentStream **enterprise plan**
 
 ## How it works?
 
@@ -21,12 +20,11 @@ After simple integration with Google Tag Manager or javascript on your website, 
 
 ## Getting started
 
-1. Inside the admin panel go to **Data Sources** and click **Add data source**.
-2. Choose **Google Analytics (Streaming)** from the list.
-3. Define the Google BigQuery **Destination table** where collected data will be stored.
-4. Select the **Integration type** that suits you.
-5. Copy **Snippet** code.
-6. Click **Save** and follow the further instructions to integrate the code.
+1. Inside the admin panel navigate to the **Data Sources** page and click **+ NEW** on the top right corner.
+2. Choose **Universal Analytics** from the list.
+3. Select the **Integration type** that suits you.
+4. Copy the **Snippet** code.
+5. Click **Save** and follow the further instructions to integrate the code.
 
 ## Integrating using Google Tag Manager (GTM)
 
