@@ -17,7 +17,7 @@ You must obtain an API token to provide access to AWIN data.
 
 ## Getting started
 
-1. Inside the admin panel click **Add Data Source**.
+1. Inside the admin panel navigate to the **Data Sources** page and click **+ NEW** on the top right corner.
 2. Choose **AWIN** from the list.
 3. Paste **API token** into input field. Click **Save**.
 4. Add **Account**, **Region**, **Time zone** and input **AWIN comission %**. Add all accounts which cost data you would like to import.

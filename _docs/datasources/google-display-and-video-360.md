@@ -9,7 +9,7 @@ date: 2021-10-20
 
 ## Getting started
 
-1. Inside the admin panel click **Add Data Source**.
+1. Inside the admin panel navigate to the **Data Sources** page and click **+ NEW** on the top right corner.
 2. Choose **Google Display & Video 360** from the list.
 3. Click **Click to authenticate with Google** and go through the authentication and setup flow.
 4. Name your data source.

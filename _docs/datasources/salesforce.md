@@ -12,7 +12,7 @@ date: 2020-10-02
 * [Enable field history tracking](https://help.salesforce.com/articleView?id=tracking_field_history.htm&type=0){:target="blank"} for your Salesforce account.
 
 ## Getting started
-1. Inside the admin panel click **Add Data Source**.
+1. Inside the admin panel navigate to the **Data Sources** page and click **+ NEW** on the top right corner.
 2. Choose **Salesforce** from the list.
 3. Click **Authenticate with Salesforce** and go through the authentication flow.
 4. Make sure **import Opportunity History report** radial button is on.

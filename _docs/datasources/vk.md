@@ -9,7 +9,7 @@ date: 2020-07-13
 
 ## Getting started
 
-1. Inside the admin panel click **Add Data Source**.
+1. Inside the admin panel navigate to the **Data Sources** page and click **+ NEW** on the top right corner.
 2. Choose **VK** from the list.
 3. Click **Authenticate with VK** and go through the authentication flow.
 4. Select **Account** which cost data you would like to import

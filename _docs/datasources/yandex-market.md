@@ -9,7 +9,7 @@ date: 2020-08-18
 
 ## Getting started
 
-1. Inside the admin panel click **Add Data Source**.
+1. Inside the admin panel navigate to the **Data Sources** page and click **+ NEW** on the top right corner.
 2. Choose **Yandex.Market** from the list.
 3. Click **Authenticate with Yandex** and go through the authentication flow.
 4. Select shops which cost data you would like to import or select **All shops** option to import cost data from all the shops your account has access to.
