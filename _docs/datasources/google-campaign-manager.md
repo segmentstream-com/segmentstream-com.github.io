@@ -3,13 +3,13 @@ layout: page
 section: datasources
 navigation_title: "Google Campaign Manager"
 title: "Google Campaign Manager data source"
-order: 15
+order: 10
 date: 2020-10-06
 ---
 
 ## Getting started
 
-1. Inside the admin panel go to **Google BigQuery ▸ Data Sources** page and click **Add data source**.
+1. Inside the admin panel navigate to the **Data Sources** page and click **+ NEW** on the top right corner.
 2. Choose **Google Campaign Manager** from the list.
 3. Click **Authenticate with Google** and go through the authentication flow.
 4. Select **Profile** and a list of **Sites** whose cost data you would like to import.

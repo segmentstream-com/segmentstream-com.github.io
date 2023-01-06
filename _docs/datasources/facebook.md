@@ -3,7 +3,7 @@ layout: page
 section: datasources
 navigation_title: "Facebook"
 title: "Facebook data source"
-order: 1
+order: 3
 date: 2020-08-17
 ---
 

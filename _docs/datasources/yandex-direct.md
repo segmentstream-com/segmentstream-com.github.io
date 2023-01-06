@@ -3,7 +3,7 @@ layout: page
 section: datasources
 navigation_title: "Yandex.Direct"
 title: "Yandex.Direct data source"
-order: 4
+order: 15
 date: 2020-06-19
 ---
 

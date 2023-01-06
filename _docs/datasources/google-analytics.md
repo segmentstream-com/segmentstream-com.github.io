@@ -2,7 +2,7 @@
 layout: page
 section: datasources
 title: "Google Analytics"
-order: 1
+order: 10
 date: 2020-07-22
 ---
 
@@ -12,7 +12,7 @@ SegmentStream allows importing raw data from Google Analytics into your own Goog
 
 ## Getting started
 
-1. Inside the admin panel go to **Google BigQuery ▸ Data Sources** page and click **Add data source**.
+1. Inside the admin panel navigate to the **Data Sources** page and click **+ NEW** on the top right corner.
 2. Choose **Google Analytics** from the list.
 3. Click **Authenticate with Google** and go through the authentication flow.
 4. Select **Account**, **Property** and **View** you would like to import the data from.

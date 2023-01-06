@@ -3,7 +3,7 @@ layout: page
 section: datasources
 navigation_title: "VK"
 title: "VK data source"
-order: 7
+order: 15
 date: 2020-07-13
 ---
 

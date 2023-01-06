@@ -3,7 +3,7 @@ layout: page
 section: datasources
 navigation_title: "Criteo"
 title: "Criteo data source"
-order: 2
+order: 9
 date: 2021-03-08
 ---
 

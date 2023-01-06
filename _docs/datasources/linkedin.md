@@ -3,7 +3,7 @@ layout: page
 section: datasources
 navigation_title: "LinkedIn"
 title: "LinkedIn data source"
-order: 8
+order: 5
 date: 2020-10-03
 ---
 

@@ -3,7 +3,7 @@ layout: page
 section: datasources
 navigation_title: "myTarget"
 title: "myTarget data source"
-order: 6
+order: 15
 date: 2020-06-09
 ---
 
