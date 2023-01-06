@@ -3,7 +3,7 @@ layout: page
 section: datasources
 navigation_title: "impact.com"
 title: "impact.com data source"
-order: 2
+order: 10
 date: 2022-05-30
 ---
 

@@ -3,7 +3,7 @@ layout: page
 section: datasources
 navigation_title: "Yandex.Market"
 title: "Yandex.Market data source"
-order: 5
+order: 15
 date: 2020-08-18
 ---
 

@@ -3,7 +3,7 @@ layout: page
 section: datasources
 navigation_title: "Twitter"
 title: "Twitter data source"
-order: 1
+order: 5
 date: 2020-08-17
 ---
 

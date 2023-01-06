@@ -2,7 +2,7 @@
 layout: page
 section: datasources
 title: "Fixer"
-order: 10
+order: 20
 ---
 
 > Attention! The [Google BigQuery](/integrations/google-bigquery) integration has to be enabled to use this feature.

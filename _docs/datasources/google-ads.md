@@ -4,14 +4,14 @@ section: datasources
 navigation_title: "Google Ads"
 title: "Google Ads data source"
 date: 2020-07-02
-order: 2
+order: 3
 ---
 
 Google Ads is an online advertising service developed by Google. With Google Ads, you can take advantage of online advertising to improve your internet marketing effectiveness. [Visit Website ▸](https://ads.google.com/home/){:target="_blank"}
 
 ## Getting started
 
-1. Inside the admin panel go to **Google BigQuery ▸ Data Sources** page and click **Add data source**.
+1. Inside the admin panel navigate to the **Data Sources** page and click **+ NEW** on the top right corner.
 2. Choose **Google Ads** from the list.
 3. Click **Authenticate with Google** and go through the authentication flow.
 4. Select [manager](#manager-advertising-accounts) or individual Google Ads advertising accounts you would like to connect.

@@ -11,9 +11,9 @@ In order to import data from Google Analytics 4 into SegmentStream, you have to 
 
 ## Getting started
 
-1. Inside the admin panel go to **Google BigQuery ▸ Data Sources** page and click **Add data source**.
+1. Inside the admin panel navigate to the **Data Sources** page and click **+ NEW** on the top right corner.
 2. Choose **Google Analytics 4** from the list.
-3. Select **Google Cloud project** and **BigQuery dataset** where the Google Analytics data is exported to.
+3. Select the **Google Cloud project** and **BigQuery dataset** where the Google Analytics data is exported to.
 4. Click **Save**.
 
 ## Accessing a Google Analytics dataset from another project

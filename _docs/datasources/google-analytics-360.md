@@ -2,7 +2,7 @@
 layout: page
 section: datasources
 title: "Google Analytics 360"
-order: 1
+order: 2
 date: 2020-12-03
 ---
 
@@ -11,7 +11,7 @@ In order to import data from Google Analytics 360 into SegmentStream, you have t
 
 ## Getting started
 
-1. Inside the admin panel go to **Google BigQuery ▸ Data Sources** page and click **Add data source**.
+1. Inside the admin panel navigate to the **Data Sources** page and click **+ NEW** on the top right corner.
 2. Choose **Google Analytics 360** from the list.
 3. Select **Google Cloud project** and **BigQuery dataset** where the Google Analytics data is exported to.
 4. Click **Save**.
