@@ -17,7 +17,6 @@ navigation: 1
 sections: [
     ['bigquery', 'BigQuery Setup'],
     ['datasources', 'Data Sources'],
-    ['datastreams', 'Real-time Data Sources'],
     ['guides', 'Guides']
 ]
 
