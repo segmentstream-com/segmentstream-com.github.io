@@ -9,7 +9,7 @@ date: 2022-05-30
 
 ## Getting started
 
-1. Inside the admin panel click **Add Data Source**.
+1. Inside the admin panel navigate to the **Data Sources** page and click **+ NEW** on the top right corner.
 2. Choose **impact.com** from the list.
 3. Enter the **Account SID** and **Auth Token** API credentials and click **Save**. You can find your credentials in your [impact.com](https://app.impact.com/){:target="blank"} account settings by navigating to [Vertical Ellipsis] → Settings → API. Read Only permissions are sufficient to export costs data.
 <img src="/img/impact_auth_1_api.png" alt="Impact — API" width="600" style="display:block"/>

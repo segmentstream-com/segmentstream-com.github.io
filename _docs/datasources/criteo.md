@@ -32,7 +32,7 @@ Configure a new app:
 
 ## Getting started
 
-1. Inside the admin panel click **Add Data Source**.
+1. Inside the admin panel navigate to the **Data Sources** page and click **+ NEW** on the top right corner.
 2. Choose **Criteo** from the list.
 3. Open the downloaded file with the **App Credentials** and copy-paste **Client Id** and **Client Secret**.
 ![App Credentials](../img/criteo_1.png)

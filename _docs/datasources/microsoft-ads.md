@@ -9,7 +9,7 @@ order: 5
 
 ## Getting started
 
-1. Inside the admin panel click **Add Data Source**.
+1. Inside the admin panel navigate to the **Data Sources** page and click **+ NEW** on the top right corner.
 2. Choose **Microsoft Advertising** from the list.
 3. Click **Authenticate with Microsoft** and go through the authentication flow.
 4. Select the advertising account you would like to connect.

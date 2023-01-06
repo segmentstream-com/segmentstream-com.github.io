@@ -3,7 +3,7 @@ layout: page
 section: datasources
 navigation_title: "Snapchat"
 title: "Snapchat data source"
-order: 10
+order: 9
 date: 2020-10-02
 ---
 

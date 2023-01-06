@@ -9,7 +9,7 @@ date: 2021-08-13
 
 ## Getting started
 
-1. Inside the admin panel click **Add Data Source**.
+1. Inside the admin panel navigate to the **Data Sources** page and click **+ NEW** on the top right corner.
 2. Choose **Pinterest** from the list.
 3. Click **Click to connect Pinterest** and go through the authentication and setup flow.
 4. Name your data source.
