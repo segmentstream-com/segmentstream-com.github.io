@@ -6,8 +6,8 @@ layout: default
 
 ## Introduction
 
-Welcome to **SegmentStream**!
+**SegmentStream** is a marketing data intelligence platform which allows to import and unify data from various data sources for advanced analytics and attribution.
 
-To begin working with SegmentStream, you should set up a Google Cloud Platform account and enable BigQuery.
+SegmentStream collects and processes all your marketing data in your own Google BigQuery data warehouse, so in order to start working with SegmentStream, a Google Cloud Platform account with enabled BigQuery API is required.
 
-All the steps are described in our [BigQuery setup guide.](bigquery/overview)
+Get started by following our [guide](bigquery/overview) to set up BigQuery and integrate it with SegmentStream.
