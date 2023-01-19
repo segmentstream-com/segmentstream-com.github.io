@@ -71,12 +71,14 @@ Field name|Example value|Description
 `event.transaction.lineItems.product.customMetrics.value`|99.0|Value of the custom metric of the product in the cart
 `event.transaction.lineItems.quantity`|2|Quantity of the particular product in the cart
 `event.transaction.lineItems.subtotal`|101.98|The total cost of particular good in the cart multiplied by its quantity
-`event.transaction.total`|The total cost of the transaction.
-`event.transaction.tax`|The tax paid for the transaction.
-`event.transaction.shippingCost`|Delivery price
-`event.transaction.currency`|Currency of the transaction
-`event.transaction.isFirst`|`BOOLEAN`|Is this the user's first purchase
-`event.transaction.voucher`|A list of the identifiers of the discounts applied, separated by a comma
+`event.transaction.total`|105.98|The total cost of the transaction, including shipping and discounts applied to the cart
+`event.transaction.tax`|0|The tax paid for the transaction.
+`event.transaction.shippingCost`|5.0|Delivery price
+`event.transaction.currency`|USD|Currency of the transaction
+`event.transaction.voucher`|EXAMPLE|Voucher applied to the transaction
+`event.step`|2|Step number in the funnel. Used in events such as Viewed Checkout Step, Completed Checkout Step and so on
+`event.nonInteraction`|false|Non-interaction events are not taken into account when Google Analytics calculates bounces and session duration
+`event.option`|Visa|Additional information about a checkout step
 
 
 `event.campaign`|The array of marketing campaigns
@@ -135,7 +137,7 @@ Field name|Example value|Description
 `event.listing.sortBy`|The value by which the user has sorted the list.
 
 `event.quantity`|The amount of something, for example, the number of products. Used in events such as Added Product, Removed Product and so on
-`event.step`|Step number in the funnel. Used in events such as Viewed Checkout Step, Completed Checkout Step and so on
+
 
 
 
