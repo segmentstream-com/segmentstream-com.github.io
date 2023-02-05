@@ -132,7 +132,7 @@ Your order feed should contain only updated records, meaning that for each chang
 > *total* can't be a STRING and INTEGER
 
 ## Enabling "JSON Feed" data source
-1. Go to [SegmentStream admin panel▸](https://admin.segmentstream.com){:target="_blank"}.
+1. Go to [SegmentStream admin panel▸](https://app.segmentstream.com){:target="_blank"}.
 2. Open **Data Sources ▸ Add Data Source**.
 3. Select **JSON Feed**.
 4. Fill **Username** and **Password** for you Basic Auth credentials (if you decided not to implement Basic Auth you can enter any values).

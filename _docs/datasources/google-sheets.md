@@ -71,7 +71,7 @@ month| currency | cost | impressions | clicks | utmSource | utmMedium
 
 ## Enabling Google Sheets data source
 
-1. Go to [SegmentStream admin panel ▸](https://admin.segmentstream.com/){:target="_blank"}.
+1. Go to [SegmentStream admin panel ▸](https://app.segmentstream.com/){:target="_blank"}.
 2. Open **Data Sources ▸ Add Data Source**.
 3. Select **Google Sheets**.
 4. Click **Authenticate with Google** and go through the authentication flow.
